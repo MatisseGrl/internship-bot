@@ -53,6 +53,11 @@ companies:
     tenant: capitalone
     wd: wd12
     site: Capital_One
+  - name: Cisco
+    provider: workday
+    tenant: cisco
+    wd: wd5
+    site: Cisco_Careers
   - name: CrowdStrike
     provider: workday
     tenant: crowdstrike
