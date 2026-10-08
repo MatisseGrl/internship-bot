@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { afterEach, beforeEach, test } from "node:test";
 
 import worker, {
+  buildHealthMessages,
   buildListingMessages,
   filterJobs,
   flattenSnapshot,
@@ -193,4 +194,43 @@ test("filtre /offres : début de mot, pas sous-chaîne", () => {
   assert.deepEqual(names("pâris"), ["Datadog"]); // accents ignorés
   assert.deepEqual(names("ai"), ["Cisco"]); // pas « Paris », « Santa Clara »…
   assert.deepEqual(names("data"), ["Cisco", "Datadog"]);
+});
+
+const HEALTH = {
+  Adobe: { provider: "workday", status: "ok", last_success: "2026-10-08T11:30:00+00:00", fetched: 120, notify: 4, review: 2, error: null, failures: 0 },
+  Broken: { provider: "greenhouse", status: "error", last_success: "2026-10-07T10:00:00+00:00", fetched: 12, notify: 1, review: 0, error: "HTTP 404 <board>", failures: 3 },
+  Google: { provider: "manual", status: "manual", reason: "robots.txt", careers_url: "https://g.co/?a=1&b=2", failures: 0 },
+  Bosch: { provider: "smartrecruiters", status: "disabled", failures: 0 },
+};
+
+test("/status : santé par entreprise, erreurs en tête", async () => {
+  routes.push(["current.json", () => Response.json({ ...SNAPSHOT, health: HEALTH })]);
+  await dispatch(update("/status"));
+  const [text] = telegramTexts();
+  assert.match(text, /Santé : 4 entreprise\(s\)/);
+  assert.match(text, /❌ 1 error · ✅ 1 ok · ✋ 1 manual · ⏸ 1 disabled/);
+  assert.ok(text.indexOf("Broken") < text.indexOf("Adobe"), "erreurs en premier");
+  assert.match(text, /Adobe <i>\(workday\)<\/i> 120 · 4 · 2/);
+  assert.match(text, /3 échec\(s\) d'affilée : HTTP 404 &lt;board&gt;/);
+  assert.match(text, /href="https:\/\/g\.co\/\?a=1&amp;b=2"/);
+});
+
+test("/statut reste le résumé court ; /status sans données de santé", async () => {
+  routes.push(["current.json", () => Response.json(SNAPSHOT)]);
+  await dispatch(update("/statut"));
+  await dispatch(update("/status"));
+  const [statut, status] = telegramTexts();
+  assert.match(statut, /3 offre\(s\) ouverte\(s\)/);
+  assert.match(status, /Pas encore de données de santé/);
+});
+
+test("santé : découpage à 4096 caractères", () => {
+  const health = {};
+  for (let i = 0; i < 300; i++) {
+    health[`Entreprise ${i}`] = { provider: "workday", status: i % 7 ? "ok" : "error", fetched: 10, notify: 1, review: 0, error: "x".repeat(150), failures: 3 };
+  }
+  const messages = buildHealthMessages(health, "à l'instant");
+  assert.ok(messages.length > 1);
+  for (const m of messages) assert.ok(m.length <= 4096);
+  assert.equal(messages.join("\n").match(/Entreprise \d+/g).length, 300);
 });

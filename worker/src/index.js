@@ -6,7 +6,10 @@
 //                      mise à jour à chaque passage du bot), éventuellement filtrée par mots ;
 //   /refresh        -> déclenche une vraie recherche sur GitHub (--send-all), la liste
 //                      complète arrive ~5 min plus tard ;
-//   /statut, /aide.
+//   /statut         -> date de la dernière mise à jour ;
+//   /status         -> santé de chaque entreprise (dernier succès, offres, NOTIFY/REVIEW,
+//                      erreur, entreprises suivies à la main) ;
+//   /aide.
 //
 // Sécurité : seuls les messages venant de TELEGRAM_CHAT_ID sont traités (les autres sont
 // ignorés en silence) et Telegram doit présenter WEBHOOK_SECRET à chaque appel.
@@ -64,8 +67,10 @@ export async function handleCommand(text, env) {
     case "/refresh":
       return commandRefresh(env);
     case "/statut":
-    case "/status":
       return commandStatus(env);
+    case "/status":
+    case "/sante":
+      return commandHealth(env);
     default:
       return sendMessage(env, HELP);
   }
@@ -78,6 +83,7 @@ const HELP = [
   "/offres paris — idem, filtrées par mot(s) (entreprise, titre ou lieu)",
   "/refresh — relance une vraie recherche maintenant (~5 min)",
   "/statut — date de la dernière mise à jour",
+  "/status — santé de chaque entreprise (erreurs, offres, NOTIFY/REVIEW)",
   "",
   "Les nouvelles offres continuent d'arriver toutes seules, toutes les 30 min.",
 ].join("\n");
@@ -140,6 +146,71 @@ async function commandStatus(env) {
     `📊 ${jobs} offre(s) ouverte(s) chez ${companies} entreprise(s)\n` +
       `Dernière mise à jour : ${formatAge(snapshot.updated_at)}`,
   );
+}
+
+async function commandHealth(env) {
+  const snapshot = await fetchSnapshot(env);
+  if (!snapshot || !snapshot.health) {
+    return sendMessage(env, "Pas encore de données de santé : elles arrivent au prochain passage.");
+  }
+  const messages = buildHealthMessages(snapshot.health, formatAge(snapshot.updated_at));
+  for (const [i, msg] of messages.entries()) {
+    if (i > 0) await sleep(1100);
+    await sendMessage(env, msg);
+  }
+}
+
+const HEALTH_ORDER = ["error", "ok", "pending", "manual", "disabled"];
+const HEALTH_ICON = { error: "❌", ok: "✅", pending: "⏳", manual: "✋", disabled: "⏸" };
+
+// Une ligne par entreprise, erreurs en tête ; découpage à 4096 caractères.
+export function buildHealthMessages(health, age, limit = TELEGRAM_MAX) {
+  const entries = Object.entries(health || {});
+  const counts = {};
+  for (const [, h] of entries) counts[h.status] = (counts[h.status] || 0) + 1;
+  const summary = HEALTH_ORDER.filter((k) => counts[k])
+    .map((k) => `${HEALTH_ICON[k]} ${counts[k]} ${k}`)
+    .join(" · ");
+  const header = [
+    `🩺 <b>Santé : ${entries.length} entreprise(s)</b>`,
+    summary,
+    `<i>mise à jour ${escapeHtml(age)}</i>`,
+    "<i>offres · NOTIFY (notifiées) · REVIEW (stages hors mots-clés métier)</i>",
+  ].join("\n");
+
+  entries.sort(
+    ([a, ha], [b, hb]) =>
+      HEALTH_ORDER.indexOf(ha.status) - HEALTH_ORDER.indexOf(hb.status) || a.localeCompare(b, "fr"),
+  );
+  const messages = [];
+  let current = header;
+  let section = null;
+  for (const [name, h] of entries) {
+    let line = "";
+    if (h.status !== section) {
+      section = h.status;
+      line += `\n\n<b>${HEALTH_ICON[section] || ""} ${escapeHtml(section)}</b>`;
+    }
+    line += `\n${escapeHtml(name)} <i>(${escapeHtml(h.provider)})</i>`;
+    if (h.status === "ok" || (h.status === "error" && h.fetched != null)) {
+      line += ` ${h.fetched ?? "-"} · ${h.notify ?? "-"} · ${h.review ?? "-"}`;
+    }
+    if (h.status === "error") {
+      line += `\n   ↳ ${h.failures || 1} échec(s) d'affilée : ${escapeHtml(clip(h.error, 160))}`;
+      if (h.last_success) line += ` (dernier succès ${escapeHtml(formatAge(h.last_success))})`;
+    }
+    if (h.status === "manual" && h.careers_url) {
+      line += ` — <a href="${escapeAttr(h.careers_url)}">site</a>`;
+    }
+    if (current.length + line.length > limit) {
+      messages.push(current);
+      current = line.replace(/^\n+/, "");
+    } else {
+      current += line;
+    }
+  }
+  messages.push(current);
+  return messages;
 }
 
 // -- données ------------------------------------------------------------------------------------
@@ -306,6 +377,7 @@ async function setup(url, env) {
       { command: "offres", description: "Toutes les offres ouvertes (option : mot-clé)" },
       { command: "refresh", description: "Relancer une recherche maintenant (~5 min)" },
       { command: "statut", description: "Date de la dernière mise à jour" },
+      { command: "status", description: "Santé de chaque entreprise" },
       { command: "aide", description: "Aide" },
     ],
   });
