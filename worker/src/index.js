@@ -169,11 +169,18 @@ export function normalize(text) {
     .toLowerCase();
 }
 
+// Découpe en mots (lettres et chiffres), après normalisation accents / casse.
+function tokens(text) {
+  return normalize(text).split(/[^a-z0-9]+/).filter(Boolean);
+}
+
+// Chaque mot de la recherche doit être le DÉBUT d'un mot de l'offre :
+// « cisco » ne matche pas « San Francisco », mais « nvid » matche « NVIDIA ».
 export function filterJobs(jobs, query) {
-  const words = normalize(query).split(/\s+/).filter(Boolean);
+  const words = tokens(query);
   return jobs.filter((job) => {
-    const haystack = normalize(`${job.company} ${job.title} ${job.location}`);
-    return words.every((w) => haystack.includes(w));
+    const haystack = tokens(`${job.company} ${job.title} ${job.location}`);
+    return words.every((w) => haystack.some((h) => h.startsWith(w)));
   });
 }
 

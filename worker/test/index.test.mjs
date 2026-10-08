@@ -176,3 +176,21 @@ test("utilitaires", () => {
   assert.equal(formatAge("2026-10-08T09:30:00Z", now), "il y a 2 h 30");
   assert.equal(formatAge(null, now), "inconnue");
 });
+
+test("filtre /offres : début de mot, pas sous-chaîne", () => {
+  const jobs = [
+    { company: "Adobe", title: "2027 Intern - Software Engineer", location: "San Francisco" },
+    { company: "Cisco", title: "Software Engineer Data & AI I (Intern)", location: "San Jose, California, US" },
+    { company: "NVIDIA", title: "Deep Learning Intern", location: "Santa Clara" },
+    { company: "Datadog", title: "Software Engineering Intern", location: "Paris, France" },
+  ];
+  const names = (q) => filterJobs(jobs, q).map((j) => j.company);
+  assert.deepEqual(names("cisco"), ["Cisco"]); // pas « San Francisco »
+  assert.deepEqual(names("Cisco"), ["Cisco"]);
+  assert.deepEqual(names("nvid"), ["NVIDIA"]); // préfixe accepté
+  assert.deepEqual(names("francisco"), ["Adobe"]);
+  assert.deepEqual(names("san jose"), ["Cisco"]);
+  assert.deepEqual(names("pâris"), ["Datadog"]); // accents ignorés
+  assert.deepEqual(names("ai"), ["Cisco"]); // pas « Paris », « Santa Clara »…
+  assert.deepEqual(names("data"), ["Cisco", "Datadog"]);
+});
