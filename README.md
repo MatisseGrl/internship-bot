@@ -15,7 +15,7 @@ Summer 2027 Intern - Software Engineer
 ```
 
 **Plateformes supportées** : Workday (Salesforce, NVIDIA, Adobe…), Greenhouse, Lever, Ashby,
-SmartRecruiters, Workable, et un mode Playwright générique de dernier recours.
+SmartRecruiters, Workable, le site maison d'Apple, et un mode Playwright générique de dernier recours.
 
 **Garanties** :
 - **pas de spam au premier lancement** : la première fois qu'une entreprise est vue, toutes ses
@@ -199,6 +199,7 @@ L'URL de la page de candidature trahit la plateforme :
 | `jobs.ashbyhq.com/openai/...` | `ashby` | `board: openai` |
 | `jobs.smartrecruiters.com/BoschGroup/...` | `smartrecruiters` | `company_id: BoschGroup` |
 | `apply.workable.com/huggingface/...` | `workable` | `account: huggingface` |
+| `jobs.apple.com/...` | `apple` | aucun (option `team`, défaut `internships-STDNT-INTRN`) |
 
 Puis ajoutez un bloc dans `companies:` et vérifiez :
 
@@ -452,7 +453,8 @@ Logs détaillés : `python -m internbot run --dry-run -v --company Salesforce`.
 - **L'endpoint Workday (`/wday/cxs/...`) n'est pas une API officielle** : c'est celui qu'utilise
   le site carrières lui-même. Workday peut le modifier sans préavis ; le bot le détectera
   (erreur de format isolée + alerte après 3 échecs) mais il faudra adapter le provider. Même
-  remarque, à moindre degré, pour le widget Workable.
+  remarque, à moindre degré, pour le widget Workable, et pour Apple (offres lues dans les
+  données embarquées dans le HTML de la page de recherche).
 - Greenhouse, Lever, Ashby et SmartRecruiters exposent des API publiques documentées, a priori
   stables.
 - Une offre publiée puis retirée entre deux runs (< 30 min) peut être manquée.
@@ -490,6 +492,6 @@ src/internbot/
 ├── models.py          # Job
 ├── notifiers/         # telegram, console, formatage + découpage 4096
 └── providers/         # registre + workday, greenhouse, lever, ashby, smartrecruiters,
-                       #   workable, playwright_generic
+                       #   workable, apple, playwright_generic
 tests/                 # tests unitaires, fixtures dans tests/fixtures/
 ```
