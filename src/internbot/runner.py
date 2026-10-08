@@ -18,13 +18,19 @@ from pathlib import Path
 
 from internbot.config import AppConfig, CompanyConfig
 from internbot.errors import InternbotError
-from internbot.filters import JobFilter
+from internbot.filters import NOTIFY, REVIEW, JobFilter
 from internbot.http import HttpClient
 from internbot.models import Job
 from internbot.notifiers.base import Notifier
 from internbot.providers import get_provider_class
 from internbot.providers.base import Provider
-from internbot.snapshot import build_snapshot, load_snapshot, save_snapshot, snapshot_jobs
+from internbot.snapshot import (
+    build_health,
+    build_snapshot,
+    load_snapshot,
+    save_snapshot,
+    snapshot_jobs,
+)
 from internbot.storage import StateStore
 
 log = logging.getLogger(__name__)
@@ -33,8 +39,11 @@ log = logging.getLogger(__name__)
 @dataclass
 class CompanyResult:
     name: str
+    provider: str = ""
     ok: bool = True
     fetched: int = 0
+    notify: int = 0  # offres ouvertes classées NOTIFY (passent les filtres)
+    review: int = 0  # offres ouvertes classées REVIEW (stage écarté par keywords_any / année)
     new_matches: int = 0
     seeded: bool = False
     removed: int = 0
@@ -108,6 +117,9 @@ class Runner:
         report = RunReport()
         pending: list[Job] = []
         for company in companies:
+            if not get_provider_class(company.provider).automated:
+                log.info("── %s : suivie à la main, ignorée", company.name)
+                continue
             log.info("── %s (%s)", company.name, company.provider)
             result, to_notify = self._process_company(company)
             report.results.append(result)
@@ -115,10 +127,18 @@ class Runner:
             if not self.dry_run:
                 self.state.save()
 
+        previous = load_snapshot(self.snapshot_path)
         snapshot = build_snapshot(
-            load_snapshot(self.snapshot_path),
+            previous,
             self._current,
             [c.name for c in self.config.companies],
+            self.now,
+        )
+        snapshot["health"] = build_health(
+            previous.get("health") or {},
+            self.config.companies,
+            report.results,
+            {name: count for name, count, _ in self.state.failing_companies()},
             self.now,
         )
         listing_sent = self.send_all and self._send_listing(snapshot, report)
@@ -165,7 +185,7 @@ class Runner:
         return self._providers[name]
 
     def _process_company(self, company: CompanyConfig) -> tuple[CompanyResult, list[Job]]:
-        result = CompanyResult(name=company.name)
+        result = CompanyResult(name=company.name, provider=company.provider)
         provider = self._provider(company.provider)
         try:
             jobs = _dedupe(provider.fetch_jobs(company))
@@ -176,8 +196,17 @@ class Runner:
             return self._fail(company, result, f"{type(exc).__name__}: {exc}"), []
 
         result.fetched = len(jobs)
-        log.info("%s : %d offre(s) récupérée(s)", company.name, len(jobs))
         job_filter = JobFilter(self.config.filters_for(company))
+        # Statistiques (titre + lieu tel que publié, sans requête de détail).
+        classes = [job_filter.classify(j) for j in jobs]
+        result.notify, result.review = classes.count(NOTIFY), classes.count(REVIEW)
+        log.info(
+            "%s : %d offre(s) récupérée(s) (NOTIFY %d, REVIEW %d)",
+            company.name,
+            len(jobs),
+            result.notify,
+            result.review,
+        )
 
         previously_active = self.state.active_count(company.name)
         if not jobs and previously_active:

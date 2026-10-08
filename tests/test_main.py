@@ -81,3 +81,48 @@ def test_telegram_without_secrets_is_config_error(
     p = tmp_path / "c.yaml"
     p.write_text("companies:\n  - {name: Acme, provider: fake}\n", encoding="utf-8")
     assert main(["--test-notify", "-c", str(p)]) == EXIT_CONFIG
+
+
+MANUAL_CONFIG = """
+notifier: {type: console}
+filters: {keywords_any: []}
+companies:
+  - {name: Acme, provider: fake}
+  - {name: Broken, provider: fake}
+  - name: Google
+    provider: manual
+    careers_url: https://www.google.com/about/careers/applications/jobs/results
+    reason: robots.txt interdit la page de résultats
+"""
+
+
+def test_manual_companies_are_never_fetched_and_status_lists_them(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    cfg = tmp_path / "config.yaml"
+    cfg.write_text(MANUAL_CONFIG, encoding="utf-8")
+    state = tmp_path / "state.json"
+    FakeProvider.jobs["Acme"] = [job("1"), job("2", title="Marketing Coordinator")]
+    FakeProvider.errors["Broken"] = ProviderError("HTTP 503")
+    assert main(["run", "-c", str(cfg), "--state", str(state)]) == EXIT_OK
+    capsys.readouterr()
+
+    assert main(["--status", "-c", str(cfg), "--state", str(state)]) == EXIT_OK
+    out = capsys.readouterr().out
+    lines = {line.split()[0]: line for line in out.splitlines() if line[:1].isalpha()}
+    assert " ok " in lines["Acme"] and lines["Acme"].split()[-2:] == ["1", "0"]
+    assert " error " in lines["Broken"] and "1 échec(s) d'affilée" in lines["Broken"]
+    assert " manual " in lines["Google"] and "robots.txt" in lines["Google"]
+    assert out.splitlines()[1].startswith("Broken")  # erreurs en tête
+    assert "3 entreprise(s) : 1 error, 1 ok, 1 manual" in out
+
+    # --company sur une entreprise manuelle : message clair, pas de requête
+    assert main(["-c", str(cfg), "--state", str(state), "--company", "google"]) == EXIT_CONFIG
+
+
+def test_status_without_any_run(
+    cfg_path: Path, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    assert main(["--status", "-c", str(cfg_path), "--state", str(tmp_path / "s.json")]) == EXIT_OK
+    out = capsys.readouterr().out
+    assert "pending" in out and "disabled" in out and "jamais" in out

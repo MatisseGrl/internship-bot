@@ -20,6 +20,8 @@ _YEAR = re.compile(r"(?<![0-9])20[0-9]{2}(?![0-9])")
 # Séparateurs entre plusieurs lieux d'une même offre (« · » interne, « ; » Greenhouse, « | »).
 _LOCATION_SEP = re.compile(r"\s*[·;|]\s*")
 
+NOTIFY, REVIEW, REJECT = "NOTIFY", "REVIEW", "REJECT"
+
 
 def split_locations(location: str) -> list[str]:
     return [part for part in _LOCATION_SEP.split(location) if part.strip()]
@@ -96,6 +98,22 @@ class JobFilter:
 
     def matches(self, job: Job) -> bool:
         return self.reject_reason(job) is None
+
+    def classify(self, job: Job) -> str:
+        """NOTIFY : passe tous les filtres (offre notifiée).
+        REVIEW : vrai stage (mot-clé de stage, aucun mot exclu, lieu accepté) écarté seulement
+        par `keywords_any` ou l'année : à regarder à la main, jamais notifié.
+        REJECT : tout le reste. Sert aux statistiques (`--status`), pas à la notification."""
+        if self.matches(job):
+            return NOTIFY
+        title = job.title
+        if (
+            (not self.title_include or self.title_include.find(title) is not None)
+            and self.title_exclude.find(title) is None
+            and self.location_reject_reason(job) is None
+        ):
+            return REVIEW
+        return REJECT
 
     def _year_reject_reason(self, title: str) -> str | None:
         if not self.years or self.cfg.year_hint_mode == "off":

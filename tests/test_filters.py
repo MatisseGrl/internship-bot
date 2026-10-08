@@ -141,3 +141,20 @@ def test_include_applies_to_non_excluded_parts() -> None:
     f = make_filter(locations_include=["France"], locations_exclude=["China"])
     assert f.matches(job("1", location="China, Shanghai · Paris, France"))
     assert not f.matches(job("2", location="China, Shanghai · US, Seattle"))
+
+
+def test_classify_notify_review_reject() -> None:
+    from internbot.filters import NOTIFY, REJECT, REVIEW
+
+    f = JobFilter(
+        FiltersConfig(
+            keywords_any=["software"],
+            year_hint=["2027"],
+            locations_exclude=["China"],
+        )
+    )
+    assert f.classify(job("1", "Software Engineer Intern")) == NOTIFY
+    assert f.classify(job("2", "Marketing Intern")) == REVIEW  # stage hors keywords_any
+    assert f.classify(job("3", "Software Intern, Summer 2026")) == REVIEW  # autre saison
+    assert f.classify(job("4", "Senior Software Engineer")) == REJECT  # pas un stage
+    assert f.classify(job("5", "Software Engineer Intern", location="Shanghai, China")) == REJECT

@@ -37,6 +37,8 @@ class Provider(ABC):
     name: ClassVar[str] = ""
     required_fields: ClassVar[tuple[str, ...]] = ()
     optional_fields: ClassVar[tuple[str, ...]] = ()
+    # False : entreprise suivie à la main (provider `manual`), jamais interrogée par un run.
+    automated: ClassVar[bool] = True
 
     def __init__(self, http: HttpClient) -> None:
         self.http = http
@@ -116,6 +118,38 @@ def iso_date(value: Any) -> str | None:
         return datetime.fromisoformat(text.replace("Z", "+00:00")).date().isoformat()
     except ValueError:
         return text[:10] if len(text) >= 10 and text[4] == "-" else text
+
+
+def get_path(data: Any, path: str | None, default: Any = None) -> Any:
+    """Valeur au chemin pointé `a.b.0.c` (indices de liste acceptés) ; `default` si absente.
+    Un chemin vide, « . » ou « $ » renvoie `data` lui-même (réponse = liste d'offres)."""
+    if not path or path in (".", "$"):
+        return data
+    current = data
+    for part in str(path).split("."):
+        if isinstance(current, dict):
+            if part not in current:
+                return default
+            current = current[part]
+        elif isinstance(current, list) and part.lstrip("-").isdigit():
+            idx = int(part)
+            if not -len(current) <= idx < len(current):
+                return default
+            current = current[idx]
+        else:
+            return default
+    return current
+
+
+def epoch_date(value: Any) -> str | None:
+    """Timestamp epoch en secondes OU millisecondes -> 'YYYY-MM-DD'."""
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return iso_date(value)
+    if number <= 0:
+        return None
+    return iso_date(number if number > 1e11 else number * 1000)
 
 
 def join_locations(*parts: Any) -> str:

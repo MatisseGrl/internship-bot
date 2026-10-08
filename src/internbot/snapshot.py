@@ -16,6 +16,14 @@ Format :
 
 Si une entreprise échoue pendant un run, son entrée précédente est conservée (avec son
 `updated_at` d'origine) : la liste ne se vide pas à cause d'une panne passagère.
+
+Clé `health` (santé de chaque entreprise configurée, pour `--status` et `/status`) :
+    "health": {"Adobe": {"provider": "workday", "status": "ok", "last_run": "...",
+                         "last_success": "...", "fetched": 120, "notify": 4, "review": 2,
+                         "error": null, "failures": 0}}
+`status` vaut ok | error | manual | disabled | pending (jamais encore interrogée).
+Elle vit ici plutôt que dans state.json : current.json est déjà réécrit à chaque run, alors que
+state.json ne doit changer que lorsqu'une offre apparaît ou disparaît.
 """
 
 from __future__ import annotations
@@ -27,9 +35,13 @@ import tempfile
 from collections.abc import Iterable, Mapping
 from datetime import datetime
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from internbot.models import Job
+
+if TYPE_CHECKING:
+    from internbot.config import CompanyConfig
+    from internbot.runner import CompanyResult
 
 log = logging.getLogger(__name__)
 
@@ -90,6 +102,62 @@ def build_snapshot(
         elif name in prev_companies:
             out[name] = prev_companies[name]
     return {"version": SNAPSHOT_VERSION, "updated_at": ts, "companies": out}
+
+
+def build_health(
+    previous: Mapping[str, Any],
+    companies: Iterable[CompanyConfig],
+    results: Iterable[CompanyResult],
+    failures: Mapping[str, int],
+    now: datetime,
+) -> dict[str, Any]:
+    """Santé de chaque entreprise configurée. Une entreprise non traitée pendant ce run
+    (`--company`, désactivée…) garde ses derniers chiffres connus."""
+    from internbot.providers import get_provider_class
+
+    ts = now.replace(microsecond=0).isoformat()
+    by_name = {r.name: r for r in results}
+    out: dict[str, Any] = {}
+    for company in companies:
+        prev = dict(previous.get(company.name) or {})
+        entry: dict[str, Any] = {
+            "provider": company.provider,
+            "status": prev.get("status", "pending"),
+            "last_run": prev.get("last_run"),
+            "last_success": prev.get("last_success"),
+            "fetched": prev.get("fetched"),
+            "notify": prev.get("notify"),
+            "review": prev.get("review"),
+            "error": prev.get("error"),
+            "failures": failures.get(company.name, 0),
+        }
+        result = by_name.get(company.name)
+        if not get_provider_class(company.provider).automated:
+            entry.update(
+                status="manual",
+                error=None,
+                reason=company.opt("reason"),
+                careers_url=company.opt("careers_url"),
+            )
+        elif result is not None:
+            entry["last_run"] = ts
+            if result.ok:
+                entry.update(
+                    status="ok",
+                    last_success=ts,
+                    fetched=result.fetched,
+                    notify=result.notify,
+                    review=result.review,
+                    error=None,
+                )
+            else:
+                entry.update(status="error", error=result.error)
+        elif not company.enabled:
+            entry["status"] = "disabled"
+        elif entry["status"] in ("manual", "disabled"):
+            entry["status"] = "pending"  # réactivée : pas encore interrogée
+        out[company.name] = entry
+    return out
 
 
 def snapshot_jobs(snapshot: Mapping[str, Any]) -> list[Job]:

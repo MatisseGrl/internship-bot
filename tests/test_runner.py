@@ -325,3 +325,68 @@ def test_new_job_in_china_not_notified(tmp_path: Path) -> None:
     n = RecordingNotifier()
     run_snap(tmp_path, cfg, n)
     assert [j.job_id for j in n.sent] == ["us"]
+
+
+# -- santé par entreprise (current.json › health, pour --status et /status) ----------------------
+
+
+def test_health_counts_notify_review_and_failures(tmp_path: Path) -> None:
+    cfg = parse_config(
+        {
+            "filters": {"keywords_any": ["software", "data"], "year_hint": ["2027"]},
+            "companies": [
+                {"name": "A", "provider": "fake"},
+                {"name": "B", "provider": "fake"},
+                {"name": "Off", "provider": "fake", "enabled": False},
+                {"name": "G", "provider": "manual", "careers_url": "https://g", "reason": "robots"},
+            ],
+        }
+    )
+    FakeProvider.jobs["A"] = [
+        job("1", "Software Engineer Intern", "A"),  # NOTIFY
+        job("2", "Marketing Intern", "A"),  # REVIEW : stage, mais pas de mot-clé métier
+        job("3", "Senior Software Engineer", "A"),  # REJECT
+    ]
+    FakeProvider.errors["B"] = ProviderError("HTTP 500")
+    enabled = [c for c in cfg.companies if c.enabled]  # comme main.select_companies
+    for _ in range(2):  # 2e échec d'affilée pour B
+        state = StateStore.load(tmp_path / "state.json", now=lambda: NOW)
+        Runner(
+            cfg,
+            state,
+            RecordingNotifier(),
+            make_http(),
+            now=NOW,
+            snapshot_path=tmp_path / "current.json",
+        ).run(enabled)
+    health = snapshot(tmp_path)["health"]
+    assert health["A"] == {
+        "provider": "fake",
+        "status": "ok",
+        "last_run": NOW.isoformat(),
+        "last_success": NOW.isoformat(),
+        "fetched": 3,
+        "notify": 1,
+        "review": 1,
+        "error": None,
+        "failures": 0,
+    }
+    assert health["B"]["status"] == "error"
+    assert health["B"]["failures"] == 2
+    assert "HTTP 500" in health["B"]["error"]
+    assert health["B"]["last_success"] is None
+    assert health["Off"]["status"] == "disabled"
+    assert health["G"]["status"] == "manual"
+    assert health["G"]["careers_url"] == "https://g"
+
+
+def test_health_keeps_last_success_when_company_fails(tmp_path: Path) -> None:
+    cfg = config("A")
+    FakeProvider.jobs["A"] = [job("1", company_name="A")]
+    run_snap(tmp_path, cfg, RecordingNotifier())
+    FakeProvider.errors["A"] = ProviderError("panne")
+    run_snap(tmp_path, cfg, RecordingNotifier())
+    health = snapshot(tmp_path)["health"]["A"]
+    assert health["status"] == "error"
+    assert health["last_success"] == NOW.isoformat()
+    assert health["fetched"] == 1  # derniers chiffres connus conservés

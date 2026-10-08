@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "SearchId": 1,
+      "Keyword": "intern",
+      "TotalJobsCount": 2,
+      "requisitionList": [
+        {"Id": "334396", "Title": "Data Strategy Intern", "PostedDate": "2026-10-02", "PrimaryLocation": "Redwood City, CA, United States", "secondaryLocations": [{"Name": "Seattle, WA, United States"}, {"Name": "Redwood City, CA, United States"}]},
+        {"Id": "334345", "Title": "Software Engineer Intern", "PostedDate": "2026-09-28", "PrimaryLocation": "Austin, TX, United States", "secondaryLocations": []}
+      ],
+      "count": 2,
+      "hasMore": false
+    }
+  ],
+  "count": 1,
+  "hasMore": false
+}

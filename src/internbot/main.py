@@ -16,6 +16,7 @@ import logging
 import os
 import sys
 from collections.abc import Sequence
+from datetime import UTC, datetime
 from pathlib import Path
 
 from internbot import __version__
@@ -24,7 +25,9 @@ from internbot.discover import render_report, run_discovery
 from internbot.errors import ConfigError
 from internbot.http import HttpClient
 from internbot.notifiers import ConsoleNotifier, Notifier, TelegramNotifier
+from internbot.providers import get_provider_class
 from internbot.runner import Runner
+from internbot.snapshot import build_health, load_snapshot
 from internbot.storage import StateStore
 
 log = logging.getLogger("internbot")
@@ -53,6 +56,11 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--test-notify", action="store_true", help="envoie un message de test")
     p.add_argument("--list-companies", action="store_true", help="liste les entreprises")
+    p.add_argument(
+        "--status",
+        action="store_true",
+        help="santé de chaque entreprise (dernier succès, offres, NOTIFY/REVIEW, erreur)",
+    )
     p.add_argument(
         "--discover",
         nargs="+",
@@ -119,16 +127,70 @@ def select_companies(cfg: AppConfig, name: str | None) -> list[CompanyConfig]:
         if not matches:
             known = ", ".join(c.name for c in cfg.companies)
             raise ConfigError(f"Entreprise '{name}' absente de la config (connues : {known})")
+        manual = [c for c in matches if not is_automated(c)]
+        if manual:
+            raise ConfigError(
+                f"{manual[0].name} est suivie à la main ({manual[0].opt('reason')}) : "
+                f"{manual[0].opt('careers_url')}"
+            )
         return matches  # --company force même une entreprise désactivée
-    return [c for c in cfg.companies if c.enabled]
+    return [c for c in cfg.companies if c.enabled and is_automated(c)]
+
+
+def is_automated(company: CompanyConfig) -> bool:
+    return get_provider_class(company.provider).automated
 
 
 def cmd_list(cfg: AppConfig) -> int:
     for c in cfg.companies:
         opts = ", ".join(f"{k}={v}" for k, v in c.options.items())
         status = "" if c.enabled else "  [désactivée]"
+        if not is_automated(c):
+            status = "  [manuel]"
         print(f"{c.name:<24} {c.provider:<16} {opts}{status}")
     return EXIT_OK
+
+
+def cmd_status(cfg: AppConfig, args: argparse.Namespace) -> int:
+    """Lit current.json (écrit à chaque run) : aucune requête réseau."""
+    snapshot = load_snapshot(Path(args.state).with_name("current.json"))
+    # Recalculée sur la config actuelle : entreprises ajoutées (pending), manuelles, désactivées.
+    previous = snapshot.get("health") or {}
+    failures = {name: int(h.get("failures") or 0) for name, h in previous.items()}
+    health = build_health(previous, cfg.companies, [], failures, _now())
+    order = {"error": 0, "ok": 1, "pending": 2, "manual": 3, "disabled": 4}
+    rows = sorted(health.items(), key=lambda kv: (order.get(kv[1]["status"], 9), kv[0].casefold()))
+    print(
+        f"{'Entreprise':<28} {'Provider':<15} {'Statut':<9} {'Dernier succès':<17} "
+        f"{'Offres':>6} {'NOTIFY':>6} {'REVIEW':>6}  Remarque"
+    )
+    for name, h in rows:
+        note = h.get("error") or ""
+        if h["status"] == "manual":
+            note = f"{h.get('reason')} — {h.get('careers_url')}"
+        elif h.get("failures"):
+            note = f"{h['failures']} échec(s) d'affilée : {note}"
+        last = (h.get("last_success") or "-")[:16].replace("T", " ")
+        print(
+            f"{name[:28]:<28} {h['provider']:<15} {h['status']:<9} {last:<17} "
+            f"{_num(h.get('fetched')):>6} {_num(h.get('notify')):>6} {_num(h.get('review')):>6}"
+            f"  {note[:160]}"
+        )
+    counts = {k: sum(1 for _, h in rows if h["status"] == k) for k in order}
+    print(
+        f"\n{len(rows)} entreprise(s) : "
+        + ", ".join(f"{n} {k}" for k, n in counts.items() if n)
+        + f". Mise à jour : {snapshot.get('updated_at') or 'jamais'}"
+    )
+    return EXIT_OK
+
+
+def _num(value: object) -> str:
+    return "-" if value is None else str(value)
+
+
+def _now() -> datetime:
+    return datetime.now(UTC)
 
 
 def cmd_discover(args: argparse.Namespace) -> int:
@@ -220,6 +282,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         cfg = load_config(args.config)
         if args.list_companies:
             return cmd_list(cfg)
+        if args.status:
+            return cmd_status(cfg, args)
         if args.test_notify:
             return cmd_test_notify(cfg)
         return cmd_run(cfg, args)
