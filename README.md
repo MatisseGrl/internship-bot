@@ -315,6 +315,53 @@ Le workflow `tests.yml` lance lint + typage + tests à chaque push sur `main`.
 - Si **toutes** les sources échouent (ou si la config est invalide), le run est marqué en échec :
   GitHub vous envoie un e-mail.
 
+## 5 bis. Commandes Telegram (`/offres`, `/refresh`)
+
+En plus des alertes automatiques, vous pouvez **demander au bot la liste complète** des offres
+ouvertes qui passent vos filtres :
+
+| Commande | Effet | Délai |
+|---|---|---|
+| `/offres` | toutes les offres ouvertes, groupées par entreprise | quelques secondes |
+| `/offres paris` | idem, filtrées par mot(s) dans l'entreprise, le titre ou le lieu | quelques secondes |
+| `/refresh` | relance une vraie recherche sur tous les sites, puis envoie la liste | ~5 min |
+| `/statut` | nombre d'offres et date de la dernière mise à jour | quelques secondes |
+
+**Comment ça marche.** Le bot sur GitHub Actions ne tourne que quelques minutes toutes les 2 h :
+il ne peut pas écouter Telegram. À chaque passage, il écrit donc la liste des offres ouvertes
+(`current.json`, branche `state`). Un petit **relais gratuit sur Cloudflare Workers**
+(`worker/`, ~200 lignes, sans dépendance) reçoit vos commandes en temps réel : `/offres` lit
+cette liste (vieille de 2 h au plus) et répond aussitôt ; `/refresh` déclenche le workflow
+avec `--send-all`. Le relais ignore tout message qui ne vient pas de `TELEGRAM_CHAT_ID`, et
+Telegram doit présenter un secret partagé à chaque appel.
+
+**Installation (une fois)** :
+
+1. Créez un compte gratuit sur [dash.cloudflare.com](https://dash.cloudflare.com/sign-up),
+   puis : `cd worker && npx wrangler login`.
+2. Créez un *fine-grained token* GitHub limité au dépôt :
+   [github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new)
+   → *Repository access : Only select repositories* → `internship-bot` → *Permissions* :
+   **Actions : Read and write**, **Contents : Read-only**.
+3. Déployez et ajoutez les secrets :
+   ```bash
+   cd worker
+   npx wrangler deploy
+   npx wrangler secret put TELEGRAM_BOT_TOKEN
+   npx wrangler secret put TELEGRAM_CHAT_ID
+   npx wrangler secret put GITHUB_TOKEN        # le token de l'étape 2
+   npx wrangler secret put WEBHOOK_SECRET      # une longue chaîne aléatoire
+   ```
+4. Branchez Telegram sur le relais : ouvrez
+   `https://internbot-relay.<votre-sous-domaine>.workers.dev/setup?key=<WEBHOOK_SECRET>`
+   (doit afficher `"ok":true`). Le menu des commandes apparaît dans Telegram.
+
+Coût : offre gratuite Cloudflare (100 000 requêtes/jour). `/refresh` consomme ~4 min de
+GitHub Actions par appel. Tests : `cd worker && node --test`.
+
+Sans relais, `python -m internbot run --send-all` (ou *Run workflow* avec `args = --send-all`)
+envoie aussi la liste complète.
+
 ## 6. Ligne de commande
 
 ```
@@ -323,6 +370,7 @@ python -m internbot [run] [options]
   run                 exécution normale (commande par défaut)
   --dry-run           affiche dans la console ce qui serait envoyé ; n'écrit pas l'état
   --seed              enregistre l'existant sans notifier (re-seed explicite)
+  --send-all          envoie aussi la liste de TOUTES les offres ouvertes filtrées
   --test-notify       envoie un message de test Telegram
   --list-companies    liste les entreprises configurées
   --discover X [Y…]   trouve la plateforme (nom, URL « Apply » ou Nom=URL)

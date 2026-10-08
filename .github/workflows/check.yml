@@ -71,6 +71,8 @@ jobs:
           cd .state
           [ -f state.json ] || { echo "Pas de fichier d'état."; exit 0; }
           git add state.json
+          # current.json : liste des offres ouvertes, lue par la commande Telegram /offres.
+          if [ -f current.json ]; then git add current.json; fi
           if git diff --cached --quiet; then
             echo "État inchangé, rien à committer."
             exit 0

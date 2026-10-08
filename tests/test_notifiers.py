@@ -193,3 +193,36 @@ def test_diagnose_ok() -> None:
         json={"ok": True, "result": {"username": "alertes_bot"}},
     )
     assert TelegramNotifier(GOOD_TOKEN, "42", http=make_http()).diagnose() == []
+
+
+# -- liste complète -------------------------------------------------------------------------------
+
+
+def test_listing_groups_by_company_and_respects_limit() -> None:
+    from internbot.notifiers.formatting import build_listing_messages
+
+    jobs = [
+        job(str(i), title=f"Software Intern {i} " + "x" * 60, company_name=f"C{i % 3}")
+        for i in range(150)
+    ]
+    messages = build_listing_messages(jobs, subtitle="maj 08/10")
+    assert len(messages) > 1
+    assert all(len(m) <= TELEGRAM_MAX_CHARS for m in messages)
+    assert messages[0].startswith("📋 <b>150 offre(s) ouverte(s)</b>")
+    assert "<i>maj 08/10</i>" in messages[0]
+    assert sum(m.count("• <a href=") for m in messages) == 150
+    assert any("(suite)" in m for m in messages[1:])
+
+
+def test_listing_empty() -> None:
+    from internbot.notifiers.formatting import build_listing_messages
+
+    assert "Aucune offre" in build_listing_messages([])[0]
+
+
+@responses.activate
+def test_telegram_send_listing() -> None:
+    responses.post(URL, json={"ok": True})
+    assert telegram().send_listing([job("1"), job("2", company_name="Beta")], subtitle="maj")
+    text = json.loads(responses.calls[0].request.body)["text"]
+    assert "<b>Acme</b> (1)" in text and "<b>Beta</b> (1)" in text

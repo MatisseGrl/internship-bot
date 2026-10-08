@@ -131,3 +131,47 @@ def build_grouped_messages(
         text, members_ = messages[0]
         messages[0] = (text.replace(" (partie 1)", "", 1), members_)
     return messages
+
+
+def build_listing_messages(
+    jobs: Sequence[Job], *, subtitle: str = "", limit: int = TELEGRAM_MAX_CHARS
+) -> list[str]:
+    """Liste compacte de TOUTES les offres, groupées par entreprise (HTML Telegram).
+
+    Une ligne par offre, jamais coupée ; l'en-tête d'entreprise est répété (« suite ») quand
+    un groupe déborde sur le message suivant.
+    """
+    by_company: dict[str, list[Job]] = {}
+    for job in jobs:
+        by_company.setdefault(job.company, []).append(job)
+
+    header = f"📋 <b>{len(jobs)} offre(s) ouverte(s)</b> correspondant à tes filtres"
+    if subtitle:
+        header += f"\n<i>{esc(subtitle)}</i>"
+    if not jobs:
+        return [header + "\n\nAucune offre ne correspond actuellement."]
+
+    messages: list[str] = []
+    current = header
+    for company in sorted(by_company, key=str.casefold):
+        group = by_company[company]
+        company_line = f"<b>{esc(company)}</b> ({len(group)})"
+        block_start = f"\n\n{company_line}"
+        if len(current) + len(block_start) + 200 > limit:
+            messages.append(current)
+            current = company_line
+        else:
+            current += block_start
+        for job in group:
+            line = (
+                f'\n• <a href="{html.escape(job.url, quote=True)}">{esc(_clip(job.title, 150))}</a>'
+            )
+            if job.location:
+                line += f" — {esc(_clip(job.location, 80))}"
+            if len(current) + len(line) > limit:
+                messages.append(current)
+                current = f"<b>{esc(company)}</b> (suite)" + line
+            else:
+                current += line
+    messages.append(current)
+    return messages

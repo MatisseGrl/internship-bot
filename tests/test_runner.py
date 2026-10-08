@@ -21,6 +21,8 @@ class RecordingNotifier(Notifier):
         self.sent: list[Job] = []
         self.texts: list[str] = []
         self.fail_ids = fail_ids or set()
+        self.listings: list[tuple[list[Job], str]] = []
+        self.listing_ok = True
 
     def notify(self, jobs: Sequence[Job]) -> list[Job]:
         ok = [j for j in jobs if j.job_id not in self.fail_ids]
@@ -30,6 +32,10 @@ class RecordingNotifier(Notifier):
     def send_text(self, text: str) -> bool:
         self.texts.append(text)
         return True
+
+    def send_listing(self, jobs: Sequence[Job], *, subtitle: str = "") -> bool:
+        self.listings.append((list(jobs), subtitle))
+        return self.listing_ok
 
 
 def config(*names: str, **extra: Any) -> Any:
@@ -205,3 +211,83 @@ def test_weekly_digest(tmp_path: Path) -> None:
     run(tmp_path, cfg, n, now=NOW + timedelta(days=8))
     assert len(n.texts) == 1
     assert "1 offre(s) notifiée(s)" in n.texts[0] and "ML Intern" in n.texts[0]
+
+
+# -- liste des offres ouvertes (current.json) et --send-all ---------------------------------------
+
+
+def run_snap(tmp_path: Path, cfg: Any, notifier: Notifier, **kw: Any) -> Any:
+    state = StateStore.load(tmp_path / "state.json", now=lambda: NOW)
+    runner = Runner(
+        cfg, state, notifier, make_http(), now=NOW, snapshot_path=tmp_path / "current.json", **kw
+    )
+    return runner.run(cfg.companies)
+
+
+def snapshot(tmp_path: Path) -> dict[str, Any]:
+    import json
+
+    data: dict[str, Any] = json.loads((tmp_path / "current.json").read_text(encoding="utf-8"))
+    return data
+
+
+def test_snapshot_lists_all_current_matches_including_seed(tmp_path: Path) -> None:
+    cfg = config("A", "B")
+    FakeProvider.jobs["A"] = [job("1", company_name="A"), job("2", "Senior Engineer", "A")]
+    FakeProvider.jobs["B"] = [job("9", "Data Intern", "B")]
+    run_snap(tmp_path, cfg, RecordingNotifier())  # seed : aucune notif, mais la liste existe
+    snap = snapshot(tmp_path)
+    assert [j["job_id"] for j in snap["companies"]["A"]["jobs"]] == ["1"]
+    assert snap["companies"]["B"]["jobs"][0]["title"] == "Data Intern"
+    assert snap["companies"]["B"]["jobs"][0]["url"].endswith("/9")
+
+    FakeProvider.jobs["A"] = [job("3", "ML Intern", "A")]  # 1 disparue, 3 nouvelle
+    n = RecordingNotifier()
+    run_snap(tmp_path, cfg, n)
+    assert [j["job_id"] for j in snapshot(tmp_path)["companies"]["A"]["jobs"]] == ["3"]
+    assert [j.job_id for j in n.sent] == ["3"]
+
+
+def test_snapshot_keeps_previous_list_of_failed_company(tmp_path: Path) -> None:
+    cfg = config("A", "B")
+    FakeProvider.jobs["A"] = [job("1", company_name="A")]
+    FakeProvider.jobs["B"] = [job("9", company_name="B")]
+    run_snap(tmp_path, cfg, RecordingNotifier())
+    FakeProvider.errors["B"] = ProviderError("panne")
+    run_snap(tmp_path, cfg, RecordingNotifier())
+    assert [j["job_id"] for j in snapshot(tmp_path)["companies"]["B"]["jobs"]] == ["9"]
+
+
+def test_send_all_sends_full_list_and_does_not_double_notify(tmp_path: Path) -> None:
+    cfg = config()
+    FakeProvider.jobs["Acme"] = [job("old")]
+    run_snap(tmp_path, cfg, RecordingNotifier())
+    FakeProvider.jobs["Acme"] = [job("old"), job("new", "Backend Intern")]
+    n = RecordingNotifier()
+    report = run_snap(tmp_path, cfg, n, send_all=True)
+    (jobs, subtitle), *_ = n.listings
+    assert sorted(j.job_id for j in jobs) == ["new", "old"]
+    assert "mise à jour" in subtitle
+    assert n.sent == []  # la nouvelle offre est déjà dans la liste
+    assert report.notified == 1
+    n2 = RecordingNotifier()
+    run_snap(tmp_path, cfg, n2)  # et elle est bien marquée vue
+    assert n2.sent == []
+
+
+def test_send_all_listing_failure_falls_back_to_individual(tmp_path: Path) -> None:
+    cfg = config()
+    FakeProvider.jobs["Acme"] = []
+    run_snap(tmp_path, cfg, RecordingNotifier())
+    FakeProvider.jobs["Acme"] = [job("new")]
+    n = RecordingNotifier()
+    n.listing_ok = False
+    run_snap(tmp_path, cfg, n, send_all=True)
+    assert [j.job_id for j in n.sent] == ["new"]
+
+
+def test_dry_run_does_not_write_snapshot(tmp_path: Path) -> None:
+    cfg = config()
+    FakeProvider.jobs["Acme"] = [job("1")]
+    run_snap(tmp_path, cfg, RecordingNotifier(), dry_run=True)
+    assert not (tmp_path / "current.json").exists()

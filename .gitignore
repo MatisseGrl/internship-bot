@@ -18,3 +18,8 @@ dist/
 .ruff_cache/
 .coverage
 htmlcov/
+
+# Relais Cloudflare (worker/)
+node_modules/
+.wrangler/
+.dev.vars

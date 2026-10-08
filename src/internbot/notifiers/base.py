@@ -16,3 +16,7 @@ class Notifier(ABC):
     @abstractmethod
     def send_text(self, text: str) -> bool:
         """Envoie un message informatif en texte brut (alerte, récapitulatif, test)."""
+
+    @abstractmethod
+    def send_listing(self, jobs: Sequence[Job], *, subtitle: str = "") -> bool:
+        """Envoie la liste complète des offres ouvertes. True si tout est parti."""

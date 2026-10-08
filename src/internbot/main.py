@@ -46,6 +46,11 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--dry-run", action="store_true", help="affiche sans notifier ni écrire l'état")
     p.add_argument("--seed", action="store_true", help="enregistre l'existant sans notifier")
+    p.add_argument(
+        "--send-all",
+        action="store_true",
+        help="envoie aussi la liste de TOUTES les offres ouvertes qui passent les filtres",
+    )
     p.add_argument("--test-notify", action="store_true", help="envoie un message de test")
     p.add_argument("--list-companies", action="store_true", help="liste les entreprises")
     p.add_argument(
@@ -185,7 +190,17 @@ def cmd_run(cfg: AppConfig, args: argparse.Namespace) -> int:
     if args.dry_run:
         state.path = None  # garde-fou : impossible d'écrire l'état en dry-run
     http = make_http(cfg)
-    runner = Runner(cfg, state, notifier, http, dry_run=args.dry_run, force_seed=args.seed)
+    runner = Runner(
+        cfg,
+        state,
+        notifier,
+        http,
+        dry_run=args.dry_run,
+        force_seed=args.seed,
+        send_all=args.send_all,
+        # current.json vit à côté de state.json (branche `state` en CI).
+        snapshot_path=Path(args.state).with_name("current.json"),
+    )
     report = runner.run(companies)
     log.info("%s", report.summary())
     log.info("%d requête(s) HTTP effectuée(s).", http.request_count)

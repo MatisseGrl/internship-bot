@@ -14,6 +14,7 @@ import logging
 from collections.abc import Sequence
 from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
+from pathlib import Path
 
 from internbot.config import AppConfig, CompanyConfig
 from internbot.errors import InternbotError
@@ -23,6 +24,7 @@ from internbot.models import Job
 from internbot.notifiers.base import Notifier
 from internbot.providers import get_provider_class
 from internbot.providers.base import Provider
+from internbot.snapshot import build_snapshot, load_snapshot, save_snapshot, snapshot_jobs
 from internbot.storage import StateStore
 
 log = logging.getLogger(__name__)
@@ -85,6 +87,8 @@ class Runner:
         *,
         dry_run: bool = False,
         force_seed: bool = False,
+        send_all: bool = False,
+        snapshot_path: Path | None = None,
         now: datetime | None = None,
     ) -> None:
         self.config = config
@@ -94,7 +98,11 @@ class Runner:
         self.dry_run = dry_run
         self.force_seed = force_seed
         self.now = now or datetime.now(UTC)
+        self.send_all = send_all
+        self.snapshot_path = snapshot_path
         self._providers: dict[str, Provider] = {}
+        # Offres ouvertes qui passent les filtres, par entreprise traitée avec succès.
+        self._current: dict[str, list[Job]] = {}
 
     def run(self, companies: Sequence[CompanyConfig]) -> RunReport:
         report = RunReport()
@@ -107,8 +115,17 @@ class Runner:
             if not self.dry_run:
                 self.state.save()
 
+        snapshot = build_snapshot(
+            load_snapshot(self.snapshot_path),
+            self._current,
+            [c.name for c in self.config.companies],
+            self.now,
+        )
+        listing_sent = self.send_all and self._send_listing(snapshot, report)
+
         if pending:
-            delivered = self.notifier.notify(pending)
+            # Avec --send-all, les nouvelles offres figurent déjà dans la liste envoyée.
+            delivered = list(pending) if listing_sent else self.notifier.notify(pending)
             report.notified = len(delivered)
             report.pending = len(pending) - len(delivered)
             if not self.dry_run:
@@ -125,7 +142,20 @@ class Runner:
             self._maybe_digest()
             self.state.prune_removed()
             self.state.save()
+            if self.snapshot_path is not None:
+                save_snapshot(self.snapshot_path, snapshot)
         return report
+
+    def _send_listing(self, snapshot: dict[str, object], report: RunReport) -> bool:
+        jobs = snapshot_jobs(snapshot)
+        subtitle = f"mise à jour {self.now:%d/%m %H:%M} UTC"
+        if report.failures:
+            subtitle += " — en échec, liste du dernier succès : " + ", ".join(
+                r.name for r in report.failures
+            )
+        ok = self.notifier.send_listing(jobs, subtitle=subtitle)
+        log.info("Liste complète (%d offres) %s.", len(jobs), "envoyée" if ok else "NON envoyée")
+        return ok
 
     # -- par entreprise -------------------------------------------------------------------------
 
@@ -159,6 +189,7 @@ class Runner:
 
         if self.force_seed or not self.state.is_seeded(company.name):
             result.seeded = True
+            self._current[company.name] = [j for j in jobs if job_filter.matches(j)]
             self._seed(company, jobs, job_filter)
             if not self.dry_run:
                 self.state.record_success(company.name)
@@ -182,6 +213,7 @@ class Runner:
 
         new_jobs = [j for j in jobs if not self.state.is_known(company.name, j.job_id)]
         to_notify: list[Job] = []
+        rejected: set[str] = set()
         for job in new_jobs:
             reason = job_filter.title_reject_reason(job.title)
             if reason is None:
@@ -192,10 +224,17 @@ class Runner:
                 log.info("%s : NOUVELLE offre « %s » (%s)", company.name, job.title, job.location)
             else:
                 log.debug("%s : ignorée « %s » — %s", company.name, job.title, reason)
+                rejected.add(job.job_id)
                 if not self.dry_run:
                     self.state.mark_seen(job, notified=False)
 
         result.new_matches = len(to_notify)
+        enriched = {j.job_id: j for j in to_notify}
+        self._current[company.name] = [
+            enriched.get(j.job_id, j)
+            for j in jobs
+            if j.job_id not in rejected and (j.job_id in enriched or job_filter.matches(j))
+        ]
         log.info(
             "%s : %d nouvelle(s) offre(s), dont %d correspondante(s)",
             company.name,

@@ -13,7 +13,12 @@ from internbot.errors import ConfigError, HttpError
 from internbot.http import HttpClient
 from internbot.models import Job
 from internbot.notifiers.base import Notifier
-from internbot.notifiers.formatting import build_grouped_messages, format_job_html, split_message
+from internbot.notifiers.formatting import (
+    build_grouped_messages,
+    build_listing_messages,
+    format_job_html,
+    split_message,
+)
 
 log = logging.getLogger(__name__)
 
@@ -126,6 +131,12 @@ class TelegramNotifier(Notifier):
             if self._send(text):
                 delivered.extend(members)
         return delivered
+
+    def send_listing(self, jobs: Sequence[Job], *, subtitle: str = "") -> bool:
+        ok = True
+        for message in build_listing_messages(jobs, subtitle=subtitle):
+            ok = self._send(message) and ok
+        return ok
 
     def send_text(self, text: str) -> bool:
         ok = True

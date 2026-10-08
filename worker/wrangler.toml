@@ -1,0 +1,11 @@
+# Relais Telegram d'internbot (Cloudflare Workers, offre gratuite).
+# Déploiement : cd worker && npx wrangler deploy   (voir README, section « Commandes Telegram »)
+name = "internbot-relay"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+[vars]
+GITHUB_REPO = "MatisseGrl/internship-bot"
+
+# Secrets (jamais dans ce fichier) : npx wrangler secret put <NOM>
+#   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, GITHUB_TOKEN, WEBHOOK_SECRET
