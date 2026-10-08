@@ -1,0 +1,35 @@
+{
+  "loaderData": {
+    "root": {"locale": "en-us"},
+    "search": {
+      "page": 1,
+      "totalRecords": 4,
+      "searchResults": [
+        {
+          "id": "200687446-1731",
+          "positionId": "200687446",
+          "postingTitle": "Internship - Cellular Protocol ",
+          "transformedPostingTitle": "internship-cellular-protocol",
+          "postDateInGMT": "2026-10-08T13:12:03.143Z",
+          "locations": [
+            {"name": "Munich", "countryName": "Germany", "countryID": "iso-country-DEU", "level": 5}
+          ],
+          "team": {"teamName": "Students", "teamCode": "STDNT"}
+        },
+        {
+          "id": "200682900-3715",
+          "positionId": "200682900",
+          "postingTitle": "Mac Hardware System Design Engineer Intern (AI Tools for Hardware Engineering)",
+          "transformedPostingTitle": "mac-hardware-system-design-engineer-intern-ai-tools-for-hardware-engineering",
+          "postDateInGMT": "2026-10-07T09:00:00.000Z",
+          "locations": [
+            {"name": "Shanghai", "countryName": "China", "countryID": "iso-country-CHN", "level": 5}
+          ],
+          "team": {"teamName": "Students", "teamCode": "STDNT"}
+        }
+      ]
+    }
+  },
+  "actionData": null,
+  "errors": null
+}

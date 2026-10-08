@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import builtins
+import json
 from typing import Any
 
 import pytest
@@ -8,6 +9,7 @@ import responses
 
 from internbot.errors import ProviderError, ProviderFormatError
 from internbot.providers import available_providers
+from internbot.providers.apple import AppleProvider
 from internbot.providers.ashby import AshbyProvider
 from internbot.providers.greenhouse import GreenhouseProvider
 from internbot.providers.lever import LeverProvider
@@ -19,6 +21,7 @@ from tests.conftest import company, load_fixture, make_http
 
 def test_registry_contains_all_providers() -> None:
     assert {
+        "apple",
         "ashby",
         "greenhouse",
         "lever",
@@ -176,3 +179,62 @@ def test_playwright_missing_dependency(monkeypatch: pytest.MonkeyPatch) -> None:
     cfg = company("Maboite", "playwright", url="https://ex.com", item_selector="li")
     with pytest.raises(ProviderError, match="pip install"):
         PlaywrightGenericProvider(make_http()).fetch_jobs(cfg)
+
+
+# -- Apple (site maison, données embarquées dans le HTML) -------------------------------------------
+
+APPLE_URL = "https://jobs.apple.com/en-us/search"
+
+
+def apple_html(data: Any) -> str:
+    """Reproduit la page d'Apple : JSON encodé dans un littéral de chaîne JS."""
+    data = json.dumps(data)
+    return (
+        "<html><head><script>window.__staticRouterHydrationData = "
+        f"JSON.parse({json.dumps(data)});</script></head><body></body></html>"
+    )
+
+
+@responses.activate
+def test_apple_paginates_and_parses() -> None:
+    responses.get(APPLE_URL, body=apple_html(load_fixture("apple_page1.json")))
+    responses.get(APPLE_URL, body=apple_html(load_fixture("apple_page2.json")))
+    jobs = AppleProvider(make_http()).fetch_jobs(company("Apple", "apple"))
+
+    assert len(responses.calls) == 2  # 4 offres annoncées, 2 par page
+    assert "team=internships-STDNT-INTRN" in responses.calls[0].request.url
+    assert "page=2" in responses.calls[1].request.url
+    assert [j.job_id for j in jobs] == ["200687446-1731", "200682900-3715", "200620855-2114"]
+    first = jobs[0]
+    assert first.title == "Internship - Cellular Protocol"
+    assert first.location == "Munich, Germany"
+    assert first.url == (
+        "https://jobs.apple.com/en-us/details/200687446-1731/internship-cellular-protocol"
+    )
+    assert first.posted_at == "2026-10-08"
+    assert jobs[1].location == "Shanghai, China"  # exclu ensuite par le filtre de lieu
+    assert jobs[2].location == "United States"  # lieu = pays : pas de répétition
+
+
+@responses.activate
+def test_apple_custom_team_and_stops_on_empty_page() -> None:
+    empty = {"loaderData": {"search": {"totalRecords": 50, "searchResults": []}}}
+    responses.get(APPLE_URL, body=apple_html(empty))
+    jobs = AppleProvider(make_http()).fetch_jobs(company("Apple", "apple", team="students-STDNT"))
+    assert jobs == []
+    assert len(responses.calls) == 1
+    assert "team=students-STDNT" in responses.calls[0].request.url
+
+
+@responses.activate
+def test_apple_format_change_is_reported() -> None:
+    responses.get(APPLE_URL, body="<html>nouveau site</html>")
+    with pytest.raises(ProviderFormatError, match="introuvables"):
+        AppleProvider(make_http()).fetch_jobs(company("Apple", "apple"))
+
+
+@responses.activate
+def test_apple_http_error() -> None:
+    responses.get(APPLE_URL, status=403, body="Forbidden")
+    with pytest.raises(ProviderError, match=r"\[apple\] Apple"):
+        AppleProvider(make_http(max_retries=0)).fetch_jobs(company("Apple", "apple"))

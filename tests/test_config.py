@@ -131,3 +131,17 @@ def test_company_filter_override_validated() -> None:
     }
     with pytest.raises(ConfigError, match=r"A\)\.filters\.year_mode"):
         parse_config(raw)
+
+
+def test_real_config_accepts_plural_internships() -> None:
+    # Apple publie ses offres US sous « ... Internships » (pluriel) : le mot entier
+    # « internship » ne le matche pas, il faut le pluriel dans title_include.
+    from internbot.filters import JobFilter
+    from tests.conftest import job
+
+    filt = JobFilter(load_config(ROOT / "config.yaml").filters)
+    for title in (
+        "Software Engineering Masters Internships",
+        "Machine Learning and Artificial Intelligence Undergrad Internships",
+    ):
+        assert filt.reject_reason(job("1", title=title, location="United States")) is None

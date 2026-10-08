@@ -9,7 +9,7 @@ notifier:
 filters:
   # Matching insensible à la casse et aux accents, par mot entier
   # (« intern » ne matche pas « internal » ; ajoutez « internship » explicitement).
-  title_include: ["intern", "interns", "internship", "stage", "stagiaire", "co-op", "working student"]
+  title_include: ["intern", "interns", "internship", "internships", "stage", "stagiaire", "co-op", "working student"]
   title_exclude: ["senior", "staff", "principal", "manager", "director", "high school"]
   locations_include: []     # vide = toutes ; ex: ["France", "Paris", "Remote", "Europe"]
   # Chine exclue (pays + grandes villes, certains sites n'affichent que la ville).
@@ -377,6 +377,9 @@ companies:
     company_id: BoschGroup
     query: intern
     enabled: false              # exemple : beaucoup d'offres hors tech
+  # ---- Sites maison (un provider dédié par entreprise)
+  - name: Apple                 # jobs.apple.com, filtre « Students: Internships »
+    provider: apple
 
   # ---- Non trouvées automatiquement : ajoutez-les avec
   #      python -m internbot --discover "Nom=URL_de_la_page_Apply"

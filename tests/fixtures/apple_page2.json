@@ -1,0 +1,28 @@
+{
+  "loaderData": {
+    "root": {"locale": "en-us"},
+    "search": {
+      "page": 2,
+      "totalRecords": 4,
+      "searchResults": [
+        {
+          "id": "200620855-2114",
+          "positionId": "200620855",
+          "postingTitle": "Software Engineering Internships",
+          "transformedPostingTitle": "software-engineering-internships",
+          "postDateInGMT": "2026-09-15T17:30:00.000Z",
+          "locations": [
+            {"name": "United States", "countryName": "United States of America", "countryID": "iso-country-USA", "level": 1}
+          ],
+          "team": {"teamName": "Students", "teamCode": "STDNT"}
+        },
+        {
+          "id": "",
+          "postingTitle": "Offre masquée sans identifiant"
+        }
+      ]
+    }
+  },
+  "actionData": null,
+  "errors": null
+}
