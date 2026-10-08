@@ -266,11 +266,12 @@ du package : aucun autre fichier à modifier. Ajoutez une fixture JSON et un tes
    git remote add origin https://github.com/<vous>/internship-bot.git
    git push -u origin main
    ```
-   💡 **Dépôt public recommandé** : les minutes Actions y sont illimitées. Sur un dépôt privé, le
-   quota gratuit est de 2 000 min/mois ; un run dure ~5 min avec 40 entreprises (une minute entamée est
-   facturée), donc un cron toutes les 30 min le dépasse. En privé, passez le cron à
-   `17 */2 * * *` (toutes les 2 h) ou réduisez la liste d'entreprises. Le dépôt ne contient
-   aucun secret ; la branche `state` ne contient que des titres d'offres publiques.
+   💡 **Public ou privé ?** Le workflow est réglé pour un **dépôt privé** : un run toutes les
+   2 h (~3,5 min par run avec 40 entreprises et `min_delay_s: 1.0`), soit ~1 450 min/mois, sous
+   le quota gratuit de 2 000 min/mois (une minute entamée est facturée). Sur un dépôt **public**
+   les minutes sont illimitées : passez le cron à `17,47 * * * *` (toutes les 30 min). Étudiant ?
+   Le *GitHub Student Developer Pack* donne GitHub Pro (3 000 min/mois). Suivi de la
+   consommation : *Settings → Billing → Usage*.
 2. **Ajoutez les secrets** : *Settings → Secrets and variables → Actions → New repository
    secret* :
    - `TELEGRAM_BOT_TOKEN`
@@ -281,7 +282,7 @@ du package : aucun autre fichier à modifier. Ajoutez une fixture JSON et un tes
    `args` = `--test-notify`.
 5. **Premier vrai run** : *Run workflow* sans argument. Il crée la branche `state` et fait le
    seed silencieux (aucun message, c'est normal). Les runs suivants partent tout seuls toutes
-   les 30 min et ne notifient que les nouvelles offres.
+   les 2 h et ne notifient que les nouvelles offres.
 
 Le workflow `tests.yml` lance lint + typage + tests à chaque push sur `main`.
 
@@ -307,7 +308,7 @@ Le workflow `tests.yml` lance lint + typage + tests à chaque push sur `main`.
 
 - GitHub **ne garantit pas l'heure** des crons : des retards de 5 à 30 min (voire plus aux heures
   de pointe) sont courants, et un run peut exceptionnellement sauter.
-- Sur un dépôt public, GitHub **désactive les workflows planifiés après 60 jours sans activité**
+- Sur un dépôt **public** (pas en privé), GitHub **désactive les workflows planifiés après 60 jours sans activité**
   sur le dépôt. Les commits du bot sur la branche `state` ne sont pas garantis compter comme
   activité : GitHub vous prévient par e-mail avant ; il suffit alors de cliquer sur
   *Enable workflow* dans l'onglet Actions, ou de faire un commit de temps en temps sur `main`.
@@ -405,7 +406,7 @@ Logs détaillés : `python -m internbot run --dry-run -v --company Salesforce`.
   remarque, à moindre degré, pour le widget Workable.
 - Greenhouse, Lever, Ashby et SmartRecruiters exposent des API publiques documentées, a priori
   stables.
-- Une offre publiée puis retirée entre deux runs (< 30 min) peut être manquée.
+- Une offre publiée puis retirée entre deux runs (< 2 h en privé) peut être manquée.
 - Les crons GitHub peuvent être retardés : comptez une alerte dans l'heure, pas à la minute.
 - La détection repose sur les filtres de titre : une offre de stage dont le titre ne contient
   aucun mot-clé (ex: « Software Engineer, New Grad 2027 ») ne sera pas détectée ; ajustez

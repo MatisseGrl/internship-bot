@@ -2,8 +2,10 @@ name: Check internships
 
 on:
   schedule:
-    # Toutes les 30 min, décalé des heures pleines (moins de retard côté GitHub).
-    - cron: "17,47 * * * *"
+    # Toutes les 2 h (heure UTC), décalé des heures pleines (moins de retard côté GitHub).
+    # Dépôt privé : ~3,5 min/run x 12 runs/jour ≈ 1 450 min/mois, sous le quota gratuit de 2 000.
+    # Dépôt public (minutes illimitées) : "17,47 * * * *" pour toutes les 30 min.
+    - cron: "17 */2 * * *"
   workflow_dispatch:
     inputs:
       args:
