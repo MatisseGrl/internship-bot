@@ -1,0 +1,9 @@
+{
+  "jobs": [
+    {"absolute_url": "https://stripe.com/jobs/search?gh_jid=8172508", "data_compliance": [], "internal_job_id": 7001, "location": {"name": "Dublin"}, "metadata": null, "id": 8172508, "updated_at": "2026-10-07T19:02:27-04:00", "requisition_id": "R1", "title": "Abuse Investigator", "company_name": "Stripe", "first_published": "2026-09-30T10:00:00-04:00", "language": "en"},
+    {"absolute_url": "https://stripe.com/jobs/search?gh_jid=8200001", "data_compliance": [], "internal_job_id": 7002, "location": {"name": "Paris, France"}, "metadata": null, "id": 8200001, "updated_at": "2026-10-08T09:12:00-04:00", "requisition_id": "R2", "title": "Software Engineering Intern, Summer 2027", "company_name": "Stripe", "first_published": "2026-10-08T09:00:00-04:00", "language": "en"},
+    {"absolute_url": "https://stripe.com/jobs/search?gh_jid=8200002", "location": {"name": "Remote in Europe"}, "id": 8200002, "updated_at": "2026-10-01T09:12:00-04:00", "title": "Machine Learning Engineer, Intern"},
+    {"location": {"name": "Nowhere"}, "id": 8200003, "title": "Broken entry without URL"}
+  ],
+  "meta": {"total": 4}
+}

@@ -1,0 +1,8 @@
+{
+  "apiVersion": "1",
+  "jobs": [
+    {"id": "8fb1615c-34bf-47c4-a1d1-b7b2f836bbd3", "title": "Technical Program Manager, Compute Infrastructure", "department": "Scaling", "team": "Compute", "employmentType": "FullTime", "location": "San Francisco", "secondaryLocations": [], "publishedAt": "2026-03-12T16:38:15.322+00:00", "isListed": true, "isRemote": null, "workplaceType": null, "jobUrl": "https://jobs.ashbyhq.com/openai/8fb1615c-34bf-47c4-a1d1-b7b2f836bbd3", "applyUrl": "https://jobs.ashbyhq.com/openai/8fb1615c-34bf-47c4-a1d1-b7b2f836bbd3/application"},
+    {"id": "11111111-2222-3333-4444-555555555555", "title": "Research Engineer Intern", "department": "Research", "team": "Residency", "employmentType": "Intern", "location": "London", "secondaryLocations": [{"location": "Paris", "address": {}}, "Zurich"], "publishedAt": "2026-10-07T08:00:00.000+00:00", "isListed": true, "isRemote": true, "jobUrl": "https://jobs.ashbyhq.com/openai/11111111-2222-3333-4444-555555555555"},
+    {"id": "99999999-0000-0000-0000-000000000000", "title": "Unlisted Intern", "location": "SF", "isListed": false, "jobUrl": "https://jobs.ashbyhq.com/openai/99999999-0000-0000-0000-000000000000"}
+  ]
+}

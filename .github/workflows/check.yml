@@ -1,0 +1,77 @@
+name: Check internships
+
+on:
+  schedule:
+    # Toutes les 30 min, décalé des heures pleines (moins de retard côté GitHub).
+    - cron: "17,47 * * * *"
+  workflow_dispatch:
+    inputs:
+      args:
+        description: "Options supplémentaires (ex: --seed, --company Salesforce, -v, --test-notify)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write # pour pousser le fichier d'état sur la branche `state`
+
+# Un seul run à la fois : pas de conflit d'écriture sur l'état.
+concurrency:
+  group: internbot-state
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install
+        run: pip install .
+
+      # L'état (state.json) vit sur une branche dédiée `state`, montée dans .state/ via un
+      # worktree. Les pushes sur cette branche ne déclenchent aucun workflow (pas de boucle).
+      - name: Load state branch
+        run: |
+          git config --global user.name "internbot"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin state >/dev/null 2>&1; then
+            git fetch --depth=1 origin state
+            git worktree add --detach .state FETCH_HEAD
+          else
+            echo "Branche state absente : elle sera créée (premier lancement = seed silencieux)."
+            git worktree add --detach .state
+            git -C .state checkout --orphan state
+            git -C .state rm -rfq .
+          fi
+
+      - name: Run internbot
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          EXTRA_ARGS: ${{ inputs.args }}
+        run: |
+          CONFIG=config.yaml
+          [ -f "$CONFIG" ] || CONFIG=config.example.yaml
+          # shellcheck disable=SC2086  # découpage volontaire des options
+          python -m internbot run -c "$CONFIG" --state .state/state.json $EXTRA_ARGS
+
+      # always() : on sauvegarde aussi les compteurs d'échec quand le run échoue.
+      - name: Save state
+        if: always()
+        run: |
+          cd .state
+          [ -f state.json ] || { echo "Pas de fichier d'état."; exit 0; }
+          git add state.json
+          if git diff --cached --quiet; then
+            echo "État inchangé, rien à committer."
+            exit 0
+          fi
+          git commit -qm "state: $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          git push origin HEAD:refs/heads/state

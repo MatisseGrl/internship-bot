@@ -1,0 +1,4 @@
+{"offset": 0, "limit": 100, "totalFound": 3, "content": [
+  {"id": "744000154478885", "name": "Business Digitalisation & AI Automation Intern", "uuid": "a5954dab-e7e2-4011-a936-720a1bb5cbd0", "refNumber": "REF297957V", "company": {"identifier": "BoschGroup", "name": "Bosch Group"}, "releasedDate": "2026-10-08T15:52:42.988Z", "location": {"city": "Denham", "region": "England", "country": "gb", "remote": false, "fullLocation": "Denham, England, United Kingdom"}, "experienceLevel": {"id": "internship", "label": "Internship"}},
+  {"id": "744000154470001", "name": "Software Engineering Intern (Embedded)", "releasedDate": "2026-10-06T10:00:00.000Z", "location": {"city": "Stuttgart", "region": "BW", "country": "de", "remote": true}}
+]}

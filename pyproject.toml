@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "internbot"
+version = "0.1.0"
+description = "Bot d'alerte Telegram pour les nouvelles offres de stage (Workday, Greenhouse, Lever, Ashby, SmartRecruiters, Workable)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.31",
+    "PyYAML>=6.0",
+    "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "responses>=0.25",
+    "ruff>=0.6",
+    "mypy>=1.10",
+    "types-requests",
+    "types-PyYAML",
+]
+playwright = ["playwright>=1.44"]
+
+[project.scripts]
+internbot = "internbot.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/internbot"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]  # caractères Unicode volontaires (accents, emojis)
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501"]  # tables de cas de test (URLs) plus lisibles sur une ligne
+
+[tool.mypy]
+python_version = "3.11"
+packages = ["internbot"]
+mypy_path = "src"
+strict = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["playwright.*"]
+ignore_missing_imports = true

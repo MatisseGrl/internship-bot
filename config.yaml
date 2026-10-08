@@ -1,0 +1,192 @@
+# Configuration d'internbot — entreprises vérifiées par `internbot --discover` le 2026-10-08.
+# Aucun secret ici : le token Telegram et le chat_id passent par des variables d'environnement.
+
+notifier:
+  type: telegram            # telegram | console
+  group_threshold: 10       # au-delà de N nouvelles offres dans un run : messages groupés
+  disable_link_preview: true
+
+filters:
+  # Matching insensible à la casse et aux accents, par mot entier
+  # (« intern » ne matche pas « internal » ; ajoutez « internship » explicitement).
+  title_include: ["intern", "interns", "internship", "stage", "stagiaire", "co-op", "working student"]
+  title_exclude: ["senior", "staff", "principal", "manager", "director", "high school"]
+  locations_include: []     # vide = toutes ; ex: ["France", "Paris", "Remote", "Europe"]
+  locations_exclude: []
+  keywords_any: ["software", "engineer", "engineering", "developer", "data", "ml",
+                 "machine learning", "ai", "backend", "frontend", "full stack", "fullstack",
+                 "research", "security", "infrastructure", "platform"]  # vide = pas de contrainte
+  year_hint: ["2027"]
+  # prefer  : écarte « Summer 2026 Intern » mais garde les titres sans année
+  # require : exige l'année dans le titre ; off : ignore year_hint
+  year_hint_mode: prefer
+
+http:
+  # Mettez un moyen de contact (ex: votre GitHub) : c'est la politesse attendue d'un robot.
+  user_agent: "internbot/0.1 (personal internship alert bot; low-frequency polling; +https://github.com/MatisseGrl/internship-bot)"
+  timeout_s: 20
+  min_delay_s: 1.5          # délai minimal entre deux requêtes (>= 1 s)
+  max_retries: 3
+  backoff_base_s: 2
+
+alerts:
+  failure_threshold: 3      # alerte Telegram si une entreprise échoue 3 runs d'affilée (0 = off)
+  log_removed: true         # log des offres disparues
+
+digest:
+  enabled: false            # récapitulatif périodique
+  every_days: 7
+
+
+companies:
+  # ---- Workday (endpoint non officiel) — https://{tenant}.{wd}.myworkdayjobs.com/{site}
+  - name: Adobe
+    provider: workday
+    tenant: adobe
+    wd: wd5
+    site: external_experienced
+  - name: Capital One
+    provider: workday
+    tenant: capitalone
+    wd: wd12
+    site: Capital_One
+  - name: CrowdStrike
+    provider: workday
+    tenant: crowdstrike
+    wd: wd5
+    site: crowdstrikecareers
+  - name: NVIDIA
+    provider: workday
+    tenant: nvidia
+    wd: wd5
+    site: NVIDIAExternalCareerSite
+  - name: Salesforce
+    provider: workday
+    tenant: salesforce
+    wd: wd12
+    site: External_Career_Site
+    search_text: intern
+  - name: Slack
+    provider: workday
+    tenant: salesforce
+    wd: wd12
+    site: Slack
+  - name: Zoom
+    provider: workday
+    tenant: zoom
+    wd: wd5
+    site: zoom
+  # ---- Greenhouse — boards.greenhouse.io/{board}
+  - name: Airbnb
+    provider: greenhouse
+    board: airbnb
+  - name: Anthropic
+    provider: greenhouse
+    board: anthropic
+  - name: Asana
+    provider: greenhouse
+    board: asana
+  - name: Coinbase
+    provider: greenhouse
+    board: coinbase
+  - name: Databricks
+    provider: greenhouse
+    board: databricks
+  - name: Datadog
+    provider: greenhouse
+    board: datadog
+  - name: Discord
+    provider: greenhouse
+    board: discord
+  - name: Dropbox
+    provider: greenhouse
+    board: dropbox
+  - name: Duolingo
+    provider: greenhouse
+    board: duolingo
+  - name: Epic Games
+    provider: greenhouse
+    board: epicgames
+  - name: Figma
+    provider: greenhouse
+    board: figma
+  - name: Flexport
+    provider: greenhouse
+    board: flexport
+  - name: GitLab
+    provider: greenhouse
+    board: gitlab
+  - name: Lyft
+    provider: greenhouse
+    board: lyft
+  - name: MongoDB
+    provider: greenhouse
+    board: mongodb
+  - name: Nintendo
+    provider: greenhouse
+    board: nintendo
+  - name: Nuro
+    provider: greenhouse
+    board: nuro
+  - name: Okta
+    provider: greenhouse
+    board: okta
+  - name: Pinterest
+    provider: greenhouse
+    board: pinterest
+  - name: Reddit
+    provider: greenhouse
+    board: reddit
+  - name: Riot Games
+    provider: greenhouse
+    board: riotgames
+  - name: Roblox
+    provider: greenhouse
+    board: roblox
+  - name: Scale AI
+    provider: greenhouse
+    board: scaleai
+  - name: SeatGeek
+    provider: greenhouse
+    board: seatgeek
+  - name: SpaceX
+    provider: greenhouse
+    board: spacex
+  - name: Stripe
+    provider: greenhouse
+    board: stripe
+  - name: Twitch
+    provider: greenhouse
+    board: twitch
+  # ---- Ashby — jobs.ashbyhq.com/{board}
+  - name: Notion
+    provider: ashby
+    board: notion
+  - name: OpenAI
+    provider: ashby
+    board: openai
+  - name: Perplexity
+    provider: ashby
+    board: perplexity
+  - name: Snowflake
+    provider: ashby
+    board: snowflake
+  # ---- Lever — jobs.lever.co/{company}
+  - name: Spotify
+    provider: lever
+    company: spotify
+  # ---- Workable — apply.workable.com/{account}
+  - name: Hugging Face
+    provider: workable
+    account: huggingface
+  # ---- SmartRecruiters — jobs.smartrecruiters.com/{company_id}
+  - name: Bosch
+    provider: smartrecruiters
+    company_id: BoschGroup
+    query: intern
+    enabled: false              # exemple : beaucoup d'offres hors tech
+
+  # ---- Non trouvées automatiquement : ajoutez-les avec
+  #      python -m internbot --discover "Nom=URL_de_la_page_Apply"
+  # - DoorDash, Shopify, Mistral AI (compte Lever vide), Dell, NetApp, Texas Instruments
+  # - Palo Alto Networks : tenant « paloaltonetworks » sur wd5, il ne manque que le nom du site

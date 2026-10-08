@@ -1,0 +1,106 @@
+# Configuration d'internbot. Copiez ce fichier en config.yaml puis adaptez-le.
+# Aucun secret ici : le token Telegram et le chat_id passent par des variables d'environnement.
+
+notifier:
+  type: telegram            # telegram | console
+  group_threshold: 10       # au-delà de N nouvelles offres dans un run : messages groupés
+  disable_link_preview: true
+
+filters:
+  # Matching insensible à la casse et aux accents, par mot entier
+  # (« intern » ne matche pas « internal » ; ajoutez « internship » explicitement).
+  title_include: ["intern", "interns", "internship", "stage", "stagiaire", "co-op", "working student"]
+  title_exclude: ["senior", "staff", "principal", "manager", "director", "high school"]
+  locations_include: []     # vide = toutes ; ex: ["France", "Paris", "Remote", "Europe"]
+  locations_exclude: []
+  keywords_any: ["software", "engineer", "engineering", "developer", "data", "ml",
+                 "machine learning", "ai", "backend", "frontend", "full stack", "fullstack",
+                 "research", "security", "infrastructure", "platform"]  # vide = pas de contrainte
+  year_hint: ["2027"]
+  # prefer  : écarte « Summer 2026 Intern » mais garde les titres sans année
+  # require : exige l'année dans le titre ; off : ignore year_hint
+  year_hint_mode: prefer
+
+http:
+  # Mettez un moyen de contact (ex: votre GitHub) : c'est la politesse attendue d'un robot.
+  user_agent: "internbot/0.1 (personal internship alert bot; low-frequency polling; +https://github.com/)"
+  timeout_s: 20
+  min_delay_s: 1.5          # délai minimal entre deux requêtes (>= 1 s)
+  max_retries: 3
+  backoff_base_s: 2
+
+alerts:
+  failure_threshold: 3      # alerte Telegram si une entreprise échoue 3 runs d'affilée (0 = off)
+  log_removed: true         # log des offres disparues
+
+digest:
+  enabled: false            # récapitulatif périodique
+  every_days: 7
+
+companies:
+  # ---- Workday : tenant / wd / site se lisent dans l'URL https://{tenant}.{wd}.myworkdayjobs.com/{site}
+  - name: Salesforce
+    provider: workday
+    tenant: salesforce
+    wd: wd12
+    site: External_Career_Site    # vérifié : POST .../wday/cxs/salesforce/External_Career_Site/jobs -> 200
+    search_text: intern           # recherche plein texte côté Workday (pré-filtre)
+    # max_pages: 100              # sécurité : 100 x 20 offres max
+    # fetch_details: true         # récupère lieux complets + date pour les offres candidates
+    # max_details: 25             # requêtes de détail max par run et par entreprise
+  - name: NVIDIA
+    provider: workday
+    tenant: nvidia
+    wd: wd5
+    site: NVIDIAExternalCareerSite
+  - name: Adobe
+    provider: workday
+    tenant: adobe
+    wd: wd5
+    site: external_experienced
+
+  # ---- Greenhouse : boards.greenhouse.io/{board} ou job-boards.greenhouse.io/{board}
+  - name: Stripe
+    provider: greenhouse
+    board: stripe
+  - name: Datadog
+    provider: greenhouse
+    board: datadog
+
+  # ---- Lever : jobs.lever.co/{company}  (instances EU : region: eu)
+  - name: Spotify
+    provider: lever
+    company: spotify
+
+  # ---- Ashby : jobs.ashbyhq.com/{board}
+  - name: OpenAI
+    provider: ashby
+    board: openai
+
+  # ---- SmartRecruiters : jobs.smartrecruiters.com/{company_id}
+  - name: Bosch
+    provider: smartrecruiters
+    company_id: BoschGroup
+    query: intern
+    enabled: false              # exemple : beaucoup d'offres hors tech, à activer si besoin
+
+  # ---- Workable : apply.workable.com/{account}
+  - name: Hugging Face
+    provider: workable
+    account: huggingface
+
+  # ---- Filtres spécifiques à une entreprise (surchargent les filtres globaux champ par champ)
+  # - name: Doctolib
+  #   provider: workable
+  #   account: doctolib
+  #   filters:
+  #     locations_include: ["France", "Paris"]
+
+  # ---- Dernier recours : site sans API (pip install -e ".[playwright]")
+  # - name: MaBoite
+  #   provider: playwright
+  #   url: https://exemple.com/careers
+  #   item_selector: "li.job"
+  #   title_selector: "h3"
+  #   link_selector: "a"
+  #   location_selector: ".location"
