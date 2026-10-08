@@ -1032,6 +1032,7 @@
         },
         "8189323": {
           "first_seen": "2026-10-08T20:33:05+00:00",
+          "removed_at": "2026-10-08T21:32:18+00:00",
           "title": "Senior Brand Strategist"
         },
         "8189352": {
@@ -5669,6 +5670,7 @@
         },
         "R1001694": {
           "first_seen": "2026-10-08T19:00:47+00:00",
+          "removed_at": "2026-10-08T21:28:06+00:00",
           "title": "Data Engineer 4 (Python/AWS)"
         },
         "R1001695": {
@@ -7293,6 +7295,14 @@
           "first_seen": "2026-10-08T19:00:47+00:00",
           "title": "Director, Product Management, Enterprise Payments"
         },
+        "R1003213": {
+          "first_seen": "2026-10-08T21:28:06+00:00",
+          "title": "Front-end Engineer 4"
+        },
+        "R1003221": {
+          "first_seen": "2026-10-08T21:28:06+00:00",
+          "title": "Sr Manager, Product Management"
+        },
         "R1003228": {
           "first_seen": "2026-10-08T19:00:47+00:00",
           "title": "Director, Product Management - Enterprise Product & Experience"
@@ -7360,6 +7370,10 @@
         "R1003341": {
           "first_seen": "2026-10-08T19:00:47+00:00",
           "title": "Full-stack Engineer 4"
+        },
+        "R1003342": {
+          "first_seen": "2026-10-08T21:28:06+00:00",
+          "title": "Full-Stack Engineer 4 (Python, AWS) (Cloud Operations Resilience Engineering)"
         },
         "R1003355": {
           "first_seen": "2026-10-08T20:29:39+00:00",
@@ -7491,7 +7505,6 @@
         },
         "R243711": {
           "first_seen": "2026-10-08T19:00:47+00:00",
-          "removed_at": "2026-10-08T20:29:39+00:00",
           "title": "Director, Data Scientist"
         },
         "R243791": {
@@ -8233,6 +8246,7 @@
         },
         "R248725": {
           "first_seen": "2026-10-08T19:00:47+00:00",
+          "removed_at": "2026-10-08T21:28:06+00:00",
           "title": "Senior Manager, Product Management - Chat Servicing Expansion"
         },
         "R248764": {
@@ -8855,6 +8869,7 @@
         },
         "R999791": {
           "first_seen": "2026-10-08T20:29:39+00:00",
+          "removed_at": "2026-10-08T21:28:06+00:00",
           "title": "Senior Business Analyst - Retail Bank Shop and Apply"
         },
         "R999800": {
@@ -8908,6 +8923,2492 @@
       },
       "last_error": null,
       "seeded_at": "2026-10-08T19:00:47+00:00"
+    },
+    "Cisco": {
+      "consecutive_failures": 0,
+      "jobs": {
+        "1443405": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader"
+        },
+        "1447134": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Asic Design  - Cisco Silicon One"
+        },
+        "1448706": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Engineer"
+        },
+        "1448815": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer - Device Automation"
+        },
+        "2000974": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Commercial Account Manager"
+        },
+        "2001312": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sr Power Supply Engineer"
+        },
+        "2002215": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Component Engineering Technical Leader - Memory"
+        },
+        "2002242": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Photonic Packaging Engineer"
+        },
+        "2003652": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Strategic Account Manager (PubSec)"
+        },
+        "2003969": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Observability Solutions Architect"
+        },
+        "2004130": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader"
+        },
+        "2004135": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Software Engineer"
+        },
+        "2004763": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Systems Engineering Technical Leader"
+        },
+        "2004794": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Emulation Engineer"
+        },
+        "2005001": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader"
+        },
+        "2005214": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer, Portfolio - KSA"
+        },
+        "2008454": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Photonic Test Engineer"
+        },
+        "2008500": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC Leader"
+        },
+        "2009617": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC Physical Design CAD Engineer"
+        },
+        "2010153": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Junior Hardware Engineer - Signal & Power Integrity - Israel - ETR"
+        },
+        "2010280": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Field CTO"
+        },
+        "2010405": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior QA Automation Engineer - Networking L2/L3"
+        },
+        "2010499": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Commercial Account Manager (Indonesian Market)"
+        },
+        "2010573": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer - Portfolio"
+        },
+        "2010969": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer- Embedded Developer- C/C++"
+        },
+        "2011112": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineering Technical Leader - Acacia (hybrid)"
+        },
+        "2011144": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Strategic Pursuit Lead"
+        },
+        "2011202": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC Verification Engineer - CAG - Taiwan, Taipei"
+        },
+        "2011415": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Test Engineer Intern, Vietnam"
+        },
+        "2011452": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader"
+        },
+        "2011475": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Project Specialist - Japan CX"
+        },
+        "2011743": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Solutions Engineer"
+        },
+        "2011748": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Semiconductor Packaging Component Quality Engineer"
+        },
+        "2012205": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineering Technical Leader - Acacia (hybrid)"
+        },
+        "2012211": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Logic Design Engineer"
+        },
+        "2012249": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "PHY Post Silicon Validation Engineer"
+        },
+        "2012363": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Corporate Counsel"
+        },
+        "2012497": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader"
+        },
+        "2012500": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Leader - C/C++, Embedded, Networking, Sonic/ONIE/BMC/IPMI, Redfish, Hardware Bring Up - 13 to 18 years - Bangalore"
+        },
+        "2012548": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Electrical Post-Silicon Characterization & Validation Engineer"
+        },
+        "2012580": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Government Technology Solutions Advisor"
+        },
+        "2012749": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Hardware Engineer"
+        },
+        "2012779": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "NPI Manufacturing Engineer"
+        },
+        "2012957": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2013028": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Engineer (Configuration as Code)"
+        },
+        "2013117": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Design Engineer"
+        },
+        "2013180": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer, Autonomous Security - ThousandEyes"
+        },
+        "2013420": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Consulting Engineer"
+        },
+        "2013485": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive, Splunk (Bangkok)"
+        },
+        "2013529": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineering Technical Leader"
+        },
+        "2013691": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Cyber Security Account Executive – Public Sector"
+        },
+        "2013739": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Manufacturing Engineer"
+        },
+        "2013750": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Product Lifecycle Supply Chain Project Manager"
+        },
+        "2013805": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Splunk (Global Financial Services Accounts)"
+        },
+        "2014236": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Photonic Design Verification Test Engineer - Acacia (Onsite)"
+        },
+        "2014239": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2014670": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Virtual Account Executive"
+        },
+        "2014720": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Manager - Neocloud and Service Provider"
+        },
+        "2014741": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2015018": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer (Ahmedabad, India)"
+        },
+        "2015038": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Test Development Engineer"
+        },
+        "2015094": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Hardware Engineering"
+        },
+        "2015106": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Engineer"
+        },
+        "2015169": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Marketing Engineer - IIoT Routing (Hybrid)"
+        },
+        "2015256": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Project Manager"
+        },
+        "2015350": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software QA Engineer"
+        },
+        "2015351": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Success Technical Leader (Technical Account Manager : Splunk)"
+        },
+        "2015482": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Manager"
+        },
+        "2015627": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Delivery Architect (Remote)"
+        },
+        "2015681": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Product Compliance Engineer"
+        },
+        "2015829": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader - Customer Experience / SDK - L2/L3, MPLS"
+        },
+        "2015832": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer, Silicon One Software- Customer Experience - SDK - L2/L3"
+        },
+        "2015833": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer, Silicon One Software"
+        },
+        "2015927": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Counsel, Ethics & Compliance (APJC)"
+        },
+        "2015936": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Manager - ThousandEyes"
+        },
+        "2016231": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineer- (Power electronics/ Analog design) - BLR , 8 to 15 yrs"
+        },
+        "2016398": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Strategic Deals Specialist, Global Security Sales Organization"
+        },
+        "2016456": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Splunk Area Technical Account Manager"
+        },
+        "2016548": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Engineer - C/C++, IIoT Wireless & Satellite Networking |8-12 years"
+        },
+        "2016564": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer - QA Engineer, Automation and networking 8 to 11 years"
+        },
+        "2016630": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Component Engineering Technical Leader"
+        },
+        "2016666": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2016763": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Regional Sales"
+        },
+        "2016831": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Supplier Commodity Manager"
+        },
+        "2016866": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Customer Delivery"
+        },
+        "2017101": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Test Development Engineering Technical Leader"
+        },
+        "2017385": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader - 12+yrs - C/C++, Wireless, Linux/RTOS/Networking OS internals"
+        },
+        "2017547": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Account Executive"
+        },
+        "2017582": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Mechanical Engineering Technical Leader"
+        },
+        "2017591": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Director Strategic Alliances- Bay Area OR Seattle, WA (Hybrid)"
+        },
+        "2017724": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sourcing Commodity Manager - PCB"
+        },
+        "2017938": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Reliability Engineer"
+        },
+        "2018061": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer - Collaboration (Japanese speaking)"
+        },
+        "2018066": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Consulting Engineer - Web applications (Japanese Speaker)"
+        },
+        "2018072": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Consulting Engineer - Web applications (Japanese Speaker)"
+        },
+        "2018142": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer | Service Provider (Japanese Speaking)"
+        },
+        "2018143": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer | Enterprise  (Japanese Speaking)"
+        },
+        "2018147": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer | Collaboration (Japanese Speaking)"
+        },
+        "2018168": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer (Wireless)"
+        },
+        "2018229": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Engineering, Hardware Project & Program Management"
+        },
+        "2018284": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Tech Lead – Identity & Security Platforms"
+        },
+        "2018390": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Architecture - ThousandEyes"
+        },
+        "2018433": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Associate Solutions Engineer – CSAP - London, UK"
+        },
+        "2018451": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Associate Solutions Engineer - CSAP - Germany"
+        },
+        "2018452": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Associate Solutions Engineer - CSAP - Netherlands"
+        },
+        "2018455": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Delivery Architect - Splunk Security"
+        },
+        "2018479": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Projects Systems Engineer"
+        },
+        "2018503": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Consultant"
+        },
+        "2018506": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Consultant"
+        },
+        "2018533": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Product Manager, Cloud Platform (Data & Telemetry) (Remote)"
+        },
+        "2018537": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Cyber Security Account Executive – Enterprise and Public Sector"
+        },
+        "2018544": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer - Public Sector (m/f/d)"
+        },
+        "2018614": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Analog/Mixed Signal IC Component Engineer"
+        },
+        "2018617": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Foundry Technology Engineer"
+        },
+        "2018628": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer (Shared Components)"
+        },
+        "2018656": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Associate Solutions Engineer – Korea"
+        },
+        "2018665": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, People Consulting"
+        },
+        "2018672": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Associate Solutions Engineer"
+        },
+        "2018678": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Associate Solutions Engineer"
+        },
+        "2018696": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Associate Solutions Engineer - Japan (Cisco Sales Associates Program)"
+        },
+        "2018923": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior AI Researcher"
+        },
+        "2019039": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Account Executive (Nordics & Benelux)"
+        },
+        "2019059": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sourcing Commodity Manager (remote) - 2019059"
+        },
+        "2019189": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Manufacturing Engineering Technical Leader"
+        },
+        "2019192": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio"
+        },
+        "2019204": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Site Reliability Engineer, Production Engineer - ThousandEyes(Hybrid)"
+        },
+        "2019206": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Site Reliability Engineer (DevSecOps), Production Engineering - ThousandEyes"
+        },
+        "2019277": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer, Structured Storage"
+        },
+        "2019339": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Engineer (Hybrid)"
+        },
+        "2019389": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Site Reliability Engineer, Infrastructure - ThousandEyes"
+        },
+        "2019423": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2019425": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Developer"
+        },
+        "2019426": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Developer"
+        },
+        "2019430": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer - Kubernetes (K8s) Go (Golang) Python Microservices,Linux,AI-assisted development - 8 to 10 years"
+        },
+        "2019431": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2019433": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Managing Director, Enterprise Sales Japan"
+        },
+        "2019462": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Product Management Leader, Client Optics - Acacia"
+        },
+        "2019479": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer - Go Lang, API Gateway, KONG, OAuth2 | 9 - 12 yrs"
+        },
+        "2019521": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Splunk"
+        },
+        "2019627": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2019628": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2019631": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2019776": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, ASIC Engineering"
+        },
+        "2019778": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "FA Engineering Technical Leader"
+        },
+        "2019837": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Projects Systems Engineer"
+        },
+        "2019847": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Program Manager"
+        },
+        "2019856": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Customer Success Specialist II (Full Time) United States"
+        },
+        "2019865": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Global Partner Solution Engineer – Cisco & Splunk"
+        },
+        "2019896": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "METAC Partner Sales Director"
+        },
+        "2020044": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Sales, Splunk - PBST - USAF"
+        },
+        "2020130": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Controller- Techno Finance-AI"
+        },
+        "2020148": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Implementation Engineer | ThousandEyes"
+        },
+        "2020209": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Site Reliability Engineer - Python | Go | Kubernetes | DevOps | Bangalore | 8-10 Yrs"
+        },
+        "2020255": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Software Engineer (Security & Policy Platform) (Remote)"
+        },
+        "2020265": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "MSP Sales & Go-to-Market Lead – MEA-TRC East - SPLUNK"
+        },
+        "2020320": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC Engineer"
+        },
+        "2020471": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC Engineer"
+        },
+        "2020475": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Account Executive - Milan"
+        },
+        "2020540": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Deal Strategy & Execution Deal Manager"
+        },
+        "2020546": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Systems Engineer (Full-Stack) - Splunk"
+        },
+        "2020594": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Director Strategic Alliances-Bay Area OR Seattle, WA (Hybrid)"
+        },
+        "2020603": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Analyst Relations Manager: Identity Security (US Remote)"
+        },
+        "2020622": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2020635": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Project Manager"
+        },
+        "2020648": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Project Manager - Japanese speaking"
+        },
+        "2020652": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Project Manager (Japanese language support)"
+        },
+        "2020675": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Projects Systems Engineer"
+        },
+        "2020711": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Benefits Consultant, LOA/Disability - Remote US"
+        },
+        "2020741": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Engineering Product Manager"
+        },
+        "2020742": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Finance & Procurement Business Architect - Components Transformation"
+        },
+        "2020743": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio"
+        },
+        "2020754": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer (Service Provider)"
+        },
+        "2020811": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Director, Business Product Management"
+        },
+        "2020819": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC Engineer- CAD"
+        },
+        "2020850": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Account Executive, Public Sector - Splunk"
+        },
+        "2020883": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer - Security"
+        },
+        "2020885": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Project Manager"
+        },
+        "2020889": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer (Mobility, 3GPP Standards | 8 to 12 Years)"
+        },
+        "2020890": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Security Consulting Engineer"
+        },
+        "2020895": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer - Data Center"
+        },
+        "2020934": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Country Sales Leader, Splunk Austria"
+        },
+        "2020954": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineering Technical Leader"
+        },
+        "2020960": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineering Technical Leader"
+        },
+        "2020962": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Implementation Engineer | ThousandEyes"
+        },
+        "2020964": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Director, Software Engineering | ( Enterprise Systems, ERP's & Supply Chain )"
+        },
+        "2020966": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer - 4 to 8yrs - Java/Springboot, React/Angular, CI/CD"
+        },
+        "2020981": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader"
+        },
+        "2020998": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "AI Operations Engineering Technical Leader"
+        },
+        "2021008": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Thermal Engineering Technical Leader"
+        },
+        "2021037": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Rakuten"
+        },
+        "2021046": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Hardware Engineering - 10+ years of proven experience as Product/Design Engineer with expertise in electronic product design and architecture."
+        },
+        "2021047": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC Master Production Scheduler (Onsite)"
+        },
+        "2021051": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Enterprise Hardware Engineering Technical Lead"
+        },
+        "2021067": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Architecture"
+        },
+        "2021120": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader (Remote)"
+        },
+        "2021146": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2021154": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Cybersecurity, Service Provider"
+        },
+        "2021186": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "AI-Driven ASIC Physical Design Principal Engineer"
+        },
+        "2021187": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "MSP Partner Sales Business Development Manager"
+        },
+        "2021200": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Engineer"
+        },
+        "2021204": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Systems Engineer"
+        },
+        "2021249": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Customer Success Specialist"
+        },
+        "2021305": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "DFT ASIC Engineering Technical Leader | ATPG | 10 to 14 years | Bangalore"
+        },
+        "2021309": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "AI Solutions Engineer"
+        },
+        "2021327": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Client Executive - Telstra"
+        },
+        "2021333": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Information Security Engineer"
+        },
+        "2021336": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Development - (Business Development)"
+        },
+        "2021384": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer"
+        },
+        "2021423": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Distinguished Machine Learning Engineer, AISWP  (Hybrid)"
+        },
+        "2021429": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Designer- Canada Public Sector, Federal"
+        },
+        "2021478": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader - SRE | Security Architect, Kubernetes,AWS,Terraform | 13+ years | Bangalore"
+        },
+        "2021490": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Associate Sales Engineer – Security Solutions & Demo Engineering, Singapore"
+        },
+        "2021505": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions & Business Development Manager"
+        },
+        "2021571": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Staff Product Manager - Splunk AI Foundations"
+        },
+        "2021696": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Software Engineer"
+        },
+        "2021705": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader"
+        },
+        "2021730": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2021760": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Splunk Strategic Accounts"
+        },
+        "2021784": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Splunk Solutions Engineer - Switzerland"
+        },
+        "2021789": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Software Engineer | CASB, AVC (Application Visibility and Control"
+        },
+        "2021812": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive, Public Sector - Splunk"
+        },
+        "2021824": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Program Manager"
+        },
+        "2021837": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Communications Manager"
+        },
+        "2021844": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2021854": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader - BackEnd"
+        },
+        "2021855": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sr Software Engineer - BackEnd"
+        },
+        "2021895": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Engineering Product Manager"
+        },
+        "2021896": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Customer Program Manager"
+        },
+        "2021913": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Leader, Splunk Security"
+        },
+        "2021916": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Director, Global ASIC Capacity Planning and Strategy"
+        },
+        "2021920": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "OSAT Production Planning Manager"
+        },
+        "2021928": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sales Business Development Manager (Emerging Technologies & Incubation)"
+        },
+        "2021945": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Director, Internal Communications"
+        },
+        "2021949": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Account Executive - Norway/Denmark"
+        },
+        "2021950": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2021960": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Project Manager"
+        },
+        "2021985": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Financial Controls & Compliance Analyst"
+        },
+        "2022041": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Detection Engineering Technical Leader"
+        },
+        "2022057": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2022059": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sales Business Development Manager (Social Infrastructure)"
+        },
+        "2022070": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Global"
+        },
+        "2022085": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio"
+        },
+        "2022092": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Financial Analyst I - LIFT Intern"
+        },
+        "2022093": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Finance Rotation Program - LIFT (Full Time) - United States"
+        },
+        "2022099": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Delivery Architect"
+        },
+        "2022262": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Engineer (BLE/IoT)"
+        },
+        "2022274": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive, GES (Minneapolis)"
+        },
+        "2022344": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2022361": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Security Governance & Compliance Specialist"
+        },
+        "2022377": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Customer Success Specialist"
+        },
+        "2022383": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sales Business Development Manager (Healthcare & Education)"
+        },
+        "2022386": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Architecture"
+        },
+        "2022388": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio"
+        },
+        "2022392": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio (Public Sector)"
+        },
+        "2022393": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sales Business Development Manager (Public Sector - Defense)"
+        },
+        "2022407": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Accountant"
+        },
+        "2022410": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer (Mobility, 3GPP Standards | 8 to 10 Years)"
+        },
+        "2022413": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer - Perth"
+        },
+        "2022421": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer | Public Safety & Emergency Services (Victoria)"
+        },
+        "2022422": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer | SDA/ACI ( R&S, Nexus Switching) | 5+ years"
+        },
+        "2022423": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer | Service Provider + R&S | 5+ years (Open)"
+        },
+        "2022445": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineering Technical Leader (Mobility, 3GPP Standards | 12+ Years)"
+        },
+        "2022454": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Commercial Finance Manager"
+        },
+        "2022508": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Network Systems Engineer"
+        },
+        "2022514": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer - Data & Scalability Platform (8-12 Yrs)"
+        },
+        "2022540": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer - Splunk"
+        },
+        "2022544": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Customer Support"
+        },
+        "2022662": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Engineer – C/C++ & Network Systems"
+        },
+        "2022665": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Supply Chain Inventory Analyst"
+        },
+        "2022669": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "UK&I Sales Enablement Manager – Splunk"
+        },
+        "2022691": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader"
+        },
+        "2022704": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Communications Lead, Global Sales Enablement"
+        },
+        "2022705": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Architect"
+        },
+        "2022713": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Customer Success Specialist"
+        },
+        "2022719": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Technical Marketing Engineer"
+        },
+        "2022745": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Renewals Manager"
+        },
+        "2022753": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Renewals Manager"
+        },
+        "2022764": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Splunk"
+        },
+        "2022782": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2022805": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Customer Success Specialist"
+        },
+        "2022839": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer :: C/C++, Python scripting, L2/L3 Networking (5-9 Years)"
+        },
+        "2022871": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Splunk"
+        },
+        "2022873": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Sales Business Development Manager"
+        },
+        "2022880": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2022894": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Renewals Specialist"
+        },
+        "2022895": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Renewals Manager"
+        },
+        "2022900": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Architecture"
+        },
+        "2022935": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Relations Manager"
+        },
+        "2022951": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "EHS Program Manager, Eastern US"
+        },
+        "2022975": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Staff Software Engineer - AI/Security Platform"
+        },
+        "2022977": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Manufacturing Engineer"
+        },
+        "2022986": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Renewals Specialist"
+        },
+        "2022992": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2022999": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Inside Account Executive-Recurring Revenue"
+        },
+        "2023000": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Software Engineer - ThousandEyes"
+        },
+        "2023009": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer, Early in Career (Cracow, Poland)"
+        },
+        "2023022": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Site Reliability Engineer"
+        },
+        "2023058": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Capital Program Manager"
+        },
+        "2023086": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Inventory Analyst"
+        },
+        "2023087": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Success Area TAM Splunk Specialist"
+        },
+        "2023088": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Splunk Area TAM Specialist"
+        },
+        "2023090": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Splunk Core Area TAM Leader"
+        },
+        "2023108": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Canberra - Splunk"
+        },
+        "2023118": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer: Python, Automation, Networking | 7+ Yrs | BLR"
+        },
+        "2023134": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Engineering Product Manager - Mobility"
+        },
+        "2023159": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineering Technical Leader"
+        },
+        "2023160": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineer"
+        },
+        "2023163": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineer"
+        },
+        "2023168": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Security Governance & Compliance Specialist"
+        },
+        "2023183": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "High Touch Operations Manager (Mandarin Language Support)"
+        },
+        "2023198": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Project Manager (Mandarin Language support)"
+        },
+        "2023210": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive"
+        },
+        "2023214": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio"
+        },
+        "2023226": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Success Specialist, Splunk (m/f/d)"
+        },
+        "2023231": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "AI Solutions Engineer"
+        },
+        "2023232": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Engineering Product Manager | 15+ Years"
+        },
+        "2023241": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Software Engineering"
+        },
+        "2023243": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Account Executive"
+        },
+        "2023279": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer - CHG (Hybrid)"
+        },
+        "2023289": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Architecture: Data Center Infrastructure (GES)"
+        },
+        "2023293": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader"
+        },
+        "2023313": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineer"
+        },
+        "2023326": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineering Technical Leader"
+        },
+        "2023327": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Communications Specialist, Singapore"
+        },
+        "2023330": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Director, Partner Solutions Engineering APJC - Splunk"
+        },
+        "2023333": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Director, Splunk APJC Program Management"
+        },
+        "2023368": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Inside Account Executive"
+        },
+        "2023370": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Network Systems Engineer"
+        },
+        "2023382": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Security Engineer"
+        },
+        "2023393": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Cisco Technology Experience​ - Internship Program for Polish Technical High Schools"
+        },
+        "2023403": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Splunk"
+        },
+        "2023404": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Consulting Engineer"
+        },
+        "2023445": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Product Manager, AI SASE Platform"
+        },
+        "2023451": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio"
+        },
+        "2023492": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Strategic Account Manager - SAP (m/f/d)"
+        },
+        "2023501": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Account Executive - North & East"
+        },
+        "2023508": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer – Backend & AI Integration"
+        },
+        "2023510": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Deal Operations Analyst"
+        },
+        "2023529": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Splunk Technical Leader, Customer Success"
+        },
+        "2023561": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Director, Software Engineering | C++, Go, Python, SONiC, People Leadership | 15+ years, Bangalore"
+        },
+        "2023570": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Engineer - ThousandEyes"
+        },
+        "2023580": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Planning Program Manager - Components Transformation"
+        },
+        "2023625": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer - Intern"
+        },
+        "2023632": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Embedded Software Engineering Sr. Technical Leader | C, C++, BSP, SONiC, Device Driver, Linux, Kernel | 12 + years"
+        },
+        "2023637": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Junior Cloud Software Engineer (Cloud & Python), Quality Interfaces - Splunk"
+        },
+        "2023645": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer Technical Leader - Embedded C, Networking(L2/L3/OSPF/Network Processor/Optical Network/SFP/QSFP - Sonic/ONIE/BMC/IPMI/ Redfish - I2C/SPI/UART/PCIe/GPIO - 13 to 18 years - Bangalore"
+        },
+        "2023647": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Quantum Team Hardware Engineering Technical Leader"
+        },
+        "2023649": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader - C/C++, BIOS, embedded , BMC, FPGA"
+        },
+        "2023650": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Tech Lead - Hardware /Embedded Engineer"
+        },
+        "2023651": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Lead Photonics Validation Engineer"
+        },
+        "2023652": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Tech Lead -Optomechanical Engineer"
+        },
+        "2023658": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Embedded Software Engineering Technical Leader"
+        },
+        "2023661": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Embedded Software Engineering Technical Leader"
+        },
+        "2023670": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineering Technical Leader"
+        },
+        "2023750": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer (Hybrid)"
+        },
+        "2023755": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Virtual Sales Account Executive - Splunk Melbourne"
+        },
+        "2023758": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2023762": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Internet Measurement Research Intern - BGP Research Team"
+        },
+        "2023763": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Product Manager - Compliance"
+        },
+        "2023799": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Engineer (Remote)"
+        },
+        "2023801": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineering Program Manager | NPI, PMP | Bangalore | 9 to 15 Years"
+        },
+        "2023804": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Sales, Splunk - US Military Defense- Army"
+        },
+        "2023809": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Paid Media Marketing Manager"
+        },
+        "2023822": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Real Estate Lead, Americas"
+        },
+        "2023828": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Communications Specialist"
+        },
+        "2023830": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Public Relations Manager"
+        },
+        "2023832": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Leader, Solutions Engineer, Splunk"
+        },
+        "2023835": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer -  Commercial, Chicago"
+        },
+        "2023856": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Splunk Technical Leader"
+        },
+        "2023862": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Delivery Architect"
+        },
+        "2023864": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Software Engineer (Shared Components)"
+        },
+        "2023902": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Materials Planning Manager"
+        },
+        "2023906": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC Product Planner"
+        },
+        "2023939": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader"
+        },
+        "2023943": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "New Product Project Manager"
+        },
+        "2023945": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sr Silicon Capacity Planning Engineer-Hybrid"
+        },
+        "2023955": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Global Client Operations Delivery Manager, Commerce Operations"
+        },
+        "2023967": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Component Engineer (Optical Suppliers & Transceivers) - San Jose, CA Hybrid"
+        },
+        "2023971": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Splunk (m/f/d)"
+        },
+        "2024051": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Engineering Product Manager"
+        },
+        "2024061": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "OpenStack Platform Engineer"
+        },
+        "2024065": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Strategy & Planning Manager - Enterprise AI Programs & Governance, Hybrid"
+        },
+        "2024069": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Strategy & Planning Manager - Enterprise AI Programs & Governance , Hybrid"
+        },
+        "2024078": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2024095": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Consulting Engineer | 8+ years exp, Python, Cloud technologies and Ai"
+        },
+        "2024112": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Hardware Engineer"
+        },
+        "2024136": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "Kanata, Ontario, Canada · Saint-Laurent, Quebec, Canada · Calgary, Alberta, Canada · Toronto, Ontario, Canada · Montreal, Quebec, Canada · Vancouver, British Columbia, Canada · Ottawa, Ontario, Canada",
+          "title": "Software Developer Embedded Systems II (Co-op) – Canada"
+        },
+        "2024201": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Structural Test Engineer"
+        },
+        "2024203": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Structural Test Engineer"
+        },
+        "2024205": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Structural Test Engineer"
+        },
+        "2024219": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "AI Researcher"
+        },
+        "2024232": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer - Americas Service Provider - ThousandEyes (Remote)"
+        },
+        "2024258": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Junior Full Stack Software Engineer (Go & React), Agent Management - Splunk"
+        },
+        "2024262": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Risk Manager, Third Party Risk Management"
+        },
+        "2024304": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Engineering Product Manager- Data Center Networking"
+        },
+        "2024306": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2024309": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Consulting Engineer"
+        },
+        "2024312": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Packaging Quality Engineer"
+        },
+        "2024326": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2024351": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Network Engineer Intern, Australia"
+        },
+        "2024360": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Marketing Engineering Technical Leader"
+        },
+        "2024366": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer Summer Internship - Lysaker, Norway"
+        },
+        "2024378": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Delivery Architect | 10+ years exp, SP routing platforms, architectural and validation expertise"
+        },
+        "2024382": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Delivery Architect - Mobility 5G"
+        },
+        "2024384": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer-Cloud Native Infrastructure (KVM/Kubernetes)/CNDP"
+        },
+        "2024390": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer (Scale)"
+        },
+        "2024391": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Sales Business Development Manager (Hybrid)"
+        },
+        "2024454": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer, Portfolio Engine - Splunk, Australia"
+        },
+        "2024495": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer, Splunk - Product Sizing and Packaging - Australia"
+        },
+        "2024496": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer (Bangalore)"
+        },
+        "2024535": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Austin, Texas, US · RTP, North Carolina, US",
+          "title": "Hardware Engineer I (Intern) - United States"
+        },
+        "2024552": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Business Analyst I (Intern) United States"
+        },
+        "2024561": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Austin, Texas, US · RTP, North Carolina, US",
+          "title": "Data Analyst I (Intern) - United States"
+        },
+        "2024569": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Product Lifecycle Supply Chain Project Specialist I (Intern) - United States"
+        },
+        "2024574": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Test Chip Administrator"
+        },
+        "2024603": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Services (Allianz)"
+        },
+        "2024608": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Account Executive"
+        },
+        "2024615": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer – Public Sector | Splunk Security (Delhi/Gurgaon)"
+        },
+        "2024623": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Consulting Engineer"
+        },
+        "2024624": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Graduate Software Engineer"
+        },
+        "2024636": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Consulting Engineer"
+        },
+        "2024659": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Engineering Product Manager, Cloud Control Studio"
+        },
+        "2024664": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Component Engineering Technical Leader"
+        },
+        "2024666": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Optical Component Engineer"
+        },
+        "2024671": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC Physical Design Engineer II (Full Time)  - United States"
+        },
+        "2024698": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Consulting Engineer"
+        },
+        "2024708": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader (Remote)"
+        },
+        "2024723": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer, Enterprise"
+        },
+        "2024738": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineering Technical Leader"
+        },
+        "2024739": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Leader - CX Engineering Productivity"
+        },
+        "2024756": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Carlsbad, California, US",
+          "title": "Hardware Engineer I (Intern) - United States"
+        },
+        "2024757": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Austin, Texas, US · RTP, North Carolina, US · Carlsbad, California, US",
+          "title": "Hardware Engineer II Intern - United States"
+        },
+        "2024763": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer - Splunk"
+        },
+        "2024773": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Consulting Engineer"
+        },
+        "2024774": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sales Legal Intern"
+        },
+        "2024805": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Direct Tax Manager- Chartered Accountant (CA) with 6-8 years of post-qualification experience"
+        },
+        "2024810": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer Intern"
+        },
+        "2024816": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "RTP, North Carolina, US · Richardson, Texas, US · Chicago, Illinois, US",
+          "title": "Consulting Engineer I (Intern) - United States"
+        },
+        "2024817": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Security Consulting Engineer I (Intern) - United States"
+        },
+        "2024827": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Consulting Engineer"
+        },
+        "2024861": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "2024861 Consulting Engineering Technical Leader - Collaboration"
+        },
+        "2024896": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2024903": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - AI Infrastructure"
+        },
+        "2024908": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Observability Solutions Architect"
+        },
+        "2024909": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Component Engineering Technical Leader Hybrid"
+        },
+        "2024910": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Customer Success Specialist - Security"
+        },
+        "2024928": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Services & Software Buying Programs"
+        },
+        "2024931": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Customer Success Specialist, Splunk"
+        },
+        "2024932": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio"
+        },
+        "2024935": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Splunk Customer Success Engineer - Turkey"
+        },
+        "2024954": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Strategy & Planning Manager"
+        },
+        "2024959": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Strategic Account Executive, Splunk"
+        },
+        "2024963": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Commercial Finance Manager"
+        },
+        "2024969": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Silicon NPI Supply Chain Program Manager (SCPM)"
+        },
+        "2024976": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive  / Public Sector - Splunk"
+        },
+        "2024983": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Supplier Commodity Manager"
+        },
+        "2025031": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Hardware Engineering Program Manager"
+        },
+        "2025032": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2025048": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio"
+        },
+        "2025061": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Wireless Software Engineer_ Intern"
+        },
+        "2025071": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Area Vice President, Splunk France"
+        },
+        "2025079": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2025101": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer (Embedded C, forwarding protocols | 4-10 years | Bangalore)"
+        },
+        "2025105": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive, Enterprise France - Splunk"
+        },
+        "2025119": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer - C/C++ , Dataplane, Forwarding, Layer 2 (EVPN, VPLS) and  Layer 3 (SRv6, Segment Routing, MPLS) technologies (5-9 yrs)"
+        },
+        "2025124": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "2025124 Technical Program Manager"
+        },
+        "2025127": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Corporate Counsel: Product Legal"
+        },
+        "2025153": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Solutions Engineer - US Commercial, TN"
+        },
+        "2025180": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Consulting Engineer I (Intern) United States"
+        },
+        "2025190": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer - GVSE Mid-Market"
+        },
+        "2025231": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Account Executive"
+        },
+        "2025271": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "OSAT Supply Planning Manager"
+        },
+        "2025290": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Business Development Manager"
+        },
+        "2025322": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2025364": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive Security Architecture – Enterprise and Public Sector"
+        },
+        "2025369": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineer I (Co-op) - United States"
+        },
+        "2025375": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineer II (Co-op) - United States"
+        },
+        "2025377": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer- C/C++ , Networking , Forwarding - 8 to 15 yrs | BLR"
+        },
+        "2025384": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Splunk Strategic Public Sector Accounts (NSW)"
+        },
+        "2025385": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC Test Engineer"
+        },
+        "2025388": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Procurement Analyst, Supply Chain Operations, Malaysia"
+        },
+        "2025393": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Financial Reporting Analyst- CA, Accounting , Intercompany ,INDAS,Banking Regulations - 5+yrs exp"
+        },
+        "2025395": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer | C or C++, Packet/Slow Path , L2& L3 Protocols | Bangalore | 7 + to 10 years"
+        },
+        "2025401": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Project Manager"
+        },
+        "2025403": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio"
+        },
+        "2025414": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineer"
+        },
+        "2025445": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer | C or C++, Packet/Slow Path , L2& L3 Protocols | Bangalore | 5 to 7 years"
+        },
+        "2025447": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Legal Summer Intern Rising 2L  (Intern) - United States"
+        },
+        "2025449": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Legal Rising 3L  (Intern) - United States"
+        },
+        "2025465": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2025475": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Splunk - PBST FSI"
+        },
+        "2025487": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Security Engineer"
+        },
+        "2025515": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer - Strategic Partners"
+        },
+        "2025525": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2025526": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive (Public Sector) - Splunk"
+        },
+        "2025527": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Success Engineer (Splunk) - Dubai"
+        },
+        "2025541": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive / Enterprise Accounts - Splunk"
+        },
+        "2025552": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio"
+        },
+        "2025584": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2025597": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Account Executive - Commercial - ThousandEyes (Remote)"
+        },
+        "2025637": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Engineering Project Manager"
+        },
+        "2025659": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Manager of EU Public Policy"
+        },
+        "2025660": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Manager of U.S. Federal Affairs"
+        },
+        "2025662": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Japan Government Affairs Manager"
+        },
+        "2025663": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Global"
+        },
+        "2025665": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2025674": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Customer Success Specialist, Splunk"
+        },
+        "2025684": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Legal Intern France"
+        },
+        "2025685": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2025719": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Army Account Executive - Portfolio"
+        },
+        "2025721": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Business Development Manager - Splunk PBST-  NatSec"
+        },
+        "2025722": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "IT Security Engineer"
+        },
+        "2025752": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer - Federal"
+        },
+        "2025760": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sales Development Representative Intern, Splunk - Singapore"
+        },
+        "2025770": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sales Business Development Manager (Automotive)"
+        },
+        "2025776": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Customer Success Specialist"
+        },
+        "2025792": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Data Engineer"
+        },
+        "2025794": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Frontend Engineer"
+        },
+        "2025797": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2025802": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer"
+        },
+        "2025805": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Full Stack Engineer"
+        },
+        "2025811": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Development Architect"
+        },
+        "2025812": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Development Architect"
+        },
+        "2025818": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Corporate Counsel: Incubation & Enterprise AI"
+        },
+        "2025822": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Account Executive - Portfolio"
+        },
+        "2025845": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Finance Analyst-Techno-Functional Financial Analyst – Finance, AI & Advanced Analytics - 6+yrs exp"
+        },
+        "2025880": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sales Development Representative I  (Full Time) United States -Security"
+        },
+        "2025881": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sales Development Representative II (Full Time) United States - Security"
+        },
+        "2025883": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Security Engineer I (Full Time) - United States"
+        },
+        "2025885": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Security Engineer I (Intern) - United States"
+        },
+        "2025886": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "RTP, North Carolina, US · Austin, Texas, US · Knoxville, Tennessee, US",
+          "title": "Security Research Engineer I (Intern) - United States"
+        },
+        "2025893": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Customer Experience Customer Success Specialist"
+        },
+        "2025902": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "SLED Account Executive - Portfolio (San Antonio)"
+        },
+        "2025917": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Development Architect"
+        },
+        "2025924": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Milpitas, California, US · RTP, North Carolina, US · San Francisco, California, US",
+          "title": "Software Engineer Full Stack / Backend I (Intern) – United States"
+        },
+        "2025926": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Milpitas, California, US · RTP, North Carolina, US · San Francisco, California, US",
+          "title": "Software Engineer Embedded Systems I (Intern) – United States"
+        },
+        "2025961": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive / Public Sector NHS  - Splunk"
+        },
+        "2025972": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer, Webex - Graduate - Poland"
+        },
+        "2025977": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Splunk Solutions Engineer Intern"
+        },
+        "2026026": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC DFT Engineer II Full Time - United States"
+        },
+        "2026028": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Mechanical Engineer I (Intern) - United States"
+        },
+        "2026046": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Partner Account Executive - AMER Contact Center"
+        },
+        "2026133": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Hardware Architect – ASIC & System Integration, Cisco Silicon One (Hybrid)"
+        },
+        "2026166": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer, SD-WAN Security"
+        },
+        "2026181": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Business Analyst I (Intern) United States"
+        },
+        "2026200": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive (Cybersecurity)"
+        },
+        "2026211": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Lead Escalation Engineer"
+        },
+        "2026224": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sales Legal Intern"
+        },
+        "2026225": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Services Sales"
+        },
+        "2026258": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineer - Board Design | 5 - 8 yrs"
+        },
+        "2026286": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Manufacturing Engineer"
+        },
+        "2026299": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer  Fullstack / Backend II (Full Time) – United States"
+        },
+        "2026306": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Milpitas, California, US · RTP, North Carolina, US · San Francisco, California, US",
+          "title": "Software Engineer Data & AI I (Intern) – United States"
+        },
+        "2026308": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Milpitas, California, US · RTP, North Carolina, US · San Francisco, California, US",
+          "title": "Engineering Product Management Specialist I (Intern) – United States"
+        },
+        "2026354": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "System Hardware Board Design Engineering Leader (PCB) (Onsite)"
+        },
+        "2026363": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineering Technical Leader"
+        },
+        "2026366": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "System Hardware Board Design Engineering Lead (PCB) (Onsite)"
+        },
+        "2026372": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "PCB Design Engineer - High-speed"
+        },
+        "2026405": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "MSP Partner Technical Manager - Splunk"
+        },
+        "2026412": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Splunk SLED- UT AK"
+        },
+        "2026421": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Hardware Engineering"
+        },
+        "2026437": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Executive Assistant, SVP, Product Management (Hybrid)"
+        },
+        "2026465": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Technical Marketing Engineer I (Full Time) - United States"
+        },
+        "2026473": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Data Analysis Manager"
+        },
+        "2026474": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineering Project Manager"
+        },
+        "2026516": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "ASIC Engineer - Advanced Packaging & Supplier Quality (Cisco Silicon One)"
+        },
+        "2026523": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Splunk Senior Staff Software Engineer - Performance Optimization & Innovation (PerfOpt)"
+        },
+        "2026524": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Splunk Staff Software Engineer - Performance Optimization & Innovation (PerfOpt)"
+        },
+        "2026535": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer (Cloud & Python), Platform Engineering - Splunk"
+        },
+        "2026552": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - Portfolio"
+        },
+        "2026564": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive - US Commercial - Clayton, MO"
+        },
+        "2026604": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Engineering Project Manager"
+        },
+        "2026632": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Procurement Analyst, Supply Chain Operations, Taiwan"
+        },
+        "2026642": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Inside Account Executive - Security"
+        },
+        "2026652": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2026673": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "PROPEL Associate Project Specialist (Full Time) United States"
+        },
+        "2026694": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer II (Full Time) - United States"
+        },
+        "2026751": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Systems Quality Engineer I (Co-op) - United States"
+        },
+        "2026763": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Physical Design Engineer I (Co-op) - United States"
+        },
+        "2026798": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Milpitas, California, US · RTP, North Carolina, US · San Francisco, California, US",
+          "title": "Software Engineer Data & AI II (Intern) – United States"
+        },
+        "2026800": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Milpitas, California, US · RTP, North Carolina, US · San Francisco, California, US",
+          "title": "Software Engineer Full Stack / Backend II (Intern) – United States"
+        },
+        "2026801": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Milpitas, California, US · RTP, North Carolina, US · San Francisco, California, US",
+          "title": "Engineering Product Management Specialist II (Intern) – United States"
+        },
+        "2026802": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Milpitas, California, US · RTP, North Carolina, US · San Francisco, California, US",
+          "title": "Machine Learning Engineer II (Intern) – United States"
+        },
+        "2026803": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Milpitas, California, US · RTP, North Carolina, US · San Francisco, California, US",
+          "title": "Machine Learning Engineer I (Intern) – United States"
+        },
+        "2026804": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Milpitas, California, US · RTP, North Carolina, US · San Francisco, California, US",
+          "title": "AI Operations Engineer I (Intern) – United States"
+        },
+        "2026805": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "San Jose, California, US · Milpitas, California, US · RTP, North Carolina, US · San Francisco, California, US",
+          "title": "Software Engineer Embedded Systems II (Intern) – United States"
+        },
+        "2026806": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Machine Learning Engineer - CTO innovations"
+        },
+        "2026819": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Administrative Assistant, New Zealand"
+        },
+        "2026837": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Security Technical Account Manager - Splunk UK"
+        },
+        "2026849": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Memory Layout Design Engineer"
+        },
+        "2026856": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Corporate Counsel"
+        },
+        "2026910": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Associate Applications Engineer I (Co-op) - United States"
+        },
+        "2026912": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Mechanical Engineer II (Co-op) - United States"
+        },
+        "2026913": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Firmware Engineer II (Co-op) - United States"
+        },
+        "2026914": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Optics Engineer II (Co-op) - United States"
+        },
+        "2026915": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Systems Quality Engineer II (Co-op) - United States"
+        },
+        "2026920": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer I (Co-op) - United States"
+        },
+        "2026923": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer II (Co-op) - United States"
+        },
+        "2026937": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior Director, Global Digital Demand Generation"
+        },
+        "2027018": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Hardware Engineer - Power Electronics, DC_DC, Buck Converter - 4 to 8 yrs"
+        },
+        "2027145": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Program Manager: Financial Services Operations"
+        },
+        "2027249": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Software Engineer Compiler II (Full Time) – United States"
+        },
+        "2027258": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Finance Analyst"
+        },
+        "2027406": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Account Executive (Enterprise)"
+        },
+        "2027449": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Senior AI Researcher, AISWP (Hybrid)"
+        },
+        "2027450": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Data Scientist"
+        },
+        "2027485": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Leader, Solutions Engineer"
+        },
+        "2027499": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Head of Public Relations, AI Software & Platform"
+        },
+        "2027528": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Principal Product Management Engineer | Datacenter, Networking and AI | 14+ years, Bangalore"
+        },
+        "2027547": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Solutions Engineer"
+        },
+        "2027595": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Visual Designer"
+        },
+        "2027615": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "PROPEL Project Specialist I (Intern) United States"
+        },
+        "2027799": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Corporate Strategy Manager III (Full Time) - United States"
+        },
+        "2027934": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "title": "Sales Development Representative II  (Full Time) United States Splunk"
+        },
+        "2028084": {
+          "first_seen": "2026-10-08T21:28:53+00:00",
+          "location": "RTP, North Carolina, US · Boulder, Colorado, US · Washington, District of Columbia, US · Richardson, Texas, US",
+          "title": "Splunk Solutions Engineer (Intern) - United States"
+        }
+      },
+      "last_error": null,
+      "seeded_at": "2026-10-08T21:28:53+00:00"
     },
     "Coinbase": {
       "consecutive_failures": 0,
@@ -9142,10 +11643,12 @@
         },
         "8049976": {
           "first_seen": "2026-10-08T19:02:46+00:00",
+          "removed_at": "2026-10-08T21:32:22+00:00",
           "title": "Risk & Monitoring Analyst IV"
         },
         "8050322": {
           "first_seen": "2026-10-08T19:02:46+00:00",
+          "removed_at": "2026-10-08T21:32:22+00:00",
           "title": "Principal Recruiter"
         },
         "8051513": {
@@ -9182,6 +11685,7 @@
         },
         "8064788": {
           "first_seen": "2026-10-08T19:02:46+00:00",
+          "removed_at": "2026-10-08T21:32:22+00:00",
           "title": "Senior Recruiter"
         },
         "8070046": {
@@ -14131,6 +16635,10 @@
           "first_seen": "2026-10-08T19:02:47+00:00",
           "title": "Sr. Partner Marketing Manager, AWS & AI Partners"
         },
+        "8860667002": {
+          "first_seen": "2026-10-08T21:32:23+00:00",
+          "title": "Director, Technical Marketing"
+        },
         "8860669002": {
           "first_seen": "2026-10-08T19:02:47+00:00",
           "title": "Director, Event Techology"
@@ -14881,6 +17389,7 @@
         },
         "7977644": {
           "first_seen": "2026-10-08T19:02:48+00:00",
+          "removed_at": "2026-10-08T21:32:25+00:00",
           "title": "Partner Solutions Architect (Colombia)"
         },
         "7982288": {
@@ -15433,6 +17942,7 @@
         },
         "8144946": {
           "first_seen": "2026-10-08T19:02:48+00:00",
+          "removed_at": "2026-10-08T21:32:25+00:00",
           "title": "Senior Forward Deployed Engineer, Feature Flags"
         },
         "8146986": {
@@ -19640,6 +22150,7 @@
         },
         "8640383002": {
           "first_seen": "2026-10-08T19:02:56+00:00",
+          "removed_at": "2026-10-08T21:32:37+00:00",
           "title": "IT Systems Engineer"
         },
         "8643108002": {
@@ -20237,6 +22748,10 @@
         "8872290002": {
           "first_seen": "2026-10-08T19:02:56+00:00",
           "title": "Senior PBP, Finance"
+        },
+        "8880066002": {
+          "first_seen": "2026-10-08T21:32:37+00:00",
+          "title": "Operations Associate - Flexdrive"
         }
       },
       "last_error": null,
@@ -25351,6 +27866,7 @@
         },
         "JR2025478": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "US, CA, Santa Clara · US, CA, Remote",
           "title": "PhD Research Intern, Efficient Deep Learning - 2027"
         },
         "JR2025511": {
@@ -25472,6 +27988,7 @@
         },
         "JR2025792": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "US, CA, Santa Clara · US, CA, Remote",
           "title": "PhD Research Intern, Embodied and Agentic AI - 2027"
         },
         "JR2025803": {
@@ -25599,6 +28116,10 @@
           "first_seen": "2026-10-08T19:01:59+00:00",
           "title": "Senior Technical Program Manager"
         },
+        "JR2026158": {
+          "first_seen": "2026-10-08T21:30:58+00:00",
+          "title": "Product Engineer, Developer Platform"
+        },
         "JR2026160": {
           "first_seen": "2026-10-08T19:01:59+00:00",
           "title": "AI Computing Development Intern, TensorRT-LLM - 2027"
@@ -25704,6 +28225,7 @@
         },
         "JR2026322": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Singapore, Remote · Singapore, Pasir Panjang",
           "title": "PhD Research Intern, Autonomous Systems and Physical AI Research - 2027"
         },
         "JR2026359": {
@@ -25776,6 +28298,7 @@
         },
         "JR2026499": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "US, CA, Santa Clara · US, MA, Westford · US, NC, Durham",
           "title": "PhD Research Intern, Cross-Disciplinary Vision Science - Summer 2027"
         },
         "JR2026501": {
@@ -25856,6 +28379,10 @@
           "first_seen": "2026-10-08T19:01:59+00:00",
           "title": "PCIe Design Verification Intern - Summer 2027"
         },
+        "JR2026715": {
+          "first_seen": "2026-10-08T21:30:58+00:00",
+          "title": "Senior Technical Project Manager, Datacenter"
+        },
         "JR2026731": {
           "first_seen": "2026-10-08T19:01:59+00:00",
           "title": "Senior Software Engineer, Infrastructure and Tooling - DriveOS"
@@ -25903,6 +28430,7 @@
         },
         "JR2026887": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Taiwan, Taipei · Taiwan, Hsinchu",
           "title": "Tools and Methodology Engineer, CAD DFT (RDSS Intern)"
         },
         "JR2026933": {
@@ -25943,6 +28471,7 @@
         },
         "JR2026971": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Taiwan, Taipei · Taiwan, Hsinchu",
           "title": "AI Agent Development Engineer (RDSS Intern)"
         },
         "JR2027003": {
@@ -25959,6 +28488,7 @@
         },
         "JR2027025": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Switzerland, Zurich · Germany, Munich",
           "title": "AI Compiler Formal Verification Intern"
         },
         "JR2027029": {
@@ -25967,6 +28497,7 @@
         },
         "JR2027030": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Taiwan, Taipei · Taiwan, Hsinchu",
           "title": "APAC Ecommerce Backend Intern - 2027"
         },
         "JR2027047": {
@@ -25996,6 +28527,10 @@
         "JR2027093": {
           "first_seen": "2026-10-08T19:01:59+00:00",
           "title": "Senior HPC Support Engineer, InfiniBand - NVLink"
+        },
+        "JR2027094": {
+          "first_seen": "2026-10-08T21:30:58+00:00",
+          "title": "Senior HPC Support Engineer - Ethernet and AI Infrastructure"
         },
         "JR2027095": {
           "first_seen": "2026-10-08T19:01:59+00:00",
@@ -26039,6 +28574,7 @@
         },
         "JR2027497": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Germany, Munich · UK, Bristol",
           "title": "AI Developer Technology Intern - 2027"
         },
         "JR2027526": {
@@ -27249,6 +29785,10 @@
         "8262221": {
           "first_seen": "2026-10-08T19:02:59+00:00",
           "title": "Demo Program Manager"
+        },
+        "8263454": {
+          "first_seen": "2026-10-08T21:32:41+00:00",
+          "title": "Senior Embedded Software Engineer"
         }
       },
       "last_error": null,
@@ -29776,6 +32316,10 @@
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Manufacturing Engineer, Motors & Actuators"
         },
+        "56c5ab52-00f8-40ac-ace9-5bec355651d1": {
+          "first_seen": "2026-10-08T21:32:58+00:00",
+          "title": "Sales Manager, Cyber"
+        },
         "56d541d3-02b5-44d8-b40b-4df72cdd0405": {
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Software Engineer, AI for Chip Design"
@@ -32148,9 +34692,17 @@
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Global Mobility Lead"
         },
+        "446ec593-aa8d-4ae4-a2c1-859b8373e1d5": {
+          "first_seen": "2026-10-08T21:32:59+00:00",
+          "title": "Enterprise Sales Manager"
+        },
         "4b5e02a8-6a94-494d-9d49-037f2cfc144d": {
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Member of Tehnical Staff (Senior QA Web)"
+        },
+        "4bab4560-68b4-44ec-8a5c-5a39216f2abb": {
+          "first_seen": "2026-10-08T21:32:59+00:00",
+          "title": "Commercial Sales Manager"
         },
         "4c0ac8bb-55bf-4fb0-b7d7-36d69f55e6c8": {
           "first_seen": "2026-10-08T19:03:11+00:00",
@@ -35755,6 +38307,10 @@
           "first_seen": "2026-10-08T19:02:39+00:00",
           "title": "Enterprise Account Executive"
         },
+        "JR298937": {
+          "first_seen": "2026-10-08T21:32:11+00:00",
+          "title": "Retail Cloud POS Enterprise Account Executive"
+        },
         "JR299492": {
           "first_seen": "2026-10-08T19:02:39+00:00",
           "title": "Sales Development Representative"
@@ -36162,6 +38718,10 @@
         "JR339073": {
           "first_seen": "2026-10-08T19:02:39+00:00",
           "title": "Senior Member of Technical Staff (SMTS) - WD Integrations Engineer"
+        },
+        "JR339239": {
+          "first_seen": "2026-10-08T21:32:11+00:00",
+          "title": "Customer Success Manager - Global Public Sector"
         },
         "JR339452": {
           "first_seen": "2026-10-08T19:02:39+00:00",
@@ -38597,6 +41157,10 @@
           "first_seen": "2026-10-08T19:02:39+00:00",
           "title": "Customer Success Manager- Digital"
         },
+        "JR362854": {
+          "first_seen": "2026-10-08T21:32:11+00:00",
+          "title": "Customer Risk Manager"
+        },
         "JR362867": {
           "first_seen": "2026-10-08T19:02:39+00:00",
           "title": "Senior Account Executive, Tableau, Department of War"
@@ -38721,6 +41285,10 @@
         "JR363368": {
           "first_seen": "2026-10-08T19:02:39+00:00",
           "title": "Sales Development Representative - Arabic Market"
+        },
+        "JR363492": {
+          "first_seen": "2026-10-08T21:32:11+00:00",
+          "title": "Sr. Analyst, Product and Pricing Operations"
         }
       },
       "last_error": null,
@@ -39349,6 +41917,10 @@
           "first_seen": "2026-10-08T19:03:05+00:00",
           "title": "GenAI Compliance Operations & Programs Associate"
         },
+        "4730512005": {
+          "first_seen": "2026-10-08T21:32:50+00:00",
+          "title": "Senior Software Engineer, Platform"
+        },
         "4730528005": {
           "first_seen": "2026-10-08T19:03:05+00:00",
           "title": "Global Payroll Analyst"
@@ -39432,6 +42004,10 @@
         "4739727005": {
           "first_seen": "2026-10-08T19:03:05+00:00",
           "title": "Account Based Marketing Lead"
+        },
+        "4739920005": {
+          "first_seen": "2026-10-08T21:32:50+00:00",
+          "title": "Senior Software Engineer, Orchestration Platform"
         },
         "4740039005": {
           "first_seen": "2026-10-08T19:03:05+00:00",
@@ -49597,6 +52173,7 @@
         },
         "8784892002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-10-08T21:32:53+00:00",
           "title": "Merchandising Associate (Starbase)"
         },
         "8784933002": {
@@ -49713,6 +52290,7 @@
         },
         "8789869002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-10-08T21:32:53+00:00",
           "title": "Merchandising Associate (Bastrop)"
         },
         "8789882002": {
@@ -51799,6 +54377,10 @@
           "first_seen": "2026-10-08T19:03:07+00:00",
           "title": "Supply Chain Planner (Raptor)"
         },
+        "8875741002": {
+          "first_seen": "2026-10-08T21:32:53+00:00",
+          "title": "Jr. Sous Chef"
+        },
         "8875925002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
           "title": "IT Infrastructure Engineer, Virtualization & Storage"
@@ -51806,6 +54388,14 @@
         "8876413002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
           "title": "Manufacturing Engineer (Raptor Turbomachinery Machining)"
+        },
+        "8876415002": {
+          "first_seen": "2026-10-08T21:32:53+00:00",
+          "title": "Supervisor, Hospitality"
+        },
+        "8876611002": {
+          "first_seen": "2026-10-08T21:32:53+00:00",
+          "title": "Food Service Specialist"
         },
         "8876618002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
@@ -51834,6 +54424,18 @@
         "8877899002": {
           "first_seen": "2026-10-08T19:37:17+00:00",
           "title": "Spaceport Operations Technician (Starbase)"
+        },
+        "8880095002": {
+          "first_seen": "2026-10-08T21:32:53+00:00",
+          "title": "Orbital Tube Welder, Manifolds (Falcon)"
+        },
+        "8880475002": {
+          "first_seen": "2026-10-08T21:32:53+00:00",
+          "title": "Sr. Chemical Engineer"
+        },
+        "8880515002": {
+          "first_seen": "2026-10-08T21:32:53+00:00",
+          "title": "Global Supply Manager, Harness (Starlink)"
         }
       },
       "last_error": null,
@@ -53727,6 +56329,7 @@
         },
         "8152994": {
           "first_seen": "2026-10-08T19:03:08+00:00",
+          "removed_at": "2026-10-08T21:32:55+00:00",
           "title": "Product Marketing Manager, Bridge/Stablecoins"
         },
         "8153331": {
@@ -54991,6 +57594,7 @@
         },
         "8248092": {
           "first_seen": "2026-10-08T19:03:08+00:00",
+          "removed_at": "2026-10-08T21:32:55+00:00",
           "title": "Senior People Partner, GTM"
         },
         "8248096": {
@@ -55406,6 +58010,10 @@
         "R19597": {
           "first_seen": "2026-10-08T19:02:43+00:00",
           "title": "Software Developer Engineer"
+        },
+        "R19605": {
+          "first_seen": "2026-10-08T21:32:17+00:00",
+          "title": "Lead Technical SEO Manager"
         },
         "R19624": {
           "first_seen": "2026-10-08T19:02:43+00:00",
