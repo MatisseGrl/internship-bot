@@ -43,6 +43,10 @@ digest:
 
 companies:
   # ---- Workday (endpoint non officiel) — https://{tenant}.{wd}.myworkdayjobs.com/{site}
+  # search_text (défaut « intern ») est une recherche plein texte côté Workday : chez certaines
+  # banques, « intern » ramène des centaines d'offres « International » (Citi : 2 000, le
+  # plafond). Là où c'est marqué, « internship » ramène les mêmes stages en 10 à 30 fois moins
+  # de pages (vérifié le 9 oct. 2026). Pas chez Deutsche Bank, où il en perdait.
   - name: Adobe
     provider: workday
     tenant: adobe
@@ -84,6 +88,74 @@ companies:
     tenant: zoom
     wd: wd5
     site: zoom
+  #   Big tech / produit
+  - name: Broadcom
+    provider: workday
+    tenant: broadcom
+    wd: wd1
+    site: External_Career
+  - name: Expedia
+    provider: workday
+    tenant: expedia
+    wd: wd108
+    site: Search
+  - name: Intel
+    provider: workday
+    tenant: intel
+    wd: wd1
+    site: External
+  - name: Snap
+    provider: workday
+    tenant: snapchat
+    wd: wd1
+    site: snap
+  #   Fintech / paiement
+  - name: Mastercard
+    provider: workday
+    tenant: mastercard
+    wd: wd1
+    site: CorporateCareers
+    search_text: internship   # voir en tête de section Workday
+  - name: PayPal
+    provider: workday
+    tenant: paypal
+    wd: wd1
+    site: jobs
+  - name: Visa
+    provider: workday
+    tenant: visa
+    wd: wd5
+    site: Visa
+    search_text: internship   # voir en tête de section Workday
+  #   Banques et gestion d'actifs (leurs stages tech s'appellent souvent « Summer Analyst »)
+  - name: Barclays
+    provider: workday
+    tenant: barclays
+    wd: wd3
+    site: External_Career_Site_Barclays
+    search_text: internship   # voir en tête de section Workday
+  - name: BlackRock
+    provider: workday
+    tenant: blackrock
+    wd: wd1
+    site: BlackRock_Professional
+  - name: Citi
+    provider: workday
+    tenant: citi
+    wd: wd5
+    site: "2"
+    search_text: internship   # voir en tête de section Workday
+  - name: Deutsche Bank
+    provider: workday
+    tenant: db
+    wd: wd3
+    site: DBWebsite
+  - name: Morgan Stanley
+    provider: workday
+    tenant: ms
+    wd: wd5
+    site: External
+    search_text: internship   # voir en tête de section Workday
   # ---- Greenhouse — boards.greenhouse.io/{board}
   - name: Airbnb
     provider: greenhouse
@@ -166,6 +238,91 @@ companies:
   - name: Twitch
     provider: greenhouse
     board: twitch
+  #   Big tech / produit
+  - name: Airtable
+    provider: greenhouse
+    board: airtable
+  - name: Anduril
+    provider: greenhouse
+    board: andurilindustries
+  - name: Cloudflare
+    provider: greenhouse
+    board: cloudflare
+  - name: Instacart
+    provider: greenhouse
+    board: instacart
+  - name: Samsara
+    provider: greenhouse
+    board: samsara
+  - name: Twilio
+    provider: greenhouse
+    board: twilio
+  - name: Vercel
+    provider: greenhouse
+    board: vercel
+  - name: Zscaler
+    provider: greenhouse
+    board: zscaler
+  #   IA
+  - name: xAI
+    provider: greenhouse
+    board: xai
+  #   Fintech
+  - name: Block
+    provider: greenhouse
+    board: block
+  - name: Brex
+    provider: greenhouse
+    board: brex
+  - name: Chime
+    provider: greenhouse
+    board: chime
+  - name: Gusto
+    provider: greenhouse
+    board: gusto
+  - name: Robinhood
+    provider: greenhouse
+    board: robinhood
+  #   Trading / fonds (stages ingénieur logiciel / data / ML)
+  - name: Akuna Capital
+    provider: greenhouse
+    board: akunacapital
+  - name: Bridgewater
+    provider: greenhouse
+    board: bridgewater89
+  - name: DRW
+    provider: greenhouse
+    board: drweng
+  - name: Hudson River Trading
+    provider: greenhouse
+    board: wehrtyou
+  - name: IMC Trading
+    provider: greenhouse
+    board: imc
+  - name: Jane Street
+    provider: greenhouse
+    board: janestreet
+  - name: Jump Trading
+    provider: greenhouse
+    board: jumptrading
+  - name: Optiver
+    provider: greenhouse
+    board: optiverus
+  - name: Point72
+    provider: greenhouse
+    board: point72
+  - name: Qube Research & Technologies
+    provider: greenhouse
+    board: quberesearchandtechnologies
+  - name: Squarepoint
+    provider: greenhouse
+    board: squarepointcapital
+  - name: Tower Research Capital
+    provider: greenhouse
+    board: towerresearchcapital
+  - name: XTX Markets
+    provider: greenhouse
+    board: xtxmarketstechnologies
   # ---- Ashby — jobs.ashbyhq.com/{board}
   - name: Notion
     provider: ashby
@@ -179,7 +336,31 @@ companies:
   - name: Snowflake
     provider: ashby
     board: snowflake
+  #   Big tech / produit
+  - name: Linear
+    provider: ashby
+    board: linear
+  - name: Replit
+    provider: ashby
+    board: replit
+  - name: Supabase
+    provider: ashby
+    board: supabase
+  #   IA
+  - name: Cohere
+    provider: ashby
+    board: cohere
+  #   Fintech
+  - name: Plaid
+    provider: ashby
+    board: plaid
+  - name: Ramp
+    provider: ashby
+    board: ramp
   # ---- Lever — jobs.lever.co/{company}
+  - name: Palantir
+    provider: lever
+    company: palantir
   - name: Spotify
     provider: lever
     company: spotify
@@ -188,6 +369,9 @@ companies:
     provider: workable
     account: huggingface
   # ---- SmartRecruiters — jobs.smartrecruiters.com/{company_id}
+  - name: ServiceNow
+    provider: smartrecruiters
+    company_id: ServiceNow
   - name: Bosch
     provider: smartrecruiters
     company_id: BoschGroup
@@ -198,3 +382,10 @@ companies:
   #      python -m internbot --discover "Nom=URL_de_la_page_Apply"
   # - DoorDash, Shopify, Mistral AI (compte Lever vide), Dell, NetApp, Texas Instruments
   # - Palo Alto Networks : tenant « paloaltonetworks » sur wd5, il ne manque que le nom du site
+  # - Plateforme non supportée (Oracle HCM, SuccessFactors, Avature, Eightfold…) ou site maison : Atlassian,
+  #   Intuit, Electronic Arts, IBM, Oracle, SAP, Qualcomm, Rippling, Uber, American Express,
+  #   Citadel, Citadel Securities, Two Sigma, D. E. Shaw, Susquehanna, Millennium, JPMorgan Chase,
+  #   Goldman Sachs, BNP Paribas, Société Générale, UBS, Bloomberg
+  # - Bank of America : trouvée (Workday ghr / wd1 / Lateral-US) mais ce site ne contient que
+  #   des postes expérimentés (aucun stage le 9 oct. 2026) ; les stages passent a priori par
+  #   campus.bankofamerica.com
