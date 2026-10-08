@@ -189,8 +189,8 @@ class Runner:
 
         if self.force_seed or not self.state.is_seeded(company.name):
             result.seeded = True
-            self._current[company.name] = [j for j in jobs if job_filter.matches(j)]
             self._seed(company, jobs, job_filter)
+            self._current[company.name] = self._current_matches(provider, company, jobs, job_filter)
             if not self.dry_run:
                 self.state.record_success(company.name)
             return result, []
@@ -230,11 +230,12 @@ class Runner:
 
         result.new_matches = len(to_notify)
         enriched = {j.job_id: j for j in to_notify}
-        self._current[company.name] = [
-            enriched.get(j.job_id, j)
-            for j in jobs
-            if j.job_id not in rejected and (j.job_id in enriched or job_filter.matches(j))
-        ]
+        self._current[company.name] = self._current_matches(
+            provider,
+            company,
+            [enriched.get(j.job_id, j) for j in jobs if j.job_id not in rejected],
+            job_filter,
+        )
         log.info(
             "%s : %d nouvelle(s) offre(s), dont %d correspondante(s)",
             company.name,
@@ -244,6 +245,33 @@ class Runner:
         if not self.dry_run:
             self.state.record_success(company.name)
         return result, to_notify
+
+    def _current_matches(
+        self, provider: Provider, company: CompanyConfig, jobs: list[Job], job_filter: JobFilter
+    ) -> list[Job]:
+        """Offres ouvertes qui passent les filtres (pour current.json / --send-all)."""
+        out = []
+        for job in jobs:
+            if job_filter.title_reject_reason(job.title) is not None:
+                continue
+            job = self._resolve_location(provider, company, job)
+            if job_filter.location_reject_reason(job) is None:
+                out.append(job)
+        return out
+
+    def _resolve_location(self, provider: Provider, company: CompanyConfig, job: Job) -> Job:
+        """Lieu complet d'une offre multi-lieux (Workday « 3 Locations ») : depuis l'état si déjà
+        connu, sinon requête de détail (plafonnée par run) mise en cache pour les runs suivants.
+        Sans cela, un filtre de lieu ne pourrait pas écarter ces offres de la liste /offres."""
+        if job.location_complete:
+            return job
+        cached = self.state.cached_location(company.name, job.job_id)
+        if cached:
+            return job.with_updates(location=cached, location_complete=True)
+        detailed = provider.enrich(company, job)
+        if detailed.location_complete and not self.dry_run:
+            self.state.cache_location(company.name, job.job_id, detailed.location)
+        return detailed
 
     def _seed(self, company: CompanyConfig, jobs: list[Job], job_filter: JobFilter) -> None:
         matching = [j for j in jobs if job_filter.matches(j)]

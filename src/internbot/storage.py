@@ -179,6 +179,18 @@ class StateStore:
             self.dirty = True
         return sorted(removed), sorted(returned)
 
+    def cached_location(self, company: str, job_id: str) -> str | None:
+        """Lieu complet déjà récupéré (ex: détail Workday d'une offre « 3 Locations »)."""
+        entry = self.data["companies"].get(company)
+        rec = entry["jobs"].get(job_id) if entry else None
+        return str(rec["location"]) if rec and rec.get("location") else None
+
+    def cache_location(self, company: str, job_id: str, location: str) -> None:
+        rec = self._jobs(company).get(job_id)
+        if rec is not None and location and rec.get("location") != location:
+            rec["location"] = location
+            self.dirty = True
+
     def title_of(self, company: str, job_id: str) -> str:
         rec = self._jobs(company).get(job_id, {})
         return str(rec.get("title", job_id))

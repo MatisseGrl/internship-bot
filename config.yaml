@@ -12,7 +12,10 @@ filters:
   title_include: ["intern", "interns", "internship", "stage", "stagiaire", "co-op", "working student"]
   title_exclude: ["senior", "staff", "principal", "manager", "director", "high school"]
   locations_include: []     # vide = toutes ; ex: ["France", "Paris", "Remote", "Europe"]
-  locations_exclude: []
+  # Chine exclue (pays + grandes villes, certains sites n'affichent que la ville).
+  # Une offre multi-lieux n'est retirée que si TOUS ses lieux sont exclus.
+  locations_exclude: ["China", "Shanghai", "Beijing", "Shenzhen", "Hangzhou", "Guangzhou",
+                      "Chengdu", "Suzhou", "Nanjing", "Wuhan", "Xian", "Xi an", "Tianjin"]
   keywords_any: ["software", "engineer", "engineering", "developer", "data", "ml",
                  "machine learning", "ai", "backend", "frontend", "full stack", "fullstack",
                  "research", "security", "infrastructure", "platform"]  # vide = pas de contrainte

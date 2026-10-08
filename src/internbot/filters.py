@@ -17,6 +17,12 @@ from internbot.models import Job
 
 _NON_ALNUM = re.compile(r"[^0-9a-z]+")
 _YEAR = re.compile(r"(?<![0-9])20[0-9]{2}(?![0-9])")
+# Séparateurs entre plusieurs lieux d'une même offre (« · » interne, « ; » Greenhouse, « | »).
+_LOCATION_SEP = re.compile(r"\s*[·;|]\s*")
+
+
+def split_locations(location: str) -> list[str]:
+    return [part for part in _LOCATION_SEP.split(location) if part.strip()]
 
 
 def normalize(text: str) -> str:
@@ -74,9 +80,14 @@ class JobFilter:
         # de trop qu'une offre manquée.
         if not job.location.strip() or not job.location_complete:
             return None
-        if (hit := self.locations_exclude.find(job.location)) is not None:
+        # Offre multi-lieux : on ne la rejette que si AUCUN de ses lieux ne convient
+        # (« Shanghai · Santa Clara » reste visible si seule la Chine est exclue).
+        parts = split_locations(job.location)
+        allowed = [p for p in parts if self.locations_exclude.find(p) is None]
+        if not allowed:
+            hit = self.locations_exclude.find(job.location)
             return f"lieu exclu ({hit!r})"
-        if self.locations_include and self.locations_include.find(job.location) is None:
+        if self.locations_include and not any(self.locations_include.find(p) for p in allowed):
             return f"lieu hors liste ({job.location})"
         return None
 

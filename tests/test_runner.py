@@ -291,3 +291,37 @@ def test_dry_run_does_not_write_snapshot(tmp_path: Path) -> None:
     FakeProvider.jobs["Acme"] = [job("1")]
     run_snap(tmp_path, cfg, RecordingNotifier(), dry_run=True)
     assert not (tmp_path / "current.json").exists()
+
+
+def test_snapshot_resolves_multi_location_jobs_and_caches_them(tmp_path: Path) -> None:
+    calls: list[str] = []
+
+    def enrich(self: Any, company: Any, j: Job) -> Job:
+        calls.append(j.job_id)
+        return j.with_updates(location="China, Shanghai · China, Beijing", location_complete=True)
+
+    FakeProvider.enrich = enrich  # type: ignore[method-assign]
+    try:
+        cfg = config(filters={"keywords_any": [], "locations_exclude": ["China"]})
+        FakeProvider.jobs["Acme"] = [
+            job("cn", location="2 Locations", location_complete=False),
+            job("fr", location="Paris, France"),
+        ]
+        run_snap(tmp_path, cfg, RecordingNotifier())  # seed
+        assert [j["job_id"] for j in snapshot(tmp_path)["companies"]["Acme"]["jobs"]] == ["fr"]
+        assert calls == ["cn"]
+        run_snap(tmp_path, cfg, RecordingNotifier())  # 2e run : lieu lu depuis l'état
+        assert calls == ["cn"]
+        assert [j["job_id"] for j in snapshot(tmp_path)["companies"]["Acme"]["jobs"]] == ["fr"]
+    finally:
+        del FakeProvider.enrich  # retour à l'implémentation de la classe
+
+
+def test_new_job_in_china_not_notified(tmp_path: Path) -> None:
+    cfg = config(filters={"keywords_any": [], "locations_exclude": ["China", "Shanghai"]})
+    FakeProvider.jobs["Acme"] = []
+    run_snap(tmp_path, cfg, RecordingNotifier())
+    FakeProvider.jobs["Acme"] = [job("sh", location="Shanghai"), job("us", location="Seattle")]
+    n = RecordingNotifier()
+    run_snap(tmp_path, cfg, n)
+    assert [j.job_id for j in n.sent] == ["us"]

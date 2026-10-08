@@ -117,3 +117,17 @@ def test_unsupported_version(tmp_path: Path) -> None:
     (tmp_path / "state.json").write_text(json.dumps({"version": 99}), encoding="utf-8")
     with pytest.raises(RuntimeError, match="Version"):
         store(tmp_path)
+
+
+def test_location_cache(tmp_path: Path) -> None:
+    s = store(tmp_path)
+    s.seed("Acme", [job("1")])
+    assert s.cached_location("Acme", "1") is None
+    s.dirty = False
+    s.cache_location("Acme", "1", "Paris · Lyon")
+    assert s.dirty and s.cached_location("Acme", "1") == "Paris · Lyon"
+    s.dirty = False
+    s.cache_location("Acme", "1", "Paris · Lyon")  # inchangé : pas d'écriture inutile
+    assert not s.dirty
+    s.cache_location("Acme", "unknown", "X")  # offre inconnue : ignorée
+    assert s.cached_location("Acme", "unknown") is None

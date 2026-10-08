@@ -124,3 +124,20 @@ def test_term_matcher_prefers_longest_term() -> None:
     assert m.find("Machine Learning Intern") == "machine learning"
     assert not TermMatcher([])
     assert TermMatcher([" ", ""]).find("anything") is None
+
+
+def test_exclusion_multi_location_rejects_only_if_all_places_excluded() -> None:
+    f = make_filter(locations_exclude=["China", "Shanghai", "Beijing"])
+    assert not f.matches(job("1", location="China, Shanghai"))
+    assert not f.matches(job("2", location="China - Beijing · China - Shanghai"))
+    assert not f.matches(job("3", location="Shanghai"))  # ville seule
+    assert f.matches(job("4", location="China, Shanghai · US, CA, Santa Clara"))
+    assert f.matches(job("5", location="Beijing; Paris, France"))  # séparateur Greenhouse
+    assert f.matches(job("6", location="Taiwan, Taipei"))
+    assert f.matches(job("7", location="2 Locations", location_complete=False))
+
+
+def test_include_applies_to_non_excluded_parts() -> None:
+    f = make_filter(locations_include=["France"], locations_exclude=["China"])
+    assert f.matches(job("1", location="China, Shanghai · Paris, France"))
+    assert not f.matches(job("2", location="China, Shanghai · US, Seattle"))
