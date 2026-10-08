@@ -4,6 +4,8 @@ Un bot qui surveille les sites carrières d'une liste d'entreprises et vous envo
 Telegram **dès qu'une nouvelle offre de stage correspondant à vos filtres est publiée**.
 Il tourne tout seul sur GitHub Actions (votre ordinateur peut rester éteint).
 
+Exemple de message reçu sur Telegram :
+
 ```
 🆕 Salesforce
 Summer 2027 Intern - Software Engineer
