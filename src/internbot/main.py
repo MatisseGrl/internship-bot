@@ -154,6 +154,12 @@ def cmd_discover(args: argparse.Namespace) -> int:
 
 def cmd_test_notify(cfg: AppConfig) -> int:
     notifier = make_notifier(cfg, dry_run=False)
+    if isinstance(notifier, TelegramNotifier):
+        problems = notifier.diagnose()
+        for problem in problems:
+            log.error("%s", problem)
+        if problems:
+            return EXIT_FAILURE
     ok = notifier.send_text(
         f"✅ internbot {__version__} : test de notification réussi. "
         f"{sum(c.enabled for c in cfg.companies)} entreprise(s) surveillée(s)."
@@ -161,7 +167,11 @@ def cmd_test_notify(cfg: AppConfig) -> int:
     if ok:
         log.info("Message de test envoyé.")
         return EXIT_OK
-    log.error("Échec de l'envoi du message de test (voir erreurs ci-dessus).")
+    log.error(
+        "Échec de l'envoi du message de test. Token valide : le problème vient de "
+        "TELEGRAM_CHAT_ID, ou vous n'avez pas appuyé sur « Démarrer » dans la conversation "
+        "avec votre bot."
+    )
     return EXIT_FAILURE
 
 

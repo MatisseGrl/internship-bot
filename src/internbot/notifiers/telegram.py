@@ -5,6 +5,7 @@ from __future__ import annotations
 import html
 import logging
 import os
+import re
 from collections.abc import Sequence
 from typing import Any
 
@@ -17,6 +18,37 @@ from internbot.notifiers.formatting import build_grouped_messages, format_job_ht
 log = logging.getLogger(__name__)
 
 API_URL = "https://api.telegram.org/bot{token}/sendMessage"
+GET_ME_URL = "https://api.telegram.org/bot{token}/getMe"
+
+_TOKEN_FORMAT = re.compile(r"^\d{5,}:[A-Za-z0-9_-]{30,}$")
+_CHAT_ID_FORMAT = re.compile(r"^(-?\d+|@[A-Za-z0-9_]{4,})$")
+
+
+def clean_secret(value: str) -> str:
+    """Corrige les erreurs de copier-coller courantes (espaces, guillemets, préfixe « bot »)."""
+    value = value.strip().strip("'\"").strip()
+    if value.lower().startswith("bot") and value[3:4].isdigit():
+        value = value[3:]
+    return value
+
+
+def check_secrets(token: str, chat_id: str) -> list[str]:
+    """Problèmes de FORMAT détectables sans réseau (sans jamais afficher les valeurs)."""
+    problems = []
+    if ":" in chat_id and _TOKEN_FORMAT.match(chat_id):
+        problems.append("TELEGRAM_CHAT_ID ressemble à un token : les deux secrets sont inversés ?")
+    elif not _CHAT_ID_FORMAT.match(chat_id):
+        problems.append(
+            f"TELEGRAM_CHAT_ID mal formé ({len(chat_id)} caractères) : attendu un nombre, "
+            "ex: 987654321 (ou -100… pour un groupe)"
+        )
+    if not _TOKEN_FORMAT.match(token):
+        problems.append(
+            f"TELEGRAM_BOT_TOKEN mal formé ({len(token)} caractères"
+            f"{', contient un espace' if ' ' in token else ''}) : attendu "
+            "« 123456789:AAH… » tel que donné par @BotFather, sans rien d'autre"
+        )
+    return problems
 
 
 class TelegramNotifier(Notifier):
@@ -42,8 +74,8 @@ class TelegramNotifier(Notifier):
     def from_env(
         cls, *, group_threshold: int = 10, disable_link_preview: bool = True
     ) -> TelegramNotifier:
-        token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
-        chat_id = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
+        token = clean_secret(os.environ.get("TELEGRAM_BOT_TOKEN", ""))
+        chat_id = clean_secret(os.environ.get("TELEGRAM_CHAT_ID", ""))
         missing = [
             n for n, v in (("TELEGRAM_BOT_TOKEN", token), ("TELEGRAM_CHAT_ID", chat_id)) if not v
         ]
@@ -60,6 +92,28 @@ class TelegramNotifier(Notifier):
         )
 
     # -- API ----------------------------------------------------------------------------------
+
+    def diagnose(self) -> list[str]:
+        """Vérifie format + validité du token (getMe). Liste vide = tout va bien côté token."""
+        token = self._url.split("/bot", 1)[1].split("/", 1)[0]
+        problems = check_secrets(token, self.chat_id)
+        if any("TOKEN" in p or "inversés" in p for p in problems):
+            return problems
+        try:
+            data = self.http.get_json(GET_ME_URL.format(token=token))
+        except HttpError as exc:
+            if exc.status in (401, 404):
+                problems.append(
+                    "Telegram ne reconnaît pas TELEGRAM_BOT_TOKEN (révoqué, régénéré ou mal "
+                    "copié) : recopiez le token actuel depuis @BotFather (/mybots → API Token)"
+                )
+            else:
+                problems.append(f"Vérification du token impossible : {exc}")
+            return problems
+        username = (data.get("result") or {}).get("username") if isinstance(data, dict) else None
+        if username:
+            log.info("Token valide : bot @%s", username)
+        return problems
 
     def notify(self, jobs: Sequence[Job]) -> list[Job]:
         delivered: list[Job] = []

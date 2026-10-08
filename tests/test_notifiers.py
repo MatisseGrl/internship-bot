@@ -143,3 +143,53 @@ def test_telegram_from_env_missing(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("TELEGRAM_CHAT_ID", "1")
     with pytest.raises(ConfigError, match="TELEGRAM_BOT_TOKEN"):
         TelegramNotifier.from_env()
+
+
+# -- diagnostic des secrets ----------------------------------------------------------------------
+
+GOOD_TOKEN = "123456789:AAH" + "x" * 32
+
+
+@pytest.mark.parametrize(
+    ("raw", "expected"),
+    [
+        (f"  {GOOD_TOKEN}\n", GOOD_TOKEN),
+        (f'"{GOOD_TOKEN}"', GOOD_TOKEN),
+        (f"bot{GOOD_TOKEN}", GOOD_TOKEN),
+        ("987654321", "987654321"),
+        ("botanique", "botanique"),
+    ],
+)
+def test_clean_secret(raw: str, expected: str) -> None:
+    from internbot.notifiers.telegram import clean_secret
+
+    assert clean_secret(raw) == expected
+
+
+def test_check_secrets_formats() -> None:
+    from internbot.notifiers.telegram import check_secrets
+
+    assert check_secrets(GOOD_TOKEN, "987654321") == []
+    assert check_secrets(GOOD_TOKEN, "-1001234567") == []
+    assert "inversés" in check_secrets("987654321", GOOD_TOKEN)[0]
+    problems = check_secrets("Done! Use this token " + GOOD_TOKEN, "987654321")
+    assert len(problems) == 1 and "contient un espace" in problems[0]
+    assert "CHAT_ID mal formé" in check_secrets(GOOD_TOKEN, "mon id")[0]
+
+
+@responses.activate
+def test_diagnose_invalid_token() -> None:
+    responses.get(f"https://api.telegram.org/bot{GOOD_TOKEN}/getMe", status=404, json={"ok": False})
+    t = TelegramNotifier(GOOD_TOKEN, "42", http=make_http(max_retries=0))
+    problems = t.diagnose()
+    assert len(problems) == 1 and "ne reconnaît pas" in problems[0]
+    assert "xxxx" not in problems[0]  # le token n'est jamais affiché
+
+
+@responses.activate
+def test_diagnose_ok() -> None:
+    responses.get(
+        f"https://api.telegram.org/bot{GOOD_TOKEN}/getMe",
+        json={"ok": True, "result": {"username": "alertes_bot"}},
+    )
+    assert TelegramNotifier(GOOD_TOKEN, "42", http=make_http()).diagnose() == []
