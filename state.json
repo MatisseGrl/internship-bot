@@ -377,6 +377,7 @@
         },
         "R171519": {
           "first_seen": "2026-10-08T18:59:49+00:00",
+          "location": "San Jose · Waltham · San Francisco · Austin · Seattle · Lehi · New York",
           "title": "2027 Intern - Machine Learning Engineer"
         },
         "R171520": {
@@ -449,6 +450,7 @@
         },
         "R171666": {
           "first_seen": "2026-10-08T18:59:49+00:00",
+          "location": "San Jose · Waltham · San Francisco · Austin · Seattle · Lehi · New York",
           "title": "2027 Intern - Software Engineer"
         },
         "R171682": {
@@ -549,6 +551,7 @@
         },
         "R172064": {
           "first_seen": "2026-10-08T18:59:49+00:00",
+          "location": "San Jose · College Park · San Francisco · Seattle · Cambridge · New York",
           "title": "2027 Intern - Applied and Research Scientist/Engineer"
         },
         "R172082": {
@@ -984,6 +987,7 @@
         },
         "8171646": {
           "first_seen": "2026-10-08T19:02:43+00:00",
+          "removed_at": "2026-10-08T20:33:05+00:00",
           "title": "Staff UX Writer (Host)"
         },
         "8172706": {
@@ -1025,6 +1029,10 @@
         "8187190": {
           "first_seen": "2026-10-08T19:02:43+00:00",
           "title": "Senior Staff Software Engineer, Tech Foundations"
+        },
+        "8189323": {
+          "first_seen": "2026-10-08T20:33:05+00:00",
+          "title": "Senior Brand Strategist"
         },
         "8189352": {
           "first_seen": "2026-10-08T19:02:43+00:00",
@@ -1720,6 +1728,10 @@
         "5139628008": {
           "first_seen": "2026-10-08T19:02:44+00:00",
           "title": "Product Manager, Safeguards Rare Harms"
+        },
+        "5139910008": {
+          "first_seen": "2026-10-08T20:33:07+00:00",
+          "title": "Staff+ Software Engineer, Observability"
         },
         "5146298008": {
           "first_seen": "2026-10-08T19:02:44+00:00",
@@ -6714,6 +6726,7 @@
         },
         "R1002586": {
           "first_seen": "2026-10-08T19:00:47+00:00",
+          "removed_at": "2026-10-08T20:29:39+00:00",
           "title": "Full-stack Engineer 4 (Python, Typescript, React, AWS)"
         },
         "R1002587": {
@@ -7300,6 +7313,10 @@
           "first_seen": "2026-10-08T19:00:47+00:00",
           "title": "Compliance Tester III"
         },
+        "R1003263": {
+          "first_seen": "2026-10-08T20:29:39+00:00",
+          "title": "Full-Stack Engineer 4 (Python, React, AWS)"
+        },
         "R1003269": {
           "first_seen": "2026-10-08T19:00:47+00:00",
           "title": "Senior Manager, Executive Recruiting - Tech"
@@ -7316,6 +7333,10 @@
           "first_seen": "2026-10-08T19:00:47+00:00",
           "title": "Staff Software Engineer"
         },
+        "R1003293": {
+          "first_seen": "2026-10-08T20:29:39+00:00",
+          "title": "Principal Associate- Enterprise Payments Governance & Oversight- Hybrid"
+        },
         "R1003294": {
           "first_seen": "2026-10-08T19:00:47+00:00",
           "title": "Full Stack Engineer 4 (Global Payment Network)"
@@ -7328,9 +7349,21 @@
           "first_seen": "2026-10-08T19:00:47+00:00",
           "title": "Senior Associate, Accounting"
         },
+        "R1003309": {
+          "first_seen": "2026-10-08T20:29:39+00:00",
+          "title": "Full-stack Engineer 4 (Python/AWS)"
+        },
+        "R1003312": {
+          "first_seen": "2026-10-08T20:29:39+00:00",
+          "title": "Full-stack Engineer 4 (Python/AWS)"
+        },
         "R1003341": {
           "first_seen": "2026-10-08T19:00:47+00:00",
           "title": "Full-stack Engineer 4"
+        },
+        "R1003355": {
+          "first_seen": "2026-10-08T20:29:39+00:00",
+          "title": "Data Engineer 4 (Manager, IC)"
         },
         "R1003357": {
           "first_seen": "2026-10-08T19:00:47+00:00",
@@ -7458,6 +7491,7 @@
         },
         "R243711": {
           "first_seen": "2026-10-08T19:00:47+00:00",
+          "removed_at": "2026-10-08T20:29:39+00:00",
           "title": "Director, Data Scientist"
         },
         "R243791": {
@@ -7490,6 +7524,7 @@
         },
         "R244323": {
           "first_seen": "2026-10-08T19:00:47+00:00",
+          "location": "New York, NY · McLean, VA · San Jose, CA",
           "title": "Current PhD, Applied Research Internship Program - Summer 2027"
         },
         "R244331": {
@@ -8310,10 +8345,12 @@
         },
         "R249109": {
           "first_seen": "2026-10-08T19:00:47+00:00",
+          "location": "New York, NY · McLean, VA · San Jose, CA",
           "title": "Current Master's, AI Engineering Internship Program - Summer 2027"
         },
         "R249110": {
           "first_seen": "2026-10-08T19:00:47+00:00",
+          "location": "New York, NY · McLean, VA · San Jose, CA",
           "title": "Current PhD, AI Engineering Internship Program - Summer 2027"
         },
         "R249111": {
@@ -8815,6 +8852,10 @@
         "R999788": {
           "first_seen": "2026-10-08T19:00:47+00:00",
           "title": "Director, Product Management, Servicing Experience & Platforms"
+        },
+        "R999791": {
+          "first_seen": "2026-10-08T20:29:39+00:00",
+          "title": "Senior Business Analyst - Retail Bank Shop and Apply"
         },
         "R999800": {
           "first_seen": "2026-10-08T19:00:47+00:00",
@@ -9984,6 +10025,7 @@
         },
         "R29171": {
           "first_seen": "2026-10-08T19:00:58+00:00",
+          "removed_at": "2026-10-08T20:30:01+00:00",
           "title": "Sr. Engineer - Risk Platform (Hybrid)"
         },
         "R29180": {
@@ -10953,6 +10995,10 @@
           "first_seen": "2026-10-08T19:02:47+00:00",
           "title": "Software Engineer - Backend"
         },
+        "7795026002": {
+          "first_seen": "2026-10-08T20:33:11+00:00",
+          "title": "Director, Strategic Partnerships"
+        },
         "7803651002": {
           "first_seen": "2026-10-08T19:02:47+00:00",
           "title": "AI Transformation Leader"
@@ -11532,6 +11578,7 @@
         },
         "8407197002": {
           "first_seen": "2026-10-08T19:02:47+00:00",
+          "removed_at": "2026-10-08T20:33:11+00:00",
           "title": "Solutions Architect Opportunities - Lakebase (Solutions Architect, Sr. Solutions Architect)"
         },
         "8407869002": {
@@ -12436,6 +12483,7 @@
         },
         "8583085002": {
           "first_seen": "2026-10-08T19:02:47+00:00",
+          "removed_at": "2026-10-08T20:33:11+00:00",
           "title": "Sr. Solutions Architect - Manufacturing"
         },
         "8583146002": {
@@ -14444,6 +14492,7 @@
         },
         "7255532": {
           "first_seen": "2026-10-08T19:02:48+00:00",
+          "removed_at": "2026-10-08T20:33:13+00:00",
           "title": "Enterprise Sales Engineer - Brazil"
         },
         "7314667": {
@@ -16700,6 +16749,7 @@
         },
         "6119870004": {
           "first_seen": "2026-10-08T19:02:53+00:00",
+          "removed_at": "2026-10-08T20:33:19+00:00",
           "title": "AI Programmer"
         },
         "6119874004": {
@@ -16736,10 +16786,12 @@
         },
         "6123842004": {
           "first_seen": "2026-10-08T19:02:53+00:00",
+          "removed_at": "2026-10-08T20:33:19+00:00",
           "title": "AI Programmer"
         },
         "6123844004": {
           "first_seen": "2026-10-08T19:02:53+00:00",
+          "removed_at": "2026-10-08T20:33:19+00:00",
           "title": "AI Programmer"
         },
         "6123847004": {
@@ -22676,6 +22728,10 @@
           "first_seen": "2026-10-08T19:01:59+00:00",
           "title": "BSP and BMC Verification Software Engineer"
         },
+        "JR2016521": {
+          "first_seen": "2026-10-08T20:31:20+00:00",
+          "title": "Energy Product Marketing Manager"
+        },
         "JR2016610": {
           "first_seen": "2026-10-08T19:01:59+00:00",
           "title": "Senior QA Automation Engineer, ASIC Simulation"
@@ -22795,6 +22851,10 @@
         "JR2017412": {
           "first_seen": "2026-10-08T19:01:59+00:00",
           "title": "Senior DFT Engineer - Hardware"
+        },
+        "JR2017413": {
+          "first_seen": "2026-10-08T20:31:20+00:00",
+          "title": "Senior Software Engineer - DGX Cloud Services and Software"
         },
         "JR2017418": {
           "first_seen": "2026-10-08T19:01:59+00:00",
@@ -24574,6 +24634,7 @@
         },
         "JR2024002": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Beijing · China, Shanghai",
           "title": "AI Developer Technology Engineer Intern, AI - 2027"
         },
         "JR2024031": {
@@ -24598,6 +24659,7 @@
         },
         "JR2024054": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Shanghai · China, Beijing",
           "title": "AI Developer Technology Intern, Robotics - 2027"
         },
         "JR2024056": {
@@ -24642,6 +24704,7 @@
         },
         "JR2024122": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Beijing · China, Shanghai",
           "title": "Developer Technology Engineering Intern - 2027"
         },
         "JR2024125": {
@@ -24682,6 +24745,7 @@
         },
         "JR2024174": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "US, CA, Santa Clara · US, NC, Durham",
           "title": "PhD Research Intern, Circuits - 2027"
         },
         "JR2024196": {
@@ -24702,6 +24766,7 @@
         },
         "JR2024258": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Beijing · China, Shanghai",
           "title": "Developer Technology Engineering Intern, AI - 2027"
         },
         "JR2024259": {
@@ -24926,6 +24991,7 @@
         },
         "JR2024708": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Germany, Munich · France, Courbevoie · UK, Bristol · Switzerland, Zurich · Germany, Wuerselen · Germany, Berlin",
           "title": "Data Processing Developer Technology Intern - 2027"
         },
         "JR2024713": {
@@ -24954,6 +25020,7 @@
         },
         "JR2024818": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Beijing · China, Shanghai · China, Shenzhen",
           "title": "AI Developer Technology Engineering Intern - 2027"
         },
         "JR2024823": {
@@ -25130,6 +25197,7 @@
         },
         "JR2025103": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "US, CA, Santa Clara · US, Remote",
           "title": "PhD Research Intern, Generalist Embodied Agents Research - 2027"
         },
         "JR2025110": {
@@ -25246,6 +25314,7 @@
         },
         "JR2025395": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "US, CA, Santa Clara · US, MA, Westford · US, WA, Seattle",
           "title": "PhD Research Intern, Architecture – 2027"
         },
         "JR2025405": {
@@ -25302,6 +25371,7 @@
         },
         "JR2025538": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Taiwan, Taipei · Taiwan, Hsinchu",
           "title": "Silicon Software Engineer - System and AI (RDSS Intern)"
         },
         "JR2025542": {
@@ -25318,6 +25388,7 @@
         },
         "JR2025559": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Beijing · China, Shanghai · China, Shenzhen",
           "title": "AI Infrastructure and Frameworks Intern, Cosmos Lab - 2027"
         },
         "JR2025571": {
@@ -25342,6 +25413,7 @@
         },
         "JR2025647": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "US, WA, Seattle · US, CA, Santa Clara",
           "title": "PhD Research Intern, Robotics - Summer 2027"
         },
         "JR2025656": {
@@ -25354,6 +25426,7 @@
         },
         "JR2025701": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Shanghai · China, Beijing · China, Shenzhen",
           "title": "Software Engineering Intern, DLFW Comms - 2027"
         },
         "JR2025704": {
@@ -25394,6 +25467,7 @@
         },
         "JR2025783": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Taiwan, Taipei · Taiwan, Hsinchu",
           "title": "Software Engineer, Simulation and Virtualization (RDSS Intern)"
         },
         "JR2025792": {
@@ -25462,6 +25536,7 @@
         },
         "JR2025966": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Shanghai · China, Beijing",
           "title": "Deep Learning Performance Software Intern - 2027"
         },
         "JR2025967": {
@@ -25534,30 +25609,37 @@
         },
         "JR2026164": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Shanghai · China, Beijing",
           "title": "AI Computing Software Development Intern - 2027"
         },
         "JR2026170": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Shanghai · China, Beijing",
           "title": "AI Computing Software Intern, GPU Kernel Libraries - 2027"
         },
         "JR2026171": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Shanghai · China, Beijing",
           "title": "Performance Software Intern, Deep Learning Libraries - 2027"
         },
         "JR2026173": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Shanghai · China, Beijing",
           "title": "AI Computing Software Development Intern, LLM Inference - 2027"
         },
         "JR2026177": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "China, Beijing · China, Shanghai",
           "title": "Software Engineering Intern, Compiler Verification - Spring 2027"
         },
         "JR2026180": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Taiwan, Taipei · Taiwan, Hsinchu",
           "title": "DFT Engineer (RDSS Intern) - 2027"
         },
         "JR2026181": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Taiwan, Taipei · Taiwan, Hsinchu",
           "title": "Software CAD Engineer, VLSI (RDSS Intern)"
         },
         "JR2026191": {
@@ -25706,6 +25788,7 @@
         },
         "JR2026517": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Poland, Warsaw · Switzerland, Zurich",
           "title": "Image and Data Processing Libraries Intern"
         },
         "JR2026519": {
@@ -25722,6 +25805,7 @@
         },
         "JR2026569": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Poland, Warsaw · Switzerland, Zurich · Germany, Berlin",
           "title": "Image and Data Processing Libraries Intern"
         },
         "JR2026570": {
@@ -25786,6 +25870,7 @@
         },
         "JR2026775": {
           "first_seen": "2026-10-08T19:01:59+00:00",
+          "location": "Switzerland, Zurich · France, Courbevoie · UK, Bristol · Germany, Wuerselen · Germany, Munich",
           "title": "Developer Technology Engineering Intern - Compute Performance"
         },
         "JR2026787": {
@@ -26190,6 +26275,14 @@
         "4429096009": {
           "first_seen": "2026-10-08T19:02:58+00:00",
           "title": "CONTRACT - Concept Artist (NST)"
+        },
+        "4439154009": {
+          "first_seen": "2026-10-08T20:33:28+00:00",
+          "title": "Senior Business Systems Analyst"
+        },
+        "4439232009": {
+          "first_seen": "2026-10-08T20:33:28+00:00",
+          "title": "Advanced Localization Editor (Brazilian Portuguese)"
         }
       },
       "last_error": null,
@@ -28913,6 +29006,7 @@
         },
         "1ba666a4-0be2-4bd0-ad51-39ed7164c241": {
           "first_seen": "2026-10-08T19:03:11+00:00",
+          "removed_at": "2026-10-08T20:33:46+00:00",
           "title": "Software Engineer, Quality & Developer Tools | Consumer Devices"
         },
         "1baad891-43b8-4e2a-9e6c-f68741e718a4": {
@@ -29470,6 +29564,7 @@
         },
         "44d19f5f-a5da-4226-9d1a-0147604773eb": {
           "first_seen": "2026-10-08T19:03:11+00:00",
+          "removed_at": "2026-10-08T20:33:46+00:00",
           "title": "Applied AI Engineer, Enterprise"
         },
         "4560b828-7624-414b-9670-6cc9bf0008ad": {
@@ -33028,6 +33123,11 @@
           "first_seen": "2026-10-08T19:03:01+00:00",
           "title": "Machine Learning Intern 2027 (Zurich)"
         },
+        "8214788": {
+          "first_seen": "2026-10-08T20:33:50+00:00",
+          "notified_at": "2026-10-08T20:33:50+00:00",
+          "title": "Solutions Engineer Intern 2027 (USA)"
+        },
         "8222282": {
           "first_seen": "2026-10-08T19:03:01+00:00",
           "title": "Sr. Manager, Ads Product Policy"
@@ -33286,6 +33386,10 @@
         "7996994": {
           "first_seen": "2026-10-08T19:03:02+00:00",
           "title": "Staff Product Manager, Community Builders"
+        },
+        "8010425": {
+          "first_seen": "2026-10-08T20:33:34+00:00",
+          "title": "Senior Program Manager, Business Process Transformation"
         },
         "8011163": {
           "first_seen": "2026-10-08T19:03:02+00:00",
@@ -34156,6 +34260,7 @@
         },
         "8104534": {
           "first_seen": "2026-10-08T19:03:04+00:00",
+          "removed_at": "2026-10-08T20:33:35+00:00",
           "title": "Senior Technical Producer - Central Technology, Data Foundations"
         },
         "8104538": {
@@ -34200,6 +34305,7 @@
         },
         "8129452": {
           "first_seen": "2026-10-08T19:03:04+00:00",
+          "removed_at": "2026-10-08T20:33:35+00:00",
           "title": "Principal Publishing Product Manager – Unpublished R&D Product"
         },
         "8138210": {
@@ -34396,6 +34502,7 @@
         },
         "8234671": {
           "first_seen": "2026-10-08T19:03:04+00:00",
+          "removed_at": "2026-10-08T20:33:35+00:00",
           "title": "Software Engineer - Central Technology, Infrastructure (Optimize & Protect)"
         },
         "8234673": {
@@ -35136,6 +35243,10 @@
         "8154929": {
           "first_seen": "2026-10-08T19:03:04+00:00",
           "title": "Senior Software Engineer, Computer Graphics"
+        },
+        "8159854": {
+          "first_seen": "2026-10-08T20:33:37+00:00",
+          "title": "Software Engineer, Engine Systems"
         },
         "8159886": {
           "first_seen": "2026-10-08T19:03:04+00:00",
@@ -36094,6 +36205,7 @@
         },
         "JR340771": {
           "first_seen": "2026-10-08T19:02:39+00:00",
+          "location": "California - San Francisco · California - Palo Alto · New York - New York · Washington - Seattle · Massachusetts - Burlington · Washington - Bellevue · Georgia - Atlanta · Indiana - Indianapolis",
           "title": "Summer 2027 Intern - Software Engineer"
         },
         "JR340890": {
@@ -36582,6 +36694,7 @@
         },
         "JR352151": {
           "first_seen": "2026-10-08T19:02:39+00:00",
+          "removed_at": "2026-10-08T20:32:56+00:00",
           "title": "Marketing Cloud -Commercial Account Executive"
         },
         "JR352183": {
@@ -37860,6 +37973,10 @@
           "first_seen": "2026-10-08T19:02:39+00:00",
           "title": "Slack Cloud Account Executive - French speaking"
         },
+        "JR360799": {
+          "first_seen": "2026-10-08T20:32:56+00:00",
+          "title": "Senior Product Manager, Salesforce Platform"
+        },
         "JR360809": {
           "first_seen": "2026-10-08T19:02:39+00:00",
           "title": "Technical Architect"
@@ -38578,6 +38695,7 @@
         },
         "JR363252": {
           "first_seen": "2026-10-08T19:02:39+00:00",
+          "location": "California - Palo Alto · Washington - Seattle",
           "title": "Summer 2027 Intern - Tableau Research"
         },
         "JR363293": {
@@ -47285,6 +47403,7 @@
         },
         "8698363002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-10-08T20:33:41+00:00",
           "title": "Environmental Health & Safety Technician"
         },
         "8698365002": {
@@ -49197,6 +49316,7 @@
         },
         "8779334002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-10-08T20:33:41+00:00",
           "title": "Manager, Hospitality"
         },
         "8779717002": {
@@ -51039,6 +51159,10 @@
           "first_seen": "2026-10-08T19:03:07+00:00",
           "title": "Test Engineer, Compute Payload (Starmind)"
         },
+        "8853299002": {
+          "first_seen": "2026-10-08T20:33:41+00:00",
+          "title": "Mechanical Technician, Facilities (Starlink)"
+        },
         "8853324002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
           "title": "Embedded Software Engineer, RF Payloads (Starshield)"
@@ -51282,6 +51406,10 @@
         "8859695002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
           "title": "Learning Guide"
+        },
+        "8860129002": {
+          "first_seen": "2026-10-08T20:33:41+00:00",
+          "title": "Inventory Specialist (COPVS)"
         },
         "8860328002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
