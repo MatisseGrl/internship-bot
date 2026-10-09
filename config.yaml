@@ -381,6 +381,171 @@ companies:
   - name: Apple                 # jobs.apple.com, filtre « Students: Internships »
     provider: apple
 
+  # ==== Lot A (9 oct. 2026) : big tech, logiciel, semi-conducteurs ==========================
+  #   Workday
+  - name: Netflix
+    provider: workday
+    tenant: netflix
+    wd: wd108
+    site: Netflix
+  - name: Workday
+    provider: workday
+    tenant: workday
+    wd: wd5
+    site: Workday
+  - name: Autodesk
+    provider: workday
+    tenant: autodesk
+    wd: wd1
+    site: Ext
+  - name: Micron
+    provider: workday
+    tenant: micron
+    wd: wd1
+    site: External
+    # « intern » ramène 3 000+ offres (100 pages) : facette Workday « Interns » à la place
+    search_text: ""
+    applied_facets: {jobFamilyGroup: [bff7a31dbdd3010ca04a790caa01fe61]}
+  - name: KLA
+    provider: workday
+    tenant: kla
+    wd: wd1
+    site: Search
+  - name: Analog Devices
+    provider: workday
+    tenant: analogdevices
+    wd: wd1
+    site: External
+  - name: Marvell
+    provider: workday
+    tenant: marvell
+    wd: wd1
+    site: MarvellCareers
+  - name: NXP
+    provider: workday
+    tenant: nxp
+    wd: wd3
+    site: Careers
+  #   SmartRecruiters
+  - name: Western Digital
+    provider: smartrecruiters
+    company_id: WesternDigital
+  #   Eightfold (endpoint du site carrières ; `api` = v2 ou pcsx selon l'entreprise)
+  - name: Microsoft
+    provider: eightfold
+    host: apply.careers.microsoft.com
+    domain: microsoft.com
+    api: pcsx
+  - name: Qualcomm
+    provider: eightfold
+    host: careers.qualcomm.com
+    domain: qualcomm.com
+    api: pcsx
+  - name: NetApp
+    provider: eightfold
+    host: netapp.eightfold.ai
+    domain: netapp.com
+    api: v2
+  - name: Lam Research
+    provider: eightfold
+    host: careers.lamresearch.com
+    domain: lamresearch.com
+    api: pcsx
+  - name: Applied Materials
+    provider: eightfold
+    host: careers.appliedmaterials.com
+    domain: appliedmaterials.com
+    api: pcsx
+  - name: Infineon
+    provider: eightfold
+    host: jobs.infineon.com
+    domain: infineon.com
+    api: pcsx
+  #   Oracle Recruiting Cloud (HCM)
+  - name: Oracle
+    provider: oracle_hcm
+    host: eeho.fa.us2.oraclecloud.com
+    site: CX_45001
+    keyword: internship   # « intern » ramène ~2 000 offres (internal, international…)
+  - name: Dell
+    provider: oracle_hcm
+    host: enterpriseplatform.dell.com
+    site: careers
+  - name: Texas Instruments
+    provider: oracle_hcm
+    host: edbz.fa.us2.oraclecloud.com
+    site: CX
+  #   Sites maison : endpoint JSON appelé par la page carrières elle-même
+  - name: Amazon
+    provider: custom_json
+    url: https://www.amazon.jobs/en/search.json
+    params: {base_query: intern, result_limit: "{limit}", offset: "{offset}", sort: recent}
+    items_path: jobs
+    total_path: hits
+    page_size: 100
+    max_pages: 15
+    fields:
+      id: id_icims
+      title: title
+      url: "https://www.amazon.jobs{job_path}"
+      location: normalized_location
+      date: posted_date
+  - name: IBM
+    provider: custom_json
+    url: https://www-api.ibm.com/search/api/v2
+    method: POST
+    body:
+      appId: careers
+      scopes: [careers2]
+      query: {bool: {must: [{term: {field_keyword_18: Internship}}]}}
+      size: "{limit}"
+      from: "{offset}"
+      sort: [{_score: desc}]
+      lang: zz
+      localeSelector: {}
+      p: 1
+      _source: [_id, title, url, field_keyword_19]
+    items_path: hits.hits
+    total_path: hits.total.value
+    page_size: 100
+    max_pages: 10
+    fields:
+      id: _source.url
+      title: _source.title
+      url: _source.url
+      location: _source.field_keyword_19
+  - name: Atlassian
+    provider: custom_json
+    url: https://www.atlassian.com/endpoint/careers/listings
+    items_path: "."
+    fields:
+      id: id
+      title: title
+      url: portalJobPost.portalUrl
+      location: locations
+      date: portalJobPost.updatedDate
+  - name: AMD
+    provider: custom_json
+    url: https://careers.amd.com/api/jobs
+    params: {keywords: intern, page: "{page}", limit: "{limit}"}
+    items_path: jobs
+    total_path: totalCount
+    page_size: 100
+    max_pages: 5
+    fields:
+      id: data.req_id
+      title: data.title
+      url: "https://careers.amd.com/careers-home/jobs/{data.slug}"
+      location: data.full_location
+      date: data.posted_date
+  #   Sitemap (Radancy/TalentBrew : /search-jobs/ interdit par robots.txt, sitemap autorisé)
+  - name: Intuit
+    provider: sitemap
+    url: https://jobs.intuit.com/sitemap.xml
+  - name: Arm
+    provider: sitemap
+    url: https://careers.arm.com/sitemap.xml
+
   # ---- Non trouvées automatiquement : ajoutez-les avec
   #      python -m internbot --discover "Nom=URL_de_la_page_Apply"
   # - DoorDash, Shopify, Mistral AI (compte Lever vide), Dell, NetApp, Texas Instruments
