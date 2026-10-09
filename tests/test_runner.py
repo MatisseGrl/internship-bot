@@ -489,6 +489,20 @@ def test_v3_migration_waits_for_a_full_run(tmp_path: Path) -> None:
     assert StateStore.load(tmp_path / "state.json").filter_version == 1
 
 
+def test_v3_migration_ignores_companies_followed_by_hand(tmp_path: Path) -> None:
+    # Les entreprises « manual » ne sont jamais traitées : le run reste complet sans elles.
+    old_filter_state(tmp_path, shown=[], hidden=["hidden"], notified=[])
+    FakeProvider.jobs["Acme"] = [job("hidden")]
+    manual = {"name": "Google", "provider": "manual", "careers_url": "u", "reason": "r"}
+    cfg = parse_config({"companies": [{"name": "Acme", "provider": "fake"}, manual]})
+    state = StateStore.load(tmp_path / "state.json", now=lambda: NOW)
+    n = RecordingNotifier()
+    runner = Runner(cfg, state, n, make_http(), now=NOW, snapshot_path=tmp_path / "current.json")
+    runner.run(cfg.companies[:1])  # main.select_companies écarte « Google » (manuel)
+    assert [j.job_id for j in n.digests[0][1]] == ["hidden"]
+    assert StateStore.load(tmp_path / "state.json").filter_version == 3
+
+
 def test_v3_migration_without_previous_list_sends_nothing(tmp_path: Path) -> None:
     old_filter_state(tmp_path, shown=[], hidden=["hidden"], notified=[])
     (tmp_path / "current.json").unlink()

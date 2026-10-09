@@ -424,7 +424,12 @@ class Runner:
     def _migration_recap(self, companies: Sequence[CompanyConfig]) -> None:
         """Envoie UNE fois, en un seul récap, les offres que l'ancien filtre cachait."""
         if self.state.filter_version < FILTER_VERSION:
-            enabled = {c.name for c in self.config.companies if c.enabled}
+            # Entreprises suivies à la main (provider « manual ») : jamais traitées par un run.
+            enabled = {
+                c.name
+                for c in self.config.companies
+                if c.enabled and get_provider_class(c.provider).automated
+            }
             if not enabled <= {c.name for c in companies}:
                 return  # run partiel (--company) : la migration attend un run complet
             recap = self._recap
