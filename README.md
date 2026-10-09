@@ -343,7 +343,7 @@ du package : aucun autre fichier à modifier. Ajoutez une fixture JSON et un tes
    git push -u origin main
    ```
    💡 **Public ou privé ?** Le workflow est réglé pour un **dépôt public** (minutes Actions
-   illimitées) : un run toutes les 30 min (~5 min par run avec 40 entreprises). En **privé**, le
+   illimitées) : un run toutes les heures (~35 min par run avec 188 entreprises). En **privé**, le
    quota gratuit est de 2 000 min/mois (3 000 avec le *GitHub Student Developer Pack*) : passez
    alors le cron à `17 */2 * * *` (toutes les 2 h) et `min_delay_s` à 1.0. Le dépôt ne contient
    aucun secret ; la branche `state` ne contient que des offres publiques.
@@ -357,7 +357,7 @@ du package : aucun autre fichier à modifier. Ajoutez une fixture JSON et un tes
    `args` = `--test-notify`.
 5. **Premier vrai run** : *Run workflow* sans argument. Il crée la branche `state` et fait le
    seed silencieux (aucun message, c'est normal). Les runs suivants partent tout seuls toutes
-   les 30 min et ne notifient que les nouvelles offres.
+   les heures et ne notifient que les nouvelles offres.
 
 Le workflow `tests.yml` lance lint + typage + tests à chaque push sur `main`.
 
@@ -404,11 +404,11 @@ ouvertes qui passent vos filtres :
 | `/statut` | nombre d'offres et date de la dernière mise à jour | quelques secondes |
 | `/status` | santé de chaque entreprise : dernier succès, offres, NOTIFY/REVIEW et erreurs | quelques secondes |
 
-**Comment ça marche.** Le bot sur GitHub Actions tourne toutes les 30 min :
-il ne peut pas écouter Telegram. À chaque passage (toutes les 30 min), il écrit donc la liste des offres ouvertes
+**Comment ça marche.** Le bot sur GitHub Actions tourne toutes les heures :
+il ne peut pas écouter Telegram. À chaque passage (toutes les heures), il écrit donc la liste des offres ouvertes
 (`current.json`, branche `state`). Un petit **relais gratuit sur Cloudflare Workers**
 (`worker/`, ~200 lignes, sans dépendance) reçoit vos commandes en temps réel : `/offres` lit
-cette liste (vieille de 30 min au plus) et répond aussitôt ; `/refresh` déclenche le workflow
+cette liste (vieille d'1 h 30 au plus) et répond aussitôt ; `/refresh` déclenche le workflow
 avec `--send-all`. Le relais ignore tout message qui ne vient pas de `TELEGRAM_CHAT_ID`, et
 Telegram doit présenter un secret partagé à chaque appel.
 
@@ -537,7 +537,7 @@ Logs détaillés : `python -m internbot run --dry-run -v --company Salesforce`.
   données embarquées dans le HTML de la page de recherche).
 - Greenhouse, Lever, Ashby et SmartRecruiters exposent des API publiques documentées, a priori
   stables.
-- Une offre publiée puis retirée entre deux runs (< 30 min) peut être manquée.
+- Une offre publiée puis retirée entre deux runs (< 1 h) peut être manquée.
 - Les crons GitHub peuvent être retardés : comptez une alerte dans l'heure, pas à la minute.
 - La détection repose sur les filtres de titre : une offre de stage dont le titre ne contient
   aucun mot de stage (ex: « Software Engineer, New Grad 2027 ») ne sera pas détectée ; ajustez

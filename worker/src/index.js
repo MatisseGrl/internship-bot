@@ -1,6 +1,6 @@
 // Relais Telegram -> internbot, hébergé gratuitement sur Cloudflare Workers.
 //
-// Le bot principal tourne sur GitHub Actions (toutes les 30 min) et n'écoute pas Telegram.
+// Le bot principal tourne sur GitHub Actions (toutes les heures) et n'écoute pas Telegram.
 // Ce relais, lui, reçoit les messages en temps réel (webhook Telegram) :
 //   /offres [mots]  -> répond tout de suite avec la liste des offres ouvertes (current.json,
 //                      mise à jour à chaque passage du bot), éventuellement filtrée par mots ;
@@ -87,7 +87,7 @@ const HELP = [
   "/statut — date de la dernière mise à jour",
   "/status — santé de chaque entreprise (erreurs, offres, NOTIFY/REVIEW)",
   "",
-  "Les nouvelles offres continuent d'arriver toutes seules, toutes les 30 min.",
+  "Les nouvelles offres continuent d'arriver toutes seules, toutes les heures.",
 ].join("\n");
 
 async function commandOffers(env, query) {

@@ -2,10 +2,11 @@ name: Check internships
 
 on:
   schedule:
-    # Toutes les 30 min, décalé des heures pleines (moins de retard côté GitHub).
+    # Toutes les heures, décalé des heures pleines (moins de retard côté GitHub). Un passage
+    # dure ~35 min depuis les 184 entreprises : toutes les 30 min, les runs s'empileraient.
     # Dépôt public : minutes illimitées. En dépôt privé (2 000 min/mois), passer à
     # "17 */2 * * *" (toutes les 2 h) pour rester dans le quota gratuit.
-    - cron: "17,47 * * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       args:
@@ -24,7 +25,8 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # ~35 min mesurés en local (188 entreprises, 1 355 requêtes) : marge pour les lenteurs.
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
 
