@@ -68,6 +68,27 @@ def test_non_tech_dropped() -> None:
         assert classify(title, "Paris").status == DROP, title
 
 
+@pytest.mark.parametrize(
+    "title",
+    [
+        # Vus en prod chez Apple / Cisco le 9 oct. 2026 (passaient en notify ou review).
+        "AMS Lab Validation Intern",
+        "Design for Test Intern (m/f/d)",
+        "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
+        "Engineering Program Management Masters Internships",
+        "Engineering Product Management Specialist I (Intern)",
+        "Project Management Intern",
+    ],
+)
+def test_hardware_and_management_variants_dropped(title: str) -> None:
+    assert classify(title, "Munich, Germany").status == DROP, title
+
+
+def test_software_still_wins_over_new_hardware_words() -> None:
+    title = "GPU Internships - Design Verification and Emulation & Driver Live"
+    assert classify(title, "London, United Kingdom").status == NOTIFY
+
+
 def test_locations_remote_unknown_and_disabled_regions() -> None:
     cfg = FilterConfig()
     assert classify_location("Remote - EMEA", cfg).status == NOTIFY

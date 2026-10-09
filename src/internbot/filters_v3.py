@@ -90,7 +90,9 @@ HARDWARE = ["hardware", "asic", "fpga", "rtl", "verilog", "vhdl", "physical desi
             "manufacturing", "electrical", "electronics", "teg",
             "hardware validation", "platform validation", "validation engineer",
             "performance engineer", "performance engineering",
-            "performance modeling", "post silicon", "pre silicon", "materials",
+            "performance modeling", "performance modelling", "post silicon",
+            "pre silicon", "materials", "design for test", "lab validation",
+            "architecture validation", "ams",
             "optical", "photonics", "mems", "metrology", "test engineer",
             "reliability engineer", "supply chain", "assembly", "mechatronics"]
 
@@ -101,6 +103,7 @@ NON_TECH = ["ux research", "user research", "ux", "designer", "product design",
             "customer success", "business development", "business analyst",
             "solution architect", "solutions architect", "consultant",
             "program manager", "project manager", "product manager", "strategy",
+            "program management", "project management", "product management",
             "policy", "content", "community", "partnerships", "investment"]
 
 # Quant research pur (garde les « quant ... engineer/developer » en REVIEW)
