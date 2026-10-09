@@ -13,6 +13,7 @@ dependencies = [
     "requests>=2.31",
     "PyYAML>=6.0",
     "pydantic>=2.6",
+    "tzdata; sys_platform == 'win32'",  # fuseau Europe/Paris (résumé de 9 h) sous Windows
 ]
 
 [project.optional-dependencies]
@@ -40,6 +41,10 @@ addopts = "-q"
 line-length = 100
 target-version = "py311"
 src = ["src", "tests"]
+
+[tool.ruff.format]
+# Filtre v3 gardé tel que fourni (listes alignées à la main) ; le lint s'y applique quand même.
+exclude = ["src/internbot/filters_v3.py"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]

@@ -308,6 +308,28 @@ def test_avature_parse_results() -> None:
     ]
 
 
+def test_avature_variantes_siemens_et_totalenergies() -> None:
+    siemens, total_siemens = parse_results(_html("avature_siemens.html"))
+    totalenergies, total_totalenergies = parse_results(_html("avature_totalenergies.html"))
+    assert total_siemens is None  # « 999+ » est une borne, pas un total exact.
+    assert [row["title"] for row in siemens] == [
+        "Strategic Student Program: Mendix Development Intern",
+        "Software Engineer Intern",
+    ]
+    assert siemens[0]["location"] == "St. Louis, Missouri, United States of America"
+    assert total_totalenergies == 1
+    assert totalenergies[0]["location"] == "France"
+    assert totalenergies[0]["href"].endswith("/84412")
+
+
+def test_avature_aucun_resultat_valide() -> None:
+    rows, total = parse_results(
+        '<div class="list-controls__text__legend" aria-label="0 results"></div>'
+    )
+    assert rows == []
+    assert total == 0
+
+
 @responses.activate
 def test_avature_paginated() -> None:
     for offset, page in ((0, "avature_page1.html"), (2, "avature_page2.html")):
@@ -325,6 +347,117 @@ def test_avature_paginated() -> None:
     )
     assert [j.job_id for j in jobs] == ["216251", "216245", "216222"]
     assert jobs[2].location == ""  # lieu absent : inconnu, jamais rejeté
+
+
+@responses.activate
+def test_avature_pagination_taille_imposee_par_portail() -> None:
+    for offset, page in ((0, "avature_page1.html"), (2, "avature_page2.html")):
+        responses.get(
+            EA_SEARCH,
+            match=[
+                matchers.query_param_matcher(
+                    {"jobRecordsPerPage": "20", "jobOffset": str(offset), "search": "intern"}
+                )
+            ],
+            body=_html(page),
+        )
+    jobs = AvatureProvider(make_http()).fetch_jobs(
+        company("EA", "avature", base_url="https://jobs.ea.com/en_US/careers/")
+    )
+    assert [job.job_id for job in jobs] == ["216251", "216245", "216222"]
+
+
+@responses.activate
+def test_avature_siemens_pagination_dossiers() -> None:
+    url = "https://jobs.siemens.com/en_US/externaljobs/SearchJobs/"
+    for offset, page in (
+        (0, _html("avature_siemens.html")),
+        (
+            2,
+            '<article class="article article--result"><h3><a '
+            'href="https://jobs.siemens.com/en_US/externaljobs/JobDetail/520463">'
+            "Data Intern</a></h3></article>",
+        ),
+    ):
+        responses.get(
+            url,
+            match=[
+                matchers.query_param_matcher(
+                    {
+                        "folderRecordsPerPage": "6",
+                        "folderOffset": str(offset),
+                        "search": "intern",
+                    }
+                )
+            ],
+            body=page,
+        )
+    jobs = AvatureProvider(make_http()).fetch_jobs(
+        company(
+            "Siemens",
+            "avature",
+            base_url="https://jobs.siemens.com/en_US/externaljobs",
+            query="intern",
+            page_size=6,
+            page_size_param="folderRecordsPerPage",
+            offset_param="folderOffset",
+            max_pages=2,
+        )
+    )
+    assert [job.job_id for job in jobs] == ["520461", "520462", "520463"]
+
+
+@responses.activate
+def test_avature_detecte_une_pagination_bloquee() -> None:
+    for offset in (0, 2):
+        responses.get(
+            EA_SEARCH,
+            match=[
+                matchers.query_param_matcher(
+                    {"jobRecordsPerPage": "2", "jobOffset": str(offset), "search": "intern"}
+                )
+            ],
+            body=_html("avature_page1.html"),
+        )
+    with pytest.raises(ProviderFormatError, match="pagination bloquée"):
+        AvatureProvider(make_http()).fetch_jobs(
+            company("EA", "avature", base_url="https://jobs.ea.com/en_US/careers", page_size=2)
+        )
+
+
+@responses.activate
+def test_avature_plusieurs_recherches_sans_doublons() -> None:
+    def listing(ids: list[int]) -> str:
+        articles = "".join(
+            f'<article class="article article--result"><h3><a '
+            f'href="https://jobs.ea.com/en_US/careers/JobDetail/Offre/{job_id}">'
+            f"Stage {job_id}</a></h3></article>"
+            for job_id in ids
+        )
+        return (
+            f'<div class="list-controls__text__legend">1-{len(ids)} of {len(ids)} results</div>'
+            + articles
+        )
+
+    for query, ids in (("internship", [216251]), ("stage", [216251, 216222])):
+        responses.get(
+            EA_SEARCH,
+            match=[
+                matchers.query_param_matcher(
+                    {"jobRecordsPerPage": "20", "jobOffset": "0", "search": query}
+                )
+            ],
+            body=listing(ids),
+        )
+    jobs = AvatureProvider(make_http()).fetch_jobs(
+        company(
+            "EA",
+            "avature",
+            base_url="https://jobs.ea.com/en_US/careers",
+            queries=["internship", "stage"],
+        )
+    )
+    assert [job.job_id for job in jobs] == ["216251", "216222"]
 
 
 @responses.activate

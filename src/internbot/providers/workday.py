@@ -51,7 +51,14 @@ _DAYS_AGO = re.compile(r"posted\s+(\d+)\s+days?\s+ago", re.IGNORECASE)
 class WorkdayProvider(Provider):
     name = "workday"
     required_fields = ("tenant", "wd", "site")
-    optional_fields = ("search_text", "max_pages", "applied_facets", "fetch_details", "max_details")
+    optional_fields = (
+        "search_text",
+        "search_texts",
+        "max_pages",
+        "applied_facets",
+        "fetch_details",
+        "max_details",
+    )
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
@@ -66,11 +73,37 @@ class WorkdayProvider(Provider):
         tenant, site = company.opt("tenant"), company.opt("site")
         url = f"{self.base_url(company)}/wday/cxs/{tenant}/{site}/jobs"
         max_pages = int(company.opt("max_pages", 100))
+        search_texts = company.opt("search_texts")
+        if search_texts is None:
+            search_texts = [company.opt("search_text", "intern")]
+        if (
+            not isinstance(search_texts, list)
+            or not search_texts
+            or not all(isinstance(term, str) for term in search_texts)
+        ):
+            raise ProviderError(
+                f"[workday] {company.name} : search_texts doit être une liste de textes"
+            )
+        postings: list[dict[str, Any]] = []
+        for search_text in search_texts:
+            postings.extend(self._fetch_search(company, url, search_text, max_pages))
+        base = f"{self.base_url(company)}/{site}"
+        jobs = parse_items(postings, lambda p: self._parse(company, base, p), provider="workday")
+        if len(search_texts) == 1:
+            return jobs
+        unique: dict[str, Job] = {}
+        for job in jobs:
+            unique.setdefault(job.job_id, job)
+        return list(unique.values())
+
+    def _fetch_search(
+        self, company: CompanyConfig, url: str, search_text: str, max_pages: int
+    ) -> list[dict[str, Any]]:
         body: dict[str, Any] = {
             "appliedFacets": company.opt("applied_facets") or {},
             "limit": PAGE_SIZE,
             "offset": 0,
-            "searchText": company.opt("search_text", "intern"),
+            "searchText": search_text,
         }
 
         postings: list[dict[str, Any]] = []
@@ -98,9 +131,7 @@ class WorkdayProvider(Provider):
                 len(postings),
                 total,
             )
-
-        base = f"{self.base_url(company)}/{site}"
-        return parse_items(postings, lambda p: self._parse(company, base, p), provider="workday")
+        return postings
 
     def _parse(self, company: CompanyConfig, base: str, p: dict[str, Any]) -> Job | None:
         title = p.get("title")

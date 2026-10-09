@@ -4,7 +4,13 @@ Format (version 1) :
 
     {
       "version": 1,
-      "meta": {"last_digest": "2026-10-08T12:00:00+00:00"},
+      "meta": {
+        "last_digest": "2026-10-08T12:00:00+00:00",
+        "filter_version": 3,                  # absent = ancien filtre (avant le v3)
+        "review_queue": [{"company": ..., "job_id": ..., "title": ..., "reason": ...}],
+        "last_review_digest": "2026-10-09",   # jour (Paris) du dernier résumé « à vérifier »
+        "recap_pending": [...]                # récap de migration v3 pas encore envoyé
+      },
       "companies": {
         "Salesforce": {
           "seeded_at": "...",
@@ -232,6 +238,88 @@ class StateStore:
     def set_last_digest(self, when: datetime) -> None:
         self.data["meta"]["last_digest"] = when.replace(microsecond=0).isoformat()
         self.dirty = True
+
+    # -- filtre v3 : résumé « à vérifier » et récap de migration ------------------------------
+
+    def was_notified(self, company: str, job_id: str) -> bool:
+        entry = self.data["companies"].get(company)
+        rec = entry["jobs"].get(job_id) if entry else None
+        return bool(rec and rec.get("notified_at"))
+
+    @property
+    def filter_version(self) -> int:
+        return int(self.data["meta"].get("filter_version", 1))
+
+    def set_filter_version(self, version: int) -> None:
+        self.data["meta"]["filter_version"] = version
+        self.dirty = True
+
+    def queue_review(self, job: Job) -> None:
+        """Ajoute une offre « à vérifier » au prochain résumé quotidien."""
+        self._queue("review_queue", [job])
+
+    def review_queue(self) -> list[Job]:
+        return self._jobs_in("review_queue")
+
+    def set_recap_pending(self, jobs: Iterable[Job]) -> None:
+        """Offres que l'ancien filtre cachait et que le v3 retient (récap unique)."""
+        self.data["meta"]["recap_pending"] = []
+        self._queue("recap_pending", jobs)
+        if not self.data["meta"]["recap_pending"]:
+            self.clear_queue("recap_pending")
+
+    def recap_pending(self) -> list[Job]:
+        return self._jobs_in("recap_pending")
+
+    def clear_queue(self, name: str) -> None:
+        if self.data["meta"].pop(name, None) is not None:
+            self.dirty = True
+
+    @property
+    def last_review_digest(self) -> str | None:
+        """Date (heure de Paris, AAAA-MM-JJ) du dernier résumé « à vérifier » envoyé."""
+        value = self.data["meta"].get("last_review_digest")
+        return str(value) if value else None
+
+    def set_last_review_digest(self, day: str) -> None:
+        self.data["meta"]["last_review_digest"] = day
+        self.dirty = True
+
+    def _queue(self, name: str, jobs: Iterable[Job]) -> None:
+        queue: list[dict[str, Any]] = self.data["meta"].setdefault(name, [])
+        keys = {(r["company"], r["job_id"]) for r in queue}
+        for job in jobs:
+            if job.key not in keys:
+                keys.add(job.key)
+                queue.append(
+                    {
+                        "company": job.company,
+                        "job_id": job.job_id,
+                        "title": job.title,
+                        "location": job.location,
+                        "url": job.url,
+                        "status": job.status,
+                        "reason": job.reason,
+                        "priority": job.priority,
+                    }
+                )
+        self.dirty = True
+
+    def _jobs_in(self, name: str) -> list[Job]:
+        return [
+            Job(
+                company=str(r["company"]),
+                job_id=str(r["job_id"]),
+                title=str(r["title"]),
+                url=str(r["url"]),
+                source="state",
+                location=str(r.get("location") or ""),
+                status=str(r.get("status") or "notify"),
+                reason=str(r.get("reason") or ""),
+                priority=bool(r.get("priority")),
+            )
+            for r in self.data["meta"].get(name) or []
+        ]
 
     def notified_since(self, since: datetime) -> list[tuple[str, str]]:
         out = []

@@ -4,6 +4,7 @@
 # État local (en CI, l'état vit sur la branche `state`)
 state/
 .state/
+.claude/worktrees/
 
 # Python
 __pycache__/

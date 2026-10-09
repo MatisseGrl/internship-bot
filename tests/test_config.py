@@ -26,7 +26,9 @@ def test_example_config_is_valid() -> None:
 def test_defaults_applied() -> None:
     cfg = parse_config(base())
     assert cfg.notifier.type == "telegram"
-    assert "intern" in cfg.filters.title_include
+    assert "senior" in cfg.filters.title_exclude
+    assert cfg.filters.regions == ["us", "canada", "uk", "europe", "asia", "australia"]
+    assert not cfg.filters.include_quant_research
     assert cfg.http.min_delay_s >= 1.0
 
 
@@ -107,20 +109,20 @@ def test_min_delay_politeness_enforced() -> None:
 
 def test_company_filter_override_merges() -> None:
     raw = {
-        "filters": {"locations_include": [], "keywords_any": ["software"]},
+        "filters": {"regions": ["europe"], "title_exclude": ["senior"]},
         "companies": [
             {
                 "name": "A",
                 "provider": "greenhouse",
                 "board": "a",
-                "filters": {"locations_include": ["France"]},
+                "filters": {"regions": ["uk"]},
             }
         ],
     }
     cfg = parse_config(raw)
     merged = cfg.filters_for(cfg.companies[0])
-    assert merged.locations_include == ["France"]
-    assert merged.keywords_any == ["software"]
+    assert merged.regions == ["uk"]
+    assert merged.title_exclude == ["senior"]
 
 
 def test_company_filter_override_validated() -> None:
@@ -133,15 +135,29 @@ def test_company_filter_override_validated() -> None:
         parse_config(raw)
 
 
-def test_real_config_accepts_plural_internships() -> None:
-    # Apple publie ses offres US sous « ... Internships » (pluriel) : le mot entier
-    # « internship » ne le matche pas, il faut le pluriel dans title_include.
-    from internbot.filters import JobFilter
+def test_real_config_keeps_apple_plural_internships() -> None:
+    # Apple publie ses offres US sous « ... Internships » (pluriel).
+    from internbot.filters import JobClassifier
     from tests.conftest import job
 
-    filt = JobFilter(load_config(ROOT / "config.yaml").filters)
+    clf = JobClassifier(load_config(ROOT / "config.yaml").filters)
     for title in (
         "Software Engineering Masters Internships",
         "Machine Learning and Artificial Intelligence Undergrad Internships",
     ):
-        assert filt.reject_reason(job("1", title=title, location="United States")) is None
+        assert clf.classify(job("1", title=title, location="United States")).status == "notify"
+
+
+def test_obsolete_filter_keys_are_ignored_with_warning(caplog: pytest.LogCaptureFixture) -> None:
+    raw = base()
+    raw["filters"] = {"keywords_any": ["software"], "locations_exclude": ["China"]}
+    cfg = parse_config(raw)
+    assert "ignoré" in caplog.text and "keywords_any" in caplog.text
+    assert not hasattr(cfg.filters, "keywords_any")
+
+
+def test_unknown_region_rejected() -> None:
+    raw = base()
+    raw["filters"] = {"regions": ["mars"]}
+    with pytest.raises(ConfigError, match="regions"):
+        parse_config(raw)

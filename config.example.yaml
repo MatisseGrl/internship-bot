@@ -7,15 +7,17 @@ notifier:
   disable_link_preview: true
 
 filters:
-  # Matching insensible à la casse et aux accents, par mot entier
-  # (« intern » ne matche pas « internal » ; ajoutez « internship » explicitement).
-  title_include: ["intern", "interns", "internship", "internships", "stage", "stagiaire", "co-op", "working student"]
+  # Filtre v3 (src/internbot/filters_v3.py) : chaque offre est classée
+  #   notify -> alerte immédiate (⭐ si offre IA) ; review -> résumé quotidien « à vérifier »
+  #   (premier passage après 9 h, heure de Paris) ; drop -> ignorée.
+  # Cibles : stages software, data, IA (prioritaires), FDE. Les listes de mots sont dans
+  # filters_v3.py. Matching insensible à la casse et aux accents, par mot entier.
+  regions: [us, canada, uk, europe, asia, australia]  # dispo aussi : israel, japan, uae
+  include_data: true
+  include_fde: true               # forward deployed / solutions / customer engineer
+  include_quant_research: false   # quant research pur (trader, QR)
+  # Appliqués AVANT le filtre v3 :
   title_exclude: ["senior", "staff", "principal", "manager", "director", "high school"]
-  locations_include: []     # vide = toutes ; ex: ["France", "Paris", "Remote", "Europe"]
-  locations_exclude: []
-  keywords_any: ["software", "engineer", "engineering", "developer", "data", "ml",
-                 "machine learning", "ai", "backend", "frontend", "full stack", "fullstack",
-                 "research", "security", "infrastructure", "platform"]  # vide = pas de contrainte
   year_hint: ["2027"]
   # prefer  : écarte « Summer 2026 Intern » mais garde les titres sans année
   # require : exige l'année dans le titre ; off : ignore year_hint
@@ -94,7 +96,7 @@ companies:
   #   provider: workable
   #   account: doctolib
   #   filters:
-  #     locations_include: ["France", "Paris"]
+  #     regions: [europe]
 
   # ---- Dernier recours : site sans API (pip install -e ".[playwright]")
   # - name: MaBoite

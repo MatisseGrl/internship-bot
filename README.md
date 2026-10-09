@@ -15,7 +15,8 @@ Summer 2027 Intern - Software Engineer
 ```
 
 **Plateformes supportées** : Workday (Salesforce, NVIDIA, Adobe…), Greenhouse, Lever, Ashby,
-SmartRecruiters, Workable, le site maison d'Apple, et un mode Playwright générique de dernier recours.
+SmartRecruiters, Workable, Eightfold, Oracle HCM, Avature, Gestmax, sitemaps publics, endpoints JSON
+configurables, le site maison d'Apple et un mode Playwright générique de dernier recours.
 
 **Garanties** :
 - **pas de spam au premier lancement** : la première fois qu'une entreprise est vue, toutes ses
@@ -89,32 +90,44 @@ Tout se règle dans `config.yaml` (aucun secret dedans, il peut être commité).
 
 ### Filtres
 
+Le classement des offres est fait par le **filtre v3** (`src/internbot/filters_v3.py`, listes de
+mots-clés en tête de fichier). Chaque offre tombe dans un seau :
+
+| Seau | Quoi | Ce que fait le bot |
+|---|---|---|
+| `notify` | stage software / data / IA / FDE dans une zone voulue | alerte Telegram immédiate, **⭐ si offre IA** |
+| `review` | ambigu (titre flou, hardware + IA, IA + non-tech, lieu inconnu…) | **résumé quotidien « à vérifier »** (une ligne par offre avec la raison), au premier passage après 9 h (heure de Paris) |
+| `drop` | hardware pur, non-tech, PhD uniquement, quant research, hors zone, pas un stage | ignorée (raison visible avec `-v`) |
+
+Les réglages se font dans `config.yaml` :
+
 ```yaml
 filters:
-  title_include: ["intern", "interns", "internship", "stage", "stagiaire", "co-op", "working student"]
+  regions: [us, canada, uk, europe, asia, australia]  # dispo aussi : israel, japan, uae
+  include_data: true
+  include_fde: true               # forward deployed / solutions / customer engineer
+  include_quant_research: false   # quant research pur (trader, QR)
+  # Appliqués AVANT le filtre v3 :
   title_exclude: ["senior", "staff", "principal", "manager", "director", "high school"]
-  locations_include: []     # vide = toutes ; ex: ["France", "Paris", "Remote", "Europe"]
-  locations_exclude: []
-  keywords_any: ["software", "engineer", "data", "ml", "backend", "full stack"]  # vide = aucun
   year_hint: ["2027"]
   year_hint_mode: prefer    # prefer | require | off
 ```
 
-Règles de matching :
-- **insensible à la casse et aux accents** : `stagiaire` matche « STAGIAIRE », `zurich` matche
-  « Zürich » ;
-- **mots entiers** : `intern` ne matche **pas** « Internal » ni « International »… ni
-  « Internship » (d'où `internship` dans la liste). `ml` ne matche pas « HTML » ;
-- la ponctuation compte comme un espace : `co-op` matche « Co-op » et « CO OP », `full stack`
-  matche « Full-Stack » ;
-- une offre est retenue si son titre contient **un** terme de `title_include`, **aucun** terme
-  de `title_exclude`, **un** terme de `keywords_any` (si la liste n'est pas vide), et si son lieu
-  passe `locations_include` / `locations_exclude` ;
+Règles principales :
+- **un signal software explicite gagne toujours contre le hardware** : « GPU Software Performance
+  Intern » est gardé, « Performance Engineer Intern » est écarté ;
+- hardware + IA sans software (« Hardware Machine Learning Research Intern ») → `review` ;
+- **PhD écarté seulement si l'offre est réservée aux PhD** : « BS/MS/PhD » passe ;
+- IA + non-tech (« AI Solution Architect Intern ») → `review` ;
+- remote / hybrid → gardé ; lieu inconnu (« Multiple Locations ») → `review` ; une offre
+  multi-lieux est gardée si **un** de ses lieux est dans une zone ;
+- matching **insensible à la casse et aux accents**, par **mots entiers** : `intern` ne matche
+  pas « Internal », `ml` ne matche pas « HTML », la ponctuation compte comme un espace
+  (« Co-op » == « co op ») ;
 - `year_hint_mode: prefer` (défaut) écarte les titres qui mentionnent **seulement une autre
   année** (« Summer 2026 Intern ») mais garde ceux sans année ; `require` exige l'année ;
-- un **lieu inconnu ou partiel** (Workday affiche parfois « 8 Locations ») n'est **jamais**
-  rejeté : mieux vaut une alerte de trop qu'une offre manquée. Pour Workday, le bot va de toute
-  façon chercher la liste complète des lieux pour les offres candidates.
+- Workday affiche parfois « 8 Locations » : le bot va chercher la liste complète des lieux ; si
+  elle reste inconnue, l'offre passe en `review` (jamais jetée à l'aveugle).
 
 Filtres spécifiques à une entreprise (surcharge champ par champ) :
 
@@ -123,13 +136,18 @@ Filtres spécifiques à une entreprise (surcharge champ par champ) :
     provider: workable
     account: doctolib
     filters:
-      locations_include: ["France"]
+      regions: [europe]
 ```
 
-> ⚠️ Les offres qui ne passent pas les filtres sont quand même enregistrées comme « vues ».
-> Si vous élargissez vos filtres plus tard, seules les **futures** offres seront notifiées (pas
-> d'avalanche d'anciennes offres). Pour voir ce que donnent de nouveaux filtres sur l'existant :
+> ⚠️ Les offres `review` et `drop` sont quand même enregistrées comme « vues ». Si vous élargissez
+> vos filtres plus tard, seules les **futures** offres seront notifiées (pas d'avalanche
+> d'anciennes offres). Pour voir ce que donnent de nouveaux filtres sur l'existant :
 > `python -m internbot run --dry-run --state /chemin/vide.json`.
+>
+> Passage de l'ancien filtre au v3 : au premier passage complet, les offres encore ouvertes que
+> l'ancien filtre cachait et que le v3 classe `notify` sont envoyées **une seule fois**, dans un
+> seul récap (« 🔁 Nouveau filtre : … »). Les anciennes clés `title_include`, `keywords_any`,
+> `locations_include`, `locations_exclude` sont ignorées (avertissement au chargement).
 
 ### Autres sections
 
@@ -183,8 +201,9 @@ coller sous `companies:` :
   404 = bon tenant mais mauvais site), puis essaie les noms de site usuels (`External`,
   `Careers`, `{Nom}Careers`…). Si le site a un nom exotique, donnez l'URL `Nom=URL` : c'est
   instantané et fiable.
-- Les entreprises sur SuccessFactors, Avature, Eightfold, Oracle HCM ou un site maison ne sont
-  pas détectées (voir *Limites*).
+- La découverte automatique couvre surtout les plateformes classiques. Une entreprise sur
+  SuccessFactors, Avature, Eightfold, Oracle HCM ou un endpoint maison peut être ajoutée dans
+  `config.yaml` après vérification de sa vraie page carrières.
 
 ### Manuellement
 
@@ -235,10 +254,27 @@ bien retrouvée. NVIDIA (`nvidia` / `wd5` / `NVIDIAExternalCareerSite`) et Adobe
 / `external_experienced`) ont été vérifiés le même jour.
 
 Options Workday : `search_text` (défaut `intern`, pré-filtre plein texte côté Workday),
-`max_pages` (défaut 100 × 20 offres), `applied_facets` (filtres Workday bruts, avancé),
-`fetch_details` (défaut `true`), `max_details` (défaut 25 requêtes de détail par run).
+`search_texts` (plusieurs recherches, offres dédupliquées par numéro de réquisition),
+`max_pages` (défaut 100 × 20 offres, par recherche), `applied_facets` (filtres Workday bruts,
+avancé), `fetch_details` (défaut `true`), `max_details` (défaut 25 requêtes de détail par run).
+
+Avature : `base_url` pointe vers le portail public. `query` (défaut `intern`) ou `queries`
+permettent de chercher plusieurs termes ; `max_pages` s'applique à chaque recherche. Certains
+portails paginent les offres avec `jobOffset` / `jobRecordsPerPage`, Siemens avec
+`folderOffset` / `folderRecordsPerPage` : les options `offset_param`, `page_size_param` et
+`page_size` sont configurables. Le bot signale une pagination qui répète la même page.
+
+Gestmax : `base_url` est la racine du portail public (par exemple
+`https://mbda.gestmax.fr`). Le provider lit le tableau de `/search/index`, parcourt
+`/search/index/page/N` jusqu'au total annoncé et signale une page répétée ou vide
+avant la fin. `max_pages` borne le parcours (défaut 50).
 
 ### Site sans API (dernier recours)
+
+Si le site interdit la collecte, exige une connexion ou ne fournit aucun flux public stable,
+utilisez `provider: manual` avec `careers_url`, `reason` et `alert`. Cette entrée apparaît dans
+`--status` et `/status`, sans requête réseau ni notification automatique. Le lien d'alerte
+e-mail ou de vérification manuelle doit être indiqué pour chaque entreprise concernée.
 
 ```bash
 pip install -e ".[playwright]" && playwright install chromium
@@ -324,12 +360,14 @@ ouvertes qui passent vos filtres :
 
 | Commande | Effet | Délai |
 |---|---|---|
-| `/offres` | toutes les offres ouvertes, groupées par entreprise | quelques secondes |
-| `/offres paris` | idem, filtrées par mot(s) dans l'entreprise, le titre ou le lieu | quelques secondes |
+| `/offres` | toutes les offres ouvertes (`notify` et `review`), offres IA ⭐ d'abord, groupées par entreprise | quelques secondes |
+| `/offres cisco` | les offres d'une entreprise connue | quelques secondes |
+| `/offres paris` | mot ou expression entière dans l'entreprise, le titre ou le lieu | quelques secondes |
 | `/refresh` | relance une vraie recherche sur tous les sites, puis envoie la liste | ~5 min |
 | `/statut` | nombre d'offres et date de la dernière mise à jour | quelques secondes |
+| `/status` | santé de chaque entreprise : dernier succès, offres, NOTIFY/REVIEW et erreurs | quelques secondes |
 
-**Comment ça marche.** Le bot sur GitHub Actions ne tourne que quelques minutes toutes les 2 h :
+**Comment ça marche.** Le bot sur GitHub Actions tourne toutes les 30 min :
 il ne peut pas écouter Telegram. À chaque passage (toutes les 30 min), il écrit donc la liste des offres ouvertes
 (`current.json`, branche `state`). Un petit **relais gratuit sur Cloudflare Workers**
 (`worker/`, ~200 lignes, sans dépendance) reçoit vos commandes en temps réel : `/offres` lit
@@ -397,13 +435,15 @@ Pour chaque entreprise, dans l'ordre :
 3. **Première fois ?** → seed silencieux, fin.
 4. **Détection des offres disparues** (simple log ; elles restent connues pour ne pas être
    re-notifiées si elles réapparaissent, et sont purgées après 180 jours).
-5. **Nouvelles offres** → filtre sur le titre → *enrichissement* (Workday : lieux complets et
-   date réelle, seulement pour les candidates, max 25 requêtes) → filtre sur le lieu.
-6. Les offres rejetées sont marquées vues ; les retenues sont mises en attente.
+5. **Nouvelles offres** → filtre v3 sur le titre → *enrichissement* (Workday : lieux complets et
+   date réelle, seulement pour les candidates, max 25 requêtes) → filtre v3 complet (titre + lieu).
+6. Les offres `drop` sont marquées vues ; les `review` aussi, et rejoignent la file du résumé
+   « à vérifier » (gardée dans l'état) ; les `notify` sont mises en attente.
 
-En fin de run, toutes les offres retenues sont envoyées (individuellement jusqu'à
-`group_threshold`, groupées au-delà), puis **seules celles effectivement envoyées** sont marquées
-vues. L'état est écrit de façon atomique (fichier temporaire + renommage) après chaque entreprise.
+En fin de run, toutes les offres `notify` sont envoyées (offres IA ⭐ d'abord, individuellement
+jusqu'à `group_threshold`, groupées au-delà), puis **seules celles effectivement envoyées** sont
+marquées vues. Au premier passage après 9 h (Paris), la file « à vérifier » part en un message
+(vidée seulement si l'envoi réussit). L'état est écrit de façon atomique (fichier temporaire + renommage) après chaque entreprise.
 
 **Politesse envers les sites** : User-Agent explicite et configurable, requêtes strictement
 séquentielles, ≥ 1 s entre deux requêtes vers un même domaine (1,5 s par défaut), timeouts, retries avec backoff
@@ -427,8 +467,9 @@ Choix par défaut (modifiables) :
   répondent 200).
 - Date affichée : date ISO quand elle est connue ; pour Workday, « Posted Today » est converti
   en date, et la vraie date de publication est récupérée lors de l'enrichissement.
-- `keywords_any` est renseigné dans l'exemple (profil ingénieur logiciel / tech) : sans lui,
-  vous recevriez aussi les stages en vente, marketing, RH… Videz la liste pour tout recevoir.
+- Filtre v3 : les métiers visés (software, data, IA, FDE) et les zones sont codés dans
+  `filters_v3.py` ; la config ne fait qu'activer / désactiver data, FDE, quant research et les
+  zones. Pour un autre profil, adaptez les listes de ce fichier (et ses tests).
 
 ## 8. Dépannage
 
@@ -460,13 +501,12 @@ Logs détaillés : `python -m internbot run --dry-run -v --company Salesforce`.
 - Une offre publiée puis retirée entre deux runs (< 30 min) peut être manquée.
 - Les crons GitHub peuvent être retardés : comptez une alerte dans l'heure, pas à la minute.
 - La détection repose sur les filtres de titre : une offre de stage dont le titre ne contient
-  aucun mot-clé (ex: « Software Engineer, New Grad 2027 ») ne sera pas détectée ; ajustez
-  `title_include`.
-- **Plateformes non couvertes** : sites maison avec API JSON propre (Amazon, Microsoft,
-  Tencent, Atlassian, Uber), Eightfold (Netflix, PayPal), Oracle HCM, SuccessFactors (SAP),
-  Avature (Bloomberg)… Chacun demanderait un provider dédié (un fichier dans `providers/`).
-  Google, Apple, Meta, Tesla, TikTok n'ont pas d'API exploitable proprement : utilisez leurs
-  **alertes e-mail natives**.
+  aucun mot de stage (ex: « Software Engineer, New Grad 2027 ») ne sera pas détectée ; ajustez
+  la liste `INTERN` de `filters_v3.py`.
+- **Plateformes encore à étudier** : SuccessFactors (SAP), Phenom et certains sites carrières
+  maison. Les endpoints JSON publics peuvent utiliser `custom_json` ; les portails Avature
+  utilisent `avature` avec des recherches et des paramètres de pagination propres au site.
+  Les entreprises sans accès public stable sont suivies avec le provider `manual`.
 - Workday plafonne la recherche à 20 offres par page ; `max_pages: 100` limite à 2 000 offres
   par entreprise (un warning apparaît si la limite est atteinte).
 
@@ -491,7 +531,8 @@ src/internbot/
 ├── http.py            # client HTTP poli (délai, retries, backoff, masquage token)
 ├── models.py          # Job
 ├── notifiers/         # telegram, console, formatage + découpage 4096
-└── providers/         # registre + workday, greenhouse, lever, ashby, smartrecruiters,
-                       #   workable, apple, playwright_generic
+└── providers/         # registre + Workday, Greenhouse, Lever, Ashby, SmartRecruiters,
+                       #   Workable, Eightfold, Oracle HCM, Avature, custom_json, sitemap,
+                       #   Apple, manual, playwright_generic
 tests/                 # tests unitaires, fixtures dans tests/fixtures/
 ```

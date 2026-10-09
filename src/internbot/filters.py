@@ -1,4 +1,4 @@
-"""Filtrage des offres : mots-clés de titre, lieux, saison.
+"""Classement des offres : exclusions de la config, puis filtre v3 (filters_v3.py).
 
 Toutes les comparaisons se font sur un texte normalisé :
 - insensible à la casse et aux accents (« Stagiaire » == « stagiaire » == « STAGIAIRE ») ;
@@ -12,19 +12,13 @@ import re
 import unicodedata
 from collections.abc import Iterable
 
+from internbot import filters_v3
 from internbot.config import FiltersConfig
+from internbot.filters_v3 import DROP, Verdict
 from internbot.models import Job
 
 _NON_ALNUM = re.compile(r"[^0-9a-z]+")
 _YEAR = re.compile(r"(?<![0-9])20[0-9]{2}(?![0-9])")
-# Séparateurs entre plusieurs lieux d'une même offre (« · » interne, « ; » Greenhouse, « | »).
-_LOCATION_SEP = re.compile(r"\s*[·;|]\s*")
-
-NOTIFY, REVIEW, REJECT = "NOTIFY", "REVIEW", "REJECT"
-
-
-def split_locations(location: str) -> list[str]:
-    return [part for part in _LOCATION_SEP.split(location) if part.strip()]
 
 
 def normalize(text: str) -> str:
@@ -57,63 +51,39 @@ class TermMatcher:
         return match.group(0) if match else None
 
 
-class JobFilter:
+class JobClassifier:
+    """Range une offre dans un seau du filtre v3 : notify, review ou drop.
+
+    Avant le filtre v3, deux exclusions propres à la config : `title_exclude` (« senior »…)
+    et `year_hint` (« Summer 2026 » quand on vise 2027).
+    """
+
     def __init__(self, cfg: FiltersConfig) -> None:
         self.cfg = cfg
-        self.title_include = TermMatcher(cfg.title_include)
         self.title_exclude = TermMatcher(cfg.title_exclude)
-        self.keywords_any = TermMatcher(cfg.keywords_any)
-        self.locations_include = TermMatcher(cfg.locations_include)
-        self.locations_exclude = TermMatcher(cfg.locations_exclude)
         self.years = {y.strip() for y in cfg.year_hint if y.strip()}
+        self.v3 = filters_v3.FilterConfig(
+            enabled_regions=set(cfg.regions),
+            include_data=cfg.include_data,
+            include_fde=cfg.include_fde,
+            include_quant_research=cfg.include_quant_research,
+        )
 
-    def title_reject_reason(self, title: str) -> str | None:
-        """Rejet basé sur le seul titre (étape bon marché, avant enrichissement)."""
-        if self.title_include and self.title_include.find(title) is None:
-            return "titre sans mot-clé de stage"
+    def title_verdict(self, title: str) -> Verdict:
+        """Verdict sur le seul titre (étape bon marché, avant enrichissement du lieu)."""
         if (hit := self.title_exclude.find(title)) is not None:
-            return f"titre exclu ({hit!r})"
-        if self.keywords_any and self.keywords_any.find(title) is None:
-            return "titre sans mot-clé métier (keywords_any)"
-        return self._year_reject_reason(title)
+            return Verdict(DROP, f"titre exclu ({hit!r})")
+        if (reason := self._year_reject_reason(title)) is not None:
+            return Verdict(DROP, reason)
+        return filters_v3.classify_title(title, self.v3)
 
-    def location_reject_reason(self, job: Job) -> str | None:
-        # Lieu inconnu ou partiel (« 8 Locations ») : on ne rejette pas, mieux vaut une alerte
-        # de trop qu'une offre manquée.
-        if not job.location.strip() or not job.location_complete:
-            return None
-        # Offre multi-lieux : on ne la rejette que si AUCUN de ses lieux ne convient
-        # (« Shanghai · Santa Clara » reste visible si seule la Chine est exclue).
-        parts = split_locations(job.location)
-        allowed = [p for p in parts if self.locations_exclude.find(p) is None]
-        if not allowed:
-            hit = self.locations_exclude.find(job.location)
-            return f"lieu exclu ({hit!r})"
-        if self.locations_include and not any(self.locations_include.find(p) for p in allowed):
-            return f"lieu hors liste ({job.location})"
-        return None
-
-    def reject_reason(self, job: Job) -> str | None:
-        return self.title_reject_reason(job.title) or self.location_reject_reason(job)
-
-    def matches(self, job: Job) -> bool:
-        return self.reject_reason(job) is None
-
-    def classify(self, job: Job) -> str:
-        """NOTIFY : passe tous les filtres (offre notifiée).
-        REVIEW : vrai stage (mot-clé de stage, aucun mot exclu, lieu accepté) écarté seulement
-        par `keywords_any` ou l'année : à regarder à la main, jamais notifié.
-        REJECT : tout le reste. Sert aux statistiques (`--status`), pas à la notification."""
-        if self.matches(job):
-            return NOTIFY
-        title = job.title
-        if (
-            (not self.title_include or self.title_include.find(title) is not None)
-            and self.title_exclude.find(title) is None
-            and self.location_reject_reason(job) is None
-        ):
-            return REVIEW
-        return REJECT
+    def classify(self, job: Job) -> Verdict:
+        verdict = self.title_verdict(job.title)
+        if verdict.status == DROP:
+            return verdict
+        # Lieu partiel (Workday « 3 Locations » non résolu) : traité comme inconnu -> review.
+        location = job.location if job.location_complete else ""
+        return filters_v3.classify(job.title, location, self.v3)
 
     def _year_reject_reason(self, title: str) -> str | None:
         if not self.years or self.cfg.year_hint_mode == "off":

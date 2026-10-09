@@ -9,6 +9,7 @@ import worker, {
   flattenSnapshot,
   formatAge,
   handleCommand,
+  matchesQuery,
 } from "../src/index.js";
 
 const ENV = {
@@ -171,29 +172,62 @@ test("découpage : jamais plus de 4096 caractères, en-tête répété (suite)",
 
 test("utilitaires", () => {
   assert.equal(flattenSnapshot(SNAPSHOT).length, 3);
-  assert.equal(filterJobs(flattenSnapshot(SNAPSHOT), "stripe london").length, 1);
+  assert.equal(filterJobs(flattenSnapshot(SNAPSHOT), "london", ["Stripe"]).length, 1);
   const now = Date.parse("2026-10-08T12:00:00Z");
   assert.equal(formatAge("2026-10-08T11:58:00Z", now), "il y a 2 min");
   assert.equal(formatAge("2026-10-08T09:30:00Z", now), "il y a 2 h 30");
   assert.equal(formatAge(null, now), "inconnue");
 });
 
-test("filtre /offres : début de mot, pas sous-chaîne", () => {
+test("matchesQuery : mêmes cas que tests/test_filters_v3.py", () => {
+  const known = ["Cisco"];
+  assert.equal(matchesQuery("cisco", "Lyft", "Software Engineer Intern", "San Francisco, CA", known), false);
+  assert.equal(matchesQuery("cisco", "Cisco", "Software Engineer Intern", "San Jose, CA", known), true);
+  assert.equal(matchesQuery("paris", "Datadog", "SWE Intern", "Paris, France", known), true);
+  const known2 = ["Cisco", "Capital One"];
+  assert.equal(matchesQuery("", "Lyft", "SWE Intern", "NYC", known2), true);
+  assert.equal(matchesQuery("CAPITAL one", "Capital One", "Data Intern", "McLean, VA", known2), true);
+  assert.equal(matchesQuery("capital one", "Lyft", "Capital One Intern", "NYC", known2), false);
+  assert.equal(matchesQuery("machine learning", "Lyft", "Machine Learning Intern", "NYC", known2), true);
+  assert.equal(matchesQuery("fran", "Lyft", "SWE Intern", "San Francisco, CA", known2), false);
+});
+
+test("filtre /offres : entreprise connue ou mot entier, jamais une sous-chaîne", () => {
   const jobs = [
     { company: "Adobe", title: "2027 Intern - Software Engineer", location: "San Francisco" },
     { company: "Cisco", title: "Software Engineer Data & AI I (Intern)", location: "San Jose, California, US" },
     { company: "NVIDIA", title: "Deep Learning Intern", location: "Santa Clara" },
     { company: "Datadog", title: "Software Engineering Intern", location: "Paris, France" },
   ];
-  const names = (q) => filterJobs(jobs, q).map((j) => j.company);
+  const known = jobs.map((j) => j.company);
+  const names = (q) => filterJobs(jobs, q, known).map((j) => j.company);
   assert.deepEqual(names("cisco"), ["Cisco"]); // pas « San Francisco »
   assert.deepEqual(names("Cisco"), ["Cisco"]);
-  assert.deepEqual(names("nvid"), ["NVIDIA"]); // préfixe accepté
+  assert.deepEqual(names("nvid"), []); // plus de préfixe : mot entier seulement
   assert.deepEqual(names("francisco"), ["Adobe"]);
   assert.deepEqual(names("san jose"), ["Cisco"]);
   assert.deepEqual(names("pâris"), ["Datadog"]); // accents ignorés
   assert.deepEqual(names("ai"), ["Cisco"]); // pas « Paris », « Santa Clara »…
-  assert.deepEqual(names("data"), ["Cisco", "Datadog"]);
+  assert.deepEqual(names("data"), ["Cisco"]); // « Datadog » n'est pas le mot « data »
+});
+
+test("liste : offres IA (⭐) d'abord, jamais de « drop »", () => {
+  const snapshot = {
+    companies: {
+      Alpha: { jobs: [{ job_id: "1", title: "Backend Intern", url: "u1", status: "notify" }] },
+      Zeta: {
+        jobs: [
+          { job_id: "2", title: "ML Intern", url: "u2", status: "review", priority: true },
+          { job_id: "3", title: "Hardware Intern", url: "u3", status: "drop" },
+        ],
+      },
+    },
+  };
+  const jobs = flattenSnapshot(snapshot);
+  assert.deepEqual(jobs.map((j) => j.job_id), ["1", "2"]);
+  const [text] = buildListingMessages(jobs, "");
+  assert.ok(text.indexOf("Zeta") < text.indexOf("Alpha"));
+  assert.ok(text.includes('⭐ <b>Zeta</b> (1)\n• ⭐ <a href="u2">ML Intern</a>'));
 });
 
 const HEALTH = {

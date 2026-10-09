@@ -44,6 +44,38 @@ def test_paginates_with_total_from_first_page_only() -> None:
 
 
 @responses.activate
+def test_plusieurs_recherches_sans_doublons() -> None:
+    intern = {
+        "title": "Software Intern",
+        "externalPath": "/job/Paris/Software-Intern_JR123456",
+        "bulletFields": ["JR123456"],
+        "locationsText": "Paris",
+    }
+    stage = {
+        "title": "Stage Data",
+        "externalPath": "/job/Paris/Stage-Data_JR123457",
+        "bulletFields": ["JR123457"],
+        "locationsText": "Paris",
+    }
+    responses.post(LIST_URL, json={"total": 1, "jobPostings": [intern]})
+    responses.post(LIST_URL, json={"total": 2, "jobPostings": [intern, stage]})
+    cfg = company(
+        "Salesforce",
+        "workday",
+        tenant="salesforce",
+        wd="wd12",
+        site="External_Career_Site",
+        search_texts=["intern", "stage"],
+    )
+    jobs = WorkdayProvider(make_http()).fetch_jobs(cfg)
+    assert [job.job_id for job in jobs] == ["JR123456", "JR123457"]
+    assert [json.loads(call.request.body)["searchText"] for call in responses.calls] == [
+        "intern",
+        "stage",
+    ]
+
+
+@responses.activate
 def test_stops_on_empty_page_and_respects_max_pages() -> None:
     page = load_fixture("workday_page1.json")
     page["total"] = 10_000

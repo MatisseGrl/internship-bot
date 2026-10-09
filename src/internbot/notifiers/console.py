@@ -8,7 +8,7 @@ from typing import TextIO
 
 from internbot.models import Job
 from internbot.notifiers.base import Notifier
-from internbot.notifiers.formatting import format_job_plain
+from internbot.notifiers.formatting import STAR, format_job_plain
 
 
 class ConsoleNotifier(Notifier):
@@ -30,11 +30,23 @@ class ConsoleNotifier(Notifier):
         if subtitle:
             lines.append(subtitle)
         company = None
-        for job in sorted(jobs, key=lambda j: j.company.casefold()):
+        for job in sorted(jobs, key=lambda j: (not j.priority, j.company.casefold())):
             if job.company != company:
                 company = job.company
                 lines.append(f"\n{company}")
-            lines.append(f"  • {job.title} — {job.location or '?'} — {job.url}")
+            star = STAR if job.priority else ""
+            lines.append(f"  • {star}{job.title} — {job.location or '?'} — {job.url}")
+        self._write("\n".join(lines))
+        return True
+
+    def send_digest(self, title: str, jobs: Sequence[Job]) -> bool:
+        lines = [title]
+        for job in sorted(jobs, key=lambda j: (not j.priority, j.company.casefold(), j.title)):
+            star = STAR if job.priority else ""
+            lines.append(
+                f"  • {star}{job.company} — {job.title} — {job.location or '?'} — {job.url}"
+                + (f" — {job.reason}" if job.reason else "")
+            )
         self._write("\n".join(lines))
         return True
 

@@ -80,7 +80,9 @@ const HELP = [
   "🤖 <b>internbot</b>",
   "",
   "/offres — toutes les offres de stage ouvertes qui passent tes filtres",
-  "/offres paris — idem, filtrées par mot(s) (entreprise, titre ou lieu)",
+  "/offres cisco — les offres d'une entreprise",
+  "/offres paris — filtrées par mot ou expression entière (titre ou lieu)",
+  "⭐ = offre IA, affichée en premier",
   "/refresh — relance une vraie recherche maintenant (~5 min)",
   "/statut — date de la dernière mise à jour",
   "/status — santé de chaque entreprise (erreurs, offres, NOTIFY/REVIEW)",
@@ -99,7 +101,8 @@ async function commandOffers(env, query) {
   }
   let jobs = flattenSnapshot(snapshot);
   const total = jobs.length;
-  if (query) jobs = filterJobs(jobs, query);
+  // Entreprises connues = celles de la config (current.json en a une entrée par entreprise).
+  if (query) jobs = filterJobs(jobs, query, Object.keys(snapshot.companies || {}));
   const subtitle =
     `mise à jour ${formatAge(snapshot.updated_at)}` +
     (query ? ` — filtre « ${query} » : ${jobs.length}/${total}` : "");
@@ -225,34 +228,46 @@ async function fetchSnapshot(env) {
   return res.json();
 }
 
+// Offres « notify » et « review » du filtre v3 (current.json ne contient jamais les « drop » ;
+// le test sert de garde-fou). Les listes d'avant le v3 n'ont pas de champ status.
 export function flattenSnapshot(snapshot) {
   const jobs = [];
   for (const [company, entry] of Object.entries(snapshot.companies || {})) {
-    for (const job of entry.jobs || []) jobs.push({ company, ...job });
+    for (const job of entry.jobs || []) {
+      if (job.status !== "drop") jobs.push({ company, ...job });
+    }
   }
   return jobs;
 }
 
-export function normalize(text) {
-  return String(text || "")
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase();
+// Portage exact de norm() et matches_query() de src/internbot/filters_v3.py (mêmes cas de
+// test des deux côtés) : minuscules, sans accents, ponctuation -> espaces, entouré d'espaces.
+export function norm(text) {
+  const t = String(text || "")
+    .normalize("NFKD")
+    .replace(/\p{M}/gu, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9+#]+/g, " ")
+    .trim();
+  return ` ${t} `;
 }
 
-// Découpe en mots (lettres et chiffres), après normalisation accents / casse.
-function tokens(text) {
-  return normalize(text).split(/[^a-z0-9]+/).filter(Boolean);
+// Recherche /offres :
+// - la requête est un nom d'entreprise connu -> on ne regarde QUE le champ entreprise
+//   (« /offres cisco » ne renvoie pas les offres à San Francisco) ;
+// - sinon -> mot ou expression entière dans l'entreprise, le titre ou le lieu.
+export function matchesQuery(query, company, title, location, knownCompanies) {
+  const q = norm(query).trim();
+  if (!q) return true;
+  const known = new Set([...knownCompanies].map((c) => norm(c).trim()));
+  if (known.has(q)) return norm(company).trim() === q;
+  return [company, title, location].some((field) => norm(field).includes(` ${q} `));
 }
 
-// Chaque mot de la recherche doit être le DÉBUT d'un mot de l'offre :
-// « cisco » ne matche pas « San Francisco », mais « nvid » matche « NVIDIA ».
-export function filterJobs(jobs, query) {
-  const words = tokens(query);
-  return jobs.filter((job) => {
-    const haystack = tokens(`${job.company} ${job.title} ${job.location}`);
-    return words.every((w) => haystack.some((h) => h.startsWith(w)));
-  });
+export function filterJobs(jobs, query, knownCompanies) {
+  return jobs.filter((job) =>
+    matchesQuery(query, job.company, job.title, job.location, knownCompanies),
+  );
 }
 
 // -- mise en forme (même rendu que build_listing_messages côté Python) ---------------------------
@@ -270,23 +285,30 @@ function clip(text, n) {
   return text.length <= n ? text : text.slice(0, n - 1) + "…";
 }
 
+const STAR = "⭐ "; // offre IA (priorité du filtre v3)
+
+// Offres IA (⭐) d'abord, puis les autres ; groupées par entreprise dans chaque partie.
 export function buildListingMessages(jobs, subtitle, limit = TELEGRAM_MAX) {
   let header = `📋 <b>${jobs.length} offre(s) ouverte(s)</b> correspondant à tes filtres`;
   if (subtitle) header += `\n<i>${escapeHtml(subtitle)}</i>`;
   if (jobs.length === 0) return [`${header}\n\nAucune offre ne correspond.`];
 
-  const byCompany = new Map();
-  for (const job of jobs) {
-    if (!byCompany.has(job.company)) byCompany.set(job.company, []);
-    byCompany.get(job.company).push(job);
+  const groups = [];
+  for (const priority of [true, false]) {
+    const byCompany = new Map();
+    for (const job of jobs.filter((j) => Boolean(j.priority) === priority)) {
+      if (!byCompany.has(job.company)) byCompany.set(job.company, []);
+      byCompany.get(job.company).push(job);
+    }
+    const companies = [...byCompany.keys()].sort((a, b) => a.localeCompare(b, "fr"));
+    for (const company of companies) groups.push([priority, company, byCompany.get(company)]);
   }
-  const companies = [...byCompany.keys()].sort((a, b) => a.localeCompare(b, "fr"));
 
   const messages = [];
   let current = header;
-  for (const company of companies) {
-    const group = byCompany.get(company);
-    const companyLine = `<b>${escapeHtml(company)}</b> (${group.length})`;
+  for (const [priority, company, group] of groups) {
+    const star = priority ? STAR : "";
+    const companyLine = `${star}<b>${escapeHtml(company)}</b> (${group.length})`;
     if (current.length + companyLine.length + 202 > limit) {
       messages.push(current);
       current = companyLine;
@@ -294,11 +316,11 @@ export function buildListingMessages(jobs, subtitle, limit = TELEGRAM_MAX) {
       current += `\n\n${companyLine}`;
     }
     for (const job of group) {
-      let line = `\n• <a href="${escapeAttr(job.url)}">${escapeHtml(clip(job.title, 150))}</a>`;
+      let line = `\n• ${star}<a href="${escapeAttr(job.url)}">${escapeHtml(clip(job.title, 150))}</a>`;
       if (job.location) line += ` — ${escapeHtml(clip(job.location, 80))}`;
       if (current.length + line.length > limit) {
         messages.push(current);
-        current = `<b>${escapeHtml(company)}</b> (suite)${line}`;
+        current = `${star}<b>${escapeHtml(company)}</b> (suite)${line}`;
       } else {
         current += line;
       }

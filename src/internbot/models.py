@@ -24,6 +24,11 @@ class Job:
     # False quand la plateforme ne donne qu'un résumé du lieu (ex: Workday « 8 Locations »).
     # Le filtre de lieu ne rejette jamais une offre dont le lieu est incomplet.
     location_complete: bool = True
+    # Verdict du filtre v3 (renseigné par le runner) : « notify » ou « review », raison du
+    # classement, et priorité IA (⭐). Hors égalité : ce n'est pas une donnée de la plateforme.
+    status: str = field(default="notify", compare=False)
+    reason: str = field(default="", compare=False)
+    priority: bool = field(default=False, compare=False)
     # Données propres au provider (ex: chemin Workday pour l'enrichissement). Hors égalité.
     extra: dict[str, Any] = field(default_factory=dict, compare=False, hash=False, repr=False)
 

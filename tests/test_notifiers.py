@@ -226,3 +226,60 @@ def test_telegram_send_listing() -> None:
     assert telegram().send_listing([job("1"), job("2", company_name="Beta")], subtitle="maj")
     text = json.loads(responses.calls[0].request.body)["text"]
     assert "<b>Acme</b> (1)" in text and "<b>Beta</b> (1)" in text
+
+
+# -- filtre v3 : ⭐ IA, résumé « à vérifier » ------------------------------------------------------
+
+
+def test_ai_job_message_prefixed_with_star() -> None:
+    j = job("1").with_updates(priority=True)
+    assert format_job_html(j).startswith("⭐ 🆕 <b>Acme</b>")
+    assert format_job_html(job("2")).startswith("🆕 <b>Acme</b>")
+    text, _ = build_grouped_messages([j, job("2")])[0]
+    assert "⭐ <b>Acme</b>" in text
+
+
+def test_listing_puts_ai_jobs_first_with_star() -> None:
+    from internbot.notifiers.formatting import build_listing_messages
+
+    jobs = [
+        job("1", title="Backend Intern", company_name="Alpha"),
+        job("2", title="ML Intern", company_name="Zeta").with_updates(priority=True),
+    ]
+    (text,) = build_listing_messages(jobs)
+    assert text.index("Zeta") < text.index("Alpha")
+    assert '⭐ <b>Zeta</b> (1)\n• ⭐ <a href="https://example.com/jobs/2">ML Intern</a>' in text
+
+
+def test_digest_one_line_per_job_with_reason_and_limit() -> None:
+    from internbot.notifiers.formatting import build_digest_messages
+
+    jobs = [
+        job(str(i), title=f"Intern <{i}> " + "x" * 80).with_updates(reason="lieu non précisé")
+        for i in range(100)
+    ]
+    jobs[50] = jobs[50].with_updates(priority=True, reason="IA (ml) / lieu vide")
+    messages = build_digest_messages("<b>À vérifier</b>", jobs)
+    assert len(messages) > 1 and all(len(m) <= TELEGRAM_MAX_CHARS for m in messages)
+    assert sum(m.count("\n• ") for m in messages) == 100
+    first_line = messages[0].split("\n")[1]
+    assert first_line.startswith("• ⭐ <b>Acme</b> — <a href=")  # IA en tête
+    assert first_line.endswith("— 📍 Paris, France — <i>IA (ml) / lieu vide</i>")
+    assert "&lt;50&gt;" in first_line
+    assert messages[1].startswith("<b>À vérifier</b> (suite)")
+
+
+@responses.activate
+def test_telegram_send_digest_escapes_title() -> None:
+    responses.post(URL, json={"ok": True})
+    assert telegram().send_digest("À vérifier <2>", [job("1"), job("2")])
+    text = json.loads(responses.calls[0].request.body)["text"]
+    assert text.startswith("<b>À vérifier &lt;2&gt;</b>\n• <b>Acme</b>")
+
+
+def test_console_digest_shows_reason() -> None:
+    out = io.StringIO()
+    j = job("1").with_updates(reason="titre ambigu", priority=True)
+    assert ConsoleNotifier(stream=out).send_digest("À vérifier", [j])
+    assert "• ⭐ Acme — Software Engineer Intern — Paris, France" in out.getvalue()
+    assert "— titre ambigu" in out.getvalue()

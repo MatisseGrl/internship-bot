@@ -2,44 +2,67 @@
 
 from __future__ import annotations
 
+import logging
 from pathlib import Path
 from typing import Any, Literal
 
 import yaml
-from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    ValidationError,
+    field_validator,
+    model_validator,
+)
 
 from internbot.errors import ConfigError
 from internbot.http import DEFAULT_USER_AGENT
 
+log = logging.getLogger(__name__)
+
+
+Region = Literal["us", "canada", "uk", "europe", "asia", "australia", "israel", "japan", "uae"]
+DEFAULT_REGIONS: tuple[Region, ...] = ("us", "canada", "uk", "europe", "asia", "australia")
+
+# Clés de l'ancien filtre, remplacées par les listes du filtre v3 (filters_v3.py). Encore
+# acceptées pour qu'une ancienne config se charge, mais ignorées avec un avertissement.
+OBSOLETE_FILTER_KEYS = ("title_include", "keywords_any", "locations_include", "locations_exclude")
+
 
 class FiltersConfig(BaseModel):
-    """Filtres appliqués aux offres. Matching insensible à la casse/aux accents, mots entiers."""
+    """Réglages du filtre v3 (listes de mots dans filters_v3.py) + exclusions propres à Matisse.
+
+    Matching insensible à la casse/aux accents, par mots entiers."""
 
     model_config = ConfigDict(extra="forbid")
 
-    title_include: list[str] = Field(
-        default_factory=lambda: [
-            "intern",
-            "interns",
-            "internship",
-            "stage",
-            "stagiaire",
-            "co-op",
-            "working student",
-        ]
-    )
+    # Zones où une offre est notifiée (voir filters_v3.LOCATIONS). Remote/hybrid toujours gardé.
+    regions: list[Region] = Field(default_factory=lambda: list(DEFAULT_REGIONS))
+    include_data: bool = True
+    include_fde: bool = True  # forward deployed / solutions / customer engineer
+    include_quant_research: bool = False  # quant research pur (trader, QR)
+    # Appliqués AVANT le filtre v3 : un titre qui contient un de ces mots est écarté.
     title_exclude: list[str] = Field(
         default_factory=lambda: ["senior", "staff", "principal", "manager", "director"]
     )
-    locations_include: list[str] = Field(default_factory=list)
-    locations_exclude: list[str] = Field(default_factory=list)
-    keywords_any: list[str] = Field(default_factory=list)
     year_hint: list[str] = Field(default_factory=list)
     # prefer  : rejette un titre qui mentionne UNIQUEMENT une autre année (ex: « Summer 2026 »),
     #           garde les titres sans année.
     # require : le titre doit contenir une des années de year_hint.
     # off     : year_hint ignoré.
     year_hint_mode: Literal["prefer", "require", "off"] = "prefer"
+
+    @model_validator(mode="before")
+    @classmethod
+    def _drop_obsolete_keys(cls, data: Any) -> Any:
+        if isinstance(data, dict) and (found := [k for k in OBSOLETE_FILTER_KEYS if k in data]):
+            log.warning(
+                "filters : %s ignoré(s) depuis le filtre v3 (voir README › Filtres)",
+                ", ".join(found),
+            )
+            data = {k: v for k, v in data.items() if k not in OBSOLETE_FILTER_KEYS}
+        return data
 
 
 class NotifierConfig(BaseModel):

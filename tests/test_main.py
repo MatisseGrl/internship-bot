@@ -10,7 +10,7 @@ from tests.conftest import FakeProvider, job
 
 CONFIG = """
 notifier: {type: console}
-filters: {keywords_any: []}
+filters: {year_hint: []}
 companies:
   - {name: Acme, provider: fake}
   - {name: Other, provider: fake, enabled: false}

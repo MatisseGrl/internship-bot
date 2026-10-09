@@ -14,6 +14,7 @@ from internbot.http import HttpClient
 from internbot.models import Job
 from internbot.notifiers.base import Notifier
 from internbot.notifiers.formatting import (
+    build_digest_messages,
     build_grouped_messages,
     build_listing_messages,
     format_job_html,
@@ -135,6 +136,12 @@ class TelegramNotifier(Notifier):
     def send_listing(self, jobs: Sequence[Job], *, subtitle: str = "") -> bool:
         ok = True
         for message in build_listing_messages(jobs, subtitle=subtitle):
+            ok = self._send(message) and ok
+        return ok
+
+    def send_digest(self, title: str, jobs: Sequence[Job]) -> bool:
+        ok = True
+        for message in build_digest_messages(f"<b>{html.escape(title, quote=False)}</b>", jobs):
             ok = self._send(message) and ok
         return ok
 

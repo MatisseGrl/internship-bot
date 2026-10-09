@@ -9,6 +9,7 @@ from internbot.models import Job
 
 TELEGRAM_MAX_CHARS = 4096
 MAX_TITLE_CHARS = 300
+STAR = "⭐ "  # offre IA (priorité du filtre v3)
 
 
 def _clip(text: str, limit: int) -> str:
@@ -21,11 +22,12 @@ def esc(text: str) -> str:
 
 def format_job_html(job: Job, *, header: bool = True) -> str:
     """Bloc HTML Telegram pour une offre (tout est échappé)."""
+    star = STAR if job.priority else ""
     lines = []
     if header:
-        lines.append(f"🆕 <b>{esc(job.company)}</b>")
+        lines.append(f"{star}🆕 <b>{esc(job.company)}</b>")
     else:
-        lines.append(f"<b>{esc(job.company)}</b>")
+        lines.append(f"{star}<b>{esc(job.company)}</b>")
     lines.append(esc(_clip(job.title, MAX_TITLE_CHARS)))
     if job.location:
         lines.append(f"📍 {esc(_clip(job.location, 300))}")
@@ -36,7 +38,7 @@ def format_job_html(job: Job, *, header: bool = True) -> str:
 
 
 def format_job_plain(job: Job) -> str:
-    lines = [f"🆕 {job.company}", job.title]
+    lines = [f"{STAR if job.priority else ''}🆕 {job.company}", job.title]
     if job.location:
         lines.append(f"📍 {job.location}")
     if job.posted_at:
@@ -138,12 +140,12 @@ def build_listing_messages(
 ) -> list[str]:
     """Liste compacte de TOUTES les offres, groupées par entreprise (HTML Telegram).
 
-    Une ligne par offre, jamais coupée ; l'en-tête d'entreprise est répété (« suite ») quand
-    un groupe déborde sur le message suivant.
+    Les offres IA (⭐) d'abord, puis les autres. Une ligne par offre, jamais coupée ;
+    l'en-tête d'entreprise est répété (« suite ») quand un groupe déborde sur le message suivant.
     """
-    by_company: dict[str, list[Job]] = {}
+    groups: dict[tuple[bool, str], list[Job]] = {}
     for job in jobs:
-        by_company.setdefault(job.company, []).append(job)
+        groups.setdefault((not job.priority, job.company), []).append(job)
 
     header = f"📋 <b>{len(jobs)} offre(s) ouverte(s)</b> correspondant à tes filtres"
     if subtitle:
@@ -153,9 +155,10 @@ def build_listing_messages(
 
     messages: list[str] = []
     current = header
-    for company in sorted(by_company, key=str.casefold):
-        group = by_company[company]
-        company_line = f"<b>{esc(company)}</b> ({len(group)})"
+    for not_priority, company in sorted(groups, key=lambda k: (k[0], k[1].casefold())):
+        group = groups[(not_priority, company)]
+        star = "" if not_priority else STAR
+        company_line = f"{star}<b>{esc(company)}</b> ({len(group)})"
         block_start = f"\n\n{company_line}"
         if len(current) + len(block_start) + 200 > limit:
             messages.append(current)
@@ -164,14 +167,44 @@ def build_listing_messages(
             current += block_start
         for job in group:
             line = (
-                f'\n• <a href="{html.escape(job.url, quote=True)}">{esc(_clip(job.title, 150))}</a>'
+                f'\n• {star}<a href="{html.escape(job.url, quote=True)}">'
+                f"{esc(_clip(job.title, 150))}</a>"
             )
             if job.location:
                 line += f" — {esc(_clip(job.location, 80))}"
             if len(current) + len(line) > limit:
                 messages.append(current)
-                current = f"<b>{esc(company)}</b> (suite)" + line
+                current = f"{star}<b>{esc(company)}</b> (suite)" + line
             else:
                 current += line
+    messages.append(current)
+    return messages
+
+
+def build_digest_messages(
+    header: str, jobs: Sequence[Job], *, limit: int = TELEGRAM_MAX_CHARS
+) -> list[str]:
+    """Résumé compact : une ligne par offre (entreprise, titre + lien, lieu, raison).
+
+    Sert au résumé quotidien « à vérifier » et au récap unique du passage au filtre v3.
+    Offres IA (⭐) en tête. `header` est du HTML déjà échappé.
+    """
+    ordered = sorted(jobs, key=lambda j: (not j.priority, j.company.casefold(), j.title))
+    messages: list[str] = []
+    current = header
+    for job in ordered:
+        line = (
+            f"\n• {STAR if job.priority else ''}<b>{esc(job.company)}</b> — "
+            f'<a href="{html.escape(job.url, quote=True)}">{esc(_clip(job.title, 150))}</a>'
+        )
+        if job.location:
+            line += f" — 📍 {esc(_clip(job.location, 80))}"
+        if job.reason:
+            line += f" — <i>{esc(_clip(job.reason, 120))}</i>"
+        if len(current) + len(line) > limit:
+            messages.append(current)
+            current = f"{header} (suite)" + line
+        else:
+            current += line
     messages.append(current)
     return messages

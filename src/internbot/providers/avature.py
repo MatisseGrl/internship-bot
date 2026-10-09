@@ -1,4 +1,4 @@
-"""Avature (Electronic Arts, IBM…) : page de résultats publique, rendue côté serveur.
+"""Avature (Electronic Arts, Siemens, TotalEnergies…) : résultats publics côté serveur.
 
     GET {base_url}/SearchJobs/?search=intern&jobRecordsPerPage=20&jobOffset=0
 
@@ -15,7 +15,9 @@ from __future__ import annotations
 import html
 import logging
 import re
+from html.parser import HTMLParser
 from typing import TYPE_CHECKING, Any
+from urllib.parse import urljoin
 
 from internbot.errors import HttpError, ProviderError, ProviderFormatError
 from internbot.models import Job
@@ -27,10 +29,15 @@ if TYPE_CHECKING:
 log = logging.getLogger(__name__)
 
 PAGE_SIZE = 20
-_ARTICLE = re.compile(r"<article\b[^>]*\barticle--result\b.*?</article>", re.S)
-_LINK = re.compile(r'<a\b[^>]*\blink_result\b[^>]*href="([^"]+)"[^>]*>(.*?)</a>', re.S)
-_LOCATION = re.compile(r'<span class="list-item-location">(.*?)</span>', re.S)
-_TOTAL = re.compile(r"\b\d+\s*-\s*\d+\s+of\s+(\d+)\b")
+_VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "wbr"}
+_RESULT = re.compile(r'<(?:article|div)\b[^>]*\bclass="[^"]*\barticle--result\b[^"]*"[^>]*>', re.I)
+_LINK = re.compile(r'<a\b[^>]*\bhref="([^"]*/JobDetail/[^"]+)"[^>]*>(.*?)</a>', re.S | re.I)
+_TOTAL = re.compile(r"\b\d+\s*-\s*\d+\s+of\s+(\d+)(\+?)", re.I)
+_ZERO = re.compile(
+    r'<div\b[^>]*\bclass="[^"]*\blist-controls__text__legend\b[^"]*"[^>]*'
+    r'\baria-label="0 results"',
+    re.I,
+)
 _ID = re.compile(r"/(\d+)/?(?:[?#].*)?$")
 _TAGS = re.compile(r"<[^>]+>")
 
@@ -39,40 +46,118 @@ def _text(fragment: str) -> str:
     return " ".join(html.unescape(_TAGS.sub(" ", fragment)).split())
 
 
+class _ClassText(HTMLParser):
+    """Récupère le texte d'un élément CSS, y compris ses sous-éléments imbriqués."""
+
+    def __init__(self, class_name: str) -> None:
+        super().__init__()
+        self.class_name = class_name
+        self.depth = 0
+        self.parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if self.depth and tag not in _VOID_TAGS:
+            self.depth += 1
+        elif self.class_name in (dict(attrs).get("class") or "").split():
+            self.depth = 1
+
+    def handle_endtag(self, tag: str) -> None:
+        if self.depth:
+            self.depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        if self.depth:
+            self.parts.append(data)
+
+
+def _class_text(fragment: str, class_name: str) -> str:
+    parser = _ClassText(class_name)
+    parser.feed(fragment)
+    return " ".join(" ".join(parser.parts).split()).replace(" ,", ",")
+
+
 def parse_results(page: str) -> tuple[list[dict[str, Any]], int | None]:
     """Offres d'une page de résultats Avature, et nombre total annoncé (None si absent)."""
     rows = []
-    for article in _ARTICLE.findall(page):
-        link = _LINK.search(article)
+    starts = [match.start() for match in _RESULT.finditer(page)]
+    for index, start in enumerate(starts):
+        result = page[start : starts[index + 1] if index + 1 < len(starts) else len(page)]
+        link = _LINK.search(result)
         if not link:
             continue
-        location = _LOCATION.search(article)
+        location = _class_text(result, "list-item-location") or _class_text(
+            result, "list-item-jobCountry"
+        )
         rows.append(
             {
                 "href": html.unescape(link.group(1)),
                 "title": _text(link.group(2)),
-                "location": _text(location.group(1)) if location else "",
+                "location": location,
             }
         )
     total = _TOTAL.search(page)
-    return rows, int(total.group(1)) if total else None
+    if total and not total.group(2):
+        return rows, int(total.group(1))
+    return rows, 0 if _ZERO.search(page) else None
 
 
 @register
 class AvatureProvider(Provider):
     name = "avature"
     required_fields = ("base_url",)
-    optional_fields = ("query", "max_pages", "page_size")
+    optional_fields = (
+        "query",
+        "queries",
+        "max_pages",
+        "page_size",
+        "offset_param",
+        "page_size_param",
+    )
 
     def fetch_jobs(self, company: CompanyConfig) -> list[Job]:
         base = str(company.opt("base_url")).rstrip("/")
-        query = company.opt("query", "intern")
+        queries = company.opt("queries")
+        if queries is None:
+            queries = [company.opt("query", "intern")]
+        if (
+            not isinstance(queries, list)
+            or not queries
+            or not all(isinstance(q, str) and q.strip() for q in queries)
+        ):
+            raise ProviderError(
+                f"[avature] {company.name} : queries doit être une liste de textes non vides"
+            )
         max_pages = int(company.opt("max_pages", 15))
         page_size = int(company.opt("page_size", PAGE_SIZE))
+        offset_param = str(company.opt("offset_param", "jobOffset"))
+        page_size_param = str(company.opt("page_size_param", "jobRecordsPerPage"))
+        jobs: list[Job] = []
+        seen: set[str] = set()
+        for query in queries:
+            for job in self._fetch_query(
+                company, base, query, max_pages, page_size, offset_param, page_size_param
+            ):
+                if job.job_id not in seen:
+                    seen.add(job.job_id)
+                    jobs.append(job)
+        return jobs
+
+    def _fetch_query(
+        self,
+        company: CompanyConfig,
+        base: str,
+        query: str,
+        max_pages: int,
+        page_size: int,
+        offset_param: str,
+        page_size_param: str,
+    ) -> list[Job]:
         rows: list[dict[str, Any]] = []
+        seen_hrefs: set[str] = set()
         total: int | None = None
+        offset = 0
         for page in range(max_pages):
-            params: dict[str, Any] = {"jobRecordsPerPage": page_size, "jobOffset": page * page_size}
+            params: dict[str, Any] = {page_size_param: page_size, offset_param: offset}
             if query:
                 params["search"] = query
             try:
@@ -80,6 +165,12 @@ class AvatureProvider(Provider):
             except HttpError as exc:
                 raise ProviderError(f"[avature] {company.name} : {exc}") from None
             batch, page_total = parse_results(resp.text)
+            batch_hrefs = {str(row["href"]) for row in batch}
+            if page and batch_hrefs and batch_hrefs <= seen_hrefs:
+                raise ProviderFormatError(
+                    f"[avature] {company.name} : pagination bloquée à l'offset {offset}"
+                )
+            seen_hrefs.update(batch_hrefs)
             if page == 0:
                 if not batch and page_total is None:
                     raise ProviderFormatError(
@@ -88,7 +179,8 @@ class AvatureProvider(Provider):
                     )
                 total = page_total
             rows.extend(batch)
-            if len(batch) < page_size or (total is not None and len(rows) >= total):
+            offset += len(batch)
+            if not batch or (total is not None and offset >= total):
                 break
         else:
             log.warning(
@@ -109,7 +201,7 @@ class AvatureProvider(Provider):
             company=company.name,
             job_id=match.group(1),
             title=str(title),
-            url=str(href),
+            url=urljoin(str(company.opt("base_url")), str(href)),
             source=self.name,
             location=str(row.get("location") or ""),
         )

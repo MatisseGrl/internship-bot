@@ -20,3 +20,8 @@ class Notifier(ABC):
     @abstractmethod
     def send_listing(self, jobs: Sequence[Job], *, subtitle: str = "") -> bool:
         """Envoie la liste complète des offres ouvertes. True si tout est parti."""
+
+    @abstractmethod
+    def send_digest(self, title: str, jobs: Sequence[Job]) -> bool:
+        """Résumé compact, une ligne par offre avec sa raison (résumé « à vérifier », récap).
+        True si tout est parti."""

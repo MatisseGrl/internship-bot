@@ -1,5 +1,9 @@
 """Liste des offres ACTUELLEMENT ouvertes qui passent les filtres (`current.json`).
 
+Contient les offres « notify » et « review » du filtre v3 (jamais les « drop »), avec leur
+priorité IA (⭐) : les champs status / reason / priority sont absents des listes écrites
+avant le v3 (lus comme « notify », sans priorité).
+
 Réécrite à chaque run (à côté de state.json, sur la branche `state`). Elle sert :
 - à la commande Telegram `/offres` (lue par le relais Cloudflare, réponse instantanée) ;
 - à `--send-all` (envoi de la liste complète sur Telegram).
@@ -10,7 +14,9 @@ Format :
       "updated_at": "2026-10-08T19:03:13+00:00",
       "companies": {
         "Adobe": {"updated_at": "...", "jobs": [{"title": ..., "location": ..., "url": ...,
-                                                  "posted_at": ..., "job_id": ...}]}
+                                                  "posted_at": ..., "job_id": ...,
+                                                  "status": "notify" | "review",
+                                                  "reason": ..., "priority": bool}]}
       }
     }
 
@@ -55,6 +61,9 @@ def job_to_dict(job: Job) -> dict[str, Any]:
         "location": job.location,
         "url": job.url,
         "posted_at": job.posted_at,
+        "status": job.status,
+        "reason": job.reason,
+        "priority": job.priority,
     }
 
 
@@ -67,6 +76,9 @@ def job_from_dict(company: str, data: Mapping[str, Any]) -> Job:
         source="snapshot",
         location=str(data.get("location") or ""),
         posted_at=data.get("posted_at"),
+        status=str(data.get("status") or "notify"),
+        reason=str(data.get("reason") or ""),
+        priority=bool(data.get("priority")),
     )
 
 

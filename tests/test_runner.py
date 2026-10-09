@@ -23,6 +23,8 @@ class RecordingNotifier(Notifier):
         self.fail_ids = fail_ids or set()
         self.listings: list[tuple[list[Job], str]] = []
         self.listing_ok = True
+        self.digests: list[tuple[str, list[Job]]] = []
+        self.digest_ok = True
 
     def notify(self, jobs: Sequence[Job]) -> list[Job]:
         ok = [j for j in jobs if j.job_id not in self.fail_ids]
@@ -37,10 +39,14 @@ class RecordingNotifier(Notifier):
         self.listings.append((list(jobs), subtitle))
         return self.listing_ok
 
+    def send_digest(self, title: str, jobs: Sequence[Job]) -> bool:
+        self.digests.append((title, list(jobs)))
+        return self.digest_ok
+
 
 def config(*names: str, **extra: Any) -> Any:
     raw: dict[str, Any] = {
-        "filters": {"keywords_any": [], "year_hint": ["2027"]},
+        "filters": {"year_hint": ["2027"]},
         "companies": [{"name": n, "provider": "fake"} for n in (names or ("Acme",))],
     }
     raw.update(extra)
@@ -188,10 +194,8 @@ def test_duplicate_ids_within_a_fetch_are_deduped(tmp_path: Path) -> None:
 
 
 def test_location_filter_per_company(tmp_path: Path) -> None:
-    raw_companies = [
-        {"name": "Acme", "provider": "fake", "filters": {"locations_include": ["France"]}}
-    ]
-    cfg = parse_config({"filters": {"keywords_any": []}, "companies": raw_companies})
+    raw_companies = [{"name": "Acme", "provider": "fake", "filters": {"regions": ["europe"]}}]
+    cfg = parse_config({"companies": raw_companies})
     FakeProvider.jobs["Acme"] = []
     run(tmp_path, cfg, RecordingNotifier())
     FakeProvider.jobs["Acme"] = [job("fr", location="Paris, France"), job("us", location="NYC")]
@@ -302,7 +306,7 @@ def test_snapshot_resolves_multi_location_jobs_and_caches_them(tmp_path: Path) -
 
     FakeProvider.enrich = enrich  # type: ignore[method-assign]
     try:
-        cfg = config(filters={"keywords_any": [], "locations_exclude": ["China"]})
+        cfg = config()
         FakeProvider.jobs["Acme"] = [
             job("cn", location="2 Locations", location_complete=False),
             job("fr", location="Paris, France"),
@@ -318,7 +322,7 @@ def test_snapshot_resolves_multi_location_jobs_and_caches_them(tmp_path: Path) -
 
 
 def test_new_job_in_china_not_notified(tmp_path: Path) -> None:
-    cfg = config(filters={"keywords_any": [], "locations_exclude": ["China", "Shanghai"]})
+    cfg = config()
     FakeProvider.jobs["Acme"] = []
     run_snap(tmp_path, cfg, RecordingNotifier())
     FakeProvider.jobs["Acme"] = [job("sh", location="Shanghai"), job("us", location="Seattle")]
@@ -327,66 +331,183 @@ def test_new_job_in_china_not_notified(tmp_path: Path) -> None:
     assert [j.job_id for j in n.sent] == ["us"]
 
 
-# -- santé par entreprise (current.json › health, pour --status et /status) ----------------------
+# -- filtre v3 : seaux notify / review / drop ------------------------------------------------------
+
+MORNING = datetime(2026, 10, 9, 6, 30, tzinfo=UTC)  # 8 h 30 à Paris (heure d'été : UTC+2)
 
 
-def test_health_counts_notify_review_and_failures(tmp_path: Path) -> None:
-    cfg = parse_config(
-        {
-            "filters": {"keywords_any": ["software", "data"], "year_hint": ["2027"]},
-            "companies": [
-                {"name": "A", "provider": "fake"},
-                {"name": "B", "provider": "fake"},
-                {"name": "Off", "provider": "fake", "enabled": False},
-                {"name": "G", "provider": "manual", "careers_url": "https://g", "reason": "robots"},
-            ],
-        }
-    )
-    FakeProvider.jobs["A"] = [
-        job("1", "Software Engineer Intern", "A"),  # NOTIFY
-        job("2", "Marketing Intern", "A"),  # REVIEW : stage, mais pas de mot-clé métier
-        job("3", "Senior Software Engineer", "A"),  # REJECT
+def seeded(tmp_path: Path, cfg: Any, **kw: Any) -> None:
+    FakeProvider.jobs["Acme"] = []
+    run(tmp_path, cfg, RecordingNotifier(), **kw)
+
+
+def test_review_job_goes_to_daily_digest_not_immediate_alert(tmp_path: Path) -> None:
+    cfg = config()
+    seeded(tmp_path, cfg, now=MORNING)
+    FakeProvider.jobs["Acme"] = [job("r", title="Hardware Machine Learning Research Intern")]
+    n = RecordingNotifier()
+    report, state = run(tmp_path, cfg, n, now=MORNING)  # 8 h 30 : pas encore de résumé
+    assert n.sent == [] and n.digests == []
+    assert report.results[0].new_reviews == 1 and "1 à vérifier" in report.summary()
+    assert state.is_known("Acme", "r")  # vue : jamais renotifiée
+    assert [j.job_id for j in state.review_queue()] == ["r"]
+
+    n = RecordingNotifier()
+    run(tmp_path, cfg, n, now=MORNING + timedelta(hours=1))  # 9 h 30 : premier passage après 9 h
+    (title, jobs), *_ = n.digests
+    assert "À vérifier : 1" in title
+    assert [(j.job_id, j.priority) for j in jobs] == [("r", True)]
+    assert "hardware + IA" in jobs[0].reason
+
+    n = RecordingNotifier()
+    FakeProvider.jobs["Acme"].append(job("r2", title="Machine Learning Intern", location=""))
+    _, state = run(tmp_path, cfg, n, now=MORNING + timedelta(hours=5))
+    assert n.digests == []  # un seul résumé par jour : r2 attend demain
+    assert [j.job_id for j in state.review_queue()] == ["r2"]
+    n = RecordingNotifier()
+    run(tmp_path, cfg, n, now=MORNING + timedelta(days=1, hours=1))
+    assert [j.job_id for j in n.digests[0][1]] == ["r2"]
+
+
+def test_review_digest_kept_when_sending_fails(tmp_path: Path) -> None:
+    cfg = config()
+    seeded(tmp_path, cfg)
+    FakeProvider.jobs["Acme"] = [job("r", title="AI Solution Architect Intern")]
+    n = RecordingNotifier()
+    n.digest_ok = False
+    _, state = run(tmp_path, cfg, n)
+    assert len(n.digests) == 1 and [j.job_id for j in state.review_queue()] == ["r"]
+    n = RecordingNotifier()
+    _, state = run(tmp_path, cfg, n)  # même jour, mais pas encore envoyé : on réessaie
+    assert len(n.digests) == 1 and state.review_queue() == []
+
+
+def test_drop_reason_logged_in_verbose(tmp_path: Path, caplog: Any) -> None:
+    cfg = config()
+    seeded(tmp_path, cfg)
+    FakeProvider.jobs["Acme"] = [job("hw", title="Validation Engineer Intern")]
+    n = RecordingNotifier()
+    with caplog.at_level("DEBUG", logger="internbot.runner"):
+        _, state = run(tmp_path, cfg, n)
+    assert n.sent == [] and state.review_queue() == [] and state.is_known("Acme", "hw")
+    assert "ignorée « Validation Engineer Intern » — hardware (validation engineer)" in caplog.text
+
+
+def test_ai_jobs_flagged_and_sent_first(tmp_path: Path) -> None:
+    cfg = config()
+    seeded(tmp_path, cfg)
+    FakeProvider.jobs["Acme"] = [job("swe"), job("ml", title="Machine Learning Engineer Intern")]
+    n = RecordingNotifier()
+    run(tmp_path, cfg, n)
+    assert [(j.job_id, j.priority) for j in n.sent] == [("ml", True), ("swe", False)]
+
+
+def test_snapshot_has_notify_and_review_with_verdict_but_no_drop(tmp_path: Path) -> None:
+    cfg = config()
+    FakeProvider.jobs["Acme"] = [
+        job("swe"),
+        job("ml", title="Machine Learning Intern", location="Multiple Locations"),
+        job("hw", title="Silicon Hardware Engineering - Intern", location="Hillsboro, OR"),
     ]
-    FakeProvider.errors["B"] = ProviderError("HTTP 500")
-    enabled = [c for c in cfg.companies if c.enabled]  # comme main.select_companies
-    for _ in range(2):  # 2e échec d'affilée pour B
-        state = StateStore.load(tmp_path / "state.json", now=lambda: NOW)
-        Runner(
-            cfg,
-            state,
-            RecordingNotifier(),
-            make_http(),
-            now=NOW,
-            snapshot_path=tmp_path / "current.json",
-        ).run(enabled)
-    health = snapshot(tmp_path)["health"]
-    assert health["A"] == {
-        "provider": "fake",
-        "status": "ok",
-        "last_run": NOW.isoformat(),
-        "last_success": NOW.isoformat(),
-        "fetched": 3,
-        "notify": 1,
-        "review": 1,
-        "error": None,
-        "failures": 0,
-    }
-    assert health["B"]["status"] == "error"
-    assert health["B"]["failures"] == 2
-    assert "HTTP 500" in health["B"]["error"]
-    assert health["B"]["last_success"] is None
-    assert health["Off"]["status"] == "disabled"
-    assert health["G"]["status"] == "manual"
-    assert health["G"]["careers_url"] == "https://g"
+    run_snap(tmp_path, cfg, RecordingNotifier())
+    jobs = {j["job_id"]: j for j in snapshot(tmp_path)["companies"]["Acme"]["jobs"]}
+    assert set(jobs) == {"swe", "ml"}
+    assert jobs["swe"]["status"] == "notify" and not jobs["swe"]["priority"]
+    assert jobs["ml"]["status"] == "review" and jobs["ml"]["priority"]
+    assert jobs["ml"]["reason"] == "IA (machine learning) / lieu non précisé"
 
 
-def test_health_keeps_last_success_when_company_fails(tmp_path: Path) -> None:
-    cfg = config("A")
-    FakeProvider.jobs["A"] = [job("1", company_name="A")]
-    run_snap(tmp_path, cfg, RecordingNotifier())
-    FakeProvider.errors["A"] = ProviderError("panne")
-    run_snap(tmp_path, cfg, RecordingNotifier())
-    health = snapshot(tmp_path)["health"]["A"]
-    assert health["status"] == "error"
-    assert health["last_success"] == NOW.isoformat()
-    assert health["fetched"] == 1  # derniers chiffres connus conservés
+# -- passage au filtre v3 : récap unique des offres que l'ancien filtre cachait --------------------
+
+
+def old_filter_state(
+    tmp_path: Path, *, shown: list[str], hidden: list[str], notified: list[str]
+) -> None:
+    """État et current.json tels que les laissait l'ancien filtre (pas de filter_version)."""
+    import json
+
+    ts = "2026-10-01T00:00:00+00:00"
+    jobs: dict[str, Any] = {i: {"title": "x", "first_seen": ts} for i in shown + hidden}
+    jobs.update({i: {"title": "x", "first_seen": ts, "notified_at": ts} for i in notified})
+    acme = {"seeded_at": ts, "consecutive_failures": 0, "last_error": None, "jobs": jobs}
+    state = {"version": 1, "meta": {}, "companies": {"Acme": acme}}
+    (tmp_path / "state.json").write_text(json.dumps(state), encoding="utf-8")
+    listed = [{"job_id": i, "title": "x", "location": "", "url": "u"} for i in shown + notified]
+    current = {"version": 1, "updated_at": ts, "companies": {"Acme": {"jobs": listed}}}
+    (tmp_path / "current.json").write_text(json.dumps(current), encoding="utf-8")
+
+
+def test_v3_migration_sends_one_recap_of_previously_hidden_jobs(tmp_path: Path) -> None:
+    old_filter_state(tmp_path, shown=["shown"], hidden=["hidden", "hw"], notified=["done"])
+    FakeProvider.jobs["Acme"] = [
+        job("shown"),  # déjà visible dans /offres : pas de récap
+        job("hidden", title="Data Analyst Intern"),  # cachée avant, notify maintenant : récap
+        job("hw", title="Validation Engineer Intern"),  # toujours écartée
+        job("done"),  # déjà notifiée
+        job("new", title="Backend Intern"),  # vraiment nouvelle : alerte normale
+    ]
+    cfg = config()
+    n = RecordingNotifier()
+    report = run_snap(tmp_path, cfg, n)
+    assert [j.job_id for j in n.sent] == ["new"]
+    (title, jobs), *_ = n.digests
+    assert "1 offre(s) ouverte(s) que l'ancien filtre cachait" in title
+    assert [j.job_id for j in jobs] == ["hidden"]
+    assert report.notified == 1
+
+    n = RecordingNotifier()
+    run_snap(tmp_path, cfg, n)  # une seule fois
+    assert n.sent == [] and n.digests == []
+    state = StateStore.load(tmp_path / "state.json")
+    assert state.filter_version == 3 and state.was_notified("Acme", "hidden")
+
+
+def test_v3_migration_recap_retried_until_sent(tmp_path: Path) -> None:
+    old_filter_state(tmp_path, shown=[], hidden=["hidden"], notified=[])
+    FakeProvider.jobs["Acme"] = [job("hidden")]
+    n = RecordingNotifier()
+    n.digest_ok = False
+    run_snap(tmp_path, config(), n)
+    n = RecordingNotifier()
+    run_snap(tmp_path, config(), n)  # current.json est maintenant celui du v3 : récap gardé
+    assert [j.job_id for j in n.digests[0][1]] == ["hidden"]
+    n = RecordingNotifier()
+    run_snap(tmp_path, config(), n)
+    assert n.digests == []
+
+
+def test_v3_migration_waits_for_a_full_run(tmp_path: Path) -> None:
+    old_filter_state(tmp_path, shown=[], hidden=["hidden"], notified=[])
+    FakeProvider.jobs["Acme"] = [job("hidden")]
+    cfg = config("Acme", "Other")
+    state = StateStore.load(tmp_path / "state.json", now=lambda: NOW)
+    n = RecordingNotifier()
+    Runner(cfg, state, n, make_http(), now=NOW, snapshot_path=tmp_path / "current.json").run(
+        cfg.companies[:1]
+    )  # --company Acme
+    assert n.digests == []
+    assert StateStore.load(tmp_path / "state.json").filter_version == 1
+
+
+def test_v3_migration_without_previous_list_sends_nothing(tmp_path: Path) -> None:
+    old_filter_state(tmp_path, shown=[], hidden=["hidden"], notified=[])
+    (tmp_path / "current.json").unlink()
+    FakeProvider.jobs["Acme"] = [job("hidden")]
+    n = RecordingNotifier()
+    run_snap(tmp_path, config(), n)
+    assert n.digests == [] and n.sent == []
+
+
+def test_v3_migration_dry_run_previews_without_writing(tmp_path: Path) -> None:
+    old_filter_state(tmp_path, shown=[], hidden=["hidden"], notified=[])
+    before = (tmp_path / "state.json").read_text(encoding="utf-8")
+    FakeProvider.jobs["Acme"] = [job("hidden")]
+    n = RecordingNotifier()
+    state = StateStore.load(tmp_path / "state.json")
+    state.path = None
+    snap = tmp_path / "current.json"
+    Runner(config(), state, n, make_http(), now=NOW, dry_run=True, snapshot_path=snap).run(
+        config().companies
+    )
+    assert [j.job_id for j in n.digests[0][1]] == ["hidden"]
+    assert (tmp_path / "state.json").read_text(encoding="utf-8") == before
