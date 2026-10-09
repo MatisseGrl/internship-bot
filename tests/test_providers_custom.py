@@ -353,3 +353,35 @@ def test_manual_never_fetches() -> None:
 def test_fixtures_are_valid_json() -> None:
     for path in Path(FIXTURES).glob("*.json"):
         json.loads(path.read_text(encoding="utf-8"))
+
+
+# -- sitemap -------------------------------------------------------------------------------------
+
+
+@responses.activate
+def test_sitemap_index_and_talentbrew_urls() -> None:
+    from internbot.providers.sitemap import SitemapProvider, slug_to_text
+
+    responses.get("https://jobs.example.com/sitemap.xml", body=_html("sitemap_index.xml"))
+    responses.get("https://jobs.example.com/sitemap1.xml", body=_html("sitemap_jobs.xml"))
+    jobs = SitemapProvider(make_http()).fetch_jobs(
+        company("Intuit", "sitemap", url="https://jobs.example.com/sitemap.xml")
+    )
+    assert [(j.job_id, j.title, j.location) for j in jobs] == [
+        ("99856180864", "Summer 2027 Software Engineering Intern Full Stack", "Mountain View"),
+        ("101643259568", "Intern", "Petah Tikva"),
+        ("101711266304", "Staff Financial Analyst", "San Diego"),
+    ]
+    assert jobs[1].url == "https://jobs.example.com/job/petah-tikva/intern/27595/101643259568"
+    assert slug_to_text("c%2B%2B-developer-intern_2027") == "C++ Developer Intern 2027"
+
+
+@responses.activate
+def test_sitemap_not_xml() -> None:
+    from internbot.providers.sitemap import SitemapProvider
+
+    responses.get("https://jobs.example.com/sitemap.xml", body="<html>maintenance</html>")
+    with pytest.raises(ProviderFormatError, match="pas un sitemap"):
+        SitemapProvider(make_http()).fetch_jobs(
+            company("Intuit", "sitemap", url="https://jobs.example.com/sitemap.xml")
+        )
