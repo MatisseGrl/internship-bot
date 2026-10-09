@@ -7,18 +7,12 @@ notifier:
   disable_link_preview: true
 
 filters:
-  # Matching insensible à la casse et aux accents, par mot entier
-  # (« intern » ne matche pas « internal » ; ajoutez « internship » explicitement).
-  title_include: ["intern", "interns", "internship", "internships", "stage", "stagiaire", "co-op", "working student"]
+  # Filtre v3 : notify (alerte), review (résumé), drop (ignorée).
+  regions: [us, canada, uk, europe, asia, australia]
+  include_data: true
+  include_fde: true
+  include_quant_research: false
   title_exclude: ["senior", "staff", "principal", "manager", "director", "high school"]
-  locations_include: []     # vide = toutes ; ex: ["France", "Paris", "Remote", "Europe"]
-  # Chine exclue (pays + grandes villes, certains sites n'affichent que la ville).
-  # Une offre multi-lieux n'est retirée que si TOUS ses lieux sont exclus.
-  locations_exclude: ["China", "Shanghai", "Beijing", "Shenzhen", "Hangzhou", "Guangzhou",
-                      "Chengdu", "Suzhou", "Nanjing", "Wuhan", "Xian", "Xi an", "Tianjin"]
-  keywords_any: ["software", "engineer", "engineering", "developer", "data", "ml",
-                 "machine learning", "ai", "backend", "frontend", "full stack", "fullstack",
-                 "research", "security", "infrastructure", "platform"]  # vide = pas de contrainte
   year_hint: ["2027"]
   # prefer  : écarte « Summer 2026 Intern » mais garde les titres sans année
   # require : exige l'année dans le titre ; off : ignore year_hint
@@ -461,6 +455,11 @@ companies:
     host: jobs.infineon.com
     domain: infineon.com
     api: pcsx
+  - name: STMicroelectronics
+    provider: eightfold
+    host: stmicroelectronics.eightfold.ai
+    domain: stmicroelectronics.com
+    api: v2
   #   Oracle Recruiting Cloud (HCM)
   - name: Oracle
     provider: oracle_hcm
@@ -545,6 +544,479 @@ companies:
   - name: Arm
     provider: sitemap
     url: https://careers.arm.com/sitemap.xml
+
+  # ==== Lot B (9 oct. 2026) : cloud, données, sécurité, produits, jeux =======================
+  - name: Rubrik
+    provider: greenhouse
+    board: rubrik
+  - name: Elastic
+    provider: greenhouse
+    board: elastic
+  - name: Fastly
+    provider: greenhouse
+    board: fastly
+  - name: SentinelOne
+    provider: greenhouse
+    board: sentinellabs        # organisation « SentinelOne »
+  - name: Wiz
+    provider: greenhouse
+    board: wizinc              # organisation « Wiz, Inc. » (le compte Ashby « wiz » est vide)
+  - name: DoorDash
+    provider: greenhouse
+    board: doordashusa         # organisation « DoorDash USA »
+  - name: Confluent
+    provider: ashby
+    board: confluent
+  - name: Zendesk
+    provider: workday
+    tenant: zendesk
+    wd: wd1
+    site: Zendesk
+  - name: Unity
+    provider: workday
+    tenant: unitytech
+    wd: wd1
+    site: unity
+  - name: Palo Alto Networks
+    provider: workday
+    tenant: paloaltonetworks
+    wd: wd5
+    site: panwexternalcareers
+  - name: eBay
+    provider: workday
+    tenant: ebay
+    wd: wd5
+    site: apply
+  - name: Etsy
+    provider: workday
+    tenant: etsy
+    wd: wd5
+    site: Etsy_Careers
+  - name: Ubisoft
+    provider: smartrecruiters
+    company_id: Ubisoft2       # organisation « Ubisoft » (les ID « Ubisoft » et « UbisoftFrance » sont vides)
+  - name: Fortinet
+    provider: oracle_hcm
+    host: edel.fa.us2.oraclecloud.com
+    site: CX_2001
+  - name: Uber
+    provider: oracle_hcm
+    host: iaziqy.fa.ocs.oraclecloud.com
+    site: ubercareers
+  - name: EA
+    provider: avature
+    base_url: https://jobs.ea.com/en_US/careers
+  - name: Booking.com
+    provider: custom_json          # site jibe : /api/jobs appelé par la page carrières
+    url: https://jobs.booking.com/api/jobs
+    params: {keywords: intern, page: "{page}", limit: "{limit}"}
+    items_path: jobs
+    total_path: totalCount
+    page_size: 100
+    max_pages: 3
+    fields:
+      id: data.req_id
+      title: data.title
+      url: "https://jobs.booking.com/booking/jobs/{data.slug}"
+      location: data.full_location
+      date: data.posted_date
+  - name: Siemens
+    provider: avature
+    base_url: https://jobs.siemens.com/en_US/externaljobs
+    queries: ['"intern"', internship, "working student"]
+    page_size: 6
+    page_size_param: folderRecordsPerPage
+    offset_param: folderOffset
+    max_pages: 50               # le portail impose 6 offres/page ; 254 résultats pour « internship »
+  - name: TotalEnergies
+    provider: avature
+    base_url: https://jobs.totalenergies.com/en_US/careers
+    queries: [stage, internship]
+
+  # ==== Lot C : auto, défense et aéro ===========================================================
+  - name: Waymo
+    provider: greenhouse
+    board: waymo
+  - name: Zoox
+    provider: lever
+    company: zoox
+  - name: Blue Origin
+    provider: workday
+    tenant: blueorigin
+    wd: wd5
+    site: BlueOrigin
+    search_texts: [intern, "working student"]
+  - name: Airbus
+    provider: workday
+    tenant: ag
+    wd: wd3
+    site: Airbus
+    search_texts: [internship, stage, "working student"]
+  - name: ArianeGroup
+    provider: workday
+    tenant: arianegroup
+    wd: wd3
+    site: EXTERNALALL
+    search_text: ""            # stages en français : « stage » sans « intern »
+  - name: MBDA
+    provider: gestmax
+    base_url: https://mbda.gestmax.fr
+  - name: MBDA UK
+    provider: workday
+    tenant: mbda
+    wd: wd3
+    site: MBDA-UK
+    search_text: ""            # site UK séparé du portail français Gestmax
+
+  # ==== Lot D : scale-ups françaises (ATS publics vérifiés) =====================================
+  - name: Doctolib
+    provider: greenhouse
+    board: doctolib            # compte Ashby actif aussi ; comparaison à finir
+  - name: Alan
+    provider: ashby
+    board: alan
+  - name: Qonto
+    provider: ashby
+    board: qonto               # compte Lever actif aussi ; comparaison à finir
+  - name: Ledger
+    provider: ashby
+    board: ledger
+  - name: Mirakl
+    provider: greenhouse
+    board: mirakl
+  - name: Algolia
+    provider: greenhouse
+    board: algolia
+  - name: Back Market
+    provider: ashby
+    board: backmarket
+
+  # ==== Lot E : ATS publics vérifiés (Europe, produits et défense) ===============================
+  - name: Shield AI
+    provider: lever
+    company: shieldai
+  - name: Pigment
+    provider: lever
+    company: pigment
+  - name: Adyen
+    provider: greenhouse
+    board: adyen
+  - name: Wise
+    provider: smartrecruiters
+    company_id: Wise
+    query: ""                 # offres complètes ; « intern » n'en renvoie qu'une partie
+  - name: Monzo
+    provider: greenhouse
+    board: monzo
+  - name: N26
+    provider: greenhouse
+    board: n26
+  - name: Swile
+    provider: lever
+    company: swile
+  - name: Sorare
+    provider: ashby
+    board: sorare
+  - name: Delivery Hero
+    provider: smartrecruiters
+    company_id: DeliveryHero
+    query: ""
+  - name: Voodoo
+    provider: ashby
+    board: voodoo
+  - name: BlaBlaCar
+    provider: lever
+    company: blablacar
+  - name: Criteo
+    provider: workday
+    tenant: criteo
+    wd: wd3
+    site: Criteo_Career_Site
+    search_text: ""           # stages français et anglais, 71 offres au total
+  - name: Contentsquare
+    provider: lever
+    company: contentsquare
+
+  # ==== Lot F : IA, industrie et aéronautique ================================================
+  - name: Poolside
+    provider: ashby
+    board: poolside
+  - name: Dust
+    provider: ashby
+    board: dust
+  - name: H Company
+    provider: ashby
+    board: hcompany
+  - name: Mistral AI
+    provider: ashby
+    board: mistral.ai
+  - name: Applied Intuition
+    provider: ashby
+    board: applied
+  - name: Aurora
+    provider: ashby
+    board: aurora-operations-inc
+  - name: PayFit
+    provider: rss
+    url: https://careers.payfit.com/jobs.rss
+  - name: Deezer
+    provider: rss
+    url: https://deezer.teamtailor.com/jobs.rss
+  - name: ASML
+    provider: workday
+    tenant: asml
+    wd: wd3
+    site: ASMLEXT1
+    search_text: internship
+  - name: Zalando
+    provider: workday
+    tenant: zalando
+    wd: wd3
+    site: ZalandoSiteWD
+    search_texts: [internship, "working student"]
+  - name: Philips
+    provider: workday
+    tenant: philips
+    wd: wd3
+    site: jobs-and-careers
+    search_texts: [internship, stage, "working student"]
+  - name: Stellantis
+    provider: workday
+    tenant: stellantis
+    wd: wd3
+    site: External_Career_Site_ID01
+    search_texts: [internship, stage, apprentice]
+  - name: Sopra Steria
+    provider: smartrecruiters
+    company_id: SopraSteria1
+    query: ""
+    max_pages: 25
+  - name: RTX
+    provider: sitemap
+    url: https://careers.rtx.com/global/en/sitemap_index.xml
+    job_pattern: "/job/(?P<id>[^/]+)/(?P<slug>[^/?#]+)$"
+  - name: Thales
+    provider: sitemap
+    url: https://careers.thalesgroup.com/fr/fr/sitemap_index.xml
+    job_pattern: "/job/(?P<id>[^/]+)/(?P<slug>[^/?#]+)$"
+  - name: Orange
+    provider: sitemap
+    url: https://orange.jobs/fr/fr/sitemap_index.xml
+    job_pattern: "/job/(?P<id>[^/]+)/(?P<slug>[^/?#]+)$"
+  - name: Boeing
+    provider: workday
+    tenant: boeing
+    wd: wd1
+    site: External_Careers
+    search_text: ""           # catalogue complet pour stages et alternances
+  - name: Scaleway
+    provider: lever
+    company: scaleway
+  - name: Valeo
+    provider: workday
+    tenant: valeo
+    wd: wd3
+    site: Valeo_Jobs
+    search_text: ""           # stages français et anglais
+
+  # ==== Lot I (Claude, reprise) : dernières sources automatisables ==========================
+  - name: Lucid
+    provider: greenhouse
+    board: lucidmotors            # organisation « Lucid Motors »
+  - name: Trade Republic
+    provider: greenhouse
+    board: traderepublicbank      # organisation « Trade Republic » (« traderepublic » = Customer Council)
+  - name: Lockheed Martin
+    provider: eightfold
+    host: lockheedmartin.eightfold.ai
+    domain: lockheedmartin.com
+    api: pcsx
+  - name: Northrop Grumman
+    provider: eightfold
+    host: jobs.northropgrumman.com
+    domain: ngc.com               # « northropgrumman.com » répond 404
+    api: pcsx
+  - name: Ericsson
+    provider: eightfold
+    host: jobs.ericsson.com
+    domain: ericsson.com
+    api: pcsx
+  - name: Rivian
+    provider: custom_json         # site jibe : /api/jobs appelé par la page carrières (crawl-delay 5)
+    url: https://careers.rivian.com/api/jobs
+    params: {keywords: intern, page: "{page}", limit: "{limit}"}
+    items_path: jobs
+    total_path: totalCount
+    page_size: 100
+    max_pages: 2
+    fields:
+      id: data.req_id
+      title: data.title
+      url: "https://careers.rivian.com/careers-home/jobs/{data.slug}"
+      location: data.full_location
+      date: data.posted_date
+  - name: Schneider Electric
+    provider: custom_json         # site jibe
+    url: https://careers.se.com/api/jobs
+    params: {keywords: intern, page: "{page}", limit: "{limit}"}
+    items_path: jobs
+    total_path: totalCount
+    page_size: 100
+    max_pages: 5
+    fields:
+      id: data.req_id
+      title: data.title
+      url: "https://careers.se.com/jobs/{data.slug}"
+      location: data.full_location
+      date: data.posted_date
+  #   SuccessFactors (RMK) : /services/ interdit par robots.txt, sitemap autorisé
+  - name: Engie
+    provider: sitemap
+    url: https://jobs.engie.com/sitemap.xml
+    job_pattern: "/job/(?P<slug>[^/]+)/(?P<id>[0-9]+)/?$"
+  - name: Seagate
+    provider: sitemap
+    url: https://seagatecareers.com/sitemap.xml
+    job_pattern: "/job/(?P<slug>[^/]+)/(?P<id>[0-9]+)/?$"
+
+  # ==== Suivies à la main (aucune requête automatique) ======================================
+  #   Pas d'API ni d'endpoint stable, anti-bot, ou robots.txt qui interdit la collecte.
+  #   Marche à suivre pour chacune : README, section « Entreprises suivies à la main ».
+  - name: Google
+    provider: manual
+    careers_url: https://www.google.com/about/careers/applications/jobs/results?q=intern
+    reason: "robots.txt interdit /about/careers/applications/jobs/results"
+    alert: "Bouton « Get job alerts » sur la page de résultats (compte Google)"
+  - name: Meta
+    provider: manual
+    careers_url: https://www.metacareers.com/jobs?q=intern
+    reason: "robots.txt de metacareers.com interdit toute collecte sans autorisation écrite"
+    alert: "« Create job alert » sur metacareers.com (profil candidat)"
+  - name: LinkedIn
+    provider: manual
+    careers_url: https://www.linkedin.com/jobs/search/?keywords=intern&f_C=1337
+    reason: "offres publiées uniquement sur linkedin.com (scraping de LinkedIn exclu) ; le compte Lever « linkedin » est un bac à sable de test"
+    alert: "Alerte d'emploi LinkedIn native (bouton « Créer une alerte » sur cette recherche)"
+  - name: Tesla
+    provider: manual
+    careers_url: https://www.tesla.com/careers/search/?query=intern
+    reason: "protection anti-bot Akamai (HTTP 403 Access Denied)"
+    alert: "Pas d'alerte e-mail publique : vérification manuelle hebdomadaire"
+  - name: X
+    provider: manual
+    careers_url: https://x.ai/careers
+    reason: "careers.x.com redirige vers x.ai/careers : offres déjà suivies via xAI (Greenhouse « xai »)"
+    alert: "Rien à faire : couvert par xAI"
+  - name: Splunk
+    provider: manual
+    careers_url: https://cisco.wd5.myworkdayjobs.com/Cisco_Careers?q=splunk
+    reason: "filiale de Cisco : offres publiées sur le Workday de Cisco, déjà surveillé (227 offres « splunk » le 9 oct. 2026)"
+    alert: "Rien à faire : couvert par Cisco"
+  - name: SAP
+    provider: manual
+    careers_url: https://jobs.sap.com/search/?q=intern
+    reason: "site Next.js, offres chargées côté client par une API non documentée"
+    alert: "« Job alerts » / Talent Community sur jobs.sap.com"
+  - name: ByteDance
+    provider: manual
+    careers_url: https://jobs.bytedance.com/en/position?keywords=intern
+    reason: "robots.txt de lifeattiktok.com interdit tout ; API jobs.bytedance.com protégée par jeton CSRF de session ; compte SmartRecruiters « Bytedance » abandonné"
+    alert: "Alerte e-mail du site (compte candidat) ; voir aussi https://lifeattiktok.com/search?keyword=intern"
+  - name: Dassault Systèmes
+    provider: manual
+    careers_url: https://www.3ds.com/careers/jobs
+    reason: "offres chargées côté client par le moteur Exalead (/apisearch), format non documenté"
+    alert: "« Join our Talent Community » sur 3ds.com/careers"
+  - name: Akamai
+    provider: manual
+    careers_url: https://www.akamai.com/careers
+    reason: "protection anti-bot (HTTP 403) ; Workday non public"
+    alert: "Alerte d'emploi du portail carrières Akamai (compte candidat)"
+  - name: HubSpot
+    provider: manual
+    careers_url: https://www.hubspot.com/careers/jobs?q=intern
+    reason: "liste chargée en JavaScript par une API non documentée ; Workday « hubspot » non public (HTTP 401)"
+    alert: "« Join our Talent Network » sur hubspot.com/careers"
+  - name: Valve
+    provider: manual
+    careers_url: https://www.valvesoftware.com/en/jobs
+    reason: "robots.txt interdit /jobs"
+    alert: "Pas d'alerte : vérification manuelle mensuelle (Valve publie rarement des stages)"
+  - name: Shopify
+    provider: manual
+    careers_url: https://www.shopify.com/careers/search?keywords=intern
+    reason: "robots.txt de shopify.com interdit tout (Disallow: /) ; Workday « shopify » non public"
+    alert: "Page https://internships.shopify.com (inscription aux annonces de la prochaine promo)"
+  - name: Wayfair
+    provider: manual
+    careers_url: https://www.wayfair.com/careers/jobs
+    reason: "liste chargée en JavaScript ; Workday « wayfair » non public (HTTP 401) ; compte SmartRecruiters avec 1 seule offre"
+    alert: "« Job alerts » sur la page carrières Wayfair"
+  - name: Walmart Global Tech
+    provider: manual
+    careers_url: https://careers.walmart.com/results?q=intern
+    reason: "robots.txt interdit /api et /results ; le sitemap ne donne que des ID (R-1075582) sans titre"
+    alert: "« Job Alerts » sur careers.walmart.com"
+  - name: DeepSeek
+    provider: manual
+    careers_url: https://www.deepseek.com/
+    reason: "pas d'ATS public (recrutement via plateformes chinoises) ; postes en Chine, exclue par tes filtres"
+    alert: "Rien à faire tant que la Chine est exclue"
+  - name: Moonshot AI
+    provider: manual
+    careers_url: https://www.moonshot.cn/
+    reason: "pas d'ATS public ; le compte Workable « moonshot » est une autre entreprise ; postes en Chine, exclue par tes filtres"
+    alert: "Rien à faire tant que la Chine est exclue"
+  - name: Safran
+    provider: manual
+    careers_url: https://www.safran-group.com/fr/offres
+    reason: "protection anti-bot (HTTP 403) sur safran-group.com"
+    alert: "Compte candidat + « alerte emploi » (mot-clé stage) sur safran-group.com"
+  - name: Naval Group
+    provider: manual
+    careers_url: https://www.naval-group.com/en/candidates
+    reason: "liste chargée en JavaScript, aucune API ni ATS public trouvé"
+    alert: "Alerte e-mail depuis l'espace candidat Naval Group"
+  - name: Capgemini
+    provider: manual
+    careers_url: https://www.capgemini.com/fr-fr/carrieres/rejoignez-nous/nos-offres-demploi/
+    reason: "liste chargée en JavaScript par une API non documentée ; pas de sitemap d'offres"
+    alert: "« Créer une alerte » sur la page des offres Capgemini"
+  - name: Eviden
+    provider: manual
+    careers_url: https://eviden.com/careers/
+    reason: "robots.txt interdit /api/ (source de la liste d'offres)"
+    alert: "Alerte e-mail sur le portail carrières Eviden"
+  - name: Amadeus
+    provider: manual
+    careers_url: https://jobs.amadeus.com/
+    reason: "liste chargée en JavaScript, sitemap vide, aucun ATS public trouvé"
+    alert: "« Job alert » sur jobs.amadeus.com"
+  - name: OVHcloud
+    provider: manual
+    careers_url: https://careers.ovhcloud.com/fr/
+    reason: "robots.txt de careers.ovhcloud.com interdit tout (Disallow: /)"
+    alert: "Alerte e-mail SuccessFactors (« Recevez les offres par e-mail ») sur careers.ovhcloud.com"
+  - name: Klarna
+    provider: manual
+    careers_url: https://www.klarna.com/careers/
+    reason: "liste chargée en JavaScript, aucun ATS public trouvé (Greenhouse, Ashby, Lever, Workday testés)"
+    alert: "Alerte e-mail sur klarna.com/careers"
+  - name: Nokia
+    provider: manual
+    careers_url: https://jobs.nokia.com/
+    reason: "liste chargée en JavaScript ; les endpoints Oracle HCM supposés répondent 404"
+    alert: "« Job alerts » sur jobs.nokia.com"
+  - name: Renault
+    provider: manual
+    careers_url: https://www.renaultgroup.com/carrieres/nos-offres/
+    reason: "robots.txt interdit /api/ (source de la liste d'offres)"
+    alert: "Alerte e-mail depuis l'espace candidat Renault Group"
+  - name: EDF
+    provider: manual
+    careers_url: https://www.edf.fr/edf-recrute/offres
+    reason: "protection anti-bot (HTTP 403)"
+    alert: "Créer une alerte (mot-clé stage) depuis l'espace candidat EDF Recrute"
 
   # ---- Non trouvées automatiquement : ajoutez-les avec
   #      python -m internbot --discover "Nom=URL_de_la_page_Apply"
