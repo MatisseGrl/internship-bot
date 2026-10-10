@@ -123,7 +123,8 @@ Règles principales :
   multi-lieux est gardée si **un** de ses lieux est dans une zone ;
 - **France : Île-de-France uniquement.** Une offre dont le lieu cite une ville française hors
   Île-de-France (Toulouse, Nantes, Lyon, Marseille, Sophia Antipolis…) sans aucune ville
-  d'Île-de-France est `drop` (« France hors Île-de-France »), y compris dans `/offres` ; « France »
+  d'Île-de-France est `drop` (« France hors Île-de-France »), y compris dans `/offres`. Toute l'Île-de-France
+  (75, 77, 78, 91, 92, 93, 94, 95 : villes ou « (92) ») est reconnue même sans « France » ; « France »
   seul ou « Paris ; Toulouse » sont gardés (listes `FRANCE_HORS_IDF` / `ILE_DE_FRANCE`) ;
 - matching **insensible à la casse et aux accents**, par **mots entiers** : `intern` ne matche
   pas « Internal », `ml` ne matche pas « HTML », la ponctuation compte comme un espace

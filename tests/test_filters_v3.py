@@ -137,3 +137,19 @@ def test_matches_query_other_cases() -> None:
 def test_france_hors_ile_de_france_dropped() -> None:
     assert classify_location("Sophia Antipolis", FilterConfig()).reason == "France hors Île-de-France"
     assert classify_location("Paris, France", FilterConfig()).status == NOTIFY
+
+
+@pytest.mark.parametrize(
+    "location",
+    ["Nanterre", "Boulogne-Billancourt (92)", "Vélizy-Villacoublay", "Saint-Germain-en-Laye",
+     "Massy", "Saint-Denis (93)", "Créteil", "Cergy-Pontoise", "Marne-la-Vallée (77)",
+     "Quelque part (78)", "La Défense", "Grand Paris", "Île-de-France"],
+)
+def test_ile_de_france_toujours_gardee(location: str) -> None:
+    assert classify_location(location, FilterConfig()).status == NOTIFY
+
+
+def test_hors_ile_de_france_meme_avec_departement_ailleurs() -> None:
+    assert classify_location("Lyon (69)", FilterConfig()).status == DROP
+    assert classify_location("Toulouse, France", FilterConfig()).status == DROP
+    assert classify_location("Boulogne-sur-Mer", FilterConfig()).status == DROP  # hors zone

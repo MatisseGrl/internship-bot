@@ -168,15 +168,51 @@ FRANCE_HORS_IDF = [
     "rouen", "caen", "le havre", "angers", "metz", "reims", "perpignan",
 ]
 ILE_DE_FRANCE = [
-    "ile de france", "paris", "courbevoie", "la defense", "puteaux", "nanterre", "rueil malmaison",
-    "le plessis robinson", "boulogne billancourt", "issy les moulineaux", "levallois perret",
-    "clichy", "montrouge", "malakoff", "gennevilliers", "suresnes", "meudon", "bagneux",
-    "saint denis", "saint ouen", "massy", "palaiseau", "saclay", "gif sur yvette", "orsay",
-    "velizy", "velizy villacoublay", "guyancourt", "montigny le bretonneux",
-    "saint quentin en yvelines", "versailles", "evry", "marne la vallee", "cergy", "nozay",
-    "les ulis", "bois colombes", "colombes", "asnieres", "neuilly sur seine", "vitry sur seine",
-    "ivry sur seine", "montreuil", "creteil", "rungis", "orly", "roissy",
+    "ile de france", "idf", "grand paris", "region parisienne", "paris",
+    # 92 Hauts-de-Seine
+    "courbevoie", "la defense", "puteaux", "nanterre", "rueil malmaison", "le plessis robinson",
+    "boulogne billancourt", "issy les moulineaux", "levallois perret", "clichy", "montrouge",
+    "malakoff", "gennevilliers", "suresnes", "meudon", "bagneux", "saint cloud", "sevres",
+    "chatillon", "clamart", "antony", "asnieres sur seine", "colombes", "bois colombes",
+    "la garenne colombes", "neuilly sur seine", "vanves", "fontenay aux roses",
+    "chatenay malabry", "sceaux", "bourg la reine", "garches", "villeneuve la garenne",
+    "chaville", "ville d avray", "vaucresson",
+    # 78 Yvelines
+    "versailles", "velizy villacoublay", "velizy", "guyancourt", "montigny le bretonneux",
+    "saint quentin en yvelines", "saint germain en laye", "poissy", "les mureaux", "rambouillet",
+    "trappes", "elancourt", "le chesnay", "maurepas", "buc", "voisins le bretonneux",
+    "magny les hameaux", "saint cyr l ecole", "conflans sainte honorine", "mantes la jolie",
+    "houilles", "sartrouville", "chatou", "le vesinet", "la verriere", "bois d arcy",
+    # 91 Essonne
+    "massy", "palaiseau", "saclay", "gif sur yvette", "orsay", "evry", "evry courcouronnes",
+    "les ulis", "nozay", "marcoussis", "villebon sur yvette", "bures sur yvette", "longjumeau",
+    "corbeil essonnes", "athis mons", "savigny sur orge", "bretigny sur orge", "arpajon",
+    "ris orangis", "courtaboeuf", "wissous", "chilly mazarin", "verrieres le buisson",
+    # 93 Seine-Saint-Denis
+    "saint denis", "saint ouen", "montreuil", "bobigny", "noisy le grand", "aubervilliers",
+    "pantin", "bagnolet", "bondy", "le bourget", "rosny sous bois", "la courneuve",
+    "epinay sur seine", "drancy", "aulnay sous bois", "villepinte", "sevran", "noisy le sec",
+    "les lilas", "romainville", "stains", "tremblay en france", "le blanc mesnil",
+    # 94 Val-de-Marne
+    "creteil", "ivry sur seine", "vitry sur seine", "vincennes", "saint mande",
+    "charenton le pont", "maisons alfort", "alfortville", "fontenay sous bois",
+    "nogent sur marne", "joinville le pont", "villejuif", "arcueil", "cachan", "gentilly",
+    "le kremlin bicetre", "choisy le roi", "thiais", "rungis", "orly", "fresnes",
+    "l hay les roses", "champigny sur marne", "saint maur des fosses", "boissy saint leger",
+    "villeneuve saint georges", "bry sur marne", "chevilly larue", "valenton",
+    # 95 Val-d'Oise
+    "cergy", "cergy pontoise", "pontoise", "roissy en france", "roissy", "argenteuil",
+    "sarcelles", "enghien les bains", "montmorency", "eragny", "osny", "gonesse",
+    "goussainville", "villiers le bel", "ermont", "franconville", "saint ouen l aumone",
+    "taverny", "deuil la barre", "bezons",
+    # 77 Seine-et-Marne
+    "marne la vallee", "fontainebleau", "melun", "meaux", "torcy", "champs sur marne",
+    "noisiel", "lognes", "serris", "chessy", "bussy saint georges", "lieusaint",
+    "savigny le temple", "pontault combault", "provins", "chelles", "roissy en brie",
+    "ozoir la ferriere", "dammarie les lys", "moissy cramayel", "combs la ville",
 ]
+# « (92) », « 78 », « (75017) » : code de département ou code postal d'Île-de-France.
+_IDF_CODE = re.compile(r"\((?:75|77|78|91|92|93|94|95)\d{0,3}\)")
 
 UNKNOWN_LOC = ["multiple locations", "various", "blank", "global",
                "worldwide", "anywhere", "flexible", "tbd"]
@@ -265,8 +301,11 @@ def classify_location(location: str, cfg: FilterConfig) -> Verdict:
     loc = norm(location)
     if not loc.strip():
         return Verdict(REVIEW, "lieu vide")
-    if has(loc, FRANCE_HORS_IDF) and not has(loc, ILE_DE_FRANCE):
+    idf = bool(has(loc, ILE_DE_FRANCE) or _IDF_CODE.search(location))
+    if has(loc, FRANCE_HORS_IDF) and not idf:
         return Verdict(DROP, "France hors Île-de-France")
+    if idf and "europe" in cfg.enabled_regions:
+        return Verdict(NOTIFY, "zone europe (Île-de-France)")
     zones = [r for r in sorted(cfg.enabled_regions) if has(loc, LOCATIONS[r])]
     if zones:
         return Verdict(NOTIFY, f"zone {zones[0]}")
