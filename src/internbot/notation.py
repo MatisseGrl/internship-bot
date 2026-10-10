@@ -62,6 +62,8 @@ MOTIFS_INELIGIBLE = {
     "fermee": "offre expirée ou fermée",
     "nationalite": "nationalité, habilitation ou visa impossible",
     "dates": "dates totalement incompatibles",
+    # Décision de Matisse (11 oct. 2026) : aucun poste de recherche, même appliquée.
+    "recherche": "poste de recherche (Research Intern, Researcher, Research Scientist, thèse)",
 }
 NON_PRECISE = "non précisé"
 MIN_MOTS_CITATION = 3
@@ -252,7 +254,8 @@ def evaluer(
     `offre` : ligne de l'export (texte de l'annonce, lieu…). Lève ValueError si la note est
     incomplète ou si une citation ne figure pas dans le texte.
     """
-    texte = f"{offre.get('location') or ''}\n{offre.get('texte') or ''}"
+    # L'intitulé fait partie de l'offre : il peut servir de preuve (ex. motif `recherche`).
+    texte = "\n".join(str(offre.get(k) or "") for k in ("title", "location", "texte"))
     if note.get("eligible") is False:
         motif = str(note.get("motif") or "")
         if motif not in MOTIFS_INELIGIBLE:

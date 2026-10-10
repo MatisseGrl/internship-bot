@@ -26,6 +26,7 @@
    "90892",
    "90895",
    "90947",
+   "91013",
    "91170",
    "91175",
    "91176",
@@ -79,7 +80,48 @@
   ],
   "Adobe": [
    "R171696",
-   "R171856"
+   "R171856",
+   "R172064"
+  ],
+  "Airbus": [
+   "JR10411843",
+   "JR10429924",
+   "JR10430199",
+   "JR10430448",
+   "JR10431703",
+   "JR10432322",
+   "JR10432610",
+   "JR10432660",
+   "JR10434586",
+   "JR10436001",
+   "JR10437158",
+   "JR10437341",
+   "JR10439462",
+   "JR10439523",
+   "JR10439750",
+   "JR10441101",
+   "JR10443004",
+   "JR10443120",
+   "JR10443231",
+   "JR10443529",
+   "JR10443609",
+   "JR10443827",
+   "JR10444062",
+   "JR10444557",
+   "JR10444599",
+   "JR10444820",
+   "JR10445006",
+   "JR10445193",
+   "JR10445233",
+   "JR10445409",
+   "JR10445424",
+   "JR10445479",
+   "JR10446781",
+   "JR10446862",
+   "JR10447194",
+   "JR10447432",
+   "JR10447653",
+   "JR10449625"
   ],
   "Akuna Capital": [
    "8018886"
@@ -149,7 +191,8 @@
    "10573017",
    "10573018",
    "10573570",
-   "10573999"
+   "10573999",
+   "10575251"
   ],
   "Analog Devices": [
    "R265298",
@@ -195,8 +238,15 @@
    "200682357-1251",
    "200682357-2114",
    "200682357-3521",
+   "200683768-2911",
    "200686350-1731",
    "200686742-1731"
+  ],
+  "Applied Intuition": [
+   "91e0686e-272a-4780-b33d-d7860b94a7b4",
+   "bb953f29-0059-4a40-aa9e-3a8c88733902",
+   "ce58d9fd-f22b-4336-80b5-ba1e8d764526",
+   "edc2528d-6e6c-4a67-b871-bfe7d9c890b4"
   ],
   "Applied Materials": [
    "R2614287",
@@ -224,6 +274,7 @@
    "R2627218",
    "R2627230",
    "R2627315",
+   "R2627316",
    "R2627317",
    "R2627318",
    "R2627320",
@@ -232,11 +283,13 @@
    "R2628265",
    "R2628947",
    "R2629019",
-   "R2630072"
+   "R2630072",
+   "R2630705"
   ],
   "Arm": [
    "101386258528",
-   "101556166016"
+   "101556166016",
+   "101742818288"
   ],
   "Atlassian": [
    "26266",
@@ -387,6 +440,7 @@
   "Cisco": [
    "2023393",
    "2023625",
+   "2023762",
    "2024351",
    "2024561",
    "2024816",
@@ -402,6 +456,7 @@
    "2026914",
    "2026923",
    "2027615",
+   "2027808",
    "2028084"
   ],
   "Citi": [
@@ -428,7 +483,8 @@
    "26998100"
   ],
   "Cohere": [
-   "36d1f52f-8270-4652-adf5-5303a0ff341b"
+   "36d1f52f-8270-4652-adf5-5303a0ff341b",
+   "73bd3e2b-6597-4124-b64b-1e5dbc32e785"
   ],
   "Coinbase": [
    "8175363",
@@ -465,6 +521,7 @@
   ],
   "DRW": [
    "7957735",
+   "7991171",
    "7993004",
    "7993195",
    "8173677"
@@ -559,7 +616,8 @@
    "8010483003"
   ],
   "DoorDash": [
-   "8171041"
+   "8171041",
+   "8263774"
   ],
   "EA": [
    "216110",
@@ -719,7 +777,22 @@
    "23026",
    "24602"
   ],
+  "IBM": [
+   "https://careers.ibm.com/careers/JobDetail?jobId=132416",
+   "https://careers.ibm.com/careers/JobDetail?jobId=132423",
+   "https://careers.ibm.com/careers/JobDetail?jobId=132434",
+   "https://careers.ibm.com/careers/JobDetail?jobId=132567",
+   "https://careers.ibm.com/careers/JobDetail?jobId=132704",
+   "https://careers.ibm.com/careers/JobDetail?jobId=133430",
+   "https://careers.ibm.com/careers/JobDetail?jobId=133664",
+   "https://careers.ibm.com/careers/JobDetail?jobId=133667",
+   "https://careers.ibm.com/careers/JobDetail?jobId=134474",
+   "https://careers.ibm.com/careers/JobDetail?jobId=134827",
+   "https://careers.ibm.com/careers/JobDetail?jobId=135624"
+  ],
   "IMC Trading": [
+   "4907430101",
+   "4912874101",
    "4941380101",
    "4956547101"
   ],
@@ -797,9 +870,15 @@
   "Jump Trading": [
    "7362318",
    "7974943",
+   "7982648",
    "8007788",
+   "8010307",
    "8027898",
-   "8027952"
+   "8027900",
+   "8027938",
+   "8027939",
+   "8027952",
+   "8059384"
   ],
   "KLA": [
    "2639645",
@@ -1172,6 +1251,8 @@
   "Microsoft": [
    "200015233",
    "200050323",
+   "200050324",
+   "200052124",
    "200052631",
    "200052634",
    "200052636",
@@ -1201,6 +1282,7 @@
    "200059632",
    "200060035",
    "200060488",
+   "200060937",
    "200060957"
   ],
   "Mirakl": [
@@ -1228,6 +1310,7 @@
    "JR2023489",
    "JR2023491",
    "JR2023502",
+   "JR2026839",
    "JR2026958",
    "JR2027025",
    "JR2027305"
@@ -1237,6 +1320,7 @@
    "R-10062364",
    "R-10064054",
    "R-10064089",
+   "R-10064090",
    "R-10064462",
    "R-10064676",
    "R-10065565",
@@ -1261,7 +1345,8 @@
    "R-10066990",
    "R-10067003",
    "R-10067009",
-   "R-10067221"
+   "R-10067221",
+   "R-10067224"
   ],
   "NetApp": [
    "135710",
@@ -1299,7 +1384,8 @@
    "R10255163",
    "R10255195",
    "R10255197",
-   "R10255207"
+   "R10255207",
+   "R10255457"
   ],
   "Notion": [
    "2b587e66-deac-421a-a824-9415ba78b5a7",
@@ -1441,6 +1527,10 @@
    "8214788"
   ],
   "Point72": [
+   "7297657002",
+   "7302611002",
+   "7586061002",
+   "8018862002",
    "8236734002"
   ],
   "Qonto": [
@@ -1655,6 +1745,8 @@
    "01876246",
    "01876308",
    "01876452",
+   "01876467",
+   "01876473",
    "01876476",
    "01876483",
    "01876518",
@@ -1734,6 +1826,7 @@
    "34020",
    "34059",
    "34306",
+   "34308",
    "34310",
    "34316"
   ],
@@ -1976,6 +2069,7 @@
    "516006",
    "516508",
    "517043",
+   "517652",
    "517700",
    "517737",
    "517739",
@@ -2277,6 +2371,9 @@
    "8831369002",
    "8831630002"
   ],
+  "Squarepoint": [
+   "243853"
+  ],
   "Stripe": [
    "8186442",
    "8194287",
@@ -2377,6 +2474,7 @@
    "R0340304",
    "R0340305",
    "R0340416",
+   "R0340421",
    "R0340426",
    "R0340435",
    "R0340455",
@@ -2533,7 +2631,8 @@
   ],
   "Tower Research Capital": [
    "7011493",
-   "8138524"
+   "8138524",
+   "8168750"
   ],
   "Uber": [
    "303104",
@@ -2573,7 +2672,8 @@
    "8199365",
    "8201252",
    "8221198",
-   "8231711"
+   "8231711",
+   "8257801"
   ],
   "Western Digital": [
    "744000148348049",
@@ -2600,23 +2700,6 @@
      "pont": "entreprise américaine (siège à Santa Clara, Californie)"
     },
     "score": 76,
-    "statut": "retenue"
-   },
-   "91013": {
-    "conditions": "Santa Clara, 24/05-13/08/2027, temps plein sur site, MS en cours exigé, rémunération non précisée",
-    "notes": [
-     5,
-     4,
-     5,
-     4
-    ],
-    "preuves": {
-     "app": "« Collaborate with research and infrastructure teams on rollout generation, training, logging, and reproducibility. »",
-     "eco": "grand fabricant de puces américain, réputation internationale",
-     "fit": "« Research and prototype RL methods for post-training language and code models. »",
-     "pont": "stage aux États-Unis : « Santa Clara, California »"
-    },
-    "score": 93,
     "statut": "retenue"
    }
   },
@@ -2707,23 +2790,25 @@
     },
     "score": 84,
     "statut": "retenue"
-   },
-   "R172064": {
-    "conditions": "Été 2027, hybride au bureau de l'équipe (San Jose, SF, Seattle, NY…), 45-61 $/h ; vise PhD/master (undergrads exceptionnels)",
+   }
+  },
+  "Airbus": {
+   "JR10442684": {
+    "conditions": "Élancourt, 6 mois, février 2027 indicatif ; habilitation exigée",
     "notes": [
-     5,
-     4,
-     5,
+     3,
+     3,
+     3,
      4
     ],
     "preuves": {
-     "app": "« Under the direction of an Adobe mentor »",
-     "eco": "big tech logicielle américaine (siège à San Jose)",
-     "fit": "« Develop new algorithms, run experiments, and produce demonstration prototypes »",
-     "pont": "stage aux États-Unis : « San Jose, United States of America »"
+     "app": "« Approfondissement des compÃ©tences de dÃ©veloppement (Java, Javascript, Python) en intÃ©gration continue »",
+     "eco": "grand industriel européen avec une vraie équipe IA (« Airbus AI », exemple de la note 3)",
+     "fit": "« enrichir son Ã©cosystÃ¨me de connecteurs vers des applications tierces »",
+     "pont": "Acubed, centre d'innovation IA et autonomie d'Airbus dans la Silicon Valley (acubed.airbus.com)"
     },
-    "score": 93,
-    "statut": "retenue"
+    "score": 63,
+    "statut": "limite"
    }
   },
   "Akuna Capital": {
@@ -3330,23 +3415,6 @@
     "score": 68,
     "statut": "retenue"
    },
-   "200683768-2911": {
-    "conditions": "Paris, candidature avant le 31/12/2026, dates et rémunération non précisées ; éligibilité floue : vise des doctorants en fin de thèse avec publications, MSc accepté dans les qualifications minimales",
-    "notes": [
-     5,
-     5,
-     3,
-     4
-    ],
-    "preuves": {
-     "app": "« collaborating with leading machine learning engineers and researchers »",
-     "eco": "Apple, cité en exemple de la note 5",
-     "fit": "« implementing them as code prototypes, planning and running large-scale experiments across multi-node, multi-GPU systems »",
-     "pont": "entreprise américaine (siège à Cupertino)"
-    },
-    "score": 89,
-    "statut": "retenue"
-   },
    "200686958-1731": {
     "conditions": "Munich, dates et rémunération non précisées, M.S. ou PhD demandé (floue)",
     "notes": [
@@ -3396,76 +3464,6 @@
      "pont": "entreprise américaine (siège à Cupertino)"
     },
     "score": 71,
-    "statut": "retenue"
-   }
-  },
-  "Applied Intuition": {
-   "91e0686e-272a-4780-b33d-d7860b94a7b4": {
-    "conditions": "Sunnyvale (CA), présentiel ; dates et rémunération non précisées ; PhD (ou MSc) et 1 an de recherche demandés ; publiée en février 2026",
-    "notes": [
-     5,
-     4,
-     5,
-     4
-    ],
-    "preuves": {
-     "app": "« Work closely with the Research Scientists and Engineers on high quality research publications »",
-     "eco": "éditeur de logiciels pour véhicules autonomes, valorisé à plusieurs milliards",
-     "fit": "« Conduct research on 3D vision related topics including 3D/world-action foundation model »",
-     "pont": "stage aux États-Unis : « Sunnyvale, California, United States »"
-    },
-    "score": 93,
-    "statut": "retenue"
-   },
-   "bb953f29-0059-4a40-aa9e-3a8c88733902": {
-    "conditions": "Dates non précisées (annonce de février 2026), Sunnyvale, PhD ou MSc, 1 an d'expérience de recherche demandé",
-    "notes": [
-     5,
-     4,
-     5,
-     4
-    ],
-    "preuves": {
-     "app": "« Work closely with the Research Scientists and Engineers on high quality research publications »",
-     "eco": "éditeur de logiciels pour véhicules autonomes, valorisé à plusieurs milliards",
-     "fit": "« Conduct research on reinforcement learning (RL) related topics including large-scale closed-loop RL and VLA post-training »",
-     "pont": "stage aux États-Unis : « Sunnyvale, California, United States »"
-    },
-    "score": 93,
-    "statut": "retenue"
-   },
-   "ce58d9fd-f22b-4336-80b5-ba1e8d764526": {
-    "conditions": "Sunnyvale, dates non précisées, PhD ou MSc + 1 an de recherche demandés (flou), annonce publiée en 2024",
-    "notes": [
-     5,
-     4,
-     5,
-     4
-    ],
-    "preuves": {
-     "app": "« Work closely with the Research Scientists and Engineers »",
-     "eco": "éditeur de logiciels pour véhicules autonomes, valorisé à plusieurs milliards",
-     "fit": "« Conduct research on reinforcement learning (RL) related topics »",
-     "pont": "stage aux États-Unis : « Sunnyvale, California, United States »"
-    },
-    "score": 93,
-    "statut": "retenue"
-   },
-   "edc2528d-6e6c-4a67-b871-bfe7d9c890b4": {
-    "conditions": "Sunnyvale, dates non précisées (annonce publiée en février 2026), PhD ou MSc demandé, 1 an d'expérience de recherche",
-    "notes": [
-     5,
-     4,
-     5,
-     4
-    ],
-    "preuves": {
-     "app": "« Work closely with the Research Scientists and Engineers »",
-     "eco": "éditeur de logiciels pour véhicules autonomes, valorisé à plusieurs milliards",
-     "fit": "« Conduct research on pretraining world-action foundation model »",
-     "pont": "stage aux États-Unis : « Sunnyvale, California, United States »"
-    },
-    "score": 93,
     "statut": "retenue"
    }
   },
@@ -3597,23 +3595,6 @@
    }
   },
   "Cisco": {
-   "2023762": {
-    "conditions": "Londres, offre de vivier (poste pas forcément ouvert), graduate degree exigé et PhD préféré (éligibilité floue), dates non précisées",
-    "notes": [
-     3,
-     4,
-     3,
-     4
-    ],
-    "preuves": {
-     "app": "« collaborate closely with experienced researchers, engineers, and product partners »",
-     "eco": "big tech réseau américaine",
-     "fit": "« use statistics, data science, and AI/ML techniques to analyze large-scale BGP data »",
-     "pont": "entreprise américaine (siège à San Jose)"
-    },
-    "score": 67,
-    "statut": "retenue"
-   },
    "2024366": {
     "conditions": "Lysaker (Oslo), 15 juin - 6 août 2027 (~8 sem.), hybride, droit de vivre et travailler en Norvège exigé, offre de vivier",
     "notes": [
@@ -3822,23 +3803,6 @@
    }
   },
   "Cohere": {
-   "73bd3e2b-6597-4124-b64b-1e5dbc32e785": {
-    "conditions": "Winter 2027, 4-6 mois temps plein (dates non précisées), PhD exigé sauf candidats non-PhD exceptionnels, autorisation de travail dans le pays exigée",
-    "notes": [
-     5,
-     4,
-     5,
-     4
-    ],
-    "preuves": {
-     "app": "« collaborate with Cohere researchers and tools on designing and implementing novel research ideas »",
-     "eco": "Cohere, cité en exemple de la note 4",
-     "fit": "« Conduct cutting-edge machine learning research, building and training large language models »",
-     "pont": "stage aux États-Unis : « San Francisco · Europe · London »"
-    },
-    "score": 93,
-    "statut": "retenue"
-   },
    "8c035d3d-081d-4c8a-914a-72f4efaad254": {
     "conditions": "Winter 2027 (dates non précisées), 3 à 6 mois, remote possible, rémunération non précisée",
     "notes": [
@@ -3960,23 +3924,6 @@
      "pont": "entreprise américaine (siège à Chicago)"
     },
     "score": 75,
-    "statut": "retenue"
-   },
-   "7991171": {
-    "conditions": "Montréal, été 2027 (dates non précisées), logement fourni, rémunération non précisée ; master ou PhD (préféré), diplôme entre déc. 2027 et juin 2028",
-    "notes": [
-     5,
-     3,
-     3,
-     4
-    ],
-    "preuves": {
-     "app": "« build a professional relationship with an experienced mentor in your field »",
-     "eco": "société de trading de Chicago, connue dans le milieu quant",
-     "fit": "« Designing and implementing large scale deep learning models »",
-     "pont": "entreprise américaine (siège à Chicago)"
-    },
-    "score": 81,
     "statut": "retenue"
    },
    "7991196": {
@@ -4261,6 +4208,23 @@
     "score": 76,
     "statut": "retenue"
    },
+   "216226": {
+    "conditions": "Burnaby (Vancouver), début mai 2027, 8 mois, 65-70 k CAD/an ; droit de travailler au Canada exigé",
+    "notes": [
+     3,
+     4,
+     3,
+     4
+    ],
+    "preuves": {
+     "app": "« Reporting to a Senior Software Engineer and paired with an engineering mentor »",
+     "eco": "grand éditeur de jeux vidéo américain",
+     "fit": "« contribute to game features, engine systems and tech initiatives »",
+     "pont": "entreprise américaine (siège à Redwood City)"
+    },
+    "score": 67,
+    "statut": "retenue"
+   },
    "216227": {
     "conditions": "16 semaines, 65-70 k CAD/an, Vancouver ; annonce mentionne été 2026 et 2027 (incohérent) ; droit de travailler au Canada exigé, pas de sponsoring",
     "notes": [
@@ -4277,6 +4241,40 @@
     },
     "score": 79,
     "statut": "retenue"
+   },
+   "216230": {
+    "conditions": "Burnaby (Vancouver), début mai 2027, 8 mois, 65-70 k CAD/an ; droit de travailler au Canada exigé ; undergrad",
+    "notes": [
+     3,
+     4,
+     3,
+     3
+    ],
+    "preuves": {
+     "app": "« You will report to the Development Director. »",
+     "eco": "grand éditeur de jeux vidéo américain",
+     "fit": "« Collaborate with designers, software engineers and animators to develop gameplay features for the world's biggest sports game »",
+     "pont": "entreprise américaine (siège à Redwood City)"
+    },
+    "score": 64,
+    "statut": "limite"
+   },
+   "216231": {
+    "conditions": "Burnaby (Vancouver), début mai 2027, 8 mois, 65-70 k CAD/an ; droit de travailler au Canada exigé",
+    "notes": [
+     3,
+     4,
+     3,
+     3
+    ],
+    "preuves": {
+     "app": "« reporting to the Development Director »",
+     "eco": "grand éditeur de jeux vidéo américain",
+     "fit": "« You will get to design, implement, debug and maintain code for game features and/or components »",
+     "pont": "entreprise américaine (siège à Redwood City)"
+    },
+    "score": 64,
+    "statut": "limite"
    },
    "216236": {
     "conditions": "Été 2027, 16 sem., Vancouver, 65-70 k CAD annualisé, profil undergrad visé, autorisation de travail au Canada exigée, sans sponsoring",
@@ -4811,11 +4809,19 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
+   "https://careers.ibm.com/careers/JobDetail?jobId=128711": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
    "https://careers.ibm.com/careers/JobDetail?jobId=128716": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
    "https://careers.ibm.com/careers/JobDetail?jobId=128784": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
+   "https://careers.ibm.com/careers/JobDetail?jobId=128790": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
@@ -4828,6 +4834,10 @@
     "statut": "illisible"
    },
    "https://careers.ibm.com/careers/JobDetail?jobId=128807": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
+   "https://careers.ibm.com/careers/JobDetail?jobId=128815": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
@@ -4856,6 +4866,10 @@
     "statut": "illisible"
    },
    "https://careers.ibm.com/careers/JobDetail?jobId=128922": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
+   "https://careers.ibm.com/careers/JobDetail?jobId=128929": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
@@ -4943,6 +4957,14 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
+   "https://careers.ibm.com/careers/JobDetail?jobId=130092": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
+   "https://careers.ibm.com/careers/JobDetail?jobId=130094": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
    "https://careers.ibm.com/careers/JobDetail?jobId=130095": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
@@ -4951,7 +4973,15 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
+   "https://careers.ibm.com/careers/JobDetail?jobId=130098": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
    "https://careers.ibm.com/careers/JobDetail?jobId=130103": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
+   "https://careers.ibm.com/careers/JobDetail?jobId=130110": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
@@ -4995,6 +5025,10 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
+   "https://careers.ibm.com/careers/JobDetail?jobId=131081": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
    "https://careers.ibm.com/careers/JobDetail?jobId=131175": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
@@ -5015,6 +5049,10 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
+   "https://careers.ibm.com/careers/JobDetail?jobId=131292": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
    "https://careers.ibm.com/careers/JobDetail?jobId=131306": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
@@ -5023,7 +5061,15 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
+   "https://careers.ibm.com/careers/JobDetail?jobId=131367": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
    "https://careers.ibm.com/careers/JobDetail?jobId=131537": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
+   "https://careers.ibm.com/careers/JobDetail?jobId=131545": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
@@ -5039,6 +5085,10 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
+   "https://careers.ibm.com/careers/JobDetail?jobId=131910": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
    "https://careers.ibm.com/careers/JobDetail?jobId=131988": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
@@ -5047,15 +5097,11 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
+   "https://careers.ibm.com/careers/JobDetail?jobId=132000": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
    "https://careers.ibm.com/careers/JobDetail?jobId=132068": {
-    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
-    "statut": "illisible"
-   },
-   "https://careers.ibm.com/careers/JobDetail?jobId=132416": {
-    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
-    "statut": "illisible"
-   },
-   "https://careers.ibm.com/careers/JobDetail?jobId=132423": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
@@ -5071,19 +5117,19 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
-   "https://careers.ibm.com/careers/JobDetail?jobId=132567": {
-    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
-    "statut": "illisible"
-   },
    "https://careers.ibm.com/careers/JobDetail?jobId=132569": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
-   "https://careers.ibm.com/careers/JobDetail?jobId=132704": {
+   "https://careers.ibm.com/careers/JobDetail?jobId=132699": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
    "https://careers.ibm.com/careers/JobDetail?jobId=132708": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
+   "https://careers.ibm.com/careers/JobDetail?jobId=132776": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
@@ -5104,6 +5150,10 @@
     "statut": "illisible"
    },
    "https://careers.ibm.com/careers/JobDetail?jobId=133062": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
+   "https://careers.ibm.com/careers/JobDetail?jobId=133067": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
@@ -5135,14 +5185,6 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
-   "https://careers.ibm.com/careers/JobDetail?jobId=133664": {
-    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
-    "statut": "illisible"
-   },
-   "https://careers.ibm.com/careers/JobDetail?jobId=133667": {
-    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
-    "statut": "illisible"
-   },
    "https://careers.ibm.com/careers/JobDetail?jobId=133669": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
@@ -5171,7 +5213,7 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
-   "https://careers.ibm.com/careers/JobDetail?jobId=134474": {
+   "https://careers.ibm.com/careers/JobDetail?jobId=134536": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
@@ -5187,7 +5229,11 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
-   "https://careers.ibm.com/careers/JobDetail?jobId=134827": {
+   "https://careers.ibm.com/careers/JobDetail?jobId=134934": {
+    "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
+    "statut": "illisible"
+   },
+   "https://careers.ibm.com/careers/JobDetail?jobId=134939": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
@@ -5211,7 +5257,7 @@
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
-   "https://careers.ibm.com/careers/JobDetail?jobId=135624": {
+   "https://careers.ibm.com/careers/JobDetail?jobId=135627": {
     "motif": "texte trop court (0 caractères, source page) : page protégée ou offre fermée ?",
     "statut": "illisible"
    },
@@ -5278,40 +5324,6 @@
      "pont": "stage aux États-Unis : « Lieu : Chicago, United States »"
     },
     "score": 80,
-    "statut": "retenue"
-   },
-   "4907430101": {
-    "conditions": "10 sem. à partir du 7 juin 2027, Chicago ou New York, 300 k$ annualisé",
-    "notes": [
-     5,
-     3,
-     5,
-     4
-    ],
-    "preuves": {
-     "app": "« Develop your research skills with support and feedback from a dedicated mentor and intern lead »",
-     "eco": "société de trading néerlandaise connue dans le milieu quant",
-     "fit": "« Team up with Deep Learning Researchers on real projects to build or improve models »",
-     "pont": "stage aux États-Unis : « Chicago, United States; New York, United States »"
-    },
-    "score": 89,
-    "statut": "retenue"
-   },
-   "4912874101": {
-    "conditions": "9 semaines dès la dernière semaine de juin 2027, Amsterdam, rémunération compétitive + logement ; Master/PhD, diplôme en 2028",
-    "notes": [
-     5,
-     3,
-     3,
-     4
-    ],
-    "preuves": {
-     "app": "« support and feedback from a dedicated mentor and intern lead »",
-     "eco": "société de trading néerlandaise connue dans le milieu quant",
-     "fit": "« Team up with Deep Learning Researchers on real projects to build or improve models »",
-     "pont": "bureau à New York ouvert en août 2026, plus Chicago (imc.com, communiqué du 11 août 2026)"
-    },
-    "score": 81,
     "statut": "retenue"
    },
    "4941206101": {
@@ -5849,23 +5861,6 @@
     "score": 85,
     "statut": "retenue"
    },
-   "7982648": {
-    "conditions": "10 semaines, salaire de base estimé 300 000 $/an, CPT/OPT acceptés, dates non précisées",
-    "notes": [
-     3,
-     4,
-     5,
-     4
-    ],
-    "preuves": {
-     "app": "« receiving daily 1:1 mentorship from experienced quant researchers, traders, and developers »",
-     "eco": "société de trading quantitatif de premier plan",
-     "fit": "« develop your own predictive models and automated trading strategies for live trading »",
-     "pont": "stage aux États-Unis : « Chicago; New York »"
-    },
-    "score": 75,
-    "statut": "retenue"
-   },
    "8000323": {
     "conditions": "Londres ou Amsterdam, 10 semaines, dates et salaire non précisés",
     "notes": [
@@ -5934,23 +5929,6 @@
     "score": 66,
     "statut": "retenue"
    },
-   "8010307": {
-    "conditions": "Programme de 10 semaines, dates non précisées, Londres ou Amsterdam",
-    "notes": [
-     4,
-     4,
-     3,
-     5
-    ],
-    "preuves": {
-     "app": "« being mentored by experienced quant researchers, traders, and developers »",
-     "eco": "société de trading quantitatif de premier plan",
-     "fit": "« develop your own predictive models and automated trading strategies for live trading »",
-     "pont": "entreprise américaine (siège à Chicago)"
-    },
-    "score": 79,
-    "statut": "retenue"
-   },
    "8027860": {
     "conditions": "Hong Kong ou Shanghai, dates et rémunération non précisées ; intérêt pour un CDI en APAC attendu",
     "notes": [
@@ -5968,23 +5946,6 @@
     "score": 76,
     "statut": "retenue"
    },
-   "8027900": {
-    "conditions": "Hong Kong ou Shanghai, 10 sem. ; intérêt exigé pour un CDI à Hong Kong ou Shanghai",
-    "notes": [
-     4,
-     4,
-     3,
-     4
-    ],
-    "preuves": {
-     "app": "« with mentorship from experienced quants/traders »",
-     "eco": "société de trading quantitatif de premier plan",
-     "fit": "« You will help build predictive models »",
-     "pont": "entreprise américaine (siège à Chicago)"
-    },
-    "score": 76,
-    "statut": "retenue"
-   },
    "8027923": {
     "conditions": "Hong Kong ou Shanghai, dates et rémunération non précisées ; intérêt pour un CDI en APAC demandé ; fit hésitation 3/4",
     "notes": [
@@ -5997,40 +5958,6 @@
      "app": "« ship code that runs in production »",
      "eco": "société de trading quantitatif de premier plan",
      "fit": "« Develop and maintain ETL pipelines that source, normalize, and deliver vendor data »",
-     "pont": "entreprise américaine (siège à Chicago)"
-    },
-    "score": 67,
-    "statut": "retenue"
-   },
-   "8027938": {
-    "conditions": "Hong Kong, Shanghai ou Singapour, dates et rémunération non précisées, publications solides attendues, intérêt pour un CDI en Asie",
-    "notes": [
-     5,
-     4,
-     3,
-     4
-    ],
-    "preuves": {
-     "app": "« implementing an open-ended research project from concept to production »",
-     "eco": "société de trading quantitatif de premier plan",
-     "fit": "« continuously improving model design, tools, and infrastructure »",
-     "pont": "entreprise américaine (siège à Chicago)"
-    },
-    "score": 85,
-    "statut": "retenue"
-   },
-   "8027939": {
-    "conditions": "Singapour, 10 semaines, dates et rémunération non précisées ; intérêt pour un CDI à Singapour attendu ; hésitation fit 3/4 (quant research mêlant modélisation et trading)",
-    "notes": [
-     3,
-     4,
-     3,
-     4
-    ],
-    "preuves": {
-     "app": "« research projects with mentorship from experienced quants/traders »",
-     "eco": "société de trading quantitatif de premier plan",
-     "fit": "« You will help build predictive models, leveraging one of the largest supercomputers in the world »",
      "pont": "entreprise américaine (siège à Chicago)"
     },
     "score": 67,
@@ -6119,23 +6046,6 @@
      "pont": "stage aux États-Unis : « Chicago; New York »"
     },
     "score": 93,
-    "statut": "retenue"
-   },
-   "8059384": {
-    "conditions": "Londres ou Paris, programme M1/M2 pour écoles françaises exigeant un stage de recherche, dates et rémunération non précisées",
-    "notes": [
-     4,
-     4,
-     3,
-     4
-    ],
-    "preuves": {
-     "app": "« work closely with a mentor from one of our trading teams »",
-     "eco": "société de trading quantitatif de premier plan",
-     "fit": "« We build predictive models from big data and develop algorithms to automatically execute trades »",
-     "pont": "entreprise américaine (siège à Chicago)"
-    },
-    "score": 76,
     "statut": "retenue"
    }
   },
@@ -6613,6 +6523,23 @@
     "score": 77,
     "statut": "retenue"
    },
+   "200041778": {
+    "conditions": "Inde, dates, durée et rémunération non précisées",
+    "notes": [
+     3,
+     5,
+     3,
+     3
+    ],
+    "preuves": {
+     "app": "« Participate in the peer review process and act on feedback »",
+     "eco": "Microsoft, cité en exemple de la note 5",
+     "fit": "« Use data exploration techniques to discover new questions or opportunities within your problem area »",
+     "pont": "entreprise américaine (siège à Redmond, région de Seattle)"
+    },
+    "score": 68,
+    "statut": "retenue"
+   },
    "200047371": {
     "conditions": "Israël, dates non précisées, M.Sc. avec au moins 3 semestres restants exigé (à vérifier)",
     "notes": [
@@ -6645,40 +6572,6 @@
      "pont": "stage aux États-Unis : « California, Mountain View »"
     },
     "score": 85,
-    "statut": "retenue"
-   },
-   "200050324": {
-    "conditions": "Dates non précisées (Singapour) ; au moins un semestre d'études restant après le stage",
-    "notes": [
-     5,
-     5,
-     3,
-     4
-    ],
-    "preuves": {
-     "app": "« Collaborate closely with team members on developing systems from prototyping to production level »",
-     "eco": "Microsoft, cité en exemple de la note 5",
-     "fit": "« Implement prototypes of scalable systems in AI applications »",
-     "pont": "entreprise américaine (siège à Redmond, région de Seattle)"
-    },
-    "score": 89,
-    "statut": "retenue"
-   },
-   "200052124": {
-    "conditions": "Hong Kong, dates et rémunération non précisées ; au moins un semestre d'études restant après le stage",
-    "notes": [
-     5,
-     5,
-     3,
-     4
-    ],
-    "preuves": {
-     "app": "« Collaborate closely with team members on developing systems from prototyping to production level »",
-     "eco": "Microsoft, cité en exemple de la note 5",
-     "fit": "« Implement prototypes of scalable systems in AI applications »",
-     "pont": "entreprise américaine (siège à Redmond, région de Seattle)"
-    },
-    "score": 89,
     "statut": "retenue"
    },
    "200053346": {
@@ -6798,23 +6691,6 @@
      "pont": "entreprise américaine (siège à Redmond, région de Seattle)"
     },
     "score": 68,
-    "statut": "retenue"
-   },
-   "200060937": {
-    "conditions": "Redmond (WA), annonce sans missions ni dates ni salaire (texte vide) : à vérifier",
-    "notes": [
-     3,
-     5,
-     5,
-     3
-    ],
-    "preuves": {
-     "app": "non précisé",
-     "eco": "Microsoft, cité en exemple de la note 5",
-     "fit": "« Research Intern - Audio and Acoustics »",
-     "pont": "stage aux États-Unis : « United States, Washington, Redmond »"
-    },
-    "score": 76,
     "statut": "retenue"
    }
   },
@@ -7063,23 +6939,6 @@
    }
   },
   "NXP": {
-   "R-10064090": {
-    "conditions": "Eindhoven, 9 mois minimum (stage/thèse), date de début non précisée : friction forte avec avril-août ; Fit hésitation 4/5",
-    "notes": [
-     4,
-     2,
-     3,
-     3
-    ],
-    "preuves": {
-     "app": "« Working with an international team of scientists and engineers »",
-     "eco": "groupe européen de semi-conducteurs, peu lisible côté tech logicielle (hésitation 2/3)",
-     "fit": "« Development of new algorithms (signal processing/ML) for specific use cases like object detection »",
-     "pont": "site à San Jose (builtin.com)"
-    },
-    "score": 65,
-    "statut": "retenue"
-   },
    "R-10065569": {
     "conditions": "Toulouse, dates et rémunération non précisées, profil élève ingénieur ou M2 / final year (éligibilité floue)",
     "notes": [
@@ -7112,23 +6971,6 @@
      "pont": "site à San Jose (builtin.com)"
     },
     "score": 74,
-    "statut": "retenue"
-   },
-   "R-10067224": {
-    "conditions": "Eindhoven, stage de mémoire de master (éligibilité floue), dates et rémunération non précisées",
-    "notes": [
-     4,
-     2,
-     3,
-     3
-    ],
-    "preuves": {
-     "app": "non précisé",
-     "eco": "groupe européen de semi-conducteurs, peu lisible côté tech logicielle (hésitation 2/3)",
-     "fit": "« Develop an AI-Agent that will use an internal device exploration and characterization tool »",
-     "pont": "site à San Jose (builtin.com)"
-    },
-    "score": 65,
     "statut": "retenue"
    }
   },
@@ -8018,23 +7860,6 @@
    }
   },
   "Point72": {
-   "7297657002": {
-    "conditions": "Dates et durée non précisées ; 120-180 k$/an au prorata ; Londres/Paris/Hong Kong/Tokyo",
-    "notes": [
-     4,
-     3,
-     3,
-     3
-    ],
-    "preuves": {
-     "app": "non précisé",
-     "eco": "fonds d'investissement américain connu (hésitation 3/4)",
-     "fit": "« Identify features and relationships useful for the predictive modeling of market dynamics »",
-     "pont": "entreprise américaine (bureaux à New York)"
-    },
-    "score": 69,
-    "statut": "retenue"
-   },
    "7297666002": {
     "conditions": "New York, Londres ou Paris ; dates, durée et rémunération non précisées",
     "notes": [
@@ -8050,57 +7875,6 @@
      "pont": "stage aux États-Unis : « New York, London, or Paris »"
     },
     "score": 77,
-    "statut": "retenue"
-   },
-   "7302611002": {
-    "conditions": "Dates et rémunération non précisées ; doctorants recherchés (« desirable »), éligibilité floue",
-    "notes": [
-     4,
-     3,
-     5,
-     3
-    ],
-    "preuves": {
-     "app": "« hands on guidance from our large team of experienced portfolio managers and researchers »",
-     "eco": "fonds d'investissement américain connu (hésitation 3/4)",
-     "fit": "« manage all aspects of the research process including methodology selection, data collection and analysis, implementation and testing »",
-     "pont": "stage aux États-Unis : « Lieu : New York »"
-    },
-    "score": 77,
-    "statut": "retenue"
-   },
-   "7586061002": {
-    "conditions": "New York, sessions automne 2026, printemps 2027 et été 2027 ; 120 000-180 000 $/an au prorata ; Master/PhD souhaité",
-    "notes": [
-     4,
-     3,
-     5,
-     4
-    ],
-    "preuves": {
-     "app": "« Our interns will work closely with our team, receive comprehensive, in-depth training »",
-     "eco": "fonds d'investissement américain connu (hésitation 3/4)",
-     "fit": "« Conducting full pipeline signal research, from ideation, via implementation and backtesting »",
-     "pont": "stage aux États-Unis : « Lieu : New York »"
-    },
-    "score": 80,
-    "statut": "retenue"
-   },
-   "8018862002": {
-    "conditions": "New York, dates, durée et rémunération non précisées",
-    "notes": [
-     4,
-     3,
-     5,
-     4
-    ],
-    "preuves": {
-     "app": "« Launching identified signals into production »",
-     "eco": "fonds d'investissement américain connu (hésitation 3/4)",
-     "fit": "« Building and testing the performance of trading signals based on NLP and financial features »",
-     "pont": "stage aux États-Unis : « Lieu : New York »"
-    },
-    "score": 80,
     "statut": "retenue"
    }
   },
@@ -8286,6 +8060,23 @@
    "01871884": {
     "motif": "GET https://careers.rtx.com/global/en/job/01871884/Software-Engineering-Intern-Summer-2027 : HTTP 410 — <!DOCTYPE html>  <!--[if lt IE 7]>      <html class=\"lt-ie7\" lang=\"en\"> <![endif]-->  <!--[if IE",
     "statut": "illisible"
+   },
+   "01876918": {
+    "conditions": "Été 2027, Melbourne (FL), sur site, 37-82 k$/an ; autorisation de travail US sans sponsoring de l'entreprise exigée",
+    "notes": [
+     3,
+     2,
+     5,
+     4
+    ],
+    "preuves": {
+     "app": "« Work in close coordination with a mentor using Collins Aerospace engineering processes »",
+     "eco": "groupe de défense, peu lisible comme signal tech à SF (hésitation 2/3)",
+     "fit": "« Develop tools used in Avionics for software development in a Dev Ops environment »",
+     "pont": "stage aux États-Unis : « melbourne, Florida, United States of America »"
+    },
+    "score": 67,
+    "statut": "retenue"
    }
   },
   "Ramp": {
@@ -9186,23 +8977,6 @@
    }
   },
   "Squarepoint": {
-   "243853": {
-    "conditions": "Dates non précisées ; 150 000 $/an de base à New York",
-    "notes": [
-     3,
-     3,
-     5,
-     3
-    ],
-    "preuves": {
-     "app": "non précisé",
-     "eco": "fonds quantitatif connu dans le milieu quant",
-     "fit": "« Analyze large data sets using advanced statistical methods to identify trading opportunities »",
-     "pont": "stage aux États-Unis : « London, Paris, New York »"
-    },
-    "score": 68,
-    "statut": "retenue"
-   },
    "6201998": {
     "conditions": "Singapour, toute saison, 12 sem. minimum ; avant-dernière année exigée ; rémunération non précisée",
     "notes": [
@@ -9634,23 +9408,6 @@
      "pont": "stage aux États-Unis : « New York, Chicago »"
     },
     "score": 80,
-    "statut": "retenue"
-   },
-   "8168750": {
-    "conditions": "Singapour/Hong Kong/Shanghai/Sydney ; dates, durée et rémunération non précisées",
-    "notes": [
-     4,
-     3,
-     3,
-     4
-    ],
-    "preuves": {
-     "app": "« Mentors from your alma mater and other top institutions »",
-     "eco": "société de trading quantitatif connue dans le milieu quant",
-     "fit": "« Designing, implementing, and deploying mid- to high-frequency trading algorithms »",
-     "pont": "entreprise américaine (siège à New York)"
-    },
-    "score": 72,
     "statut": "retenue"
    },
    "8212179": {
@@ -10213,23 +9970,6 @@
      "app": "« Waymo interns partner with leaders in the industry on projects »",
      "eco": "Waymo, cité en exemple de la note 5",
      "fit": "« Eval pipeline optimization (model level) »",
-     "pont": "stage aux États-Unis : « Mountain View, CA, USA »"
-    },
-    "score": 97,
-    "statut": "retenue"
-   },
-   "8257801": {
-    "conditions": "Été 2027, 70 $/h (Master), MS/PhD, solide historique de publications exigé, hybride",
-    "notes": [
-     5,
-     5,
-     5,
-     4
-    ],
-    "preuves": {
-     "app": "« Waymo interns partner with leaders in the industry on projects that create impact to the company »",
-     "eco": "Waymo, cité en exemple de la note 5",
-     "fit": "« Research, implement, and evaluate zero shot object detection models for autonomous driving »",
      "pont": "stage aux États-Unis : « Mountain View, CA, USA »"
     },
     "score": 97,

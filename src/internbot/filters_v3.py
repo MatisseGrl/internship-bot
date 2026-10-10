@@ -166,6 +166,14 @@ FRANCE_HORS_IDF = [
     "bourges", "crolles", "meylan", "montbonnot", "rousset", "villeneuve loubet", "nancy",
     "dijon", "toulon", "cannes", "antibes", "clermont ferrand",
     "rouen", "caen", "le havre", "angers", "metz", "reims", "perpignan",
+    # Sites vus dans les offres (Orange, Thales, Airbus, MBDA…) et régions administratives.
+    "lannion", "brest", "colomiers", "saint nazaire", "merignac", "le haillan", "pessac",
+    "saint medard en jalles", "villeneuve d ascq", "la ciotat", "marignane", "biot",
+    "villeurbanne", "orleans", "limoges", "poitiers", "brive", "tarbes", "bayonne", "nimes",
+    "avignon", "saint etienne", "annecy", "chambery", "besancon", "mulhouse", "amiens",
+    "le mans", "vannes", "lorient", "quimper", "la rochelle", "niort", "cherbourg", "cholet",
+    "occitanie", "nouvelle aquitaine", "auvergne rhone alpes", "hauts de france", "grand est",
+    "normandie", "pays de la loire", "centre val de loire", "bourgogne franche comte",
 ]
 ILE_DE_FRANCE = [
     "ile de france", "idf", "grand paris", "region parisienne", "paris",

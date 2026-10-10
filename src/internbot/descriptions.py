@@ -24,6 +24,8 @@ from dataclasses import dataclass
 from html.parser import HTMLParser
 from typing import Any
 
+import requests
+
 from internbot.config import CompanyConfig
 from internbot.errors import HttpError, InternbotError
 from internbot.http import HttpClient
@@ -265,7 +267,7 @@ class DescriptionFetcher:
         return self._page(company, job)
 
     def _apple(self, company: CompanyConfig, job: Job) -> Description:
-        page = self.http.request("GET", job.url, headers={"Accept": "text/html"}).text
+        page = _html(self.http.request("GET", job.url, headers={"Accept": "text/html"}))
         match = _APPLE_DATA.search(page)
         if not match:
             raise DescriptionError("données de la page Apple introuvables")
@@ -289,8 +291,16 @@ class DescriptionFetcher:
         return Description("\n".join(parts), "page apple")
 
     def _page(self, company: CompanyConfig, job: Job) -> Description:
-        page = self.http.request("GET", job.url, headers={"Accept": "text/html"}).text
+        page = _html(self.http.request("GET", job.url, headers={"Accept": "text/html"}))
         text = jobposting_text(page)
         if text and len(text) >= MIN_CHARS:
             return Description(text, "json-ld")
         return Description(html_to_text(page, skip_chrome=True), "page")
+
+
+def _html(resp: requests.Response) -> str:
+    """Texte d'une page HTML. Sans charset dans l'en-tête, `requests` suppose du Latin-1
+    (RFC 2616) alors que les sites carrières sont en UTF-8 : « élève » devenait « Ã©lÃ¨ve »."""
+    if "charset" not in (resp.headers.get("Content-Type") or "").lower():
+        return resp.content.decode("utf-8", errors="replace")
+    return resp.text

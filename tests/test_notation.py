@@ -249,3 +249,13 @@ def test_notes_du_depot_lisibles() -> None:
     path = ROOT / "notation" / "notes.json"
     if path.exists():
         assert len(Notation.load(path)) > 0
+
+
+def test_poste_de_recherche_ecarte_sur_son_intitule() -> None:
+    """Décision de Matisse : aucun poste de recherche ; l'intitulé suffit comme preuve,
+    même quand la page de l'offre est illisible."""
+    offre = {**OFFRE, "title": "Research Intern - Reinforcement Learning, Robotics", "texte": ""}
+    n = note(
+        eligible=False, motif="recherche", preuve_motif="Research Intern - Reinforcement Learning"
+    )
+    assert evaluer(n, offre, ACME) == {"statut": ECARTEE}
