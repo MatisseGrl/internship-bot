@@ -172,7 +172,9 @@ texte complet de chaque annonce, et le bot applique les verdicts enregistrés da
 - `notation/entreprises.yaml` : Écosystème SF et Pont vers SF hors US, une note et sa preuve
   par entreprise ;
 - `notation/CONSIGNES.md` : comment noter en série (format des notes, verdicts) ;
-- l'import refuse toute note dont une citation n'est pas mot pour mot dans le texte de l'offre.
+- l'import refuse toute note dont une citation n'est pas mot pour mot dans le texte de l'offre ;
+- décision de Matisse : **aucun poste de recherche** (Research Intern, Researcher, Research
+  Scientist, thèse) ; les Research Engineer, Applied Scientist et Data Scientist restent notés.
 
 ```bash
 python -m internbot --a-noter travail/ --state .state/state.json   # texte des offres non notées

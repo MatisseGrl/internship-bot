@@ -101,3 +101,11 @@ def test_smartrecruiters_via_api() -> None:
         "Lieu : Paris, fr",
         "Missions",
     ]
+
+
+@responses.activate
+def test_page_utf8_sans_charset_bien_decodee() -> None:
+    corps = f"<main><p>Élève ingénieur : {LONG}</p></main>".encode()
+    responses.get("https://example.com/jobs/1", body=corps, content_type="text/html")
+    description = fetcher(company(provider="workday")).fetch(job("1"))
+    assert description.text.startswith("Élève ingénieur")
