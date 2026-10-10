@@ -8,6 +8,7 @@ from typing import Any
 from internbot.config import parse_config
 from internbot.errors import ProviderError
 from internbot.models import Job
+from internbot.notation import Notation
 from internbot.notifiers.base import Notifier
 from internbot.runner import Runner
 from internbot.storage import StateStore
@@ -525,3 +526,45 @@ def test_v3_migration_dry_run_previews_without_writing(tmp_path: Path) -> None:
     )
     assert [j.job_id for j in n.digests[0][1]] == ["hidden"]
     assert (tmp_path / "state.json").read_text(encoding="utf-8") == before
+
+
+def test_offres_ecartees_par_la_grille_absentes_de_la_liste(tmp_path: Path) -> None:
+    cfg = config()
+    FakeProvider.jobs["Acme"] = [job("garde"), job("ecartee"), job("pas-notee")]
+    notation = Notation(None)
+    notation.ecartee("Acme", "ecartee")
+    notation.gardee("Acme", "garde", {"statut": "retenue", "score": 88})
+    run_snap(tmp_path, cfg, RecordingNotifier(), notation=notation)
+    ids = [j["job_id"] for j in snapshot(tmp_path)["companies"]["Acme"]["jobs"]]
+    assert ids == ["garde", "pas-notee"]
+
+    n = RecordingNotifier()
+    run_snap(tmp_path, cfg, n, notation=notation, send_all=True)
+    (listed, _), *_ = n.listings
+    assert {j.job_id for j in listed} == {"garde", "pas-notee"}
+
+
+def test_offre_ecartee_retiree_du_resume_a_verifier(tmp_path: Path) -> None:
+    cfg = config()
+    seeded(tmp_path, cfg, now=MORNING)
+    FakeProvider.jobs["Acme"] = [
+        job("r1", title="AI Solution Architect Intern"),
+        job("r2", title="AI Solution Architect Intern II"),
+    ]
+    _, state = run(tmp_path, cfg, RecordingNotifier(), now=MORNING)
+    assert {j.job_id for j in state.review_queue()} == {"r1", "r2"}
+
+    notation = Notation(None)
+    notation.ecartee("Acme", "r1")
+    n = RecordingNotifier()
+    _, state = run(tmp_path, cfg, n, now=MORNING + timedelta(hours=1), notation=notation)
+    assert [j.job_id for j in n.digests[0][1]] == ["r2"]
+    assert state.review_queue() == []
+
+    seeded(tmp_path, cfg)
+    FakeProvider.jobs["Acme"] = [job("r3", title="AI Solution Architect Intern III")]
+    run(tmp_path, cfg, RecordingNotifier(), now=MORNING + timedelta(days=1))
+    notation.ecartee("Acme", "r3")
+    n = RecordingNotifier()
+    _, state = run(tmp_path, cfg, n, now=MORNING + timedelta(days=1, hours=1), notation=notation)
+    assert n.digests == [] and state.review_queue() == []  # rien à envoyer : file vidée

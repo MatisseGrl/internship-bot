@@ -32,6 +32,7 @@ from internbot.filters import JobClassifier
 from internbot.filters_v3 import DROP, NOTIFY, REVIEW, Verdict
 from internbot.http import HttpClient
 from internbot.models import Job
+from internbot.notation import Notation
 from internbot.notifiers.base import Notifier
 from internbot.providers import get_provider_class
 from internbot.providers.base import Provider
@@ -115,6 +116,7 @@ class Runner:
         force_seed: bool = False,
         send_all: bool = False,
         snapshot_path: Path | None = None,
+        notation: Notation | None = None,
         now: datetime | None = None,
     ) -> None:
         self.config = config
@@ -126,6 +128,9 @@ class Runner:
         self.now = now or datetime.now(UTC)
         self.send_all = send_all
         self.snapshot_path = snapshot_path
+        # Verdicts de la grille de notation (notation/notes.json) : les offres écartées sont
+        # retirées de current.json (/offres, --send-all) et du résumé « à vérifier ».
+        self.notation = notation or Notation(None)
         self._providers: dict[str, Provider] = {}
         # Offres ouvertes qui passent les filtres, par entreprise traitée avec succès.
         self._current: dict[str, list[Job]] = {}
@@ -340,9 +345,12 @@ class Runner:
         jobs: list[Job],
         classifier: JobClassifier,
     ) -> list[Job]:
-        """Offres ouvertes « notify » ou « review » (pour current.json / --send-all / /offres)."""
+        """Offres ouvertes « notify » ou « review » (pour current.json / --send-all / /offres),
+        sauf celles que la grille de notation a écartées."""
         out = []
         for job in jobs:
+            if self.notation.est_ecartee(*job.key):
+                continue
             if classifier.title_verdict(job.title).status == DROP:
                 continue
             job = self._resolve_location(provider, company, job)
@@ -451,8 +459,9 @@ class Runner:
 
     def _maybe_review_digest(self) -> None:
         """Résumé quotidien des offres « à vérifier » : au premier passage après 9 h (Paris)."""
-        queue = self.state.review_queue()
+        queue = [j for j in self.state.review_queue() if not self.notation.est_ecartee(*j.key)]
         if not queue:
+            self.state.clear_queue("review_queue")
             return
         local = self.now.astimezone(PARIS)
         today = local.date().isoformat()

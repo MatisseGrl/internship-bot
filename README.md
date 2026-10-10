@@ -149,6 +149,33 @@ Filtres spécifiques à une entreprise (surcharge champ par champ) :
 > seul récap (« 🔁 Nouveau filtre : … »). Les anciennes clés `title_include`, `keywords_any`,
 > `locations_include`, `locations_exclude` sont ignorées (avertissement au chargement).
 
+### Notation des offres (grille de Matisse)
+
+Après le filtre v3, chaque offre ouverte est notée avec la grille de `notation/GRILLE.md`
+(Fit rôle ×45, Écosystème SF ×20, Pont vers SF ×20, Apprentissage ×15, score /100, seuil 65).
+Le bot n'appelle aucun modèle d'IA : la notation se fait en session Claude Code, en lisant le
+texte complet de chaque annonce, et le bot applique les verdicts enregistrés dans
+`notation/notes.json` (versionné sur `main`) :
+
+| Verdict | Dans `/offres` |
+|---|---|
+| retenue (score ≥ 65) | gardée |
+| limite (passe avec un seul jeu de poids), à trancher (alternance, VIE…), illisible (page protégée) | gardée, à trier à la main |
+| écartée (non éligible, ou sous le seuil) | **supprimée** de `/offres`, de `--send-all` et du résumé « à vérifier » |
+| pas encore notée (nouvelle offre) | gardée |
+
+- `notation/entreprises.yaml` : Écosystème SF et Pont vers SF hors US, une note et sa preuve
+  par entreprise ;
+- `notation/CONSIGNES.md` : comment noter en série (format des notes, verdicts) ;
+- l'import refuse toute note dont une citation n'est pas mot pour mot dans le texte de l'offre.
+
+```bash
+python -m internbot --a-noter travail/ --state .state/state.json   # texte des offres non notées
+# … notes écrites dans travail/notes*.jsonl (voir notation/CONSIGNES.md) …
+python -m internbot --importer-notes travail/ --simulation         # vérifie, n'écrit rien
+python -m internbot --importer-notes travail/                      # met à jour notes.json
+```
+
 ### Autres sections
 
 | Section | Rôle |
@@ -455,6 +482,10 @@ python -m internbot [run] [options]
   --discover X [Y…]   trouve la plateforme (nom, URL « Apply » ou Nom=URL)
   --discover-file F   idem, une entreprise par ligne (# = commentaire)
   --discover-out F    écrit le YAML trouvé dans F
+  --a-noter DOSSIER   exporte le texte des offres ouvertes pas encore notées
+                      (DOSSIER/offres.jsonl, reprend là où il s'est arrêté)
+  --importer-notes D  applique les notes D/notes*.jsonl à notation/notes.json
+  --simulation        avec --importer-notes : vérifie et affiche les verdicts sans écrire
   --company NAME      ne traite qu'une entreprise (même désactivée) — debug
   -v, --verbose       logs détaillés (requêtes, raisons de rejet de chaque offre)
   -c, --config PATH   défaut : config.yaml (ou $INTERNBOT_CONFIG)

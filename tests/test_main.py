@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pytest
+import responses
 
 from internbot.errors import ProviderError
 from internbot.main import EXIT_CONFIG, EXIT_FAILURE, EXIT_OK, main
@@ -126,3 +128,78 @@ def test_status_without_any_run(
     assert main(["--status", "-c", str(cfg_path), "--state", str(tmp_path / "s.json")]) == EXIT_OK
     out = capsys.readouterr().out
     assert "pending" in out and "disabled" in out and "jamais" in out
+
+
+@responses.activate
+def test_a_noter_puis_importer_notes(cfg_path: Path, tmp_path: Path) -> None:
+    """Export du texte des offres ouvertes, notation, import : l'offre écartée disparaît."""
+    state = tmp_path / "s" / "state.json"
+    FakeProvider.jobs["Acme"] = [job("1", title="ML Intern"), job("2", title="Data Intern")]
+    assert main(["run", "-c", str(cfg_path), "--state", str(state)]) == EXIT_OK
+    texte = "You will train and evaluate ranking models with a dedicated mentor. " * 10
+    responses.get("https://example.com/jobs/1", body=f"<p>{texte}</p>")
+    responses.get("https://example.com/jobs/2", status=403)
+
+    work = tmp_path / "travail"
+    assert main(["--a-noter", str(work), "-c", str(cfg_path), "--state", str(state)]) == EXIT_OK
+    rows = [json.loads(line) for line in (work / "offres.jsonl").read_text("utf-8").splitlines()]
+    assert {r["job_id"]: bool(r.get("erreur")) for r in rows} == {"1": False, "2": True}
+    # Relancé : rien n'est retéléchargé.
+    assert main(["--a-noter", str(work), "-c", str(cfg_path), "--state", str(state)]) == EXIT_OK
+    assert len(responses.calls) == 2
+
+    (tmp_path / "notation").mkdir()
+    (tmp_path / "notation" / "entreprises.yaml").write_text(
+        "Acme: {eco: 2, eco_preuve: inconnue, pont: 1, pont_preuve: aucun lien US}\n",
+        encoding="utf-8",
+    )
+    note = {
+        "company": "Acme", "job_id": "1", "eligible": True, "stage": True, "lieu_us": False,
+        "fit": 2, "preuve_fit": "train and evaluate ranking models",
+        "app": 2, "preuve_app": "with a dedicated mentor", "conditions": "non précisé",
+    }  # fmt: skip
+    (work / "notes-1.jsonl").write_text(json.dumps(note) + "\n", encoding="utf-8")
+    assert main(["--importer-notes", str(work), "-c", str(cfg_path)]) == EXIT_OK
+    notes = json.loads((tmp_path / "notation" / "notes.json").read_text("utf-8"))
+    assert notes["ecartees"] == {"Acme": ["1"]}
+    assert notes["offres"]["Acme"]["2"]["statut"] == "illisible"
+
+    # Passage suivant : l'offre écartée n'est plus dans la liste /offres, l'illisible reste.
+    assert main(["run", "-c", str(cfg_path), "--state", str(state)]) == EXIT_OK
+    current = json.loads(state.with_name("current.json").read_text("utf-8"))
+    assert [j["job_id"] for j in current["companies"]["Acme"]["jobs"]] == ["2"]
+
+    # Une citation inventée fait échouer l'import (code 1) sans rien casser.
+    note["preuve_fit"] = "build LLM agents"
+    (work / "notes-1.jsonl").write_text(json.dumps(note) + "\n", encoding="utf-8")
+    assert main(["--importer-notes", str(work), "-c", str(cfg_path)]) == EXIT_FAILURE
+    assert json.loads((tmp_path / "notation" / "notes.json").read_text("utf-8")) == notes
+
+
+def test_importer_notes_en_simulation_n_ecrit_rien(
+    cfg_path: Path, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    work = tmp_path / "travail"
+    work.mkdir()
+    texte = "You will build backend services for our payments platform every day."
+    offre = {
+        "company": "Acme",
+        "job_id": "1",
+        "title": "SWE Intern",
+        "location": "Paris",
+        "texte": texte,
+    }
+    (work / "offres.jsonl").write_text(json.dumps(offre) + "\n", encoding="utf-8")
+    note = {
+        "company": "Acme", "job_id": "1", "eligible": True, "stage": True, "lieu_us": False,
+        "fit": 4, "preuve_fit": "build backend services", "app": 3, "preuve_app": "non précisé",
+    }  # fmt: skip
+    (work / "notes-a.jsonl").write_text(json.dumps(note) + "\n", encoding="utf-8")
+    (tmp_path / "notation").mkdir()
+    (tmp_path / "notation" / "entreprises.yaml").write_text(
+        "Acme: {eco: 4, eco_preuve: x, pont: 3, pont_preuve: y}\n", encoding="utf-8"
+    )
+    args = ["--importer-notes", str(work), "--simulation", "-c", str(cfg_path)]
+    assert main(args) == EXIT_OK
+    assert "retenue      73  Acme — SWE Intern" in capsys.readouterr().out
+    assert not (tmp_path / "notation" / "notes.json").exists()

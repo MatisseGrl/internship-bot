@@ -1,0 +1,630 @@
+# Notes par entreprise de la grille (notation/GRILLE.md) : Écosystème SF et Pont vers SF.
+#
+# eco  : Écosystème SF (1-5), section 3.3 de la grille. On juge la boîte, pas le poste.
+# pont : Pont vers SF (1-4) quand le stage n'est PAS aux États-Unis, section 3.4. Un stage aux
+#        US vaut toujours 5 (décidé offre par offre, avec la citation du lieu).
+#
+# Règles appliquées pour `pont` (grille 3.4, lue à la lettre) :
+#   3 = entreprise américaine (siège aux US), ou bureau US significatif à SF / Bay Area, NYC
+#       ou Seattle dans la même entreprise ;
+#   2 = présence US ailleurs (Houston, Boston, Virginie…), récente, petite ou non confirmée ;
+#   1 = aucune présence US trouvée.
+#   4 n'est jamais donné ici : il faut une preuve propre à l'équipe du stage (citation de l'offre).
+# Règle de départage : en cas d'hésitation, la note la plus basse (« hésitation N/N+1 »).
+# Sources des recherches web : vérifiées le 9 octobre 2026.
+
+AMD:
+  eco: 4
+  eco_preuve: grand fabricant de puces américain, réputation internationale
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Santa Clara, Californie)
+ASML:
+  eco: 3
+  eco_preuve: leader européen des machines de lithographie, nom compris côté US (hésitation 3/4)
+  pont: 3
+  pont_preuve: site significatif à San Jose (Californie)
+Adobe:
+  eco: 4
+  eco_preuve: big tech logicielle américaine (siège à San Jose)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Jose, Californie)
+Akuna Capital:
+  eco: 3
+  eco_preuve: société de trading de Chicago, connue dans le milieu quant
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Chicago)
+Alan:
+  eco: 3
+  eco_preuve: licorne française de l'assurance santé
+  pont: 1
+  pont_preuve: aucune présence US trouvée
+Amazon:
+  eco: 5
+  eco_preuve: Amazon, cité en exemple de la note 5
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Seattle)
+Analog Devices:
+  eco: 3
+  eco_preuve: fabricant américain de semi-conducteurs, peu lisible côté tech logicielle (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège dans le Massachusetts)
+Anduril:
+  eco: 4
+  eco_preuve: startup de défense de premier plan, très valorisée
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Costa Mesa, Californie)
+Apple:
+  eco: 5
+  eco_preuve: Apple, cité en exemple de la note 5
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Cupertino)
+Applied Intuition:
+  eco: 4
+  eco_preuve: éditeur de logiciels pour véhicules autonomes, valorisé à plusieurs milliards
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Mountain View)
+Applied Materials:
+  eco: 3
+  eco_preuve: équipementier semi-conducteurs américain (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Santa Clara)
+Arm:
+  eco: 4
+  eco_preuve: concepteur d'architectures de processeurs connu mondialement
+  pont: 3
+  pont_preuve: bureaux significatifs aux US (San Jose, Austin)
+Atlassian:
+  eco: 4
+  eco_preuve: éditeur logiciel international (Jira, Confluence)
+  pont: 3
+  pont_preuve: bureau significatif à San Francisco
+Autodesk:
+  eco: 4
+  eco_preuve: éditeur logiciel américain coté
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Back Market:
+  eco: 3
+  eco_preuve: licorne française
+  pont: 3
+  pont_preuve: bureau à New York qui héberge la direction US (offres d'emploi Back Market, builtinnyc.com)
+Barclays:
+  eco: 1
+  eco_preuve: banque traditionnelle (exemple de la note 1)
+  pont: 3
+  pont_preuve: siège US à New York
+BlaBlaCar:
+  eco: 3
+  eco_preuve: licorne française
+  pont: 1
+  pont_preuve: aucune présence US trouvée
+BlackRock:
+  eco: 1
+  eco_preuve: gestionnaire d'actifs, finance traditionnelle (assimilée à la banque, note 1)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à New York)
+Block:
+  eco: 4
+  eco_preuve: fintech américaine (Square, Cash App)
+  pont: 3
+  pont_preuve: entreprise américaine (siège dans la Bay Area)
+Blue Origin:
+  eco: 3
+  eco_preuve: entreprise spatiale américaine connue (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège près de Seattle)
+Boeing:
+  eco: 2
+  eco_preuve: grand groupe aéronautique, peu lisible comme signal tech à SF (hésitation 2/3)
+  pont: 3
+  pont_preuve: entreprise américaine (grands sites dans la région de Seattle)
+Capital One:
+  eco: 1
+  eco_preuve: banque (exemple de la note 1), hésitation 1/2 car connue aux US pour sa tech
+  pont: 3
+  pont_preuve: entreprise américaine (bureaux à New York et San Francisco)
+Cisco:
+  eco: 4
+  eco_preuve: big tech réseau américaine
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Jose)
+Citi:
+  eco: 1
+  eco_preuve: banque traditionnelle (exemple de la note 1)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à New York)
+Cloudflare:
+  eco: 4
+  eco_preuve: entreprise tech américaine cotée, réputation internationale
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Cohere:
+  eco: 4
+  eco_preuve: Cohere, cité en exemple de la note 4
+  pont: 3
+  pont_preuve: bureaux à San Francisco et New York (en.wikipedia.org/wiki/Cohere, builtin.com)
+Coinbase:
+  eco: 4
+  eco_preuve: plateforme crypto américaine cotée
+  pont: 3
+  pont_preuve: entreprise américaine
+Criteo:
+  eco: 3
+  eco_preuve: adtech française cotée au Nasdaq
+  pont: 3
+  pont_preuve: bureau significatif à New York (siège US)
+CrowdStrike:
+  eco: 4
+  eco_preuve: leader américain de la cybersécurité
+  pont: 3
+  pont_preuve: entreprise américaine
+DRW:
+  eco: 3
+  eco_preuve: société de trading de Chicago, connue dans le milieu quant
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Chicago)
+Databricks:
+  eco: 4
+  eco_preuve: Databricks, cité en exemple de la note 4
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Datadog:
+  eco: 4
+  eco_preuve: Datadog, cité en exemple de la note 4
+  pont: 3
+  pont_preuve: entreprise américaine (siège à New York)
+Deezer:
+  eco: 2
+  eco_preuve: plateforme musicale française, peu connue côté US
+  pont: 1
+  pont_preuve: aucun bureau US actuel confirmé (seules des sources des années 2010)
+Delivery Hero:
+  eco: 3
+  eco_preuve: groupe tech européen coté (livraison de repas)
+  pont: 1
+  pont_preuve: aucune présence US trouvée (rachat par Uber annoncé, non finalisé)
+Dell:
+  eco: 4
+  eco_preuve: grand groupe tech américain
+  pont: 3
+  pont_preuve: entreprise américaine (siège au Texas)
+Deutsche Bank:
+  eco: 1
+  eco_preuve: banque traditionnelle (exemple de la note 1)
+  pont: 3
+  pont_preuve: siège US à New York
+Doctolib:
+  eco: 3
+  eco_preuve: licorne française de la e-santé
+  pont: 1
+  pont_preuve: aucune présence US trouvée
+DoorDash:
+  eco: 4
+  eco_preuve: entreprise tech américaine cotée
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+EA:
+  eco: 4
+  eco_preuve: grand éditeur de jeux vidéo américain
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Redwood City)
+Engie:
+  eco: 2
+  eco_preuve: grand groupe européen de l'énergie, non tech
+  pont: 2
+  pont_preuve: présence US hors des pôles tech (Engie North America, Houston)
+Epic Games:
+  eco: 4
+  eco_preuve: éditeur américain (Fortnite, Unreal Engine)
+  pont: 3
+  pont_preuve: entreprise américaine
+Ericsson:
+  eco: 2
+  eco_preuve: équipementier télécom européen, peu lisible comme signal tech à SF (hésitation 2/3)
+  pont: 3
+  pont_preuve: campus à Santa Clara (communiqué Ericsson 2014, ouverture 2016)
+Figma:
+  eco: 4
+  eco_preuve: éditeur logiciel américain de premier plan
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Fortinet:
+  eco: 3
+  eco_preuve: éditeur américain de cybersécurité coté (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Sunnyvale)
+Hudson River Trading:
+  eco: 4
+  eco_preuve: société de trading quantitatif de premier plan
+  pont: 3
+  pont_preuve: entreprise américaine (siège à New York)
+IBM:
+  eco: 4
+  eco_preuve: big tech américaine
+  pont: 3
+  pont_preuve: entreprise américaine
+IMC Trading:
+  eco: 3
+  eco_preuve: société de trading néerlandaise connue dans le milieu quant
+  pont: 3
+  pont_preuve: bureau à New York ouvert en août 2026, plus Chicago (imc.com, communiqué du 11 août 2026)
+Infineon:
+  eco: 2
+  eco_preuve: groupe européen de semi-conducteurs, peu lisible côté tech logicielle (hésitation 2/3)
+  pont: 3
+  pont_preuve: site à San Jose (Infineon Technologies Americas)
+Intel:
+  eco: 4
+  eco_preuve: big tech américaine des semi-conducteurs
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Santa Clara)
+Intuit:
+  eco: 4
+  eco_preuve: éditeur logiciel américain
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Mountain View)
+Jump Trading:
+  eco: 4
+  eco_preuve: société de trading quantitatif de premier plan
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Chicago)
+KLA:
+  eco: 3
+  eco_preuve: équipementier semi-conducteurs américain (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Milpitas)
+Lam Research:
+  eco: 3
+  eco_preuve: équipementier semi-conducteurs américain (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Fremont)
+Ledger:
+  eco: 3
+  eco_preuve: licorne française de la crypto
+  pont: 2
+  pont_preuve: bureau à New York ouvert en mars 2026 (businesswire.com), hésitation 2/3
+Lockheed Martin:
+  eco: 2
+  eco_preuve: groupe de défense, peu lisible comme signal tech à SF (hésitation 2/3)
+  pont: 3
+  pont_preuve: entreprise américaine
+Lyft:
+  eco: 4
+  eco_preuve: entreprise tech américaine cotée
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+MBDA:
+  eco: 2
+  eco_preuve: groupe européen de défense, non tech
+  pont: 2
+  pont_preuve: filiale US (MBDA Inc.), sans lien avec les pôles tech
+MBDA UK:
+  eco: 2
+  eco_preuve: groupe européen de défense, non tech
+  pont: 2
+  pont_preuve: filiale US (MBDA Inc.), sans lien avec les pôles tech
+Marvell:
+  eco: 3
+  eco_preuve: fabricant de puces américain (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (Santa Clara)
+Mastercard:
+  eco: 2
+  eco_preuve: réseau de paiement, peu lisible comme signal tech à SF
+  pont: 3
+  pont_preuve: entreprise américaine (siège dans l'État de New York)
+Micron:
+  eco: 3
+  eco_preuve: fabricant américain de mémoire (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine
+Microsoft:
+  eco: 5
+  eco_preuve: Microsoft, cité en exemple de la note 5
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Redmond, région de Seattle)
+Mirakl:
+  eco: 3
+  eco_preuve: licorne française
+  pont: 3
+  pont_preuve: bureau à New York et co-siège à Boston (builtinnyc.com, Boston Business Journal)
+Mistral AI:
+  eco: 4
+  eco_preuve: Mistral, cité en exemple de la note 4
+  pont: 3
+  pont_preuve: bureaux à Palo Alto et New York (offres d'emploi Mistral, Semafor 2024)
+MongoDB:
+  eco: 4
+  eco_preuve: éditeur logiciel américain coté
+  pont: 3
+  pont_preuve: entreprise américaine (siège à New York)
+Monzo:
+  eco: 3
+  eco_preuve: néobanque britannique, licorne
+  pont: 1
+  pont_preuve: activités US fermées en 2026 (agrégateur GDELT, à confirmer)
+Morgan Stanley:
+  eco: 1
+  eco_preuve: banque traditionnelle (exemple de la note 1)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à New York)
+N26:
+  eco: 3
+  eco_preuve: néobanque allemande, licorne
+  pont: 1
+  pont_preuve: a quitté le marché US en 2022
+NVIDIA:
+  eco: 5
+  eco_preuve: NVIDIA, cité en exemple de la note 5
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Santa Clara)
+NXP:
+  eco: 2
+  eco_preuve: groupe européen de semi-conducteurs, peu lisible côté tech logicielle (hésitation 2/3)
+  pont: 3
+  pont_preuve: site à San Jose (builtin.com)
+NetApp:
+  eco: 3
+  eco_preuve: éditeur américain de stockage (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Jose)
+Netflix:
+  eco: 4
+  eco_preuve: big tech américaine (hésitation 4/5, absente de la liste de la note 5)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Los Gatos, Bay Area)
+Northrop Grumman:
+  eco: 2
+  eco_preuve: groupe de défense, peu lisible comme signal tech à SF (hésitation 2/3)
+  pont: 3
+  pont_preuve: entreprise américaine
+Notion:
+  eco: 4
+  eco_preuve: éditeur logiciel américain de premier plan
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Nuro:
+  eco: 4
+  eco_preuve: startup de véhicules autonomes de premier plan
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Mountain View)
+Optiver:
+  eco: 3
+  eco_preuve: société de trading néerlandaise connue dans le milieu quant
+  pont: 2
+  pont_preuve: bureaux US à Chicago et Austin, hors des pôles SF / NYC / Seattle
+Oracle:
+  eco: 4
+  eco_preuve: big tech logicielle américaine
+  pont: 3
+  pont_preuve: entreprise américaine
+Orange:
+  eco: 1
+  eco_preuve: opérateur télécom (exemple de la note 1)
+  pont: 2
+  pont_preuve: bureau de San Francisco fermé en 2023 (Le Monde Informatique) ; présence US résiduelle
+Palantir:
+  eco: 4
+  eco_preuve: Palantir, cité en exemple de la note 4
+  pont: 3
+  pont_preuve: entreprise américaine
+Palo Alto Networks:
+  eco: 4
+  eco_preuve: leader américain de la cybersécurité
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Santa Clara)
+Perplexity:
+  eco: 4
+  eco_preuve: startup IA de premier plan
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Philips:
+  eco: 2
+  eco_preuve: grand groupe européen, peu lisible comme signal tech à SF
+  pont: 2
+  pont_preuve: présence US hors des pôles SF / NYC / Seattle (siège nord-américain dans le Massachusetts)
+Pinterest:
+  eco: 4
+  eco_preuve: entreprise tech américaine cotée
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Point72:
+  eco: 3
+  eco_preuve: fonds d'investissement américain connu (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (bureaux à New York)
+Qonto:
+  eco: 3
+  eco_preuve: licorne française de la fintech
+  pont: 1
+  pont_preuve: aucune présence US trouvée
+Qualcomm:
+  eco: 4
+  eco_preuve: big tech américaine des semi-conducteurs
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Diego)
+Qube Research & Technologies:
+  eco: 3
+  eco_preuve: société de trading quantitatif européenne connue dans le milieu quant
+  pont: 2
+  pont_preuve: bureaux US (New York, Chicago) ouverts en 2026 d'après une source secondaire, hésitation 2/3
+RTX:
+  eco: 2
+  eco_preuve: groupe de défense, peu lisible comme signal tech à SF (hésitation 2/3)
+  pont: 3
+  pont_preuve: entreprise américaine
+Ramp:
+  eco: 4
+  eco_preuve: fintech américaine de premier plan
+  pont: 3
+  pont_preuve: entreprise américaine (siège à New York)
+Replit:
+  eco: 4
+  eco_preuve: startup américaine de premier plan (outils de dev IA)
+  pont: 3
+  pont_preuve: entreprise américaine
+Riot Games:
+  eco: 3
+  eco_preuve: éditeur américain de jeux vidéo (League of Legends), hésitation 3/4
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Los Angeles)
+Rivian:
+  eco: 3
+  eco_preuve: constructeur américain de véhicules électriques (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine
+Robinhood:
+  eco: 4
+  eco_preuve: fintech américaine cotée
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Menlo Park)
+Roblox:
+  eco: 4
+  eco_preuve: entreprise tech américaine cotée
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Mateo)
+Rubrik:
+  eco: 3
+  eco_preuve: éditeur américain de cybersécurité coté (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Palo Alto)
+STMicroelectronics:
+  eco: 2
+  eco_preuve: groupe européen de semi-conducteurs, peu lisible côté tech logicielle (hésitation 2/3)
+  pont: 2
+  pont_preuve: site à Santa Clara, taille non confirmée (hésitation 2/3)
+Salesforce:
+  eco: 4
+  eco_preuve: big tech logicielle américaine
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Samsara:
+  eco: 3
+  eco_preuve: éditeur américain coté (IoT), hésitation 3/4
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Scale AI:
+  eco: 4
+  eco_preuve: startup IA de premier plan
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Scaleway:
+  eco: 2
+  eco_preuve: hébergeur cloud français, peu connu côté US
+  pont: 1
+  pont_preuve: aucune présence US trouvée
+Schneider Electric:
+  eco: 2
+  eco_preuve: grand groupe industriel européen
+  pont: 2
+  pont_preuve: présence US hors des pôles SF / NYC / Seattle (siège nord-américain dans le Massachusetts)
+Seagate:
+  eco: 3
+  eco_preuve: fabricant américain de stockage (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine d'origine, opérations en Californie
+SeatGeek:
+  eco: 3
+  eco_preuve: scale-up américaine de billetterie
+  pont: 3
+  pont_preuve: entreprise américaine (siège à New York)
+SentinelOne:
+  eco: 3
+  eco_preuve: éditeur américain de cybersécurité coté (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine
+Shield AI:
+  eco: 3
+  eco_preuve: startup américaine de défense IA (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Diego)
+Siemens:
+  eco: 2
+  eco_preuve: grand groupe industriel européen (hésitation 2/3)
+  pont: 3
+  pont_preuve: site à Fremont, Bay Area (Siemens EDA, offres d'emploi Siemens)
+Snowflake:
+  eco: 4
+  eco_preuve: éditeur logiciel américain coté, réputation internationale
+  pont: 3
+  pont_preuve: entreprise américaine
+Sopra Steria:
+  eco: 1
+  eco_preuve: ESN (exemple de la note 1)
+  pont: 1
+  pont_preuve: aucun bureau US confirmé (présence nord-américaine surtout au Canada)
+SpaceX:
+  eco: 4
+  eco_preuve: entreprise spatiale de premier plan (hésitation 4/5)
+  pont: 3
+  pont_preuve: entreprise américaine
+Squarepoint:
+  eco: 3
+  eco_preuve: fonds quantitatif connu dans le milieu quant
+  pont: 3
+  pont_preuve: bureau à New York
+Stripe:
+  eco: 4
+  eco_preuve: Stripe, cité en exemple de la note 4
+  pont: 3
+  pont_preuve: bureau principal à San Francisco
+Texas Instruments:
+  eco: 3
+  eco_preuve: fabricant américain de semi-conducteurs (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Dallas)
+Thales:
+  eco: 2
+  eco_preuve: grand groupe européen de défense et d'électronique (hésitation 2/3)
+  pont: 2
+  pont_preuve: présence US hors des pôles SF / NYC / Seattle (Thales USA, Virginie)
+TotalEnergies:
+  eco: 2
+  eco_preuve: grand groupe européen de l'énergie, non tech
+  pont: 2
+  pont_preuve: présence US hors des pôles SF / NYC / Seattle (Houston)
+Tower Research Capital:
+  eco: 3
+  eco_preuve: société de trading quantitatif connue dans le milieu quant
+  pont: 3
+  pont_preuve: entreprise américaine (siège à New York)
+Uber:
+  eco: 4
+  eco_preuve: big tech américaine
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Ubisoft:
+  eco: 3
+  eco_preuve: éditeur français de jeux vidéo connu mondialement
+  pont: 2
+  pont_preuve: bureau à San Francisco en forte réduction (93 licenciements en 2026), hésitation 2/3
+Valeo:
+  eco: 2
+  eco_preuve: équipementier automobile européen, non tech
+  pont: 2
+  pont_preuve: présence US hors des pôles SF / NYC / Seattle
+Vercel:
+  eco: 4
+  eco_preuve: startup américaine de premier plan (infrastructure web)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Voodoo:
+  eco: 3
+  eco_preuve: éditeur français de jeux mobiles, licorne
+  pont: 2
+  pont_preuve: aucun bureau US confirmé, quelques postes à New York (builtinnyc.com)
+Waymo:
+  eco: 5
+  eco_preuve: Waymo, cité en exemple de la note 5
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Mountain View)
+Western Digital:
+  eco: 3
+  eco_preuve: fabricant américain de stockage (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Jose)
+xAI:
+  eco: 4
+  eco_preuve: labo IA de premier plan (hésitation 4/5, absent de la liste de la note 5)
+  pont: 3
+  pont_preuve: entreprise américaine

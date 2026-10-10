@@ -12,22 +12,28 @@ ou le message de test n'est pas parti, 2 configuration invalide.
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 import os
 import sys
 from collections.abc import Sequence
 from datetime import UTC, datetime
+from itertools import zip_longest
 from pathlib import Path
+from typing import Any
 
 from internbot import __version__
 from internbot.config import AppConfig, CompanyConfig, HttpConfig, load_config
+from internbot.descriptions import DescriptionError, DescriptionFetcher
 from internbot.discover import render_report, run_discovery
 from internbot.errors import ConfigError
 from internbot.http import HttpClient
+from internbot.models import Job
+from internbot.notation import Notation, importer, load_entreprises
 from internbot.notifiers import ConsoleNotifier, Notifier, TelegramNotifier
 from internbot.providers import get_provider_class
 from internbot.runner import Runner
-from internbot.snapshot import build_health, load_snapshot
+from internbot.snapshot import build_health, load_snapshot, snapshot_jobs
 from internbot.storage import StateStore
 
 log = logging.getLogger("internbot")
@@ -69,6 +75,21 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--discover-file", metavar="PATH", help="liste d'entreprises, une par ligne")
     p.add_argument("--discover-out", metavar="PATH", help="écrit le YAML découvert dans ce fichier")
+    p.add_argument(
+        "--a-noter",
+        metavar="DOSSIER",
+        help="exporte le texte des offres ouvertes pas encore notées (DOSSIER/offres.jsonl)",
+    )
+    p.add_argument(
+        "--importer-notes",
+        metavar="DOSSIER",
+        help="applique les notes DOSSIER/notes*.jsonl à notation/notes.json",
+    )
+    p.add_argument(
+        "--simulation",
+        action="store_true",
+        help="avec --importer-notes : vérifie les notes et affiche les verdicts sans rien écrire",
+    )
     p.add_argument("--company", metavar="NAME", help="ne traiter qu'une entreprise (debug)")
     p.add_argument("-v", "--verbose", action="store_true", help="logs détaillés (DEBUG)")
     p.add_argument("--version", action="version", version=f"internbot {__version__}")
@@ -242,6 +263,100 @@ def cmd_test_notify(cfg: AppConfig) -> int:
     return EXIT_FAILURE
 
 
+def notation_dir(args: argparse.Namespace) -> Path:
+    """`notation/` vit à côté de config.yaml (versionné sur main, lu par le bot en CI)."""
+    return Path(args.config).resolve().parent / "notation"
+
+
+def cmd_a_noter(cfg: AppConfig, args: argparse.Namespace) -> int:
+    """Exporte le texte des offres ouvertes (current.json) pas encore notées.
+
+    Reprend là où il s'était arrêté : les offres déjà présentes dans offres.jsonl sont sautées.
+    Les offres sont parcourues entreprise par entreprise en alternance, pour que le délai de
+    politesse par domaine ne bloque pas tout l'export sur un seul site.
+    """
+    out_dir = Path(args.a_noter)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out = out_dir / "offres.jsonl"
+    done = {(o["company"], o["job_id"]) for o in read_jsonl(out)}
+    notation = Notation.load(notation_dir(args) / "notes.json")
+    snapshot = load_snapshot(Path(args.state).with_name("current.json"))
+    by_company: dict[str, list[Job]] = {}
+    for job in snapshot_jobs(snapshot):
+        if args.company and job.company.casefold() != args.company.casefold():
+            continue
+        if notation.est_notee(*job.key) or job.key in done:
+            continue
+        by_company.setdefault(job.company, []).append(job)
+    queue = [j for group in zip_longest(*by_company.values()) for j in group if j is not None]
+    log.info("%d offre(s) à exporter (%d déjà dans %s).", len(queue), len(done), out)
+    fetcher = DescriptionFetcher(make_http(cfg), {c.name: c for c in cfg.companies})
+    failures = 0
+    with out.open("a", encoding="utf-8", newline="\n") as fh:
+        for i, job in enumerate(queue, 1):
+            row: dict[str, object] = {
+                "company": job.company,
+                "job_id": job.job_id,
+                "title": job.title,
+                "location": job.location,
+                "url": job.url,
+            }
+            try:
+                description = fetcher.fetch(job)
+                row.update(texte=description.text, source=description.source)
+            except DescriptionError as exc:
+                failures += 1
+                row["erreur"] = str(exc)[:300]
+                log.warning("%s — %s : %s", job.company, job.title, row["erreur"])
+            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+            fh.flush()
+            if i % 50 == 0:
+                log.info("%d/%d offres exportées (%d illisibles).", i, len(queue), failures)
+    log.info("Export terminé : %d offre(s), dont %d illisible(s).", len(queue), failures)
+    return EXIT_OK
+
+
+def cmd_importer_notes(cfg: AppConfig, args: argparse.Namespace) -> int:
+    """Valide les notes (citations comprises) et met à jour notation/notes.json."""
+    src = Path(args.importer_notes)
+    folder = notation_dir(args)
+    notation = Notation.load(folder / "notes.json")
+    entreprises = load_entreprises(folder / "entreprises.yaml")
+    notes = [n for path in sorted(src.glob("notes*.jsonl")) for n in read_jsonl(path)]
+    report = importer(notation, read_jsonl(src / "offres.jsonl"), notes, entreprises)
+    for error in report.erreurs:
+        log.error("Note refusée : %s", error)
+    if args.simulation:
+        for company, title, statut, score in report.verdicts:
+            print(f"{statut:<11} {'' if score is None else score:>3}  {company} — {title}")
+    else:
+        notation.save()
+    log.info(
+        "%d note(s) lue(s) ; verdicts %s : %s ; %d refusée(s).%s",
+        len(notes),
+        "calculés" if args.simulation else "appliqués",
+        ", ".join(f"{k} {v}" for k, v in sorted(report.statuts.items())) or "aucun",
+        len(report.erreurs),
+        " Simulation : rien n'a été écrit."
+        if args.simulation
+        else f" {len(notation)} offre(s) dans {notation.path}.",
+    )
+    return EXIT_FAILURE if report.erreurs else EXIT_OK
+
+
+def read_jsonl(path: Path) -> list[dict[str, Any]]:
+    if not path.is_file():
+        return []
+    rows = []
+    for n, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        if line.strip():
+            try:
+                rows.append(json.loads(line))
+            except json.JSONDecodeError as exc:
+                raise ConfigError(f"{path}:{n} : ligne JSON invalide ({exc})") from None
+    return rows
+
+
 def cmd_run(cfg: AppConfig, args: argparse.Namespace) -> int:
     companies = select_companies(cfg, args.company)
     if not companies:
@@ -262,6 +377,7 @@ def cmd_run(cfg: AppConfig, args: argparse.Namespace) -> int:
         send_all=args.send_all,
         # current.json vit à côté de state.json (branche `state` en CI).
         snapshot_path=Path(args.state).with_name("current.json"),
+        notation=Notation.load(notation_dir(args) / "notes.json"),
     )
     report = runner.run(companies)
     log.info("%s", report.summary())
@@ -286,6 +402,10 @@ def main(argv: Sequence[str] | None = None) -> int:
             return cmd_status(cfg, args)
         if args.test_notify:
             return cmd_test_notify(cfg)
+        if args.a_noter:
+            return cmd_a_noter(cfg, args)
+        if args.importer_notes:
+            return cmd_importer_notes(cfg, args)
         return cmd_run(cfg, args)
     except ConfigError as exc:
         log.error("%s", exc)
