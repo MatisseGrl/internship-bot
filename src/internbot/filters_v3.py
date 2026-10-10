@@ -156,6 +156,28 @@ LOCATIONS = {
     "uae": ["dubai", "abu dhabi", "united arab emirates", "uae"],
 }
 
+# France : seule l'Île-de-France est gardée (règle de Matisse). Une offre dont le lieu cite une
+# ville française hors Île-de-France et aucune ville d'Île-de-France est écartée ; « France »
+# seul ou un lieu mixte (« Paris ; Toulouse ») est gardé.
+FRANCE_HORS_IDF = [
+    "lyon", "grenoble", "sophia antipolis", "valbonne", "toulouse", "blagnac", "labege", "nice",
+    "rennes", "cesson sevigne", "bretagne", "nantes", "saint herblain", "lille", "bordeaux",
+    "marseille", "aix en provence", "provence alpes cote d azur", "montpellier", "strasbourg",
+    "bourges", "crolles", "meylan", "montbonnot", "rousset", "villeneuve loubet", "nancy",
+    "dijon", "toulon", "cannes", "antibes", "clermont ferrand",
+    "rouen", "caen", "le havre", "angers", "metz", "reims", "perpignan",
+]
+ILE_DE_FRANCE = [
+    "ile de france", "paris", "courbevoie", "la defense", "puteaux", "nanterre", "rueil malmaison",
+    "le plessis robinson", "boulogne billancourt", "issy les moulineaux", "levallois perret",
+    "clichy", "montrouge", "malakoff", "gennevilliers", "suresnes", "meudon", "bagneux",
+    "saint denis", "saint ouen", "massy", "palaiseau", "saclay", "gif sur yvette", "orsay",
+    "velizy", "velizy villacoublay", "guyancourt", "montigny le bretonneux",
+    "saint quentin en yvelines", "versailles", "evry", "marne la vallee", "cergy", "nozay",
+    "les ulis", "bois colombes", "colombes", "asnieres", "neuilly sur seine", "vitry sur seine",
+    "ivry sur seine", "montreuil", "creteil", "rungis", "orly", "roissy",
+]
+
 UNKNOWN_LOC = ["multiple locations", "various", "blank", "global",
                "worldwide", "anywhere", "flexible", "tbd"]
 REMOTE = ["remote", "virtual", "telework", "teletravail", "hybrid"]
@@ -243,6 +265,8 @@ def classify_location(location: str, cfg: FilterConfig) -> Verdict:
     loc = norm(location)
     if not loc.strip():
         return Verdict(REVIEW, "lieu vide")
+    if has(loc, FRANCE_HORS_IDF) and not has(loc, ILE_DE_FRANCE):
+        return Verdict(DROP, "France hors Île-de-France")
     zones = [r for r in sorted(cfg.enabled_regions) if has(loc, LOCATIONS[r])]
     if zones:
         return Verdict(NOTIFY, f"zone {zones[0]}")

@@ -121,6 +121,10 @@ Règles principales :
 - IA + non-tech (« AI Solution Architect Intern ») → `review` ;
 - remote / hybrid → gardé ; lieu inconnu (« Multiple Locations ») → `review` ; une offre
   multi-lieux est gardée si **un** de ses lieux est dans une zone ;
+- **France : Île-de-France uniquement.** Une offre dont le lieu cite une ville française hors
+  Île-de-France (Toulouse, Nantes, Lyon, Marseille, Sophia Antipolis…) sans aucune ville
+  d'Île-de-France est `drop` (« France hors Île-de-France »), y compris dans `/offres` ; « France »
+  seul ou « Paris ; Toulouse » sont gardés (listes `FRANCE_HORS_IDF` / `ILE_DE_FRANCE`) ;
 - matching **insensible à la casse et aux accents**, par **mots entiers** : `intern` ne matche
   pas « Internal », `ml` ne matche pas « HTML », la ponctuation compte comme un espace
   (« Co-op » == « co op ») ;

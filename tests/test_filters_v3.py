@@ -29,7 +29,13 @@ from internbot.filters_v3 import (
         ("Software Engineer Intern, Machine Learning", "Melbourne, Australia", NOTIFY, True),
         ("Internal Tools Engineer", "London", DROP, False),
         ("Validation Engineer Intern", "Toronto", DROP, False),
-        ("Embedded Software Engineer Intern", "Grenoble, France", NOTIFY, False),
+        ("Embedded Software Engineer Intern", "Grenoble, France", DROP, False),
+        ("Embedded Software Engineer Intern", "Toulouse Area", DROP, False),
+        ("Software Engineer Intern", "Nantes Area", DROP, False),
+        ("Software Engineer Intern", "Paris ; Toulouse", NOTIFY, False),
+        ("Software Engineer Intern", "La Défense, Île-de-France, France", NOTIFY, False),
+        ("Software Engineer Intern", "France", NOTIFY, False),
+        ("Software Engineer Intern", "New Orleans, LA", DROP, False),
         ("Silicon Hardware Engineering - Intern", "US, Oregon, Hillsboro", DROP, False),
         ("Software Engineer Intern, Backend", "Mexico City, Mexico", DROP, False),
         ("Machine Learning Intern", "BLANK,BLANK,Multiple Locations", REVIEW, True),
@@ -101,7 +107,7 @@ def test_locations_remote_unknown_and_disabled_regions() -> None:
     # Offre multi-lieux : un seul lieu dans une zone suffit.
     assert classify_location("China, Shanghai · US, CA, Santa Clara", cfg).status == NOTIFY
     assert classify_location("Le Plessis Robinson (92)", cfg).status == NOTIFY
-    assert classify_location("Bourges (18)", cfg).status == NOTIFY
+    assert classify_location("Bourges (18)", cfg).status == DROP  # France hors Île-de-France
 
 
 def test_matching_is_whole_word_and_accent_insensitive() -> None:
@@ -126,3 +132,8 @@ def test_matches_query_other_cases() -> None:
     assert not matches_query("capital one", "Lyft", "Capital One Intern", "NYC", known)
     assert matches_query("machine learning", "Lyft", "Machine Learning Intern", "NYC", known)
     assert not matches_query("fran", "Lyft", "SWE Intern", "San Francisco, CA", known)
+
+
+def test_france_hors_ile_de_france_dropped() -> None:
+    assert classify_location("Sophia Antipolis", FilterConfig()).reason == "France hors Île-de-France"
+    assert classify_location("Paris, France", FilterConfig()).status == NOTIFY
