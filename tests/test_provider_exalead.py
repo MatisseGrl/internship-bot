@@ -34,7 +34,18 @@ def test_paginates_until_total() -> None:
     page = load_fixture("exalead_page1.json")
     page["nhits"] = 4
     second = {"nhits": 4, "hits": page["hits"][:1]}
-    second["hits"] = [{"metas": [{"name": "card_id", "value": "999"}, {"name": "content_title", "value": "Intern"}, {"name": "content_cta_1_url", "value": "https://www.3ds.com/careers/jobs/intern-999"}]}]
+    second["hits"] = [
+        {
+            "metas": [
+                {"name": "card_id", "value": "999"},
+                {"name": "content_title", "value": "Intern"},
+                {
+                    "name": "content_cta_1_url",
+                    "value": "https://www.3ds.com/careers/jobs/intern-999",
+                },
+            ]
+        }
+    ]
     responses.get(API, json=page)
     responses.get(API, json=second)
     jobs = ExaleadProvider(make_http()).fetch_jobs(_company(page_size=3))
