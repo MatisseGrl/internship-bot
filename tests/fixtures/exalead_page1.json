@@ -1,0 +1,122 @@
+{
+ "nhits": 684,
+ "nmatches": 684,
+ "start": 0,
+ "executor": null,
+ "estimated": false,
+ "autocorrected": false,
+ "hits": [
+  {
+   "metas": [
+    {
+     "name": "content_info_2_value",
+     "type": 2,
+     "value": "United States, MA, Waltham"
+    },
+    {
+     "name": "content_start_datetime",
+     "type": 2,
+     "value": "2026/10/10 02:10:41"
+    },
+    {
+     "name": "content_title",
+     "type": 2,
+     "value": "AI Engineer"
+    },
+    {
+     "name": "card_id",
+     "type": 2,
+     "value": "550025"
+    },
+    {
+     "name": "content_cta_1_url",
+     "type": 2,
+     "value": "https://www.3ds.com/careers/jobs/ai-engineer-550025"
+    }
+   ]
+  },
+  {
+   "metas": [
+    {
+     "name": "content_info_2_value",
+     "type": 2,
+     "value": "France, Vélizy-Villacoublay"
+    },
+    {
+     "name": "content_start_datetime",
+     "type": 2,
+     "value": "2026/10/09 12:10:52"
+    },
+    {
+     "name": "content_title",
+     "type": 2,
+     "value": "STAGE - Ingénieur.e R&D en Intelligence Artificielle (LLM, Deep Learning) (F/H)"
+    },
+    {
+     "name": "card_id",
+     "type": 2,
+     "value": "550404"
+    },
+    {
+     "name": "content_cta_1_url",
+     "type": 2,
+     "value": "https://www.3ds.com/careers/jobs/stage-ingenieur-e-r-d-en-intelligence-artificielle-llm-deep-learning-f-h-550404"
+    }
+   ]
+  },
+  {
+   "metas": [
+    {
+     "name": "content_info_2_value",
+     "type": 2,
+     "value": "France, Vélizy-Villacoublay"
+    },
+    {
+     "name": "content_start_datetime",
+     "type": 2,
+     "value": "2026/10/09 11:10:47"
+    },
+    {
+     "name": "content_title",
+     "type": 2,
+     "value": "STAGE - Chargé de Marketing - Virtual Twin (F/H)"
+    },
+    {
+     "name": "card_id",
+     "type": 2,
+     "value": "550427"
+    },
+    {
+     "name": "content_cta_1_url",
+     "type": 2,
+     "value": "https://www.3ds.com/careers/jobs/stage-charge-de-marketing-virtual-twin-f-h-550427"
+    }
+   ]
+  }
+ ],
+ "groups": [],
+ "stats": {
+  "status": "ok",
+  "queueTime": 0,
+  "queryProcessingElapsedTime": 456,
+  "queryProcessingCPUTime": 447,
+  "queryExecElapsedTime": 2717,
+  "queryExecIndexCPUTime": 2372,
+  "queryExecSearcherCPUTime": 161,
+  "synthesisAndFullHitsElapsedTime": 1766,
+  "synthesisIndexCPUTime": 0,
+  "synthesisSearcherCPUTime": 0,
+  "fullHitsIndexCPUTime": 503,
+  "fullHitsSearcherCPUTime": 121,
+  "totalProcessingTime": 4581
+ },
+ "slicesInfo": [
+  {
+   "instance": "i1",
+   "slice": 0,
+   "internalGeneration": 848,
+   "lastCommit": 1791731214137,
+   "lastJobId": 1791731214006
+  }
+ ]
+}

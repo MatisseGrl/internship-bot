@@ -879,6 +879,11 @@ companies:
     url: https://seagatecareers.com/sitemap.xml
     job_pattern: "/job/(?P<slug>[^/]+)/(?P<id>[0-9]+)/?$"
 
+  # ---- Dassault Systèmes : moteur Exalead de 3ds.com (même appel que la page /careers/jobs)
+  - name: Dassault Systèmes
+    provider: exalead
+    api_url: https://www.3ds.com/apisearch/card_search_api
+
   # ==== Suivies à la main (aucune requête automatique) ======================================
   #   Pas d'API ni d'endpoint stable, anti-bot, ou robots.txt qui interdit la collecte.
   #   Marche à suivre pour chacune : README, section « Entreprises suivies à la main ».
@@ -922,11 +927,6 @@ companies:
     careers_url: https://jobs.bytedance.com/en/position?keywords=intern
     reason: "robots.txt de lifeattiktok.com interdit tout ; API jobs.bytedance.com protégée par jeton CSRF de session ; compte SmartRecruiters « Bytedance » abandonné"
     alert: "Alerte e-mail du site (compte candidat) ; voir aussi https://lifeattiktok.com/search?keyword=intern"
-  - name: Dassault Systèmes
-    provider: manual
-    careers_url: https://www.3ds.com/careers/jobs
-    reason: "offres chargées côté client par le moteur Exalead (/apisearch), format non documenté"
-    alert: "« Join our Talent Community » sur 3ds.com/careers"
   - name: Akamai
     provider: manual
     careers_url: https://www.akamai.com/careers
