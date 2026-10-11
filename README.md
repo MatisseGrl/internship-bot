@@ -303,6 +303,10 @@ Gestmax : `base_url` est la racine du portail public (par exemple
 `/search/index/page/N` jusqu'au total annoncé et signale une page répétée ou vide
 avant la fin. `max_pages` borne le parcours (défaut 50).
 
+Exalead (Dassault Systèmes) : `api_url` est l'endpoint `card_search_api` du site (celui qu'appelle
+la page /careers/jobs). Le provider lit les cartes `career` en anglais, `page_size` à la fois
+(défaut 200), jusqu'au total `nhits`.
+
 ### Site sans API (dernier recours)
 
 Si le site interdit la collecte, exige une connexion ou ne fournit aucun flux public stable,
@@ -328,7 +332,7 @@ au workflow (`pip install ".[playwright]" && playwright install --with-deps chro
 
 ### Entreprises suivies à la main
 
-27 entreprises n'ont aucune source automatisable proprement (anti-bot, robots.txt qui
+26 entreprises n'ont aucune source automatisable proprement (anti-bot, robots.txt qui
 interdit la collecte, liste chargée en JavaScript par une API non documentée, ou offres déjà
 couvertes par une autre entrée). Elles sont dans `config.yaml` avec `provider: manual` : aucune
 requête, mais elles apparaissent dans `--status` et `/status`. Pour chacune, l'alternative :
@@ -343,7 +347,6 @@ requête, mais elles apparaissent dans `--status` et `/status`. Pour chacune, l'
 | [Splunk](https://cisco.wd5.myworkdayjobs.com/Cisco_Careers?q=splunk) | filiale de Cisco : offres publiées sur le Workday de Cisco, déjà surveillé (227 offres « splunk » le 9 oct. 2026) | Rien à faire : couvert par Cisco |
 | [SAP](https://jobs.sap.com/search/?q=intern) | site Next.js, offres chargées côté client par une API non documentée | « Job alerts » / Talent Community sur jobs.sap.com |
 | [ByteDance](https://jobs.bytedance.com/en/position?keywords=intern) | robots.txt de lifeattiktok.com interdit tout ; API jobs.bytedance.com protégée par jeton CSRF de session ; compte SmartRecruiters « Bytedance » abandonné | Alerte e-mail du site (compte candidat) ; voir aussi https://lifeattiktok.com/search?keyword=intern |
-| [Dassault Systèmes](https://www.3ds.com/careers/jobs) | offres chargées côté client par le moteur Exalead (/apisearch), format non documenté | « Join our Talent Community » sur 3ds.com/careers |
 | [Akamai](https://www.akamai.com/careers) | protection anti-bot (HTTP 403) ; Workday non public | Alerte d'emploi du portail carrières Akamai (compte candidat) |
 | [HubSpot](https://www.hubspot.com/careers/jobs?q=intern) | liste chargée en JavaScript par une API non documentée ; Workday « hubspot » non public (HTTP 401) | « Join our Talent Network » sur hubspot.com/careers |
 | [Valve](https://www.valvesoftware.com/en/jobs) | robots.txt interdit /jobs | Pas d'alerte : vérification manuelle mensuelle (Valve publie rarement des stages) |
