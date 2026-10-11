@@ -82255,6 +82255,10 @@
           "first_seen": "2026-10-09T18:44:27+00:00",
           "title": "Major Accounts Manager - New Zealand"
         },
+        "20701": {
+          "first_seen": "2026-10-11T00:19:55+00:00",
+          "title": "Presales Systems Engineer – Public Sector Regional"
+        },
         "20754": {
           "first_seen": "2026-10-09T18:44:27+00:00",
           "title": "Senior Threat Intelligence Research Engineer"
@@ -82646,6 +82650,7 @@
         },
         "22538": {
           "first_seen": "2026-10-09T18:44:27+00:00",
+          "removed_at": "2026-10-11T00:19:55+00:00",
           "title": "Systems Engineer - Kuwait"
         },
         "22549": {
@@ -86046,6 +86051,7 @@
       "jobs": {
         "https://careers.ibm.com/careers/JobDetail?jobId=103465": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Duales Studium Bachelor@IBM: Informatik - Künstliche Intelligenz 2027 (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=103600": {
@@ -86058,12 +86064,10 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=104506": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Internship zStack Business Development & Ecosystem (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=105798": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Master@IBM - Technical Sales Storage and Data Management (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=112720": {
@@ -86072,7 +86076,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=120710": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Estagiário(a) em Operações de Vendas (Sales Operations Intern)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=123742": {
@@ -86105,17 +86108,14 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128339": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Technology Seller Intern - Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128345": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Technical Sales Engineer Intern - Entry-Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128347": {
           "first_seen": "2026-10-09T23:31:46+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Human Resources Intern - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128497": {
@@ -86124,7 +86124,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128506": {
           "first_seen": "2026-10-09T23:31:46+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Software Developer Spring Co-op 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128508": {
@@ -86137,11 +86136,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128510": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Site Reliability Engineer Spring Co-op 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128512": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Technical Support Spring Co-op 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128513": {
@@ -86162,6 +86161,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128540": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Intern Application Developer - ServiceNow 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128541": {
@@ -86170,7 +86170,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128547": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Intern Package Consultant - Salesforce 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128549": {
@@ -86191,7 +86190,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128562": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Co-Op Data Engineer - Data Services 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128569": {
@@ -86212,6 +86210,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128649": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Co-Op Data Scientist - AI & Analytics 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128656": {
@@ -86237,12 +86236,10 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128728": {
           "first_seen": "2026-10-09T23:31:46+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Intern Package Consultant – Microsoft 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128737": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Co-Op Security Consultant - Cyber Strategy & Risk 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128755": {
@@ -86275,6 +86272,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128771": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Co-Op Security Consultant - Strategy, Risk & Compliance 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128775": {
@@ -86313,11 +86311,11 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=128815": {
           "first_seen": "2026-10-09T23:46:51+00:00",
           "notified_at": "2026-10-09T23:46:51+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Intern Application Developer - Oracle - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128816": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Intern Application Developer 2027-ServiceNow"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128818": {
@@ -86374,6 +86372,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129258": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Software Engineer Intern - Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129418": {
@@ -86382,6 +86381,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129628": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Intern Data Engineer - AI & Analytics - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129635": {
@@ -86458,6 +86458,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129920": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Global Facility Management Process Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129926": {
@@ -86470,10 +86471,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129936": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Hardware Developer Intern 2027 -Austin"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130023": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Technical Enablement Specialist Intern - Dallas, TX - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130026": {
@@ -86506,11 +86509,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130084": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Designer Intern-Austin-TX"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130088": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Technical Enablement Specialist Intern - Poughkeepsie, NY - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130091": {
@@ -86520,7 +86523,6 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=130092": {
           "first_seen": "2026-10-09T23:46:51+00:00",
           "notified_at": "2026-10-09T23:46:51+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Software Developer Intern/Tucson-AZ"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130094": {
@@ -86534,11 +86536,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130097": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Technical Enablement Specialist Intern - New York, NY - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130098": {
           "first_seen": "2026-10-09T23:31:46+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Portfolio Development Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130103": {
@@ -86576,7 +86578,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130732": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "IBM Traineeship"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130758": {
@@ -86585,11 +86586,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130759": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Compliance SW Developer Intern: Systems Assurance - Poughkeepsie, NY - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130760": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "HW Developer Intern: Systems Assurance - Rochester, MN - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130762": {
@@ -86602,7 +86603,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130787": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Power Backend Developer Intern - Rochester, MN & Austin, TX - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130788": {
@@ -86615,10 +86615,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130862": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Expert Labs Sales Specialist Intern – Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130865": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Subscription and Annuity Representative Intern – Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130870": {
@@ -86639,6 +86641,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130884": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Technology Lifecycle Services Renewals Sales Specialist Intern – Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130897": {
@@ -86651,6 +86654,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130998": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Supply Chain Operations Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131072": {
@@ -86688,6 +86692,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131195": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "SW Developer Intern | Enterprise Platform-as-a-Service - Austin, TX - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131205": {
@@ -86709,7 +86714,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131307": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "AI Foundations - Software Engineer - Research Internship 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131364": {
@@ -86719,11 +86723,11 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=131367": {
           "first_seen": "2026-10-09T23:46:51+00:00",
           "notified_at": "2026-10-09T23:46:51+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Back End Developer Intern 2027 - Dallas"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131537": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Sustainability & Business Transformation Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131545": {
@@ -86733,6 +86737,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131560": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "2027 Intern – Global Affairs Skills, Strategy, Operations, and Transformation"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131592": {
@@ -86741,7 +86746,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131649": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "[AI Foundation]Research Student Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131809": {
@@ -86754,7 +86758,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131816": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Cloud Developer Intern - Chicago, IL - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131827": {
@@ -86771,7 +86774,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131910": {
           "first_seen": "2026-10-09T23:31:46+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Quantum Error Correction Theory Intern - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131916": {
@@ -86789,7 +86791,6 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=132000": {
           "first_seen": "2026-10-09T23:46:51+00:00",
           "notified_at": "2026-10-09T23:46:51+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "SW Developer Intern | Enterprise Platform-as-a-Service"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132002": {
@@ -86806,6 +86807,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132416": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Microarchitecture / Software Intern 2027 - AI Accelerators Research"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132417": {
@@ -86818,16 +86820,15 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132430": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Silicon Technology Research and Development Research Scientist Intern - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132431": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Quantum Data Analyst Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132432": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Silicon Technology Research and Development Hardware Engineering Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132433": {
@@ -86841,7 +86842,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132483": {
           "first_seen": "2026-10-09T23:31:46+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Technical Support Professional Intern 2027 (6 - 9 months Placement)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132486": {
@@ -86862,7 +86862,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132567": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Storage Systems Research Scientist Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132569": {
@@ -86880,7 +86879,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132708": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Quantum Security Intern 2027 - Cloud Compliance & Security Tooling"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132725": {
@@ -86890,7 +86888,6 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=132776": {
           "first_seen": "2026-10-09T23:46:51+00:00",
           "notified_at": "2026-10-09T23:46:51+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Quantum Data Scientist Intern - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132806": {
@@ -86907,7 +86904,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132833": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Delivery Consultant Intern – Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132836": {
@@ -86924,6 +86920,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132927": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Quantum Error Correction Research Intern - 2027 (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132928": {
@@ -86932,7 +86929,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132983": {
           "first_seen": "2026-10-09T23:31:46+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Product Manager Intern 2027 - Lowell"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133042": {
@@ -86954,12 +86950,10 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133086": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Technical Support Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133089": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Quantum Lab Assistant - Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133129": {
@@ -87005,7 +86999,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133501": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "2027 Intern – IBM Corporate Responsibility"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133503": {
@@ -87014,11 +87007,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133632": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Designer Spring Co-op 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133664": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Research Intern 2027 – GPU Acceleration for Quantum Computing Applications"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133667": {
@@ -87027,12 +87020,10 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133669": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Quantum Runtime Framework Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133782": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Quantum Control Pulse-Level Compiler Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133789": {
@@ -87045,7 +87036,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133798": {
           "first_seen": "2026-10-09T23:31:46+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Quantum Performance and Demonstrations - Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133801": {
@@ -87054,21 +87044,19 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133909": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "AI-First Transformation – Strategy Consultant Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133935": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Infrastructure Lab Technician Apprentice"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134050": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Praktika im Bereich z/OS Softwareentwicklung (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134058": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Sales Operations Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134091": {
@@ -87085,7 +87073,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134108": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Product Manager Intern 2027 - BELLEVUE"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134121": {
@@ -87102,16 +87089,15 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134457": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Designer Intern 2027 - Carbon Design System - Austin"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134473": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Summer Research Intern 2027 - Integrated Circuit Design for Quantum Computing"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134474": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Summer Research Intern 2027 - Edge communications processing with AI accelerators"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134486": {
@@ -87124,6 +87110,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134552": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Intern 2027: Quantum Algorithms for Differential Equations (Math)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134568": {
@@ -87145,7 +87132,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134679": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Quantum Software Intern - Backend Execution Environment for Quantum Workloads - 2027 (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134708": {
@@ -87164,11 +87150,11 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=134939": {
           "first_seen": "2026-10-09T23:46:51+00:00",
           "notified_at": "2026-10-09T23:46:51+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Data Scientist Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134974": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-11T00:17:54+00:00",
           "title": "Software Developer - Spring Co-Op 2027 - Cambridge"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134996": {
@@ -87185,7 +87171,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135256": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Software Developer Spring Co-Op 2027 (Bellevue)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135269": {
@@ -87226,12 +87211,10 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135984": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Quality Analyst Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135996": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-10T23:47:18+00:00",
           "title": "Technical Support Intern- Tucson-AZ"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=136426": {
@@ -107105,6 +107088,7 @@
         },
         "200041085": {
           "first_seen": "2026-10-09T18:40:04+00:00",
+          "removed_at": "2026-10-11T00:15:38+00:00",
           "title": "Software Engineering INTERN"
         },
         "200041582": {
@@ -107331,7 +107315,6 @@
         },
         "200055967": {
           "first_seen": "2026-10-09T18:40:04+00:00",
-          "removed_at": "2026-10-10T23:45:04+00:00",
           "title": "Software Engineering INTERN"
         },
         "200055968": {
@@ -118811,6 +118794,10 @@
           "first_seen": "2026-10-09T18:58:34+00:00",
           "title": "Principal / Sr Principal Mechanical Engineer"
         },
+        "R10254746": {
+          "first_seen": "2026-10-11T00:32:29+00:00",
+          "title": "Staff Software Configuration Analyst"
+        },
         "R10254794": {
           "first_seen": "2026-10-09T18:58:34+00:00",
           "title": "Chandler Manufacturing Technician Intern (2nd Shift) - Fall"
@@ -118902,10 +118889,12 @@
         },
         "R10255111": {
           "first_seen": "2026-10-09T18:58:34+00:00",
+          "removed_at": "2026-10-11T00:32:29+00:00",
           "title": "2027 - Mechanical Engineer Intern -McClellan CA"
         },
         "R10255116": {
           "first_seen": "2026-10-09T18:58:34+00:00",
+          "removed_at": "2026-10-11T00:32:29+00:00",
           "title": "2027 Electrical Engineer Intern -McClellan CA"
         },
         "R10255122": {
@@ -118942,6 +118931,7 @@
         },
         "R10255207": {
           "first_seen": "2026-10-09T18:58:34+00:00",
+          "removed_at": "2026-10-11T00:32:29+00:00",
           "title": "2027 Software Engineer Intern – McClellan CA"
         },
         "R10255248": {
@@ -153558,7 +153548,6 @@
         },
         "01876779": {
           "first_seen": "2026-10-09T23:43:20+00:00",
-          "removed_at": "2026-10-10T23:20:05+00:00",
           "title": "Naval Air Missiles Fp A Lead"
         },
         "01876787": {
@@ -177578,7 +177567,7 @@
       "seeded_at": "2026-10-08T19:02:40+00:00"
     },
     "Snap": {
-      "consecutive_failures": 0,
+      "consecutive_failures": 1,
       "jobs": {
         "H126SWEE3": {
           "first_seen": "2026-10-08T22:57:40+00:00",
@@ -178027,7 +178016,7 @@
           "title": "Lead Client Partner"
         }
       },
-      "last_error": null,
+      "last_error": "[workday] Snap : Réponse non-JSON depuis https://community.workday.com/maintenance-page?d=1&s=1&e=1 (Content-Type: text/html; charset=UTF-8)",
       "seeded_at": "2026-10-08T22:57:40+00:00"
     },
     "Snowflake": {
