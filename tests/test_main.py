@@ -283,4 +283,8 @@ def test_exporter_textes_selection_invalide(cfg_path: Path, tmp_path: Path) -> N
         EXIT_CONFIG
     )
     assert main(["--exporter-textes", str(selection), *base]) == EXIT_CONFIG
+    selection.write_text('["Acme", "1"]\n', encoding="utf-8")  # pas un objet
+    assert main(["--exporter-textes", str(selection), "--sortie", str(sortie), *base]) == (
+        EXIT_CONFIG
+    )
     assert not sortie.exists()

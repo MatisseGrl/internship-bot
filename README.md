@@ -352,39 +352,9 @@ au workflow (`pip install ".[playwright]" && playwright install --with-deps chro
 
 ### Entreprises suivies à la main
 
-26 entreprises n'ont aucune source automatisable proprement (anti-bot, robots.txt qui
-interdit la collecte, liste chargée en JavaScript par une API non documentée, ou offres déjà
-couvertes par une autre entrée). Elles sont dans `config.yaml` avec `provider: manual` : aucune
-requête, mais elles apparaissent dans `--status` et `/status`. Pour chacune, l'alternative :
-
-| Entreprise | Pourquoi | Que faire |
-|---|---|---|
-| [Google](https://www.google.com/about/careers/applications/jobs/results?q=intern) | robots.txt interdit /about/careers/applications/jobs/results | Bouton « Get job alerts » sur la page de résultats (compte Google) |
-| [Meta](https://www.metacareers.com/jobs?q=intern) | robots.txt de metacareers.com interdit toute collecte sans autorisation écrite | « Create job alert » sur metacareers.com (profil candidat) |
-| [LinkedIn](https://www.linkedin.com/jobs/search/?keywords=intern&f_C=1337) | offres publiées uniquement sur linkedin.com (scraping de LinkedIn exclu) ; le compte Lever « linkedin » est un bac à sable de test | Alerte d'emploi LinkedIn native (bouton « Créer une alerte » sur cette recherche) |
-| [Tesla](https://www.tesla.com/careers/search/?query=intern) | protection anti-bot Akamai (HTTP 403 Access Denied) | Pas d'alerte e-mail publique : vérification manuelle hebdomadaire |
-| [X](https://x.ai/careers) | careers.x.com redirige vers x.ai/careers : offres déjà suivies via xAI (Greenhouse « xai ») | Rien à faire : couvert par xAI |
-| [Splunk](https://cisco.wd5.myworkdayjobs.com/Cisco_Careers?q=splunk) | filiale de Cisco : offres publiées sur le Workday de Cisco, déjà surveillé (227 offres « splunk » le 9 oct. 2026) | Rien à faire : couvert par Cisco |
-| [SAP](https://jobs.sap.com/search/?q=intern) | site Next.js, offres chargées côté client par une API non documentée | « Job alerts » / Talent Community sur jobs.sap.com |
-| [ByteDance](https://jobs.bytedance.com/en/position?keywords=intern) | robots.txt de lifeattiktok.com interdit tout ; API jobs.bytedance.com protégée par jeton CSRF de session ; compte SmartRecruiters « Bytedance » abandonné | Alerte e-mail du site (compte candidat) ; voir aussi https://lifeattiktok.com/search?keyword=intern |
-| [Akamai](https://www.akamai.com/careers) | protection anti-bot (HTTP 403) ; Workday non public | Alerte d'emploi du portail carrières Akamai (compte candidat) |
-| [HubSpot](https://www.hubspot.com/careers/jobs?q=intern) | liste chargée en JavaScript par une API non documentée ; Workday « hubspot » non public (HTTP 401) | « Join our Talent Network » sur hubspot.com/careers |
-| [Valve](https://www.valvesoftware.com/en/jobs) | robots.txt interdit /jobs | Pas d'alerte : vérification manuelle mensuelle (Valve publie rarement des stages) |
-| [Shopify](https://www.shopify.com/careers/search?keywords=intern) | robots.txt de shopify.com interdit tout (Disallow: /) ; Workday « shopify » non public | Page https://internships.shopify.com (inscription aux annonces de la prochaine promo) |
-| [Wayfair](https://www.wayfair.com/careers/jobs) | liste chargée en JavaScript ; Workday « wayfair » non public (HTTP 401) ; compte SmartRecruiters avec 1 seule offre | « Job alerts » sur la page carrières Wayfair |
-| [Walmart Global Tech](https://careers.walmart.com/results?q=intern) | robots.txt interdit /api et /results ; le sitemap ne donne que des ID (R-1075582) sans titre | « Job Alerts » sur careers.walmart.com |
-| [DeepSeek](https://www.deepseek.com/) | pas d'ATS public (recrutement via plateformes chinoises) ; postes en Chine, exclue par tes filtres | Rien à faire tant que la Chine est exclue |
-| [Moonshot AI](https://www.moonshot.cn/) | pas d'ATS public ; le compte Workable « moonshot » est une autre entreprise ; postes en Chine, exclue par tes filtres | Rien à faire tant que la Chine est exclue |
-| [Safran](https://www.safran-group.com/fr/offres) | protection anti-bot (HTTP 403) sur safran-group.com | Compte candidat + « alerte emploi » (mot-clé stage) sur safran-group.com |
-| [Naval Group](https://www.naval-group.com/en/candidates) | liste chargée en JavaScript, aucune API ni ATS public trouvé | Alerte e-mail depuis l'espace candidat Naval Group |
-| [Capgemini](https://www.capgemini.com/fr-fr/carrieres/rejoignez-nous/nos-offres-demploi/) | liste chargée en JavaScript par une API non documentée ; pas de sitemap d'offres | « Créer une alerte » sur la page des offres Capgemini |
-| [Eviden](https://eviden.com/careers/) | robots.txt interdit /api/ (source de la liste d'offres) | Alerte e-mail sur le portail carrières Eviden |
-| [Amadeus](https://jobs.amadeus.com/) | liste chargée en JavaScript, sitemap vide, aucun ATS public trouvé | « Job alert » sur jobs.amadeus.com |
-| [OVHcloud](https://careers.ovhcloud.com/fr/) | robots.txt de careers.ovhcloud.com interdit tout (Disallow: /) | Alerte e-mail SuccessFactors (« Recevez les offres par e-mail ») sur careers.ovhcloud.com |
-| [Klarna](https://www.klarna.com/careers/) | liste chargée en JavaScript, aucun ATS public trouvé (Greenhouse, Ashby, Lever, Workday testés) | Alerte e-mail sur klarna.com/careers |
-| [Nokia](https://jobs.nokia.com/) | liste chargée en JavaScript ; les endpoints Oracle HCM supposés répondent 404 | « Job alerts » sur jobs.nokia.com |
-| [Renault](https://www.renaultgroup.com/carrieres/nos-offres/) | robots.txt interdit /api/ (source de la liste d'offres) | Alerte e-mail depuis l'espace candidat Renault Group |
-| [EDF](https://www.edf.fr/edf-recrute/offres) | protection anti-bot (HTTP 403) | Créer une alerte (mot-clé stage) depuis l'espace candidat EDF Recrute |
+Les entreprises que le bot ne lit pas (robots.txt, anti-bot, CGU, pas de source exploitable),
+les offres dont le texte est bloqué et les entreprises pas encore trouvées sont toutes dans
+**[docs/SITES_BLOQUES.md](docs/SITES_BLOQUES.md)**, avec pour chacune quoi faire à la place.
 
 ### Ajouter une nouvelle plateforme (développeurs)
 
@@ -611,7 +581,7 @@ Logs détaillés : `python -m internbot run --dry-run -v --company Salesforce`.
   Schneider ; Eightfold, Oracle HCM, Avature) : non officiels, détectés en cas de changement
   (erreur isolée + alerte après 3 échecs).
 - Les entreprises sans accès public stable sont suivies avec le provider `manual` (voir
-  « Entreprises suivies à la main »).
+  [docs/SITES_BLOQUES.md](docs/SITES_BLOQUES.md)).
 - Workday plafonne la recherche à 20 offres par page ; `max_pages: 100` limite à 2 000 offres
   par entreprise (un warning apparaît si la limite est atteinte).
 
