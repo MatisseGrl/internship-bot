@@ -50,6 +50,14 @@ Dans `revue_70.csv`, renseigner `label_humain` avec `1` si le **métier** corres
 
 Sur le test mis de côté, v3 place 6 des 94 offres pertinentes en basse priorité (38 % des titres) et 89 % de ses `prioriser` sont pertinents. **Aucune catégorie ML n'exclut une offre automatiquement.** `prioriser` sert à choisir les descriptions à récupérer d'abord ; `basse_priorite_a_relire` reste dans le registre pour revue.
 
+## Descriptions SWElist
+
+`descriptions_swelist.py` lit la page publique Simplify `/p/<id>` de chaque annonce (autorisée par robots.txt), une page toutes les 2,5 à 3,75 s, `prioriser` d'abord. La description, les exigences, les missions, les lieux, les dates et l'identifiant ATS (`tracked_obj`) vont dans la table privée `swelist_descriptions`, qui n'est pas copiée vers Supabase. Le lien « Apply » (`/jobs/click/`, interdit par robots.txt) n'est jamais suivi. Un blocage (403, 429, vérification humaine) ou cinq échecs consécutifs arrêtent la commande ; une relance reprend là où elle s'était arrêtée.
+
+```powershell
+python agent_local/descriptions_swelist.py --db C:\chemin\prive\suivi.sqlite --limite 200
+```
+
 ## Copie privée vers Supabase
 
 `sync_supabase.py` copie les tables SQLite `offres`, `candidatures` et `mails` vers les tables correspondantes de Supabase. Il ne transmet pas le champ `cv`, le contenu des mails, le profil candidat ni les fichiers de CV. La clé secrète est lue dans `SUPABASE_SECRET_KEY`, l'URL du projet dans `SUPABASE_URL` ; aucune valeur réelle ne va dans Git. Garder le registre et le fichier d'état hors du dépôt.
