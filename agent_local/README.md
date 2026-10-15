@@ -38,16 +38,17 @@ Après création de la table Supabase par la migration `swelist_annonces`, `sync
 
 ## Tri ML des titres
 
-`tri_ml.py` apprend uniquement la note historique **Fit rôle** du bot : `1` = hors métier, `3–5` = rôle pertinent ; `2` et les motifs d'éligibilité ne servent pas d'étiquettes. Les titres identiques sont dédoublonnés, les étiquettes contradictoires sont retirées, et les entreprises sont séparées entre apprentissage, validation et test. Le modèle de base est une régression logistique TF-IDF sur mots et n-grammes de caractères, en Python standard, sans API payante.
+`tri_ml.py` apprend uniquement la note historique **Fit rôle** du bot : `1` = hors métier, `3–5` = rôle pertinent ; `2` et les motifs d'éligibilité ne servent pas d'étiquettes. Les titres identiques sont dédoublonnés (étiquette majoritaire, égalités retirées), et les entreprises sont séparées entre développement et test. Le modèle `titre-ensemble-v3` combine des embeddings locaux et des n-grammes de caractères ; il est figé dans un artefact JSON pour noter les nouvelles annonces sans réentraîner. Dépendances : `pip install -e ".[ml]"`, sans API payante. Mesures et choix : [rapport du tri ML](../docs/TRI_ML_RAPPORT.md).
 
 ```powershell
-python agent_local/tri_ml.py --db C:\chemin\prive\suivi.sqlite --report C:\chemin\prive\evaluation.json --errors C:\chemin\prive\erreurs_test.csv
+python agent_local/tri_ml.py --db C:\chemin\prive\copie.sqlite --model C:\chemin\prive\modele_v3.json --report C:\chemin\prive\evaluation.json --errors C:\chemin\prive\erreurs_test.csv
+python agent_local/tri_ml.py --db C:\chemin\prive\suivi.sqlite --model C:\chemin\prive\modele_v3.json --noter
 python agent_local/revue_swelist.py --db C:\chemin\prive\suivi.sqlite --export C:\chemin\prive\revue_70.csv
 ```
 
 Dans `revue_70.csv`, renseigner `label_humain` avec `1` si le **métier** correspond et `0` sinon, à partir du titre et de l'annonce si nécessaire. Puis importer les réponses avec `--import-labels` à la place de `--export`. Les étiquettes SWElist sont conservées comme audit externe et ne sont pas injectées automatiquement dans l'entraînement.
 
-Le test initial a trouvé 7 offres pertinentes parmi 116 titres proposés en basse priorité (94 offres pertinentes dans le test). **Aucune catégorie ML n'exclut une offre automatiquement.** `prioriser` sert à choisir les descriptions à récupérer d'abord ; `basse_priorite_a_relire` reste dans le registre pour revue.
+Sur le test mis de côté, v3 place 6 des 94 offres pertinentes en basse priorité (38 % des titres) et 89 % de ses `prioriser` sont pertinents. **Aucune catégorie ML n'exclut une offre automatiquement.** `prioriser` sert à choisir les descriptions à récupérer d'abord ; `basse_priorite_a_relire` reste dans le registre pour revue.
 
 ## Copie privée vers Supabase
 

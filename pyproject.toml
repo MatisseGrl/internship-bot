@@ -17,6 +17,12 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+# Tri ML local des titres (agent_local/tri_ml.py) ; fastembed télécharge le modèle d'embedding.
+ml = [
+    "numpy>=1.26",
+    "scikit-learn>=1.4",
+    "fastembed>=0.4",
+]
 dev = [
     "pytest>=8.0",
     "responses>=0.25",
