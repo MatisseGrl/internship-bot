@@ -1,10 +1,10 @@
-# Agent local de candidatures — branche `codex/agent-candidatures`
+# Agent local de candidatures
 
-Cette branche ajoute le **moteur local** qui relie les offres du bot, un export du suivi Simplify, les décisions propres à chaque offre et les réponses par mail. Les CV, le profil personnel, les exports, la base SQLite et les sessions de navigateur restent hors du dépôt public.
+Ce répertoire contient le **moteur local** qui relie les offres du bot, un export du suivi Simplify, les décisions propres à chaque offre et les réponses par mail. Les CV, le profil personnel, les exports, la base SQLite et les sessions de navigateur restent hors du dépôt public.
 
 ## Partage du travail avec Claude
 
-- **Codex (cette branche)** : base privée, rapprochement des sources, dossier par offre, file de travail, contrôle du CV, suivi des états, anti-doublons, rapprochement des mails et protocole de candidature dans Chrome.
+- **Codex** : base privée, rapprochement des sources, dossier par offre, file de travail, contrôle du CV, suivi des états, anti-doublons, rapprochement des mails et protocole de candidature dans Chrome.
 - **Claude (autre branche ou copie)** : collecte et filtrage du bot public, fiabilité des textes d'annonce, `current.json`, `notation/notes.json`, et tests correspondants. Garder le format `current.json` version 1 avec `companies[*].jobs[*]` (`job_id`, `title`, `url`, `location`), et `notes.json` avec `offres` et `ecartees`. Si ce format change, fournir un exemple avant fusion.
 - **Point de raccord** : `python agent_local/agent.py sync-bot --snapshot ... --notes ... --archives export.jsonl` ; la base conserve les candidatures et les mails lors des réimports. L'archive JSONL contient les clés `company`, `job_id`, `title`, `location`, `url`, `texte` (ou `erreur`).
 
@@ -17,6 +17,30 @@ Cette branche ajoute le **moteur local** qui relie les offres du bot, un export 
 5. **Mails** : `suivi_candidatures.py mail` enregistre chaque message par boîte et identifiant Gmail. Un statut ne change que si l'entreprise et l'identifiant de l'offre sont établis. `reconcilier` reporte ces statuts dans la file. Un accusé de réception ne peut pas effacer un refus ou un entretien.
 
 L'utilisation de Chrome et la lecture quotidienne des deux boîtes sont assurées par la tâche Codex locale, pas par un accès Gmail ou Simplify caché dans ce programme. Le programme n'inclut **aucun appel d'API de modèle** et ne dépense rien. Le plafond de 10 USD par mois est représenté par `budget_disponible` avec arrêt local à 9 USD ; brancher un fournisseur exigera une clé hors dépôt et une mesure du coût réel.
+
+## Alertes SWElist
+
+`ingest_swelist.py` ajoute les annonces d'e-mails SWElist à un inventaire CSV privé. Il reçoit un JSON local contenant une liste d'objets `id`, `date` (`YYYY-MM-DD`), `subject` et `html` ; la lecture de Gmail reste en dehors du programme. L'import vérifie le nombre d'annonces indiqué dans l'objet, retire les paramètres de suivi des liens, dédoublonne par identifiant Simplify et applique un premier tri **indicatif** sur le titre. Il ne visite ni Simplify ni les sites des employeurs.
+
+```powershell
+python agent_local/ingest_swelist.py --messages-json C:\chemin\prive\nouveaux_mails.json --inventory C:\chemin\prive\swelist_inventaire.csv
+```
+
+Garder le JSON source et le CSV hors du dépôt public. Le tri du titre ne remplace pas la lecture de l'annonce officielle ni les règles d'éligibilité. Voir [la stratégie de tri](../docs/SOURCES_ET_TRI.md).
+
+## Copie privée vers Supabase
+
+`sync_supabase.py` copie les tables SQLite `offres`, `candidatures` et `mails` vers les tables correspondantes de Supabase. Il ne transmet pas le champ `cv`, le contenu des mails, le profil candidat ni les fichiers de CV. La clé secrète est lue dans `SUPABASE_SECRET_KEY`, l'URL du projet dans `SUPABASE_URL` ; aucune valeur réelle ne va dans Git. Garder le registre et le fichier d'état hors du dépôt.
+
+```powershell
+$env:SUPABASE_URL = 'https://VOTRE-PROJET.supabase.co'
+$env:SUPABASE_SECRET_KEY = '<clé secrète saisie localement>'
+python agent_local/sync_supabase.py --db C:\chemin\prive\suivi.sqlite
+```
+
+Le premier passage réécrit les lignes existantes par lots. Le fichier `sync_supabase.sqlite` créé à côté du registre mémorise chaque lot confirmé ; une relance ne renvoie que les lignes nouvelles ou modifiées. Les erreurs réseau temporaires sont réessayées, puis un échec arrête la commande avec un code non nul. Une réponse perdue peut entraîner le renvoi d'un lot, sans doublon grâce aux clés primaires. Après chaque passage, la commande contrôle les comptes des trois tables et des notes, textes et offres présentes dans l'instantané. Une perte de lignes distantes déclenche une réécriture complète. Les lignes distantes supplémentaires sont signalées et ne sont jamais supprimées automatiquement. `--full` force une vérification par réécriture intégrale quand le contenu distant a pu être changé directement sans modifier les comptes.
+
+Pour une exécution régulière sur Windows, conserver la clé dans le magasin chiffré lié au compte Windows et utiliser le Planificateur de tâches. Les scripts de configuration propres au projet privé se trouvent hors de ce dépôt. Le compte Windows doit être connecté et le PC allumé pour que la tâche locale s'exécute.
 
 ## Configuration locale
 
