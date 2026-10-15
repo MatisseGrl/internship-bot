@@ -183,6 +183,26 @@ python -m internbot --importer-notes travail/ --simulation         # vérifie, n
 python -m internbot --importer-notes travail/                      # met à jour notes.json
 ```
 
+### Texte d'offres choisies (agent de candidatures)
+
+`--exporter-textes` lit le texte complet d'une liste précise d'offres, **notées ou non**
+(`--a-noter` saute les offres déjà notées). Le bot ne fait que lire : il n'envoie rien.
+
+```bash
+python -m internbot --exporter-textes selection.jsonl --sortie textes.jsonl --state .state/state.json
+```
+
+- `selection.jsonl` : une ligne `{"company": "DRW", "job_id": "7997729"}` par offre
+  (`company` et `job_id` tels qu'ils sont dans `current.json` ; autres champs ignorés).
+- `textes.jsonl` (UTF-8) : une ligne par offre avec `company`, `job_id`, `title`, `location`,
+  `url`, puis `texte` et `source` si la lecture a réussi, sinon `erreur`. Une offre absente
+  de `current.json` (fermée, écartée, mauvais `job_id`) donne `title`/`location`/`url` à
+  `null` et une `erreur`, sans aucune requête.
+- Reprise : relancer la même commande ne retélécharge rien de ce qui est déjà dans `--sortie`
+  (texte lu, ou erreur de lecture) ; `--relancer-erreurs` relit les offres en erreur. Les
+  absentes sont recherchées de nouveau à chaque fois. Le fichier garde une ligne par offre.
+- Mettez `--sortie` hors du dépôt (il est public) si la sélection est privée.
+
 ### Autres sections
 
 | Section | Rôle |
@@ -494,6 +514,8 @@ python -m internbot [run] [options]
   --discover-out F    écrit le YAML trouvé dans F
   --a-noter DOSSIER   exporte le texte des offres ouvertes pas encore notées
                       (DOSSIER/offres.jsonl, reprend là où il s'est arrêté)
+  --exporter-textes S texte des offres listées dans S (JSONL company/job_id), notées ou
+                      non ; avec --sortie F (JSONL) et --relancer-erreurs (optionnel)
   --importer-notes D  applique les notes D/notes*.jsonl à notation/notes.json
   --simulation        avec --importer-notes : vérifie et affiche les verdicts sans écrire
   --company NAME      ne traite qu'une entreprise (même désactivée) — debug

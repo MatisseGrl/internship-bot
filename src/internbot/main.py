@@ -4,6 +4,7 @@
     python -m internbot --test-notify
     python -m internbot --list-companies
     python -m internbot --discover "Anthropic" "Slack=https://salesforce.wd12.myworkdayjobs.com/Slack"
+    python -m internbot --exporter-textes selection.jsonl --sortie textes.jsonl
 
 Codes de sortie : 0 OK (même si certaines sources échouent), 1 toutes les sources ont échoué
 ou le message de test n'est pas parti, 2 configuration invalide.
@@ -20,7 +21,7 @@ from collections.abc import Sequence
 from datetime import UTC, datetime
 from itertools import zip_longest
 from pathlib import Path
-from typing import Any
+from typing import Any, TextIO
 
 from internbot import __version__
 from internbot.config import AppConfig, CompanyConfig, HttpConfig, load_config
@@ -79,6 +80,18 @@ def build_parser() -> argparse.ArgumentParser:
         "--a-noter",
         metavar="DOSSIER",
         help="exporte le texte des offres ouvertes pas encore notées (DOSSIER/offres.jsonl)",
+    )
+    p.add_argument(
+        "--exporter-textes",
+        metavar="SELECTION",
+        help="exporte le texte des offres listées dans SELECTION (JSONL company/job_id), "
+        "notées ou non, dans le fichier --sortie",
+    )
+    p.add_argument("--sortie", metavar="FICHIER", help="avec --exporter-textes : JSONL produit")
+    p.add_argument(
+        "--relancer-erreurs",
+        action="store_true",
+        help="avec --exporter-textes : relit aussi les offres en erreur dans --sortie",
     )
     p.add_argument(
         "--importer-notes",
@@ -272,8 +285,6 @@ def cmd_a_noter(cfg: AppConfig, args: argparse.Namespace) -> int:
     """Exporte le texte des offres ouvertes (current.json) pas encore notées.
 
     Reprend là où il s'était arrêté : les offres déjà présentes dans offres.jsonl sont sautées.
-    Les offres sont parcourues entreprise par entreprise en alternance, pour que le délai de
-    politesse par domaine ne bloque pas tout l'export sur un seul site.
     """
     out_dir = Path(args.a_noter)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -281,39 +292,138 @@ def cmd_a_noter(cfg: AppConfig, args: argparse.Namespace) -> int:
     done = {(o["company"], o["job_id"]) for o in read_jsonl(out)}
     notation = Notation.load(notation_dir(args) / "notes.json")
     snapshot = load_snapshot(Path(args.state).with_name("current.json"))
-    by_company: dict[str, list[Job]] = {}
-    for job in snapshot_jobs(snapshot):
-        if args.company and job.company.casefold() != args.company.casefold():
-            continue
-        if notation.est_notee(*job.key) or job.key in done:
-            continue
-        by_company.setdefault(job.company, []).append(job)
-    queue = [j for group in zip_longest(*by_company.values()) for j in group if j is not None]
+    queue = _alterner(
+        [
+            job
+            for job in snapshot_jobs(snapshot)
+            if (not args.company or job.company.casefold() == args.company.casefold())
+            and not notation.est_notee(*job.key)
+            and job.key not in done
+        ]
+    )
     log.info("%d offre(s) à exporter (%d déjà dans %s).", len(queue), len(done), out)
     fetcher = DescriptionFetcher(make_http(cfg), {c.name: c for c in cfg.companies})
-    failures = 0
     with out.open("a", encoding="utf-8", newline="\n") as fh:
-        for i, job in enumerate(queue, 1):
-            row: dict[str, object] = {
-                "company": job.company,
-                "job_id": job.job_id,
-                "title": job.title,
-                "location": job.location,
-                "url": job.url,
-            }
-            try:
-                description = fetcher.fetch(job)
-                row.update(texte=description.text, source=description.source)
-            except DescriptionError as exc:
-                failures += 1
-                row["erreur"] = str(exc)[:300]
-                log.warning("%s — %s : %s", job.company, job.title, row["erreur"])
-            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
-            fh.flush()
-            if i % 50 == 0:
-                log.info("%d/%d offres exportées (%d illisibles).", i, len(queue), failures)
+        failures = _ecrire_textes(fh, queue, fetcher)
     log.info("Export terminé : %d offre(s), dont %d illisible(s).", len(queue), failures)
     return EXIT_OK
+
+
+def _alterner(jobs: list[Job]) -> list[Job]:
+    """Offres prises entreprise par entreprise en alternance : le délai de politesse par
+    domaine ne bloque pas tout l'export sur un seul site."""
+    by_company: dict[str, list[Job]] = {}
+    for job in jobs:
+        by_company.setdefault(job.company, []).append(job)
+    return [j for group in zip_longest(*by_company.values()) for j in group if j is not None]
+
+
+def _ecrire_textes(fh: TextIO, queue: list[Job], fetcher: DescriptionFetcher) -> int:
+    """Lit le texte de chaque offre et l'écrit aussitôt (une ligne JSON par offre : un export
+    interrompu reprend où il s'était arrêté). Renvoie le nombre d'offres illisibles."""
+    failures = 0
+    for i, job in enumerate(queue, 1):
+        row: dict[str, object] = {
+            "company": job.company,
+            "job_id": job.job_id,
+            "title": job.title,
+            "location": job.location,
+            "url": job.url,
+        }
+        try:
+            description = fetcher.fetch(job)
+            row.update(texte=description.text, source=description.source)
+        except DescriptionError as exc:
+            failures += 1
+            row["erreur"] = str(exc)[:300]
+            log.warning("%s — %s : %s", job.company, job.title, row["erreur"])
+        fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+        fh.flush()
+        if i % 50 == 0:
+            log.info("%d/%d offres exportées (%d illisibles).", i, len(queue), failures)
+    return failures
+
+
+def read_selection(path: Path) -> list[tuple[str, str]]:
+    """Couples (company, job_id) demandés, sans doublon, dans l'ordre du fichier."""
+    if not path.is_file():
+        raise ConfigError(f"sélection introuvable : {path}")
+    keys: dict[tuple[str, str], None] = {}
+    for n, row in enumerate(read_jsonl(path), 1):
+        company, job_id = row.get("company"), row.get("job_id")
+        if not company or job_id in (None, ""):
+            raise ConfigError(f"{path} : l'entrée {n} n'a pas de « company » et de « job_id »")
+        keys[(str(company), str(job_id))] = None
+    return list(keys)
+
+
+def cmd_exporter_textes(cfg: AppConfig, args: argparse.Namespace) -> int:
+    """Exporte le texte complet d'offres choisies (pour l'agent de candidatures).
+
+    Contrairement à --a-noter, les offres déjà notées sont exportées aussi : seule compte la
+    sélection. Une offre absente de current.json donne une ligne `erreur` sans lien, sans
+    requête. Reprise : une offre déjà lue dans --sortie (texte, ou erreur de lecture sauf
+    avec --relancer-erreurs) n'est pas retéléchargée ; une offre absente est recherchée de
+    nouveau (ça ne coûte rien). En fin d'export, le fichier est compacté : une ligne par
+    offre, la plus récente.
+    """
+    if not args.sortie:
+        raise ConfigError("--exporter-textes demande --sortie FICHIER.jsonl")
+    selection = read_selection(Path(args.exporter_textes))
+    out = Path(args.sortie)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    done = {
+        (str(row["company"]), str(row["job_id"]))
+        for row in read_jsonl(out)
+        if row.get("texte") or (row.get("url") and not args.relancer_erreurs)
+    }
+    snapshot = load_snapshot(Path(args.state).with_name("current.json"))
+    ouvertes = {job.key: job for job in snapshot_jobs(snapshot)}
+    todo = [key for key in selection if key not in done]
+    absentes = [key for key in todo if key not in ouvertes]
+    queue = _alterner([ouvertes[key] for key in todo if key in ouvertes])
+    log.info(
+        "%d offre(s) demandée(s) : %d à lire, %d déjà dans %s, %d absente(s) de current.json.",
+        len(selection),
+        len(queue),
+        len(selection) - len(todo),
+        out,
+        len(absentes),
+    )
+    fetcher = DescriptionFetcher(make_http(cfg), {c.name: c for c in cfg.companies})
+    with out.open("a", encoding="utf-8", newline="\n") as fh:
+        for company, job_id in absentes:
+            log.warning("%s / %s : absente de current.json.", company, job_id)
+            row = {
+                "company": company,
+                "job_id": job_id,
+                "title": None,
+                "location": None,
+                "url": None,
+                "erreur": "offre absente de current.json (fermée, écartée ou mauvais job_id)",
+            }
+            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+        failures = _ecrire_textes(fh, queue, fetcher)
+    _compacter(out)
+    log.info(
+        "Export terminé : %d offre(s) lue(s), dont %d illisible(s) ; %d absente(s).",
+        len(queue),
+        failures,
+        len(absentes),
+    )
+    return EXIT_OK
+
+
+def _compacter(path: Path) -> None:
+    """Une ligne par (company, job_id) : la dernière écrite, à la place de la première."""
+    rows: dict[tuple[str, str], dict[str, Any]] = {}
+    for row in read_jsonl(path):
+        rows[(str(row["company"]), str(row["job_id"]))] = row
+    tmp = path.with_name(f".{path.name}.tmp")
+    with tmp.open("w", encoding="utf-8", newline="\n") as fh:
+        for row in rows.values():
+            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+    os.replace(tmp, path)
 
 
 def cmd_importer_notes(cfg: AppConfig, args: argparse.Namespace) -> int:
@@ -404,6 +514,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             return cmd_test_notify(cfg)
         if args.a_noter:
             return cmd_a_noter(cfg, args)
+        if args.exporter_textes:
+            return cmd_exporter_textes(cfg, args)
         if args.importer_notes:
             return cmd_importer_notes(cfg, args)
         return cmd_run(cfg, args)
