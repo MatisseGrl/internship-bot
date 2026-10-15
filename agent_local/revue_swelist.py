@@ -12,22 +12,36 @@ import hashlib
 import sqlite3
 from pathlib import Path
 
-
-FIELDS = ["groupe", "simplify_id", "entreprise", "intitule", "lien_simplify",
-          "premier_filtre", "score_fit", "verdict_ml", "label_humain"]
+FIELDS = [
+    "groupe",
+    "simplify_id",
+    "entreprise",
+    "intitule",
+    "lien_simplify",
+    "premier_filtre",
+    "score_fit",
+    "verdict_ml",
+    "label_humain",
+]
 
 
 def export_review(db: sqlite3.Connection, output: Path) -> dict[str, int]:
     db.row_factory = sqlite3.Row
-    rows = [dict(row) for row in db.execute(
-        """SELECT simplify_id,entreprise,intitule,lien_simplify,premier_filtre,
+    rows = [
+        dict(row)
+        for row in db.execute(
+            """SELECT simplify_id,entreprise,intitule,lien_simplify,premier_filtre,
                   score_fit,verdict_ml,label_humain
            FROM swelist_annonces WHERE score_fit IS NOT NULL AND label_humain IS NULL"""
-    )]
+        )
+    ]
     low = [row for row in rows if row["verdict_ml"] == "basse_priorite_a_relire"]
     middle = [row for row in rows if row["verdict_ml"] == "a_lire"]
     high = [row for row in rows if row["verdict_ml"] == "prioriser"]
-    stable = lambda row: hashlib.sha256(row["simplify_id"].encode()).hexdigest()
+
+    def stable(row):
+        return hashlib.sha256(row["simplify_id"].encode()).hexdigest()
+
     chosen = [("basse_priorite", row) for row in sorted(low, key=stable)[:30]]
     chosen += [("a_lire", row) for row in sorted(middle, key=stable)[:20]]
     chosen += [("prioriser", row) for row in sorted(high, key=stable)[:20]]
@@ -37,8 +51,12 @@ def export_review(db: sqlite3.Connection, output: Path) -> dict[str, int]:
         writer.writeheader()
         for group, row in chosen:
             writer.writerow({**row, "groupe": group})
-    return {"exportees": len(chosen), "basse_priorite": min(30, len(low)),
-            "a_lire": min(20, len(middle)), "prioriser": min(20, len(high))}
+    return {
+        "exportees": len(chosen),
+        "basse_priorite": min(30, len(low)),
+        "a_lire": min(20, len(middle)),
+        "prioriser": min(20, len(high)),
+    }
 
 
 def import_labels(db: sqlite3.Connection, source: Path) -> dict[str, int]:
@@ -64,8 +82,10 @@ def import_labels(db: sqlite3.Connection, source: Path) -> dict[str, int]:
         if existing[0] is not None and existing[0] != label:
             raise ValueError(f"Étiquette déjà différente : {sid}")
     with db:
-        db.executemany("UPDATE swelist_annonces SET label_humain=? WHERE simplify_id=?",
-                       [(label, sid) for sid, label in values])
+        db.executemany(
+            "UPDATE swelist_annonces SET label_humain=? WHERE simplify_id=?",
+            [(label, sid) for sid, label in values],
+        )
     return {"lues": len(rows), "etiquetees": len(values)}
 
 
@@ -78,7 +98,9 @@ def main() -> None:
     args = parser.parse_args()
     db = sqlite3.connect(args.db, timeout=30)
     try:
-        result = export_review(db, args.export) if args.export else import_labels(db, args.import_labels)
+        result = (
+            export_review(db, args.export) if args.export else import_labels(db, args.import_labels)
+        )
         print(result)
     finally:
         db.close()

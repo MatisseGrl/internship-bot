@@ -22,20 +22,57 @@ from contextlib import closing, contextmanager
 from pathlib import Path
 from typing import Any
 
-
 TABLES = {
-    "offres": ("cle", "entreprise", "identifiant", "titre", "lieu", "url", "texte",
-               "categorie_note", "note_json", "score", "dans_snapshot", "vu_le"),
-    "swelist_annonces": ("simplify_id", "date_mail", "id_mail", "entreprise",
-                         "intitule", "lien_simplify", "premier_filtre", "raison",
-                         "bot_cle_candidate", "rapprochement", "label_humain",
-                         "score_fit", "verdict_ml", "version_modele", "evalue_le"),
+    "offres": (
+        "cle",
+        "entreprise",
+        "identifiant",
+        "titre",
+        "lieu",
+        "url",
+        "texte",
+        "categorie_note",
+        "note_json",
+        "score",
+        "dans_snapshot",
+        "vu_le",
+    ),
+    "swelist_annonces": (
+        "simplify_id",
+        "date_mail",
+        "id_mail",
+        "entreprise",
+        "intitule",
+        "lien_simplify",
+        "premier_filtre",
+        "raison",
+        "bot_cle_candidate",
+        "rapprochement",
+        "label_humain",
+        "score_fit",
+        "verdict_ml",
+        "version_modele",
+        "evalue_le",
+    ),
     "candidatures": ("cle_offre", "statut", "preuve", "modifie_le"),
-    "mails": ("boite", "identifiant_message", "recu_le", "expediteur", "objet",
-              "categorie", "cle_offre", "justification", "traite_le"),
+    "mails": (
+        "boite",
+        "identifiant_message",
+        "recu_le",
+        "expediteur",
+        "objet",
+        "categorie",
+        "cle_offre",
+        "justification",
+        "traite_le",
+    ),
 }
-CONFLICT = {"offres": "cle", "swelist_annonces": "simplify_id",
-            "candidatures": "cle_offre", "mails": "boite,identifiant_message"}
+CONFLICT = {
+    "offres": "cle",
+    "swelist_annonces": "simplify_id",
+    "candidatures": "cle_offre",
+    "mails": "boite,identifiant_message",
+}
 RETRYABLE = {408, 429, 500, 502, 503, 504, 520, 521, 522, 523, 524}
 
 
@@ -44,8 +81,9 @@ class SyncError(RuntimeError):
 
 
 def encode(value: Any) -> bytes:
-    return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"),
-                      allow_nan=False).encode("utf-8")
+    return json.dumps(
+        value, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False
+    ).encode("utf-8")
 
 
 def source_snapshot(path: Path) -> tuple[dict[str, list[dict[str, Any]]], dict[str, int]]:
@@ -55,9 +93,9 @@ def source_snapshot(path: Path) -> tuple[dict[str, list[dict[str, Any]]], dict[s
         db.row_factory = sqlite3.Row
         db.execute("BEGIN")
         rows: dict[str, list[dict[str, Any]]] = {}
-        available = {row[0] for row in db.execute(
-            "SELECT name FROM sqlite_master WHERE type='table'"
-        )}
+        available = {
+            row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type='table'")
+        }
         for table, columns in TABLES.items():
             if table == "swelist_annonces" and table not in available:
                 continue  # Older local registers do not yet have the second source.
@@ -79,8 +117,11 @@ def source_snapshot(path: Path) -> tuple[dict[str, list[dict[str, Any]]], dict[s
 
 
 def identity(table: str, row: dict[str, Any]) -> str:
-    return json.dumps([row[column] for column in CONFLICT[table].split(",")],
-                      ensure_ascii=False, separators=(",", ":"))
+    return json.dumps(
+        [row[column] for column in CONFLICT[table].split(",")],
+        ensure_ascii=False,
+        separators=(",", ":"),
+    )
 
 
 def digest(row: dict[str, Any]) -> str:
@@ -116,9 +157,11 @@ def single_instance(path: Path):
             lock.seek(0)
             if os.name == "nt":
                 import msvcrt
+
                 msvcrt.locking(lock.fileno(), msvcrt.LK_NBLCK, 1)
             else:
                 import fcntl
+
                 fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
         except OSError as error:
             raise SyncError("Une synchronisation est déjà en cours") from error
@@ -144,15 +187,17 @@ class RestClient:
         self.attempts = attempts
         self.timeout = timeout
 
-    def request(self, method: str, path: str, *, payload: bytes | None = None,
-                prefer: str = "") -> Any:
+    def request(
+        self, method: str, path: str, *, payload: bytes | None = None, prefer: str = ""
+    ) -> Any:
         headers = {"apikey": self.key, "Accept": "application/json"}
         if payload is not None:
             headers["Content-Type"] = "application/json"
         if prefer:
             headers["Prefer"] = prefer
-        request = urllib.request.Request(self.url + "/rest/v1/" + path, data=payload,
-                                         headers=headers, method=method)
+        request = urllib.request.Request(
+            self.url + "/rest/v1/" + path, data=payload, headers=headers, method=method
+        )
         for attempt in range(self.attempts):
             try:
                 with urllib.request.urlopen(request, timeout=self.timeout) as response:
@@ -160,10 +205,14 @@ class RestClient:
             except urllib.error.HTTPError as error:
                 # Never print the response body: it can contain private row values.
                 if error.code not in RETRYABLE or attempt + 1 == self.attempts:
-                    raise SyncError(f"Supabase HTTP {error.code} ({method} {path.split('?')[0]})") from None
+                    raise SyncError(
+                        f"Supabase HTTP {error.code} ({method} {path.split('?')[0]})"
+                    ) from None
             except (urllib.error.URLError, TimeoutError, ConnectionError) as error:
                 if attempt + 1 == self.attempts:
-                    raise SyncError(f"Connexion Supabase impossible ({type(error).__name__})") from None
+                    raise SyncError(
+                        f"Connexion Supabase impossible ({type(error).__name__})"
+                    ) from None
             time.sleep(min(8, 0.5 * 2**attempt) + random.uniform(0, 0.25))
         raise AssertionError("unreachable")
 
@@ -173,14 +222,21 @@ class RestClient:
             # would set the omitted cv column to NULL on an existing row.
             for row in rows:
                 path = "candidatures?cle_offre=eq." + urllib.parse.quote(row["cle_offre"], safe="")
-                self.request("POST", "candidatures?on_conflict=cle_offre",
-                             payload=encode(row),
-                             prefer="resolution=ignore-duplicates,return=minimal")
+                self.request(
+                    "POST",
+                    "candidatures?on_conflict=cle_offre",
+                    payload=encode(row),
+                    prefer="resolution=ignore-duplicates,return=minimal",
+                )
                 self.request("PATCH", path, payload=encode(row), prefer="return=minimal")
             return
         conflict = urllib.parse.quote(CONFLICT[table], safe=",")
-        self.request("POST", f"{table}?on_conflict={conflict}", payload=encode(rows),
-                     prefer="resolution=merge-duplicates,return=minimal")
+        self.request(
+            "POST",
+            f"{table}?on_conflict={conflict}",
+            payload=encode(rows),
+            prefer="resolution=merge-duplicates,return=minimal",
+        )
 
     @staticmethod
     def _count_header(headers: Any, table: str) -> int:
@@ -218,8 +274,14 @@ def compare_counts(client: RestClient, expected: dict[str, int]) -> dict[str, in
     return {name: actual[name] for name in expected if actual[name] != expected[name]}
 
 
-def sync(source: Path, state_path: Path, client: RestClient, *, full: bool = False,
-         max_bytes: int = 200_000) -> dict[str, Any]:
+def sync(
+    source: Path,
+    state_path: Path,
+    client: RestClient,
+    *,
+    full: bool = False,
+    max_bytes: int = 200_000,
+) -> dict[str, Any]:
     if max_bytes < 1024:
         raise ValueError("max_bytes doit être supérieur à 1024")
     if source.resolve() == state_path.resolve():
@@ -227,8 +289,12 @@ def sync(source: Path, state_path: Path, client: RestClient, *, full: bool = Fal
     with single_instance(state_path), closing(open_state(state_path)) as state:
         rows, expected = source_snapshot(source)
         uploaded = {table: 0 for table in rows}
-        known = {(table, key): sha for table, key, sha in
-                 state.execute("SELECT table_name,row_key,sha256 FROM acknowledged")}
+        known = {
+            (table, key): sha
+            for table, key, sha in state.execute(
+                "SELECT table_name,row_key,sha256 FROM acknowledged"
+            )
+        }
 
         def upload(force: bool) -> None:
             for table in rows:  # Foreign keys: offers before the source and applications.
@@ -240,16 +306,20 @@ def sync(source: Path, state_path: Path, client: RestClient, *, full: bool = Fal
                 for batch in batches(changed, max_bytes):
                     client.upsert(table, [item[2] for item in batch])
                     with state:
-                        state.executemany("""INSERT INTO acknowledged(table_name,row_key,sha256)
+                        state.executemany(
+                            """INSERT INTO acknowledged(table_name,row_key,sha256)
                             VALUES(?,?,?) ON CONFLICT(table_name,row_key)
                             DO UPDATE SET sha256=excluded.sha256""",
-                            [(table, key, sha) for key, sha, _ in batch])
+                            [(table, key, sha) for key, sha, _ in batch],
+                        )
                     uploaded[table] += len(batch)
 
         upload(full)
         mismatch = compare_counts(client, expected)
-        if mismatch and not full and not any(
-            client.count(table) > expected[table] for table in rows
+        if (
+            mismatch
+            and not full
+            and not any(client.count(table) > expected[table] for table in rows)
         ):
             # A remote table can be truncated while local acknowledgements survive.
             # Replay once before declaring the copy inconsistent.
@@ -269,8 +339,9 @@ def main() -> int:
     args = parser.parse_args()
     state = args.state or args.db.with_name("sync_supabase.sqlite")
     try:
-        client = RestClient(os.environ.get("SUPABASE_URL", ""),
-                            os.environ.get("SUPABASE_SECRET_KEY", ""))
+        client = RestClient(
+            os.environ.get("SUPABASE_URL", ""), os.environ.get("SUPABASE_SECRET_KEY", "")
+        )
         result = sync(args.db, state, client, full=args.full, max_bytes=args.max_bytes)
     except (OSError, sqlite3.Error, ValueError, SyncError) as error:
         print(f"Synchronisation echouee : {error}", file=sys.stderr)

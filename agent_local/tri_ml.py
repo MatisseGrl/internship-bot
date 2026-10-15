@@ -59,7 +59,7 @@ def load_examples(db: sqlite3.Connection) -> tuple[list[Example], dict[str, int]
         item = Example(key, normaliser(company), title, int(grades[0] >= 3))
         by_title[normaliser(title)].append(item)
     examples = []
-    for title, variants in by_title.items():
+    for variants in by_title.values():
         if len({v.label for v in variants}) != 1:
             stats["conflicting_titles"] += len(variants)
             continue
@@ -87,7 +87,7 @@ def features(title: str) -> Counter[str]:
     values.update("b:" + words[i] + "_" + words[i + 1] for i in range(len(words) - 1))
     padded = "^" + title + "$"
     for width in (3, 4, 5):
-        values.update("c:" + padded[i:i + width] for i in range(len(padded) - width + 1))
+        values.update("c:" + padded[i : i + width] for i in range(len(padded) - width + 1))
     return values
 
 
@@ -103,8 +103,11 @@ class Vectorizer:
         self.idf = [math.log((1 + len(titles)) / (1 + df[name])) + 1 for name in self.names]
 
     def transform(self, title: str) -> list[tuple[int, float]]:
-        values = [(self.lookup[name], (1 + math.log(count)) * self.idf[self.lookup[name]])
-                  for name, count in features(title).items() if name in self.lookup]
+        values = [
+            (self.lookup[name], (1 + math.log(count)) * self.idf[self.lookup[name]])
+            for name, count in features(title).items()
+            if name in self.lookup
+        ]
         length = math.sqrt(sum(value * value for _, value in values)) or 1.0
         return [(index, value / length) for index, value in values]
 
@@ -131,7 +134,7 @@ class Logistic:
             rng.shuffle(order)
             rate = 0.7 / (1 + epoch / 35)
             for start in range(0, len(rows), 32):
-                batch = order[start:start + 32]
+                batch = order[start : start + 32]
                 gradient = defaultdict(float)
                 intercept = 0.0
                 for i in batch:
@@ -163,14 +166,17 @@ def metrics(items: list[tuple[int, float]], reject: float, priority: float) -> d
     positives = sum(y for y, _ in items)
     missed = sum(y for y, _ in low_priority)
     return {
-        "n": len(items), "positifs": positives, "negatifs": len(items) - positives,
+        "n": len(items),
+        "positifs": positives,
+        "negatifs": len(items) - positives,
         "auc": round(auc(items), 4),
         "basse_priorite_a_relire": len(low_priority),
         "pertinents_en_basse_priorite": missed,
         "taux_faux_rejet_si_exclus": round(missed / positives, 4),
         "priorises": len(prioritized),
         "precision_priorite": round(sum(y for y, _ in prioritized) / len(prioritized), 4)
-        if prioritized else None,
+        if prioritized
+        else None,
     }
 
 
@@ -183,64 +189,99 @@ def run(db_path: Path, report_path: Path, errors_path: Path) -> dict:
         vectorizer = Vectorizer([x.title for x in train])
         model = Logistic(len(vectorizer.names))
         model.fit([(vectorizer.transform(x.title), x.label) for x in train])
-        scored = {name: [(x.label, model.predict(vectorizer.transform(x.title))) for x in rows]
-                  for name, rows in split.items()}
+        scored = {
+            name: [(x.label, model.predict(vectorizer.transform(x.title))) for x in rows]
+            for name, rows in split.items()
+        }
         validation_positive = [score for label, score in scored["validation"] if label == 1]
         reject = max(0.0, min(validation_positive) - 1e-9)
         priority = sorted(score for _, score in scored["validation"])[
             int(0.8 * (len(validation) - 1))
         ]
         report = {
-            "version": VERSION, "cible": "Fit role 1 contre Fit role 3-5",
-            "note": "Score de tri, non une probabilite calibree ni une decision de candidature. Aucun rejet automatique.",
+            "version": VERSION,
+            "cible": "Fit role 1 contre Fit role 3-5",
+            "note": (
+                "Score de tri, non une probabilite calibree ni une decision de candidature. "
+                "Aucun rejet automatique."
+            ),
             "regles": "Un titre normalise une fois; entreprises distinctes entre jeux.",
-            "extraction": data_stats, "taille_vocabulaire": len(vectorizer.names),
-            "seuil_basse_priorite": reject, "seuil_prioriser": priority,
+            "extraction": data_stats,
+            "taille_vocabulaire": len(vectorizer.names),
+            "seuil_basse_priorite": reject,
+            "seuil_prioriser": priority,
             "train": metrics(scored["train"], reject, priority),
             "validation": metrics(scored["validation"], reject, priority),
             "test": metrics(scored["test"], reject, priority),
         }
-        overlap_company = (set(x.company for x in train) & set(x.company for x in validation)
-                           | set(x.company for x in train) & set(x.company for x in test)
-                           | set(x.company for x in validation) & set(x.company for x in test))
+        overlap_company = (
+            set(x.company for x in train) & set(x.company for x in validation)
+            | set(x.company for x in train) & set(x.company for x in test)
+            | set(x.company for x in validation) & set(x.company for x in test)
+        )
         report["entreprises_communes_entre_jeux"] = len(overlap_company)
-        report["titres_communs_entre_jeux"] = len(set(normaliser(x.title) for x in train)
-            & (set(normaliser(x.title) for x in validation) | set(normaliser(x.title) for x in test)))
+        report["titres_communs_entre_jeux"] = len(
+            set(normaliser(x.title) for x in train)
+            & (
+                set(normaliser(x.title) for x in validation)
+                | set(normaliser(x.title) for x in test)
+            )
+        )
         report["regle_existante_test"] = {
             "basse_priorite": sum(title_filter(x.title)[0] == "ecarter_titre" for x in test),
-            "pertinents_en_basse_priorite": sum(x.label == 1 and title_filter(x.title)[0] == "ecarter_titre" for x in test),
+            "pertinents_en_basse_priorite": sum(
+                x.label == 1 and title_filter(x.title)[0] == "ecarter_titre" for x in test
+            ),
         }
-        if not db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='swelist_annonces'").fetchone():
+        if not db.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='swelist_annonces'"
+        ).fetchone():
             raise ValueError("Importer SWElist avant de noter les titres")
         now = datetime.now(UTC).isoformat()
         with db:
-            for sid, title in db.execute("SELECT simplify_id,intitule FROM swelist_annonces").fetchall():
+            for sid, title in db.execute(
+                "SELECT simplify_id,intitule FROM swelist_annonces"
+            ).fetchall():
                 score = model.predict(vectorizer.transform(title))
-                verdict = "basse_priorite_a_relire" if score <= reject else (
-                    "prioriser" if score >= priority else "a_lire"
+                verdict = (
+                    "basse_priorite_a_relire"
+                    if score <= reject
+                    else ("prioriser" if score >= priority else "a_lire")
                 )
-                db.execute("""UPDATE swelist_annonces SET score_fit=?,verdict_ml=?,
+                db.execute(
+                    """UPDATE swelist_annonces SET score_fit=?,verdict_ml=?,
                            version_modele=?,evalue_le=? WHERE simplify_id=?""",
-                           (score, verdict, VERSION, now, sid))
-        report["swelist_classes"] = dict(db.execute(
-            "SELECT verdict_ml,COUNT(*) FROM swelist_annonces GROUP BY verdict_ml"
-        ))
-        audit = list(db.execute(
-            "SELECT label_humain,score_fit FROM swelist_annonces WHERE label_humain IS NOT NULL"
-        ))
+                    (score, verdict, VERSION, now, sid),
+                )
+        report["swelist_classes"] = dict(
+            db.execute("SELECT verdict_ml,COUNT(*) FROM swelist_annonces GROUP BY verdict_ml")
+        )
+        audit = list(
+            db.execute(
+                "SELECT label_humain,score_fit FROM swelist_annonces WHERE label_humain IS NOT NULL"
+            )
+        )
         if audit:
             report["audit_humain_swelist"] = (
-                metrics(audit, reject, priority) if {label for label, _ in audit} == {0, 1}
-                else {"n": len(audit), "note": "Deux classes nécessaires pour calculer les métriques."}
+                metrics(audit, reject, priority)
+                if {label for label, _ in audit} == {0, 1}
+                else {
+                    "n": len(audit),
+                    "note": "Deux classes nécessaires pour calculer les métriques.",
+                }
             )
         report_path.parent.mkdir(parents=True, exist_ok=True)
-        report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        report_path.write_text(
+            json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
         with errors_path.open("w", encoding="utf-8", newline="") as output:
             writer = csv.writer(output)
             writer.writerow(["entreprise", "titre", "label_fit", "score_fit", "erreur"])
             for example, (label, score) in zip(test, scored["test"], strict=True):
-                error = "pertinent_en_basse_priorite" if label == 1 and score <= reject else (
-                    "hors_metier_priorise" if label == 0 and score >= priority else ""
+                error = (
+                    "pertinent_en_basse_priorite"
+                    if label == 1 and score <= reject
+                    else ("hors_metier_priorise" if label == 0 and score >= priority else "")
                 )
                 if error:
                     writer.writerow([example.company, example.title, label, round(score, 6), error])
@@ -256,8 +297,16 @@ def main() -> None:
     parser.add_argument("--errors", type=Path, required=True)
     args = parser.parse_args()
     report = run(args.db, args.report, args.errors)
-    print(json.dumps({"validation": report["validation"], "test": report["test"],
-                      "swelist_classes": report["swelist_classes"]}, ensure_ascii=False))
+    print(
+        json.dumps(
+            {
+                "validation": report["validation"],
+                "test": report["test"],
+                "swelist_classes": report["swelist_classes"],
+            },
+            ensure_ascii=False,
+        )
+    )
 
 
 if __name__ == "__main__":
