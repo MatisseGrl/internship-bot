@@ -70,7 +70,7 @@ Score = (Fit×45 + Éco×20 + Pont×20 + App×15) / 5, seuil 65 (onglet Barème 
 | limite | score < 65, mais ≥ 65 avec un autre jeu de poids (SF-first ou Apprentissage) | gardée, à trancher par Matisse |
 | à trancher | pas un stage (`stage: false`) mais passe la grille | gardée |
 | illisible | texte inaccessible (page protégée, anti-bot) | gardée, à trier à la main |
-| écartée | non éligible, ou sous le seuil avec les trois jeux de poids | supprimée (seul l'identifiant est gardé, pour la cacher) |
+| écartée | non éligible, ou sous le seuil avec les trois jeux de poids | supprimée (sa note est gardée dans `ecartees`, pour relire les rejets) |
 
 Une offre qui n'a pas encore été notée reste visible. Avec Fit = 1, aucune offre ne passe :
 le maximum est 64 (grille, section 3.1).

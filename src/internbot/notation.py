@@ -16,8 +16,9 @@ Verdicts (`notation/notes.json`) :
 - `limite`  : score < 65 mais >= 65 avec une variante de poids (à trancher par Matisse : gardée) ;
 - `a_trancher` : pas un stage (alternance, CDI, VIE) : gardée, à trancher par Matisse ;
 - `illisible` : texte de l'annonce inaccessible : gardée, à trier à la main ;
-- écartée (non éligible, ou score < 65 avec tous les jeux de poids) : seul l'identifiant est
-  conservé, pour la cacher de /offres ; la note n'est pas gardée.
+- écartée (non éligible, ou score < 65 avec tous les jeux de poids) : cachée de /offres ; sa
+  note est gardée dans `ecartees` (motif et preuve, ou notes, preuves et score), pour pouvoir
+  relire les rejets et repérer d'éventuels faux rejets.
 Une offre absente du fichier n'est pas encore notée : elle reste visible.
 """
 
@@ -37,7 +38,7 @@ import yaml
 
 from internbot.errors import ConfigError
 
-NOTES_VERSION = 1
+NOTES_VERSION = 2
 
 CRITERES = ("fit", "eco", "pont", "app")
 POIDS = {"fit": 45, "eco": 20, "pont": 20, "app": 15}
@@ -152,6 +153,10 @@ class Notation:
         self.data: dict[str, Any] = data or {"version": NOTES_VERSION, "offres": {}, "ecartees": {}}
         self.data.setdefault("offres", {})
         self.data.setdefault("ecartees", {})
+        for company, ids in self.data["ecartees"].items():
+            if isinstance(ids, list):  # version 1 : identifiants seuls, sans la note
+                self.data["ecartees"][company] = {str(job_id): {} for job_id in ids}
+        self.data["version"] = NOTES_VERSION
         self._ecartees = {
             (company, str(job_id))
             for company, ids in self.data["ecartees"].items()
@@ -166,7 +171,7 @@ class Notation:
             data = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError as exc:
             raise ConfigError(f"{path} illisible : {exc}") from None
-        if not isinstance(data, dict) or data.get("version") != NOTES_VERSION:
+        if not isinstance(data, dict) or data.get("version") not in (1, NOTES_VERSION):
             raise ConfigError(f"{path} : version de fichier non supportée")
         return cls(path, data)
 
@@ -187,18 +192,19 @@ class Notation:
         self._retirer(company, job_id)
         self.data["offres"].setdefault(company, {})[job_id] = dict(entry)
 
-    def ecartee(self, company: str, job_id: str) -> None:
+    def ecartee(self, company: str, job_id: str, entry: Mapping[str, Any] | None = None) -> None:
         self._retirer(company, job_id)
-        ids = self.data["ecartees"].setdefault(company, [])
-        ids.append(job_id)
-        ids.sort()
+        self.data["ecartees"].setdefault(company, {})[job_id] = dict(entry or {})
         self._ecartees.add((company, job_id))
+
+    def note_ecartee(self, company: str, job_id: str) -> dict[str, Any] | None:
+        entry = (self.data["ecartees"].get(company) or {}).get(job_id)
+        return dict(entry) if isinstance(entry, dict) else None
 
     def _retirer(self, company: str, job_id: str) -> None:
         offres = self.data["offres"].get(company) or {}
         offres.pop(job_id, None)
-        if job_id in (self.data["ecartees"].get(company) or []):
-            self.data["ecartees"][company].remove(job_id)
+        (self.data["ecartees"].get(company) or {}).pop(job_id, None)
         self._ecartees.discard((company, job_id))
 
     def save(self) -> None:
@@ -262,8 +268,11 @@ def evaluer(
             raise ValueError(
                 f"motif d'inéligibilité inconnu {motif!r} ({sorted(MOTIFS_INELIGIBLE)})"
             )
-        _citation(note, "preuve_motif", texte)
-        return {"statut": ECARTEE}
+        preuve = _citation(note, "preuve_motif", texte)
+        ecart = {"statut": ECARTEE, "motif": motif, "preuve_motif": f"« {preuve} »"}
+        if note.get("conditions"):
+            ecart["conditions"] = str(note["conditions"]).strip()
+        return ecart
     if note.get("eligible") is not True:
         raise ValueError("eligible doit valoir true ou false")
 
@@ -296,9 +305,7 @@ def evaluer(
         statut = A_TRANCHER  # alternance / CDI / VIE : Matisse décide (grille, cas particuliers)
     elif note.get("stage") not in (True, False):
         raise ValueError("stage doit valoir true ou false")
-    if statut == ECARTEE:
-        return {"statut": ECARTEE}
-    return {
+    entry: dict[str, Any] = {
         "statut": statut,
         "score": round(principal),
         "notes": [notes[c] for c in CRITERES],
@@ -310,6 +317,9 @@ def evaluer(
         },
         "conditions": str(note.get("conditions") or NON_PRECISE).strip(),
     }
+    if note.get("stage") is False:
+        entry["stage"] = False
+    return entry
 
 
 def importer(
@@ -342,7 +352,7 @@ def importer(
         report.compter(statut)
         report.verdicts.append((key[0], str(offre.get("title")), statut, entry.get("score")))
         if statut == ECARTEE:
-            notation.ecartee(*key)
+            notation.ecartee(*key, entry)
         else:
             notation.gardee(*key, {"statut": statut, **entry})
     for key, offre in par_cle.items():
