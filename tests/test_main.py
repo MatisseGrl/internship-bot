@@ -161,7 +161,7 @@ def test_a_noter_puis_importer_notes(cfg_path: Path, tmp_path: Path) -> None:
     (work / "notes-1.jsonl").write_text(json.dumps(note) + "\n", encoding="utf-8")
     assert main(["--importer-notes", str(work), "-c", str(cfg_path)]) == EXIT_OK
     notes = json.loads((tmp_path / "notation" / "notes.json").read_text("utf-8"))
-    assert notes["ecartees"] == {"Acme": ["1"]}
+    assert notes["ecartees"]["Acme"]["1"]["notes"] == [2, 2, 1, 2]
     assert notes["offres"]["Acme"]["2"]["statut"] == "illisible"
 
     # Passage suivant : l'offre écartée n'est plus dans la liste /offres, l'illisible reste.

@@ -154,7 +154,12 @@ def test_notes_entieres_de_1_a_5(champ: str, valeur: Any) -> None:
 
 def test_offre_non_eligible_ecartee_sur_citation() -> None:
     ok = note(eligible=False, motif="fin_etudes", preuve_motif="students graduating in 2028")
-    assert evaluer(ok, OFFRE, ACME) == {"statut": ECARTEE}
+    assert evaluer(ok, OFFRE, ACME) == {
+        "statut": ECARTEE,
+        "motif": "fin_etudes",
+        "preuve_motif": "« students graduating in 2028 »",
+        "conditions": "Été 2027",
+    }
     with pytest.raises(ValueError, match="motif"):
         evaluer(note(eligible=False, motif="flemme", preuve_motif="x y z"), OFFRE, ACME)
     with pytest.raises(ValueError, match="preuve_motif"):
@@ -163,8 +168,8 @@ def test_offre_non_eligible_ecartee_sur_citation() -> None:
 
 def test_pas_un_stage_gardee_a_trancher_seulement_si_elle_passe() -> None:
     assert evaluer(note(stage=False), OFFRE, ACME)["statut"] == "a_trancher"
-    hors_metier = note(stage=False, fit=1, app=1)
-    assert evaluer(hors_metier, OFFRE, ACME) == {"statut": ECARTEE}
+    hors_metier = evaluer(note(stage=False, fit=1, app=1), OFFRE, ACME)
+    assert hors_metier["statut"] == ECARTEE and hors_metier["stage"] is False
 
 
 def test_champs_obligatoires() -> None:
@@ -179,7 +184,7 @@ def test_champs_obligatoires() -> None:
 # -- fichier des verdicts et import -----------------------------------------------------------
 
 
-def test_import_ecrit_les_verdicts_et_ne_garde_pas_la_note_des_ecartees(tmp_path: Path) -> None:
+def test_import_ecrit_les_verdicts_et_garde_la_note_des_ecartees(tmp_path: Path) -> None:
     path = tmp_path / "notes.json"
     notation = Notation.load(path)
     offres = [
@@ -204,12 +209,16 @@ def test_import_ecrit_les_verdicts_et_ne_garde_pas_la_note_des_ecartees(tmp_path
     notation.save()
 
     data = json.loads(path.read_text(encoding="utf-8"))
-    assert data["ecartees"] == {"Acme": ["2"]}
+    assert data["version"] == 2
+    ecartee = data["ecartees"]["Acme"]["2"]
+    assert ecartee["notes"] == [1, 4, 3, 1] and ecartee["score"] < 65
+    assert ecartee["preuves"]["fit"].startswith("« ")
     assert set(data["offres"]["Acme"]) == {"1", "3"}  # la 4 (refusée) n'est pas notée
     assert data["offres"]["Acme"]["3"]["statut"] == "illisible"
 
     relue = Notation.load(path)
     assert relue.est_ecartee("Acme", "2") and not relue.est_ecartee("Acme", "1")
+    assert relue.note_ecartee("Acme", "2") == ecartee
     assert relue.est_notee("Acme", "3") and not relue.est_notee("Acme", "4")
 
 
@@ -258,4 +267,19 @@ def test_poste_de_recherche_ecarte_sur_son_intitule() -> None:
     n = note(
         eligible=False, motif="recherche", preuve_motif="Research Intern - Reinforcement Learning"
     )
-    assert evaluer(n, offre, ACME) == {"statut": ECARTEE}
+    assert evaluer(n, offre, ACME)["statut"] == ECARTEE
+
+
+def test_fichier_version_1_relu_sans_perdre_les_ecartees(tmp_path: Path) -> None:
+    path = tmp_path / "notes.json"
+    v1 = {"version": 1, "offres": {}, "ecartees": {"Acme": ["7", "8"]}, "autre": {"x": 1}}
+    path.write_text(json.dumps(v1), encoding="utf-8")
+    notation = Notation.load(path)
+    assert notation.est_ecartee("Acme", "7") and notation.note_ecartee("Acme", "8") == {}
+    notation.ecartee("Acme", "8", {"motif": "phd", "preuve_motif": "« PhD only »"})
+    notation.save()
+    data = json.loads(path.read_text(encoding="utf-8"))
+    assert data["version"] == 2 and data["autre"] == {"x": 1}
+    assert data["ecartees"] == {
+        "Acme": {"7": {}, "8": {"motif": "phd", "preuve_motif": "« PhD only »"}}
+    }
