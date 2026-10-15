@@ -18,6 +18,15 @@ Ce répertoire contient le **moteur local** qui relie les offres du bot, un expo
 
 L'utilisation de Chrome et la lecture quotidienne des deux boîtes sont assurées par la tâche Codex locale, pas par un accès Gmail ou Simplify caché dans ce programme. Le programme n'inclut **aucun appel d'API de modèle** et ne dépense rien. Le plafond de 10 USD par mois est représenté par `budget_disponible` avec arrêt local à 9 USD ; brancher un fournisseur exigera une clé hors dépôt et une mesure du coût réel.
 
+## Tracker Excel personnel
+
+`agent.py import-tracker` lit les onglets de candidatures du tracker Excel (colonnes `Entreprise`, `Poste`, `Statut`…) et les onglets « Réponses … ». Chaque ligne est gardée dans la table privée `suivi_manuel`, puis reliée à une offre par l'identifiant cité dans les notes, une URL d'offre précise ou un titre identique et unique venant du bot ; sinon une offre `tracker-…` est créée. Les liens de tableau de bord ne servent pas au rapprochement. « Postulé » devient `envoyee` avec la mention « déclaration de Matisse », « À postuler » ne crée pas de candidature, et un statut plus avancé déjà connu n'est jamais rétrogradé. Réimporter le même fichier ne crée rien de nouveau.
+
+```powershell
+pip install -e ".[agent]"
+python agent_local/agent.py --db C:\chemin\prive\suivi.sqlite import-tracker C:\chemin\prive\tracker_stages.xlsx
+```
+
 ## Alertes SWElist
 
 `ingest_swelist.py` ajoute les annonces d'e-mails SWElist à un inventaire CSV privé. Il reçoit un JSON local contenant une liste d'objets `id`, `date` (`YYYY-MM-DD`), `subject` et `html` ; la lecture de Gmail reste en dehors du programme. L'import vérifie le nombre d'annonces indiqué dans l'objet, retire les paramètres de suivi des liens, dédoublonne par identifiant Simplify et applique un premier tri **indicatif** sur le titre. Il ne visite ni Simplify ni les sites des employeurs.
