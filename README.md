@@ -209,8 +209,8 @@ python -m internbot --exporter-textes selection.jsonl --sortie textes.jsonl --st
 |---|---|
 | `notifier.type` | `telegram` (défaut) ou `console` |
 | `notifier.group_threshold` | au-delà de N nouvelles offres dans un run (défaut 10), envoi en messages groupés (≤ 4096 caractères, jamais une offre coupée en deux) |
-| `http.user_agent` | **mettez-y un contact** (ex: l'URL de votre dépôt) |
-| `http.min_delay_s` | délai entre deux requêtes (≥ 1 s imposé, défaut 1,5 s) |
+| `http.user_agent` | nom du bot envoyé aux sites, avec un contact (ex: l'URL de votre dépôt) |
+| `http.min_delay_s` | délai entre deux requêtes vers un même domaine (défaut 1,5 s) |
 | `alerts.failure_threshold` | alerte Telegram quand une entreprise échoue N runs d'affilée (défaut 3, 0 = off) |
 | `digest.enabled` / `every_days` | récapitulatif périodique (désactivé par défaut) |
 | `companies[].enabled` | `false` pour mettre une entreprise en pause sans la supprimer |
@@ -346,7 +346,7 @@ pip install -e ".[playwright]" && playwright install chromium
     link_selector: "a"
     location_selector: ".location" # optionnel
 ```
-Une page chargée par run, sans clic ni contournement : si le site affiche un CAPTCHA ou une
+Une page chargée par run, sans clic : si le site affiche un CAPTCHA ou une
 protection anti-bot, le provider échoue proprement. En CI, ajoutez l'installation de Playwright
 au workflow (`pip install ".[playwright]" && playwright install --with-deps chromium`).
 
@@ -547,12 +547,11 @@ jusqu'à `group_threshold`, groupées au-delà), puis **seules celles effectivem
 marquées vues. Au premier passage après 9 h (Paris), la file « à vérifier » part en un message
 (vidée seulement si l'envoi réussit). L'état est écrit de façon atomique (fichier temporaire + renommage) après chaque entreprise.
 
-**Politesse envers les sites** : User-Agent explicite et configurable, requêtes strictement
-séquentielles, ≥ 1 s entre deux requêtes vers un même domaine (1,5 s par défaut), timeouts, retries avec backoff
-exponentiel (2 s, 4 s, 8 s + aléa) uniquement sur erreurs réseau / 429 / 5xx, respect de
+**Requêtes HTTP** : User-Agent configurable, requêtes séquentielles, délai réglable entre deux
+requêtes vers un même domaine (`http.min_delay_s`, 1,5 s par défaut), timeouts, retries avec
+backoff exponentiel (2 s, 4 s, 8 s + aléa) uniquement sur erreurs réseau / 429 / 5xx, respect de
 `Retry-After`. Aucune retry sur les autres 4xx (inutile d'insister sur une erreur de
-paramétrage). **LinkedIn n'est pas supporté** (CGU), et aucun contournement de CAPTCHA ou de
-protection anti-bot n'est tenté.
+paramétrage). Une page bloquée (CAPTCHA, anti-bot, connexion) fait échouer la lecture.
 
 **Sécurité** : secrets uniquement via variables d'environnement ; le token Telegram est masqué
 dans tous les logs et messages d'erreur ; tout contenu inséré dans les messages Telegram (HTML)
@@ -634,7 +633,7 @@ src/internbot/
 ├── config.py          # chargement + validation (pydantic)
 ├── filters.py         # matching mots entiers / accents / casse
 ├── storage.py         # état JSON (seed, vues, disparues, échecs)
-├── http.py            # client HTTP poli (délai, retries, backoff, masquage token)
+├── http.py            # client HTTP (délai, retries, backoff, masquage token)
 ├── models.py          # Job
 ├── notifiers/         # telegram, console, formatage + découpage 4096
 └── providers/         # registre + Workday, Greenhouse, Lever, Ashby, SmartRecruiters,

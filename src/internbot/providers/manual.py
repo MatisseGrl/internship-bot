@@ -1,8 +1,8 @@
 """Entreprise suivie À LA MAIN : aucune requête automatique.
 
 Pour les sites sans API ni endpoint JSON stable, ou protégés (anti-bot, robots.txt qui interdit
-la collecte, authentification). On ne tente aucun contournement : l'entrée sert de mémo
-(raison + lien pour créer l'alerte e-mail native du site) et apparaît dans `--status`.
+la collecte, authentification). L'entrée sert de mémo (raison + lien pour créer l'alerte
+e-mail native du site) et apparaît dans `--status`.
 
     - name: Google
       provider: manual

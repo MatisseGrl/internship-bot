@@ -310,7 +310,7 @@ def cmd_a_noter(cfg: AppConfig, args: argparse.Namespace) -> int:
 
 
 def _alterner(jobs: list[Job]) -> list[Job]:
-    """Offres prises entreprise par entreprise en alternance : le délai de politesse par
+    """Offres prises entreprise par entreprise en alternance : le délai par
     domaine ne bloque pas tout l'export sur un seul site."""
     by_company: dict[str, list[Job]] = {}
     for job in jobs:
