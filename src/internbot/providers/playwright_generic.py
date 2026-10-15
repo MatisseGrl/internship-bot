@@ -12,8 +12,8 @@ Configuration :
       location_selector: ".location"   # optionnel
       wait_for: "li.job"               # optionnel : sélecteur à attendre
 
-Une seule page chargée par run, pas de clics automatisés, pas de contournement anti-bot :
-si le site affiche un CAPTCHA, ce provider échoue proprement.
+Une seule page chargée par run, pas de clics automatisés : si le site affiche un CAPTCHA, ce
+provider échoue proprement.
 """
 
 from __future__ import annotations

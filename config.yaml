@@ -19,10 +19,10 @@ filters:
   year_hint_mode: prefer
 
 http:
-  # Mettez un moyen de contact (ex: votre GitHub) : c'est la politesse attendue d'un robot.
+  # Moyen de contact affiché aux sites (ex: votre GitHub).
   user_agent: "internbot/0.1 (personal internship alert bot; low-frequency polling; +https://github.com/MatisseGrl/internship-bot)"
   timeout_s: 20
-  min_delay_s: 1.5          # délai minimal entre deux requêtes vers un même domaine (>= 1 s)
+  min_delay_s: 1.5          # délai minimal entre deux requêtes vers un même domaine
   max_retries: 3
   backoff_base_s: 2
 

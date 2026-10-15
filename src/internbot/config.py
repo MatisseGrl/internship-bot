@@ -79,7 +79,7 @@ class HttpConfig(BaseModel):
 
     user_agent: str = DEFAULT_USER_AGENT
     timeout_s: float = Field(default=20.0, gt=0)
-    min_delay_s: float = Field(default=1.5, ge=1.0)
+    min_delay_s: float = Field(default=1.5, ge=0)
     max_retries: int = Field(default=3, ge=0, le=6)
     backoff_base_s: float = Field(default=2.0, ge=0.5)
 

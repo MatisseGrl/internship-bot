@@ -29,7 +29,7 @@ def test_defaults_applied() -> None:
     assert "senior" in cfg.filters.title_exclude
     assert cfg.filters.regions == ["us", "canada", "uk", "europe", "asia", "australia"]
     assert not cfg.filters.include_quant_research
-    assert cfg.http.min_delay_s >= 1.0
+    assert cfg.http.min_delay_s == 1.5
 
 
 def test_missing_file() -> None:
@@ -100,9 +100,11 @@ def test_empty_companies() -> None:
         parse_config({"companies": []})
 
 
-def test_min_delay_politeness_enforced() -> None:
+def test_min_delay_libre_mais_pas_negatif() -> None:
     raw = base()
     raw["http"] = {"min_delay_s": 0.2}
+    assert parse_config(raw).http.min_delay_s == 0.2
+    raw["http"] = {"min_delay_s": -1}
     with pytest.raises(ConfigError, match="min_delay_s"):
         parse_config(raw)
 

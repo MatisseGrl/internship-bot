@@ -1,4 +1,4 @@
-"""Client HTTP « poli » partagé par tous les providers et le notifier Telegram.
+"""Client HTTP partagé par tous les providers et le notifier Telegram.
 
 - User-Agent explicite ;
 - délai minimal entre deux requêtes vers un même domaine (séquentiel, aucun parallélisme) ;

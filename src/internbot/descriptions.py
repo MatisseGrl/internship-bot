@@ -10,7 +10,7 @@ l'annonce. Une source par plateforme, la plus fiable possible :
   de l'offre, en lisant d'abord le JSON-LD `JobPosting` (description structurée publiée pour
   les moteurs de recherche), sinon le texte visible de la page.
 
-Aucun contournement : une page protégée (anti-bot, connexion) lève `DescriptionError`, et
+Une page protégée (anti-bot, connexion) lève `DescriptionError`, et
 l'offre est gardée « illisible » pour un tri à la main.
 """
 
@@ -176,7 +176,7 @@ def _ld_value(value: Any) -> str:
 
 
 class DescriptionFetcher:
-    """Récupère le texte d'une offre via le client HTTP poli (délai par domaine, retries)."""
+    """Récupère le texte d'une offre via le client HTTP partagé (délai par domaine, retries)."""
 
     def __init__(self, http: HttpClient, companies: Mapping[str, CompanyConfig]) -> None:
         self.http = http
