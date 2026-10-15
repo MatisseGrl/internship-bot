@@ -44,7 +44,10 @@ BAD = ["Mechanical Engineer", "Hardware Test", "Accountant", "Marketing", "Sales
 
 def registry(path: Path, companies: int = 40) -> None:
     db = sqlite3.connect(path)
-    db.execute("CREATE TABLE offres(cle TEXT,entreprise TEXT,titre TEXT,note_json TEXT)")
+    db.execute(
+        """CREATE TABLE offres(cle TEXT,entreprise TEXT,titre TEXT,note_json TEXT,
+           dans_snapshot INTEGER NOT NULL DEFAULT 1)"""
+    )
     db.execute(
         """CREATE TABLE swelist_annonces(simplify_id TEXT PRIMARY KEY,intitule TEXT,
            label_humain INTEGER,score_fit REAL,verdict_ml TEXT,version_modele TEXT,
@@ -56,8 +59,13 @@ def registry(path: Path, companies: int = 40) -> None:
             rows.append((f"{c}-g{i}", f"Co{c}", f"{good} Intern {c}", {"notes": [5, 3, 3, 3]}))
             rows.append((f"{c}-b{i}", f"Co{c}", f"{bad} Intern {c}", {"notes": [1, 3, 3, 3]}))
     db.executemany(
-        "INSERT INTO offres VALUES(?,?,?,?)",
+        "INSERT INTO offres(cle,entreprise,titre,note_json) VALUES(?,?,?,?)",
         [(k, co, t, json.dumps(n)) for k, co, t, n in rows],
+    )
+    # Offres du bot pas encore notées : une actuelle, une sortie de l'instantané.
+    db.executemany(
+        "INSERT INTO offres VALUES(?,?,?,NULL,?)",
+        [("new", "Neo", "ML Engineer Intern", 1), ("old", "Neo", "Data Intern", 0)],
     )
     db.executemany(
         "INSERT INTO swelist_annonces(simplify_id,intitule,label_humain) VALUES(?,?,?)",
@@ -159,6 +167,9 @@ class ModelTests(unittest.TestCase):
             db.close()
             result = score_only(db_path, model_path, fake_embed)
             self.assertEqual(result["notees"], 1)  # seule la nouvelle annonce est notée
+            self.assertEqual(result["bot_notees"], 1)  # seule l'offre actuelle sans note
+            self.assertEqual(query(db_path, "SELECT cle_offre FROM tri_offres_bot"), [("new",)])
+            self.assertEqual(score_only(db_path, model_path, fake_embed)["bot_notees"], 0)
             after = dict(query(db_path, "SELECT simplify_id,score_fit FROM swelist_annonces"))
             self.assertEqual({k: after[k] for k in first}, first)
             self.assertIsNotNone(after["s3"])

@@ -277,6 +277,52 @@ def swelist_classes(db: sqlite3.Connection) -> dict:
     return dict(db.execute("SELECT verdict_ml,COUNT(*) FROM swelist_annonces GROUP BY verdict_ml"))
 
 
+BOT_SCHEMA = """
+CREATE TABLE IF NOT EXISTS tri_offres_bot (
+    cle_offre TEXT PRIMARY KEY REFERENCES offres(cle),
+    score_fit REAL NOT NULL CHECK(score_fit BETWEEN 0 AND 1),
+    verdict_ml TEXT NOT NULL,
+    version_modele TEXT NOT NULL,
+    evalue_le TEXT NOT NULL
+);
+"""
+
+
+def score_bot(db: sqlite3.Connection, artifact: dict, embed: Embedder) -> int:
+    """Note les offres actuelles du bot sans note de grille, dans une table à part.
+
+    Les colonnes de `offres` (note de grille, score, catégorie) ne sont jamais modifiées.
+    """
+    db.executescript(BOT_SCHEMA)
+    rows = db.execute(
+        """SELECT o.cle,o.titre FROM offres o
+           LEFT JOIN tri_offres_bot t ON t.cle_offre=o.cle
+           WHERE o.note_json IS NULL AND o.dans_snapshot=1 AND o.titre IS NOT NULL
+             AND (t.cle_offre IS NULL OR t.version_modele IS NOT ?)""",
+        (artifact["version"],),
+    ).fetchall()
+    if not rows:
+        return 0
+    scores = TitleModel.from_artifact(artifact).score([title for _, title in rows], embed)
+    now = datetime.now(UTC).isoformat()
+    with db:
+        db.executemany(
+            """INSERT INTO tri_offres_bot VALUES(?,?,?,?,?) ON CONFLICT(cle_offre) DO UPDATE SET
+               score_fit=excluded.score_fit,verdict_ml=excluded.verdict_ml,
+               version_modele=excluded.version_modele,evalue_le=excluded.evalue_le""",
+            [
+                (key, float(value), verdict(value, artifact), artifact["version"], now)
+                for (key, _), value in zip(rows, scores, strict=True)
+            ],
+        )
+    return len(rows)
+
+
+def bot_classes(db: sqlite3.Connection) -> dict:
+    db.executescript(BOT_SCHEMA)
+    return dict(db.execute("SELECT verdict_ml,COUNT(*) FROM tri_offres_bot GROUP BY verdict_ml"))
+
+
 def train(
     db_path: Path,
     model_path: Path,
@@ -371,12 +417,20 @@ def train(
 
 
 def score_only(db_path: Path, model_path: Path, embed: Embedder = fastembed_embedder) -> dict:
-    """Note les annonces nouvelles ou notées par une autre version, sans réentraîner."""
+    """Note les annonces SWElist et les offres du bot sans note, sans réentraîner."""
     artifact = json.loads(model_path.read_text(encoding="utf-8"))
+    embed = cached(embed)
     db = sqlite3.connect(db_path, timeout=30)
     try:
         scored = score_swelist(db, artifact, embed, only_missing=True)
-        return {"version": artifact["version"], "notees": scored, "classes": swelist_classes(db)}
+        bot = score_bot(db, artifact, embed)
+        return {
+            "version": artifact["version"],
+            "notees": scored,
+            "classes": swelist_classes(db),
+            "bot_notees": bot,
+            "classes_bot": bot_classes(db),
+        }
     finally:
         db.close()
 
