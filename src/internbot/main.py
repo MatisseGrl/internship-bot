@@ -310,8 +310,8 @@ def cmd_a_noter(cfg: AppConfig, args: argparse.Namespace) -> int:
 
 
 def _alterner(jobs: list[Job]) -> list[Job]:
-    """Offres prises entreprise par entreprise en alternance : le délai par
-    domaine ne bloque pas tout l'export sur un seul site."""
+    """Offres prises entreprise par entreprise en alternance : le délai par domaine ne bloque
+    pas tout l'export sur un seul site."""
     by_company: dict[str, list[Job]] = {}
     for job in jobs:
         by_company.setdefault(job.company, []).append(job)
@@ -350,7 +350,9 @@ def read_selection(path: Path) -> list[tuple[str, str]]:
         raise ConfigError(f"sélection introuvable : {path}")
     keys: dict[tuple[str, str], None] = {}
     for n, row in enumerate(read_jsonl(path), 1):
-        company, job_id = row.get("company"), row.get("job_id")
+        company, job_id = (
+            (row.get("company"), row.get("job_id")) if isinstance(row, dict) else ("", "")
+        )
         if not company or job_id in (None, ""):
             raise ConfigError(f"{path} : l'entrée {n} n'a pas de « company » et de « job_id »")
         keys[(str(company), str(job_id))] = None

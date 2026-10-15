@@ -537,7 +537,8 @@ companies:
       url: "https://careers.amd.com/careers-home/jobs/{data.slug}"
       location: data.full_location
       date: data.posted_date
-  #   Sitemap (Radancy/TalentBrew : /search-jobs/ interdit par robots.txt, sitemap autorisé)
+  #   Sitemap (Radancy/TalentBrew : /search-jobs/ interdit par robots.txt, sitemap autorisé ;
+  #   voir docs/SITES_BLOQUES.md, section 7)
   - name: Intuit
     provider: sitemap
     url: https://jobs.intuit.com/sitemap.xml
@@ -869,7 +870,8 @@ companies:
       url: "https://careers.se.com/jobs/{data.slug}"
       location: data.full_location
       date: data.posted_date
-  #   SuccessFactors (RMK) : /services/ interdit par robots.txt, sitemap autorisé
+  #   SuccessFactors (RMK) : /services/ interdit par robots.txt, sitemap autorisé ;
+  #   voir docs/SITES_BLOQUES.md, section 7
   - name: Engie
     provider: sitemap
     url: https://jobs.engie.com/sitemap.xml
@@ -886,7 +888,7 @@ companies:
 
   # ==== Suivies à la main (aucune requête automatique) ======================================
   #   Pas d'API ni d'endpoint stable, anti-bot, ou robots.txt qui interdit la collecte.
-  #   Marche à suivre pour chacune : README, section « Entreprises suivies à la main ».
+  #   Raison et marche à suivre pour chacune : docs/SITES_BLOQUES.md (à tenir à jour).
   - name: Google
     provider: manual
     careers_url: https://www.google.com/about/careers/applications/jobs/results?q=intern
@@ -1018,14 +1020,4 @@ companies:
     reason: "protection anti-bot (HTTP 403)"
     alert: "Créer une alerte (mot-clé stage) depuis l'espace candidat EDF Recrute"
 
-  # ---- Non trouvées automatiquement : ajoutez-les avec
-  #      python -m internbot --discover "Nom=URL_de_la_page_Apply"
-  # - DoorDash, Shopify, Mistral AI (compte Lever vide), Dell, NetApp, Texas Instruments
-  # - Palo Alto Networks : tenant « paloaltonetworks » sur wd5, il ne manque que le nom du site
-  # - Plateforme non supportée (Oracle HCM, SuccessFactors, Avature, Eightfold…) ou site maison : Atlassian,
-  #   Intuit, Electronic Arts, IBM, Oracle, SAP, Qualcomm, Rippling, Uber, American Express,
-  #   Citadel, Citadel Securities, Two Sigma, D. E. Shaw, Susquehanna, Millennium, JPMorgan Chase,
-  #   Goldman Sachs, BNP Paribas, Société Générale, UBS, Bloomberg
-  # - Bank of America : trouvée (Workday ghr / wd1 / Lateral-US) mais ce site ne contient que
-  #   des postes expérimentés (aucun stage le 9 oct. 2026) ; les stages passent a priori par
-  #   campus.bankofamerica.com
+  # ---- Non trouvées : voir docs/SITES_BLOQUES.md, section 8.
