@@ -26,11 +26,16 @@ from typing import Any
 TABLES = {
     "offres": ("cle", "entreprise", "identifiant", "titre", "lieu", "url", "texte",
                "categorie_note", "note_json", "score", "dans_snapshot", "vu_le"),
+    "swelist_annonces": ("simplify_id", "date_mail", "id_mail", "entreprise",
+                         "intitule", "lien_simplify", "premier_filtre", "raison",
+                         "bot_cle_candidate", "rapprochement", "label_humain",
+                         "score_fit", "verdict_ml", "version_modele", "evalue_le"),
     "candidatures": ("cle_offre", "statut", "preuve", "modifie_le"),
     "mails": ("boite", "identifiant_message", "recu_le", "expediteur", "objet",
               "categorie", "cle_offre", "justification", "traite_le"),
 }
-CONFLICT = {"offres": "cle", "candidatures": "cle_offre", "mails": "boite,identifiant_message"}
+CONFLICT = {"offres": "cle", "swelist_annonces": "simplify_id",
+            "candidatures": "cle_offre", "mails": "boite,identifiant_message"}
 RETRYABLE = {408, 429, 500, 502, 503, 504, 520, 521, 522, 523, 524}
 
 
@@ -44,13 +49,18 @@ def encode(value: Any) -> bytes:
 
 
 def source_snapshot(path: Path) -> tuple[dict[str, list[dict[str, Any]]], dict[str, int]]:
-    """Read all three tables in one consistent SQLite snapshot."""
+    """Read the local tables in one consistent SQLite snapshot."""
     uri = path.resolve().as_uri() + "?mode=ro"
     with closing(sqlite3.connect(uri, uri=True, timeout=30)) as db:
         db.row_factory = sqlite3.Row
         db.execute("BEGIN")
         rows: dict[str, list[dict[str, Any]]] = {}
+        available = {row[0] for row in db.execute(
+            "SELECT name FROM sqlite_master WHERE type='table'"
+        )}
         for table, columns in TABLES.items():
+            if table == "swelist_annonces" and table not in available:
+                continue  # Older local registers do not yet have the second source.
             query = f"SELECT {', '.join(columns)} FROM {table} ORDER BY {CONFLICT[table]}"
             rows[table] = [dict(row) for row in db.execute(query)]
         db.execute("COMMIT")
@@ -201,7 +211,7 @@ def batches(items: list[tuple[str, str, dict[str, Any]]], max_bytes: int):
 
 
 def compare_counts(client: RestClient, expected: dict[str, int]) -> dict[str, int]:
-    actual = {table: client.count(table) for table in TABLES}
+    actual = {table: client.count(table) for table in TABLES if table in expected}
     actual["notes"] = client.count("offres", "&note_json=not.is.null")
     actual["textes"] = client.count("offres", "&texte=not.is.null")
     actual["dans_snapshot"] = client.count("offres", "&dans_snapshot=eq.true")
@@ -214,14 +224,14 @@ def sync(source: Path, state_path: Path, client: RestClient, *, full: bool = Fal
         raise ValueError("max_bytes doit être supérieur à 1024")
     if source.resolve() == state_path.resolve():
         raise ValueError("Le fichier d'état doit être distinct du registre")
-    uploaded = {table: 0 for table in TABLES}
     with single_instance(state_path), closing(open_state(state_path)) as state:
         rows, expected = source_snapshot(source)
+        uploaded = {table: 0 for table in rows}
         known = {(table, key): sha for table, key, sha in
                  state.execute("SELECT table_name,row_key,sha256 FROM acknowledged")}
 
         def upload(force: bool) -> None:
-            for table in TABLES:  # Foreign keys: offers before applications and mail.
+            for table in rows:  # Foreign keys: offers before the source and applications.
                 changed = []
                 for row in rows[table]:
                     key, sha = identity(table, row), digest(row)
@@ -239,7 +249,7 @@ def sync(source: Path, state_path: Path, client: RestClient, *, full: bool = Fal
         upload(full)
         mismatch = compare_counts(client, expected)
         if mismatch and not full and not any(
-            client.count(table) > expected[table] for table in TABLES
+            client.count(table) > expected[table] for table in rows
         ):
             # A remote table can be truncated while local acknowledgements survive.
             # Replay once before declaring the copy inconsistent.

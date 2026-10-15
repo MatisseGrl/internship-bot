@@ -28,6 +28,27 @@ python agent_local/ingest_swelist.py --messages-json C:\chemin\prive\nouveaux_ma
 
 Garder le JSON source et le CSV hors du dépôt public. Le tri du titre ne remplace pas la lecture de l'annonce officielle ni les règles d'éligibilité. Voir [la stratégie de tri](../docs/SOURCES_ET_TRI.md).
 
+L'inventaire CSV peut être chargé dans la table **séparée** `swelist_annonces` du registre privé. Les lignes ne sont pas ajoutées à `offres` et ne deviennent pas des candidatures. Un lien identique peut confirmer un rapprochement ; une égalité entreprise/titre n'est qu'un candidat à vérifier. Les réimports conservent les étiquettes humaines et les scores ML.
+
+```powershell
+python agent_local/import_swelist.py --db C:\chemin\prive\suivi.sqlite --inventory C:\chemin\prive\SWElist_inventaire.csv
+```
+
+Après création de la table Supabase par la migration `swelist_annonces`, `sync_supabase.py` copie aussi ces annonces et leurs scores. La table a RLS activée et aucun droit pour `anon` ou `authenticated`.
+
+## Tri ML des titres
+
+`tri_ml.py` apprend uniquement la note historique **Fit rôle** du bot : `1` = hors métier, `3–5` = rôle pertinent ; `2` et les motifs d'éligibilité ne servent pas d'étiquettes. Les titres identiques sont dédoublonnés, les étiquettes contradictoires sont retirées, et les entreprises sont séparées entre apprentissage, validation et test. Le modèle de base est une régression logistique TF-IDF sur mots et n-grammes de caractères, en Python standard, sans API payante.
+
+```powershell
+python agent_local/tri_ml.py --db C:\chemin\prive\suivi.sqlite --report C:\chemin\prive\evaluation.json --errors C:\chemin\prive\erreurs_test.csv
+python agent_local/revue_swelist.py --db C:\chemin\prive\suivi.sqlite --export C:\chemin\prive\revue_70.csv
+```
+
+Dans `revue_70.csv`, renseigner `label_humain` avec `1` si le **métier** correspond et `0` sinon, à partir du titre et de l'annonce si nécessaire. Puis importer les réponses avec `--import-labels` à la place de `--export`. Les étiquettes SWElist sont conservées comme audit externe et ne sont pas injectées automatiquement dans l'entraînement.
+
+Le test initial a trouvé 7 offres pertinentes parmi 116 titres proposés en basse priorité (94 offres pertinentes dans le test). **Aucune catégorie ML n'exclut une offre automatiquement.** `prioriser` sert à choisir les descriptions à récupérer d'abord ; `basse_priorite_a_relire` reste dans le registre pour revue.
+
 ## Copie privée vers Supabase
 
 `sync_supabase.py` copie les tables SQLite `offres`, `candidatures` et `mails` vers les tables correspondantes de Supabase. Il ne transmet pas le champ `cv`, le contenu des mails, le profil candidat ni les fichiers de CV. La clé secrète est lue dans `SUPABASE_SECRET_KEY`, l'URL du projet dans `SUPABASE_URL` ; aucune valeur réelle ne va dans Git. Garder le registre et le fichier d'état hors du dépôt.

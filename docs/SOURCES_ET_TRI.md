@@ -16,3 +16,11 @@ Les refus historiques ne forment pas tous une même classe d'entraînement : cer
 Comparer sur le même jeu de test une base légère TF-IDF + régression logistique et des embeddings de titres. Séparer les entreprises et les intitulés quasi identiques entre entraînement et test pour éviter une mesure artificiellement favorable. Le modèle doit pouvoir s'abstenir : `écarter avec forte confiance`, `prioriser`, `à lire`. Mesurer en premier les offres pertinentes rejetées, puis faire relire un échantillon des rejets par l'utilisateur. Les embeddings peuvent améliorer les variantes de formulation ; ils ne répondent pas aux questions de dates, de visa ou de formulaire.
 
 Ne pas attendre ce modèle pour les premiers dossiers : les offres déjà retenues par la grille sont le point de départ naturel. Vérifier qu'elles sont encore ouvertes et que leurs conditions sont compatibles avant toute tentative.
+
+## Premier essai mesuré le 15 octobre 2026
+
+Les **3 587** annonces de 49 e-mails SWElist sont stockées dans `swelist_annonces`, séparément des **3 909** offres du bot. Le rapprochement entreprise/titre donne 35 candidats uniques et 10 cas ambigus ; aucun de ces 45 cas n'est fusionné automatiquement avec une offre du bot. La table a son propre filtre initial, une étiquette humaine facultative et un score de modèle. Le fichier CSV privé reste la source de l'inventaire.
+
+La note historique fournit 872 exemples Fit rôle = 1 et 518 exemples Fit rôle ≥ 3. Après suppression des titres contradictoires et dédoublonnage des titres identiques, le jeu de test par entreprises distinctes compte 287 titres, dont 94 pertinents. Un premier modèle TF-IDF + régression logistique sur titre seul atteint AUC 0,887. Sur le test, 30 des 35 titres priorisés sont pertinents ; en revanche, **7 des 94 titres pertinents** auraient été écartés si le seuil de basse priorité servait de rejet. Ce taux de faux rejet de 7,4 % est trop élevé pour exclure des offres.
+
+La sortie est donc limitée à `prioriser`, `a_lire` et `basse_priorite_a_relire` ; les trois restent dans l'inventaire. Un échantillon privé de 70 titres, réparti entre ces groupes, attend une revue humaine indépendante. Réentraîner ou régler les seuils sur le test déjà consulté fausserait la mesure : les prochaines améliorations doivent utiliser la validation et être confirmées sur un nouveau test ou cet audit SWElist.

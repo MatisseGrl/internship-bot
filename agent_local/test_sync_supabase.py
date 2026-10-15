@@ -13,7 +13,7 @@ from sync_supabase import RestClient, SyncError, single_instance, sync
 
 class FakeSupabase:
     def __init__(self):
-        self.rows = {"offres": {}, "candidatures": {}, "mails": {}}
+        self.rows = {"offres": {}, "swelist_annonces": {}, "candidatures": {}, "mails": {}}
         self.calls = 0
         self.fail_on_call = None
 
@@ -22,7 +22,7 @@ class FakeSupabase:
         if self.calls == self.fail_on_call:
             raise SyncError("panne simulée")
         for row in rows:
-            key = row.get("cle") or row.get("cle_offre") or (
+            key = row.get("cle") or row.get("simplify_id") or row.get("cle_offre") or (
                 row["boite"], row["identifiant_message"])
             self.rows[table][key] = row
 
@@ -93,6 +93,25 @@ class SyncTest(unittest.TestCase):
         result = sync(self.db_path, self.state_path, remote)
         self.assertTrue(result["counts_verified"])
         self.assertEqual(result["uploaded"], {"offres": 1, "candidatures": 1, "mails": 1})
+
+    def test_separate_swelist_rows_are_copied_without_becoming_bot_offers(self):
+        with closing(sqlite3.connect(self.db_path)) as db:
+            db.execute("""CREATE TABLE swelist_annonces(
+                simplify_id TEXT PRIMARY KEY,date_mail TEXT,id_mail TEXT,entreprise TEXT,
+                intitule TEXT,lien_simplify TEXT,premier_filtre TEXT,raison TEXT,
+                bot_cle_candidate TEXT,rapprochement TEXT,label_humain INTEGER,
+                score_fit REAL,verdict_ml TEXT,version_modele TEXT,evalue_le TEXT)""")
+            db.execute("""INSERT INTO swelist_annonces VALUES
+                ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa','2026-10-15','mail-1','Acme',
+                 'Stage','https://simplify.jobs/p/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+                 'a_revoir','ambigu','Acme' || char(31) || '1','titre_entreprise_unique',
+                 NULL,0.8,'prioriser','titre-logreg-v1',NULL)""")
+            db.commit()
+        remote = FakeSupabase()
+        result = sync(self.db_path, self.state_path, remote)
+        self.assertEqual(result["uploaded"]["swelist_annonces"], 1)
+        self.assertEqual(len(remote.rows["offres"]), 1)
+        self.assertEqual(len(remote.rows["swelist_annonces"]), 1)
 
     def test_extra_remote_row_is_reported(self):
         remote = FakeSupabase()
