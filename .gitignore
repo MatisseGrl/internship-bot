@@ -1,5 +1,9 @@
 # Secrets
 .env
+agent_local/*.sqlite
+agent_local/profil_candidat.json
+agent_local/exports/
+agent_local/*.pdf
 
 # État local (en CI, l'état vit sur la branche `state`)
 state/
