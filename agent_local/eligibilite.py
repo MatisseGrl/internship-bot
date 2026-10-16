@@ -77,6 +77,10 @@ _RECHERCHE = re.compile(
     _FLAGS,
 )
 _PAS_RECHERCHE = re.compile(r"\bresearch engineer", _FLAGS)
+_PHD_TITRE = re.compile(r"\bPh\.?\s?D\b", _FLAGS)
+_MASTER_TITRE = re.compile(
+    r"\b(MS|M\.S\.|Masters?|Master's|MSc)\s*[/&,]|[/&,]\s*(MS|Masters?)\b", _FLAGS
+)
 
 
 def _phrase(texte: str, debut: int, fin: int) -> str:
@@ -94,6 +98,9 @@ def verifier(titre: str, texte: str, actif: bool | None = None) -> list[tuple[st
         motifs.append(("fermee", "Annonce marquée inactive par la source"))
     if _RECHERCHE.search(titre or "") and not _PAS_RECHERCHE.search(titre or ""):
         motifs.append(("recherche", titre))
+    # « PhD » seul dans le titre ; « MS/PhD » ou « Master's/PhD » restent ouverts au master.
+    if _PHD_TITRE.search(titre or "") and not _MASTER_TITRE.search(titre or ""):
+        motifs.append(("phd", titre))
     texte = texte or ""
     for motif, regles in REGLES.items():
         preuve = next(

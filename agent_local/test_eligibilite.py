@@ -17,6 +17,8 @@ class EligibiliteTest(unittest.TestCase):
         )
         self.assertIn("recherche", motifs(titre="Research Intern - Data Systems"))
         self.assertIn("fermee", motifs(actif=False))
+        self.assertIn("phd", motifs(titre="PhD Machine Learning Software Engineer Intern"))
+        self.assertNotIn("phd", motifs(titre="Machine Learning Engineer Intern - MS/PhD"))
 
     def test_mentions_qui_n_excluent_pas_matisse(self):
         textes = [

@@ -382,20 +382,24 @@ def classer(
         for target in ("fit", "retenue"):
             cible = artifact["cibles"][target]
             if with_text:
-                scores = TextModel.from_artifact(cible).score(
+                logits = TextModel.from_artifact(cible).logits(
                     [r["titre"] for r in with_text],
                     [r["texte"] for r in with_text],
                     embed_title,
                     embed_body,
                 )
-                for r, s in zip(with_text, scores, strict=True):
-                    r[f"score_{target}"] = float(s)
+                for r, z in zip(with_text, logits, strict=True):
+                    # Les seuils portent sur la somme des trois log-odds ; le score affiché
+                    # et le tri utilisent leur moyenne, qui ne sature pas à 1,0.
+                    r[f"prob_{target}"] = float(1 / (1 + np.exp(-z)))
+                    r[f"score_{target}"] = float(1 / (1 + np.exp(-z / 3)))
         if without:
             title_scores = TitleModel.from_artifact(title_artifact).score(
                 [r["titre"] for r in without], embed_title
             )
             for r, s in zip(without, title_scores, strict=True):
-                r["score_fit"], r["score_retenue"] = float(s), None
+                r["score_fit"] = r["prob_fit"] = float(s)
+                r["score_retenue"] = None
         now = datetime.now(UTC).isoformat()
         with db:
             db.execute("DELETE FROM classement")
@@ -404,7 +408,7 @@ def classer(
                 cible = artifact["cibles"]["fit"] if base == "texte" else title_artifact
                 found = verifier(r["titre"], r["texte"], r["actif"])
                 r.update(
-                    verdict_fit=_verdict(r["score_fit"], cible),
+                    verdict_fit=_verdict(r["prob_fit"], cible),
                     eligible=int(not found),
                     motifs=json.dumps(found, ensure_ascii=False),
                     deja=int((normaliser(r["entreprise"]), normaliser(r["titre"])) in applied),
