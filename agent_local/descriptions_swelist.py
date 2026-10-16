@@ -119,7 +119,8 @@ def pending(db: sqlite3.Connection) -> list[tuple[str, str]]:
     rows = db.execute(
         """SELECT a.simplify_id, a.lien_simplify, a.verdict_ml, a.score_fit
            FROM swelist_annonces a LEFT JOIN swelist_descriptions d USING (simplify_id)
-           WHERE d.simplify_id IS NULL OR (d.description_texte IS NULL AND d.statut_http <> 404)"""
+           WHERE d.simplify_id IS NULL
+              OR (d.description_texte IS NULL AND COALESCE(d.statut_http, 0) <> 404)"""
     ).fetchall()
     rows.sort(key=lambda r: (VERDICT_ORDER.get(r[2], 3), -(r[3] or 0), r[0]))
     return [(sid, url) for sid, url, _, _ in rows]

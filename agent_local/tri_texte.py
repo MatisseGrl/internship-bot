@@ -401,20 +401,22 @@ def classer(
                 r["score_fit"] = r["prob_fit"] = float(s)
                 r["score_retenue"] = None
         now = datetime.now(UTC).isoformat()
+        # Tout est calculé avant d'écrire : la transaction reste brève, et les autres
+        # programmes qui écrivent dans le registre (téléchargements) ne sont pas bloqués.
+        for r in rows:
+            cible = artifact["cibles"]["fit"] if r["base"] == "texte" else title_artifact
+            found = verifier(r["titre"], r["texte"], r["actif"])
+            r.update(
+                verdict_fit=_verdict(r["prob_fit"], cible),
+                eligible=int(not found),
+                motifs=json.dumps(found, ensure_ascii=False),
+                deja=int((normaliser(r["entreprise"]), normaliser(r["titre"])) in applied),
+            )
         with db:
             db.execute("DELETE FROM classement")
-            for r in rows:
-                base = r["base"]
-                cible = artifact["cibles"]["fit"] if base == "texte" else title_artifact
-                found = verifier(r["titre"], r["texte"], r["actif"])
-                r.update(
-                    verdict_fit=_verdict(r["prob_fit"], cible),
-                    eligible=int(not found),
-                    motifs=json.dumps(found, ensure_ascii=False),
-                    deja=int((normaliser(r["entreprise"]), normaliser(r["titre"])) in applied),
-                )
-                db.execute(
-                    "INSERT INTO classement VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            db.executemany(
+                "INSERT INTO classement VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                [
                     (
                         r["source"],
                         r["identifiant"],
@@ -422,7 +424,7 @@ def classer(
                         r["titre"],
                         r["lieu"],
                         r["url"],
-                        base,
+                        r["base"],
                         r["score_fit"],
                         r["verdict_fit"],
                         r["score_retenue"],
@@ -431,8 +433,10 @@ def classer(
                         r["deja"],
                         VERSION,
                         now,
-                    ),
-                )
+                    )
+                    for r in rows
+                ],
+            )
         rows.sort(
             key=lambda r: (-r["eligible"], r["deja"], -(r["score_retenue"] or -1), -r["score_fit"])
         )
@@ -454,10 +458,16 @@ def classer(
                     "verdict_fit",
                     "base",
                     "url",
+                    "doublon_du_rang",
                 ]
             )
+            # Même entreprise et même titre normalisés : indice de doublon (deux sources, ou
+            # deux alertes), signalé et non fusionné ; le lieu peut différer.
+            first_rank: dict[tuple[str, str], int] = {}
             for rank, r in enumerate(rows, 1):
                 motifs = "; ".join(f"{m}: {p}" for m, p in json.loads(r["motifs"]))
+                same = (normaliser(r["entreprise"]), normaliser(r["titre"]))
+                duplicate_of = first_rank.setdefault(same, rank)
                 writer.writerow(
                     [
                         rank,
@@ -473,6 +483,7 @@ def classer(
                         r["verdict_fit"],
                         r["base"],
                         r["url"],
+                        duplicate_of if duplicate_of != rank else "",
                     ]
                 )
         return dict(

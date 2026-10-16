@@ -78,6 +78,15 @@ class DescriptionTests(unittest.TestCase):
             run(db, limit=None, delay=0, fetch=fetch, sleep=lambda _: None, log=lambda _: None)
         self.assertEqual(len(calls), 1)
 
+    def test_network_error_is_retried_next_run(self):
+        db = registry()
+
+        def fetch(url):
+            raise TimeoutError("lent")
+
+        run(db, 1, 0, fetch=fetch, sleep=lambda _: None, log=lambda _: None)
+        self.assertIn("top1", [sid for sid, _ in pending(db)])
+
     def test_missing_page_is_not_retried(self):
         db = registry()
         run(db, 1, 0, fetch=lambda u: (404, ""), sleep=lambda _: None, log=lambda _: None)

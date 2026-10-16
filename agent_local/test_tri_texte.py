@@ -136,6 +136,7 @@ class TexteTest(unittest.TestCase):
             self.assertEqual(lignes["AI Intern"]["deja_candidature"], "1")
             self.assertIn("nationalite", lignes["Software Engineer Intern"]["motifs"])
             self.assertIn("fermee", lignes["Software Engineer Intern II"]["motifs"])
+            self.assertEqual({r["doublon_du_rang"] for r in lignes.values()}, {""})
             self.assertGreater(
                 float(lignes["AI Intern"]["score_fit"]),
                 float(lignes["Hardware Intern"]["score_fit"]),
