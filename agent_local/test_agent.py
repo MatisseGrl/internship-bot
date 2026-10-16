@@ -172,6 +172,7 @@ class AgentTest(unittest.TestCase):
         self.assertTrue(
             any("chaque fenêtre de connexion" in x for x in dossier_offre["consignes"])
         )
+        self.assertTrue(any("attestations requises" in x for x in dossier_offre["consignes"]))
         etape_formulaire(self.db, "Exemple", "42", "formulaire_en_cours")
         etape_formulaire(self.db, "Exemple", "42", "prete_a_envoyer")
         with self.assertRaises(ValueError):

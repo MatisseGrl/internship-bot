@@ -88,6 +88,12 @@ REGLE_CONNEXION = (
     "du profil privé ; vérifier le compte et la destination avant Continue. "
     "Si Google est absent ou si le compte ou la destination diffère, arrêter pour vérification."
 )
+REGLE_ATTESTATIONS = (
+    "Pour chaque formulaire, Matisse souhaite cocher les attestations requises. "
+    "Lire leur texte, vérifier les réponses auxquelles elles se rapportent et obtenir "
+    "sa confirmation au moment d'accepter une déclaration ou un accord. "
+    "Cocher après cette validation ; ne jamais soumettre la candidature par ce seul geste."
+)
 
 
 def initialiser(db: sqlite3.Connection) -> None:
@@ -405,6 +411,7 @@ def dossier(db: sqlite3.Connection, entreprise: str, identifiant: str) -> dict:
             "Rédiger des réponses propres à cette offre à partir de faits vérifiés.",
             REGLE_CONNEXION,
             profil().get("connexion", "Vérifier la méthode de connexion avec le candidat."),
+            REGLE_ATTESTATIONS,
             "Les 15 premières candidatures nécessitent une revue avant envoi.",
             "Une tentative sans confirmation reste à vérifier ; ne pas renvoyer automatiquement.",
         ],

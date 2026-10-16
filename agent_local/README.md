@@ -20,6 +20,8 @@ Ce répertoire contient le **moteur local** qui relie les offres du bot, un expo
 
 La règle de connexion est obligatoire à **chaque fenêtre de connexion d'une candidature**. Si Google est proposé, choisir Google, sélectionner seulement le compte indiqué dans le profil privé, vérifier ce compte et la destination attendue avant « Continue ». Si Google est absent ou si l'écran diffère, arrêter le parcours pour vérification. `dossier` inclut cette règle dans les consignes de chaque offre.
 
+Matisse souhaite que les attestations requises soient cochées sur les formulaires. `dossier` rappelle de lire leur texte, vérifier les réponses concernées et demander sa confirmation au moment d'accepter une déclaration ou un accord. Après confirmation, les cases peuvent être cochées sans déclencher l'envoi de candidature.
+
 `google_signin.py` automatise les trois clics du parcours Eightfold affiché par Microsoft Careers : « Sign in using Google », choix de l'adresse exacte du candidat, puis « Continue ». Il vérifie le domaine de la page Microsoft, le domaine de la fenêtre Google, l'adresse affichée et la destination `eightfold.ai` avant le dernier clic. Il ne soumet aucun formulaire de candidature. La valeur renvoyée, `continue_clique`, ne prouve pas à elle seule que la connexion a réussi : contrôler ensuite la page Microsoft.
 
 Le module s'utilise depuis une `Page` Playwright déjà ouverte :
