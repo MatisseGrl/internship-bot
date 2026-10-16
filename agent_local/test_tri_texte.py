@@ -137,6 +137,19 @@ class TexteTest(unittest.TestCase):
             self.assertIn("nationalite", lignes["Software Engineer Intern"]["motifs"])
             self.assertIn("fermee", lignes["Software Engineer Intern II"]["motifs"])
             self.assertEqual({r["doublon_du_rang"] for r in lignes.values()}, {""})
+            # Une offre qui disparaît reste dans la table, marquée absente et sans rang.
+            db = sqlite3.connect(db_path)
+            with db:
+                db.execute("UPDATE offres SET dans_snapshot=0 WHERE cle='new2'")
+            db.close()
+            classer(db_path, model, titre, sortie, fake_embed)
+            db = sqlite3.connect(db_path)
+            present, rang = db.execute(
+                "SELECT present, rang FROM classement WHERE identifiant='new2'"
+            ).fetchone()
+            total = db.execute("SELECT count(*) FROM classement").fetchone()[0]
+            db.close()
+            self.assertEqual((present, rang, total), (0, None, 5))
             self.assertGreater(
                 float(lignes["AI Intern"]["score_fit"]),
                 float(lignes["Hardware Intern"]["score_fit"]),

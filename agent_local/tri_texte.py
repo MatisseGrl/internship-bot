@@ -280,10 +280,35 @@ def _as_example(row):
     return Example(row[0], row[1], row[2], row[4])
 
 
+# Classement officiel. Une offre classée une fois reste dans la table : si elle disparaît
+# des sources, `present` passe à 0 et `rang` à NULL. La table ne rétrécit donc jamais, ce
+# que la copie vers Supabase exige (elle ne supprime aucune ligne distante).
+CLASSEMENT_COLONNES = (
+    "source",
+    "identifiant",
+    "rang",
+    "present",
+    "entreprise",
+    "titre",
+    "lieu",
+    "url",
+    "base",
+    "score_fit",
+    "verdict_fit",
+    "score_retenue",
+    "eligible",
+    "motifs",
+    "deja_candidature",
+    "doublon_du_rang",
+    "version",
+    "classe_le",
+)
 CLASSEMENT = """
 CREATE TABLE IF NOT EXISTS classement (
     source TEXT NOT NULL,
     identifiant TEXT NOT NULL,
+    rang INTEGER,
+    present INTEGER NOT NULL,
     entreprise TEXT NOT NULL,
     titre TEXT NOT NULL,
     lieu TEXT,
@@ -295,11 +320,20 @@ CREATE TABLE IF NOT EXISTS classement (
     eligible INTEGER NOT NULL,
     motifs TEXT NOT NULL,
     deja_candidature INTEGER NOT NULL,
+    doublon_du_rang INTEGER,
     version TEXT NOT NULL,
     classe_le TEXT NOT NULL,
     PRIMARY KEY(source, identifiant)
 );
 """
+
+
+def _schema_classement(db: sqlite3.Connection) -> None:
+    colonnes = {row[1] for row in db.execute("PRAGMA table_info(classement)")}
+    if colonnes and "present" not in colonnes:
+        # Première version locale, jamais copiée : elle est entièrement recalculée.
+        db.execute("DROP TABLE classement")
+    db.executescript(CLASSEMENT)
 
 
 def _verdict(score: float, cible: dict) -> str:
@@ -366,7 +400,7 @@ def classer(
     embed_body = BodyEmbedder(embed, cache)
     db = sqlite3.connect(db_path, timeout=60)
     try:
-        db.executescript(CLASSEMENT)
+        _schema_classement(db)
         rows = _candidates(db)
         applied = {
             (normaliser(e), normaliser(t))
@@ -412,34 +446,49 @@ def classer(
                 motifs=json.dumps(found, ensure_ascii=False),
                 deja=int((normaliser(r["entreprise"]), normaliser(r["titre"])) in applied),
             )
-        with db:
-            db.execute("DELETE FROM classement")
-            db.executemany(
-                "INSERT INTO classement VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                [
-                    (
-                        r["source"],
-                        r["identifiant"],
-                        r["entreprise"],
-                        r["titre"],
-                        r["lieu"],
-                        r["url"],
-                        r["base"],
-                        r["score_fit"],
-                        r["verdict_fit"],
-                        r["score_retenue"],
-                        r["eligible"],
-                        r["motifs"],
-                        r["deja"],
-                        VERSION,
-                        now,
-                    )
-                    for r in rows
-                ],
-            )
         rows.sort(
             key=lambda r: (-r["eligible"], r["deja"], -(r["score_retenue"] or -1), -r["score_fit"])
         )
+        # Même entreprise et même titre normalisés : indice de doublon (deux sources, ou
+        # deux alertes), signalé et non fusionné ; le lieu peut différer.
+        first_rank: dict[tuple[str, str], int] = {}
+        for rank, r in enumerate(rows, 1):
+            same = (normaliser(r["entreprise"]), normaliser(r["titre"]))
+            r["rang"] = rank
+            r["doublon"] = first_rank.setdefault(same, rank)
+            r["doublon"] = None if r["doublon"] == rank else r["doublon"]
+        valeurs = [
+            (
+                r["source"],
+                r["identifiant"],
+                r["rang"],
+                1,
+                r["entreprise"],
+                r["titre"],
+                r["lieu"],
+                r["url"],
+                r["base"],
+                r["score_fit"],
+                r["verdict_fit"],
+                r["score_retenue"],
+                r["eligible"],
+                r["motifs"],
+                r["deja"],
+                r["doublon"],
+                VERSION,
+                now,
+            )
+            for r in rows
+        ]
+        mise_a_jour = ",".join(f"{c}=excluded.{c}" for c in CLASSEMENT_COLONNES[2:])
+        with db:
+            db.executemany(
+                f"""INSERT INTO classement({",".join(CLASSEMENT_COLONNES)})
+                    VALUES({",".join("?" * len(CLASSEMENT_COLONNES))})
+                    ON CONFLICT(source,identifiant) DO UPDATE SET {mise_a_jour}""",
+                valeurs,
+            )
+            db.execute("UPDATE classement SET present=0, rang=NULL WHERE classe_le<>?", (now,))
         sortie.parent.mkdir(parents=True, exist_ok=True)
         with sortie.open("w", encoding="utf-8-sig", newline="") as fichier:
             writer = csv.writer(fichier, delimiter=";")
@@ -461,16 +510,11 @@ def classer(
                     "doublon_du_rang",
                 ]
             )
-            # Même entreprise et même titre normalisés : indice de doublon (deux sources, ou
-            # deux alertes), signalé et non fusionné ; le lieu peut différer.
-            first_rank: dict[tuple[str, str], int] = {}
-            for rank, r in enumerate(rows, 1):
+            for r in rows:
                 motifs = "; ".join(f"{m}: {p}" for m, p in json.loads(r["motifs"]))
-                same = (normaliser(r["entreprise"]), normaliser(r["titre"]))
-                duplicate_of = first_rank.setdefault(same, rank)
                 writer.writerow(
                     [
-                        rank,
+                        r["rang"],
                         r["source"],
                         r["entreprise"],
                         r["titre"],
@@ -483,7 +527,7 @@ def classer(
                         r["verdict_fit"],
                         r["base"],
                         r["url"],
-                        duplicate_of if duplicate_of != rank else "",
+                        r["doublon"] or "",
                     ]
                 )
         return dict(
@@ -492,7 +536,7 @@ def classer(
             eligibles=sum(r["eligible"] for r in rows),
             par_source={s: sum(r["source"] == s for r in rows) for s in ("bot", "swelist")},
             verdicts=dict(
-                db.execute("SELECT verdict_fit,COUNT(*) FROM classement GROUP BY verdict_fit")
+                db.execute("SELECT verdict_fit,COUNT(*) FROM classement WHERE present=1 GROUP BY 1")
             ),
         )
     finally:
