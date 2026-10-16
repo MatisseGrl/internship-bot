@@ -167,7 +167,11 @@ class AgentTest(unittest.TestCase):
                 ],
             },
         )
-        self.assertEqual(dossier(self.db, "Exemple", "42")["cv"], "CV_EU.pdf")
+        dossier_offre = dossier(self.db, "Exemple", "42")
+        self.assertEqual(dossier_offre["cv"], "CV_EU.pdf")
+        self.assertTrue(
+            any("chaque fenêtre de connexion" in x for x in dossier_offre["consignes"])
+        )
         etape_formulaire(self.db, "Exemple", "42", "formulaire_en_cours")
         etape_formulaire(self.db, "Exemple", "42", "prete_a_envoyer")
         with self.assertRaises(ValueError):

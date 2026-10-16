@@ -3,7 +3,7 @@
 import unittest
 from contextlib import contextmanager
 
-from google_signin import ConnexionInattendue, connecter_google_microsoft
+from google_signin import ConnexionInattendue, connecter_google, connecter_google_microsoft
 
 
 class Element:
@@ -103,6 +103,34 @@ class ConnexionGoogleTest(unittest.TestCase):
         with self.assertRaisesRegex(ConnexionInattendue, "page de départ"):
             connecter_google_microsoft(page, "candidat@example.com")
         self.assertEqual(journal, [])
+
+    def test_autre_portail_utilise_ses_domaines_attendus(self):
+        journal = []
+        google = FausseFenetreGoogle(
+            journal, "Continue to recrutement.example candidat@example.com"
+        )
+        page = FaussePageMicrosoft(google, journal)
+        page.url = "https://emplois.example/connexion"
+        self.assertEqual(
+            connecter_google(
+                page,
+                "candidat@example.com",
+                site_hote="emplois.example",
+                destination_google="recrutement.example",
+            ),
+            "continue_clique",
+        )
+        self.assertEqual(journal, ["google", "compte:candidat@example.com", "continuer"])
+
+    def test_domaine_ressemblant_ne_passe_pas(self):
+        journal = []
+        google = FausseFenetreGoogle(
+            journal, "Continue to eightfold.ai.example candidat@example.com"
+        )
+        page = FaussePageMicrosoft(google, journal)
+        with self.assertRaisesRegex(ConnexionInattendue, "destination"):
+            connecter_google_microsoft(page, "candidat@example.com")
+        self.assertNotIn("continuer", journal)
 
 
 if __name__ == "__main__":

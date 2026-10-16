@@ -18,6 +18,8 @@ Ce répertoire contient le **moteur local** qui relie les offres du bot, un expo
 
 ## Connexion Google à Microsoft Careers
 
+La règle de connexion est obligatoire à **chaque fenêtre de connexion d'une candidature**. Si Google est proposé, choisir Google, sélectionner seulement le compte indiqué dans le profil privé, vérifier ce compte et la destination attendue avant « Continue ». Si Google est absent ou si l'écran diffère, arrêter le parcours pour vérification. `dossier` inclut cette règle dans les consignes de chaque offre.
+
 `google_signin.py` automatise les trois clics du parcours Eightfold affiché par Microsoft Careers : « Sign in using Google », choix de l'adresse exacte du candidat, puis « Continue ». Il vérifie le domaine de la page Microsoft, le domaine de la fenêtre Google, l'adresse affichée et la destination `eightfold.ai` avant le dernier clic. Il ne soumet aucun formulaire de candidature. La valeur renvoyée, `continue_clique`, ne prouve pas à elle seule que la connexion a réussi : contrôler ensuite la page Microsoft.
 
 Le module s'utilise depuis une `Page` Playwright déjà ouverte :
@@ -27,6 +29,8 @@ from google_signin import connecter_google_microsoft
 
 resultat = connecter_google_microsoft(page_microsoft, adresse_google_du_candidat)
 ```
+
+Pour un autre portail, appeler `connecter_google(page, email, site_hote=..., destination_google=...)` avec les deux domaines préalablement vérifiés. Aucun portail nouveau ne doit reprendre automatiquement la destination Microsoft.
 
 Il peut aussi se connecter à un Chrome que l'utilisateur a déjà ouvert avec un port CDP local. Une seule page `microsoft.eightfold.ai` doit être ouverte, avec la modale « Sign in » affichée et le compte Google déjà présent dans ce profil Chrome :
 

@@ -82,6 +82,12 @@ ETATS = {
 TERMINAUX = {"envoyee", "refusee", "entretien", "evaluation", "envoi_en_cours"}
 LIMITE_MICRO_USD = 9_000_000  # marge sous le plafond de 10 USD/mois
 TRACKING = {"gclid", "fbclid", "mc_cid", "mc_eid", "ref", "source"}
+REGLE_CONNEXION = (
+    "Règle obligatoire à chaque fenêtre de connexion d'une candidature : "
+    "si Google est proposé, le choisir et sélectionner uniquement le compte Google "
+    "du profil privé ; vérifier le compte et la destination avant Continue. "
+    "Si Google est absent ou si le compte ou la destination diffère, arrêter pour vérification."
+)
 
 
 def initialiser(db: sqlite3.Connection) -> None:
@@ -397,6 +403,7 @@ def dossier(db: sqlite3.Connection, entreprise: str, identifiant: str) -> dict:
             "Vérifier l'éligibilité dans le texte actuel avant de postuler.",
             "Choisir un CV officiel selon le pays et l'offre ; vérifier son contenu.",
             "Rédiger des réponses propres à cette offre à partir de faits vérifiés.",
+            REGLE_CONNEXION,
             profil().get("connexion", "Vérifier la méthode de connexion avec le candidat."),
             "Les 15 premières candidatures nécessitent une revue avant envoi.",
             "Une tentative sans confirmation reste à vérifier ; ne pas renvoyer automatiquement.",
