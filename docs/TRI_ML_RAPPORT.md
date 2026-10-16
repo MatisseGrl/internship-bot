@@ -68,6 +68,29 @@ python agent_local/tri_ml.py --db C:\chemin\prive\suivi.sqlite --model C:\chemin
 
 L'artefact JSON (environ 430 Ko) contient le vocabulaire, les idf, les poids des deux régressions, les seuils et l'empreinte des données d'apprentissage. Le score d'une annonce ne change donc pas quand l'inventaire grossit. Le modèle d'embedding (~440 Mo) est téléchargé une fois par fastembed. Entraînement complet : environ 80 s sur CPU ; aucune API payante.
 
+## Modèle sur le texte complet (`texte-ensemble-v1`)
+
+Les descriptions sont maintenant récupérées : pages publiques Simplify pour SWElist, export du bot pour ses offres. Le modèle `agent_local/tri_texte.py` additionne les log-odds de trois régressions logistiques : modèle titre v3, TF-IDF mots et paires de mots du texte, embeddings locaux du texte (moyenne de morceaux de 1 200 caractères). Même protocole : validation imbriquée par entreprise sur le développement.
+
+| Modèle | AUC | Faux rejets, 15 % en basse priorité | à 25 % | à 35 % |
+|---|---:|---:|---:|---:|
+| Titre v3 | 0,925 | 0,6 % | 1,6 % | 4,2 % |
+| TF-IDF texte | 0,963 | 0,15 % | 0,44 % | 1,6 % |
+| Embeddings texte | 0,945 | 0,3 % | 0,44 % | 1,0 % |
+| **Titre + TF-IDF + embeddings** | **0,975** | **0 %** | **0,29 %** | **1,0 %** |
+
+Sur le test mis de côté, le modèle texte atteint une AUC de 0,976. 2 offres pertinentes sur 94 tombent en basse priorité, qui regroupe 59 % des titres, et 41 `prioriser` sur 41 sont pertinents. Une seconde cible, « retenue » (score de grille ≥ 65), atteint une AUC de 0,974 hors pli et sert à trier la file finale.
+
+## Éligibilité par règles (`agent_local/eligibilite.py`)
+
+Les règles repèrent les exclusions explicites, avec la phrase qui les justifie : doctorat, nationalité ou habilitation américaine, stage de fin d'études ou dernière année, diplôme exigé avant 2028, poste de recherche, annonce fermée. Elles ont été mesurées sur les décisions historiques du bot :
+
+- **Fausses alertes** : 18 sur 1 598 offres jugées éligibles, et plusieurs sont en fait de vraies exclusions.
+- **Refus historiques retrouvés** : fin d'études 365 sur 414, nationalité 193 sur 316, recherche 27 sur 32.
+- **Non couverts** : les critères de pays d'université et de dates de stage.
+
+Les règles signalent l'offre ; elles ne la suppriment pas.
+
 ## Suite
 
 1. **Récupérer les textes SWElist** par le lien Simplify puis « Apply » vers le site de l'employeur, en lecture seule, en commençant par les `prioriser`. Noter ces textes avec la grille donne de nouvelles étiquettes **indépendantes** : c'est le test qui manque pour décider d'un éventuel filtre.
