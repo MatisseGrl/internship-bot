@@ -15,7 +15,6 @@ from collections import defaultdict
 from pathlib import Path
 from urllib.parse import urlsplit
 
-
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS swelist_annonces (
     simplify_id TEXT PRIMARY KEY,
@@ -42,9 +41,9 @@ CREATE INDEX IF NOT EXISTS idx_swelist_verdict
 
 
 def normaliser(texte: str) -> str:
-    ascii_texte = unicodedata.normalize("NFKD", texte.casefold()).encode(
-        "ascii", "ignore"
-    ).decode("ascii")
+    ascii_texte = (
+        unicodedata.normalize("NFKD", texte.casefold()).encode("ascii", "ignore").decode("ascii")
+    )
     return re.sub(r"[^a-z0-9]+", " ", ascii_texte).strip()
 
 
@@ -59,11 +58,21 @@ def simplify_id(url: str) -> str:
 
 
 def importer(db: sqlite3.Connection, inventory: Path) -> dict[str, int]:
-    if not db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='offres'").fetchone():
+    if not db.execute(
+        "SELECT 1 FROM sqlite_master WHERE type='table' AND name='offres'"
+    ).fetchone():
         raise ValueError("Le registre du bot ne contient pas la table offres")
     with inventory.open(encoding="utf-8-sig", newline="") as stream:
         reader = csv.DictReader(stream)
-        required = {"date_mail", "id_mail", "entreprise", "intitule", "lien_simplify", "premier_filtre", "raison"}
+        required = {
+            "date_mail",
+            "id_mail",
+            "entreprise",
+            "intitule",
+            "lien_simplify",
+            "premier_filtre",
+            "raison",
+        }
         if not required.issubset(reader.fieldnames or []):
             raise ValueError("Colonnes SWElist manquantes")
         entries = list(reader)
@@ -79,9 +88,15 @@ def importer(db: sqlite3.Connection, inventory: Path) -> dict[str, int]:
         if company and title:
             by_title[(normaliser(company), normaliser(title))].add(key)
 
-    counts = {"lues": len(entries), "ajoutees": 0, "deja_presentes": 0,
-              "url_exacte": 0, "titre_entreprise_unique": 0,
-              "titre_entreprise_ambigu": 0, "aucun": 0}
+    counts = {
+        "lues": len(entries),
+        "ajoutees": 0,
+        "deja_presentes": 0,
+        "url_exacte": 0,
+        "titre_entreprise_unique": 0,
+        "titre_entreprise_ambigu": 0,
+        "aucun": 0,
+    }
     db.executescript(SCHEMA)
     with db:
         for sid, row in zip(ids, entries, strict=True):
@@ -119,8 +134,18 @@ def importer(db: sqlite3.Connection, inventory: Path) -> dict[str, int]:
                      raison=excluded.raison,
                      bot_cle_candidate=excluded.bot_cle_candidate,
                      rapprochement=excluded.rapprochement""",
-                (sid, row["date_mail"], row["id_mail"], company, title, url,
-                 row["premier_filtre"], row["raison"], candidate, match),
+                (
+                    sid,
+                    row["date_mail"],
+                    row["id_mail"],
+                    company,
+                    title,
+                    url,
+                    row["premier_filtre"],
+                    row["raison"],
+                    candidate,
+                    match,
+                ),
             )
     return counts
 

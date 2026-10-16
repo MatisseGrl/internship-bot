@@ -16,9 +16,10 @@ class DatasetTests(unittest.TestCase):
             ("4", "D", "Data Engineer Intern", {"notes": [4, 4, 4, 4]}),
             ("5", "E", "DATA engineer intern", {"notes": [1, 1, 1, 1]}),
         ]
-        db.executemany("INSERT INTO offres VALUES(?,?,?,?)", [
-            (key, company, title, json.dumps(note)) for key, company, title, note in rows
-        ])
+        db.executemany(
+            "INSERT INTO offres VALUES(?,?,?,?)",
+            [(key, company, title, json.dumps(note)) for key, company, title, note in rows],
+        )
         examples, stats = load_examples(db)
         self.assertEqual({x.key: x.label for x in examples}, {"1": 1, "2": 0})
         self.assertEqual(stats["conflicting_titles"], 2)

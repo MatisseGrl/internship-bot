@@ -15,10 +15,14 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
 
-
 FIELDS = [
-    "date_mail", "id_mail", "entreprise", "intitule", "lien_simplify",
-    "premier_filtre", "raison",
+    "date_mail",
+    "id_mail",
+    "entreprise",
+    "intitule",
+    "lien_simplify",
+    "premier_filtre",
+    "raison",
 ]
 
 
@@ -74,18 +78,45 @@ def canonical_simplify_url(raw: str) -> str | None:
 
 def title_filter(title: str) -> tuple[str, str]:
     t = title.casefold()
-    tech = re.search(r"\bai\b|\bml\b|machine learning|software|data|computer vision|artificial intelligence|llm", t)
+    tech = re.search(
+        r"\bai\b|\bml\b|machine learning|software|data|computer vision|artificial intelligence|llm",
+        t,
+    )
     if re.search(r"\bphd\b|doctor(?:al|ate)", t):
-        mixed = re.search(r"(?:ms|masters?|master's|bs|bachelor)[/\s,&-]*phd|phd[/\s,&-]*(?:ms|masters?)", t)
-        return ("a_revoir", "Master ou doctorat mentionnes") if mixed else ("ecarter_titre", "doctorat explicite")
-    if re.search(r"\baudit\b|\bassurance\b|\bvaluation\b|\bfinance\b|\bmarketing\b|\bsales\b|product management|product manager|product operations|product intern|external manufacturing|\bsafety\b|technical artist|ui/ux", t):
+        mixed = re.search(
+            r"(?:ms|masters?|master's|bs|bachelor)[/\s,&-]*phd|phd[/\s,&-]*(?:ms|masters?)", t
+        )
+        return (
+            ("a_revoir", "Master ou doctorat mentionnes")
+            if mixed
+            else ("ecarter_titre", "doctorat explicite")
+        )
+    if re.search(
+        r"\baudit\b|\bassurance\b|\bvaluation\b|\bfinance\b|\bmarketing\b|\bsales\b"
+        r"|product management|product manager|product operations|product intern"
+        r"|external manufacturing|\bsafety\b|technical artist|ui/ux",
+        t,
+    ):
         return "ecarter_titre", "fonction hors cible probable"
-    hardware = re.search(r"\bmechanical\b|\bcivil\b|\bchemical\b|\boptical\b|\bphotonics?\b|optoelectronic|\bhardware\b|\basic\b|\brtl\b|\bvlsi\b|signal integrity|display array|integrated circuit|\belectronics?\b|\belectrical\b|\bmanufacturing\b|\btechnician\b|\bsemiconductor\b", t)
+    hardware = re.search(
+        r"\bmechanical\b|\bcivil\b|\bchemical\b|\boptical\b|\bphotonics?\b|optoelectronic"
+        r"|\bhardware\b|\basic\b|\brtl\b|\bvlsi\b|signal integrity|display array"
+        r"|integrated circuit|\belectronics?\b|\belectrical\b|\bmanufacturing\b"
+        r"|\btechnician\b|\bsemiconductor\b",
+        t,
+    )
     if hardware:
         if tech:
             return "a_revoir", "melange IA ou logiciel avec un domaine materiel"
         return "ecarter_titre", "domaine materiel hors cible probable"
-    if re.search(r"software|machine learning|data scien|applied scien|\bai\b|artificial intelligence|computer vision|business intelligence|\bquant|full stack|analytics|data analy|developer|\bllm\b|agentic|recommendation|knowledge graph|data engineer|research engineer|research scientist|frontend|backend|mobile engineer|firmware|robot learning|data management", t):
+    if re.search(
+        r"software|machine learning|data scien|applied scien|\bai\b|artificial intelligence"
+        r"|computer vision|business intelligence|\bquant|full stack|analytics|data analy"
+        r"|developer|\bllm\b|agentic|recommendation|knowledge graph|data engineer"
+        r"|research engineer|research scientist|frontend|backend|mobile engineer|firmware"
+        r"|robot learning|data management",
+        t,
+    ):
         return "retenir_titre", "logiciel, IA ou donnees dans l'intitule"
     return "a_revoir", "intitule insuffisant pour conclure"
 
@@ -120,7 +151,13 @@ def ingest(messages: list[dict], inventory: Path) -> dict[str, int]:
                 continue
             seen.add(url)
             status, reason = title_filter(title)
-            incoming.append(dict(zip(FIELDS, [date, message_id, company, title, url, status, reason])))
+            incoming.append(
+                dict(
+                    zip(
+                        FIELDS, [date, message_id, company, title, url, status, reason], strict=True
+                    )
+                )
+            )
     if incoming:
         inventory.parent.mkdir(parents=True, exist_ok=True)
         temp_name = inventory.with_name(inventory.name + f".{os.getpid()}.tmp")
@@ -133,7 +170,11 @@ def ingest(messages: list[dict], inventory: Path) -> dict[str, int]:
         finally:
             if temp_name.exists():
                 temp_name.unlink()
-    return {"messages": len(messages), "annonces_ajoutees": len(incoming), "total": len(old) + len(incoming)}
+    return {
+        "messages": len(messages),
+        "annonces_ajoutees": len(incoming),
+        "total": len(old) + len(incoming),
+    }
 
 
 def main() -> None:

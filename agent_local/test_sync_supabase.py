@@ -22,8 +22,12 @@ class FakeSupabase:
         if self.calls == self.fail_on_call:
             raise SyncError("panne simulée")
         for row in rows:
-            key = row.get("cle") or row.get("simplify_id") or row.get("cle_offre") or (
-                row["boite"], row["identifiant_message"])
+            key = (
+                row.get("cle")
+                or row.get("simplify_id")
+                or row.get("cle_offre")
+                or (row["boite"], row["identifiant_message"])
+            )
             self.rows[table][key] = row
 
     def count(self, table, where=""):
@@ -76,8 +80,10 @@ class SyncTest(unittest.TestCase):
         result = sync(self.db_path, self.state_path, remote)
         self.assertEqual(result["uploaded"], {"offres": 0, "candidatures": 1, "mails": 1})
         self.assertEqual(remote.rows["candidatures"]["Acme\x1f1"].get("cv"), None)
-        self.assertEqual(sync(self.db_path, self.state_path, remote)["uploaded"],
-                         {"offres": 0, "candidatures": 0, "mails": 0})
+        self.assertEqual(
+            sync(self.db_path, self.state_path, remote)["uploaded"],
+            {"offres": 0, "candidatures": 0, "mails": 0},
+        )
         with closing(sqlite3.connect(self.db_path)) as db:
             db.execute("UPDATE offres SET texte='Texte corrigé'")
             db.commit()
@@ -121,10 +127,12 @@ class SyncTest(unittest.TestCase):
             sync(self.db_path, self.state_path, remote)
 
     def test_second_process_cannot_start_while_first_holds_lock(self):
-        with single_instance(self.state_path):
-            with self.assertRaisesRegex(SyncError, "déjà en cours"):
-                with single_instance(self.state_path):
-                    pass
+        with (
+            single_instance(self.state_path),
+            self.assertRaisesRegex(SyncError, "déjà en cours"),
+            single_instance(self.state_path),
+        ):
+            pass
 
     def test_rest_uses_secret_header_and_composite_upsert(self):
         class Response:
