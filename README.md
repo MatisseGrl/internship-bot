@@ -183,14 +183,34 @@ python -m internbot --importer-notes travail/ --simulation         # vérifie, n
 python -m internbot --importer-notes travail/                      # met à jour notes.json
 ```
 
+### Texte d'offres choisies (agent de candidatures)
+
+`--exporter-textes` lit le texte complet d'une liste précise d'offres, **notées ou non**
+(`--a-noter` saute les offres déjà notées). Le bot ne fait que lire : il n'envoie rien.
+
+```bash
+python -m internbot --exporter-textes selection.jsonl --sortie textes.jsonl --state .state/state.json
+```
+
+- `selection.jsonl` : une ligne `{"company": "DRW", "job_id": "7997729"}` par offre
+  (`company` et `job_id` tels qu'ils sont dans `current.json` ; autres champs ignorés).
+- `textes.jsonl` (UTF-8) : une ligne par offre avec `company`, `job_id`, `title`, `location`,
+  `url`, puis `texte` et `source` si la lecture a réussi, sinon `erreur`. Une offre absente
+  de `current.json` (fermée, écartée, mauvais `job_id`) donne `title`/`location`/`url` à
+  `null` et une `erreur`, sans aucune requête.
+- Reprise : relancer la même commande ne retélécharge rien de ce qui est déjà dans `--sortie`
+  (texte lu, ou erreur de lecture) ; `--relancer-erreurs` relit les offres en erreur. Les
+  absentes sont recherchées de nouveau à chaque fois. Le fichier garde une ligne par offre.
+- Mettez `--sortie` hors du dépôt (il est public) si la sélection est privée.
+
 ### Autres sections
 
 | Section | Rôle |
 |---|---|
 | `notifier.type` | `telegram` (défaut) ou `console` |
 | `notifier.group_threshold` | au-delà de N nouvelles offres dans un run (défaut 10), envoi en messages groupés (≤ 4096 caractères, jamais une offre coupée en deux) |
-| `http.user_agent` | **mettez-y un contact** (ex: l'URL de votre dépôt) |
-| `http.min_delay_s` | délai entre deux requêtes (≥ 1 s imposé, défaut 1,5 s) |
+| `http.user_agent` | nom du bot envoyé aux sites, avec un contact (ex: l'URL de votre dépôt) |
+| `http.min_delay_s` | délai entre deux requêtes vers un même domaine (défaut 1,5 s) |
 | `alerts.failure_threshold` | alerte Telegram quand une entreprise échoue N runs d'affilée (défaut 3, 0 = off) |
 | `digest.enabled` / `every_days` | récapitulatif périodique (désactivé par défaut) |
 | `companies[].enabled` | `false` pour mettre une entreprise en pause sans la supprimer |
@@ -326,45 +346,15 @@ pip install -e ".[playwright]" && playwright install chromium
     link_selector: "a"
     location_selector: ".location" # optionnel
 ```
-Une page chargée par run, sans clic ni contournement : si le site affiche un CAPTCHA ou une
+Une page chargée par run, sans clic : si le site affiche un CAPTCHA ou une
 protection anti-bot, le provider échoue proprement. En CI, ajoutez l'installation de Playwright
 au workflow (`pip install ".[playwright]" && playwright install --with-deps chromium`).
 
 ### Entreprises suivies à la main
 
-26 entreprises n'ont aucune source automatisable proprement (anti-bot, robots.txt qui
-interdit la collecte, liste chargée en JavaScript par une API non documentée, ou offres déjà
-couvertes par une autre entrée). Elles sont dans `config.yaml` avec `provider: manual` : aucune
-requête, mais elles apparaissent dans `--status` et `/status`. Pour chacune, l'alternative :
-
-| Entreprise | Pourquoi | Que faire |
-|---|---|---|
-| [Google](https://www.google.com/about/careers/applications/jobs/results?q=intern) | robots.txt interdit /about/careers/applications/jobs/results | Bouton « Get job alerts » sur la page de résultats (compte Google) |
-| [Meta](https://www.metacareers.com/jobs?q=intern) | robots.txt de metacareers.com interdit toute collecte sans autorisation écrite | « Create job alert » sur metacareers.com (profil candidat) |
-| [LinkedIn](https://www.linkedin.com/jobs/search/?keywords=intern&f_C=1337) | offres publiées uniquement sur linkedin.com (scraping de LinkedIn exclu) ; le compte Lever « linkedin » est un bac à sable de test | Alerte d'emploi LinkedIn native (bouton « Créer une alerte » sur cette recherche) |
-| [Tesla](https://www.tesla.com/careers/search/?query=intern) | protection anti-bot Akamai (HTTP 403 Access Denied) | Pas d'alerte e-mail publique : vérification manuelle hebdomadaire |
-| [X](https://x.ai/careers) | careers.x.com redirige vers x.ai/careers : offres déjà suivies via xAI (Greenhouse « xai ») | Rien à faire : couvert par xAI |
-| [Splunk](https://cisco.wd5.myworkdayjobs.com/Cisco_Careers?q=splunk) | filiale de Cisco : offres publiées sur le Workday de Cisco, déjà surveillé (227 offres « splunk » le 9 oct. 2026) | Rien à faire : couvert par Cisco |
-| [SAP](https://jobs.sap.com/search/?q=intern) | site Next.js, offres chargées côté client par une API non documentée | « Job alerts » / Talent Community sur jobs.sap.com |
-| [ByteDance](https://jobs.bytedance.com/en/position?keywords=intern) | robots.txt de lifeattiktok.com interdit tout ; API jobs.bytedance.com protégée par jeton CSRF de session ; compte SmartRecruiters « Bytedance » abandonné | Alerte e-mail du site (compte candidat) ; voir aussi https://lifeattiktok.com/search?keyword=intern |
-| [Akamai](https://www.akamai.com/careers) | protection anti-bot (HTTP 403) ; Workday non public | Alerte d'emploi du portail carrières Akamai (compte candidat) |
-| [HubSpot](https://www.hubspot.com/careers/jobs?q=intern) | liste chargée en JavaScript par une API non documentée ; Workday « hubspot » non public (HTTP 401) | « Join our Talent Network » sur hubspot.com/careers |
-| [Valve](https://www.valvesoftware.com/en/jobs) | robots.txt interdit /jobs | Pas d'alerte : vérification manuelle mensuelle (Valve publie rarement des stages) |
-| [Shopify](https://www.shopify.com/careers/search?keywords=intern) | robots.txt de shopify.com interdit tout (Disallow: /) ; Workday « shopify » non public | Page https://internships.shopify.com (inscription aux annonces de la prochaine promo) |
-| [Wayfair](https://www.wayfair.com/careers/jobs) | liste chargée en JavaScript ; Workday « wayfair » non public (HTTP 401) ; compte SmartRecruiters avec 1 seule offre | « Job alerts » sur la page carrières Wayfair |
-| [Walmart Global Tech](https://careers.walmart.com/results?q=intern) | robots.txt interdit /api et /results ; le sitemap ne donne que des ID (R-1075582) sans titre | « Job Alerts » sur careers.walmart.com |
-| [DeepSeek](https://www.deepseek.com/) | pas d'ATS public (recrutement via plateformes chinoises) ; postes en Chine, exclue par tes filtres | Rien à faire tant que la Chine est exclue |
-| [Moonshot AI](https://www.moonshot.cn/) | pas d'ATS public ; le compte Workable « moonshot » est une autre entreprise ; postes en Chine, exclue par tes filtres | Rien à faire tant que la Chine est exclue |
-| [Safran](https://www.safran-group.com/fr/offres) | protection anti-bot (HTTP 403) sur safran-group.com | Compte candidat + « alerte emploi » (mot-clé stage) sur safran-group.com |
-| [Naval Group](https://www.naval-group.com/en/candidates) | liste chargée en JavaScript, aucune API ni ATS public trouvé | Alerte e-mail depuis l'espace candidat Naval Group |
-| [Capgemini](https://www.capgemini.com/fr-fr/carrieres/rejoignez-nous/nos-offres-demploi/) | liste chargée en JavaScript par une API non documentée ; pas de sitemap d'offres | « Créer une alerte » sur la page des offres Capgemini |
-| [Eviden](https://eviden.com/careers/) | robots.txt interdit /api/ (source de la liste d'offres) | Alerte e-mail sur le portail carrières Eviden |
-| [Amadeus](https://jobs.amadeus.com/) | liste chargée en JavaScript, sitemap vide, aucun ATS public trouvé | « Job alert » sur jobs.amadeus.com |
-| [OVHcloud](https://careers.ovhcloud.com/fr/) | robots.txt de careers.ovhcloud.com interdit tout (Disallow: /) | Alerte e-mail SuccessFactors (« Recevez les offres par e-mail ») sur careers.ovhcloud.com |
-| [Klarna](https://www.klarna.com/careers/) | liste chargée en JavaScript, aucun ATS public trouvé (Greenhouse, Ashby, Lever, Workday testés) | Alerte e-mail sur klarna.com/careers |
-| [Nokia](https://jobs.nokia.com/) | liste chargée en JavaScript ; les endpoints Oracle HCM supposés répondent 404 | « Job alerts » sur jobs.nokia.com |
-| [Renault](https://www.renaultgroup.com/carrieres/nos-offres/) | robots.txt interdit /api/ (source de la liste d'offres) | Alerte e-mail depuis l'espace candidat Renault Group |
-| [EDF](https://www.edf.fr/edf-recrute/offres) | protection anti-bot (HTTP 403) | Créer une alerte (mot-clé stage) depuis l'espace candidat EDF Recrute |
+Les entreprises que le bot ne lit pas (robots.txt, anti-bot, CGU, pas de source exploitable),
+les offres dont le texte est bloqué et les entreprises pas encore trouvées sont toutes dans
+**[docs/SITES_BLOQUES.md](docs/SITES_BLOQUES.md)**, avec pour chacune quoi faire à la place.
 
 ### Ajouter une nouvelle plateforme (développeurs)
 
@@ -494,6 +484,8 @@ python -m internbot [run] [options]
   --discover-out F    écrit le YAML trouvé dans F
   --a-noter DOSSIER   exporte le texte des offres ouvertes pas encore notées
                       (DOSSIER/offres.jsonl, reprend là où il s'est arrêté)
+  --exporter-textes S texte des offres listées dans S (JSONL company/job_id), notées ou
+                      non ; avec --sortie F (JSONL) et --relancer-erreurs (optionnel)
   --importer-notes D  applique les notes D/notes*.jsonl à notation/notes.json
   --simulation        avec --importer-notes : vérifie et affiche les verdicts sans écrire
   --company NAME      ne traite qu'une entreprise (même désactivée) — debug
@@ -525,12 +517,11 @@ jusqu'à `group_threshold`, groupées au-delà), puis **seules celles effectivem
 marquées vues. Au premier passage après 9 h (Paris), la file « à vérifier » part en un message
 (vidée seulement si l'envoi réussit). L'état est écrit de façon atomique (fichier temporaire + renommage) après chaque entreprise.
 
-**Politesse envers les sites** : User-Agent explicite et configurable, requêtes strictement
-séquentielles, ≥ 1 s entre deux requêtes vers un même domaine (1,5 s par défaut), timeouts, retries avec backoff
-exponentiel (2 s, 4 s, 8 s + aléa) uniquement sur erreurs réseau / 429 / 5xx, respect de
+**Requêtes HTTP** : User-Agent configurable, requêtes séquentielles, délai réglable entre deux
+requêtes vers un même domaine (`http.min_delay_s`, 1,5 s par défaut), timeouts, retries avec
+backoff exponentiel (2 s, 4 s, 8 s + aléa) uniquement sur erreurs réseau / 429 / 5xx, respect de
 `Retry-After`. Aucune retry sur les autres 4xx (inutile d'insister sur une erreur de
-paramétrage). **LinkedIn n'est pas supporté** (CGU), et aucun contournement de CAPTCHA ou de
-protection anti-bot n'est tenté.
+paramétrage). Une page bloquée (CAPTCHA, anti-bot, connexion) fait échouer la lecture.
 
 **Sécurité** : secrets uniquement via variables d'environnement ; le token Telegram est masqué
 dans tous les logs et messages d'erreur ; tout contenu inséré dans les messages Telegram (HTML)
@@ -590,7 +581,7 @@ Logs détaillés : `python -m internbot run --dry-run -v --company Salesforce`.
   Schneider ; Eightfold, Oracle HCM, Avature) : non officiels, détectés en cas de changement
   (erreur isolée + alerte après 3 échecs).
 - Les entreprises sans accès public stable sont suivies avec le provider `manual` (voir
-  « Entreprises suivies à la main »).
+  [docs/SITES_BLOQUES.md](docs/SITES_BLOQUES.md)).
 - Workday plafonne la recherche à 20 offres par page ; `max_pages: 100` limite à 2 000 offres
   par entreprise (un warning apparaît si la limite est atteinte).
 
@@ -612,7 +603,7 @@ src/internbot/
 ├── config.py          # chargement + validation (pydantic)
 ├── filters.py         # matching mots entiers / accents / casse
 ├── storage.py         # état JSON (seed, vues, disparues, échecs)
-├── http.py            # client HTTP poli (délai, retries, backoff, masquage token)
+├── http.py            # client HTTP (délai, retries, backoff, masquage token)
 ├── models.py          # Job
 ├── notifiers/         # telegram, console, formatage + découpage 4096
 └── providers/         # registre + Workday, Greenhouse, Lever, Ashby, SmartRecruiters,

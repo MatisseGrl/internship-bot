@@ -557,6 +557,8 @@ def main() -> None:
     sync.add_argument("--archives", type=Path, nargs="*", default=[])
     imp = sous.add_parser("import-simplify")
     imp.add_argument("export", type=Path)
+    trk = sous.add_parser("import-tracker")
+    trk.add_argument("classeur", type=Path)
     sous.add_parser("classer")
     sous.add_parser("reconcilier")
     fl = sous.add_parser("file")
@@ -589,6 +591,10 @@ def main() -> None:
             )
         elif args.commande == "import-simplify":
             resultat = importer_simplify(db, args.export)
+        elif args.commande == "import-tracker":
+            from import_tracker import importer, lire_classeur
+
+            resultat = importer(db, *lire_classeur(args.classeur))
         elif args.commande == "classer":
             resultat = classer(db)
         elif args.commande == "reconcilier":

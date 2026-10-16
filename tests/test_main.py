@@ -203,3 +203,88 @@ def test_importer_notes_en_simulation_n_ecrit_rien(
     assert main(args) == EXIT_OK
     assert "retenue      73  Acme — SWE Intern" in capsys.readouterr().out
     assert not (tmp_path / "notation" / "notes.json").exists()
+
+
+def _jsonl(path: Path) -> list[dict[str, object]]:
+    return [json.loads(line) for line in path.read_text("utf-8").splitlines()]
+
+
+@responses.activate
+def test_exporter_textes_selection_notee_absente_erreur_et_reprise(
+    cfg_path: Path, tmp_path: Path
+) -> None:
+    """Export ciblé pour l'agent de candidatures : offre déjà notée incluse, identifiant
+    absent signalé sans requête, erreur de lecture gardée, relance sans retéléchargement."""
+    state = tmp_path / "s" / "state.json"
+    FakeProvider.jobs["Acme"] = [job("1", title="ML Intern"), job("2", title="Data Intern")]
+    assert main(["run", "-c", str(cfg_path), "--state", str(state)]) == EXIT_OK
+    (tmp_path / "notation").mkdir()
+    (tmp_path / "notation" / "notes.json").write_text(
+        json.dumps({"version": 2, "offres": {"Acme": {"1": {"statut": "retenue"}}}}),
+        encoding="utf-8",
+    )
+    texte = "You will train and evaluate ranking models with a dedicated mentor. " * 10
+    responses.get("https://example.com/jobs/1", body=f"<p>{texte}</p>")
+    responses.get("https://example.com/jobs/2", status=403)
+
+    selection = tmp_path / "selection.jsonl"
+    selection.write_text(
+        "\n".join(
+            json.dumps(s)
+            for s in (
+                {"company": "Acme", "job_id": "1"},
+                {"company": "Acme", "job_id": 2},  # job_id numérique accepté
+                {"company": "Acme", "job_id": "999"},
+                {"company": "Acme", "job_id": "1"},  # doublon ignoré
+            )
+        ),
+        encoding="utf-8",
+    )
+    sortie = tmp_path / "prive" / "textes.jsonl"
+    args = ["--exporter-textes", str(selection), "--sortie", str(sortie)]
+    args += ["-c", str(cfg_path), "--state", str(state)]
+    assert main(args) == EXIT_OK
+    rows = {r["job_id"]: r for r in _jsonl(sortie)}
+    assert set(rows) == {"1", "2", "999"}
+    # Déjà notée : exportée quand même (--a-noter la saute).
+    assert rows["1"]["title"] == "ML Intern"
+    assert rows["1"]["url"] == "https://example.com/jobs/1"
+    assert "ranking models" in str(rows["1"]["texte"])
+    assert rows["1"]["source"] == "page"
+    assert "erreur" not in rows["1"]
+    assert "403" in str(rows["2"]["erreur"]) and "texte" not in rows["2"]
+    assert rows["999"]["url"] is None and "absente" in str(rows["999"]["erreur"])
+    assert len(responses.calls) == 2
+
+    # Relance : aucune requête, une seule ligne par offre.
+    assert main(args) == EXIT_OK
+    assert len(responses.calls) == 2
+    assert sorted(str(r["job_id"]) for r in _jsonl(sortie)) == ["1", "2", "999"]
+
+    # --relancer-erreurs : seule l'offre en erreur est relue, sa ligne est remplacée.
+    responses.replace(responses.GET, "https://example.com/jobs/2", body=f"<p>{texte}</p>")
+    assert main([*args, "--relancer-erreurs"]) == EXIT_OK
+    assert [c.request.url for c in responses.calls[2:]] == ["https://example.com/jobs/2"]
+    rows = {r["job_id"]: r for r in _jsonl(sortie)}
+    assert len(rows) == 3 and rows["2"]["source"] == "page" and "erreur" not in rows["2"]
+
+    # --a-noter, lui, saute toujours l'offre notée.
+    work = tmp_path / "travail"
+    assert main(["--a-noter", str(work), "-c", str(cfg_path), "--state", str(state)]) == EXIT_OK
+    assert [r["job_id"] for r in _jsonl(work / "offres.jsonl")] == ["2"]
+
+
+def test_exporter_textes_selection_invalide(cfg_path: Path, tmp_path: Path) -> None:
+    selection = tmp_path / "selection.jsonl"
+    selection.write_text('{"company": "Acme"}\n', encoding="utf-8")
+    sortie = tmp_path / "textes.jsonl"
+    base = ["-c", str(cfg_path), "--state", str(tmp_path / "state.json")]
+    assert main(["--exporter-textes", str(selection), "--sortie", str(sortie), *base]) == (
+        EXIT_CONFIG
+    )
+    assert main(["--exporter-textes", str(selection), *base]) == EXIT_CONFIG
+    selection.write_text('["Acme", "1"]\n', encoding="utf-8")  # pas un objet
+    assert main(["--exporter-textes", str(selection), "--sortie", str(sortie), *base]) == (
+        EXIT_CONFIG
+    )
+    assert not sortie.exists()
