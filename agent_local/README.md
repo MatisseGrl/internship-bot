@@ -16,6 +16,28 @@ Ce répertoire contient le **moteur local** qui relie les offres du bot, un expo
 4. **Formulaire** : Codex pilote Chrome à partir du dossier. L'état suit `prete_a_remplir` → `formulaire_en_cours` → `prete_a_envoyer` → `envoi_en_cours` → `envoyee`. Les 15 premières tentatives exigent une revue enregistrée. Un envoi incertain devient `a_verifier`, sans seconde tentative automatique. `envoyee` exige une preuve de réception.
 5. **Mails** : `suivi_candidatures.py mail` enregistre chaque message par boîte et identifiant Gmail. Un statut ne change que si l'entreprise et l'identifiant de l'offre sont établis. `reconcilier` reporte ces statuts dans la file. Un accusé de réception ne peut pas effacer un refus ou un entretien.
 
+## Connexion Google à Microsoft Careers
+
+`google_signin.py` automatise les trois clics du parcours Eightfold affiché par Microsoft Careers : « Sign in using Google », choix de l'adresse exacte du candidat, puis « Continue ». Il vérifie le domaine de la page Microsoft, le domaine de la fenêtre Google, l'adresse affichée et la destination `eightfold.ai` avant le dernier clic. Il ne soumet aucun formulaire de candidature. La valeur renvoyée, `continue_clique`, ne prouve pas à elle seule que la connexion a réussi : contrôler ensuite la page Microsoft.
+
+Le module s'utilise depuis une `Page` Playwright déjà ouverte :
+
+```python
+from google_signin import connecter_google_microsoft
+
+resultat = connecter_google_microsoft(page_microsoft, adresse_google_du_candidat)
+```
+
+Il peut aussi se connecter à un Chrome que l'utilisateur a déjà ouvert avec un port CDP local. Une seule page `microsoft.eightfold.ai` doit être ouverte, avec la modale « Sign in » affichée et le compte Google déjà présent dans ce profil Chrome :
+
+```powershell
+$env:INTERNBOT_GOOGLE_EMAIL = '<adresse Google du candidat>'
+$env:INTERNBOT_CDP_URL = 'http://127.0.0.1:9222'
+python agent_local/google_signin.py
+```
+
+L'exécution s'arrête si le navigateur n'expose pas ce port, si le compte attendu n'est pas visible, ou si Google présente un autre écran. Aucun mot de passe ni cookie n'est sauvegardé par le script.
+
 L'utilisation de Chrome et la lecture quotidienne des deux boîtes sont assurées par la tâche Codex locale, pas par un accès Gmail ou Simplify caché dans ce programme. Le programme n'inclut **aucun appel d'API de modèle** et ne dépense rien. Le plafond de 10 USD par mois est représenté par `budget_disponible` avec arrêt local à 9 USD ; brancher un fournisseur exigera une clé hors dépôt et une mesure du coût réel.
 
 ## Alertes SWElist
