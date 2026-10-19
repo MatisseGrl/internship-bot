@@ -12037,6 +12037,7 @@
         },
         "R262507": {
           "first_seen": "2026-10-09T18:38:14+00:00",
+          "removed_at": "2026-10-19T01:25:18+00:00",
           "title": "Senior Strategic Buyer"
         },
         "R262556": {
@@ -20875,6 +20876,7 @@
         },
         "5231914007": {
           "first_seen": "2026-10-08T23:01:35+00:00",
+          "removed_at": "2026-10-19T01:21:25+00:00",
           "title": "Product Support Engineer"
         },
         "5232215007": {
@@ -21054,6 +21056,7 @@
         },
         "5234257007": {
           "first_seen": "2026-10-08T23:01:35+00:00",
+          "removed_at": "2026-10-19T01:21:25+00:00",
           "title": "Product Quality Engineer"
         },
         "5234512007": {
@@ -23985,6 +23988,7 @@
         },
         "5257824007": {
           "first_seen": "2026-10-08T23:01:35+00:00",
+          "removed_at": "2026-10-19T01:21:25+00:00",
           "title": "Product Quality Engineer (Test)"
         },
         "5258568007": {
@@ -24498,6 +24502,10 @@
         "5263876007": {
           "first_seen": "2026-10-13T09:31:47+00:00",
           "title": "Configuration Management Specialist"
+        },
+        "5264280007": {
+          "first_seen": "2026-10-19T01:21:25+00:00",
+          "title": "Product Support Engineer"
         },
         "5264336007": {
           "first_seen": "2026-10-15T00:42:57+00:00",
@@ -27872,6 +27880,14 @@
         },
         "5456039008": {
           "first_seen": "2026-10-18T17:28:37+00:00",
+          "title": "Principal Engineer Capacity/Compute"
+        },
+        "5456405008": {
+          "first_seen": "2026-10-19T01:20:44+00:00",
+          "title": "Principal Engineer Capacity/Compute"
+        },
+        "5456406008": {
+          "first_seen": "2026-10-19T01:20:44+00:00",
           "title": "Principal Engineer Capacity/Compute"
         }
       },
@@ -31300,6 +31316,7 @@
         },
         "JR-2026705": {
           "first_seen": "2026-10-18T23:34:36+00:00",
+          "location": "Les Mureaux · Le Haillan",
           "title": "STAGE - Ingénieure / Ingénieur en Data & Intelligence Artificielle"
         },
         "JR-2026706": {
@@ -34174,7 +34191,6 @@
         },
         "26241": {
           "first_seen": "2026-10-09T18:42:22+00:00",
-          "removed_at": "2026-10-15T20:36:23+00:00",
           "title": "Senior Principal Customer Success Manager, Strategic - France"
         },
         "26250": {
@@ -34292,7 +34308,6 @@
         },
         "26380": {
           "first_seen": "2026-10-09T18:42:22+00:00",
-          "removed_at": "2026-10-15T11:40:22+00:00",
           "title": "Customer Success Architect (AI)"
         },
         "26381": {
@@ -35161,7 +35176,6 @@
         },
         "27452": {
           "first_seen": "2026-10-09T18:42:22+00:00",
-          "removed_at": "2026-10-16T18:12:09+00:00",
           "title": "SMB+ AE Manager"
         },
         "27468": {
@@ -35184,7 +35198,6 @@
         },
         "27483": {
           "first_seen": "2026-10-15T00:50:42+00:00",
-          "removed_at": "2026-10-15T17:14:49+00:00",
           "title": "Solutions Engineer - SMB"
         },
         "27486": {
@@ -35318,7 +35331,6 @@
         },
         "27645": {
           "first_seen": "2026-10-09T18:42:22+00:00",
-          "removed_at": "2026-10-18T17:36:37+00:00",
           "title": "Senior Manager, Customer Success Architects, EMEA"
         },
         "27651": {
@@ -37849,7 +37861,6 @@
       "jobs": {
         "R257240": {
           "first_seen": "2026-10-08T22:58:20+00:00",
-          "removed_at": "2026-10-16T18:02:35+00:00",
           "title": "Vice President – Japan Product Development, Global Product Solutions (GPS)"
         },
         "R258072": {
@@ -38272,7 +38283,6 @@
         },
         "R266238": {
           "first_seen": "2026-10-08T22:58:20+00:00",
-          "removed_at": "2026-10-16T18:02:35+00:00",
           "title": "APAC Alternatives Client Platform, Client Service, Vice President"
         },
         "R266252": {
@@ -57827,6 +57837,10 @@
         "2028080": {
           "first_seen": "2026-10-09T00:43:03+00:00",
           "title": "Leader, Solutions Engineer-US Commercial, Indy/Cincinnati"
+        },
+        "2028081": {
+          "first_seen": "2026-10-19T01:15:56+00:00",
+          "title": "Sales Operations Analyst"
         },
         "2028084": {
           "first_seen": "2026-10-08T21:28:53+00:00",
@@ -78585,6 +78599,7 @@
         },
         "297513": {
           "first_seen": "2026-10-09T18:41:42+00:00",
+          "removed_at": "2026-10-19T01:27:59+00:00",
           "title": "Postgres Database Engineer"
         },
         "297574": {
@@ -78892,6 +78907,7 @@
         },
         "300054": {
           "first_seen": "2026-10-09T18:41:42+00:00",
+          "removed_at": "2026-10-19T01:27:59+00:00",
           "title": "Consultant, Data Engineering"
         },
         "300056": {
@@ -78961,6 +78977,10 @@
         "300848": {
           "first_seen": "2026-10-16T15:05:28+00:00",
           "title": "Data & AI Intern"
+        },
+        "300884": {
+          "first_seen": "2026-10-19T01:27:59+00:00",
+          "title": "Sr. Technology/Infrastructure Program Manager"
         },
         "D11137": {
           "first_seen": "2026-10-09T18:41:42+00:00",
@@ -85444,6 +85464,7 @@
         },
         "8289516": {
           "first_seen": "2026-10-17T05:49:44+00:00",
+          "removed_at": "2026-10-19T01:28:49+00:00",
           "title": "Associate, Strategy & Operations, Merchant Onboarding & Experience"
         },
         "8292690": {
@@ -96221,6 +96242,10 @@
           "first_seen": "2026-10-18T04:59:14+00:00",
           "title": "Broomfield Engineer Senior (wind Turbines) Mi 80021"
         },
+        "1373264355": {
+          "first_seen": "2026-10-19T01:44:29+00:00",
+          "title": "Singapore Senior Marketing And Communication Specialist 018960"
+        },
         "937043655": {
           "first_seen": "2026-10-09T18:58:51+00:00",
           "title": "Doel Meeloopstage Mechanisch 9130"
@@ -104635,10 +104660,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=104506": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Internship zStack Business Development & Ecosystem (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=105798": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Master@IBM - Technical Sales Storage and Data Management (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=112720": {
@@ -104687,11 +104714,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128339": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Technology Seller Intern - Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128345": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Technical Sales Engineer Intern - Entry-Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128347": {
@@ -104700,7 +104727,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128497": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Software Developer Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128506": {
@@ -104713,10 +104739,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128509": {
           "first_seen": "2026-10-09T19:29:37+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Product Manager Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128510": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Site Reliability Engineer Spring Co-op 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128512": {
@@ -104741,7 +104769,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128540": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Intern Application Developer - ServiceNow 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128541": {
@@ -104767,6 +104794,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128560": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Intern Oracle Cloud - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128562": {
@@ -104825,6 +104853,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128720": {
           "first_seen": "2026-10-15T20:36:22+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Strategy Consultant Intern 2027 – Enterprise Application Integration (EAI)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128728": {
@@ -104833,12 +104862,10 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128737": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Co-Op Security Consultant - Cyber Strategy & Risk 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128754": {
           "first_seen": "2026-10-15T20:36:22+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Intern Application Consultant 2027 – IBM Tech"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128755": {
@@ -104872,7 +104899,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128771": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Co-Op Security Consultant - Strategy, Risk & Compliance 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128775": {
@@ -104882,6 +104908,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128784": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Intern Application Developer – Azure and Microsoft - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128790": {
@@ -104921,6 +104948,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128818": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Intern Data Engineers - AI & Analytics - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128823": {
@@ -104933,7 +104961,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128825": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Intern Application Developer 2027 – DPE"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128910": {
@@ -104975,7 +105002,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129258": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Software Engineer Intern - Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129418": {
@@ -105001,6 +105027,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129754": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "2027 Intern – Junior Communications & Brand Strategy Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129759": {
@@ -105022,7 +105049,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129781": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Back End Developer Intern 2027 - Poughkeepsie"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129782": {
@@ -105035,11 +105061,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129790": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Procurement Intern: 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129894": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Co-Op Package Specialist - Oracle Finance Cloud 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129906": {
@@ -105066,7 +105092,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129920": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Global Facility Management Process Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129926": {
@@ -105075,6 +105100,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129929": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "IBM Z Engineering System Test Back-End Developer - Systems Assurance Kernel (SAK) Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129936": {
@@ -105083,7 +105109,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130023": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Technical Enablement Specialist Intern - Dallas, TX - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130026": {
@@ -105108,6 +105133,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130063": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Corporate Strategy Summer Consultant – Internship"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130074": {
@@ -105120,6 +105146,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130088": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Technical Enablement Specialist Intern - Poughkeepsie, NY - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130091": {
@@ -105156,7 +105183,6 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=130104": {
           "first_seen": "2026-10-14T22:50:49+00:00",
           "notified_at": "2026-10-14T22:50:49+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Cost & Asset Optimization - Data Science Analyst Intern - Poughkeepsie, NY - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130107": {
@@ -105218,7 +105244,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130759": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Compliance SW Developer Intern: Systems Assurance - Poughkeepsie, NY - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130760": {
@@ -105241,7 +105266,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130787": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Power Backend Developer Intern - Rochester, MN & Austin, TX - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130788": {
@@ -105254,16 +105278,15 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130862": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Expert Labs Sales Specialist Intern – Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130865": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Subscription and Annuity Representative Intern – Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130870": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Technology Seller Intern – Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130876": {
@@ -105277,11 +105300,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130880": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Spécialiste technique en ventes d’ingénierie – Stagiaire Programme de vente pour les talents en début de carrière 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130884": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Technology Lifecycle Services Renewals Sales Specialist Intern – Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130897": {
@@ -105336,7 +105359,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131195": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "SW Developer Intern | Enterprise Platform-as-a-Service - Austin, TX - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131205": {
@@ -105350,14 +105372,17 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131301": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Operations Project Manager Internship - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131306": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "2027 Incentives Professional Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131307": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "AI Foundations - Software Engineer - Research Internship 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131364": {
@@ -105385,6 +105410,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131592": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Product Designer Intern - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131598": {
@@ -105399,6 +105425,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131809": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Quantum Algorithms Theory Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131810": {
@@ -105407,6 +105434,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131816": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Cloud Developer Intern - Chicago, IL - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131827": {
@@ -105424,6 +105452,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131901": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Quantum Hardware EDA & Circuit Design Intern - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131910": {
@@ -105436,11 +105465,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131988": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Software Developer - Security - Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131999": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "SW Developer Intern | AI Center of Excellence"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132000": {
@@ -105450,10 +105479,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132002": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Intern Finance Specialist – Finance Transformation – 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132016": {
           "first_seen": "2026-10-13T09:39:09+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Research Intern - AI"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132068": {
@@ -105486,6 +105517,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132431": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Quantum Data Analyst Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132432": {
@@ -105532,10 +105564,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132567": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Storage Systems Research Scientist Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132569": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Research AI Engineer Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132699": {
@@ -105584,6 +105618,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132880": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Site Reliability Engineer Intern - OneIT - Poughkeepsie, NY"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132886": {
@@ -105623,11 +105658,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133086": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Technical Support Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133089": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Quantum Lab Assistant - Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133129": {
@@ -105652,7 +105687,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133146": {
           "first_seen": "2026-10-18T00:20:04+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Quantum Infrastructure Intern 2027 - Networking automation"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133148": {
@@ -105706,11 +105740,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133669": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Quantum Runtime Framework Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133782": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Quantum Control Pulse-Level Compiler Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133789": {
@@ -105733,7 +105767,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133909": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "AI-First Transformation – Strategy Consultant Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133935": {
@@ -105747,15 +105780,16 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134050": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Praktika im Bereich z/OS Softwareentwicklung (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134058": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Sales Operations Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134067": {
           "first_seen": "2026-10-14T02:11:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Intern Supply Chain Specialist - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134091": {
@@ -105778,7 +105812,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134108": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Product Manager Intern 2027 - BELLEVUE"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134121": {
@@ -105792,6 +105825,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134134": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Product Management Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134417": {
@@ -105801,7 +105835,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134457": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Designer Intern 2027 - Carbon Design System - Austin"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134473": {
@@ -105811,10 +105844,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134474": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Summer Research Intern 2027 - Edge communications processing with AI accelerators"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134486": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Quantum Information Software Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134536": {
@@ -105847,11 +105882,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134671": {
           "first_seen": "2026-10-14T18:52:09+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Quantum Error Correction Research Intern - Low-error rate methods and decoder optimizations 2027 (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134679": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Quantum Software Intern - Backend Execution Environment for Quantum Workloads - 2027 (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134708": {
@@ -105879,6 +105914,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134996": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Product Management Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135171": {
@@ -105892,7 +105928,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135256": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Software Developer Spring Co-Op 2027 (Bellevue)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135269": {
@@ -105929,7 +105964,6 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=135618": {
           "first_seen": "2026-10-13T23:13:41+00:00",
           "notified_at": "2026-10-13T23:13:41+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Sales Configuration Developer Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135624": {
@@ -105947,6 +105981,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135984": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Quality Analyst Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135996": {
@@ -106008,6 +106043,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=136943": {
           "first_seen": "2026-10-14T02:11:21+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Internship Cloud FullStack Developer"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=136947": {
@@ -106029,11 +106065,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137021": {
           "first_seen": "2026-10-13T17:51:34+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Stagiaire assistant commercial réseau de distribution - IBM France - F/H"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137062": {
           "first_seen": "2026-10-13T17:51:34+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Mainframe System Verification Tester Apprentice"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137066": {
@@ -106082,7 +106118,6 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=137250": {
           "first_seen": "2026-10-14T22:50:49+00:00",
           "notified_at": "2026-10-14T22:50:49+00:00",
-          "removed_at": "2026-10-18T23:24:22+00:00",
           "title": "Hardware Developer Intern - Austin, TX - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137269": {
@@ -106099,6 +106134,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137418": {
           "first_seen": "2026-10-16T18:12:08+00:00",
+          "removed_at": "2026-10-19T01:28:38+00:00",
           "title": "Practicante de Desarrollo SAP ABAP"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137422": {
@@ -106612,6 +106648,7 @@
         },
         "4939397101": {
           "first_seen": "2026-10-08T23:02:00+00:00",
+          "removed_at": "2026-10-19T01:21:50+00:00",
           "title": "Hardware & Infrastructure Procurement Officer"
         },
         "4939421101": {
@@ -106904,6 +106941,10 @@
         "563808972069486": {
           "first_seen": "2026-10-09T18:41:21+00:00",
           "title": "Internship - IT Business Analyst (Human Resources)"
+        },
+        "563808972127877": {
+          "first_seen": "2026-10-19T01:27:38+00:00",
+          "title": "Infineon Technologies Malaysia Scholarship Award Program"
         },
         "563808972187096": {
           "first_seen": "2026-10-13T17:50:32+00:00",
@@ -108157,6 +108198,16 @@
         "HRC1844852": {
           "first_seen": "2026-10-16T18:11:06+00:00",
           "title": "Internship - Field Application Engineer"
+        },
+        "HRC1845630": {
+          "first_seen": "2026-10-19T01:44:36+00:00",
+          "notified_at": "2026-10-19T01:44:36+00:00",
+          "title": "Internship - AI-assisted Test & Measurement Automation"
+        },
+        "HRC1849260_1": {
+          "first_seen": "2026-10-19T01:44:36+00:00",
+          "notified_at": "2026-10-19T01:44:36+00:00",
+          "title": "Internship - Data and AI (Artificial Intelligence) Analyst"
         }
       },
       "last_error": null,
@@ -110932,6 +110983,7 @@
         },
         "JR0288089": {
           "first_seen": "2026-10-14T18:42:04+00:00",
+          "removed_at": "2026-10-19T01:19:01+00:00",
           "title": "Process and Equipment Engineer"
         },
         "JR0288091": {
@@ -117976,6 +118028,7 @@
         },
         "2640541": {
           "first_seen": "2026-10-09T18:37:34+00:00",
+          "removed_at": "2026-10-19T01:24:40+00:00",
           "title": "Technical Engagement Manager (FaST)"
         },
         "2640542": {
@@ -118873,6 +118926,7 @@
         },
         "202130": {
           "first_seen": "2026-10-09T18:40:27+00:00",
+          "removed_at": "2026-10-19T01:26:42+00:00",
           "title": "LMK Configuration Engineer (계약직 Bill of Materials Operator, 전공무관)"
         },
         "202160": {
@@ -128764,7 +128818,6 @@
         },
         "200050323": {
           "first_seen": "2026-10-09T18:40:04+00:00",
-          "removed_at": "2026-10-18T23:22:03+00:00",
           "title": "Product Management INTERN"
         },
         "200050324": {
@@ -128929,6 +128982,7 @@
         },
         "200055974": {
           "first_seen": "2026-10-09T18:40:04+00:00",
+          "removed_at": "2026-10-19T01:26:21+00:00",
           "title": "Treasury Finance Manager: MBA Internship Opportunities"
         },
         "200056126": {
@@ -129148,6 +129202,7 @@
         },
         "200061632": {
           "first_seen": "2026-10-13T17:49:17+00:00",
+          "removed_at": "2026-10-19T01:26:21+00:00",
           "title": "Applied Sciences INTERN"
         },
         "200061635": {
@@ -129162,6 +129217,7 @@
         "200061716": {
           "first_seen": "2026-10-13T23:13:41+00:00",
           "notified_at": "2026-10-13T23:13:41+00:00",
+          "removed_at": "2026-10-19T01:26:21+00:00",
           "title": "Research Intern - Agentic Data Memory"
         },
         "200061780": {
@@ -129772,6 +129828,7 @@
         },
         "69e04ad2-f097-4b6d-a477-f9070c67ad16": {
           "first_seen": "2026-10-09T18:53:35+00:00",
+          "removed_at": "2026-10-19T01:39:51+00:00",
           "title": "Technical Recruiter, APAC"
         },
         "6a075ed1-3d62-4a79-a133-65f8038c44ca": {
@@ -145099,6 +145156,14 @@
           "first_seen": "2026-10-16T09:54:31+00:00",
           "title": "Commercial Account Executive"
         },
+        "8288480": {
+          "first_seen": "2026-10-19T01:21:08+00:00",
+          "title": "Enterprise Account Executive, Auth0"
+        },
+        "8288482": {
+          "first_seen": "2026-10-19T01:21:08+00:00",
+          "title": "Enterprise Account Executive, Auth0"
+        },
         "8289109": {
           "first_seen": "2026-10-16T22:12:57+00:00",
           "title": "Okta Account Executive- New Business"
@@ -158466,6 +158531,7 @@
         },
         "JR-023505": {
           "first_seen": "2026-10-16T19:08:27+00:00",
+          "removed_at": "2026-10-19T01:29:57+00:00",
           "title": "GSOC Analyst"
         },
         "JR-023512": {
@@ -172686,7 +172752,6 @@
         },
         "01867741": {
           "first_seen": "2026-10-09T18:54:58+00:00",
-          "removed_at": "2026-10-18T23:37:42+00:00",
           "title": "Test Equipment Testability Engineer Ii"
         },
         "01867748": {
@@ -176641,7 +176706,6 @@
         },
         "01872637": {
           "first_seen": "2026-10-09T18:54:58+00:00",
-          "removed_at": "2026-10-18T23:37:42+00:00",
           "title": "Nsms Sr Business Manager Mat Capacity"
         },
         "01872638": {
@@ -177366,7 +177430,6 @@
         },
         "01873401": {
           "first_seen": "2026-10-09T18:54:58+00:00",
-          "removed_at": "2026-10-18T23:37:42+00:00",
           "title": "Senior Systems Engineer Air Traffic Solutions Onsite"
         },
         "01873410": {
@@ -185864,7 +185927,6 @@
         },
         "01880039": {
           "first_seen": "2026-10-09T18:54:58+00:00",
-          "removed_at": "2026-10-18T21:07:02+00:00",
           "title": "Systems Engineer Ii Military Fixed Wing Fms Onsite"
         },
         "01880040": {
@@ -186439,6 +186501,7 @@
         },
         "01880604": {
           "first_seen": "2026-10-09T18:54:58+00:00",
+          "removed_at": "2026-10-19T01:41:06+00:00",
           "title": "Software Security Engineer Ii"
         },
         "01880605": {
@@ -187742,6 +187805,7 @@
         },
         "01881361": {
           "first_seen": "2026-10-12T19:28:55+00:00",
+          "removed_at": "2026-10-19T01:41:06+00:00",
           "title": "Manager Supplier Quality Assurance Representative"
         },
         "01881362": {
@@ -187764,6 +187828,7 @@
         },
         "01881366": {
           "first_seen": "2026-10-12T19:28:55+00:00",
+          "removed_at": "2026-10-19T01:41:06+00:00",
           "title": "Manager Supplier Quality Assurance Representative"
         },
         "01881367": {
@@ -187772,6 +187837,7 @@
         },
         "01881369": {
           "first_seen": "2026-10-13T01:47:27+00:00",
+          "removed_at": "2026-10-19T01:41:06+00:00",
           "title": "Manager Supplier Quality Assurance Representative"
         },
         "01881370": {
@@ -191399,6 +191465,10 @@
         "8283770": {
           "first_seen": "2026-10-15T06:01:43+00:00",
           "title": "Senior Machine Learning Systems Engineer, ML Platform"
+        },
+        "8299781": {
+          "first_seen": "2026-10-19T01:21:11+00:00",
+          "title": "Machine Learning Engineer, Answers Relevance"
         }
       },
       "last_error": null,
@@ -195786,7 +195856,7 @@
       "seeded_at": "2026-10-09T18:41:29+00:00"
     },
     "Salesforce": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 2,
       "jobs": {
         "JR214107": {
           "first_seen": "2026-10-08T19:02:39+00:00",
@@ -199835,7 +199905,7 @@
           "title": "Software Engineer Junior — Automation & Reliability"
         }
       },
-      "last_error": "[workday] Salesforce : POST https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs : HTTP 429 — {\"errorCode\":\"HTTP_429\",\"errorCaseId\":\"219008MVEFYUWE\",\"httpStatus\":429,\"message\":\"\",\"messageParams\":{}}",
+      "last_error": "[workday] Salesforce : POST https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs : HTTP 429 — {\"errorCode\":\"HTTP_429\",\"errorCaseId\":\"1D94E1MVEKEVE1\",\"httpStatus\":429,\"message\":\"\",\"messageParams\":{}}",
       "seeded_at": "2026-10-08T19:02:39+00:00"
     },
     "Samsara": {
@@ -207120,6 +207190,10 @@
           "first_seen": "2026-10-18T00:30:45+00:00",
           "title": "Senior Engineer, Flight Test (R6304)"
         },
+        "0e1f3c9f-d4f3-4454-8d16-1783a9aeecc0": {
+          "first_seen": "2026-10-19T01:39:18+00:00",
+          "title": "Staff Engineer, Autonomy (R5682)"
+        },
         "0ea92a3f-02e8-4b60-95b9-f58d7e2c4a3d": {
           "first_seen": "2026-10-15T20:47:00+00:00",
           "title": "Technician II, Maintenance (R6289)"
@@ -207984,6 +208058,7 @@
         },
         "585fcac1-a6ad-46ab-8868-4e073ac292d8": {
           "first_seen": "2026-10-09T18:52:47+00:00",
+          "removed_at": "2026-10-19T01:39:18+00:00",
           "title": "Staff Engineer, Autonomy (R5681)"
         },
         "58b3440f-229c-4aad-9535-47419660931c": {
@@ -211815,7 +211890,7 @@
       "seeded_at": "2026-10-09T18:48:04+00:00"
     },
     "Slack": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "JR359018": {
           "first_seen": "2026-10-08T19:02:40+00:00",
@@ -211838,7 +211913,7 @@
           "title": "Staff Software Engineer, Data Infrastructure"
         }
       },
-      "last_error": "[workday] Slack : POST https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/Slack/jobs : HTTP 429 — {\"errorCode\":\"HTTP_429\",\"errorCaseId\":\"219008MVEFZ801\",\"httpStatus\":429,\"message\":\"\",\"messageParams\":{}}",
+      "last_error": null,
       "seeded_at": "2026-10-08T19:02:40+00:00"
     },
     "Snap": {
@@ -229303,7 +229378,6 @@
         },
         "8678723002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
-          "removed_at": "2026-10-14T18:44:35+00:00",
           "title": "Sous Chef"
         },
         "8679026002": {
@@ -244164,6 +244238,7 @@
         },
         "R0324095": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Engineering Delivery Manager Guerre Electronique F H"
         },
         "R0324096": {
@@ -244186,6 +244261,7 @@
         },
         "R0324211": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Architecte Software Digital Radar F H"
         },
         "R0324244": {
@@ -244254,6 +244330,7 @@
         },
         "R0324806": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Hr Assistant French Speaker"
         },
         "R0324811": {
@@ -244344,6 +244421,7 @@
         },
         "R0325171": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Administrateur Secops H F"
         },
         "R0325186": {
@@ -244357,6 +244435,7 @@
         },
         "R0325220": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Ingénieur Conception Électronique Puissance Confirmé H F"
         },
         "R0325268": {
@@ -244397,6 +244476,7 @@
         },
         "R0325528": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Project Management Officer F H"
         },
         "R0325588": {
@@ -244414,6 +244494,7 @@
         },
         "R0325745": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Ingenieur E Test Verification Validation Systemes H F"
         },
         "R0325753": {
@@ -244446,10 +244527,12 @@
         },
         "R0325833": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Responsable Intégration Validation Vérification Qualification Logiciel F H"
         },
         "R0325844": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Data Scientist Recherche Operationnelle F H"
         },
         "R0325888": {
@@ -244492,6 +244575,7 @@
         },
         "R0326070": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Project Manager F H"
         },
         "R0326074": {
@@ -244521,6 +244605,7 @@
         },
         "R0326134": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Consultant Senior Cybersécurité H F"
         },
         "R0326137": {
@@ -244537,6 +244622,7 @@
         },
         "R0326193": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Bids Project Manager"
         },
         "R0326204": {
@@ -252576,6 +252662,7 @@
         },
         "R0341265": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-19T01:41:16+00:00",
           "title": "Stage Attaques Adverses Physiques Sur Réseau De Neurones De Détection F H"
         },
         "R0341266": {
@@ -257942,6 +258029,7 @@
         },
         "302467": {
           "first_seen": "2026-10-09T18:44:44+00:00",
+          "removed_at": "2026-10-19T01:30:59+00:00",
           "title": "Program Specialist IV"
         },
         "302469": {
@@ -258397,6 +258485,10 @@
         "303239": {
           "first_seen": "2026-10-09T18:44:44+00:00",
           "title": "Sr Sales Ops Associate, Internal Tools & Systems, Uber Advertising"
+        },
+        "303242": {
+          "first_seen": "2026-10-19T01:30:59+00:00",
+          "title": "Senior SMB Account Executive, Uber for Business US&C"
         },
         "303253": {
           "first_seen": "2026-10-09T18:44:44+00:00",
