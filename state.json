@@ -493,7 +493,7 @@
       "seeded_at": "2026-10-09T18:42:24+00:00"
     },
     "ASML": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "J-00277833": {
           "first_seen": "2026-10-09T18:53:43+00:00",
@@ -884,7 +884,7 @@
           "title": "EUV International System Install Engineer"
         }
       },
-      "last_error": "[workday] ASML : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:53:43+00:00"
     },
     "Adobe": {
@@ -2926,6 +2926,10 @@
           "first_seen": "2026-10-21T02:00:26+00:00",
           "title": "Legal Innovation Specialist"
         },
+        "8300220": {
+          "first_seen": "2026-10-24T11:21:38+00:00",
+          "title": "Operational Support Specialist"
+        },
         "8300919": {
           "first_seen": "2026-10-23T13:51:50+00:00",
           "title": "FinCrime Analyst"
@@ -4094,7 +4098,7 @@
       "seeded_at": "2026-10-08T19:02:43+00:00"
     },
     "Airbus": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "JR10069407": {
           "first_seen": "2026-10-09T19:38:02+00:00",
@@ -10361,7 +10365,7 @@
           "title": "Working Student - MEA (d/f/m)"
         }
       },
-      "last_error": "[workday] Airbus : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T19:38:02+00:00"
     },
     "Airtable": {
@@ -28236,6 +28240,14 @@
           "first_seen": "2026-10-22T18:39:39+00:00",
           "title": "Quality Engineering Specialist"
         },
+        "5272416007": {
+          "first_seen": "2026-10-24T11:03:12+00:00",
+          "title": "Quality Specialist"
+        },
+        "5272426007": {
+          "first_seen": "2026-10-24T11:03:12+00:00",
+          "title": "NDT Technician"
+        },
         "5272481007": {
           "first_seen": "2026-10-22T18:39:39+00:00",
           "title": "2027 Early Career Software Engineer"
@@ -33095,6 +33107,10 @@
           "first_seen": "2026-10-14T19:04:01+00:00",
           "title": "Hardware Product Manager"
         },
+        "aa86d0fe-5c9c-40dd-9256-5a189eee7952": {
+          "first_seen": "2026-10-24T11:22:13+00:00",
+          "title": "Shift Lead"
+        },
         "ab036590-eae9-45ea-9edc-8d7528cdde9d": {
           "first_seen": "2026-10-09T18:53:36+00:00",
           "title": "Software Engineer - Developer Infrastructure"
@@ -34024,7 +34040,7 @@
       "seeded_at": "2026-10-09T18:40:41+00:00"
     },
     "ArianeGroup": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "JR-0012870": {
           "first_seen": "2026-10-09T18:51:15+00:00",
@@ -35345,7 +35361,7 @@
           "title": "STAGE - Ingénieure / Ingénieur Matériaux"
         }
       },
-      "last_error": "[workday] ArianeGroup : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:51:15+00:00"
     },
     "Arm": {
@@ -44591,7 +44607,7 @@
       "seeded_at": "2026-10-08T23:01:47+00:00"
     },
     "Blue Origin": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "R52967": {
           "first_seen": "2026-10-09T18:49:05+00:00",
@@ -47253,11 +47269,11 @@
           "title": "Sr Manager of Test Components, Lunar Core Components & Vehicle Subassemblies"
         }
       },
-      "last_error": "[workday] Blue Origin : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:49:05+00:00"
     },
     "Boeing": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "00000267573": {
           "first_seen": "2026-10-09T18:56:23+00:00",
@@ -47480,6 +47496,7 @@
         },
         "JR2026502509": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Guidance Navigation & Control Engineer (Associate or Experienced)"
         },
         "JR2026502592": {
@@ -47488,6 +47505,7 @@
         },
         "JR2026502791": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Guidance Navigation & Control Engineer (Experienced, Lead, Senior)"
         },
         "JR2026502797": {
@@ -47715,6 +47733,7 @@
         },
         "JR2026507974": {
           "first_seen": "2026-10-16T00:11:04+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Radar Systems Engineer (Experienced, Lead, Senior)"
         },
         "JR2026508015": {
@@ -48060,6 +48079,7 @@
         },
         "JR2026513740": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Air Proprietary 2 Mission Systems Sensors and Core Avionics Senior Manager"
         },
         "JR2026513770": {
@@ -48181,6 +48201,7 @@
         },
         "JR2026514618": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Senior Structural Analysis Engineer – Interiors Stress"
         },
         "JR2026514664": {
@@ -48404,6 +48425,7 @@
         },
         "JR2026516191": {
           "first_seen": "2026-10-21T19:08:17+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Manufacturing Engineer (Government Training Engineering) (Entry-Level or Associate)"
         },
         "JR2026516194": {
@@ -48521,6 +48543,7 @@
         },
         "JR2026516827": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Senior Test and Evaluation Laboratory Technician"
         },
         "JR2026516836": {
@@ -48659,6 +48682,7 @@
         },
         "JR2026517930": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Software Engineer–Developers (Associate / Experienced / Senior)"
         },
         "JR2026517931": {
@@ -48730,6 +48754,7 @@
         },
         "JR2026518241": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Flight Software Engineers (Associate / Experienced / Senior)"
         },
         "JR2026518249": {
@@ -48978,6 +49003,7 @@
         },
         "JR2026519211": {
           "first_seen": "2026-10-20T15:33:55+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Entry Shipping/Receiving Specialist"
         },
         "JR2026519225": {
@@ -49218,6 +49244,7 @@
         },
         "JR2026520026": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Reliability, Maintainability & System Health Systems Engineer (Experienced or Lead)"
         },
         "JR2026520042": {
@@ -49325,6 +49352,7 @@
         },
         "JR2026520437": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "ASIC/FPGA Design and Verification Engineer – Space Electronics - MTV (Associate, Experienced, or Lead)"
         },
         "JR2026520439": {
@@ -49693,6 +49721,7 @@
         },
         "JR2026521393": {
           "first_seen": "2026-10-20T22:49:32+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "VMS Program Integrator"
         },
         "JR2026521404": {
@@ -49769,6 +49798,7 @@
         },
         "JR2026521668": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Quality Engineer"
         },
         "JR2026521685": {
@@ -50103,6 +50133,7 @@
         },
         "JR2026522577": {
           "first_seen": "2026-10-14T19:06:31+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Entry Level Software Engineer–Developer (Development)"
         },
         "JR2026522583": {
@@ -50162,6 +50193,7 @@
         },
         "JR2026522706": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "ASIC / FPGA Digital Design Engineer – (Associate or Experienced)"
         },
         "JR2026522708": {
@@ -50275,6 +50307,7 @@
         },
         "JR2026522974": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Design-for-Test (DFT) Engineer — ASIC Backend – (Associate, Experienced, or Lead)"
         },
         "JR2026522977": {
@@ -50296,6 +50329,7 @@
         },
         "JR2026523004": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Audiovisual Technician / Installer (Associate, Experienced or Senior)"
         },
         "JR2026523025": {
@@ -50440,6 +50474,7 @@
         },
         "JR2026523236": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "ASIC Physical Design Engineer — Synthesis and Timing – (Associate or Experienced)"
         },
         "JR2026523243": {
@@ -51052,10 +51087,12 @@
         },
         "JR2026524254": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Experienced or Senior Interiors Payloads Support Engineer"
         },
         "JR2026524255": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Lead Interiors Payloads Support Engineer"
         },
         "JR2026524267": {
@@ -51179,6 +51216,7 @@
         },
         "JR2026524474": {
           "first_seen": "2026-10-20T22:49:32+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Senior Systems Engineer"
         },
         "JR2026524478": {
@@ -51328,6 +51366,7 @@
         },
         "JR2026524693": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Associate Systems Engineer"
         },
         "JR2026524696": {
@@ -51746,6 +51785,7 @@
         },
         "JR2026525324": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Senior Privacy and Data Protection Professional"
         },
         "JR2026525334": {
@@ -51929,6 +51969,7 @@
         },
         "JR2026525603": {
           "first_seen": "2026-10-15T17:29:15+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Experienced Financial Analyst"
         },
         "JR2026525604": {
@@ -51961,6 +52002,7 @@
         },
         "JR2026525638": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Production Engineering Manager (Mid Body - Tooling)"
         },
         "JR2026525642": {
@@ -52455,6 +52497,7 @@
         },
         "JR2026526207": {
           "first_seen": "2026-10-20T19:45:02+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Associate Defense Procurement Financial Analyst"
         },
         "JR2026526211": {
@@ -52727,6 +52770,7 @@
         },
         "JR2026526556": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-10-24T11:24:27+00:00",
           "title": "Technical Product Manager – Aviation Maintenance Data"
         },
         "JR2026526579": {
@@ -53197,7 +53241,7 @@
           "title": "Associate 787 Cabin Systems Engineer"
         }
       },
-      "last_error": "[workday] Boeing : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:56:23+00:00"
     },
     "Booking.com": {
@@ -63878,6 +63922,7 @@
         },
         "2025271": {
           "first_seen": "2026-10-08T21:28:53+00:00",
+          "removed_at": "2026-10-24T10:57:01+00:00",
           "title": "OSAT Supply Planning Manager"
         },
         "2025276": {
@@ -63909,6 +63954,7 @@
         },
         "2025331": {
           "first_seen": "2026-10-09T23:17:27+00:00",
+          "removed_at": "2026-10-24T10:57:01+00:00",
           "title": "Account Executive - Architecture-IMI (Internet and Mass Infrastructure)"
         },
         "2025355": {
@@ -65223,6 +65269,7 @@
         },
         "2027846": {
           "first_seen": "2026-10-19T19:21:37+00:00",
+          "removed_at": "2026-10-24T10:57:01+00:00",
           "title": "Account Executive, Portfolio - Commercial - San Diego, CA"
         },
         "2027863": {
@@ -65667,6 +65714,7 @@
         },
         "261002582": {
           "first_seen": "2026-10-23T07:35:05+00:00",
+          "removed_at": "2026-10-24T11:01:40+00:00",
           "title": "Banamex - Analista Proyectos - Portal Web"
         },
         "261002673": {
@@ -66087,6 +66135,10 @@
         "6557318": {
           "first_seen": "2026-10-08T23:01:36+00:00",
           "title": "Business Development Representative (BDR)"
+        },
+        "6578726": {
+          "first_seen": "2026-10-24T11:03:13+00:00",
+          "title": "Senior Software Engineer, Workers Runtime"
         },
         "6629769": {
           "first_seen": "2026-10-08T23:01:36+00:00",
@@ -70093,7 +70145,7 @@
       "seeded_at": "2026-10-09T18:53:30+00:00"
     },
     "Criteo": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "r13375": {
           "first_seen": "2026-10-09T18:53:25+00:00",
@@ -70455,7 +70507,7 @@
           "title": "Senior Sales Manager, New Business (Qatar & Lower Gulf)"
         }
       },
-      "last_error": "[workday] Criteo : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:53:25+00:00"
     },
     "CrowdStrike": {
@@ -73011,7 +73063,6 @@
         },
         "548651": {
           "first_seen": "2026-10-11T18:34:07+00:00",
-          "removed_at": "2026-10-23T22:40:32+00:00",
           "title": "AI Factory Solution Experience Manager"
         },
         "548653": {
@@ -84778,6 +84829,7 @@
         },
         "744000149156678": {
           "first_seen": "2026-10-09T18:53:10+00:00",
+          "removed_at": "2026-10-24T11:22:01+00:00",
           "title": "Territory Manager S&M Cities Italy"
         },
         "744000149158158": {
@@ -85484,6 +85536,7 @@
         },
         "744000151986148": {
           "first_seen": "2026-10-09T18:53:10+00:00",
+          "removed_at": "2026-10-24T11:22:01+00:00",
           "title": "Sr Account Manager S&M Cities Italy"
         },
         "744000151991899": {
@@ -89057,6 +89110,10 @@
           "first_seen": "2026-10-09T18:41:42+00:00",
           "title": "Principal Consultant"
         },
+        "300151": {
+          "first_seen": "2026-10-24T11:09:51+00:00",
+          "title": "Principal Consultant"
+        },
         "300197": {
           "first_seen": "2026-10-09T18:41:42+00:00",
           "removed_at": "2026-10-23T07:43:37+00:00",
@@ -89124,6 +89181,7 @@
         },
         "300884": {
           "first_seen": "2026-10-19T01:27:59+00:00",
+          "removed_at": "2026-10-24T11:09:51+00:00",
           "title": "Sr. Technology/Infrastructure Program Manager"
         },
         "300900": {
@@ -109924,6 +109982,10 @@
           "first_seen": "2026-10-20T22:51:43+00:00",
           "title": "Ericsson Innovation Hub Internship"
         },
+        "793056": {
+          "first_seen": "2026-10-24T11:26:35+00:00",
+          "title": "International Tax Manager"
+        },
         "793086": {
           "first_seen": "2026-10-20T15:36:26+00:00",
           "notified_at": "2026-10-20T15:36:26+00:00",
@@ -109934,7 +109996,7 @@
       "seeded_at": "2026-10-09T18:58:43+00:00"
     },
     "Etsy": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "JR5400": {
           "first_seen": "2026-10-09T18:43:55+00:00",
@@ -110066,7 +110128,7 @@
           "title": "Supplier Management Lead"
         }
       },
-      "last_error": "[workday] Etsy : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:43:55+00:00"
     },
     "Expedia": {
@@ -110244,6 +110306,7 @@
         },
         "R-107578": {
           "first_seen": "2026-10-16T22:10:10+00:00",
+          "removed_at": "2026-10-24T11:00:10+00:00",
           "title": "Senior Machine Learning Scientist - Agentic Experience"
         },
         "R-107734": {
@@ -117982,6 +118045,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=120710": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Estagiário(a) em Operações de Vendas (Sales Operations Intern)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=123742": {
@@ -117999,7 +118063,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=123833": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "Package Consultant-SAP C/4 HANA C4C"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=126993": {
@@ -118023,7 +118086,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128339": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Technology Seller Intern - Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128345": {
@@ -118056,7 +118118,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128512": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Technical Support Spring Co-op 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128513": {
@@ -118069,6 +118130,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128522": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Intern Business Transformation Consultant - Adobe 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128527": {
@@ -118086,7 +118148,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128547": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Intern Package Consultant - Salesforce 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128549": {
@@ -118172,12 +118233,10 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128737": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Co-Op Security Consultant - Cyber Strategy & Risk 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128754": {
           "first_seen": "2026-10-15T20:36:22+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Intern Application Consultant 2027 – IBM Tech"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128755": {
@@ -118229,20 +118288,20 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128792": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Intern Data Specialist 2027 - AI & Analytics"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128797": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Intern Application Developer – Adobe - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128800": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "Technical Sales Engineer - Spring Co-op Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128805": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "Technology Seller - Spring Co-op Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128807": {
@@ -118256,7 +118315,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128816": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Intern Application Developer 2027-ServiceNow"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128818": {
@@ -118281,6 +118339,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128922": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Intern Application Developer – Salesforce - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128929": {
@@ -118297,6 +118356,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129227": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Co-Op Developer - Digital Product 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129243": {
@@ -118305,6 +118365,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129252": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Solution Architect Intern - Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129255": {
@@ -118323,7 +118384,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129628": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Intern Data Engineer - AI & Analytics - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129635": {
@@ -118332,6 +118392,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129661": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Software Developer Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129741": {
@@ -118400,6 +118461,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129911": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Global Sales Incentives – Sales Plan Design, Segmentation & Analytics Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129913": {
@@ -118419,6 +118481,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129926": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "IBM Z Engineering System Test Hardware Developer - Poughkeepsie, NY - Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129929": {
@@ -118546,6 +118609,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130129": {
           "first_seen": "2026-10-15T20:36:22+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Storage Client Solutions Engineering Intern 2027- North Carolina"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130139": {
@@ -118579,11 +118643,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130758": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "QA/Test Developer Intern: Systems Assurance - Poughkeepsie, NY - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130759": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Compliance SW Developer Intern: Systems Assurance - Poughkeepsie, NY - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130760": {
@@ -118606,7 +118670,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130787": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Power Backend Developer Intern - Rochester, MN & Austin, TX - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130788": {
@@ -118619,7 +118682,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130862": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Expert Labs Sales Specialist Intern – Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130865": {
@@ -118632,6 +118694,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130876": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Back End Developer Intern - Poughkeepsie, NY - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130878": {
@@ -118659,7 +118722,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=130998": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Supply Chain Operations Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131072": {
@@ -118687,6 +118749,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131175": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Quote to Cash Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131176": {
@@ -118709,6 +118772,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131205": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "SW Developer Intern | Enterprise Platform-as-a-Service - Durham, NC - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131292": {
@@ -118767,6 +118831,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131649": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "[AI Foundation]Research Student Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131809": {
@@ -118785,7 +118850,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131827": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "AI Foundations - Research Scientist - Research Internship - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131846": {
@@ -118795,7 +118859,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131896": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "Quantum Measurement and Modeling Intern - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131901": {
@@ -118835,6 +118898,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132068": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Controls / Compliance Tester Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132407": {
@@ -118843,7 +118907,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132416": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Microarchitecture / Software Intern 2027 - AI Accelerators Research"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132417": {
@@ -118862,7 +118925,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132430": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Silicon Technology Research and Development Research Scientist Intern - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132431": {
@@ -118876,6 +118938,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132433": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Quantum Algorithms and Quantum Machine Learning Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132434": {
@@ -118900,6 +118963,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132533": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Quantum Innovation Centers Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132535": {
@@ -118931,6 +118995,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132708": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Quantum Security Intern 2027 - Cloud Compliance & Security Tooling"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132725": {
@@ -118949,7 +119014,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132810": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "Design Intern 2027 - Advanced Integrated Circuits Research"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132822": {
@@ -118959,6 +119023,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132833": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Delivery Consultant Intern – Entry Level Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132836": {
@@ -118977,7 +119042,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132927": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Quantum Error Correction Research Intern - 2027 (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132928": {
@@ -119022,11 +119086,11 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133129": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Research Intern 2027 - Superconducting Circuit Design for Quantum Computing"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133133": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "Product Manager Spring Co-op 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133140": {
@@ -119073,7 +119137,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133468": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "Product Manager Intern 2027 - One Madison"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133470": {
@@ -119083,6 +119146,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133501": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "2027 Intern – IBM Corporate Responsibility"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133503": {
@@ -119092,16 +119156,15 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=133504": {
           "first_seen": "2026-10-19T19:53:08+00:00",
           "notified_at": "2026-10-19T19:53:08+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Quantum Infrastructure Intern 2027 - SRE"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133632": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Designer Spring Co-op 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133664": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Research Intern 2027 – GPU Acceleration for Quantum Computing Applications"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133667": {
@@ -119114,7 +119177,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133782": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Quantum Control Pulse-Level Compiler Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133789": {
@@ -119135,7 +119197,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133909": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "AI-First Transformation – Strategy Consultant Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133935": {
@@ -119179,7 +119240,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134108": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Product Manager Intern 2027 - BELLEVUE"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134121": {
@@ -119206,6 +119266,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134473": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Summer Research Intern 2027 - Integrated Circuit Design for Quantum Computing"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134474": {
@@ -119228,6 +119289,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134568": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Back End Developer Intern 2027 - Tucson"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134596": {
@@ -119249,7 +119311,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134679": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Quantum Software Intern - Backend Execution Environment for Quantum Workloads - 2027 (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134708": {
@@ -119274,7 +119335,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134974": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Software Developer - Spring Co-Op 2027 - Cambridge"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134996": {
@@ -119283,7 +119343,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135171": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "Technical Specialist - General Professional (Intern, 2027)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135235": {
@@ -119293,7 +119352,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135256": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Software Developer Spring Co-Op 2027 (Bellevue)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135269": {
@@ -119311,10 +119369,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135502": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Internship - Software Developer (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135536": {
           "first_seen": "2026-10-19T19:36:21+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Network and Computer Systems Administrator Apprenticeship"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135555": {
@@ -119334,7 +119394,6 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=135618": {
           "first_seen": "2026-10-13T23:13:41+00:00",
           "notified_at": "2026-10-13T23:13:41+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Sales Configuration Developer Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135624": {
@@ -119496,7 +119555,6 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=137106": {
           "first_seen": "2026-10-15T20:53:14+00:00",
           "notified_at": "2026-10-15T20:53:14+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "Back End Developer Intern - NY POK JS - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137143": {
@@ -119509,6 +119567,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137237": {
           "first_seen": "2026-10-19T23:52:45+00:00",
+          "removed_at": "2026-10-24T11:10:31+00:00",
           "title": "Programa de Inclusión Laboral IBM | Personas con Discapacidad (PCD) - Ecuador"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137250": {
@@ -119518,7 +119577,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137269": {
           "first_seen": "2026-10-16T19:07:07+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "AI Software Engineer Spring Co-op 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137372": {
@@ -119549,7 +119607,6 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=137428": {
           "first_seen": "2026-10-16T10:19:31+00:00",
           "notified_at": "2026-10-16T10:19:31+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "z/OS Core Technologies Back End Developer Intern 2027 - Poughkeepsie"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137471": {
@@ -119576,7 +119633,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137812": {
           "first_seen": "2026-10-22T22:34:39+00:00",
-          "removed_at": "2026-10-24T00:55:36+00:00",
           "title": "Mainframe System Verification Tester Apprentice - 2nd Shift"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137901": {
@@ -119599,7 +119655,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=138226": {
           "first_seen": "2026-10-23T18:35:10+00:00",
-          "removed_at": "2026-10-24T06:05:15+00:00",
           "title": "Stage en Intégration d'équipements (IIoT) - COOP Hiver 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=58347": {
@@ -141449,7 +141504,7 @@
       "seeded_at": "2026-10-09T18:52:08+00:00"
     },
     "MBDA UK": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "R02826": {
           "first_seen": "2026-10-09T18:52:26+00:00",
@@ -142641,7 +142696,7 @@
           "title": "Senior Project Manager"
         }
       },
-      "last_error": "[workday] MBDA UK : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:52:26+00:00"
     },
     "Marvell": {
@@ -143552,6 +143607,10 @@
         "2604752": {
           "first_seen": "2026-10-09T18:38:55+00:00",
           "title": "Principal Engineer, ATE Test Development Engineer"
+        },
+        "2604753": {
+          "first_seen": "2026-10-24T11:07:26+00:00",
+          "title": "Principal Test Development Engineer"
         },
         "2604754": {
           "first_seen": "2026-10-09T18:38:55+00:00",
@@ -145295,7 +145354,6 @@
         },
         "200055979": {
           "first_seen": "2026-10-19T23:50:25+00:00",
-          "removed_at": "2026-10-24T06:02:50+00:00",
           "title": "Business Program Management INTERN"
         },
         "200056126": {
@@ -145363,6 +145421,7 @@
         },
         "200058258": {
           "first_seen": "2026-10-09T18:40:04+00:00",
+          "removed_at": "2026-10-24T11:08:08+00:00",
           "title": "Research Intern - Data Systems"
         },
         "200058612": {
@@ -145421,7 +145480,6 @@
         },
         "200059096": {
           "first_seen": "2026-10-09T18:40:04+00:00",
-          "removed_at": "2026-10-24T06:02:50+00:00",
           "title": "Stagiaire - Technicien de Centre de Données (TI) / Datacenter Technician - Intern (IT)"
         },
         "200059097": {
@@ -145430,6 +145488,7 @@
         },
         "200059127": {
           "first_seen": "2026-10-09T18:40:04+00:00",
+          "removed_at": "2026-10-24T11:08:08+00:00",
           "title": "Research Intern - Quantum Algorithms"
         },
         "200059259": {
@@ -145439,7 +145498,6 @@
         },
         "200059346": {
           "first_seen": "2026-10-09T18:40:04+00:00",
-          "removed_at": "2026-10-24T06:02:50+00:00",
           "title": "Research Intern - Security Research Group, Microsoft Research Redmond"
         },
         "200059632": {
@@ -159889,6 +159947,7 @@
         },
         "R10256593": {
           "first_seen": "2026-10-19T19:52:46+00:00",
+          "removed_at": "2026-10-24T11:26:27+00:00",
           "title": "2026 Supplier Quality Engineer - Level 1 or Level 2 - Promontory UT"
         },
         "R10256597": {
@@ -168173,12 +168232,10 @@
         },
         "CTO-2026-7205": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Conseillère Vendeuse Conseiller Vendeur"
         },
         "CTO-2026-7227": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Conseillère Vendeuse Conseiller Vendeur"
         },
         "CTO-2026-7238": {
@@ -168271,7 +168328,6 @@
         },
         "CTO-2026-7285": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Conseillère Vendeuse Conseiller Vendeur"
         },
         "CTO-2026-7291": {
@@ -168378,7 +168434,6 @@
         },
         "CTO-2026-7323": {
           "first_seen": "2026-10-20T15:32:56+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Conseillère Vendeuse Conseiller Vendeur"
         },
         "CTO-2026-7324": {
@@ -169516,7 +169571,6 @@
         },
         "ERC-503992-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Reprezentant Vanzari Orange Shop"
         },
         "ERC-514613-20136094": {
@@ -169525,7 +169579,6 @@
         },
         "ERC-523248-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Praktyka W Wydziale Techniki W Technicznych Interwencjach Terenowych"
         },
         "ERC-531869-20136094": {
@@ -169539,7 +169592,6 @@
         },
         "ERC-560188-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Penetration Testing Engineer Cybersecurity"
         },
         "ERC-560487-20136094": {
@@ -169548,7 +169600,6 @@
         },
         "ERC-564099-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Data Analyst​"
         },
         "ERC-564117-20136094": {
@@ -169565,7 +169616,6 @@
         },
         "ERC-566958-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Internal Fraud Investigator"
         },
         "ERC-567186-20136094": {
@@ -169598,7 +169648,6 @@
         },
         "ERC-573785-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Finance Data Solutions Analyst"
         },
         "ERC-573796-20136094": {
@@ -169616,7 +169665,6 @@
         },
         "ERC-576654-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Software Development Technical Lead"
         },
         "ERC-578078-20136094": {
@@ -169670,7 +169718,6 @@
         },
         "ERC-581828-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Cybersecurity Analyst M K"
         },
         "ERC-581843-20136094": {
@@ -169709,7 +169756,6 @@
         },
         "ERC-583691-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Frontline Support Engineer"
         },
         "ERC-584108-20136094": {
@@ -169719,7 +169765,6 @@
         },
         "ERC-584118-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Business Consultant Ict"
         },
         "ERC-584276-20136094": {
@@ -169738,7 +169783,6 @@
         },
         "ERC-584711-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Frontline Support Specialist With French Hr Operations"
         },
         "ERC-585081-20136094": {
@@ -169777,7 +169821,6 @@
         },
         "ERC-586117-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Reprezentant Vanzari Orange Shop Campulung​"
         },
         "ERC-586222-20136094": {
@@ -169786,7 +169829,6 @@
         },
         "ERC-586248-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Reprezentant Vanzari Orange Shop Slatina"
         },
         "ERC-586272-20136094": {
@@ -169800,7 +169842,6 @@
         },
         "ERC-586711-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Security Incident Response Coordinator"
         },
         "ERC-586758-20136094": {
@@ -169856,7 +169897,6 @@
         },
         "ERC-588137-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Kierownik Kierowniczka Wydziału Marketplace"
         },
         "ERC-588144-20136094": {
@@ -169887,7 +169927,6 @@
         },
         "ERC-589296-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Ict Business Development Manager Public Sector 12M"
         },
         "ERC-589316-20136094": {
@@ -169896,7 +169935,6 @@
         },
         "ERC-589337-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Senior Network Security Engineer"
         },
         "ERC-589352-20136094": {
@@ -169911,17 +169949,14 @@
         },
         "ERC-589457-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Cloud Developer Caas"
         },
         "ERC-589469-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Service Manager With French"
         },
         "ERC-589476-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Ic Technical Delivery Lead"
         },
         "ERC-589496-20136094": {
@@ -169934,7 +169969,6 @@
         },
         "ERC-589798-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Specjalista Specjalistka Ds Rozliczeń Z Operatorami Zagranicznymi"
         },
         "ERC-589816-20136094": {
@@ -169956,12 +169990,10 @@
         },
         "ERC-590386-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Kierownik Kierowniczka Wydziału Programów Lojalnościowych"
         },
         "ERC-590435-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Konsultant Konsultantka Orange Firmowy Salon Smart Store W Poznaniu Stary Browar"
         },
         "ERC-590514-20136094": {
@@ -169987,7 +170019,6 @@
         },
         "ERC-591186-20136094": {
           "first_seen": "2026-10-09T23:43:35+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Network Automation Leader"
         },
         "ERC-591374-20136094": {
@@ -170008,7 +170039,6 @@
         },
         "ERC-591491-20136094": {
           "first_seen": "2026-10-12T19:29:09+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Tmc Level 1 Engineer"
         },
         "ERC-591746-20136094": {
@@ -170021,7 +170051,6 @@
         },
         "ERC-591853-20136094": {
           "first_seen": "2026-10-13T18:05:16+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Account Manager Portfel Instytucji Publicznych Poznań"
         },
         "ERC-591901-20136094": {
@@ -170034,22 +170063,18 @@
         },
         "ERC-591998-20136094": {
           "first_seen": "2026-10-13T18:05:16+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Reprezentant Vanzari Orange Shop Deva​"
         },
         "ERC-592023-20136094": {
           "first_seen": "2026-10-13T18:05:16+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Reprezentant Vanzari Orange Shop Bucuresti Baneasa​"
         },
         "ERC-592146-20136094": {
           "first_seen": "2026-10-13T18:05:16+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Konsultantka Konsultant Orange Smart Store Galeria Łódzka"
         },
         "ERC-592235-20136094": {
           "first_seen": "2026-10-14T14:12:30+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Reprezentant Vanzari Orange Pe Teren Barlad​"
         },
         "ERC-592247-20136094": {
@@ -170066,7 +170091,6 @@
         },
         "ERC-592551-20136094": {
           "first_seen": "2026-10-14T22:47:15+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Ran Solution Integrator"
         },
         "ERC-592561-20136094": {
@@ -170091,7 +170115,6 @@
         },
         "ERC-593180-20136094": {
           "first_seen": "2026-10-16T15:20:02+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Konsultant Konsultantka Orange Salon Firmowy Bielsko Biała Gemin Park"
         },
         "ERC-593234-20136094": {
@@ -170100,7 +170123,6 @@
         },
         "ERC-593398-20136094": {
           "first_seen": "2026-10-16T22:34:35+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Reprezentant Vanzari Orange Shop Bucuresti Mall Vitan"
         },
         "ERC-593401-20136094": {
@@ -170137,12 +170159,10 @@
         },
         "ERC-594574-20136094": {
           "first_seen": "2026-10-22T01:59:13+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Konsultantka Konsultant Orange Firmowy Salon Zielona Góra Ch Focus"
         },
         "ERC-594608-20136094": {
           "first_seen": "2026-10-22T01:59:13+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Telefoniczny Opiekun Telefoniczna Opiekunka Klienta Biznesowego Remote"
         },
         "ERC-594629-20136094": {
@@ -170155,7 +170175,6 @@
         },
         "ERC-594676-20136094": {
           "first_seen": "2026-10-22T01:59:13+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Customer Lifecycle Expert"
         },
         "ERC-594708-20136094": {
@@ -170164,7 +170183,6 @@
         },
         "ERC-594800-20136094": {
           "first_seen": "2026-10-22T14:17:48+00:00",
-          "removed_at": "2026-10-24T06:15:04+00:00",
           "title": "Kierownik Kierowniczka Salonu Orange W Koninie Galeria Ferio Stare Miasto"
         },
         "ERC-594873-20136094": {
@@ -171724,6 +171742,7 @@
         },
         "IOS-2026-1761": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Expert Business Intelligence F H"
         },
         "IOS-2026-1762": {
@@ -171741,6 +171760,7 @@
         },
         "IOS-2026-1783": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Expert Data Gouvernance Ia F H"
         },
         "IOS-2026-1792": {
@@ -171800,6 +171820,7 @@
         },
         "IOS-2026-1917": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Data Engineer Senior F H"
         },
         "IOS-2026-1934": {
@@ -171826,6 +171847,7 @@
         },
         "IOS-2026-1968": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Data Engineer Microsoft Senior H F"
         },
         "IOS-2026-1980": {
@@ -171860,6 +171882,7 @@
         },
         "IOS-2026-2096": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Ingénieur Sécurité Microsoft F H"
         },
         "IOS-2026-2106": {
@@ -171868,6 +171891,7 @@
         },
         "IOS-2026-2107": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Développeur Full Stack C Net Angular H F"
         },
         "IOS-2026-2113": {
@@ -171900,6 +171924,7 @@
         },
         "IOS-2026-2178": {
           "first_seen": "2026-10-14T14:12:30+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Architecte Data Fabric H F M B"
         },
         "IOS-2026-2185": {
@@ -171966,6 +171991,7 @@
         },
         "IOS-2026-2288": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Ingénieur Avant Vente Toip F H"
         },
         "IOS-2026-2289": {
@@ -171978,6 +172004,7 @@
         },
         "IOS-2026-2332": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Développeur Full Stack Senior F H"
         },
         "IOS-2026-2336": {
@@ -172044,6 +172071,7 @@
         },
         "IOS-2026-2481": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Analyste Chercheur En Vulnérabilités H F"
         },
         "IOS-2026-2486": {
@@ -172061,6 +172089,7 @@
         },
         "IOS-2026-2506": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Ingénieur Commercial F H"
         },
         "IOS-2026-2520": {
@@ -172115,6 +172144,7 @@
         },
         "IOS-2026-2557": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Ingénieur Avant Vente Interopérabilité Biomédicale H F"
         },
         "IOS-2026-2560": {
@@ -172151,6 +172181,7 @@
         },
         "IOS-2026-2577": {
           "first_seen": "2026-10-16T15:20:02+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Ingénieur Sécurité F H"
         },
         "IOS-2026-2579": {
@@ -172170,6 +172201,7 @@
         },
         "IOS-2026-2583": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Ingénieur Développeur Net Confirmé"
         },
         "IOS-2026-2584": {
@@ -172222,6 +172254,7 @@
         },
         "IOS-2026-2610": {
           "first_seen": "2026-10-19T19:49:49+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Technical Account Manager F H"
         },
         "IOS-2026-2613": {
@@ -172446,6 +172479,7 @@
         },
         "IOS-2026-2716": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Intégrateur De Solutions De Sécurité Pki H F"
         },
         "IOS-2026-2719": {
@@ -172507,6 +172541,7 @@
         },
         "IOS-2026-2744": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Stage Ingénieur Avant Vente Ia"
         },
         "IOS-2026-2745": {
@@ -172546,6 +172581,7 @@
         },
         "IOS-2026-2763": {
           "first_seen": "2026-10-13T18:05:16+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Gestionnaire Paie F H"
         },
         "IOS-2026-2764": {
@@ -172576,6 +172612,7 @@
         },
         "IOS-2026-2775": {
           "first_seen": "2026-10-14T19:05:31+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Stage Développeur Microsoft Dynamics 365 F H"
         },
         "IOS-2026-2776": {
@@ -172609,6 +172646,7 @@
         },
         "IOS-2026-2786": {
           "first_seen": "2026-10-19T19:49:49+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Responsable Ressources Humaines F H"
         },
         "IOS-2026-2789": {
@@ -172618,6 +172656,7 @@
         },
         "IOS-2026-2790": {
           "first_seen": "2026-10-21T14:16:37+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Bordeaux Ingénieur Commercial Sénior F H"
         },
         "IOS-2026-2792": {
@@ -172634,6 +172673,7 @@
         },
         "IOS-2026-2795": {
           "first_seen": "2026-10-22T22:47:33+00:00",
+          "removed_at": "2026-10-24T11:23:29+00:00",
           "title": "Strategic Project Manager"
         },
         "IOS-2026-2797": {
@@ -174452,7 +174492,7 @@
       "seeded_at": "2026-10-08T23:02:26+00:00"
     },
     "Palo Alto Networks": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "JR-006167": {
           "first_seen": "2026-10-09T18:43:44+00:00",
@@ -178277,7 +178317,7 @@
           "title": "Major Account Manager - Regional Government, Scotland"
         }
       },
-      "last_error": "[workday] Palo Alto Networks : Réponse non-JSON depuis https://community.workday.com/maintenance-page (Content-Type: text/html; charset=UTF-8)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:43:44+00:00"
     },
     "PayFit": {
@@ -179993,7 +180033,7 @@
       "seeded_at": "2026-10-08T19:03:11+00:00"
     },
     "Philips": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "551316": {
           "first_seen": "2026-10-09T18:54:03+00:00",
@@ -180512,6 +180552,7 @@
         "591948": {
           "first_seen": "2026-10-16T22:37:59+00:00",
           "notified_at": "2026-10-16T22:37:59+00:00",
+          "removed_at": "2026-10-24T11:22:38+00:00",
           "title": "Intern– Design Assurance Engineer – Colorado Springs, CO – Summer 2027"
         },
         "591951": {
@@ -180799,7 +180840,7 @@
           "title": "Senior/Advanced Mechanical Engineer"
         }
       },
-      "last_error": "[workday] Philips : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:54:03+00:00"
     },
     "Pigment": {
@@ -185821,7 +185862,7 @@
       "seeded_at": "2026-10-08T23:02:08+00:00"
     },
     "RTX": {
-      "consecutive_failures": 11,
+      "consecutive_failures": 12,
       "jobs": {
         "01462154": {
           "first_seen": "2026-10-09T18:54:58+00:00",
@@ -219492,6 +219533,7 @@
         },
         "JR253369": {
           "first_seen": "2026-10-23T22:12:29+00:00",
+          "removed_at": "2026-10-24T10:59:46+00:00",
           "title": "Full-Stack Software Engineer: Mid, Senior, and Lead"
         },
         "JR264377": {
@@ -220922,6 +220964,10 @@
         "JR353601": {
           "first_seen": "2026-10-08T19:02:39+00:00",
           "title": "Senior Technical Consultant - Salesforce Field Services"
+        },
+        "JR353632": {
+          "first_seen": "2026-10-24T10:59:46+00:00",
+          "title": "Manager/Senior Manager, Technical Consulting — Revenue Cloud Advanced(RCA)"
         },
         "JR353642": {
           "first_seen": "2026-10-08T19:02:39+00:00",
@@ -239072,6 +239118,10 @@
         "435f1357-2f89-4b5f-bc33-b79b0a8355f2": {
           "first_seen": "2026-10-08T19:03:12+00:00",
           "title": "Senior Solution Engineer"
+        },
+        "43c2b225-e3fd-4706-a66f-154dd6a23025": {
+          "first_seen": "2026-10-24T11:03:54+00:00",
+          "title": "Director of Engineering, Frontier Engineering"
         },
         "4401580a-c2d4-4dc4-9544-dfd4df65cb51": {
           "first_seen": "2026-10-08T19:03:12+00:00",
@@ -264640,7 +264690,7 @@
       "seeded_at": "2026-10-08T23:02:09+00:00"
     },
     "Stellantis": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "/job/Casablanca-Morocco/PFE-Internship---Embedded-Systems_": {
           "first_seen": "2026-10-09T18:54:09+00:00",
@@ -264651,7 +264701,7 @@
           "title": "Intern – Marketing & Sales Coordinator - Leapmotor"
         }
       },
-      "last_error": "[workday] Stellantis : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:54:09+00:00"
     },
     "Stripe": {
@@ -271490,7 +271540,6 @@
         },
         "R0302705": {
           "first_seen": "2026-10-20T10:30:15+00:00",
-          "removed_at": "2026-10-20T15:32:50+00:00",
           "title": "Stage Ingénieur Pour La Fiabilité Des Assemblages Cots H F 6 Mois"
         },
         "R0302850": {
@@ -271592,6 +271641,10 @@
         "R0304793": {
           "first_seen": "2026-10-09T18:55:09+00:00",
           "title": "Rf Hardware Development Engineer"
+        },
+        "R0304796": {
+          "first_seen": "2026-10-24T11:23:25+00:00",
+          "title": "Stage Ingénieur En Intelligence Artificielle Et Robotique Ia Pour La Coordination De Systèmes Multi Agents Autonomes H F 6 Mois"
         },
         "R0305169": {
           "first_seen": "2026-10-09T18:55:09+00:00",
@@ -271782,7 +271835,6 @@
         },
         "R0309303": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Scientifique Chercheur En Ia Appliquée Applied Ai Research Scientist"
         },
         "R0309334": {
@@ -272085,7 +272137,6 @@
         },
         "R0313731": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Prüfmittelentwickler Test Bench Engineer M W D"
         },
         "R0313749": {
@@ -272350,7 +272401,6 @@
         },
         "R0316649": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Technical Lead"
         },
         "R0316675": {
@@ -272954,7 +273004,6 @@
         },
         "R0321445": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Software Devops Engineer Ife Dcc"
         },
         "R0321506": {
@@ -273239,7 +273288,6 @@
         },
         "R0323970": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Hr Services Specialist French Speaker"
         },
         "R0323971": {
@@ -273306,7 +273354,6 @@
         },
         "R0324499": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Technologue Spécialiste Matériaux Et Procédés F H"
         },
         "R0324501": {
@@ -274100,7 +274147,6 @@
         },
         "R0328032": {
           "first_seen": "2026-10-15T20:49:32+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Analista Do Sistema De Gestão Da Qualidade"
         },
         "R0328033": {
@@ -274661,7 +274707,6 @@
         },
         "R0329890": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Architecte Logiciel Temps Réel Embarqué F H"
         },
         "R0329893": {
@@ -274689,7 +274734,6 @@
         },
         "R0329976": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Cdd Opérateur De Programmation Test H F"
         },
         "R0329991": {
@@ -275491,7 +275535,6 @@
         },
         "R0331969": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Software Developer Intern Open Also To Protected Categories Law 68 99"
         },
         "R0331990": {
@@ -276516,7 +276559,6 @@
         },
         "R0333924": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Ingénieur Ivvq Produits Iff F H"
         },
         "R0333926": {
@@ -276782,7 +276824,6 @@
         },
         "R0334305": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-14T22:47:11+00:00",
           "title": "Bid Manager Soutien Des Emports Optroniques F H"
         },
         "R0334306": {
@@ -276957,7 +276998,6 @@
         },
         "R0334649": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Technicien Conception Electrotechnique H F"
         },
         "R0334661": {
@@ -277864,6 +277904,7 @@
         },
         "R0336143": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-24T11:23:25+00:00",
           "title": "Ingénieur Electronique Support Produit F H"
         },
         "R0336149": {
@@ -278036,6 +278077,10 @@
           "first_seen": "2026-10-09T18:55:09+00:00",
           "title": "Pmo Projet Export Communication Gan Et Naval F H"
         },
+        "R0336385": {
+          "first_seen": "2026-10-24T11:23:25+00:00",
+          "title": "Assistenz Der Geschäftsleitung M W D"
+        },
         "R0336397": {
           "first_seen": "2026-10-09T18:55:09+00:00",
           "removed_at": "2026-10-14T19:05:27+00:00",
@@ -278043,7 +278088,6 @@
         },
         "R0336400": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Ingénieur Gestion De Configuration F H"
         },
         "R0336401": {
@@ -278111,6 +278155,7 @@
         },
         "R0336475": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-24T11:23:25+00:00",
           "title": "Sre Compute"
         },
         "R0336483": {
@@ -278135,6 +278180,7 @@
         },
         "R0336520": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-10-24T11:23:25+00:00",
           "title": "Software Ivv Manager Expérimenté F H"
         },
         "R0336521": {
@@ -279021,7 +279067,6 @@
         },
         "R0337812": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "2027 Technical Publications Product Training Apprentice Level 3 Engineering And Manufacturing Support Technician"
         },
         "R0337813": {
@@ -279605,7 +279650,6 @@
         },
         "R0338550": {
           "first_seen": "2026-10-16T00:09:54+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Tecnico Da Garantia Da Qualidade Ii Pleno"
         },
         "R0338551": {
@@ -280305,12 +280349,10 @@
         },
         "R0339351": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Drmis Data Coordinator"
         },
         "R0339354": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Data Coordinator"
         },
         "R0339355": {
@@ -280485,7 +280527,6 @@
         },
         "R0339486": {
           "first_seen": "2026-10-23T18:48:45+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Chef De Produit Calculateurs"
         },
         "R0339507": {
@@ -280751,7 +280792,6 @@
         },
         "R0339832": {
           "first_seen": "2026-10-23T18:48:45+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Chef De Produit Equipements D Amplification De Puissance Rf"
         },
         "R0339835": {
@@ -282055,7 +282095,6 @@
         },
         "R0341196": {
           "first_seen": "2026-10-23T07:57:37+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Junior Onsite Integration Engineer"
         },
         "R0341200": {
@@ -282072,7 +282111,6 @@
         },
         "R0341214": {
           "first_seen": "2026-10-23T18:48:45+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Service Solution Manager M W D"
         },
         "R0341215": {
@@ -282933,7 +282971,6 @@
         },
         "R0341968": {
           "first_seen": "2026-10-12T19:29:05+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Stage Ingénieur Os Cybersécurité H F"
         },
         "R0341974": {
@@ -283351,12 +283388,10 @@
         },
         "R0342314": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Presales Bid Manager Cyber Maroc Afrique"
         },
         "R0342322": {
           "first_seen": "2026-10-12T19:29:05+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Senior Software Engineer"
         },
         "R0342324": {
@@ -283426,7 +283461,6 @@
         },
         "R0342363": {
           "first_seen": "2026-10-14T19:05:27+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Ingénieur Opérations Support En Orbite H F"
         },
         "R0342364": {
@@ -283435,7 +283469,6 @@
         },
         "R0342366": {
           "first_seen": "2026-10-14T19:05:27+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Service Manager Support En Orbite H F"
         },
         "R0342367": {
@@ -283482,7 +283515,6 @@
         },
         "R0342388": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Stage Ingénieur Génération Automatique De Code Embarqué Pour Récepteur Gnss F H"
         },
         "R0342392": {
@@ -283579,12 +283611,10 @@
         },
         "R0342479": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Stage Ouvrier Annotation D Images F H"
         },
         "R0342483": {
           "first_seen": "2026-10-12T19:29:05+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Stage Ingénieur Modélisation Échangeurs H F"
         },
         "R0342484": {
@@ -284238,6 +284268,10 @@
           "first_seen": "2026-10-12T19:29:05+00:00",
           "title": "Systems Architect"
         },
+        "R0342988": {
+          "first_seen": "2026-10-24T11:23:25+00:00",
+          "title": "Master Planner"
+        },
         "R0342992": {
           "first_seen": "2026-10-24T06:14:59+00:00",
           "title": "Ship Maintenance Team Lead"
@@ -284252,7 +284286,6 @@
         },
         "R0343008": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Intégrateur Systèmes F H"
         },
         "R0343010": {
@@ -284489,7 +284522,6 @@
         },
         "R0343212": {
           "first_seen": "2026-10-14T14:12:26+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Stage Optimisation Et Contrôle Du Procédé Spécial De Sertissage Filaire F H"
         },
         "R0343218": {
@@ -284551,7 +284583,6 @@
         },
         "R0343276": {
           "first_seen": "2026-10-09T23:43:31+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Scrum Master F H"
         },
         "R0343278": {
@@ -284658,7 +284689,6 @@
         },
         "R0343363": {
           "first_seen": "2026-10-13T23:10:19+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Legal Counsel"
         },
         "R0343369": {
@@ -284723,7 +284753,6 @@
         },
         "R0343426": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Elektroniker M W D"
         },
         "R0343427": {
@@ -284756,7 +284785,6 @@
         },
         "R0343441": {
           "first_seen": "2026-10-09T23:43:31+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Technicien Mise Au Point Recette F H"
         },
         "R0343443": {
@@ -285049,7 +285077,6 @@
         },
         "R0343599": {
           "first_seen": "2026-10-24T01:08:52+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Hardware Architecte Display Backend F H"
         },
         "R0343600": {
@@ -285240,7 +285267,6 @@
         },
         "R0343755": {
           "first_seen": "2026-10-14T19:05:27+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Ordonnanceur F H"
         },
         "R0343756": {
@@ -285495,7 +285521,6 @@
         },
         "R0343980": {
           "first_seen": "2026-10-23T07:57:37+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Stage Mise En Œuvre D Un Environnement Mlops F H"
         },
         "R0343987": {
@@ -285508,6 +285533,7 @@
         },
         "R0343993": {
           "first_seen": "2026-10-19T19:49:46+00:00",
+          "removed_at": "2026-10-24T11:23:25+00:00",
           "title": "Stage Informatique Gestion De Stock F H"
         },
         "R0343996": {
@@ -285754,6 +285780,10 @@
           "first_seen": "2026-10-19T19:49:46+00:00",
           "title": "Logistic Coordinator 2 Year Fte"
         },
+        "R0344212": {
+          "first_seen": "2026-10-24T11:23:25+00:00",
+          "title": "Stage Ingénieur Radar Passif Cartographie De Niveaux De Puissance Rf F H"
+        },
         "R0344218": {
           "first_seen": "2026-10-23T13:53:42+00:00",
           "title": "Stage Optimisation Des Attaques Par Canaux Auxiliaires Sur Des Processeurs Complexes F H"
@@ -285792,6 +285822,7 @@
         },
         "R0344254": {
           "first_seen": "2026-10-19T19:49:46+00:00",
+          "removed_at": "2026-10-24T11:23:25+00:00",
           "title": "Project Management Officer Pmo F H"
         },
         "R0344255": {
@@ -285812,7 +285843,6 @@
         },
         "R0344274": {
           "first_seen": "2026-10-15T11:53:52+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Stage Ingénieur Transformation Digitale Administrations Des Ventes F H"
         },
         "R0344277": {
@@ -285955,7 +285985,6 @@
         },
         "R0344362": {
           "first_seen": "2026-10-24T01:08:52+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Stage Conception Innovante D’antennes Patch Par Chemins Géométriques Non Conventionnels F H"
         },
         "R0344367": {
@@ -286246,7 +286275,6 @@
         },
         "R0344642": {
           "first_seen": "2026-10-23T22:37:00+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Stage Analyse Fonctionnelle Du Référentiel De Concept De Soutien Et Intégration Des S Series F H"
         },
         "R0344645": {
@@ -286471,7 +286499,6 @@
         },
         "R0344831": {
           "first_seen": "2026-10-23T22:37:00+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Stage Traitement Du Signal Radar Pour Autodirecteur F H"
         },
         "R0344834": {
@@ -286672,7 +286699,6 @@
         },
         "R0345069": {
           "first_seen": "2026-10-23T22:37:00+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Stage Ingénieur Développement D’une Ia De Détection De Défauts Par Analyse Rayons X F H"
         },
         "R0345072": {
@@ -286725,7 +286751,6 @@
         },
         "R0345114": {
           "first_seen": "2026-10-23T18:48:45+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Solution Engineering Manager Senseur Optronique F H"
         },
         "R0345115": {
@@ -286877,7 +286902,6 @@
         },
         "R0345268": {
           "first_seen": "2026-10-23T13:53:42+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Senior Pmo Specialist Estimator"
         },
         "R0345279": {
@@ -286948,9 +286972,12 @@
           "first_seen": "2026-10-22T01:59:09+00:00",
           "title": "Sr Development Engineer"
         },
+        "R0345439": {
+          "first_seen": "2026-10-24T11:23:25+00:00",
+          "title": "Logistics Specialist"
+        },
         "R0345444": {
           "first_seen": "2026-10-23T07:57:37+00:00",
-          "removed_at": "2026-10-24T06:14:59+00:00",
           "title": "Senior Commercial Counsel"
         },
         "R0345455": {
@@ -287217,6 +287244,7 @@
         },
         "81338": {
           "first_seen": "2026-10-09T18:48:20+00:00",
+          "removed_at": "2026-10-24T11:16:41+00:00",
           "title": "Stage de fin d'étude - Amélioration continue & Digitalisation"
         },
         "81519": {
@@ -290525,6 +290553,7 @@
         },
         "302840": {
           "first_seen": "2026-10-22T14:05:19+00:00",
+          "removed_at": "2026-10-24T11:12:55+00:00",
           "title": "Safety Investigations Specialist II"
         },
         "302842": {
@@ -292052,13 +292081,21 @@
         "744000157499729": {
           "first_seen": "2026-10-23T18:36:50+00:00",
           "title": "Data Governance Project Manager Assistant – Internship (6-month) March 2027 (W/M/NB)"
+        },
+        "744000157619529": {
+          "first_seen": "2026-10-24T11:12:05+00:00",
+          "title": "Conseiller·ère en acquisition de talents et mobilité interne"
+        },
+        "744000157619569": {
+          "first_seen": "2026-10-24T11:12:05+00:00",
+          "title": "Conseiller·ère en acquisition de talents et mobilité interne"
         }
       },
       "last_error": null,
       "seeded_at": "2026-10-09T18:43:57+00:00"
     },
     "Unity": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "JOBREQ-2514972": {
           "first_seen": "2026-10-09T18:42:44+00:00",
@@ -292299,11 +292336,11 @@
           "title": "Principal Software Engineer, Core Engine"
         }
       },
-      "last_error": "[workday] Unity : Réponse non-JSON depuis https://community.workday.com/maintenance-page (Content-Type: text/html; charset=UTF-8)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:42:44+00:00"
     },
     "Valeo": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "REQ2023001026": {
           "first_seen": "2026-10-09T18:57:53+00:00",
@@ -297456,6 +297493,7 @@
         },
         "REQ2026082767": {
           "first_seen": "2026-10-21T02:05:08+00:00",
+          "removed_at": "2026-10-24T11:25:47+00:00",
           "title": "OPERARIO CATEGORIA C"
         },
         "REQ2026082771": {
@@ -297479,7 +297517,7 @@
           "title": "SQA trainee"
         }
       },
-      "last_error": "[workday] Valeo : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:57:53+00:00"
     },
     "Vercel": {
@@ -303723,6 +303761,7 @@
         },
         "744000157423349": {
           "first_seen": "2026-10-23T13:51:57+00:00",
+          "removed_at": "2026-10-24T11:21:45+00:00",
           "title": "FinCrime Operations Analyst - AML Investigations"
         },
         "744000157424289": {
@@ -303766,6 +303805,10 @@
         "744000157556329": {
           "first_seen": "2026-10-23T22:35:14+00:00",
           "title": "Business Customer Support Specialist"
+        },
+        "744000157620089": {
+          "first_seen": "2026-10-24T11:21:45+00:00",
+          "title": "DEI Partner Lead"
         }
       },
       "last_error": null,
@@ -304636,6 +304679,7 @@
         },
         "JR-0108425": {
           "first_seen": "2026-10-14T22:28:55+00:00",
+          "removed_at": "2026-10-24T11:04:57+00:00",
           "title": "Medium Enterprise Customer Base Account Executive - Tech/Media"
         },
         "JR-0108457": {
@@ -305584,7 +305628,7 @@
       "seeded_at": "2026-10-08T23:02:12+00:00"
     },
     "Zalando": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "2725717": {
           "first_seen": "2026-10-09T18:53:47+00:00",
@@ -305606,11 +305650,11 @@
           "title": "Intern Category Management - Accessories & Specialties (all genders)"
         }
       },
-      "last_error": "[workday] Zalando : Réponse non-JSON depuis https://static.community.workday.com/maintenance-page.html (Content-Type: text/html)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:53:47+00:00"
     },
     "Zendesk": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "R24107": {
           "first_seen": "2026-10-09T18:42:40+00:00",
@@ -306015,7 +306059,7 @@
           "title": "Manager, SMB Sales"
         }
       },
-      "last_error": "[workday] Zendesk : POST https://zendesk.wd1.myworkdayjobs.com/wday/cxs/zendesk/Zendesk/jobs : échec réseau après 4 tentatives (ReadTimeout)",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:42:40+00:00"
     },
     "Zoom": {
@@ -309452,7 +309496,7 @@
       "seeded_at": "2026-10-08T23:01:44+00:00"
     },
     "eBay": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "jobs": {
         "R0060042": {
           "first_seen": "2026-10-09T18:43:53+00:00",
@@ -309977,7 +310021,7 @@
           "title": "Software Engineer 3"
         }
       },
-      "last_error": "[workday] eBay : POST https://ebay.wd5.myworkdayjobs.com/wday/cxs/ebay/apply/jobs : HTTP 500 — {\"errorCode\":\"HTTP_500\",\"errorCaseId\":\"5FE731MVLZYLDS\",\"httpStatus\":500,\"message\":\"\",\"messageParams\":{}}",
+      "last_error": null,
       "seeded_at": "2026-10-09T18:43:53+00:00"
     },
     "xAI": {
@@ -311407,999 +311451,7 @@
   },
   "meta": {
     "filter_version": 3,
-    "last_review_digest": "2026-10-23",
-    "review_queue": [
-      {
-        "company": "Morgan Stanley",
-        "job_id": "JR045882",
-        "location": "Oklahoma City, Oklahoma, United States of America",
-        "priority": false,
-        "reason": "titre ambigu / zone us",
-        "status": "review",
-        "title": "Intern",
-        "url": "https://ms.wd5.myworkdayjobs.com/External/job/Oklahoma-City-Oklahoma-United-States-of-America/Intern_JR045882"
-      },
-      {
-        "company": "Analog Devices",
-        "job_id": "R267127",
-        "location": "Germany, Hamburg",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "Product Applications - Systems Pipeline Intern",
-        "url": "https://analogdevices.wd1.myworkdayjobs.com/External/job/Germany-Hamburg/Product-Applications---Systems-Pipeline-Intern_R267127"
-      },
-      {
-        "company": "Microsoft",
-        "job_id": "200062560",
-        "location": "India, Multiple Locations, Multiple Locations",
-        "priority": false,
-        "reason": "signal faible (security) / lieu non précisé",
-        "status": "review",
-        "title": "Security Research INTERN",
-        "url": "https://apply.careers.microsoft.com/careers/job/1970393557043380"
-      },
-      {
-        "company": "STMicroelectronics",
-        "job_id": "14703",
-        "location": "Muenchen, Germany",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "Internship Business Management GKA",
-        "url": "https://stmicroelectronics.eightfold.ai/careers/job/563637173560084"
-      },
-      {
-        "company": "Ubisoft",
-        "job_id": "744000157478969",
-        "location": "Paris, IDF, France",
-        "priority": false,
-        "reason": "titre ambigu / zone europe (Île-de-France)",
-        "status": "review",
-        "title": "Historical Research Assistant - Stage (6 mois) Mars 2027 (F/H/NB)",
-        "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000157478969"
-      },
-      {
-        "company": "Siemens",
-        "job_id": "519071",
-        "location": "London, London City of, UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "Project & Performance Intern (12 months)",
-        "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/519071"
-      },
-      {
-        "company": "Siemens",
-        "job_id": "526908",
-        "location": "Erlangen, Bayern, Germany",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "Werkstudent (w/m/d) Projektmanagement",
-        "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/526908"
-      },
-      {
-        "company": "Siemens",
-        "job_id": "525574",
-        "location": "Erlangen, Bayern, Germany",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "Working Student (f/m/d) – Succession Risk Management",
-        "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/525574"
-      },
-      {
-        "company": "Siemens",
-        "job_id": "525945",
-        "location": "Multiple Locations",
-        "priority": false,
-        "reason": "data (data) / lieu non précisé",
-        "status": "review",
-        "title": "Werkstudent (w/m/d) im Bereich Pricing Schwerpunkt Data Analytics und Automatisierung",
-        "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/525945"
-      },
-      {
-        "company": "Siemens",
-        "job_id": "526754",
-        "location": "Karlsruhe, Baden-Wuerttemberg, Germany",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "Werkstudent (w/m/d) im Projekteinkauf",
-        "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/526754"
-      },
-      {
-        "company": "TotalEnergies",
-        "job_id": "85534",
-        "location": "France",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "STAGE BAC+5 - Modélisation de procédés & Intelligence Artificielle H/F/X - TRTG",
-        "url": "https://jobs.totalenergies.com/en_US/careers/JobDetail/STAGE-BAC-5-Mod-lisation-de-proc-d-s-Intelligence-Artificielle-H-F-X-TRTG/85534"
-      },
-      {
-        "company": "TotalEnergies",
-        "job_id": "85543",
-        "location": "France",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "STAGE - Ingénieur R&D en Modélisation Atmosphérique H/F",
-        "url": "https://jobs.totalenergies.com/en_US/careers/JobDetail/STAGE-Ing-nieur-R-D-en-Mod-lisation-Atmosph-rique-H-F/85543"
-      },
-      {
-        "company": "TotalEnergies",
-        "job_id": "85546",
-        "location": "France",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "STAGE - Contrôle de gestion et planification budgétaire H/F",
-        "url": "https://jobs.totalenergies.com/en_US/careers/JobDetail/STAGE-Contr-le-de-gestion-et-planification-budg-taire-H-F/85546"
-      },
-      {
-        "company": "Doctolib",
-        "job_id": "8042707003",
-        "location": "Berlin, Berlin, Germany",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "Praktikum Campaign Management (x/f/m)",
-        "url": "https://job-boards.greenhouse.io/doctolib/jobs/8042707003"
-      },
-      {
-        "company": "Deezer",
-        "job_id": "6c9f0918-39a4-4aa2-b66e-cb9b64db54c8",
-        "location": "Deezer Paris",
-        "priority": false,
-        "reason": "titre ambigu / zone europe (Île-de-France)",
-        "status": "review",
-        "title": "Localization Assistant Intern m/f/d",
-        "url": "https://deezer.teamtailor.com/jobs/8593399-localization-assistant-intern-m-f-d"
-      },
-      {
-        "company": "Deezer",
-        "job_id": "0f5201a8-0292-42a5-b6ca-ba16f4604f5a",
-        "location": "Deezer Paris",
-        "priority": false,
-        "reason": "titre ambigu / zone europe (Île-de-France)",
-        "status": "review",
-        "title": "Financial Planning & Analysis - Intern (m/f/d)",
-        "url": "https://deezer.teamtailor.com/jobs/8607127-financial-planning-analysis-intern-m-f-d"
-      },
-      {
-        "company": "Deezer",
-        "job_id": "2eddd7dd-639a-4f57-b1e6-d58817393352",
-        "location": "Deezer Paris",
-        "priority": false,
-        "reason": "titre ambigu / zone europe (Île-de-France)",
-        "status": "review",
-        "title": "Financial Planning & Analysis - Intern m/f/d",
-        "url": "https://deezer.teamtailor.com/jobs/8606979-financial-planning-analysis-intern-m-f-d"
-      },
-      {
-        "company": "Sopra Steria",
-        "job_id": "744000157459450",
-        "location": "Le Plessis-Robinson, IDF, France",
-        "priority": false,
-        "reason": "titre ambigu / zone europe (Île-de-France)",
-        "status": "review",
-        "title": "Stage : Ingénieur/e Système – Défense & Sécurité - Le Plessis-Robinson",
-        "url": "https://jobs.smartrecruiters.com/SopraSteria1/744000157459450"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0343193",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur De Recherche Modèle Homogénéisé Et Optimisation Paramétrique De La Structure Capillaire D’un Caloduc H F",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0343193/Stage-Ingénieur-de-recherche-Modèle-homogénéisé-et-optimisation-paramétrique-de-la-structure-capillaire-d’un-caloduc-H-F"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344932",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Equipements Industriels F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344932/STAGE-Ingénieur-Equipements-Industriels-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344218",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Optimisation Des Attaques Par Canaux Auxiliaires Sur Des Processeurs Complexes F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344218/Stage-Optimisation-des-attaques-par-canaux-auxiliaires-sur-des-processeurs-complexes-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0343204",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur De Recherche Cophasage De Miroirs Segmentés En Scène Étendue H F",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0343204/Stage-Ingénieur-de-recherche-Cophasage-de-miroirs-segmentés-en-scène-étendue-H-F"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344889",
-        "location": "",
-        "priority": true,
-        "reason": "IA (machine learning) / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Implémentation D’un Filtre De Navigation Et Intégration De Machine Learning F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344889/STAGE-Ingénieur-Implémentation-d’un-filtre-de-navigation-et-intégration-de-machine-learning-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0341705",
-        "location": "",
-        "priority": false,
-        "reason": "data (data) / lieu vide",
-        "status": "review",
-        "title": "Stage Data Ia Appliquée Au Plm F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0341705/STAGE-Data-IA-appliquée-au-PLM-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344741",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Mise En Place D’une Solution Pilote D’automatisation Des Contrôles Sécurité F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344741/STAGE-Mise-en-place-d’une-solution-pilote-d’automatisation-des-contrôles-sécurité-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0342273",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Développement Code Gyrotron F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0342273/STAGE-Développement-code-Gyrotron-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0343897",
-        "location": "",
-        "priority": false,
-        "reason": "data (data) / lieu vide",
-        "status": "review",
-        "title": "Stage Data Engineering Pour Le Pilotage De La Performance En Ingénierie F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0343897/Stage-Data-Engineering-pour-le-pilotage-de-la-performance-en-ingénierie-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344863",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ouvrier Equipements Industriels F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344863/STAGE-OUVRIER-Equipements-Industriels-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0342285",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ia Metamodèle Pour La Magnetostatique F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0342285/STAGE-IA-metamodèle-pour-la-magnetostatique-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0342560",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ouvrier Annotation D Images F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0342560/STAGE-OUVRIER-Annotation-d-images-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344289",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Développement D Algorithmes De Détection D’évènements Pour L’analyse Par Canaux Auxiliaires F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344289/Stage-Développement-d-algorithmes-de-détection-d’évènements-pour-l’analyse-par-canaux-auxiliaires-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344811",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Développement De Cas D Usage De L Intelligence Artificielle F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344811/STAGE-Développement-de-cas-d-usage-de-l-intelligence-artificielle-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0342941",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ouvrier Annotation D Images F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0342941/STAGE-OUVRIER-Annotation-d-images-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0340815",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Méthodes Industrielles F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0340815/STAGE-Ingénieur-Méthodes-Industrielles-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345333",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Technicien Logistique Des Moyens D Essais H F",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345333/STAGE-Technicien-logistique-des-moyens-d-essais-H-F"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345128",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Développement D Un Pilote De Munitions F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345128/STAGE-Développement-d-un-pilote-de-munitions-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0342258",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Assistant En Gestion De Production Industrielle F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0342258/STAGE-Assistant-en-gestion-de-production-industrielle-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345580",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Analyste Stratégie Sustainability F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345580/STAGE-Analyste-Stratégie-Sustainability-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345079",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Technicien Données Et Qualification De Matériaux Pour Développement De Nouveaux Produits F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345079/STAGE-Technicien-Données-et-qualification-de-matériaux-pour-développement-de-nouveaux-produits-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344172",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Cybersécurité F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344172/STAGE-Ingénieur-cybersécurité-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344972",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Pen Tests F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344972/STAGE-Pen-Tests-F-H"
-      },
-      {
-        "company": "Orange",
-        "job_id": "CTS-2026-55295",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Chef De Projet Junior Digital Programmes F H",
-        "url": "https://orange.jobs/fr/fr/job/CTS-2026-55295/Stage-Chef-de-projet-junior-Digital-Programmes-F-H"
-      },
-      {
-        "company": "Orange",
-        "job_id": "CTS-2026-55353",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Chargé De Gestion En Ressources Humaines F H",
-        "url": "https://orange.jobs/fr/fr/job/CTS-2026-55353/Stage-Chargé-de-gestion-en-Ressources-Humaines-F-H"
-      },
-      {
-        "company": "Orange",
-        "job_id": "IOS-2026-2724",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Identity Governance Administration H F",
-        "url": "https://orange.jobs/fr/fr/job/IOS-2026-2724/STAGE-Ingénieur-Identity-Governance-Administration-H-F"
-      },
-      {
-        "company": "Orange",
-        "job_id": "IOS-2026-2725",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Access Management H F",
-        "url": "https://orange.jobs/fr/fr/job/IOS-2026-2725/STAGE-Ingénieur-Access-Management-H-F"
-      },
-      {
-        "company": "Engie",
-        "job_id": "1354618455",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Saint Ouen Alternante Alternant Dessinateur Trice Projeteur (fh) 93400",
-        "url": "https://jobs.engie.com/job/Saint-Ouen-Alternante-Alternant-Dessinateur_trice-projeteur-%28FH%29-93400/1354618455/"
-      },
-      {
-        "company": "Engie",
-        "job_id": "1374104355",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "La Garenne Colombes Stage Ingénieur Calcul Structures 92250",
-        "url": "https://jobs.engie.com/job/La-Garenne-Colombes-Stage-ing%C3%A9nieur-calcul-structures-92250/1374104355/"
-      },
-      {
-        "company": "Microsoft",
-        "job_id": "200063562",
-        "location": "United States, Washington, Redmond",
-        "priority": false,
-        "reason": "signal faible (algorithms) / zone us",
-        "status": "review",
-        "title": "Research Intern - Algorithms Group: Theory",
-        "url": "https://apply.careers.microsoft.com/careers/job/1970393557045963"
-      },
-      {
-        "company": "Amazon",
-        "job_id": "10587449",
-        "location": "Berlin, Berlin, DEU",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "Praktikum im Bereich Logistik - Berlin - Start 2027",
-        "url": "https://www.amazon.jobs/en/jobs/10587449/praktikum-im-bereich-logistik-berlin-start-2027"
-      },
-      {
-        "company": "Siemens",
-        "job_id": "526969",
-        "location": "Fremont, California, United States of America",
-        "priority": false,
-        "reason": "titre ambigu / zone us",
-        "status": "review",
-        "title": "Building Automation Systems Specialist Internship",
-        "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/526969"
-      },
-      {
-        "company": "TotalEnergies",
-        "job_id": "85538",
-        "location": "France",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "STAGE - Stratégie et Support Direction Générale - H/F",
-        "url": "https://jobs.totalenergies.com/en_US/careers/JobDetail/STAGE-Strat-gie-et-Support-Direction-G-n-rale-H-F/85538"
-      },
-      {
-        "company": "Airbus",
-        "job_id": "JR10440984",
-        "location": "Paris Area",
-        "priority": false,
-        "reason": "titre ambigu / zone europe (Île-de-France)",
-        "status": "review",
-        "title": "STAGE 2027 - Stage en Sûreté et Protection du Secret de la Défense Nationale (h/f)",
-        "url": "https://ag.wd3.myworkdayjobs.com/Airbus/job/Paris-Area/STAGE-2027---Stage-en-Sret-et-Protection-du-Secret-de-la-Dfense-Nationale--h-f-_JR10440984"
-      },
-      {
-        "company": "ArianeGroup",
-        "job_id": "JR-2026622",
-        "location": "Les Mureaux",
-        "priority": false,
-        "reason": "titre ambigu / zone europe (Île-de-France)",
-        "status": "review",
-        "title": "STAGE – Ingénieure / Ingénieur en industrialisation et automatisation des outils test et déploiement pour le contrôle de vol",
-        "url": "https://arianegroup.wd3.myworkdayjobs.com/EXTERNALALL/job/Les-Mureaux/STAGE---Ingnieure---Ingnieur-en-industrialisation-et-automatisation-des-outils-test-et-dploiement-pour-le-contrle-de-vol_JR-2026622"
-      },
-      {
-        "company": "Philips",
-        "job_id": "593680",
-        "location": "Madrid",
-        "priority": false,
-        "reason": "titre ambigu / zone europe",
-        "status": "review",
-        "title": "Internship: Service Commercial Support Intern",
-        "url": "https://philips.wd3.myworkdayjobs.com/jobs-and-careers/job/Madrid/Internship--Service-Commercial-Support-Intern_593680"
-      },
-      {
-        "company": "Philips",
-        "job_id": "593517",
-        "location": "Cambridge (US), Massachusetts, United States",
-        "priority": false,
-        "reason": "titre ambigu / zone uk",
-        "status": "review",
-        "title": "Intern  – Service Offer Design – Cambridge, MA – Summer 2027",
-        "url": "https://philips.wd3.myworkdayjobs.com/jobs-and-careers/job/Cambridge-US-Massachusetts-United-States/Intern----Service-Offer-Design---Cambridge--MA---Summer-2027_593517"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344135",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Méthodes Et Industrialisation H F",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344135/STAGE-Ingénieur-Méthodes-et-Industrialisation-H-F"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344917",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Automatisation De L Installation Des Outils D Ingéniérie F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344917/Stage-Automatisation-de-l-installation-des-outils-d-ingéniérie-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0343798",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Conception Et Validation D’un Générateur De Décharges Électrostatiques F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0343798/Stage-Conception-et-Validation-d’un-Générateur-de-Décharges-Électrostatiques-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344926",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Procédés De Fabrication Des Drones F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344926/STAGE-Procédés-de-fabrication-des-drones-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0341117",
-        "location": "",
-        "priority": false,
-        "reason": "software (developpeur) / lieu vide",
-        "status": "review",
-        "title": "Stage Développeur Automatisation Robotique Des Processus H F",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0341117/STAGE-Développeur-Automatisation-Robotique-des-Processus-H-F"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345059",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Étude Et Validation Des Brasures De Billes Nouvelle Génération Sur Composants Électroniques F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345059/STAGE-Ingénieur-Étude-et-validation-des-brasures-de-billes-nouvelle-génération-sur-composants-électroniques-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345072",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Modélisation De Performances F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345072/STAGE-Modélisation-de-performances-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345016",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Développement D Outils De Pentest F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345016/STAGE-Développement-d-outils-de-pentest-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345039",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Technicien Développement De Nouveaux Produits Et Campagnes D Essais F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345039/STAGE-Technicien-Développement-de-nouveaux-produits-et-campagnes-d-essais-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0343209",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur De Recherche Analyse Topologique Des Données Appliquée À L’analyse D’images Hyper Spectrales Et Aux Séries Temporelles Multivariées H F",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0343209/Stage-Ingénieur-de-recherche-Analyse-Topologique-des-Données-appliquée-à-l’analyse-d’images-hyper-spectrales-et-aux-séries-temporelles-multivariées-H-F"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345619",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur En Conception Mécanique H F",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345619/STAGE-Ingénieur-en-conception-mécanique-H-F"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345849",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Assistant Ingénieur Méthodes Process F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345849/STAGE-Assistant-Ingénieur-Méthodes-Process-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345180",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Suivi Métrologique Et Optimisation Des Processus Dans Un Laboratoire D Électronique F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345180/STAGE-Suivi-métrologique-et-optimisation-des-processus-dans-un-laboratoire-d-électronique-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344324",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Laser Brillouin Sur Puce Pour Horloge Optique Et Atomique H F 6 Mois",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344324/STAGE-Ingénieur-Laser-Brillouin-sur-puce-pour-horloge-optique-et-atomique-H-F-6-mois"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345123",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Architecture De Traitements Radar À Base De Pinn F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345123/STAGE-Architecture-de-traitements-radar-à-base-de-PINN-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344299",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Développement D’un Outil De Conversion De Données F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344299/STAGE-Développement-d’un-outil-de-conversion-de-données-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345486",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Opérateur Usinage Mécanique Tournage Fraisage F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345486/STAGE-Opérateur-Usinage-mécanique-Tournage-Fraisage-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344241",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Moyens D Essais Thermique H F",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344241/Stage-Ingénieur-moyens-d-essais-thermique-H-F"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345714",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Développement Logiciel 3D Et Interfaces Utilisateur F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345714/STAGE-Ingénieur-Développement-Logiciel-3D-et-Interfaces-Utilisateur-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345919",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Eccf 5 F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345919/STAGE-ECCF-5-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345209",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Innovation Ia Et Validation Vérification Et Qualification F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345209/STAGE-Innovation-IA-et-Validation-vérification-et-qualification-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0342850",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Support Technique À La Production Série F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0342850/STAGE-Ingénieur-Support-technique-à-la-production-série-F-H"
-      },
-      {
-        "company": "Orange",
-        "job_id": "CTS-2026-55105",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage 6 Mois Ingénieur Logiciel Ia F H",
-        "url": "https://orange.jobs/fr/fr/job/CTS-2026-55105/Stage-6-mois-Ingénieur-Logiciel-IA-F-H"
-      },
-      {
-        "company": "Orange",
-        "job_id": "CTS-2026-54921",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Chargé De Mécénat Culturel F H",
-        "url": "https://orange.jobs/fr/fr/job/CTS-2026-54921/Stage-Chargé-de-Mécénat-Culturel-F-H"
-      },
-      {
-        "company": "Orange",
-        "job_id": "CTS-2026-55239",
-        "location": "",
-        "priority": false,
-        "reason": "data (data) / lieu vide",
-        "status": "review",
-        "title": "Stage Analyste Financier Data À La Direction Des Participations F H",
-        "url": "https://orange.jobs/fr/fr/job/CTS-2026-55239/Stage-Analyste-Financier-Data-à-la-Direction-des-Participations-F-H"
-      },
-      {
-        "company": "Ericsson",
-        "job_id": "789221",
-        "location": "Plano,Texas,United States",
-        "priority": false,
-        "reason": "titre ambigu / zone us",
-        "status": "review",
-        "title": "Networks TOAI Intern",
-        "url": "https://jobs.ericsson.com/careers/job/563121777071319"
-      },
-      {
-        "company": "Engie",
-        "job_id": "1374192155",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Iowa City Intern PTIN5C Ia 52242",
-        "url": "https://jobs.engie.com/job/IOWA-CITY-Intern_PTIN5C-IA-52242/1374192155/"
-      },
-      {
-        "company": "Engie",
-        "job_id": "1374172655",
-        "location": "",
-        "priority": false,
-        "reason": "data (data) / lieu vide",
-        "status": "review",
-        "title": "Lyon Stage Ingénieur Data Et Performance Opérationnelle Travaux 69007",
-        "url": "https://jobs.engie.com/grdf/job/Lyon-Stage-Ing%C3%A9nieur-DATA-et-Performance-op%C3%A9rationnelle-travaux-69007/1374172655/"
-      },
-      {
-        "company": "Engie",
-        "job_id": "1374202355",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Washington Intern Georgetown University 20059",
-        "url": "https://jobs.engie.com/job/WASHINGTON-Intern-Georgetown-University-20059/1374202355/"
-      },
-      {
-        "company": "Intel",
-        "job_id": "JR0287533",
-        "location": "US, California, Santa Clara · US, California, Folsom",
-        "priority": true,
-        "reason": "hardware + IA (hardware, ai) / zone us",
-        "status": "review",
-        "title": "AI Hardware Engineering Intern",
-        "url": "https://intel.wd1.myworkdayjobs.com/External/job/US-California-Santa-Clara/AI-Hardware-Engineering-Intern_JR0287533"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0345069",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Développement D’une Ia De Détection De Défauts Par Analyse Rayons X F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0345069/STAGE-Ingénieur-Développement-d’une-IA-de-détection-de-défauts-par-analyse-Rayons-X-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344831",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Traitement Du Signal Radar Pour Autodirecteur F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344831/STAGE-Traitement-du-signal-radar-pour-autodirecteur-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344642",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Analyse Fonctionnelle Du Référentiel De Concept De Soutien Et Intégration Des S Series F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344642/STAGE-Analyse-fonctionnelle-du-Référentiel-de-Concept-de-Soutien-et-intégration-des-S-Series-F-H"
-      },
-      {
-        "company": "Engie",
-        "job_id": "1374203055",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Houston Intern PTIN5C Tx 77056",
-        "url": "https://jobs.engie.com/job/HOUSTON-Intern_PTIN5C-TX-77056/1374203055/"
-      },
-      {
-        "company": "Engie",
-        "job_id": "1374203655",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Washington Intern PTIN5C 20059",
-        "url": "https://jobs.engie.com/job/WASHINGTON-Intern_PTIN5C-20059/1374203655/"
-      },
-      {
-        "company": "Samsara",
-        "job_id": "8319784",
-        "location": "Phoenix, Arizona, United States",
-        "priority": false,
-        "reason": "titre ambigu / zone us",
-        "status": "review",
-        "title": "Account Development Representative Intern - Phoenix",
-        "url": "https://www.samsara.com/company/careers/roles/8319784?gh_jid=8319784"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344362",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Conception Innovante D’antennes Patch Par Chemins Géométriques Non Conventionnels F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344362/STAGE-Conception-Innovante-d’Antennes-Patch-par-Chemins-Géométriques-Non-Conventionnels-F-H"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0343987",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stagiaire En Développement Outils Processus Outillé",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0343987/Stagiaire-en-développement-outils-processus-outillé"
-      },
-      {
-        "company": "NVIDIA",
-        "job_id": "JR2028499",
-        "location": "Singapore, Pasir Panjang",
-        "priority": false,
-        "reason": "titre ambigu / zone asia",
-        "status": "review",
-        "title": "Research Intern, Robotics - 2027",
-        "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Singapore-Pasir-Panjang/Research-Intern--Robotics---2027_JR2028499"
-      },
-      {
-        "company": "NVIDIA",
-        "job_id": "JR2028498",
-        "location": "Singapore, Pasir Panjang",
-        "priority": false,
-        "reason": "titre ambigu / zone asia",
-        "status": "review",
-        "title": "Research Intern, Robotics — NVIDIA Research",
-        "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Singapore-Pasir-Panjang/Research-Intern--Robotics---NVIDIA-Research_JR2028498"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344000",
-        "location": "",
-        "priority": false,
-        "reason": "signal faible (infrastructure) / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Développer Et Valider Une Infrastructure Réseau Radar H F",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344000/Stage-Ingénieur-Développer-et-valider-une-infrastructure-réseau-radar-H-F"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0343988",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Ingénieur Développer Et Valider Une Liaison De Données En Conditions Réelles H F",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0343988/STAGE-Ingénieur-Développer-et-valider-une-liaison-de-données-en-conditions-réelles-H-F"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0343975",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stagiaire Ivv 1",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0343975/Stagiaire-IVV-1"
-      },
-      {
-        "company": "Thales",
-        "job_id": "R0344967",
-        "location": "",
-        "priority": false,
-        "reason": "titre ambigu / lieu vide",
-        "status": "review",
-        "title": "Stage Bts Méthodes Industrialisation F H",
-        "url": "https://careers.thalesgroup.com/fr/fr/job/R0344967/STAGE-BTS-Méthodes-Industrialisation-F-H"
-      }
-    ]
+    "last_review_digest": "2026-10-24"
   },
   "version": 1
 }
