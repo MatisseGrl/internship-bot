@@ -10,6 +10,7 @@ import worker, {
   formatAge,
   handleCommand,
   matchesQuery,
+  withoutApplied,
 } from "../src/index.js";
 
 const ENV = {
@@ -103,6 +104,68 @@ test("/offres paris filtre sans tenir compte des accents ni de la casse", async 
   assert.match(text, /1 offre\(s\)/);
   assert.match(text, /filtre « PARÍS » : 1\/3/);
   assert.doesNotMatch(text, /Madrid/);
+});
+
+const SUPA_ENV = { ...ENV, SUPABASE_URL: "https://proj.supabase.co/", SUPABASE_KEY: "sb_secret_test" };
+
+test("/offres masque les offres déjà postulées (base Supabase)", async () => {
+  routes.push(["current.json", () => Response.json(SNAPSHOT)]);
+  routes.push([
+    "supabase.co/rest/v1/candidatures",
+    () => Response.json([{ offres: { entreprise: "Datadog", identifiant: "1", titre: "x" } }]),
+  ]);
+  const pending = [];
+  await worker.fetch(update("/offres"), SUPA_ENV, { waitUntil: (p) => pending.push(p) });
+  await Promise.all(pending);
+  const supa = calls.find((c) => c.url.includes("supabase.co"));
+  assert.equal(supa.url, "https://proj.supabase.co/rest/v1/candidatures?select=offres(entreprise,identifiant,titre)");
+  assert.equal(supa.init.headers.apikey, "sb_secret_test");
+  assert.equal(supa.init.headers.Authorization, undefined); // clé sb_secret_ : apikey seul
+  const [text] = telegramTexts();
+  assert.match(text, /2 offre\(s\) ouverte\(s\)/);
+  assert.match(text, /1 déjà postulée\(s\) masquée\(s\)/);
+  assert.doesNotMatch(text, /Paris, France/);
+});
+
+test("/offres : base injoignable -> liste complète avec avertissement", async () => {
+  routes.push(["current.json", () => Response.json(SNAPSHOT)]);
+  routes.push(["supabase.co", () => new Response("paused", { status: 540 })]);
+  const pending = [];
+  await worker.fetch(update("/offres"), SUPA_ENV, { waitUntil: (p) => pending.push(p) });
+  await Promise.all(pending);
+  const [text] = telegramTexts();
+  assert.match(text, /3 offre\(s\) ouverte\(s\)/);
+  assert.match(text, /base des candidatures injoignable/);
+});
+
+test("/offres sans base configurée : aucun appel Supabase", async () => {
+  routes.push(["current.json", () => Response.json(SNAPSHOT)]);
+  await dispatch(update("/offres"));
+  assert.ok(!calls.some((c) => c.url.includes("supabase")));
+  assert.doesNotMatch(telegramTexts()[0], /masquée|injoignable/);
+});
+
+test("withoutApplied : identifiant exact, sinon intitulé pour les identifiants du suivi", () => {
+  const jobs = [
+    { company: "Microsoft", job_id: "200060780", title: "Software Engineering Intern" },
+    { company: "Microsoft", job_id: "200055967", title: "Software Engineering Intern" },
+    { company: "Epic Games", job_id: "61", title: "Web Engineer Intern" },
+    { company: "Epic Games", job_id: "62", title: "Web Engineer Intern" },
+    { company: "Epic Games", job_id: "63", title: "Engine Programmer Intern" },
+    { company: "Thales", job_id: "R1", title: "STAGE - Application des LLMs à l'Automatisation" },
+  ];
+  const applied = [
+    // vrai identifiant : seule cette offre-là, pas l'autre « Software Engineering Intern »
+    { entreprise: "Microsoft", identifiant: "200060780", titre: "Software Engineering Intern" },
+    // identifiant du suivi : on compare l'intitulé (tous les lieux)
+    { entreprise: "epic games", identifiant: "mail-1a144e531c4f398c", titre: "Web Engineer Intern" },
+    { entreprise: "Thales", identifiant: "mail-x", titre: "Stage – application des LLMs a l'automatisation" },
+    { entreprise: "Google", identifiant: "tracker-1", titre: null },
+  ];
+  assert.deepEqual(
+    withoutApplied(jobs, applied).map((j) => j.job_id),
+    ["200055967", "63"],
+  );
 });
 
 test("/offres sans liste encore créée", async () => {

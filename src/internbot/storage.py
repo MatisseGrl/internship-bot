@@ -197,6 +197,23 @@ class StateStore:
             rec["location"] = location
             self.dirty = True
 
+    def cached_tri(self, company: str, job_id: str, version: str) -> tuple[bool, float | None]:
+        """Score du tri automatique déjà calculé avec ce modèle : (trouvé, score).
+        Score None = texte illisible (l'offre reste visible, on ne réessaie pas)."""
+        entry = self.data["companies"].get(company)
+        rec = entry["jobs"].get(job_id) if entry else None
+        tri = rec.get("tri") if rec else None
+        if not isinstance(tri, dict) or tri.get("v") != version:
+            return False, None
+        score = tri.get("s")
+        return True, float(score) if score is not None else None
+
+    def cache_tri(self, company: str, job_id: str, version: str, score: float | None) -> None:
+        rec = self._jobs(company).get(job_id)
+        if rec is not None:
+            rec["tri"] = {"v": version, "s": None if score is None else round(score, 4)}
+            self.dirty = True
+
     def title_of(self, company: str, job_id: str) -> str:
         rec = self._jobs(company).get(job_id, {})
         return str(rec.get("title", job_id))

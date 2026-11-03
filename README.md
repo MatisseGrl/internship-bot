@@ -167,7 +167,18 @@ texte complet de chaque annonce, et le bot applique les verdicts enregistrés da
 | retenue (score ≥ 65) | gardée |
 | limite (passe avec un seul jeu de poids), à trancher (alternance, VIE…), illisible (page protégée) | gardée, à trier à la main |
 | écartée (non éligible, ou sous le seuil) | **supprimée** de `/offres`, de `--send-all` et du résumé « à vérifier » |
-| pas encore notée (nouvelle offre) | gardée |
+| écartée par le tri automatique (`motif: tri_auto`, voir ci-dessous) | supprimée |
+| pas encore notée (nouvelle offre) | passée au tri automatique, gardée si le tri la garde |
+
+**Tri automatique** (`src/internbot/tri.py`, modèle `notation/tri_tfidf.json.gz`) : une offre
+pas encore notée avec la grille est lue (texte complet), puis notée par un modèle TF-IDF
+(mots et caractères + régression logistique) appris sur les offres déjà notées. Sous le seuil,
+elle n'est ni notifiée ni affichée dans `/offres`. Texte illisible = offre gardée. Le bot
+calcule le score sans scikit-learn (mêmes calculs, vérifiés sur 400 offres) et le met en cache
+dans `state.json` ; les anciennes offres sont triées au fil des passages (60 par passage).
+Mesures (test du 2 nov. 2026, `docs/RECHERCHE_FAUX_POSITIFS.md`) : environ 3 à 6 % des offres
+pertinentes perdues, affichage divisé par 2,5 à 3. Les offres que le tri garde sont ensuite
+notées avec la grille en session : le verdict de la grille prime toujours sur le tri.
 
 - `notation/entreprises.yaml` : Écosystème SF et Pont vers SF hors US, une note et sa preuve
   par entreprise ;

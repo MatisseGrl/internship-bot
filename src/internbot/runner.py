@@ -14,12 +14,17 @@ Garanties :
   une avalanche d'anciennes offres ;
 - passage au filtre v3 : les offres déjà vues ne sont jamais renotifiées une à une ; celles que
   l'ancien filtre cachait et que le v3 retient sont signalées UNE fois, dans un seul récap.
+
+Tri automatique (tri.py) : une offre « notify » ou « review » PAS ENCORE notée avec la grille
+est lue (texte complet) et notée par le modèle TF-IDF figé. Sous le seuil, elle est traitée
+comme « drop » : ni notification, ni /offres. Texte illisible = offre gardée (comme avant).
+Score mis en cache dans l'état ; les offres anciennes sont notées au fil des runs (plafond).
 """
 
 from __future__ import annotations
 
 import logging
-from collections.abc import Sequence
+from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -44,12 +49,17 @@ from internbot.snapshot import (
     snapshot_jobs,
 )
 from internbot.storage import StateStore
+from internbot.tri import ModeleTri
 
 log = logging.getLogger(__name__)
 
 FILTER_VERSION = 3
 PARIS = ZoneInfo("Europe/Paris")
 REVIEW_DIGEST_HOUR = 9  # résumé « à vérifier » : premier passage après 9 h (heure de Paris)
+# Offres déjà ouvertes à faire passer au tri automatique, par run (une requête chacune). Les
+# NOUVELLES offres sont toujours triées avant d'être notifiées (plafond à part, plus large).
+TRI_ANCIENNES_PAR_RUN = 60
+TRI_NOUVELLES_PAR_RUN = 200
 
 
 @dataclass
@@ -117,6 +127,8 @@ class Runner:
         send_all: bool = False,
         snapshot_path: Path | None = None,
         notation: Notation | None = None,
+        tri: ModeleTri | None = None,
+        texte: Callable[[Job], str] | None = None,
         now: datetime | None = None,
     ) -> None:
         self.config = config
@@ -131,6 +143,12 @@ class Runner:
         # Verdicts de la grille de notation (notation/notes.json) : les offres écartées sont
         # retirées de current.json (/offres, --send-all) et du résumé « à vérifier ».
         self.notation = notation or Notation(None)
+        # Tri automatique : modèle + lecture du texte d'une offre (lève InternbotError si
+        # illisible). Sans l'un des deux, aucune offre n'est masquée par le tri.
+        self.tri = tri if texte is not None else None
+        self.texte = texte
+        self._tri_budget = {"anciennes": TRI_ANCIENNES_PAR_RUN, "nouvelles": TRI_NOUVELLES_PAR_RUN}
+        self._tri_a_ecrire: dict[tuple[str, str], float | None] = {}
         self._providers: dict[str, Provider] = {}
         # Offres ouvertes qui passent les filtres, par entreprise traitée avec succès.
         self._current: dict[str, list[Job]] = {}
@@ -177,6 +195,7 @@ class Runner:
             if not self.dry_run:
                 for job in delivered:
                     self.state.mark_seen(job, notified=True)
+                    self._flush_tri(job)
             if report.pending:
                 log.warning(
                     "%d notification(s) non envoyée(s) : elles seront retentées au prochain run",
@@ -284,6 +303,9 @@ class Runner:
                 job = provider.enrich(company, job)
                 verdict = classifier.classify(job)
             job = _with_verdict(job, verdict)
+            if verdict.status != DROP and self._masquee_par_tri(job, nouvelle=True):
+                verdict = Verdict(DROP, "tri automatique")
+                job = _with_verdict(job, verdict)
             if verdict.status == NOTIFY:
                 to_notify.append(job)
                 log.info(
@@ -306,11 +328,13 @@ class Runner:
                 if not self.dry_run:
                     self.state.queue_review(job)
                     self.state.mark_seen(job, notified=False)
+                    self._flush_tri(job)
             else:
                 log.debug("%s : ignorée « %s » — %s", company.name, job.title, verdict.reason)
                 rejected.add(job.job_id)
                 if not self.dry_run:
                     self.state.mark_seen(job, notified=False)
+                    self._flush_tri(job)
 
         result.new_matches = len(to_notify)
         result.new_reviews = len(reviews)
@@ -355,9 +379,43 @@ class Runner:
                 continue
             job = self._resolve_location(provider, company, job)
             verdict = classifier.classify(job)
-            if verdict.status != DROP:
+            if verdict.status != DROP and not self._masquee_par_tri(job, nouvelle=False):
                 out.append(_with_verdict(job, verdict))
         return out
+
+    def _masquee_par_tri(self, job: Job, *, nouvelle: bool) -> bool:
+        """Vrai si le tri automatique écarte l'offre. Jamais pour une offre notée avec la
+        grille (son verdict prime), ni sans texte lisible, ni quand le plafond du run est
+        atteint (l'offre reste visible et sera triée à un prochain run)."""
+        if self.tri is None or self.texte is None or self.notation.est_notee(*job.key):
+            return False
+        if job.key in self._tri_a_ecrire:  # déjà triée pendant ce run, pas encore dans l'état
+            trouve, score = True, self._tri_a_ecrire[job.key]
+        else:
+            trouve, score = self.state.cached_tri(job.company, job.job_id, self.tri.version)
+        if not trouve:
+            cle = "nouvelles" if nouvelle else "anciennes"
+            if self._tri_budget[cle] <= 0:
+                return False
+            self._tri_budget[cle] -= 1
+            try:
+                score = self.tri.score(job.title, self.texte(job))
+            except InternbotError as exc:
+                log.info("%s : tri impossible pour « %s » (%s)", job.company, job.title, exc)
+                score = None
+            self._tri_a_ecrire[job.key] = score
+            if not self.dry_run and self.state.is_known(job.company, job.job_id):
+                self._flush_tri(job)
+        if score is None or self.tri.garder(score):
+            return False
+        log.info("%s : masquée par le tri « %s » (score %.2f)", job.company, job.title, score)
+        return True
+
+    def _flush_tri(self, job: Job) -> None:
+        """Écrit dans l'état le score d'une offre triée avant d'y être enregistrée."""
+        if self.tri is not None and job.key in self._tri_a_ecrire:
+            score = self._tri_a_ecrire.pop(job.key)
+            self.state.cache_tri(job.company, job.job_id, self.tri.version, score)
 
     def _migration_candidates(
         self, company: str, current: list[Job], new_ids: set[str]

@@ -638,3 +638,49 @@ Airbus:
   eco_preuve: grand industriel européen avec une vraie équipe IA (« Airbus AI », exemple de la note 3)
   pont: 3
   pont_preuve: Acubed, centre d'innovation IA et autonomie d'Airbus dans la Silicon Valley (acubed.airbus.com)
+# Ajoutées le 2 novembre 2026 (offres apparues depuis la session 6).
+ArianeGroup:
+  eco: 2
+  eco_preuve: grand groupe européen non tech (lanceurs Ariane), peu lisible côté US
+  pont: 2
+  pont_preuve: présence US récente et hors des pôles SF / NYC / Seattle (Sodern America, annoncée en janvier 2026, ariane.group)
+Booking.com:
+  eco: 4
+  eco_preuve: plateforme de voyage mondiale, forte réputation tech internationale
+  pont: 2
+  pont_preuve: maison mère américaine Booking Holdings, siège à Norwalk (Connecticut), hors des pôles SF / NYC / Seattle (hésitation 2/3)
+Duolingo:
+  eco: 4
+  eco_preuve: entreprise tech américaine cotée, forte réputation internationale
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Pittsburgh)
+Nintendo:
+  eco: 3
+  eco_preuve: grand éditeur de jeux japonais, nom compris côté US (hésitation 3/4)
+  pont: 3
+  pont_preuve: Nintendo of America, siège à Redmond (agglomération de Seattle)
+Pigment:
+  eco: 3
+  eco_preuve: scale-up française financée (environ 400 M$ levés), licorne européenne
+  pont: 3
+  pont_preuve: bureaux à New York et San Francisco (offres Pigment sur Built In et Lever)
+ServiceNow:
+  eco: 4
+  eco_preuve: grand éditeur logiciel américain, forte réputation internationale
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Santa Clara, Californie)
+Snap:
+  eco: 4
+  eco_preuve: big tech grand public américaine (Snapchat), forte réputation internationale
+  pont: 3
+  pont_preuve: entreprise américaine (siège à Santa Monica, Californie)
+Unity:
+  eco: 4
+  eco_preuve: éditeur du moteur de jeu Unity, forte réputation internationale
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)
+Visa:
+  eco: 3
+  eco_preuve: réseau de paiement mondial avec de grosses équipes tech, nom compris côté US (hésitation 3/4)
+  pont: 3
+  pont_preuve: entreprise américaine (siège à San Francisco)

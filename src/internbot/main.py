@@ -36,6 +36,7 @@ from internbot.providers import get_provider_class
 from internbot.runner import Runner
 from internbot.snapshot import build_health, load_snapshot, snapshot_jobs
 from internbot.storage import StateStore
+from internbot.tri import ModeleTri
 
 log = logging.getLogger("internbot")
 
@@ -479,6 +480,10 @@ def cmd_run(cfg: AppConfig, args: argparse.Namespace) -> int:
     if args.dry_run:
         state.path = None  # garde-fou : impossible d'écrire l'état en dry-run
     http = make_http(cfg)
+    # Tri automatique des offres non notées (modèle figé, absent = désactivé).
+    modele = notation_dir(args) / "tri_tfidf.json.gz"
+    tri = ModeleTri.load(modele) if modele.is_file() else None
+    fetcher = DescriptionFetcher(http, {c.name: c for c in cfg.companies})
     runner = Runner(
         cfg,
         state,
@@ -490,6 +495,8 @@ def cmd_run(cfg: AppConfig, args: argparse.Namespace) -> int:
         # current.json vit à côté de state.json (branche `state` en CI).
         snapshot_path=Path(args.state).with_name("current.json"),
         notation=Notation.load(notation_dir(args) / "notes.json"),
+        tri=tri,
+        texte=lambda job: fetcher.fetch(job).text,
     )
     report = runner.run(companies)
     log.info("%s", report.summary())

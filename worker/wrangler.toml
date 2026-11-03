@@ -9,3 +9,4 @@ GITHUB_REPO = "MatisseGrl/internship-bot"
 
 # Secrets (jamais dans ce fichier) : npx wrangler secret put <NOM>
 #   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, GITHUB_TOKEN, WEBHOOK_SECRET
+#   SUPABASE_URL, SUPABASE_KEY (facultatifs : masquent dans /offres les offres déjà postulées)

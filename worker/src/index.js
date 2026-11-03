@@ -15,7 +15,8 @@
 // ignorés en silence) et Telegram doit présenter WEBHOOK_SECRET à chaque appel.
 //
 // Secrets (wrangler secret put …) : TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, GITHUB_TOKEN,
-// WEBHOOK_SECRET. Variable (wrangler.toml) : GITHUB_REPO.
+// WEBHOOK_SECRET ; facultatifs SUPABASE_URL + SUPABASE_KEY (clé secrète du projet) pour masquer
+// dans /offres les offres déjà postulées. Variable (wrangler.toml) : GITHUB_REPO.
 
 const TELEGRAM_MAX = 4096;
 const MAX_MESSAGES = 15; // au-delà, on invite à filtrer (/offres paris)
@@ -83,6 +84,7 @@ const HELP = [
   "/offres cisco — les offres d'une entreprise",
   "/offres paris — filtrées par mot ou expression entière (titre ou lieu)",
   "⭐ = offre IA, affichée en premier",
+  "Les offres où tu as déjà postulé sont masquées.",
   "/refresh — relance une vraie recherche maintenant (~5 min)",
   "/statut — date de la dernière mise à jour",
   "/status — santé de chaque entreprise (erreurs, offres, NOTIFY/REVIEW)",
@@ -100,12 +102,27 @@ async function commandOffers(env, query) {
     );
   }
   let jobs = flattenSnapshot(snapshot);
+  // Offres déjà postulées (base Supabase) masquées ; base injoignable -> liste complète + avertissement.
+  let appliedNote = "";
+  try {
+    const applied = await fetchApplied(env);
+    if (applied) {
+      const kept = withoutApplied(jobs, applied);
+      if (kept.length < jobs.length) {
+        appliedNote = ` — ${jobs.length - kept.length} déjà postulée(s) masquée(s)`;
+      }
+      jobs = kept;
+    }
+  } catch {
+    appliedNote = " — ⚠️ base des candidatures injoignable, offres postulées non masquées";
+  }
   const total = jobs.length;
   // Entreprises connues = celles de la config (current.json en a une entrée par entreprise).
   if (query) jobs = filterJobs(jobs, query, Object.keys(snapshot.companies || {}));
   const subtitle =
     `mise à jour ${formatAge(snapshot.updated_at)}` +
-    (query ? ` — filtre « ${query} » : ${jobs.length}/${total}` : "");
+    (query ? ` — filtre « ${query} » : ${jobs.length}/${total}` : "") +
+    appliedNote;
   const messages = buildListingMessages(jobs, subtitle);
   const toSend = messages.slice(0, MAX_MESSAGES);
   for (const [i, msg] of toSend.entries()) {
@@ -226,6 +243,45 @@ async function fetchSnapshot(env) {
   if (res.status === 404) return null;
   if (!res.ok) throw new Error(`GitHub ${res.status} en lisant current.json`);
   return res.json();
+}
+
+// Candidatures déjà envoyées (tous statuts), lues dans la base Supabase de Matisse avec la clé
+// secrète du projet (les tables sont fermées par RLS). null si la base n'est pas configurée.
+async function fetchApplied(env) {
+  if (!env.SUPABASE_URL || !env.SUPABASE_KEY) return null;
+  const key = String(env.SUPABASE_KEY).trim();
+  const headers = { apikey: key };
+  // Ancienne clé service_role (JWT) : aussi dans Authorization. Nouvelle clé sb_secret_… : apikey seul.
+  if (key.startsWith("eyJ")) headers.Authorization = `Bearer ${key}`;
+  const base = String(env.SUPABASE_URL).trim().replace(/\/+$/, "");
+  const res = await fetch(
+    `${base}/rest/v1/candidatures?select=offres(entreprise,identifiant,titre)`,
+    { headers },
+  );
+  if (!res.ok) throw new Error(`Supabase ${res.status} en lisant les candidatures`);
+  const rows = await res.json();
+  return rows.map((row) => row.offres).filter(Boolean);
+}
+
+// Identifiants inventés par le suivi (pas ceux des sites carrières) : on compare alors l'intitulé.
+const SYNTHETIC_ID = /^(tracker|mail|portail)-/;
+
+// Retire les offres déjà postulées : même entreprise + même identifiant d'offre, ou, quand la
+// candidature n'a pas de vrai identifiant, même entreprise + même intitulé (tous lieux confondus).
+export function withoutApplied(jobs, applied) {
+  const ids = new Set();
+  const titles = new Set();
+  for (const a of applied) {
+    const company = norm(a.entreprise).trim();
+    if (a.identifiant && !SYNTHETIC_ID.test(a.identifiant)) ids.add(`${company}|${a.identifiant}`);
+    else if (a.titre) titles.add(`${company}|${norm(a.titre).trim()}`);
+  }
+  return jobs.filter((job) => {
+    const company = norm(job.company).trim();
+    return (
+      !ids.has(`${company}|${job.job_id}`) && !titles.has(`${company}|${norm(job.title).trim()}`)
+    );
+  });
 }
 
 // Offres « notify » et « review » du filtre v3 (current.json ne contient jamais les « drop » ;
