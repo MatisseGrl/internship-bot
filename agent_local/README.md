@@ -46,6 +46,15 @@ L'exécution s'arrête si le navigateur n'expose pas ce port, si le compte atten
 
 L'utilisation de Chrome et la lecture quotidienne des deux boîtes sont assurées par la tâche Codex locale, pas par un accès Gmail ou Simplify caché dans ce programme. Le programme n'inclut **aucun appel d'API de modèle** et ne dépense rien. Le plafond de 10 USD par mois est représenté par `budget_disponible` avec arrêt local à 9 USD ; brancher un fournisseur exigera une clé hors dépôt et une mesure du coût réel.
 
+## Tracker Excel personnel
+
+`agent.py import-tracker` lit les onglets de candidatures du tracker Excel (colonnes `Entreprise`, `Poste`, `Statut`…) et les onglets « Réponses … ». Chaque ligne est gardée dans la table privée `suivi_manuel`, puis reliée à une offre par l'identifiant cité dans les notes, une URL d'offre précise ou un titre identique et unique venant du bot ; sinon une offre `tracker-…` est créée. Les liens de tableau de bord ne servent pas au rapprochement. « Postulé » devient `envoyee` avec la mention « déclaration de Matisse », « À postuler » ne crée pas de candidature, et un statut plus avancé déjà connu n'est jamais rétrogradé. Réimporter le même fichier ne crée rien de nouveau.
+
+```powershell
+pip install -e ".[agent]"
+python agent_local/agent.py --db C:\chemin\prive\suivi.sqlite import-tracker C:\chemin\prive\tracker_stages.xlsx
+```
+
 ## Alertes SWElist
 
 `ingest_swelist.py` ajoute les annonces d'e-mails SWElist à un inventaire CSV privé. Il reçoit un JSON local contenant une liste d'objets `id`, `date` (`YYYY-MM-DD`), `subject` et `html` ; la lecture de Gmail reste en dehors du programme. L'import vérifie le nombre d'annonces indiqué dans l'objet, retire les paramètres de suivi des liens, dédoublonne par identifiant Simplify et applique un premier tri **indicatif** sur le titre. Il ne visite ni Simplify ni les sites des employeurs.
@@ -66,16 +75,25 @@ Après création de la table Supabase par la migration `swelist_annonces`, `sync
 
 ## Tri ML des titres
 
-`tri_ml.py` apprend uniquement la note historique **Fit rôle** du bot : `1` = hors métier, `3–5` = rôle pertinent ; `2` et les motifs d'éligibilité ne servent pas d'étiquettes. Les titres identiques sont dédoublonnés, les étiquettes contradictoires sont retirées, et les entreprises sont séparées entre apprentissage, validation et test. Le modèle de base est une régression logistique TF-IDF sur mots et n-grammes de caractères, en Python standard, sans API payante.
+`tri_ml.py` apprend uniquement la note historique **Fit rôle** du bot : `1` = hors métier, `3–5` = rôle pertinent ; `2` et les motifs d'éligibilité ne servent pas d'étiquettes. Les titres identiques sont dédoublonnés (étiquette majoritaire, égalités retirées), et les entreprises sont séparées entre développement et test. Le modèle `titre-ensemble-v3` combine des embeddings locaux et des n-grammes de caractères ; il est figé dans un artefact JSON pour noter les nouvelles annonces sans réentraîner. Dépendances : `pip install -e ".[ml]"`, sans API payante. Mesures et choix : [rapport du tri ML](../docs/TRI_ML_RAPPORT.md).
 
 ```powershell
-python agent_local/tri_ml.py --db C:\chemin\prive\suivi.sqlite --report C:\chemin\prive\evaluation.json --errors C:\chemin\prive\erreurs_test.csv
+python agent_local/tri_ml.py --db C:\chemin\prive\copie.sqlite --model C:\chemin\prive\modele_v3.json --report C:\chemin\prive\evaluation.json --errors C:\chemin\prive\erreurs_test.csv
+python agent_local/tri_ml.py --db C:\chemin\prive\suivi.sqlite --model C:\chemin\prive\modele_v3.json --noter
 python agent_local/revue_swelist.py --db C:\chemin\prive\suivi.sqlite --export C:\chemin\prive\revue_70.csv
 ```
 
 Dans `revue_70.csv`, renseigner `label_humain` avec `1` si le **métier** correspond et `0` sinon, à partir du titre et de l'annonce si nécessaire. Puis importer les réponses avec `--import-labels` à la place de `--export`. Les étiquettes SWElist sont conservées comme audit externe et ne sont pas injectées automatiquement dans l'entraînement.
 
-Le test initial a trouvé 7 offres pertinentes parmi 116 titres proposés en basse priorité (94 offres pertinentes dans le test). **Aucune catégorie ML n'exclut une offre automatiquement.** `prioriser` sert à choisir les descriptions à récupérer d'abord ; `basse_priorite_a_relire` reste dans le registre pour revue.
+Sur le test mis de côté, v3 place 6 des 94 offres pertinentes en basse priorité (38 % des titres) et 89 % de ses `prioriser` sont pertinents. **Aucune catégorie ML n'exclut une offre automatiquement.** `prioriser` sert à choisir les descriptions à récupérer d'abord ; `basse_priorite_a_relire` reste dans le registre pour revue.
+
+## Descriptions SWElist
+
+`descriptions_swelist.py` lit la page publique Simplify `/p/<id>` de chaque annonce (autorisée par robots.txt), une page toutes les 2,5 à 3,75 s, `prioriser` d'abord. La description, les exigences, les missions, les lieux, les dates et l'identifiant ATS (`tracked_obj`) vont dans la table privée `swelist_descriptions`, qui n'est pas copiée vers Supabase. Le lien « Apply » (`/jobs/click/`, interdit par robots.txt) n'est jamais suivi. Un blocage (403, 429, vérification humaine) ou cinq échecs consécutifs arrêtent la commande ; une relance reprend là où elle s'était arrêtée.
+
+```powershell
+python agent_local/descriptions_swelist.py --db C:\chemin\prive\suivi.sqlite --limite 200
+```
 
 ## Copie privée vers Supabase
 

@@ -54,6 +54,26 @@ TABLES = {
         "version_modele",
         "evalue_le",
     ),
+    "classement": (
+        "source",
+        "identifiant",
+        "rang",
+        "present",
+        "entreprise",
+        "titre",
+        "lieu",
+        "url",
+        "base",
+        "score_fit",
+        "verdict_fit",
+        "score_retenue",
+        "eligible",
+        "motifs",
+        "deja_candidature",
+        "doublon_du_rang",
+        "version",
+        "classe_le",
+    ),
     "candidatures": ("cle_offre", "statut", "preuve", "modifie_le"),
     "mails": (
         "boite",
@@ -70,6 +90,7 @@ TABLES = {
 CONFLICT = {
     "offres": "cle",
     "swelist_annonces": "simplify_id",
+    "classement": "source,identifiant",
     "candidatures": "cle_offre",
     "mails": "boite,identifiant_message",
 }
@@ -97,8 +118,8 @@ def source_snapshot(path: Path) -> tuple[dict[str, list[dict[str, Any]]], dict[s
             row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type='table'")
         }
         for table, columns in TABLES.items():
-            if table == "swelist_annonces" and table not in available:
-                continue  # Older local registers do not yet have the second source.
+            if table in {"swelist_annonces", "classement"} and table not in available:
+                continue  # Older local registers do not yet have these tables.
             query = f"SELECT {', '.join(columns)} FROM {table} ORDER BY {CONFLICT[table]}"
             rows[table] = [dict(row) for row in db.execute(query)]
         db.execute("COMMIT")
@@ -106,6 +127,10 @@ def source_snapshot(path: Path) -> tuple[dict[str, list[dict[str, Any]]], dict[s
         if row["note_json"] is not None:
             row["note_json"] = json.loads(row["note_json"])
         row["dans_snapshot"] = bool(row["dans_snapshot"])
+    for row in rows.get("classement", []):
+        row["motifs"] = json.loads(row["motifs"])
+        for column in ("present", "eligible", "deja_candidature"):
+            row[column] = bool(row[column])
     for row in rows["mails"]:
         if row["recu_le"] == "":
             row["recu_le"] = None
