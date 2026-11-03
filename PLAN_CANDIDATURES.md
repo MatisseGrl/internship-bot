@@ -2,6 +2,8 @@
 
 État au 15 octobre 2026 : **plan documenté, aucun envoi automatisé en production**. Le bot actuel découvre, filtre et note des offres ; il n'envoie pas de candidatures. Voir [AUDIT.md](AUDIT.md) pour son architecture et les limites de la notation existante.
 
+Les règles plus détaillées du futur tableau de suivi, du temps maximal par offre et du rapprochement avec les mails sont consignées dans [docs/IDEES_SUIVI_CANDIDATURES.md](docs/IDEES_SUIVI_CANDIDATURES.md).
+
 ## Décisions prises
 
 - **Aucune API payante requise pour le pilote.** Les abonnements ChatGPT/Codex et Claude existants seront utilisés dans la limite de leurs quotas. Les **10 USD par mois** sont un plafond éventuel si une API est décidée plus tard, pas une dépense prévue. Avant toute activation d'API, le programme devra suivre les coûts et s'arrêter avant ce plafond.

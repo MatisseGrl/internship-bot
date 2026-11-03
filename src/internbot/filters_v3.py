@@ -114,6 +114,14 @@ PHD = ["phd", "ph d", "postdoc", "doctoral", "doctorate"]
 NON_PHD_LEVEL = ["bs", "ba", "ms", "msc", "bsc", "meng", "bachelor", "bachelors",
                  "master", "masters", "undergrad", "undergraduate", "graduate"]
 
+# Saison : Matisse cherche un stage entre avril et août 2027 (décision du 16 oct. 2026).
+# Hiver (janv.-avril) et automne (sept.-déc.) ne recouvrent pas cette période ; une offre qui
+# cite aussi l'été ou le printemps (« Summer or Winter », « Spring Summer Co Op ») est gardée.
+HORS_SAISON = ["winter", "hiver", "fall", "autumn", "automne"]
+SAISON_OK = ["summer", "ete", "spring", "printemps"]
+DEBUT_JANVIER = ["janvier", "january", "jan"]
+SIX_MOIS = ["6 mois", "6 months", "6 month", "six mois", "six months"]
+
 # -------------------------------------------------------------- lieux ----
 
 LOCATIONS = {
@@ -249,12 +257,25 @@ def is_phd_only(t: str) -> bool:
     return bool(has(t, PHD)) and not has(t, NON_PHD_LEVEL)
 
 
+def hors_saison(t: str) -> str | None:
+    """Saison du titre sans recouvrement avec avril-août : « Winter 2027 », « 6 mois Janvier »."""
+    if has(t, SAISON_OK):
+        return None
+    if hors := has(t, HORS_SAISON):
+        return hors[0]
+    if has(t, DEBUT_JANVIER) and has(t, SIX_MOIS):
+        return "6 mois dès janvier"
+    return None
+
+
 def classify_title(title: str, cfg: FilterConfig) -> Verdict:
     t = norm(title)
     if not has(t, INTERN):
         return Verdict(DROP, "pas un stage")
     if is_phd_only(t):
         return Verdict(DROP, "PhD uniquement")
+    if saison := hors_saison(t):
+        return Verdict(DROP, f"hors saison ({saison})")
 
     ai, sw, fde = has(t, AI), has(t, SOFTWARE), has(t, FDE)
     data, hw, nt = has(t, DATA), has(t, HARDWARE), has(t, NON_TECH)

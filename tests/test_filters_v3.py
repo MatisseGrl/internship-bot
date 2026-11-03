@@ -184,3 +184,23 @@ def test_hors_ile_de_france_meme_avec_departement_ailleurs() -> None:
 )
 def test_sites_francais_hors_idf_vus_dans_les_offres(location: str) -> None:
     assert classify_location(location, FilterConfig()).reason == "France hors Île-de-France"
+
+
+@pytest.mark.parametrize(
+    ("title", "status"),
+    [
+        ("Software Engineer Intern (Winter 2027)", DROP),
+        ("Software Engineering Intern - Winter '27", DROP),
+        ("Venture Capital Intern (Part-time, Fall/Winter)", DROP),
+        ("Software Engineering Co Op Summer Fall 2027", NOTIFY),
+        ("Software Engineer, Intern (Summer or Winter)", NOTIFY),
+        ("Spring 2027 Software Engineering Internship/Co-op", NOTIFY),
+        ("Software Engineer Stage (6 mois) Janvier 2027", DROP),
+        ("Software Engineer Stage (6 mois)", NOTIFY),
+    ],
+)
+def test_hors_saison(title: str, status: str) -> None:
+    verdict = classify(title, "San Francisco, CA")
+    assert verdict.status == status, f"{title} -> {verdict}"
+    if status == DROP:
+        assert verdict.reason.startswith("hors saison")
