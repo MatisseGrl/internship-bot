@@ -76,12 +76,16 @@ class ConnexionGoogleTest(unittest.TestCase):
             journal, "You're signing back in to eightfold.ai candidat@example.com"
         )
         page = FaussePageMicrosoft(google, journal)
-        self.assertEqual(connecter_google_microsoft(page, "candidat@example.com"), "continue_clique")
+        self.assertEqual(
+            connecter_google_microsoft(page, "candidat@example.com"), "continue_clique"
+        )
         self.assertEqual(journal, ["google", "compte:candidat@example.com", "continuer"])
 
     def test_mauvais_compte_arrete_avant_continue(self):
         journal = []
-        google = FausseFenetreGoogle(journal, "You're signing back in to eightfold.ai autre@example.com")
+        google = FausseFenetreGoogle(
+            journal, "You're signing back in to eightfold.ai autre@example.com"
+        )
         page = FaussePageMicrosoft(google, journal)
         with self.assertRaisesRegex(ConnexionInattendue, "compte Google"):
             connecter_google_microsoft(page, "candidat@example.com")
