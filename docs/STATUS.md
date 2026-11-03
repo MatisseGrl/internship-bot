@@ -130,6 +130,11 @@ Session longue, faite avant la règle « une action par session ».
 - [ ] À relire par Matisse (hésitations des agents) : offres Dassault Systèmes au texte tronqué (JSON-LD coupé après 1-2 phrases, notées « non précisé » : Munich AI Development, Ingénieur IA ML NLP, Werkstudent AI Agents) ; Siemens Agentic AI (« 6-month internship starts from January 2027 », exclue `dates`) ; Samsara London (candidatures closes le 30 oct., exclue `fermee`) ; offres « Visa sponsorship is not available » (Nintendo, EA, TI, Visa, Siemens) gardées car le J-1 n'est pas exclu explicitement ; Thales « Votre priorité est de réaliser un stage de fin d'études » gardées éligibles.
 - [ ] Le registre local de l'agent (SQLite Codex) et `quotidien.py` ne sont plus alignés sur Supabase : décider qui est la source de vérité des candidatures avant de relancer `Lancer quotidien.ps1`.
 
+### Session du 3 novembre 2026 (soir) : Doctolib Greenhouse -> Ashby
+
+- [x] Alerte « Doctolib échoue depuis 3 runs » : le board Greenhouse `doctolib` renvoie 404 (l'entreprise a quitté Greenhouse). `--discover` : Ashby `doctolib`, 150 offres. `config.yaml` modifié, dry-run OK (0 échec). **Non commité.**
+- Attention : les ID Ashby sont nouveaux, et Doctolib est déjà « seedée » en prod : les offres Ashby qui passent filtre + tri (4-5 stages tech : SWE Intern Paris/Milan/Amsterdam/Berlin, ML Engineer Intern) seront notifiées une fois au premier passage après le push. Voulu (offres réelles, pas de spam de masse).
+
 ## À faire ensuite
 
 - [ ] **Supabase ne suit plus le bot** : tables `offres` / `classement` figées au 16-21/10 (4 123 offres) alors que `/offres` en affiche 2 274 aujourd'hui. Matisse veut une mise à jour : resynchro manuelle ou écriture automatique par le bot à chaque passage (session dédiée). Les nouvelles candidatures doivent aussi y être ajoutées pour que `/offres` les masque.

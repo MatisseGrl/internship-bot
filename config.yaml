@@ -671,8 +671,8 @@ companies:
 
   # ==== Lot D : scale-ups françaises (ATS publics vérifiés) =====================================
   - name: Doctolib
-    provider: greenhouse
-    board: doctolib            # compte Ashby actif aussi ; comparaison à finir
+    provider: ashby
+    board: doctolib            # était sur Greenhouse (404 depuis novembre 2026), migré vers Ashby
   - name: Alan
     provider: ashby
     board: alan
