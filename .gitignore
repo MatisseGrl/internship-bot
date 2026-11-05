@@ -28,3 +28,7 @@ htmlcov/
 node_modules/
 .wrangler/
 .dev.vars
+
+# Notation v2 : profil perso et textes d offres (ne jamais committer)
+travail/
+notation/profil.local.md
