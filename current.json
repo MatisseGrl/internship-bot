@@ -2,14 +2,14 @@
  "companies": {
   "AMD": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "ASML": {
    "jobs": [
     {
      "job_id": "J-00356507",
      "location": "Veldhoven, Netherlands",
-     "posted_at": "2026-11-11",
+     "posted_at": "2026-11-10",
      "priority": true,
      "reason": "IA (ai) / zone europe",
      "status": "notify",
@@ -19,7 +19,7 @@
     {
      "job_id": "J-00356606",
      "location": "Veldhoven, Netherlands",
-     "posted_at": "2026-11-07",
+     "posted_at": "2026-11-06",
      "priority": true,
      "reason": "IA (ai) / zone europe",
      "status": "notify",
@@ -29,7 +29,7 @@
     {
      "job_id": "J-00356369",
      "location": "Veldhoven, Netherlands",
-     "posted_at": "2026-11-10",
+     "posted_at": "2026-11-09",
      "priority": true,
      "reason": "IA (ai) / zone europe",
      "status": "notify",
@@ -39,7 +39,7 @@
     {
      "job_id": "J-00355796",
      "location": "Veldhoven, Netherlands",
-     "posted_at": "2026-11-11",
+     "posted_at": "2026-11-10",
      "priority": true,
      "reason": "IA (ai) / zone europe",
      "status": "notify",
@@ -47,19 +47,9 @@
      "url": "https://asml.wd3.myworkdayjobs.com/ASMLEXT1/job/Veldhoven-Netherlands/Computer-Science---Artificial-Intelligence-internship--ai-assisted-diagnostics-platform_J-00355796"
     },
     {
-     "job_id": "J-00356388",
-     "location": "Veldhoven, Netherlands",
-     "posted_at": "2026-11-10",
-     "priority": false,
-     "reason": "data (data) / zone europe",
-     "status": "notify",
-     "title": "Computer Science | Data Science internship: failure pattern analysis",
-     "url": "https://asml.wd3.myworkdayjobs.com/ASMLEXT1/job/Veldhoven-Netherlands/Computer-Science---Data-Science-internship--failure-pattern-analysis_J-00356388"
-    },
-    {
      "job_id": "J-00356806",
      "location": "Delft, Netherlands",
-     "posted_at": "2026-11-07",
+     "posted_at": "2026-11-06",
      "priority": false,
      "reason": "data (data) / zone europe",
      "status": "notify",
@@ -69,7 +59,7 @@
     {
      "job_id": "J-00356675",
      "location": "Veldhoven, Netherlands",
-     "posted_at": "2026-11-10",
+     "posted_at": "2026-11-09",
      "priority": false,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -79,7 +69,7 @@
     {
      "job_id": "J-00356567",
      "location": "San Diego, CA, USA",
-     "posted_at": "2026-11-05",
+     "posted_at": "2026-11-04",
      "priority": true,
      "reason": "IA (machine learning) / zone us",
      "status": "notify",
@@ -89,7 +79,7 @@
     {
      "job_id": "J-00356462",
      "location": "Wilton, CT, USA",
-     "posted_at": "2026-11-13",
+     "posted_at": "2026-11-12",
      "priority": false,
      "reason": "data (data) / zone us",
      "status": "notify",
@@ -99,7 +89,7 @@
     {
      "job_id": "J-00357006",
      "location": "San Jose, CA, USA",
-     "posted_at": "2026-11-12",
+     "posted_at": "2026-11-11",
      "priority": false,
      "reason": "titre ambigu / zone us",
      "status": "review",
@@ -109,7 +99,7 @@
     {
      "job_id": "J-00355737",
      "location": "San Diego, CA, USA",
-     "posted_at": "2026-11-04",
+     "posted_at": "2026-11-03",
      "priority": true,
      "reason": "IA + non-tech (business systems) / zone us",
      "status": "review",
@@ -119,7 +109,7 @@
     {
      "job_id": "J-00355627",
      "location": "San Diego, CA, USA",
-     "posted_at": "2026-11-10",
+     "posted_at": "2026-11-09",
      "priority": true,
      "reason": "IA (ai) / zone us",
      "status": "notify",
@@ -129,7 +119,7 @@
     {
      "job_id": "J-00355628",
      "location": "San Diego, CA, USA",
-     "posted_at": "2026-11-10",
+     "posted_at": "2026-11-09",
      "priority": true,
      "reason": "IA (ai) / zone us",
      "status": "notify",
@@ -139,7 +129,7 @@
     {
      "job_id": "J-00355629",
      "location": "San Diego, CA, USA",
-     "posted_at": "2026-11-10",
+     "posted_at": "2026-11-09",
      "priority": true,
      "reason": "IA (ai) / zone us",
      "status": "notify",
@@ -149,7 +139,7 @@
     {
      "job_id": "J-00355626",
      "location": "San Diego, CA, USA",
-     "posted_at": "2026-11-13",
+     "posted_at": "2026-11-12",
      "priority": false,
      "reason": "data (data) / zone us",
      "status": "notify",
@@ -159,7 +149,7 @@
     {
      "job_id": "J-00356801",
      "location": "Delft, Netherlands",
-     "posted_at": "2026-11-07",
+     "posted_at": "2026-11-06",
      "priority": false,
      "reason": "engineer (générique) / zone europe",
      "status": "notify",
@@ -169,7 +159,7 @@
     {
      "job_id": "J-00356749",
      "location": "Veldhoven, Netherlands",
-     "posted_at": "2026-11-11",
+     "posted_at": "2026-11-10",
      "priority": false,
      "reason": "titre ambigu / zone europe",
      "status": "review",
@@ -187,14 +177,14 @@
      "url": "https://asml.wd3.myworkdayjobs.com/ASMLEXT1/job/Singapore-Singapore/Strategic-Sourcing---Procurement-AI-Intern--6-months-_J-00354706"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Adobe": {
    "jobs": [
     {
      "job_id": "R173411",
      "location": "San Francisco",
-     "posted_at": "2026-11-05",
+     "posted_at": "2026-11-04",
      "priority": false,
      "reason": "titre ambigu / zone us",
      "status": "review",
@@ -212,6 +202,16 @@
      "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/XMLNAME-2027-Intern---Machine-Learning-Engineer_R171519"
     },
     {
+     "job_id": "R173345",
+     "location": "London",
+     "posted_at": "2026-11-13",
+     "priority": false,
+     "reason": "titre ambigu / zone uk",
+     "status": "review",
+     "title": "2027 Intern - Research Scientist",
+     "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/London/XMLNAME-2027-Intern---Research-Scientist_R173345"
+    },
+    {
      "job_id": "R171666",
      "location": "San Jose · Waltham · San Francisco · Austin · Seattle · Lehi · New York",
      "posted_at": "Posted 30+ Days Ago",
@@ -224,7 +224,7 @@
     {
      "job_id": "R173319",
      "location": "London",
-     "posted_at": "2026-11-12",
+     "posted_at": "2026-11-11",
      "priority": false,
      "reason": "titre ambigu / zone uk",
      "status": "review",
@@ -234,7 +234,7 @@
     {
      "job_id": "R172468",
      "location": "Bucharest",
-     "posted_at": "2026-11-10",
+     "posted_at": "2026-11-09",
      "priority": false,
      "reason": "software (security engineer) / zone europe",
      "status": "notify",
@@ -242,22 +242,32 @@
      "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Bucharest/XMLNAME-2027-Intern--Security-Engineer_R172468"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Adyen": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Airbnb": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Airbus": {
    "jobs": [
     {
+     "job_id": "JR10442457",
+     "location": "Paris Area",
+     "posted_at": "2026-11-13",
+     "priority": false,
+     "reason": "titre ambigu / zone europe (Île-de-France)",
+     "status": "review",
+     "title": "STAGE 2027 -  Développement et Intégration Logicielle (f/h)",
+     "url": "https://ag.wd3.myworkdayjobs.com/Airbus/job/Paris-Area/STAGE-2027----Dveloppement-et-Intgration-Logicielle--f-h-_JR10442457"
+    },
+    {
      "job_id": "JR10445844",
      "location": "Paris Area",
-     "posted_at": "2026-11-11",
+     "posted_at": "2026-11-10",
      "priority": false,
      "reason": "titre ambigu / zone europe (Île-de-France)",
      "status": "review",
@@ -265,11 +275,11 @@
      "url": "https://ag.wd3.myworkdayjobs.com/Airbus/job/Paris-Area/STAGE-2027---Ingnieure-IA-DevTools---Environnement-de-dveloppement-automatis--agentique-_JR10445844"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Airtable": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Akuna Capital": {
    "jobs": [
@@ -284,15 +294,15 @@
      "url": "https://www.akunacapital.com/careers/job/8018856/?gh_jid=8018856"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Alan": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Algolia": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Amazon": {
    "jobs": [
@@ -577,14 +587,14 @@
      "url": "https://www.amazon.jobs/en/jobs/10587087/system-development-engineer-intern-co-op-robotics-2027"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Analog Devices": {
    "jobs": [
     {
      "job_id": "R268506",
      "location": "US, MA, Boston",
-     "posted_at": "2026-11-10",
+     "posted_at": "2026-11-09",
      "priority": false,
      "reason": "signal faible (algorithms) / zone us",
      "status": "review",
@@ -614,7 +624,7 @@
     {
      "job_id": "R267690",
      "location": "US, MA, Boston",
-     "posted_at": "2026-10-27",
+     "posted_at": "2026-10-26",
      "priority": false,
      "reason": "software (devops) / zone us",
      "status": "notify",
@@ -624,7 +634,7 @@
     {
      "job_id": "R268371",
      "location": "US, MA, Boston",
-     "posted_at": "2026-11-10",
+     "posted_at": "2026-11-09",
      "priority": true,
      "reason": "IA (machine learning) / zone us",
      "status": "notify",
@@ -634,7 +644,7 @@
     {
      "job_id": "R267128",
      "location": "United Kingdom, Edinburgh, SC, Freer",
-     "posted_at": "2026-10-21",
+     "posted_at": "2026-10-20",
      "priority": false,
      "reason": "software (software) / zone uk",
      "status": "notify",
@@ -642,7 +652,7 @@
      "url": "https://analogdevices.wd1.myworkdayjobs.com/External/job/United-Kingdom-Edinburgh-SC-Freer/Software-Tools-Engineering-Intern_R267128"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Anduril": {
    "jobs": [
@@ -657,11 +667,11 @@
      "url": "https://boards.greenhouse.io/andurilindustries/jobs/5255902007?gh_jid=5255902007"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Anthropic": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Apple": {
    "jobs": [
@@ -876,11 +886,11 @@
      "url": "https://jobs.apple.com/en-us/details/200664785-3810/software-undergrad-engineering-internships"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Applied Intuition": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Applied Materials": {
    "jobs": [
@@ -905,11 +915,11 @@
      "url": "https://careers.appliedmaterials.com/careers/job/790318299818"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "ArianeGroup": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Arm": {
    "jobs": [
@@ -942,13 +952,23 @@
      "status": "review",
      "title": "Intern Technical Writer",
      "url": "https://careers.arm.com/job/austin/intern-technical-writer/33099/103218662960"
+    },
+    {
+     "job_id": "103250201872",
+     "location": "Austin",
+     "posted_at": null,
+     "priority": true,
+     "reason": "IA (machine learning) / zone us",
+     "status": "notify",
+     "title": "Machine Learning Engineering Intern Ms Phd",
+     "url": "https://careers.arm.com/job/austin/machine-learning-engineering-intern-ms-phd/33099/103250201872"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Asana": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Atlassian": {
    "jobs": [
@@ -963,7 +983,7 @@
      "url": "https://campus-globalcareers-atlassian.icims.com/jobs/26275/software-engineer-intern%2c-2027-canada/job"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Aurora": {
    "jobs": [
@@ -998,11 +1018,11 @@
      "url": "https://jobs.ashbyhq.com/aurora-operations-inc/06daa269-c02b-43a4-88b8-b57a3ba335ef"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Autodesk": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Back Market": {
    "jobs": [
@@ -1027,47 +1047,47 @@
      "url": "https://jobs.ashbyhq.com/backmarket/154e6aa0-dbeb-4521-8135-3304118c822b"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Barclays": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "BlaBlaCar": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "BlackRock": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Block": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Blue Origin": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Boeing": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Booking.com": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Brex": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Bridgewater": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Broadcom": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Capital One": {
    "jobs": [
@@ -1082,11 +1102,11 @@
      "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/New-York-NY/Current-Master-s--AI-Engineering-Internship-Program---Summer-2027_R249109-1"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Chime": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Cisco": {
    "jobs": [
@@ -1103,7 +1123,7 @@
     {
      "job_id": "2024136",
      "location": "Kanata, Ontario, Canada · Saint-Laurent, Quebec, Canada · Calgary, Alberta, Canada · Toronto, Ontario, Canada · Montreal, Quebec, Canada · Vancouver, British Columbia, Canada · Ottawa, Ontario, Canada",
-     "posted_at": "2026-11-07",
+     "posted_at": "2026-11-06",
      "priority": false,
      "reason": "software (software) / zone canada",
      "status": "notify",
@@ -1113,22 +1133,12 @@
     {
      "job_id": "2024641",
      "location": "San Jose, California, US · Austin, Texas, US · RTP, North Carolina, US",
-     "posted_at": "2026-11-11",
+     "posted_at": "2026-11-10",
      "priority": false,
      "reason": "software (software) / zone us",
      "status": "notify",
      "title": "Software Engineer Embedded Systems I (Intern) - United States",
      "url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers/job/San-Jose-California-US/Software-Engineer-Embedded-Systems-I--Intern----United-States_2024641-1"
-    },
-    {
-     "job_id": "2024647",
-     "location": "San Jose, California, US · Austin, Texas, US · RTP, North Carolina, US",
-     "posted_at": "2026-11-10",
-     "priority": false,
-     "reason": "software (software) / zone us",
-     "status": "notify",
-     "title": "Software Engineer Full-Stack / Backend I (Intern) – United States",
-     "url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers/job/San-Jose-California-US/Software-Engineer-Full-Stack---Backend-I--Intern----United-States_2024647-1"
     },
     {
      "job_id": "2024810",
@@ -1141,19 +1151,19 @@
      "url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers/job/Galway-Ireland/Software-Engineer-Intern_2024810"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Citi": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Cloudflare": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Cohere": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Coinbase": {
    "jobs": [
@@ -1228,26 +1238,26 @@
      "url": "https://www.coinbase.com/careers/positions/8376084?gh_jid=8376084"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Confluent": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Contentsquare": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Criteo": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "CrowdStrike": {
    "jobs": [
     {
      "job_id": "R30605",
      "location": "USA - Arlington, VA",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": false,
      "reason": "titre ambigu / zone us",
      "status": "review",
@@ -1255,7 +1265,7 @@
      "url": "https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers/job/USA---Arlington-VA/Intelligence-Intern---Summer-2027_R30605"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "DRW": {
    "jobs": [
@@ -1300,11 +1310,11 @@
      "url": "https://job-boards.greenhouse.io/drweng/jobs/8020364"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Dassault Systèmes": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Databricks": {
    "jobs": [
@@ -1379,7 +1389,7 @@
      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=6865687002"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Datadog": {
    "jobs": [
@@ -1394,27 +1404,27 @@
      "url": "https://careers.datadoghq.com/detail/8052118/?gh_jid=8052118"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Deezer": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Delivery Hero": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Dell": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Deutsche Bank": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Discord": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Doctolib": {
    "jobs": [
@@ -1469,7 +1479,7 @@
      "url": "https://jobs.ashbyhq.com/doctolib/89f0374d-48e3-4774-8a46-edfeb0657e8a"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "DoorDash": {
    "jobs": [
@@ -1484,19 +1494,19 @@
      "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8204111"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Dropbox": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Duolingo": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Dust": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "EA": {
    "jobs": [
@@ -1661,15 +1671,15 @@
      "url": "https://jobs.ea.com/en_US/careers/JobDetail/Strategic-Planning-Intern-MBA/216510"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Elastic": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Engie": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Epic Games": {
    "jobs": [
@@ -1764,7 +1774,7 @@
      "url": "https://epicgames.com/careers/jobs/6174265004?gh_jid=6174265004"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Ericsson": {
    "jobs": [
@@ -1787,6 +1797,36 @@
      "status": "review",
      "title": "Cybersecurity Analyst Intern",
      "url": "https://jobs.ericsson.com/careers/job/563121777363423"
+    },
+    {
+     "job_id": "792523",
+     "location": "Stockholm,Stockholm,Sweden",
+     "posted_at": "2026-11-13",
+     "priority": true,
+     "reason": "IA (ai) / zone europe",
+     "status": "notify",
+     "title": "Internship: AI & Cloud-Native Development (CPI Ecosystem)",
+     "url": "https://jobs.ericsson.com/careers/job/563121777415100"
+    },
+    {
+     "job_id": "792525",
+     "location": "Stockholm,Stockholm,Sweden",
+     "posted_at": "2026-11-13",
+     "priority": false,
+     "reason": "software (test automation) / zone europe",
+     "status": "notify",
+     "title": "Internship: Test Automation & Integration Testing (CPI Automation Portal)",
+     "url": "https://jobs.ericsson.com/careers/job/563121777415103"
+    },
+    {
+     "job_id": "794621",
+     "location": "Milan,Milan,Italy",
+     "posted_at": "2026-11-13",
+     "priority": false,
+     "reason": "signal faible (it) / zone europe",
+     "status": "review",
+     "title": "Junior IT Systems& Automation Intern MI",
+     "url": "https://jobs.ericsson.com/careers/job/563121777605247"
     },
     {
      "job_id": "793299",
@@ -1829,19 +1869,19 @@
      "url": "https://jobs.ericsson.com/careers/job/563121777349942"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Etsy": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Expedia": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Fastly": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Figma": {
    "jobs": [
@@ -1876,11 +1916,11 @@
      "url": "https://boards.greenhouse.io/figma/jobs/6143238004?gh_jid=6143238004"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Flexport": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Fortinet": {
    "jobs": [
@@ -1895,19 +1935,19 @@
      "url": "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/22741"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "GitLab": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Gusto": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "H Company": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Hudson River Trading": {
    "jobs": [
@@ -1932,11 +1972,11 @@
      "url": "https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052083"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Hugging Face": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "IBM": {
    "jobs": [
@@ -2011,6 +2051,16 @@
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=133909"
     },
     {
+     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=143000",
+     "location": "Yorktown Heights, US",
+     "posted_at": null,
+     "priority": true,
+     "reason": "IA (ai) / zone us",
+     "status": "notify",
+     "title": "Applied AI Research Intern - R&D Internship – 2027 - YORKTOWN HEIGHTS",
+     "url": "https://careers.ibm.com/careers/JobDetail?jobId=143000"
+    },
+    {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=140053",
      "location": "Singapore, SG",
      "posted_at": null,
@@ -2071,16 +2121,6 @@
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=137098"
     },
     {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=130876",
-     "location": "POUGHKEEPSIE, US",
-     "posted_at": null,
-     "priority": false,
-     "reason": "software (developer) / zone us",
-     "status": "notify",
-     "title": "Back End Developer Intern - Poughkeepsie, NY - 2027",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=130876"
-    },
-    {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=129781",
      "location": "POUGHKEEPSIE, US",
      "posted_at": null,
@@ -2099,26 +2139,6 @@
      "status": "notify",
      "title": "Back-End Developer Intern 2027 -Tucson, AZ",
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=131072"
-    },
-    {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=128649",
-     "location": "University Park, US",
-     "posted_at": null,
-     "priority": true,
-     "reason": "IA (ai) / zone us",
-     "status": "notify",
-     "title": "Co-Op Data Scientist - AI & Analytics 2027",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=128649"
-    },
-    {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=129227",
-     "location": "University Park, US",
-     "posted_at": null,
-     "priority": false,
-     "reason": "software (developer) / zone us",
-     "status": "notify",
-     "title": "Co-Op Developer - Digital Product 2027",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=129227"
     },
     {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=128711",
@@ -2171,6 +2191,26 @@
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=140610"
     },
     {
+     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=133801",
+     "location": "Yorktown Heights, US",
+     "posted_at": null,
+     "priority": true,
+     "reason": "IA (ai) / zone us",
+     "status": "notify",
+     "title": "Design Engineer Intern 2027 - Design and Build AI-Native Interfaces",
+     "url": "https://careers.ibm.com/careers/JobDetail?jobId=133801"
+    },
+    {
+     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=129244",
+     "location": "University Park, US",
+     "posted_at": null,
+     "priority": false,
+     "reason": "data (data) / zone us",
+     "status": "notify",
+     "title": "Federal Data Engineering Co-Op: 2027",
+     "url": "https://careers.ibm.com/careers/JobDetail?jobId=129244"
+    },
+    {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=129911",
      "location": "Armonk, US",
      "posted_at": null,
@@ -2221,16 +2261,6 @@
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=129927"
     },
     {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=128815",
-     "location": "BATON ROUGE, US",
-     "posted_at": null,
-     "priority": false,
-     "reason": "software (developer) / zone us",
-     "status": "notify",
-     "title": "Intern Application Developer - Oracle - 2027",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=128815"
-    },
-    {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=128825",
      "location": "Chicago, US",
      "posted_at": null,
@@ -2239,16 +2269,6 @@
      "status": "notify",
      "title": "Intern Application Developer 2027 – DPE",
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=128825"
-    },
-    {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=128816",
-     "location": "Chicago, US",
-     "posted_at": null,
-     "priority": false,
-     "reason": "software (developer) / zone us",
-     "status": "notify",
-     "title": "Intern Application Developer 2027-ServiceNow",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=128816"
     },
     {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=128797",
@@ -2281,16 +2301,6 @@
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=128790"
     },
     {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=129628",
-     "location": "MONROE, US",
-     "posted_at": null,
-     "priority": true,
-     "reason": "IA (ai) / zone us",
-     "status": "notify",
-     "title": "Intern Data Engineer - AI & Analytics - 2027",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=129628"
-    },
-    {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=128823",
      "location": "MONROE, US",
      "posted_at": null,
@@ -2299,6 +2309,16 @@
      "status": "notify",
      "title": "Intern Data Engineer - Data Services - 2027",
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=128823"
+    },
+    {
+     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=128824",
+     "location": "BATON ROUGE, US",
+     "posted_at": null,
+     "priority": false,
+     "reason": "data (data) / zone us",
+     "status": "notify",
+     "title": "Intern Data Engineer - Data Services - 2027",
+     "url": "https://careers.ibm.com/careers/JobDetail?jobId=128824"
     },
     {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=128818",
@@ -2341,16 +2361,6 @@
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=103600"
     },
     {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=130098",
-     "location": "New York, US",
-     "posted_at": null,
-     "priority": false,
-     "reason": "titre ambigu / zone us",
-     "status": "review",
-     "title": "Portfolio Development Intern 2027",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=130098"
-    },
-    {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=142564",
      "location": "TUCSON, US",
      "posted_at": null,
@@ -2359,16 +2369,6 @@
      "status": "notify",
      "title": "QA/Test Automation Developer Intern - Tucson, AZ",
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=142564"
-    },
-    {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=130758",
-     "location": "POUGHKEEPSIE, US",
-     "posted_at": null,
-     "priority": false,
-     "reason": "software (developer) / zone us",
-     "status": "notify",
-     "title": "QA/Test Developer Intern: Systems Assurance - Poughkeepsie, NY - 2027",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=130758"
     },
     {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=132433",
@@ -2391,24 +2391,14 @@
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=132699"
     },
     {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=132776",
+     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=133140",
      "location": "Yorktown Heights, US",
      "posted_at": null,
      "priority": false,
-     "reason": "data (data) / zone us",
+     "reason": "software (developer) / zone us",
      "status": "notify",
-     "title": "Quantum Data Scientist Intern - 2027",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=132776"
-    },
-    {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=131910",
-     "location": "Yorktown Heights, US",
-     "posted_at": null,
-     "priority": false,
-     "reason": "titre ambigu / zone us",
-     "status": "review",
-     "title": "Quantum Error Correction Theory Intern - 2027",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=131910"
+     "title": "Quantum Control Systems FPGA Developer Internship 2027",
+     "url": "https://careers.ibm.com/careers/JobDetail?jobId=133140"
     },
     {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=133146",
@@ -2421,14 +2411,14 @@
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=133146"
     },
     {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=133504",
+     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=133127",
      "location": "Yorktown Heights, US",
      "posted_at": null,
      "priority": false,
-     "reason": "software (sre) / zone us",
-     "status": "notify",
-     "title": "Quantum Infrastructure Intern 2027 - SRE",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=133504"
+     "reason": "signal faible (infrastructure) / zone us",
+     "status": "review",
+     "title": "Quantum Infrastructure Intern 2027 - Platform Automation",
+     "url": "https://careers.ibm.com/careers/JobDetail?jobId=133127"
     },
     {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=132533",
@@ -2471,16 +2461,6 @@
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=133669"
     },
     {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=132708",
-     "location": "Yorktown Heights, US",
-     "posted_at": null,
-     "priority": false,
-     "reason": "software (tooling) / zone us",
-     "status": "notify",
-     "title": "Quantum Security Intern 2027 - Cloud Compliance & Security Tooling",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=132708"
-    },
-    {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=133503",
      "location": "Yorktown Heights, US",
      "posted_at": null,
@@ -2489,16 +2469,6 @@
      "status": "review",
      "title": "Quantum System Performance Monitoring Intern 2027",
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=133503"
-    },
-    {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=131175",
-     "location": "Armonk, US",
-     "posted_at": null,
-     "priority": false,
-     "reason": "titre ambigu / zone us",
-     "status": "review",
-     "title": "Quote to Cash Intern 2027",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=131175"
     },
     {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=132569",
@@ -2531,6 +2501,16 @@
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=132880"
     },
     {
+     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=132822",
+     "location": "ROCHESTER, US",
+     "posted_at": null,
+     "priority": false,
+     "reason": "software (site reliability) / zone us",
+     "status": "notify",
+     "title": "Site Reliability Engineer Intern - OneIT - Rochester, MN",
+     "url": "https://careers.ibm.com/careers/JobDetail?jobId=132822"
+    },
+    {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=140606",
      "location": "Markham, CA",
      "posted_at": null,
@@ -2539,16 +2519,6 @@
      "status": "notify",
      "title": "Software Developer Intern - 2027",
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=140606"
-    },
-    {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=130092",
-     "location": "TUCSON, US",
-     "posted_at": null,
-     "priority": false,
-     "reason": "software (software) / zone us",
-     "status": "notify",
-     "title": "Software Developer Intern/Tucson-AZ",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=130092"
     },
     {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=130880",
@@ -2601,16 +2571,6 @@
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=130023"
     },
     {
-     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=130097",
-     "location": "New York, US",
-     "posted_at": null,
-     "priority": false,
-     "reason": "titre ambigu / zone us",
-     "status": "review",
-     "title": "Technical Enablement Specialist Intern - New York, NY - 2027",
-     "url": "https://careers.ibm.com/careers/JobDetail?jobId=130097"
-    },
-    {
      "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=130088",
      "location": "POUGHKEEPSIE, US",
      "posted_at": null,
@@ -2619,9 +2579,19 @@
      "status": "review",
      "title": "Technical Enablement Specialist Intern - Poughkeepsie, NY - 2027",
      "url": "https://careers.ibm.com/careers/JobDetail?jobId=130088"
+    },
+    {
+     "job_id": "https://careers.ibm.com/careers/JobDetail?jobId=137428",
+     "location": "POUGHKEEPSIE, US",
+     "posted_at": null,
+     "priority": false,
+     "reason": "software (developer) / zone us",
+     "status": "notify",
+     "title": "z/OS Core Technologies Back End Developer Intern 2027 - Poughkeepsie",
+     "url": "https://careers.ibm.com/careers/JobDetail?jobId=137428"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "IMC Trading": {
    "jobs": [
@@ -2686,7 +2656,7 @@
      "url": "https://job-boards.eu.greenhouse.io/imc/jobs/4685421101"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Infineon": {
    "jobs": [
@@ -2771,11 +2741,11 @@
      "url": "https://jobs.infineon.com/careers/job/563808972254066"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Instacart": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Intel": {
    "jobs": [
@@ -2792,7 +2762,7 @@
     {
      "job_id": "JR0287933",
      "location": "Canada, Toronto",
-     "posted_at": "2026-10-23",
+     "posted_at": "2026-10-22",
      "priority": false,
      "reason": "software (compiler) / zone canada",
      "status": "notify",
@@ -2802,7 +2772,7 @@
     {
      "job_id": "JR0287897",
      "location": "Poland, Gdansk",
-     "posted_at": "2026-10-15",
+     "posted_at": "2026-10-14",
      "priority": false,
      "reason": "software (compiler) / zone europe",
      "status": "notify",
@@ -2812,7 +2782,7 @@
     {
      "job_id": "JR0287934",
      "location": "Canada, Toronto",
-     "posted_at": "2026-10-16",
+     "posted_at": "2026-10-15",
      "priority": false,
      "reason": "software (compiler) / zone canada",
      "status": "notify",
@@ -2822,7 +2792,7 @@
     {
      "job_id": "JR0288205",
      "location": "Germany, Munich",
-     "posted_at": "2026-10-20",
+     "posted_at": "2026-10-19",
      "priority": false,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -2832,7 +2802,7 @@
     {
      "job_id": "JR0288633",
      "location": "Poland, Gdansk",
-     "posted_at": "2026-11-03",
+     "posted_at": "2026-11-02",
      "priority": false,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -2842,7 +2812,7 @@
     {
      "job_id": "JR0287529",
      "location": "US, California, Folsom",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": false,
      "reason": "titre ambigu / zone us",
      "status": "review",
@@ -2852,7 +2822,7 @@
     {
      "job_id": "JR0287893",
      "location": "Poland, Gdansk",
-     "posted_at": "2026-10-14",
+     "posted_at": "Posted 30+ Days Ago",
      "priority": false,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -2862,7 +2832,7 @@
     {
      "job_id": "JR0287894",
      "location": "Poland, Gdansk",
-     "posted_at": "2026-10-14",
+     "posted_at": "Posted 30+ Days Ago",
      "priority": false,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -2882,7 +2852,7 @@
     {
      "job_id": "JR0288216",
      "location": "Poland, Gdansk",
-     "posted_at": "2026-10-22",
+     "posted_at": "2026-10-21",
      "priority": true,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -2892,7 +2862,7 @@
     {
      "job_id": "JR0288213",
      "location": "Poland, Gdansk",
-     "posted_at": "2026-10-21",
+     "posted_at": "2026-10-20",
      "priority": false,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -2902,7 +2872,7 @@
     {
      "job_id": "JR0288635",
      "location": "Germany, Munich",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": false,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -2912,7 +2882,7 @@
     {
      "job_id": "JR0287943",
      "location": "Germany, Munich",
-     "posted_at": "2026-10-15",
+     "posted_at": "2026-10-14",
      "priority": false,
      "reason": "software (compiler) / zone europe",
      "status": "notify",
@@ -2922,7 +2892,7 @@
     {
      "job_id": "JR0287942",
      "location": "Germany, Munich",
-     "posted_at": "2026-10-15",
+     "posted_at": "2026-10-14",
      "priority": false,
      "reason": "software (compiler) / zone europe",
      "status": "notify",
@@ -2932,7 +2902,7 @@
     {
      "job_id": "JR0288937",
      "location": "Germany, Munich",
-     "posted_at": "2026-11-07",
+     "posted_at": "2026-11-06",
      "priority": false,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -2962,7 +2932,7 @@
     {
      "job_id": "JR0287923",
      "location": "Germany, Munich",
-     "posted_at": "2026-11-13",
+     "posted_at": "2026-11-12",
      "priority": false,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -2972,7 +2942,7 @@
     {
      "job_id": "JR0287946",
      "location": "Germany, Munich",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": false,
      "reason": "titre ambigu / zone europe",
      "status": "review",
@@ -2980,7 +2950,7 @@
      "url": "https://intel.wd1.myworkdayjobs.com/External/job/Germany-Munich/System-Debugger-Development-Intern--m-f-d-_JR0287946"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Intuit": {
    "jobs": [
@@ -3025,11 +2995,11 @@
      "url": "https://jobs.intuit.com/job/mountain-view/summer-2027-software-engineering-intern-full-stack/27595/100620927520"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Jane Street": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Jump Trading": {
    "jobs": [
@@ -3144,14 +3114,14 @@
      "url": "https://www.jumptrading.com/hr/job?gh_jid=8003019"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "KLA": {
    "jobs": [
     {
      "job_id": "2641569",
      "location": "Milpitas, CA",
-     "posted_at": "2026-11-10",
+     "posted_at": "2026-11-09",
      "priority": false,
      "reason": "titre ambigu / zone us",
      "status": "review",
@@ -3171,7 +3141,7 @@
     {
      "job_id": "2641921",
      "location": "Milpitas, CA",
-     "posted_at": "2026-10-21",
+     "posted_at": "2026-10-20",
      "priority": true,
      "reason": "IA (machine learning) / zone us",
      "status": "notify",
@@ -3181,7 +3151,7 @@
     {
      "job_id": "2642159",
      "location": "Milpitas, CA",
-     "posted_at": "2026-10-30",
+     "posted_at": "2026-10-29",
      "priority": false,
      "reason": "titre ambigu / zone us",
      "status": "review",
@@ -3191,7 +3161,7 @@
     {
      "job_id": "2642012",
      "location": "Milpitas, CA",
-     "posted_at": "2026-11-10",
+     "posted_at": "2026-11-09",
      "priority": false,
      "reason": "engineer (générique) / zone us",
      "status": "notify",
@@ -3201,7 +3171,7 @@
     {
      "job_id": "2642125",
      "location": "Austin, TX · Milpitas, CA",
-     "posted_at": "2026-11-03",
+     "posted_at": "2026-11-02",
      "priority": true,
      "reason": "software (software) / zone us",
      "status": "notify",
@@ -3211,7 +3181,7 @@
     {
      "job_id": "2642721",
      "location": "Milpitas, CA",
-     "posted_at": "2026-10-30",
+     "posted_at": "2026-10-29",
      "priority": false,
      "reason": "software (software) / zone us",
      "status": "notify",
@@ -3221,7 +3191,7 @@
     {
      "job_id": "2642004",
      "location": "Austin, TX",
-     "posted_at": "2026-11-03",
+     "posted_at": "2026-11-02",
      "priority": false,
      "reason": "software (software) / zone us",
      "status": "notify",
@@ -3231,7 +3201,7 @@
     {
      "job_id": "2642189",
      "location": "Milpitas, CA",
-     "posted_at": "2026-10-24",
+     "posted_at": "2026-10-23",
      "priority": false,
      "reason": "software (software) / zone us",
      "status": "notify",
@@ -3251,7 +3221,7 @@
     {
      "job_id": "2642129",
      "location": "Milpitas, CA",
-     "posted_at": "2026-10-24",
+     "posted_at": "2026-10-23",
      "priority": true,
      "reason": "software (software) / zone us",
      "status": "notify",
@@ -3261,7 +3231,7 @@
     {
      "job_id": "2642700",
      "location": "Milpitas, CA",
-     "posted_at": "2026-10-30",
+     "posted_at": "2026-10-29",
      "priority": false,
      "reason": "software (software) / zone us",
      "status": "notify",
@@ -3271,7 +3241,7 @@
     {
      "job_id": "2642954",
      "location": "Milpitas, CA",
-     "posted_at": "2026-11-07",
+     "posted_at": "2026-11-06",
      "priority": false,
      "reason": "software (software) / zone us",
      "status": "notify",
@@ -3279,7 +3249,7 @@
      "url": "https://kla.wd1.myworkdayjobs.com/Search/job/Milpitas-CA/Software-Intern_2642954-1"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Lam Research": {
    "jobs": [
@@ -3334,15 +3304,15 @@
      "url": "https://careers.lamresearch.com/careers/job/1099556521831"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Ledger": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Linear": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Lockheed Martin": {
    "jobs": [
@@ -3357,11 +3327,11 @@
      "url": "https://lockheedmartin.eightfold.ai/careers/job/996477136451"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Lucid": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Lyft": {
    "jobs": [
@@ -3396,7 +3366,7 @@
      "url": "https://app.careerpuck.com/job-board/lyft/job/8767726002?gh_jid=8767726002"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "MBDA": {
    "jobs": [
@@ -3411,18 +3381,18 @@
      "url": "https://mbda.gestmax.fr/20110/1/stage-traitement-d-images-optimisation-de-base-de-donnees-pour-la-detection-d-objets-par-ia-f-h?backlink=search"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "MBDA UK": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Marvell": {
    "jobs": [
     {
      "job_id": "2604441",
      "location": "Singapore",
-     "posted_at": "2026-10-14",
+     "posted_at": "Posted 30+ Days Ago",
      "priority": true,
      "reason": "FDE (solutions engineer) / zone asia",
      "status": "notify",
@@ -3440,11 +3410,11 @@
      "url": "https://marvell.wd1.myworkdayjobs.com/MarvellCareers/job/Santa-Clara-CA/AI-Native-Development-Platform-Engineer-Intern--MS---Summer-2027_2603848-1"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Mastercard": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Micron": {
    "jobs": [
@@ -3461,7 +3431,7 @@
     {
      "job_id": "JR109768",
      "location": "Fab 10N/X, Singapore",
-     "posted_at": "2026-11-13",
+     "posted_at": "2026-11-12",
      "priority": false,
      "reason": "titre ambigu / zone asia",
      "status": "review",
@@ -3481,7 +3451,7 @@
     {
      "job_id": "JR115008",
      "location": "Fab 10A, Singapore",
-     "posted_at": "2026-11-05",
+     "posted_at": "2026-11-04",
      "priority": false,
      "reason": "titre ambigu / zone asia",
      "status": "review",
@@ -3491,7 +3461,7 @@
     {
      "job_id": "JR115127",
      "location": "Richardson, TX",
-     "posted_at": "2026-10-28",
+     "posted_at": "2026-10-27",
      "priority": false,
      "reason": "data (data) / zone us",
      "status": "notify",
@@ -3501,7 +3471,7 @@
     {
      "job_id": "JR112979",
      "location": "Fab 10N/X, Singapore",
-     "posted_at": "2026-10-24",
+     "posted_at": "2026-10-23",
      "priority": true,
      "reason": "IA (ai) / zone asia",
      "status": "notify",
@@ -3511,7 +3481,7 @@
     {
      "job_id": "JR101066",
      "location": "Fab 10N/X, Singapore",
-     "posted_at": "2026-11-13",
+     "posted_at": "2026-11-12",
      "priority": false,
      "reason": "titre ambigu / zone asia",
      "status": "review",
@@ -3521,7 +3491,7 @@
     {
      "job_id": "JR112661",
      "location": "Fab 10N/X, Singapore",
-     "posted_at": "2026-10-24",
+     "posted_at": "2026-10-23",
      "priority": false,
      "reason": "titre ambigu / zone asia",
      "status": "review",
@@ -3531,7 +3501,7 @@
     {
      "job_id": "JR112385",
      "location": "Fab 10N/X, Singapore",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": false,
      "reason": "titre ambigu / zone asia",
      "status": "review",
@@ -3551,7 +3521,7 @@
     {
      "job_id": "JR114721",
      "location": "Vimercate (MB), Italy",
-     "posted_at": "2026-11-11",
+     "posted_at": "2026-11-10",
      "priority": false,
      "reason": "titre ambigu / zone europe",
      "status": "review",
@@ -3559,7 +3529,7 @@
      "url": "https://micron.wd1.myworkdayjobs.com/External/job/Vimercate-MB-Italy/Intern-EDG---Robotics-UM-exploration_JR114721"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Microsoft": {
    "jobs": [
@@ -3704,11 +3674,11 @@
      "url": "https://apply.careers.microsoft.com/careers/job/1970393556999316"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Mirakl": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Mistral AI": {
    "jobs": [
@@ -3753,7 +3723,7 @@
      "url": "https://jobs.ashbyhq.com/mistral.ai/de46ba8b-00cb-4618-83df-66e15a78434e"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "MongoDB": {
    "jobs": [
@@ -3778,26 +3748,26 @@
      "url": "https://www.mongodb.com/careers/job/?gh_jid=8267099"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Monzo": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Morgan Stanley": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "N26": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "NVIDIA": {
    "jobs": [
     {
      "job_id": "JR2029220",
      "location": "US, TX, Austin",
-     "posted_at": "2026-11-03",
+     "posted_at": "2026-11-02",
      "priority": true,
      "reason": "software (compiler) / zone us",
      "status": "notify",
@@ -3807,7 +3777,7 @@
     {
      "job_id": "JR2029069",
      "location": "Switzerland, Zurich",
-     "posted_at": "2026-11-04",
+     "posted_at": "2026-11-03",
      "priority": true,
      "reason": "software (compiler) / zone europe",
      "status": "notify",
@@ -3817,7 +3787,7 @@
     {
      "job_id": "JR2029119",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-11-11",
+     "posted_at": "2026-11-10",
      "priority": true,
      "reason": "IA + non-tech (operations) / zone us",
      "status": "review",
@@ -3827,7 +3797,7 @@
     {
      "job_id": "JR2028607",
      "location": "US, WA, Redmond",
-     "posted_at": "2026-10-31",
+     "posted_at": "2026-10-30",
      "priority": false,
      "reason": "software (software) / zone us",
      "status": "notify",
@@ -3837,7 +3807,7 @@
     {
      "job_id": "JR2027548",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-11-05",
+     "posted_at": "2026-11-04",
      "priority": true,
      "reason": "IA (ai) / zone us",
      "status": "notify",
@@ -3847,7 +3817,7 @@
     {
      "job_id": "JR2028210",
      "location": "Germany, Munich · France, Courbevoie · Germany, Wuerselen",
-     "posted_at": "2026-11-01",
+     "posted_at": "2026-10-31",
      "priority": false,
      "reason": "software (developer) / zone europe (Île-de-France)",
      "status": "notify",
@@ -3857,7 +3827,7 @@
     {
      "job_id": "JR2027826",
      "location": "Poland, Warsaw",
-     "posted_at": "2026-11-01",
+     "posted_at": "2026-10-31",
      "priority": false,
      "reason": "software (developer) / zone europe",
      "status": "notify",
@@ -3867,7 +3837,7 @@
     {
      "job_id": "JR2028597",
      "location": "Switzerland, Zurich",
-     "posted_at": "2026-10-27",
+     "posted_at": "2026-10-26",
      "priority": true,
      "reason": "IA (genai) / zone europe",
      "status": "notify",
@@ -3877,7 +3847,7 @@
     {
      "job_id": "JR2029779",
      "location": "Switzerland, Zurich",
-     "posted_at": "2026-11-12",
+     "posted_at": "2026-11-11",
      "priority": false,
      "reason": "software (compiler) / zone europe",
      "status": "notify",
@@ -3887,7 +3857,7 @@
     {
      "job_id": "JR2026517",
      "location": "Poland, Warsaw",
-     "posted_at": "2026-11-01",
+     "posted_at": "2026-10-31",
      "priority": false,
      "reason": "software (libraries) / zone europe",
      "status": "notify",
@@ -3897,7 +3867,7 @@
     {
      "job_id": "JR2026569",
      "location": "Poland, Warsaw · Switzerland, Zurich · Germany, Berlin",
-     "posted_at": "2026-11-01",
+     "posted_at": "2026-10-31",
      "priority": false,
      "reason": "software (libraries) / zone europe",
      "status": "notify",
@@ -3907,7 +3877,7 @@
     {
      "job_id": "JR2028206",
      "location": "Poland, Warsaw · France, Courbevoie · Poland, Remote · France, Remote",
-     "posted_at": "2026-11-01",
+     "posted_at": "2026-10-31",
      "priority": false,
      "reason": "software (libraries) / zone europe (Île-de-France)",
      "status": "notify",
@@ -3917,7 +3887,7 @@
     {
      "job_id": "JR2028208",
      "location": "Switzerland, Zurich",
-     "posted_at": "2026-11-13",
+     "posted_at": "2026-11-12",
      "priority": false,
      "reason": "software (libraries) / zone europe",
      "status": "notify",
@@ -3927,7 +3897,7 @@
     {
      "job_id": "JR2028449",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-11-03",
+     "posted_at": "2026-11-02",
      "priority": false,
      "reason": "software (libraries) / zone us",
      "status": "notify",
@@ -3937,7 +3907,7 @@
     {
      "job_id": "JR2023496",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-10-31",
+     "posted_at": "2026-10-30",
      "priority": false,
      "reason": "titre ambigu / zone us",
      "status": "review",
@@ -3947,7 +3917,7 @@
     {
      "job_id": "JR2023497",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-10-31",
+     "posted_at": "2026-10-30",
      "priority": true,
      "reason": "IA (deep learning) / zone us",
      "status": "notify",
@@ -3957,7 +3927,7 @@
     {
      "job_id": "JR2023495",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-10-31",
+     "posted_at": "2026-10-30",
      "priority": false,
      "reason": "software (software) / zone us",
      "status": "notify",
@@ -3967,7 +3937,7 @@
     {
      "job_id": "JR2023492",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-10-31",
+     "posted_at": "2026-10-30",
      "priority": false,
      "reason": "software (software) / zone us",
      "status": "notify",
@@ -3977,7 +3947,7 @@
     {
      "job_id": "JR2023499",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-10-31",
+     "posted_at": "2026-10-30",
      "priority": false,
      "reason": "software (developer) / zone us",
      "status": "notify",
@@ -3987,7 +3957,7 @@
     {
      "job_id": "JR2028699",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-11-03",
+     "posted_at": "2026-11-02",
      "priority": true,
      "reason": "IA + non-tech (marketing) / zone us",
      "status": "review",
@@ -3997,7 +3967,7 @@
     {
      "job_id": "JR2027829",
      "location": "Germany, Remote · France, Remote",
-     "posted_at": "2026-11-03",
+     "posted_at": "2026-11-02",
      "priority": true,
      "reason": "IA (foundation model) / zone europe",
      "status": "notify",
@@ -4007,7 +3977,7 @@
     {
      "job_id": "JR2028260",
      "location": "US, CA, Santa Clara · US, TX, Austin · US, WA, Redmond",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": true,
      "reason": "IA (agentic) / zone us",
      "status": "notify",
@@ -4017,7 +3987,7 @@
     {
      "job_id": "JR2029066",
      "location": "Switzerland, Zurich",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": false,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -4027,7 +3997,7 @@
     {
      "job_id": "JR2027429",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-10-31",
+     "posted_at": "2026-10-30",
      "priority": false,
      "reason": "software (libraries) / zone us",
      "status": "notify",
@@ -4037,7 +4007,7 @@
     {
      "job_id": "JR2029780",
      "location": "Finland, Helsinki",
-     "posted_at": "2026-11-12",
+     "posted_at": "2026-11-11",
      "priority": false,
      "reason": "software (software) / zone europe",
      "status": "notify",
@@ -4047,7 +4017,7 @@
     {
      "job_id": "JR2026644",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-11-10",
+     "posted_at": "2026-11-09",
      "priority": false,
      "reason": "titre ambigu / zone us",
      "status": "review",
@@ -4057,7 +4027,7 @@
     {
      "job_id": "JR2028148",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": true,
      "reason": "IA + non-tech (content) / zone us",
      "status": "review",
@@ -4067,7 +4037,7 @@
     {
      "job_id": "JR2028995",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-11-03",
+     "posted_at": "2026-11-02",
      "priority": true,
      "reason": "IA + non-tech (marketing) / zone us",
      "status": "review",
@@ -4077,7 +4047,7 @@
     {
      "job_id": "JR2026798",
      "location": "US, CA, Santa Clara",
-     "posted_at": "2026-11-05",
+     "posted_at": "2026-11-04",
      "priority": false,
      "reason": "titre ambigu / zone us",
      "status": "review",
@@ -4085,7 +4055,7 @@
      "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/VLSI-Timing-Methodology-Intern---Summer-2027_JR2026798"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "NXP": {
    "jobs": [
@@ -4104,11 +4074,11 @@
   },
   "NetApp": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Netflix": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Nintendo": {
    "jobs": [
@@ -4203,11 +4173,11 @@
      "url": "https://careers.nintendo.com/?gh_jid=4469778009"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Northrop Grumman": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Notion": {
    "jobs": [
@@ -4242,7 +4212,7 @@
      "url": "https://jobs.ashbyhq.com/notion/27090d0f-07d3-419b-adaa-837b5e22f947"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Nuro": {
    "jobs": [
@@ -4257,15 +4227,15 @@
      "url": "https://nuro.ai/careersitem?gh_jid=7351061"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Okta": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "OpenAI": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Optiver": {
    "jobs": [
@@ -4290,11 +4260,11 @@
      "url": "https://www.optiver.com/join-us/jobs/8713435002/?gh_jid=8713435002"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Oracle": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Orange": {
    "jobs": [
@@ -4319,16 +4289,6 @@
      "url": "https://orange.jobs/fr/fr/job/CTS-2026-55550/OW-Stage-GenAI-BI-for-Core-Network-Communication-Services-VOICE-F-H"
     },
     {
-     "job_id": "CTS-2026-55345",
-     "location": "",
-     "posted_at": null,
-     "priority": false,
-     "reason": "titre ambigu / lieu vide",
-     "status": "review",
-     "title": "Stage 6 Mois Conception Et Réalisation D Un Système Fast Zapping Pour Une App Tv F H",
-     "url": "https://orange.jobs/fr/fr/job/CTS-2026-55345/Stage-6-mois-Conception-et-réalisation-d-un-système-fast-zapping-pour-une-app-TV-F-H"
-    },
-    {
      "job_id": "CTS-2026-54689",
      "location": "",
      "posted_at": null,
@@ -4347,36 +4307,6 @@
      "status": "review",
      "title": "Stage Apprentissage Automatique Sur Données Multi Table F H",
      "url": "https://orange.jobs/fr/fr/job/CTS-2026-54691/Stage-Apprentissage-automatique-sur-données-multi-table-F-H"
-    },
-    {
-     "job_id": "CTS-2026-54525",
-     "location": "",
-     "posted_at": null,
-     "priority": false,
-     "reason": "titre ambigu / lieu vide",
-     "status": "review",
-     "title": "Stage Combiner Quantification De L Incertitude Et Ia Explicable Pour Des Explications Plus Fiables F H",
-     "url": "https://orange.jobs/fr/fr/job/CTS-2026-54525/Stage-Combiner-quantification-de-l-incertitude-et-IA-explicable-pour-des-explications-plus-fiables-F-H"
-    },
-    {
-     "job_id": "CTS-2026-54362",
-     "location": "",
-     "posted_at": null,
-     "priority": false,
-     "reason": "software (developpeur) / lieu vide",
-     "status": "review",
-     "title": "Stage Data Scientist Développeur F H",
-     "url": "https://orange.jobs/fr/fr/job/CTS-2026-54362/Stage-Data-Scientist-Développeur-F-H"
-    },
-    {
-     "job_id": "CTS-2026-55417",
-     "location": "",
-     "posted_at": null,
-     "priority": false,
-     "reason": "titre ambigu / lieu vide",
-     "status": "review",
-     "title": "Stage De Recherche Explicabilité De L Apprentissage Contextuel Dans Les Modèles De Fondation F H",
-     "url": "https://orange.jobs/fr/fr/job/CTS-2026-55417/Stage-de-recherche-Explicabilité-de-l-apprentissage-contextuel-dans-les-modèles-de-fondation-F-H"
     },
     {
      "job_id": "CTS-2026-55175",
@@ -4499,7 +4429,7 @@
      "url": "https://orange.jobs/fr/fr/job/CTS-2026-55254/​​STAGE-IA-pour-le-sensing-radio-suivi-et-classification-de-véhicules​-F-H"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Palantir": {
    "jobs": [
@@ -4764,7 +4694,7 @@
      "url": "https://jobs.lever.co/palantir/655f9937-a4ce-4e7d-80e2-a6659af07329"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Palo Alto Networks": {
    "jobs": [
@@ -4829,18 +4759,18 @@
      "url": "https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers/job/Office---USA---CA---Headquarters/Intern---Software-Engineer_JR-011598"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "PayFit": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "PayPal": {
    "jobs": [
     {
      "job_id": "R0138587",
      "location": "San Jose, California, United States of America · Chicago, Illinois, United States of America · Scottsdale, Arizona, United States of America · Austin, Texas, United States of America",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": false,
      "reason": "signal faible (cybersecurity) / zone us",
      "status": "review",
@@ -4850,7 +4780,7 @@
     {
      "job_id": "R0138582",
      "location": "San Jose, California, United States of America",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": false,
      "reason": "data (data) / zone us",
      "status": "notify",
@@ -4860,7 +4790,7 @@
     {
      "job_id": "R0138581",
      "location": "San Jose, California, United States of America",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": true,
      "reason": "IA (machine learning) / zone us",
      "status": "notify",
@@ -4870,7 +4800,7 @@
     {
      "job_id": "R0138583",
      "location": "San Jose, California, United States of America · Chicago, Illinois, United States of America · Omaha, Nebraska, United States of America · Scottsdale, Arizona, United States of America · Austin, Texas, United States of America",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": false,
      "reason": "software (mobile) / zone us",
      "status": "notify",
@@ -4880,7 +4810,7 @@
     {
      "job_id": "R0138586",
      "location": "San Jose, California, United States of America · Chicago, Illinois, United States of America · Omaha, Nebraska, United States of America · Scottsdale, Arizona, United States of America · Austin, Texas, United States of America",
-     "posted_at": "2026-11-06",
+     "posted_at": "2026-11-05",
      "priority": false,
      "reason": "software (software) / zone us",
      "status": "notify",
@@ -4888,7 +4818,7 @@
      "url": "https://paypal.wd1.myworkdayjobs.com/jobs/job/San-Jose-California-United-States-of-America/Software-Engineer-Intern---Summer-2027_R0138586"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Perplexity": {
    "jobs": [
@@ -4913,11 +4843,11 @@
      "url": "https://jobs.ashbyhq.com/Perplexity/71168628-1998-47d3-87a9-be7bc56a430d"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Philips": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Pigment": {
    "jobs": [
@@ -4942,7 +4872,7 @@
      "url": "https://jobs.lever.co/pigment/d29b429b-81a5-43f1-abe3-344b8defea7a"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Pinterest": {
    "jobs": [
@@ -5047,11 +4977,11 @@
      "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8214745"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Plaid": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Point72": {
    "jobs": [
@@ -5096,15 +5026,15 @@
      "url": "https://boards.greenhouse.io/point72/jobs/7297666002?gh_jid=7297666002"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Poolside": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Qonto": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Qualcomm": {
    "jobs": [
@@ -5169,6 +5099,16 @@
      "url": "https://careers.qualcomm.com/careers/job/446721969461"
     },
     {
+     "job_id": "3099366",
+     "location": "Stockholm, Sweden",
+     "posted_at": "2026-11-13",
+     "priority": true,
+     "reason": "IA (ai) / zone europe",
+     "status": "notify",
+     "title": "FY27 Intern - Multimedia R&D Intern – Video & AI - 6 months, Stockholm (Bromma) - Sweden",
+     "url": "https://careers.qualcomm.com/careers/job/446722110729"
+    },
+    {
      "job_id": "3092697",
      "location": "Cork, Ireland",
      "posted_at": "2026-06-11",
@@ -5219,7 +5159,7 @@
      "url": "https://careers.qualcomm.com/careers/job/446720740529"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Qube Research & Technologies": {
    "jobs": [
@@ -5264,7 +5204,7 @@
      "url": "https://job-boards.greenhouse.io/quberesearchandtechnologies/jobs/8617401002"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "RTX": {
    "jobs": [
@@ -5804,15 +5744,15 @@
      "url": "https://jobs.ashbyhq.com/ramp/b66be397-240b-41a6-9b05-493299b270a9"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Reddit": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Replit": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Riot Games": {
    "jobs": [
@@ -5917,7 +5857,7 @@
      "url": "https://www.riotgames.com/en/work-with-us/job/8356525?gh_jid=8356525"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Rivian": {
    "jobs": [
@@ -5962,11 +5902,11 @@
      "url": "https://careers.rivian.com/careers-home/jobs/35896"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Robinhood": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Roblox": {
    "jobs": [
@@ -5981,22 +5921,22 @@
      "url": "https://careers.roblox.com/jobs/8072713?gh_jid=8072713"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Rubrik": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "STMicroelectronics": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Salesforce": {
    "jobs": [
     {
      "job_id": "JR366248",
      "location": "California - San Francisco · Washington - Seattle",
-     "posted_at": "2026-10-31",
+     "posted_at": "2026-10-30",
      "priority": true,
      "reason": "IA + non-tech (talent) / zone us",
      "status": "review",
@@ -6004,7 +5944,7 @@
      "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/AI-Labs-Summer-Internship--Emerging-Talent_JR366248"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Samsara": {
    "jobs": [
@@ -6019,7 +5959,7 @@
      "url": "https://www.samsara.com/company/careers/roles/8358786?gh_jid=8358786"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Scale AI": {
    "jobs": [
@@ -6044,15 +5984,15 @@
      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4730846005"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Scaleway": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Schneider Electric": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Seagate": {
    "jobs": [
@@ -6167,6 +6107,16 @@
      "url": "https://seagatecareers.com/job/Longmont-Digital-Workplace-Enablement-Desktop-Support-Intern-Summer-2027-CO-80501/1449667000/"
     },
     {
+     "job_id": "1450512600",
+     "location": "",
+     "posted_at": null,
+     "priority": false,
+     "reason": "titre ambigu / lieu vide",
+     "status": "review",
+     "title": "Longmont Intern Storage Systems In Seagate Research Group Co 80501",
+     "url": "https://seagatecareers.com/job/Longmont-Intern-Storage-Systems-in-Seagate-Research-Group-CO-80501/1450512600/"
+    },
+    {
      "job_id": "1361017900",
      "location": "",
      "posted_at": null,
@@ -6267,6 +6217,26 @@
      "url": "https://seagatecareers.com/job/Samut-Prakan-AI-Adoption-Intern/1432844600/"
     },
     {
+     "job_id": "1450506100",
+     "location": "",
+     "posted_at": null,
+     "priority": true,
+     "reason": "IA (ai) / lieu vide",
+     "status": "review",
+     "title": "Shakopee Intern Edge Ai Platform In Seagate Research Group Mn",
+     "url": "https://seagatecareers.com/job/Shakopee-Intern-Edge-AI-Platform-in-Seagate-Research-Group-MN/1450506100/"
+    },
+    {
+     "job_id": "1450503400",
+     "location": "",
+     "posted_at": null,
+     "priority": false,
+     "reason": "titre ambigu / lieu vide",
+     "status": "review",
+     "title": "Shakopee Intern Embedded Firmware In Seagate Research Group Mn",
+     "url": "https://seagatecareers.com/job/Shakopee-Intern-Embedded-Firmware-in-Seagate-Research-Group-MN/1450503400/"
+    },
+    {
      "job_id": "1418988100",
      "location": "",
      "posted_at": null,
@@ -6317,7 +6287,7 @@
      "url": "https://seagatecareers.com/job/Wuxi-Big-Data-Engineer-Intern/1406634800/"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "SeatGeek": {
    "jobs": [
@@ -6332,11 +6302,11 @@
      "url": "https://seatgeek.com/jobs/8227553?gh_jid=8227553"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "SentinelOne": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "ServiceNow": {
    "jobs": [
@@ -6361,10 +6331,30 @@
      "url": "https://jobs.smartrecruiters.com/ServiceNow/744000155345689"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Shield AI": {
    "jobs": [
+    {
+     "job_id": "cf89556f-a5ea-4a3a-81c7-944890f76ade",
+     "location": "Washington, D.C.",
+     "posted_at": "2026-11-13",
+     "priority": false,
+     "reason": "titre ambigu / zone us",
+     "status": "review",
+     "title": "2027 Summer Intern - Future Concepts - 6539",
+     "url": "https://jobs.lever.co/shieldai/cf89556f-a5ea-4a3a-81c7-944890f76ade"
+    },
+    {
+     "job_id": "a737063e-e831-49e1-98c3-25be44faac30",
+     "location": "Washington, D.C.",
+     "posted_at": "2026-11-13",
+     "priority": false,
+     "reason": "titre ambigu / zone us",
+     "status": "review",
+     "title": "2027 Summer Intern - Human Machine Teaming - 6532",
+     "url": "https://jobs.lever.co/shieldai/a737063e-e831-49e1-98c3-25be44faac30"
+    },
     {
      "job_id": "1bcb2094-e52d-4af9-9eee-2bcd655536ca",
      "location": "San Diego, California · Washington, D.C.",
@@ -6396,7 +6386,7 @@
      "url": "https://jobs.lever.co/shieldai/8c850c75-081d-4d09-bebf-096379a93010"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Siemens": {
    "jobs": [
@@ -6551,15 +6541,15 @@
      "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/528117"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Slack": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Snap": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Snowflake": {
    "jobs": [
@@ -6572,6 +6562,16 @@
      "status": "notify",
      "title": "Software Engineer Intern - Berlin (2027)",
      "url": "https://jobs.ashbyhq.com/snowflake/ab028e3c-c1cf-4455-8915-8e4e6b0cc9e8"
+    },
+    {
+     "job_id": "26a0ae52-97a6-4a46-9216-3c382570d89b",
+     "location": "CH-Zurich-Observe",
+     "posted_at": "2026-11-13",
+     "priority": false,
+     "reason": "software (software) / zone europe",
+     "status": "notify",
+     "title": "Software Engineer Intern - Zurich (2027)",
+     "url": "https://jobs.ashbyhq.com/snowflake/26a0ae52-97a6-4a46-9216-3c382570d89b"
     },
     {
      "job_id": "418a8f32-1658-47d9-9450-ed3a6e947215",
@@ -6604,7 +6604,7 @@
      "url": "https://jobs.ashbyhq.com/snowflake/a1d72623-8c75-41ce-8980-760ffcbc050c"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Sopra Steria": {
    "jobs": [
@@ -6629,19 +6629,19 @@
      "url": "https://jobs.smartrecruiters.com/SopraSteria1/744000161287429"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Sorare": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "SpaceX": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Spotify": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Squarepoint": {
    "jobs": [
@@ -6686,11 +6686,11 @@
      "url": "https://www.squarepoint-capital.com/open-opportunities?id=8045124&gh_jid=8045124"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Stellantis": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Stripe": {
    "jobs": [
@@ -6775,15 +6775,15 @@
      "url": "https://stripe.com/jobs/search?gh_jid=8130805"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Supabase": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Swile": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Texas Instruments": {
    "jobs": [
@@ -6808,7 +6808,7 @@
      "url": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25019103"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Thales": {
    "jobs": [
@@ -7023,6 +7023,16 @@
      "url": "https://careers.thalesgroup.com/fr/fr/job/R0342567/STAGE-Ingénieur-de-Recherche-Vol-de-modèle-par-extraction-attaques-et-défenses-H-F-6-mois"
     },
     {
+     "job_id": "R0341963",
+     "location": "",
+     "posted_at": null,
+     "priority": false,
+     "reason": "titre ambigu / lieu vide",
+     "status": "review",
+     "title": "Stage Ingénieur Developpement Psirt Mcs F H",
+     "url": "https://careers.thalesgroup.com/fr/fr/job/R0341963/STAGE-ingénieur-developpement-PSIRT-MCS-F-H"
+    },
+    {
      "job_id": "R0342612",
      "location": "",
      "posted_at": null,
@@ -7213,16 +7223,6 @@
      "url": "https://careers.thalesgroup.com/fr/fr/job/R0343663/STAGE-Online-Test-Time-Adaptation-Speech-Enhancement-H-F"
     },
     {
-     "job_id": "R0341167",
-     "location": "",
-     "posted_at": null,
-     "priority": true,
-     "reason": "IA (deep learning) / lieu vide",
-     "status": "review",
-     "title": "Stage Optimisation D’algorithmes De Deep Learning F H",
-     "url": "https://careers.thalesgroup.com/fr/fr/job/R0341167/STAGE-Optimisation-d’algorithmes-de-deep-learning-F-H"
-    },
-    {
      "job_id": "R0343869",
      "location": "",
      "posted_at": null,
@@ -7253,7 +7253,7 @@
      "url": "https://careers.thalesgroup.com/fr/fr/job/R0336402/Werkstudent-m-f-d-Data-Engineering-AI-for-Radar"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "TotalEnergies": {
    "jobs": [
@@ -7268,7 +7268,7 @@
      "url": "https://jobs.totalenergies.com/en_US/careers/JobDetail/Quantitative-Development-Data-Science-Intern/85607"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Tower Research Capital": {
    "jobs": [
@@ -7313,34 +7313,34 @@
      "url": "https://www.tower-research.com/open-positions/?gh_jid=8212179"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Trade Republic": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Twilio": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Twitch": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Uber": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Ubisoft": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Unity": {
    "jobs": [
     {
      "job_id": "JOBREQ-2615965",
      "location": "Mountain View, CA, USA · Remote, Washington, USA",
-     "posted_at": "2026-10-14",
+     "posted_at": "Posted 30+ Days Ago",
      "priority": true,
      "reason": "IA (machine learning) / zone us",
      "status": "notify",
@@ -7348,14 +7348,14 @@
      "url": "https://unitytech.wd1.myworkdayjobs.com/unity/job/Mountain-View-CA-USA/XMLNAME--Req-6087--Software-Developer_JOBREQ-2615965"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Valeo": {
    "jobs": [
     {
      "job_id": "REQ2026082952",
      "location": "Créteil",
-     "posted_at": "2026-11-11",
+     "posted_at": "2026-11-10",
      "priority": false,
      "reason": "titre ambigu / zone europe (Île-de-France)",
      "status": "review",
@@ -7363,7 +7363,7 @@
      "url": "https://valeo.wd3.myworkdayjobs.com/Valeo_Jobs/job/Crteil/Stage---Ingnieur-e--R-D---IA-pour-vhicules-autonomes--F-H-_REQ2026082952"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Vercel": {
    "jobs": [
@@ -7378,14 +7378,14 @@
      "url": "https://job-boards.greenhouse.io/vercel/jobs/6181759004"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Visa": {
    "jobs": [
     {
      "job_id": "REF090466W",
      "location": "GB - Reading, United Kingdom",
-     "posted_at": "2026-11-13",
+     "posted_at": "2026-11-12",
      "priority": false,
      "reason": "software (software) / zone uk",
      "status": "notify",
@@ -7395,7 +7395,7 @@
     {
      "job_id": "REF090467W",
      "location": "GB - Cambridge, United Kingdom",
-     "posted_at": "2026-11-13",
+     "posted_at": "2026-11-12",
      "priority": false,
      "reason": "software (software) / zone uk",
      "status": "notify",
@@ -7405,7 +7405,7 @@
     {
      "job_id": "REF090469W",
      "location": "GB - London, United Kingdom",
-     "posted_at": "2026-11-13",
+     "posted_at": "2026-11-12",
      "priority": false,
      "reason": "software (software) / zone uk",
      "status": "notify",
@@ -7413,11 +7413,11 @@
      "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/GB---London-United-Kingdom/Software-Engineer-Intern_REF090469W-1"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Voodoo": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Waymo": {
    "jobs": [
@@ -7732,7 +7732,7 @@
      "url": "https://careers.withwaymo.com/jobs?gh_jid=8335511"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Western Digital": {
    "jobs": [
@@ -7747,35 +7747,35 @@
      "url": "https://jobs.smartrecruiters.com/WesternDigital/744000160975819"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Wise": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Wiz": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Workday": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "XTX Markets": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Zalando": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Zendesk": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Zoom": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Zoox": {
    "jobs": [
@@ -7860,15 +7860,15 @@
      "url": "https://jobs.lever.co/zoox/442845d1-33b0-4801-a553-7fd9b806e46f"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "Zscaler": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "eBay": {
    "jobs": [],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   },
   "xAI": {
    "jobs": [
@@ -7893,7 +7893,7 @@
      "url": "https://job-boards.greenhouse.io/xai/jobs/5255111007"
     }
    ],
-   "updated_at": "2026-11-13T06:38:38+00:00"
+   "updated_at": "2026-11-13T15:21:35+00:00"
   }
  },
  "health": {
@@ -7901,8 +7901,8 @@
    "error": null,
    "failures": 0,
    "fetched": 12,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 4,
    "provider": "custom_json",
    "review": 2,
@@ -7911,10 +7911,10 @@
   "ASML": {
    "error": null,
    "failures": 0,
-   "fetched": 154,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 33,
+   "fetched": 151,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 32,
    "provider": "workday",
    "review": 28,
    "status": "ok"
@@ -7923,19 +7923,19 @@
    "error": null,
    "failures": 0,
    "fetched": 121,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "workday",
-   "review": 9,
+   "review": 10,
    "status": "ok"
   },
   "Adyen": {
    "error": null,
    "failures": 0,
-   "fetched": 251,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 249,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -7944,9 +7944,9 @@
   "Airbnb": {
    "error": null,
    "failures": 0,
-   "fetched": 217,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 214,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "greenhouse",
    "review": 1,
@@ -7955,20 +7955,20 @@
   "Airbus": {
    "error": null,
    "failures": 0,
-   "fetched": 916,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 6,
+   "fetched": 931,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 8,
    "provider": "workday",
-   "review": 28,
+   "review": 29,
    "status": "ok"
   },
   "Airtable": {
    "error": null,
    "failures": 0,
    "fetched": 9,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -7991,8 +7991,8 @@
    "error": null,
    "failures": 0,
    "fetched": 31,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "greenhouse",
    "review": 0,
@@ -8001,9 +8001,9 @@
   "Alan": {
    "error": null,
    "failures": 0,
-   "fetched": 137,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 138,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "ashby",
    "review": 5,
@@ -8012,9 +8012,9 @@
   "Algolia": {
    "error": null,
    "failures": 0,
-   "fetched": 31,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 30,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8037,8 +8037,8 @@
    "error": null,
    "failures": 0,
    "fetched": 474,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 62,
    "provider": "custom_json",
    "review": 43,
@@ -8047,20 +8047,20 @@
   "Analog Devices": {
    "error": null,
    "failures": 0,
-   "fetched": 461,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 13,
+   "fetched": 464,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 15,
    "provider": "workday",
-   "review": 19,
+   "review": 20,
    "status": "ok"
   },
   "Anduril": {
    "error": null,
    "failures": 0,
-   "fetched": 2579,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 2581,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 11,
    "provider": "greenhouse",
    "review": 1,
@@ -8069,9 +8069,9 @@
   "Anthropic": {
    "error": null,
    "failures": 0,
-   "fetched": 673,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 672,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8080,9 +8080,9 @@
   "Apple": {
    "error": null,
    "failures": 0,
-   "fetched": 133,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 132,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 21,
    "provider": "apple",
    "review": 8,
@@ -8092,8 +8092,8 @@
    "error": null,
    "failures": 0,
    "fetched": 325,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 3,
    "provider": "ashby",
    "review": 1,
@@ -8103,8 +8103,8 @@
    "error": null,
    "failures": 0,
    "fetched": 91,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 13,
    "provider": "eightfold",
    "review": 9,
@@ -8113,21 +8113,21 @@
   "ArianeGroup": {
    "error": null,
    "failures": 0,
-   "fetched": 235,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 231,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "workday",
-   "review": 34,
+   "review": 32,
    "status": "ok"
   },
   "Arm": {
    "error": null,
    "failures": 0,
-   "fetched": 467,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 3,
+   "fetched": 468,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 4,
    "provider": "sitemap",
    "review": 1,
    "status": "ok"
@@ -8135,9 +8135,9 @@
   "Asana": {
    "error": null,
    "failures": 0,
-   "fetched": 108,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 109,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8146,9 +8146,9 @@
   "Atlassian": {
    "error": null,
    "failures": 0,
-   "fetched": 337,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 262,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 7,
    "provider": "custom_json",
    "review": 2,
@@ -8158,8 +8158,8 @@
    "error": null,
    "failures": 0,
    "fetched": 83,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "ashby",
    "review": 2,
@@ -8169,8 +8169,8 @@
    "error": null,
    "failures": 0,
    "fetched": 3,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -8180,8 +8180,8 @@
    "error": null,
    "failures": 0,
    "fetched": 33,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 3,
    "provider": "ashby",
    "review": 2,
@@ -8190,10 +8190,10 @@
   "Barclays": {
    "error": null,
    "failures": 0,
-   "fetched": 45,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 4,
+   "fetched": 43,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 3,
    "provider": "workday",
    "review": 10,
    "status": "ok"
@@ -8202,8 +8202,8 @@
    "error": null,
    "failures": 0,
    "fetched": 5,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "lever",
    "review": 0,
@@ -8212,9 +8212,9 @@
   "BlackRock": {
    "error": null,
    "failures": 0,
-   "fetched": 153,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 150,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 3,
@@ -8224,8 +8224,8 @@
    "error": null,
    "failures": 0,
    "fetched": 191,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 2,
@@ -8235,8 +8235,8 @@
    "error": null,
    "failures": 0,
    "fetched": 535,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 19,
@@ -8245,9 +8245,9 @@
   "Boeing": {
    "error": null,
    "failures": 0,
-   "fetched": 823,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 789,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "workday",
    "review": 2,
@@ -8257,8 +8257,8 @@
    "error": null,
    "failures": 0,
    "fetched": 0,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "custom_json",
    "review": 0,
@@ -8279,8 +8279,8 @@
    "error": null,
    "failures": 0,
    "fetched": 283,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8290,8 +8290,8 @@
    "error": null,
    "failures": 0,
    "fetched": 19,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8301,8 +8301,8 @@
    "error": null,
    "failures": 0,
    "fetched": 99,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -8337,9 +8337,9 @@
   "Capital One": {
    "error": null,
    "failures": 0,
-   "fetched": 1236,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 1229,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 2,
@@ -8349,8 +8349,8 @@
    "error": null,
    "failures": 0,
    "fetched": 68,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8359,20 +8359,20 @@
   "Cisco": {
    "error": null,
    "failures": 0,
-   "fetched": 599,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 594,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 5,
    "provider": "workday",
-   "review": 8,
+   "review": 7,
    "status": "ok"
   },
   "Citi": {
    "error": null,
    "failures": 0,
-   "fetched": 89,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 90,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 17,
@@ -8381,9 +8381,9 @@
   "Cloudflare": {
    "error": null,
    "failures": 0,
-   "fetched": 481,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 479,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8392,9 +8392,9 @@
   "Cohere": {
    "error": null,
    "failures": 0,
-   "fetched": 121,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 119,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -8404,8 +8404,8 @@
    "error": null,
    "failures": 0,
    "fetched": 269,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 9,
    "provider": "greenhouse",
    "review": 9,
@@ -8415,8 +8415,8 @@
    "error": null,
    "failures": 0,
    "fetched": 0,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -8426,8 +8426,8 @@
    "error": null,
    "failures": 0,
    "fetched": 28,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "lever",
    "review": 0,
@@ -8436,9 +8436,9 @@
   "Criteo": {
    "error": null,
    "failures": 0,
-   "fetched": 73,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 74,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 6,
    "provider": "workday",
    "review": 11,
@@ -8447,9 +8447,9 @@
   "CrowdStrike": {
    "error": null,
    "failures": 0,
-   "fetched": 232,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 229,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 9,
@@ -8459,8 +8459,8 @@
    "error": null,
    "failures": 0,
    "fetched": 159,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 4,
    "provider": "greenhouse",
    "review": 1,
@@ -8469,20 +8469,20 @@
   "Dassault Systèmes": {
    "error": null,
    "failures": 0,
-   "fetched": 699,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 60,
+   "fetched": 698,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 59,
    "provider": "exalead",
-   "review": 148,
+   "review": 147,
    "status": "ok"
   },
   "Databricks": {
    "error": null,
    "failures": 0,
-   "fetched": 906,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 909,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 7,
    "provider": "greenhouse",
    "review": 0,
@@ -8491,9 +8491,9 @@
   "Datadog": {
    "error": null,
    "failures": 0,
-   "fetched": 383,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 387,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 3,
    "provider": "greenhouse",
    "review": 2,
@@ -8516,8 +8516,8 @@
    "error": null,
    "failures": 0,
    "fetched": 27,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "rss",
    "review": 9,
@@ -8526,10 +8526,10 @@
   "Delivery Hero": {
    "error": null,
    "failures": 0,
-   "fetched": 882,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 5,
+   "fetched": 880,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 7,
    "provider": "smartrecruiters",
    "review": 20,
    "status": "ok"
@@ -8537,9 +8537,9 @@
   "Dell": {
    "error": null,
    "failures": 0,
-   "fetched": 189,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 187,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 3,
    "provider": "oracle_hcm",
    "review": 6,
@@ -8548,9 +8548,9 @@
   "Deutsche Bank": {
    "error": null,
    "failures": 0,
-   "fetched": 626,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 620,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 20,
@@ -8560,8 +8560,8 @@
    "error": null,
    "failures": 0,
    "fetched": 25,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8570,20 +8570,20 @@
   "Doctolib": {
    "error": null,
    "failures": 0,
-   "fetched": 161,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 159,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 6,
    "provider": "ashby",
-   "review": 11,
+   "review": 10,
    "status": "ok"
   },
   "DoorDash": {
    "error": null,
    "failures": 0,
-   "fetched": 432,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 433,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 3,
    "provider": "greenhouse",
    "review": 0,
@@ -8593,8 +8593,8 @@
    "error": null,
    "failures": 0,
    "fetched": 42,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8603,9 +8603,9 @@
   "Duolingo": {
    "error": null,
    "failures": 0,
-   "fetched": 61,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 60,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8614,9 +8614,9 @@
   "Dust": {
    "error": null,
    "failures": 0,
-   "fetched": 32,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 33,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -8625,12 +8625,12 @@
   "EA": {
    "error": null,
    "failures": 0,
-   "fetched": 121,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 15,
+   "fetched": 118,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 14,
    "provider": "avature",
-   "review": 10,
+   "review": 8,
    "status": "ok"
   },
   "EDF": {
@@ -8650,8 +8650,8 @@
    "error": null,
    "failures": 0,
    "fetched": 398,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8660,20 +8660,20 @@
   "Engie": {
    "error": null,
    "failures": 0,
-   "fetched": 1664,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 1661,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "sitemap",
-   "review": 131,
+   "review": 130,
    "status": "ok"
   },
   "Epic Games": {
    "error": null,
    "failures": 0,
-   "fetched": 143,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 144,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 11,
    "provider": "greenhouse",
    "review": 5,
@@ -8682,20 +8682,20 @@
   "Ericsson": {
    "error": null,
    "failures": 0,
-   "fetched": 44,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 8,
+   "fetched": 55,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 12,
    "provider": "eightfold",
-   "review": 12,
+   "review": 17,
    "status": "ok"
   },
   "Etsy": {
    "error": null,
    "failures": 0,
    "fetched": 22,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -8717,9 +8717,9 @@
   "Expedia": {
    "error": null,
    "failures": 0,
-   "fetched": 88,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 90,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -8729,8 +8729,8 @@
    "error": null,
    "failures": 0,
    "fetched": 56,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8740,8 +8740,8 @@
    "error": null,
    "failures": 0,
    "fetched": 143,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 3,
    "provider": "greenhouse",
    "review": 0,
@@ -8750,9 +8750,9 @@
   "Flexport": {
    "error": null,
    "failures": 0,
-   "fetched": 198,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 201,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8762,8 +8762,8 @@
    "error": null,
    "failures": 0,
    "fetched": 500,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "oracle_hcm",
    "review": 0,
@@ -8772,9 +8772,9 @@
   "GitLab": {
    "error": null,
    "failures": 0,
-   "fetched": 254,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 251,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8796,9 +8796,9 @@
   "Gusto": {
    "error": null,
    "failures": 0,
-   "fetched": 78,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 76,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8808,8 +8808,8 @@
    "error": null,
    "failures": 0,
    "fetched": 25,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -8832,8 +8832,8 @@
    "error": null,
    "failures": 0,
    "fetched": 82,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "greenhouse",
    "review": 0,
@@ -8843,8 +8843,8 @@
    "error": null,
    "failures": 0,
    "fetched": 6,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workable",
    "review": 0,
@@ -8853,20 +8853,20 @@
   "IBM": {
    "error": null,
    "failures": 0,
-   "fetched": 209,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 52,
+   "fetched": 201,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 47,
    "provider": "custom_json",
-   "review": 25,
+   "review": 21,
    "status": "ok"
   },
   "IMC Trading": {
    "error": null,
    "failures": 0,
-   "fetched": 158,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 156,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 7,
    "provider": "greenhouse",
    "review": 2,
@@ -8875,20 +8875,20 @@
   "Infineon": {
    "error": null,
    "failures": 0,
-   "fetched": 287,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 32,
+   "fetched": 289,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 33,
    "provider": "eightfold",
-   "review": 15,
+   "review": 16,
    "status": "ok"
   },
   "Instacart": {
    "error": null,
    "failures": 0,
    "fetched": 90,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8897,9 +8897,9 @@
   "Intel": {
    "error": null,
    "failures": 0,
-   "fetched": 542,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 545,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 20,
    "provider": "workday",
    "review": 6,
@@ -8909,8 +8909,8 @@
    "error": null,
    "failures": 0,
    "fetched": 600,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 6,
    "provider": "sitemap",
    "review": 4,
@@ -8920,8 +8920,8 @@
    "error": null,
    "failures": 0,
    "fetched": 217,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -8931,8 +8931,8 @@
    "error": null,
    "failures": 0,
    "fetched": 92,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 15,
    "provider": "greenhouse",
    "review": 7,
@@ -8941,9 +8941,9 @@
   "KLA": {
    "error": null,
    "failures": 0,
-   "fetched": 850,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 854,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 18,
    "provider": "workday",
    "review": 7,
@@ -8965,9 +8965,9 @@
   "Lam Research": {
    "error": null,
    "failures": 0,
-   "fetched": 34,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 32,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 7,
    "provider": "eightfold",
    "review": 0,
@@ -8976,9 +8976,9 @@
   "Ledger": {
    "error": null,
    "failures": 0,
-   "fetched": 12,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 13,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "ashby",
    "review": 1,
@@ -8988,8 +8988,8 @@
    "error": null,
    "failures": 0,
    "fetched": 33,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -9011,9 +9011,9 @@
   "Lockheed Martin": {
    "error": null,
    "failures": 0,
-   "fetched": 170,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 172,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 45,
    "provider": "eightfold",
    "review": 13,
@@ -9022,9 +9022,9 @@
   "Lucid": {
    "error": null,
    "failures": 0,
-   "fetched": 475,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 479,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -9034,8 +9034,8 @@
    "error": null,
    "failures": 0,
    "fetched": 151,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 12,
    "provider": "greenhouse",
    "review": 2,
@@ -9044,20 +9044,20 @@
   "MBDA": {
    "error": null,
    "failures": 0,
-   "fetched": 650,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 15,
+   "fetched": 648,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 14,
    "provider": "gestmax",
-   "review": 131,
+   "review": 127,
    "status": "ok"
   },
   "MBDA UK": {
    "error": null,
    "failures": 0,
    "fetched": 227,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 6,
    "provider": "workday",
    "review": 9,
@@ -9066,10 +9066,10 @@
   "Marvell": {
    "error": null,
    "failures": 0,
-   "fetched": 264,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 12,
+   "fetched": 260,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 13,
    "provider": "workday",
    "review": 12,
    "status": "ok"
@@ -9078,8 +9078,8 @@
    "error": null,
    "failures": 0,
    "fetched": 14,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -9102,8 +9102,8 @@
    "error": null,
    "failures": 0,
    "fetched": 138,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 20,
    "provider": "workday",
    "review": 30,
@@ -9112,20 +9112,20 @@
   "Microsoft": {
    "error": null,
    "failures": 0,
-   "fetched": 98,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 104,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 28,
    "provider": "eightfold",
-   "review": 21,
+   "review": 23,
    "status": "ok"
   },
   "Mirakl": {
    "error": null,
    "failures": 0,
-   "fetched": 22,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 21,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "greenhouse",
    "review": 1,
@@ -9134,9 +9134,9 @@
   "Mistral AI": {
    "error": null,
    "failures": 0,
-   "fetched": 240,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 242,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 4,
    "provider": "ashby",
    "review": 1,
@@ -9145,9 +9145,9 @@
   "MongoDB": {
    "error": null,
    "failures": 0,
-   "fetched": 386,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 387,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 3,
    "provider": "greenhouse",
    "review": 0,
@@ -9156,9 +9156,9 @@
   "Monzo": {
    "error": null,
    "failures": 0,
-   "fetched": 60,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 58,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -9181,8 +9181,8 @@
    "error": null,
    "failures": 0,
    "fetched": 18,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 5,
@@ -9192,29 +9192,29 @@
    "error": null,
    "failures": 0,
    "fetched": 34,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
-   "review": 0,
+   "review": 1,
    "status": "ok"
   },
   "NVIDIA": {
    "error": null,
    "failures": 0,
-   "fetched": 1083,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 1085,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 22,
    "provider": "workday",
-   "review": 47,
+   "review": 48,
    "status": "ok"
   },
   "NXP": {
-   "error": "[workday] NXP : POST https://nxp.wd3.myworkdayjobs.com/wday/cxs/nxp/Careers/jobs : HTTP 422 — {\"errorCode\":\"HTTP_422\",\"errorCaseId\":\"64E42DMWEMBNT0\",\"httpStatus\":422,\"message\":\"\",\"messageParams\":{}} — vérifiez tenant/wd/site dans config.yaml (voir README)",
-   "failures": 21,
+   "error": "[workday] NXP : POST https://nxp.wd3.myworkdayjobs.com/wday/cxs/nxp/Careers/jobs : HTTP 422 — {\"errorCode\":\"HTTP_422\",\"errorCaseId\":\"EA3807MWF530SO\",\"httpStatus\":422,\"message\":\"\",\"messageParams\":{}} — vérifiez tenant/wd/site dans config.yaml (voir README)",
+   "failures": 22,
    "fetched": 342,
-   "last_run": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
    "last_success": "2026-11-07T13:58:09+00:00",
    "notify": 8,
    "provider": "workday",
@@ -9238,8 +9238,8 @@
    "error": null,
    "failures": 0,
    "fetched": 14,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "eightfold",
    "review": 8,
@@ -9249,8 +9249,8 @@
    "error": null,
    "failures": 0,
    "fetched": 0,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -9260,8 +9260,8 @@
    "error": null,
    "failures": 0,
    "fetched": 73,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 12,
    "provider": "greenhouse",
    "review": 5,
@@ -9283,10 +9283,10 @@
   "Northrop Grumman": {
    "error": null,
    "failures": 0,
-   "fetched": 130,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 11,
+   "fetched": 128,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 8,
    "provider": "eightfold",
    "review": 2,
    "status": "ok"
@@ -9294,9 +9294,9 @@
   "Notion": {
    "error": null,
    "failures": 0,
-   "fetched": 165,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 167,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 3,
    "provider": "ashby",
    "review": 0,
@@ -9306,8 +9306,8 @@
    "error": null,
    "failures": 0,
    "fetched": 99,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "greenhouse",
    "review": 0,
@@ -9329,9 +9329,9 @@
   "Okta": {
    "error": null,
    "failures": 0,
-   "fetched": 368,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 360,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -9340,9 +9340,9 @@
   "OpenAI": {
    "error": null,
    "failures": 0,
-   "fetched": 827,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 833,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -9352,8 +9352,8 @@
    "error": null,
    "failures": 0,
    "fetched": 151,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "greenhouse",
    "review": 1,
@@ -9363,8 +9363,8 @@
    "error": null,
    "failures": 0,
    "fetched": 21,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "oracle_hcm",
    "review": 1,
@@ -9373,20 +9373,20 @@
   "Orange": {
    "error": null,
    "failures": 0,
-   "fetched": 879,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 876,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "sitemap",
-   "review": 150,
+   "review": 147,
    "status": "ok"
   },
   "Palantir": {
    "error": null,
    "failures": 0,
-   "fetched": 302,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 301,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 39,
    "provider": "lever",
    "review": 0,
@@ -9395,9 +9395,9 @@
   "Palo Alto Networks": {
    "error": null,
    "failures": 0,
-   "fetched": 723,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 731,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 10,
    "provider": "workday",
    "review": 0,
@@ -9407,8 +9407,8 @@
    "error": null,
    "failures": 0,
    "fetched": 9,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "rss",
    "review": 0,
@@ -9417,9 +9417,9 @@
   "PayPal": {
    "error": null,
    "failures": 0,
-   "fetched": 194,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 193,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "workday",
    "review": 4,
@@ -9429,8 +9429,8 @@
    "error": null,
    "failures": 0,
    "fetched": 142,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 4,
    "provider": "ashby",
    "review": 0,
@@ -9439,9 +9439,9 @@
   "Philips": {
    "error": null,
    "failures": 0,
-   "fetched": 126,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 122,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 6,
    "provider": "workday",
    "review": 10,
@@ -9451,8 +9451,8 @@
    "error": null,
    "failures": 0,
    "fetched": 125,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "lever",
    "review": 0,
@@ -9461,9 +9461,9 @@
   "Pinterest": {
    "error": null,
    "failures": 0,
-   "fetched": 166,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 165,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 11,
    "provider": "greenhouse",
    "review": 0,
@@ -9473,8 +9473,8 @@
    "error": null,
    "failures": 0,
    "fetched": 142,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -9484,8 +9484,8 @@
    "error": null,
    "failures": 0,
    "fetched": 200,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 8,
    "provider": "greenhouse",
    "review": 7,
@@ -9495,8 +9495,8 @@
    "error": null,
    "failures": 0,
    "fetched": 4,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -9505,21 +9505,21 @@
   "Qonto": {
    "error": null,
    "failures": 0,
-   "fetched": 61,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 58,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
-   "review": 3,
+   "review": 2,
    "status": "ok"
   },
   "Qualcomm": {
    "error": null,
    "failures": 0,
-   "fetched": 116,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 42,
+   "fetched": 118,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 43,
    "provider": "eightfold",
    "review": 8,
    "status": "ok"
@@ -9528,8 +9528,8 @@
    "error": null,
    "failures": 0,
    "fetched": 210,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 9,
    "provider": "greenhouse",
    "review": 2,
@@ -9537,9 +9537,9 @@
   },
   "RTX": {
    "error": "[sitemap] RTX : GET https://careers.rtx.com/global/en/sitemap_index.xml : HTTP 403 — <!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scal",
-   "failures": 94,
+   "failures": 95,
    "fetched": 4745,
-   "last_run": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
    "last_success": "2026-10-22T01:29:04+00:00",
    "notify": 0,
    "provider": "sitemap",
@@ -9550,8 +9550,8 @@
    "error": null,
    "failures": 0,
    "fetched": 180,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 5,
    "provider": "ashby",
    "review": 0,
@@ -9560,9 +9560,9 @@
   "Reddit": {
    "error": null,
    "failures": 0,
-   "fetched": 147,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 146,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -9585,8 +9585,8 @@
    "error": null,
    "failures": 0,
    "fetched": 31,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -9595,9 +9595,9 @@
   "Riot Games": {
    "error": null,
    "failures": 0,
-   "fetched": 202,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 199,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 3,
    "provider": "greenhouse",
    "review": 8,
@@ -9607,8 +9607,8 @@
    "error": null,
    "failures": 0,
    "fetched": 44,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 21,
    "provider": "custom_json",
    "review": 5,
@@ -9618,8 +9618,8 @@
    "error": null,
    "failures": 0,
    "fetched": 160,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 1,
@@ -9629,8 +9629,8 @@
    "error": null,
    "failures": 0,
    "fetched": 273,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "greenhouse",
    "review": 0,
@@ -9640,8 +9640,8 @@
    "error": null,
    "failures": 0,
    "fetched": 181,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 1,
@@ -9663,9 +9663,9 @@
   "STMicroelectronics": {
    "error": null,
    "failures": 0,
-   "fetched": 91,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 92,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 8,
    "provider": "eightfold",
    "review": 12,
@@ -9687,9 +9687,9 @@
   "Salesforce": {
    "error": null,
    "failures": 0,
-   "fetched": 786,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 792,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "workday",
    "review": 7,
@@ -9698,9 +9698,9 @@
   "Samsara": {
    "error": null,
    "failures": 0,
-   "fetched": 309,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 313,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "greenhouse",
    "review": 7,
@@ -9709,9 +9709,9 @@
   "Scale AI": {
    "error": null,
    "failures": 0,
-   "fetched": 170,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 169,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 3,
    "provider": "greenhouse",
    "review": 0,
@@ -9721,8 +9721,8 @@
    "error": null,
    "failures": 0,
    "fetched": 32,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "lever",
    "review": 0,
@@ -9731,31 +9731,31 @@
   "Schneider Electric": {
    "error": null,
    "failures": 0,
-   "fetched": 325,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 321,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 43,
    "provider": "custom_json",
-   "review": 55,
+   "review": 56,
    "status": "ok"
   },
   "Seagate": {
    "error": null,
    "failures": 0,
-   "fetched": 303,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 309,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "sitemap",
-   "review": 114,
+   "review": 118,
    "status": "ok"
   },
   "SeatGeek": {
    "error": null,
    "failures": 0,
    "fetched": 37,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "greenhouse",
    "review": 0,
@@ -9764,9 +9764,9 @@
   "SentinelOne": {
    "error": null,
    "failures": 0,
-   "fetched": 259,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 253,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 1,
@@ -9776,8 +9776,8 @@
    "error": null,
    "failures": 0,
    "fetched": 187,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 6,
    "provider": "smartrecruiters",
    "review": 2,
@@ -9786,12 +9786,12 @@
   "Shield AI": {
    "error": null,
    "failures": 0,
-   "fetched": 656,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 667,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 5,
    "provider": "lever",
-   "review": 1,
+   "review": 3,
    "status": "ok"
   },
   "Shopify": {
@@ -9810,20 +9810,20 @@
   "Siemens": {
    "error": null,
    "failures": 0,
-   "fetched": 391,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 30,
+   "fetched": 394,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 31,
    "provider": "avature",
-   "review": 114,
+   "review": 112,
    "status": "ok"
   },
   "Slack": {
    "error": null,
    "failures": 0,
    "fetched": 7,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -9832,9 +9832,9 @@
   "Snap": {
    "error": null,
    "failures": 0,
-   "fetched": 115,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 117,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "workday",
    "review": 0,
@@ -9844,20 +9844,20 @@
    "error": null,
    "failures": 0,
    "fetched": 378,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 4,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 5,
    "provider": "ashby",
-   "review": 3,
+   "review": 2,
    "status": "ok"
   },
   "Sopra Steria": {
    "error": null,
    "failures": 0,
-   "fetched": 2096,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 14,
+   "fetched": 2099,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 13,
    "provider": "smartrecruiters",
    "review": 41,
    "status": "ok"
@@ -9866,8 +9866,8 @@
    "error": null,
    "failures": 0,
    "fetched": 3,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -9876,9 +9876,9 @@
   "SpaceX": {
    "error": null,
    "failures": 0,
-   "fetched": 2849,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 2852,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "greenhouse",
    "review": 10,
@@ -9901,8 +9901,8 @@
    "error": null,
    "failures": 0,
    "fetched": 85,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "lever",
    "review": 0,
@@ -9911,9 +9911,9 @@
   "Squarepoint": {
    "error": null,
    "failures": 0,
-   "fetched": 91,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 90,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 4,
    "provider": "greenhouse",
    "review": 1,
@@ -9922,9 +9922,9 @@
   "Stellantis": {
    "error": null,
    "failures": 0,
-   "fetched": 3,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 2,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -9933,9 +9933,9 @@
   "Stripe": {
    "error": null,
    "failures": 0,
-   "fetched": 787,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 786,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 11,
    "provider": "greenhouse",
    "review": 1,
@@ -9945,8 +9945,8 @@
    "error": null,
    "failures": 0,
    "fetched": 77,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -9956,8 +9956,8 @@
    "error": null,
    "failures": 0,
    "fetched": 27,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "lever",
    "review": 0,
@@ -9979,10 +9979,10 @@
   "Texas Instruments": {
    "error": null,
    "failures": 0,
-   "fetched": 491,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
-   "notify": 35,
+   "fetched": 488,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
+   "notify": 37,
    "provider": "oracle_hcm",
    "review": 7,
    "status": "ok"
@@ -9990,31 +9990,31 @@
   "Thales": {
    "error": null,
    "failures": 0,
-   "fetched": 3692,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 3661,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "sitemap",
-   "review": 867,
+   "review": 865,
    "status": "ok"
   },
   "TotalEnergies": {
    "error": null,
    "failures": 0,
-   "fetched": 119,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 120,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 5,
    "provider": "avature",
-   "review": 56,
+   "review": 57,
    "status": "ok"
   },
   "Tower Research Capital": {
    "error": null,
    "failures": 0,
    "fetched": 93,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 6,
    "provider": "greenhouse",
    "review": 1,
@@ -10024,8 +10024,8 @@
    "error": null,
    "failures": 0,
    "fetched": 39,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -10034,9 +10034,9 @@
   "Twilio": {
    "error": null,
    "failures": 0,
-   "fetched": 117,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 116,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -10046,8 +10046,8 @@
    "error": null,
    "failures": 0,
    "fetched": 57,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -10056,9 +10056,9 @@
   "Uber": {
    "error": null,
    "failures": 0,
-   "fetched": 367,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 370,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "oracle_hcm",
    "review": 2,
@@ -10067,9 +10067,9 @@
   "Ubisoft": {
    "error": null,
    "failures": 0,
-   "fetched": 101,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 99,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "smartrecruiters",
    "review": 2,
@@ -10079,8 +10079,8 @@
    "error": null,
    "failures": 0,
    "fetched": 42,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 1,
@@ -10089,12 +10089,12 @@
   "Valeo": {
    "error": null,
    "failures": 0,
-   "fetched": 997,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 999,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 3,
    "provider": "workday",
-   "review": 22,
+   "review": 21,
    "status": "ok"
   },
   "Valve": {
@@ -10114,8 +10114,8 @@
    "error": null,
    "failures": 0,
    "fetched": 87,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "greenhouse",
    "review": 0,
@@ -10125,8 +10125,8 @@
    "error": null,
    "failures": 0,
    "fetched": 11,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 4,
    "provider": "workday",
    "review": 0,
@@ -10136,8 +10136,8 @@
    "error": null,
    "failures": 0,
    "fetched": 101,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "ashby",
    "review": 0,
@@ -10173,8 +10173,8 @@
    "error": null,
    "failures": 0,
    "fetched": 379,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 30,
    "provider": "greenhouse",
    "review": 5,
@@ -10184,8 +10184,8 @@
    "error": null,
    "failures": 0,
    "fetched": 78,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 1,
    "provider": "smartrecruiters",
    "review": 2,
@@ -10195,8 +10195,8 @@
    "error": null,
    "failures": 0,
    "fetched": 439,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "smartrecruiters",
    "review": 0,
@@ -10205,9 +10205,9 @@
   "Wiz": {
    "error": null,
    "failures": 0,
-   "fetched": 110,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 111,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -10216,9 +10216,9 @@
   "Workday": {
    "error": null,
    "failures": 0,
-   "fetched": 182,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 178,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -10241,8 +10241,8 @@
    "error": null,
    "failures": 0,
    "fetched": 7,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -10252,8 +10252,8 @@
    "error": null,
    "failures": 0,
    "fetched": 0,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -10262,9 +10262,9 @@
   "Zendesk": {
    "error": null,
    "failures": 0,
-   "fetched": 79,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 78,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -10273,9 +10273,9 @@
   "Zoom": {
    "error": null,
    "failures": 0,
-   "fetched": 29,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 25,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -10285,8 +10285,8 @@
    "error": null,
    "failures": 0,
    "fetched": 237,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 7,
    "provider": "lever",
    "review": 3,
@@ -10295,9 +10295,9 @@
   "Zscaler": {
    "error": null,
    "failures": 0,
-   "fetched": 378,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 374,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "greenhouse",
    "review": 0,
@@ -10306,9 +10306,9 @@
   "eBay": {
    "error": null,
    "failures": 0,
-   "fetched": 112,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "fetched": 121,
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 0,
    "provider": "workday",
    "review": 0,
@@ -10318,14 +10318,14 @@
    "error": null,
    "failures": 0,
    "fetched": 294,
-   "last_run": "2026-11-13T06:38:38+00:00",
-   "last_success": "2026-11-13T06:38:38+00:00",
+   "last_run": "2026-11-13T15:21:35+00:00",
+   "last_success": "2026-11-13T15:21:35+00:00",
    "notify": 2,
    "provider": "greenhouse",
    "review": 0,
    "status": "ok"
   }
  },
- "updated_at": "2026-11-13T06:38:38+00:00",
+ "updated_at": "2026-11-13T15:21:35+00:00",
  "version": 1
 }
