@@ -2471,6 +2471,7 @@
         },
         "R172585": {
           "first_seen": "2026-10-08T18:59:49+00:00",
+          "removed_at": "2026-11-13T06:38:48+00:00",
           "title": "2027 University Graduate - Solutions Consulting Analyst"
         },
         "R172593": {
@@ -2677,6 +2678,10 @@
         "R173508": {
           "first_seen": "2026-11-10T23:16:13+00:00",
           "title": "2027 MBA Intern - Integrated GTM Strategy"
+        },
+        "R173552": {
+          "first_seen": "2026-11-13T06:38:48+00:00",
+          "title": "Senior Partner Sales Manager"
         },
         "R173554": {
           "first_seen": "2026-11-10T09:44:49+00:00",
@@ -3160,7 +3165,6 @@
         },
         "8041307": {
           "first_seen": "2026-10-15T11:51:46+00:00",
-          "removed_at": "2026-10-19T13:35:48+00:00",
           "title": "Senior Backend Engineer (Java)"
         },
         "8041403": {
@@ -3842,6 +3846,7 @@
         },
         "8222552": {
           "first_seen": "2026-10-09T18:52:48+00:00",
+          "removed_at": "2026-11-13T07:04:37+00:00",
           "title": "Senior Regulatory Counsel"
         },
         "8225004": {
@@ -4640,6 +4645,7 @@
         },
         "8079378": {
           "first_seen": "2026-10-08T19:02:43+00:00",
+          "removed_at": "2026-11-13T06:46:34+00:00",
           "title": "Senior Program Manager, Workplace Operations"
         },
         "8080766": {
@@ -4928,7 +4934,6 @@
         },
         "8187190": {
           "first_seen": "2026-10-08T19:02:43+00:00",
-          "removed_at": "2026-10-13T01:27:27+00:00",
           "title": "Senior Staff Software Engineer, Tech Foundations"
         },
         "8189323": {
@@ -5046,6 +5051,7 @@
         },
         "8231416": {
           "first_seen": "2026-10-08T19:02:43+00:00",
+          "removed_at": "2026-11-13T06:46:34+00:00",
           "title": "Associate Principal, Procurement Innovation Supplier Programs"
         },
         "8231975": {
@@ -5440,7 +5446,6 @@
         },
         "8288417": {
           "first_seen": "2026-10-16T09:54:06+00:00",
-          "removed_at": "2026-10-26T06:17:13+00:00",
           "title": "Engineering Manager, Tech Foundations"
         },
         "8289954": {
@@ -5903,6 +5908,10 @@
             "s": -1.4607,
             "v": "tfidf-texte-v1"
           }
+        },
+        "8381734": {
+          "first_seen": "2026-11-13T06:46:34+00:00",
+          "title": "Senior Market Manager, Luxe"
         },
         "8381807": {
           "first_seen": "2026-11-12T18:24:35+00:00",
@@ -13432,6 +13441,7 @@
         },
         "JR10451205": {
           "first_seen": "2026-11-02T18:45:03+00:00",
+          "removed_at": "2026-11-13T07:02:50+00:00",
           "title": "Quality Inspector"
         },
         "JR10451208": {
@@ -13459,6 +13469,10 @@
           "first_seen": "2026-10-20T00:02:21+00:00",
           "removed_at": "2026-11-12T18:42:42+00:00",
           "title": "Unmanned Aircraft System (UAS) Embedded Software Engineer"
+        },
+        "JR10451251": {
+          "first_seen": "2026-11-13T07:02:50+00:00",
+          "title": "Training Business Development Intern"
         },
         "JR10451256": {
           "first_seen": "2026-10-29T17:21:09+00:00",
@@ -13871,6 +13885,7 @@
         },
         "JR10453797": {
           "first_seen": "2026-11-02T18:45:03+00:00",
+          "removed_at": "2026-11-13T07:02:50+00:00",
           "title": "Assembly Technician"
         },
         "JR10453802": {
@@ -14715,6 +14730,14 @@
         "8330722": {
           "first_seen": "2026-10-29T17:04:04+00:00",
           "title": "Quantitative Developer"
+        },
+        "8384832": {
+          "first_seen": "2026-11-13T06:47:35+00:00",
+          "title": "India Single Stock Options Trader"
+        },
+        "8384955": {
+          "first_seen": "2026-11-13T06:47:35+00:00",
+          "title": "D1 Quantitative Researcher"
         }
       },
       "last_error": null,
@@ -17169,6 +17192,15 @@
           "removed_at": "2026-11-06T15:16:49+00:00",
           "title": "Operations Human Resources Partner Intern (3 Months) - 2027"
         },
+        "10557133": {
+          "first_seen": "2026-11-13T07:10:15+00:00",
+          "notified_at": "2026-11-13T07:10:15+00:00",
+          "title": "Security Engineer Internship – 2027 (US)",
+          "tri": {
+            "s": -1.0708,
+            "v": "tfidf-texte-v1"
+          }
+        },
         "10557414": {
           "first_seen": "2026-10-09T18:42:17+00:00",
           "title": "Program Manager Intern (12 months) - FY27"
@@ -18112,6 +18144,7 @@
         },
         "10583592": {
           "first_seen": "2026-10-20T05:02:14+00:00",
+          "removed_at": "2026-11-13T06:53:52+00:00",
           "title": "Sales Ops Intern"
         },
         "10583818": {
@@ -18664,6 +18697,10 @@
         "10603764": {
           "first_seen": "2026-11-12T23:56:04+00:00",
           "title": "Senior Product Manager, Production Planning Team, Global Finance Solutions"
+        },
+        "10603937": {
+          "first_seen": "2026-11-13T06:53:52+00:00",
+          "title": "Associate Solutions Architect Intern - Shanghai, Shanghai"
         },
         "3063220": {
           "first_seen": "2026-10-15T11:40:17+00:00",
@@ -21446,6 +21483,7 @@
         },
         "R267194": {
           "first_seen": "2026-10-22T18:43:44+00:00",
+          "removed_at": "2026-11-13T06:50:44+00:00",
           "title": "Principal Digital Design Engineer"
         },
         "R267227": {
@@ -22980,6 +23018,10 @@
         "5015217007": {
           "first_seen": "2026-10-08T23:01:35+00:00",
           "title": "Lead Business Process Engineer, Business Process & Procedures"
+        },
+        "5015257007": {
+          "first_seen": "2026-11-13T06:47:16+00:00",
+          "title": "Technical Recruiter, Sydney"
         },
         "5016001007": {
           "first_seen": "2026-10-08T23:01:35+00:00",
@@ -24566,6 +24608,7 @@
         },
         "5131005007": {
           "first_seen": "2026-10-08T23:01:35+00:00",
+          "removed_at": "2026-11-13T06:47:16+00:00",
           "title": "Mission Integration Lead"
         },
         "5131034007": {
@@ -25306,6 +25349,7 @@
         },
         "5158519007": {
           "first_seen": "2026-10-20T19:22:13+00:00",
+          "removed_at": "2026-11-13T06:47:16+00:00",
           "title": "Senior Mission Operations Engineer, Strategic Defense"
         },
         "5158606007": {
@@ -26746,6 +26790,7 @@
         },
         "5188527007": {
           "first_seen": "2026-10-08T23:01:35+00:00",
+          "removed_at": "2026-11-13T06:47:16+00:00",
           "title": "Senior Software Engineer, Discovery"
         },
         "5189349007": {
@@ -27682,6 +27727,10 @@
         "5205967007": {
           "first_seen": "2026-10-08T23:01:35+00:00",
           "title": "Senior Director of Supply Chain"
+        },
+        "5206032007": {
+          "first_seen": "2026-11-13T06:47:16+00:00",
+          "title": "Master Scheduler"
         },
         "5206039007": {
           "first_seen": "2026-10-08T23:01:35+00:00",
@@ -31413,6 +31462,7 @@
         },
         "5246284007": {
           "first_seen": "2026-10-08T23:01:35+00:00",
+          "removed_at": "2026-11-13T06:47:16+00:00",
           "title": "Senior Compensation Partner"
         },
         "5246344007": {
@@ -31469,6 +31519,7 @@
         },
         "5246636007": {
           "first_seen": "2026-10-08T23:01:35+00:00",
+          "removed_at": "2026-11-13T06:47:16+00:00",
           "title": "Senior Compensation Partner"
         },
         "5246665007": {
@@ -34294,6 +34345,7 @@
         },
         "5267547007": {
           "first_seen": "2026-10-16T18:04:18+00:00",
+          "removed_at": "2026-11-13T06:47:16+00:00",
           "title": "Director, Government Relations"
         },
         "5267580007": {
@@ -36786,6 +36838,7 @@
         },
         "5290034007": {
           "first_seen": "2026-11-10T02:13:38+00:00",
+          "removed_at": "2026-11-13T06:47:16+00:00",
           "title": "Global Train and Advise Lead, Japan"
         },
         "5290138007": {
@@ -37020,6 +37073,10 @@
           "first_seen": "2026-11-12T23:49:19+00:00",
           "title": "Senior Procurement Manager"
         },
+        "5293974007": {
+          "first_seen": "2026-11-13T06:47:16+00:00",
+          "title": "Electrical Test Specialist, Intelligence Systems"
+        },
         "5294012007": {
           "first_seen": "2026-11-12T23:49:19+00:00",
           "title": "Aviation Maintenance Engineer"
@@ -37031,6 +37088,22 @@
         "5294027007": {
           "first_seen": "2026-11-12T23:49:19+00:00",
           "title": "Technical Writer - Undersea Systems"
+        },
+        "5294094007": {
+          "first_seen": "2026-11-13T06:47:16+00:00",
+          "title": "Senior Production Application Engineering"
+        },
+        "5294105007": {
+          "first_seen": "2026-11-13T06:47:16+00:00",
+          "title": "Training Specialist"
+        },
+        "5294106007": {
+          "first_seen": "2026-11-13T06:47:16+00:00",
+          "title": "Staff Guidance Navigation and Control Software Engineer (GNC)"
+        },
+        "5294126007": {
+          "first_seen": "2026-11-13T06:47:16+00:00",
+          "title": "People Compliance Specialist"
         }
       },
       "last_error": null,
@@ -40527,6 +40600,7 @@
         },
         "5461873008": {
           "first_seen": "2026-10-23T18:26:33+00:00",
+          "removed_at": "2026-11-13T06:46:35+00:00",
           "title": "Applied AI Security Architect - Healthcare & Life Sciences"
         },
         "5462040008": {
@@ -40909,6 +40983,10 @@
           "first_seen": "2026-11-12T18:24:36+00:00",
           "title": "Staff Software Engineer, Support Technology"
         },
+        "5478939008": {
+          "first_seen": "2026-11-13T06:46:35+00:00",
+          "title": "Commercial Activation Lead"
+        },
         "5479122008": {
           "first_seen": "2026-11-12T09:53:54+00:00",
           "title": "Technical Program Manager, External Evaluators"
@@ -40916,6 +40994,10 @@
         "5479135008": {
           "first_seen": "2026-11-12T09:53:54+00:00",
           "title": "Technical Program Manager, Pacing"
+        },
+        "5479890008": {
+          "first_seen": "2026-11-13T06:46:35+00:00",
+          "title": "External Affairs, Southeast Asia"
         }
       },
       "last_error": null,
@@ -43883,6 +43965,7 @@
         },
         "R2633258": {
           "first_seen": "2026-11-07T22:55:53+00:00",
+          "removed_at": "2026-11-13T06:52:04+00:00",
           "title": "2027 Spring Process Engineer Co-op - Doctorate (Gloucester, MA)"
         }
       },
@@ -47317,6 +47400,14 @@
             "v": "tfidf-texte-v1"
           }
         },
+        "103239290736": {
+          "first_seen": "2026-11-13T06:54:01+00:00",
+          "title": "Principal Dft Engineer"
+        },
+        "103239428176": {
+          "first_seen": "2026-11-13T06:54:01+00:00",
+          "title": "Senior Verification Engineer"
+        },
         "69872372960": {
           "first_seen": "2026-10-09T18:42:26+00:00",
           "removed_at": "2026-10-14T13:58:31+00:00",
@@ -48819,6 +48910,7 @@
         },
         "8204614": {
           "first_seen": "2026-10-08T19:02:45+00:00",
+          "removed_at": "2026-11-13T06:46:37+00:00",
           "title": "Lead Product Manager, Enterprise Services Management"
         },
         "8212172": {
@@ -49429,6 +49521,7 @@
         },
         "25577": {
           "first_seen": "2026-10-09T18:42:22+00:00",
+          "removed_at": "2026-11-13T06:53:58+00:00",
           "title": "Principal Backend Software Engineer"
         },
         "25586": {
@@ -49897,6 +49990,7 @@
         },
         "26577": {
           "first_seen": "2026-10-09T18:42:22+00:00",
+          "removed_at": "2026-11-13T06:53:58+00:00",
           "title": "Senior Principal Software Engineer, Jira Data Management"
         },
         "26578": {
@@ -50205,6 +50299,7 @@
         },
         "26965": {
           "first_seen": "2026-10-09T18:42:22+00:00",
+          "removed_at": "2026-11-13T06:53:58+00:00",
           "title": "Principal Technical Program Manager (Analytics or AI/ML Platform)"
         },
         "26966": {
@@ -51462,6 +51557,10 @@
           "first_seen": "2026-11-01T02:26:53+00:00",
           "title": "Senior Principal Engineering Manager / Head of Engineering"
         },
+        "28446": {
+          "first_seen": "2026-11-13T06:53:58+00:00",
+          "title": "Solutions Engineer, Mid-Market (Central)"
+        },
         "28517": {
           "first_seen": "2026-11-10T02:20:28+00:00",
           "title": "Corporate FP&A Lead"
@@ -51504,6 +51603,15 @@
           "title": "Safety & Systems Engineering Intern",
           "tri": {
             "s": -1.3882,
+            "v": "tfidf-texte-v1"
+          }
+        },
+        "06daa269-c02b-43a4-88b8-b57a3ba335ef": {
+          "first_seen": "2026-11-13T07:10:15+00:00",
+          "notified_at": "2026-11-13T07:10:15+00:00",
+          "title": "Software Engineer Intern, Vehicle Platforms",
+          "tri": {
+            "s": 0.5217,
             "v": "tfidf-texte-v1"
           }
         },
@@ -54737,6 +54845,7 @@
         },
         "R264269": {
           "first_seen": "2026-10-08T22:58:20+00:00",
+          "removed_at": "2026-11-13T06:45:35+00:00",
           "title": "Associate/Vice President, Alternatives Fund Accounting - Delaware"
         },
         "R264398": {
@@ -55286,6 +55395,7 @@
         },
         "R266465": {
           "first_seen": "2026-10-08T22:58:20+00:00",
+          "removed_at": "2026-11-13T06:45:35+00:00",
           "title": "2027 Quantitative Masters Internship Programme - Investments - Quantitative Investing - London"
         },
         "R266466": {
@@ -55307,6 +55417,7 @@
         },
         "R266470": {
           "first_seen": "2026-10-08T22:58:20+00:00",
+          "removed_at": "2026-11-13T06:45:35+00:00",
           "title": "2027 Quantitative Masters Internship Program - Investments - Portfolio Management - Atlanta"
         },
         "R266471": {
@@ -55315,26 +55426,32 @@
         },
         "R266472": {
           "first_seen": "2026-10-08T22:58:20+00:00",
+          "removed_at": "2026-11-13T06:45:35+00:00",
           "title": "2027 Quantitative Masters Internship Program - Investments - Portfolio Management - San Francisco"
         },
         "R266473": {
           "first_seen": "2026-10-08T22:58:20+00:00",
+          "removed_at": "2026-11-13T06:45:35+00:00",
           "title": "2027 Quantitative Masters Internship Program - Investments - Quantitative Investing - New York"
         },
         "R266474": {
           "first_seen": "2026-10-08T22:58:20+00:00",
+          "removed_at": "2026-11-13T06:45:35+00:00",
           "title": "2027 Quantitative Masters Internship Program - Investments - Quantitative Investing - San Francisco"
         },
         "R266475": {
           "first_seen": "2026-10-08T22:58:20+00:00",
+          "removed_at": "2026-11-13T06:45:35+00:00",
           "title": "2027 Quantitative Masters Internship Program - Sales & Relationship Management - Institutional Wealth - Chicago"
         },
         "R266476": {
           "first_seen": "2026-10-08T22:58:20+00:00",
+          "removed_at": "2026-11-13T06:45:35+00:00",
           "title": "2027 Quantitative Masters Internship Program - Technology - Analytics & Modeling - San Francisco"
         },
         "R266477": {
           "first_seen": "2026-10-08T22:58:20+00:00",
+          "removed_at": "2026-11-13T06:45:35+00:00",
           "title": "2027 Quantitative Masters Internship Program - Technology - Analytics & Modeling - New York"
         },
         "R266484": {
@@ -55475,6 +55592,7 @@
         },
         "R266626": {
           "first_seen": "2026-10-08T22:58:20+00:00",
+          "removed_at": "2026-11-13T06:45:35+00:00",
           "title": "Co-Head of Federal Government Affairs"
         },
         "R266628": {
@@ -55863,6 +55981,10 @@
           "first_seen": "2026-11-09T18:51:38+00:00",
           "title": "Institutional Accounting - Vice President"
         },
+        "R267143": {
+          "first_seen": "2026-11-13T06:45:35+00:00",
+          "title": "Associate, Alternatives Fund Accounting"
+        },
         "R267146": {
           "first_seen": "2026-11-10T02:11:06+00:00",
           "title": "Associate, Business Audit"
@@ -56029,6 +56151,7 @@
         },
         "5183737008": {
           "first_seen": "2026-10-08T23:01:47+00:00",
+          "removed_at": "2026-11-13T06:47:28+00:00",
           "title": "Partner Manager"
         },
         "5183756008": {
@@ -57225,6 +57348,14 @@
         "5478819008": {
           "first_seen": "2026-11-11T02:58:53+00:00",
           "title": "Senior Software Engineer - Data Enablement"
+        },
+        "5481026008": {
+          "first_seen": "2026-11-13T06:47:28+00:00",
+          "title": "Business Development Representative"
+        },
+        "5481027008": {
+          "first_seen": "2026-11-13T06:47:28+00:00",
+          "title": "Business Development Representative"
         }
       },
       "last_error": null,
@@ -61048,6 +61179,7 @@
         },
         "JR2026506877": {
           "first_seen": "2026-10-20T22:49:32+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Lead Structural DaDT Analysis Engineer"
         },
         "JR2026507042": {
@@ -61374,10 +61506,12 @@
         },
         "JR2026511470": {
           "first_seen": "2026-10-20T15:33:55+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "P-8A Support Equipment Tech Keflavik, Iceland"
         },
         "JR2026511492": {
           "first_seen": "2026-11-06T00:07:28+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "IT SOX Specialist"
         },
         "JR2026511529": {
@@ -61605,10 +61739,12 @@
         },
         "JR2026514095": {
           "first_seen": "2026-10-29T22:20:16+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Customer Technical Structures Training Specialist​ (Customer Training Delivery) (Career or Expert)"
         },
         "JR2026514113": {
           "first_seen": "2026-10-21T22:49:40+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Senior Systems Health & Integrated Diagnostics Engineer"
         },
         "JR2026514119": {
@@ -62174,6 +62310,7 @@
         },
         "JR2026517049": {
           "first_seen": "2026-10-12T19:30:10+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Experienced or Lead Electrical Engineer"
         },
         "JR2026517079": {
@@ -62331,6 +62468,7 @@
         },
         "JR2026517934": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Electro-Optical/Infrared Signature Analyst Engineer (Mid-Level or Senior)"
         },
         "JR2026517936": {
@@ -62641,6 +62779,7 @@
         },
         "JR2026518839": {
           "first_seen": "2026-10-30T02:26:37+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Systems Engineer (Systems Engineering Engineer-General)"
         },
         "JR2026518880": {
@@ -63070,6 +63209,7 @@
         },
         "JR2026520210": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Technical Lead Engineer (PMPC Mission Critical Software)"
         },
         "JR2026520215": {
@@ -63211,6 +63351,7 @@
         },
         "JR2026520553": {
           "first_seen": "2026-10-15T20:50:38+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Mission Systems Software Test Architect"
         },
         "JR2026520562": {
@@ -63384,6 +63525,7 @@
         },
         "JR2026520920": {
           "first_seen": "2026-10-23T22:38:05+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Associate and Mid-Level Software Engineers"
         },
         "JR2026520921": {
@@ -63501,6 +63643,7 @@
         },
         "JR2026521233": {
           "first_seen": "2026-10-29T17:26:09+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Lead or Senior Electrical Engineer"
         },
         "JR2026521251": {
@@ -63858,6 +64001,7 @@
         },
         "JR2026522092": {
           "first_seen": "2026-10-12T19:30:10+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Experienced Electrical and Test Engineer"
         },
         "JR2026522093": {
@@ -64124,6 +64268,7 @@
         },
         "JR2026522530": {
           "first_seen": "2026-11-06T00:07:28+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Experienced Procurement Analyst"
         },
         "JR2026522532": {
@@ -64336,6 +64481,7 @@
         },
         "JR2026522903": {
           "first_seen": "2026-11-10T02:34:28+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Experienced Quality Inspector"
         },
         "JR2026522904": {
@@ -64411,6 +64557,7 @@
         },
         "JR2026523003": {
           "first_seen": "2026-10-22T14:18:53+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Audio Visual Programmer Analyst (Experienced, Senior or Lead)"
         },
         "JR2026523004": {
@@ -64600,6 +64747,7 @@
         },
         "JR2026523259": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "F-15 Flight Line Weapons Technician - Qatar"
         },
         "JR2026523283": {
@@ -64636,6 +64784,7 @@
         },
         "JR2026523311": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Senior Instrumentation Flight Test Engineer"
         },
         "JR2026523342": {
@@ -64671,6 +64820,7 @@
         },
         "JR2026523431": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Associate Missions Systems Software Engineer - Embedded"
         },
         "JR2026523443": {
@@ -64750,6 +64900,7 @@
         },
         "JR2026523563": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Experienced Missions Systems Software Engineers – Embedded"
         },
         "JR2026523565": {
@@ -64759,6 +64910,7 @@
         },
         "JR2026523566": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Senior Missions Systems Software Engineers – Embedded"
         },
         "JR2026523575": {
@@ -64768,6 +64920,7 @@
         },
         "JR2026523578": {
           "first_seen": "2026-10-09T18:56:23+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Software Engineer, Missile Defense National Team, C2BMC (Associate, Experienced or Senior)"
         },
         "JR2026523585": {
@@ -64958,6 +65111,7 @@
         },
         "JR2026523813": {
           "first_seen": "2026-11-04T21:48:42+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Lead Procurement Agent"
         },
         "JR2026523823": {
@@ -65279,6 +65433,7 @@
         },
         "JR2026524199": {
           "first_seen": "2026-10-20T19:45:02+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Chief Portfolio Engineer (Principal)"
         },
         "JR2026524201": {
@@ -65915,6 +66070,7 @@
         },
         "JR2026524946": {
           "first_seen": "2026-11-10T02:34:28+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Experienced Project Management Specialist"
         },
         "JR2026524950": {
@@ -66315,6 +66471,7 @@
         },
         "JR2026525407": {
           "first_seen": "2026-11-06T00:07:28+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Associate Procurement Agent"
         },
         "JR2026525412": {
@@ -67456,6 +67613,7 @@
         },
         "JR2026526354": {
           "first_seen": "2026-11-03T18:21:21+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Project Management Specialist (General Project Mgmt)"
         },
         "JR2026526356": {
@@ -67507,6 +67665,7 @@
         },
         "JR2026526399": {
           "first_seen": "2026-10-12T19:30:10+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Experienced Quality Inspector"
         },
         "JR2026526402": {
@@ -67689,6 +67848,7 @@
         },
         "JR2026526523": {
           "first_seen": "2026-10-17T00:57:06+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Customer Engineers (Experienced and Senior)"
         },
         "JR2026526529": {
@@ -67757,6 +67917,7 @@
         },
         "JR2026526580": {
           "first_seen": "2026-10-30T16:24:52+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Strategic Pricing Analyst (Experienced or Senior)"
         },
         "JR2026526581": {
@@ -68192,6 +68353,7 @@
         },
         "JR2026527118": {
           "first_seen": "2026-10-29T22:20:16+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Manufacturing Assembler"
         },
         "JR2026527137": {
@@ -68269,6 +68431,7 @@
         },
         "JR2026527272": {
           "first_seen": "2026-10-30T21:16:02+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Weapons Test & Evaluation Engineer (Associate, or Mid-Level)"
         },
         "JR2026527273": {
@@ -68314,6 +68477,7 @@
         },
         "JR2026527323": {
           "first_seen": "2026-11-04T21:48:42+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Mission Operations Engineer (Entry-Level) - Millennium Space Systems"
         },
         "JR2026527326": {
@@ -68630,6 +68794,7 @@
         },
         "JR2026527714": {
           "first_seen": "2026-10-27T20:34:57+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Experienced Structures Repair & Modification Technician – C-17"
         },
         "JR2026527718": {
@@ -68709,10 +68874,12 @@
         },
         "JR2026527782": {
           "first_seen": "2026-10-23T22:38:05+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Experienced or Senior Mission Assurance Engineer"
         },
         "JR2026527787": {
           "first_seen": "2026-10-23T22:38:05+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Associate 787 Cabin Systems Engineer"
         },
         "JR2026527800": {
@@ -68801,6 +68968,7 @@
         },
         "JR2026527880": {
           "first_seen": "2026-10-29T22:20:16+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "E-3 NATO AWACS Field Service Representative (Mid-Level and Senior) - Germany"
         },
         "JR2026527882": {
@@ -68852,6 +69020,7 @@
         },
         "JR2026527952": {
           "first_seen": "2026-10-29T17:26:09+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "F-22 Experienced Modification Avionics Electrician"
         },
         "JR2026527956": {
@@ -69023,6 +69192,7 @@
         },
         "JR2026528173": {
           "first_seen": "2026-11-10T18:19:00+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Cybersecurity - Senior Information System Security Manager"
         },
         "JR2026528177": {
@@ -69050,6 +69220,7 @@
         },
         "JR2026528219": {
           "first_seen": "2026-10-29T22:20:16+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Electronic and Electrical Systems Design and Test Engineer (Experienced and Senior)"
         },
         "JR2026528221": {
@@ -69088,6 +69259,7 @@
         },
         "JR2026528258": {
           "first_seen": "2026-10-29T22:20:16+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Manufacturing Engineer (Associate or Experienced)"
         },
         "JR2026528265": {
@@ -69120,6 +69292,7 @@
         },
         "JR2026528292": {
           "first_seen": "2026-10-30T16:24:52+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Flight Termination System (FTS) Engineer (Associate, Mid-Level or Senior)"
         },
         "JR2026528295": {
@@ -69316,10 +69489,12 @@
         },
         "JR2026528634": {
           "first_seen": "2026-11-03T23:48:35+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "MQ-25 Vehicle Management System (VMS) Software Lead Engineer"
         },
         "JR2026528637": {
           "first_seen": "2026-11-05T18:32:43+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Experienced Financial Analyst (Program Finance Lead)"
         },
         "JR2026528653": {
@@ -69399,6 +69574,7 @@
         },
         "JR2026528789": {
           "first_seen": "2026-11-10T18:19:00+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Product Security Engineering Principal Manager"
         },
         "JR2026528791": {
@@ -69420,6 +69596,7 @@
         },
         "JR2026528807": {
           "first_seen": "2026-11-05T18:32:43+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Mechanical Design Engineer (Experienced & Senior)"
         },
         "JR2026528815": {
@@ -69477,6 +69654,7 @@
         },
         "JR2026528879": {
           "first_seen": "2026-11-06T00:07:28+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Experienced Procurement Agent"
         },
         "JR2026528880": {
@@ -69559,6 +69737,7 @@
         },
         "JR2026528975": {
           "first_seen": "2026-11-07T01:24:51+00:00",
+          "removed_at": "2026-11-13T07:07:47+00:00",
           "title": "Senior F-22 Project Management Specialist - Labs/Test"
         },
         "JR2026528992": {
@@ -69863,6 +70042,10 @@
         "JR2026529636": {
           "first_seen": "2026-11-13T00:10:29+00:00",
           "title": "Experienced Earned Value Compliance Analyst"
+        },
+        "JR2026529642": {
+          "first_seen": "2026-11-13T07:07:47+00:00",
+          "title": "Senior Special Test Equipment Project Engineer"
         }
       },
       "last_error": null,
@@ -72147,6 +72330,7 @@
         },
         "R027339": {
           "first_seen": "2026-10-20T10:06:33+00:00",
+          "removed_at": "2026-11-13T06:44:02+00:00",
           "title": "Substrate Engineer"
         },
         "R027342": {
@@ -77663,6 +77847,7 @@
         },
         "R1004899": {
           "first_seen": "2026-10-31T00:47:11+00:00",
+          "removed_at": "2026-11-13T06:40:21+00:00",
           "title": "Senior Risk Manager, Card Risk"
         },
         "R1004911": {
@@ -77713,6 +77898,7 @@
         },
         "R1004958": {
           "first_seen": "2026-10-31T00:47:11+00:00",
+          "removed_at": "2026-11-13T06:40:21+00:00",
           "title": "Sr Director, Card Risk: Credit & Data"
         },
         "R1004967": {
@@ -78137,6 +78323,10 @@
           "first_seen": "2026-11-09T18:46:09+00:00",
           "title": "Full-stack Engineer 4 (Java & Go)"
         },
+        "R1005416": {
+          "first_seen": "2026-11-13T06:40:21+00:00",
+          "title": "Full-Stack Engineer 4 (Java, Spring Boot, AWS) (Enterprise Platforms Technology)"
+        },
         "R1005424": {
           "first_seen": "2026-11-10T17:48:46+00:00",
           "title": "Senior Manager, Product Management - Customer Assist Experience"
@@ -78320,6 +78510,10 @@
         "R1005675": {
           "first_seen": "2026-11-12T23:41:48+00:00",
           "title": "Sr. Manager, Sr. Counsel - US Commercial & Product (Pulse Network)"
+        },
+        "R1005693": {
+          "first_seen": "2026-11-13T06:40:21+00:00",
+          "title": "Full-Stack Engineer 4 (Java, Python, Cloud) (Enterprise Platforms Technology)"
         },
         "R1005697": {
           "first_seen": "2026-11-12T23:41:48+00:00",
@@ -79369,6 +79563,7 @@
         },
         "R248647": {
           "first_seen": "2026-10-08T19:00:47+00:00",
+          "removed_at": "2026-11-13T06:40:21+00:00",
           "title": "Principal Associate, Risk Advisor (Auto)"
         },
         "R248660": {
@@ -80384,6 +80579,7 @@
         },
         "8684361002": {
           "first_seen": "2026-10-08T23:01:50+00:00",
+          "removed_at": "2026-11-13T06:47:31+00:00",
           "title": "Sr. Product Marketing Manager, Lending"
         },
         "8692366002": {
@@ -80683,6 +80879,10 @@
         "8933682002": {
           "first_seen": "2026-11-12T18:26:47+00:00",
           "title": "People Programs Lead, People Operations"
+        },
+        "8940707002": {
+          "first_seen": "2026-11-13T06:47:31+00:00",
+          "title": "Sr. Product Marketing Manager, Lending"
         }
       },
       "last_error": null,
@@ -81273,6 +81473,7 @@
         },
         "2018614": {
           "first_seen": "2026-10-08T21:28:53+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Analog/Mixed Signal IC Component Engineer"
         },
         "2018617": {
@@ -81459,6 +81660,7 @@
         },
         "2019858": {
           "first_seen": "2026-10-15T20:22:31+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Customer Experience Customer Success Specialist I (Full Time) United States"
         },
         "2019865": {
@@ -82197,6 +82399,7 @@
         },
         "2022764": {
           "first_seen": "2026-10-08T21:28:53+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Account Executive - Splunk"
         },
         "2022782": {
@@ -82340,6 +82543,7 @@
         },
         "2023134": {
           "first_seen": "2026-10-08T21:28:53+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Engineering Product Manager - Mobility"
         },
         "2023159": {
@@ -83410,6 +83614,7 @@
         },
         "2025323": {
           "first_seen": "2026-10-13T17:37:40+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Digital Customer Success Specialist"
         },
         "2025331": {
@@ -83640,6 +83845,7 @@
         },
         "2025663": {
           "first_seen": "2026-10-08T21:28:53+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Account Executive - Global"
         },
         "2025665": {
@@ -84500,6 +84706,7 @@
         },
         "2026915": {
           "first_seen": "2026-10-08T21:28:53+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Systems Quality Engineer II (Co-op) - United States"
         },
         "2026917": {
@@ -84688,6 +84895,10 @@
           "removed_at": "2026-11-09T07:57:39+00:00",
           "title": "Software Engineer"
         },
+        "2027200": {
+          "first_seen": "2026-11-13T06:41:06+00:00",
+          "title": "Software Engineering Technical Leader - Distributed Systems, Microservices, Cloud Native Architecture |10+ yrs"
+        },
         "2027214": {
           "first_seen": "2026-10-30T01:59:28+00:00",
           "title": "Sustainability Analyst I (Intern) - United States GSC/GSM ETR"
@@ -84709,6 +84920,7 @@
         },
         "2027249": {
           "first_seen": "2026-10-08T21:28:53+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Software Engineer Compiler II (Full Time) – United States"
         },
         "2027254": {
@@ -84788,6 +85000,10 @@
           "first_seen": "2026-10-12T19:02:30+00:00",
           "removed_at": "2026-10-26T06:11:47+00:00",
           "title": "Software Engineer | Java/Golang/Python | 2 to 4 years | Bangalore"
+        },
+        "2027383": {
+          "first_seen": "2026-11-13T06:41:06+00:00",
+          "title": "Software Engineer"
         },
         "2027385": {
           "first_seen": "2026-10-23T07:30:27+00:00",
@@ -85277,6 +85493,7 @@
         },
         "2028183": {
           "first_seen": "2026-10-28T12:50:30+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Business Operations Analyst"
         },
         "2028187": {
@@ -85421,6 +85638,7 @@
         },
         "2028440": {
           "first_seen": "2026-10-14T18:38:24+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Amplify Marketing Specialist I (Full-Time) - United States"
         },
         "2028452": {
@@ -85500,10 +85718,12 @@
         },
         "2028618": {
           "first_seen": "2026-10-13T17:37:40+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "PROPEL Project Specialist I (Intern) United States"
         },
         "2028619": {
           "first_seen": "2026-10-13T17:37:40+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "PROPEL Associate Project Specialist (Full Time) United States"
         },
         "2028623": {
@@ -85540,6 +85760,10 @@
         "2028657": {
           "first_seen": "2026-10-26T19:18:36+00:00",
           "title": "Staff Site Reliability Engineer"
+        },
+        "2028659": {
+          "first_seen": "2026-11-13T06:41:06+00:00",
+          "title": "Account Executive - Security"
         },
         "2028663": {
           "first_seen": "2026-10-30T15:56:42+00:00",
@@ -85812,6 +86036,7 @@
         },
         "2029284": {
           "first_seen": "2026-11-10T09:47:11+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Software Engineer"
         },
         "2029289": {
@@ -85942,6 +86167,7 @@
         },
         "2029756": {
           "first_seen": "2026-11-10T23:18:37+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "PR Manager, Office of the CTO"
         },
         "2029771": {
@@ -85967,6 +86193,7 @@
         },
         "2029810": {
           "first_seen": "2026-10-30T15:56:41+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Solutions Engineer"
         },
         "2029815": {
@@ -86184,6 +86411,7 @@
         },
         "2030549": {
           "first_seen": "2026-11-12T09:48:31+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "ASIC Engineer"
         },
         "2030570": {
@@ -86192,6 +86420,7 @@
         },
         "2030577": {
           "first_seen": "2026-11-03T23:20:40+00:00",
+          "removed_at": "2026-11-13T06:41:06+00:00",
           "title": "Solutions Engineer, Federal"
         },
         "2030721": {
@@ -88112,6 +88341,7 @@
         },
         "8172582": {
           "first_seen": "2026-10-08T23:01:36+00:00",
+          "removed_at": "2026-11-13T06:47:17+00:00",
           "title": "Account Executive, Indonesia"
         },
         "8172873": {
@@ -89537,6 +89767,10 @@
         "8374274": {
           "first_seen": "2026-11-12T01:39:30+00:00",
           "title": "Principal Growth Marketing Manager"
+        },
+        "8376867": {
+          "first_seen": "2026-11-13T06:47:17+00:00",
+          "title": "Senior Response Engineer - Cloudflare Managed Defense Center (CMDC)"
         },
         "8378849": {
           "first_seen": "2026-11-12T09:54:40+00:00",
@@ -91546,6 +91780,7 @@
         },
         "8334761": {
           "first_seen": "2026-10-31T18:39:42+00:00",
+          "removed_at": "2026-11-13T06:46:38+00:00",
           "title": "Customer Success Team Agent II"
         },
         "8334764": {
@@ -91555,6 +91790,7 @@
         },
         "8334767": {
           "first_seen": "2026-10-31T18:39:42+00:00",
+          "removed_at": "2026-11-13T06:46:38+00:00",
           "title": "Customer Support Specialist II"
         },
         "8335547": {
@@ -94177,6 +94413,14 @@
           "removed_at": "2026-11-02T18:20:50+00:00",
           "title": "Regional Principal Analyst, Falcon Complete (Remote)"
         },
+        "R30570": {
+          "first_seen": "2026-11-13T06:41:27+00:00",
+          "title": "Launch Intern",
+          "tri": {
+            "s": -2.4508,
+            "v": "tfidf-texte-v1"
+          }
+        },
         "R30574": {
           "first_seen": "2026-11-02T18:20:50+00:00",
           "removed_at": "2026-11-09T18:47:17+00:00",
@@ -94383,6 +94627,10 @@
           "first_seen": "2026-10-30T20:48:20+00:00",
           "title": "Regional Sales Manager"
         },
+        "R30755": {
+          "first_seen": "2026-11-13T06:41:24+00:00",
+          "title": "Regional Sales Manager - Manufacturing"
+        },
         "R30756": {
           "first_seen": "2026-11-09T18:47:17+00:00",
           "title": "Regional Sales Manager, New Accounts (Remote, DEU)"
@@ -94414,6 +94662,10 @@
         "R30789": {
           "first_seen": "2026-11-05T09:29:22+00:00",
           "title": "Sr. Intelligence Analyst II (Remote)"
+        },
+        "R30795": {
+          "first_seen": "2026-11-13T06:41:24+00:00",
+          "title": "Corporate Account Executive (新規開拓担当営業)"
         },
         "R30801": {
           "first_seen": "2026-11-05T18:02:35+00:00",
@@ -94475,6 +94727,7 @@
         "R30825": {
           "first_seen": "2026-11-10T02:06:45+00:00",
           "location": "Australia - Remote, VC · Australia - Remote, WA · Australia - Remote, SA · Australia - Remote, QL · Australia - Remote, TS",
+          "removed_at": "2026-11-13T06:41:24+00:00",
           "title": "Falcon Complete Analyst Intern Graduate (Remote, AUS)",
           "tri": {
             "s": -2.8627,
@@ -94484,6 +94737,7 @@
         "R30826": {
           "first_seen": "2026-11-10T02:06:48+00:00",
           "location": "Australia - Remote, VC · Australia - Remote, WA · Australia - Remote, SA · Australia - Remote, QL · Australia - Remote, TS",
+          "removed_at": "2026-11-13T06:41:24+00:00",
           "title": "Falcon Complete Analyst Intern Graduate (Remote, AUS)",
           "tri": {
             "s": -2.8627,
@@ -94502,6 +94756,14 @@
         "R30853": {
           "first_seen": "2026-11-11T10:54:17+00:00",
           "title": "Sr. Security Engineer III (Remote)"
+        },
+        "R30871": {
+          "first_seen": "2026-11-13T06:41:24+00:00",
+          "title": "Engagement Lead, Incident Response Partner Services"
+        },
+        "R30900": {
+          "first_seen": "2026-11-13T06:41:24+00:00",
+          "title": "Regional Sales Manager, New Accounts"
         }
       },
       "last_error": null,
@@ -101460,6 +101722,7 @@
         },
         "8537058002": {
           "first_seen": "2026-10-08T19:02:47+00:00",
+          "removed_at": "2026-11-13T06:46:40+00:00",
           "title": "Named Core Account Executive (Public Sector)"
         },
         "8538833002": {
@@ -104785,6 +105048,10 @@
           "first_seen": "2026-11-10T23:24:16+00:00",
           "title": "Sales Leader, Commercial"
         },
+        "8936978002": {
+          "first_seen": "2026-11-13T06:46:40+00:00",
+          "title": "Corporate FP&A Manager"
+        },
         "8937105002": {
           "first_seen": "2026-11-10T23:24:16+00:00",
           "title": "GTM Talent Sourcer (Contract)"
@@ -105319,7 +105586,6 @@
         },
         "7531575": {
           "first_seen": "2026-10-08T19:02:48+00:00",
-          "removed_at": "2026-11-03T09:37:25+00:00",
           "title": "Sales Development Representative"
         },
         "7536154": {
@@ -108189,6 +108455,7 @@
         },
         "744000128495899": {
           "first_seen": "2026-10-09T18:53:10+00:00",
+          "removed_at": "2026-11-13T07:04:59+00:00",
           "title": "Director, Finance SSC"
         },
         "744000128534709": {
@@ -113046,6 +113313,7 @@
         },
         "744000156455939": {
           "first_seen": "2026-10-21T02:00:49+00:00",
+          "removed_at": "2026-11-13T07:04:59+00:00",
           "title": "Associate, AP Service Delivery (Direct)"
         },
         "744000156456519": {
@@ -114653,6 +114921,7 @@
         },
         "744000159295494": {
           "first_seen": "2026-11-03T09:57:04+00:00",
+          "removed_at": "2026-11-13T07:04:59+00:00",
           "title": "Lead, Strategy & Vendor Performance"
         },
         "744000159304603": {
@@ -115786,6 +116055,18 @@
         "744000161364829": {
           "first_seen": "2026-11-12T18:45:10+00:00",
           "title": "Sr Software Engineer Android"
+        },
+        "744000161421040": {
+          "first_seen": "2026-11-13T07:04:59+00:00",
+          "title": "Regional Ads Performance Manager (Shops)"
+        },
+        "744000161421969": {
+          "first_seen": "2026-11-13T07:04:59+00:00",
+          "title": "Assistant Manager, Strategic Account Management"
+        },
+        "744000161428935": {
+          "first_seen": "2026-11-13T07:04:59+00:00",
+          "title": "Manager, Channel Development"
         }
       },
       "last_error": null,
@@ -115831,6 +116112,7 @@
         },
         "291888": {
           "first_seen": "2026-10-09T18:41:42+00:00",
+          "removed_at": "2026-11-13T06:53:15+00:00",
           "title": "Software Senior Engineer"
         },
         "291936": {
@@ -115866,6 +116148,7 @@
         },
         "292815": {
           "first_seen": "2026-10-19T19:35:42+00:00",
+          "removed_at": "2026-11-13T06:53:15+00:00",
           "title": "Principal Systems Development Engineer"
         },
         "293104": {
@@ -116738,6 +117021,10 @@
           "first_seen": "2026-10-30T08:51:00+00:00",
           "title": "Senior Hardware Engineer (Engineering Project Management)"
         },
+        "300432": {
+          "first_seen": "2026-11-13T06:53:15+00:00",
+          "title": "AI Server Platform Hardware Systems Lead"
+        },
         "300445": {
           "first_seen": "2026-10-09T18:41:42+00:00",
           "removed_at": "2026-10-16T15:05:28+00:00",
@@ -116875,6 +117162,7 @@
         },
         "301264": {
           "first_seen": "2026-11-04T21:33:28+00:00",
+          "removed_at": "2026-11-13T06:53:15+00:00",
           "title": "Quality Engineer 2"
         },
         "301313": {
@@ -117119,10 +117407,12 @@
         },
         "D12312": {
           "first_seen": "2026-11-06T21:07:29+00:00",
+          "removed_at": "2026-11-13T06:53:15+00:00",
           "title": "Estágio em Engenharia Industrial"
         },
         "D12362": {
           "first_seen": "2026-10-29T22:04:37+00:00",
+          "removed_at": "2026-11-13T06:53:15+00:00",
           "title": "Estágio em Operações e Investimentos de Marketing"
         },
         "D12364": {
@@ -120714,6 +121004,10 @@
           "first_seen": "2026-10-11T22:03:00+00:00",
           "title": "Operations Analyst, NCT"
         },
+        "R0450904": {
+          "first_seen": "2026-11-13T06:46:32+00:00",
+          "title": "Corporate Bank – Transactional FX Product Manager, Cash Management - AVP"
+        },
         "R0450907": {
           "first_seen": "2026-10-08T22:59:16+00:00",
           "title": "Personal Clients Advisor (f/m/x)"
@@ -120813,6 +121107,7 @@
         },
         "R0451308": {
           "first_seen": "2026-11-03T09:37:14+00:00",
+          "removed_at": "2026-11-13T06:46:32+00:00",
           "title": "DBMN - Fund Accounting Analyst (Open for Fresh Graduates)"
         },
         "R0451335": {
@@ -127883,6 +128178,10 @@
         "3c0ed0da-dcc2-4f55-96d2-154935a3ed32": {
           "first_seen": "2026-10-09T18:53:32+00:00",
           "title": "Customer Success Lead, US"
+        },
+        "3d40a4e8-4d40-42b5-80b1-6940ea3b6649": {
+          "first_seen": "2026-11-13T07:05:10+00:00",
+          "title": "Growth Engineer"
         },
         "4786faf6-f620-406e-b659-338b4cdabf30": {
           "first_seen": "2026-10-14T14:10:53+00:00",
@@ -136655,7 +136954,6 @@
         },
         "1366153655": {
           "first_seen": "2026-10-09T18:58:51+00:00",
-          "removed_at": "2026-10-30T16:27:13+00:00",
           "title": "Noumea Conducteur De Travaux 98800"
         },
         "1366166555": {
@@ -139483,7 +139781,6 @@
         },
         "1371224755": {
           "first_seen": "2026-10-11T22:26:28+00:00",
-          "removed_at": "2026-11-08T17:11:19+00:00",
           "title": "Noumea Technicien Electrotechnicien 98800"
         },
         "1371224955": {
@@ -141761,6 +142058,7 @@
         },
         "1374976155": {
           "first_seen": "2026-10-29T22:22:40+00:00",
+          "removed_at": "2026-11-13T07:10:05+00:00",
           "title": "Lima Ingenieroa De Proyectos Senior 15063"
         },
         "1374992655": {
@@ -142956,6 +143254,14 @@
         "1376793455": {
           "first_seen": "2026-11-13T00:13:02+00:00",
           "title": "Katowice Senior Recruiter 40 007"
+        },
+        "1376848855": {
+          "first_seen": "2026-11-13T07:10:05+00:00",
+          "title": "Melbourne Derivatives Accounting Specialist 3006"
+        },
+        "1376851155": {
+          "first_seen": "2026-11-13T07:10:05+00:00",
+          "title": "Iowa City Project Management Advisor EGPM1J Ia 52242"
         },
         "937043655": {
           "first_seen": "2026-10-09T18:58:51+00:00",
@@ -144883,7 +145189,6 @@
         },
         "R-107366": {
           "first_seen": "2026-10-08T22:56:47+00:00",
-          "removed_at": "2026-11-10T09:50:14+00:00",
           "title": "Senior Machine Learning Scientist, Agentic AI & GenAI Systems (Growth Marketing)"
         },
         "R-107404": {
@@ -145367,6 +145672,7 @@
         },
         "R-109829": {
           "first_seen": "2026-10-08T22:56:47+00:00",
+          "removed_at": "2026-11-13T06:44:10+00:00",
           "title": "Paid Media Operations Manager"
         },
         "R-109831": {
@@ -145376,6 +145682,7 @@
         },
         "R-109859": {
           "first_seen": "2026-10-08T22:56:47+00:00",
+          "removed_at": "2026-11-13T06:44:10+00:00",
           "title": "Web Program Manager"
         },
         "R-109861": {
@@ -145548,6 +145855,7 @@
         },
         "R-110147": {
           "first_seen": "2026-10-16T18:01:11+00:00",
+          "removed_at": "2026-11-13T06:44:10+00:00",
           "title": "Director, Technology"
         },
         "R-110150": {
@@ -145708,6 +146016,7 @@
         },
         "R-110425": {
           "first_seen": "2026-10-23T22:12:53+00:00",
+          "removed_at": "2026-11-13T06:44:10+00:00",
           "title": "Technical Program Manager III"
         },
         "R-110430": {
@@ -145788,6 +146097,7 @@
         },
         "R-110537": {
           "first_seen": "2026-10-15T17:03:07+00:00",
+          "removed_at": "2026-11-13T06:44:10+00:00",
           "title": "Product Manager III, InsurTech"
         },
         "R-110540": {
@@ -145851,6 +146161,7 @@
         },
         "R-110607": {
           "first_seen": "2026-10-16T18:01:11+00:00",
+          "removed_at": "2026-11-13T06:44:10+00:00",
           "title": "Incentive Compensation System Specialist"
         },
         "R-110613": {
@@ -146129,6 +146440,7 @@
         },
         "R-111248": {
           "first_seen": "2026-11-11T10:57:07+00:00",
+          "removed_at": "2026-11-13T06:44:10+00:00",
           "title": "Recruiter (6 month FTC)"
         },
         "R-111292": {
@@ -146317,6 +146629,7 @@
         },
         "8208191": {
           "first_seen": "2026-10-09T18:42:29+00:00",
+          "removed_at": "2026-11-13T06:54:04+00:00",
           "title": "Staff Product Manager, UX & IAM"
         },
         "8220907": {
@@ -148465,6 +148778,7 @@
         },
         "8273310": {
           "first_seen": "2026-11-12T23:48:29+00:00",
+          "removed_at": "2026-11-13T06:46:50+00:00",
           "title": "Senior Trade Advisory Manager"
         },
         "8274173": {
@@ -148640,9 +148954,17 @@
           "first_seen": "2026-11-11T18:48:37+00:00",
           "title": "Speditionskaufmann Luftfracht Export (m/w/d)"
         },
+        "8382386": {
+          "first_seen": "2026-11-13T06:46:50+00:00",
+          "title": "Air Operations Associate"
+        },
         "8383190": {
           "first_seen": "2026-11-12T18:24:51+00:00",
           "title": "Account Executive, Enterprise"
+        },
+        "8384368": {
+          "first_seen": "2026-11-13T06:46:50+00:00",
+          "title": "Omnichannel Customer Support Program Manager"
         },
         "8384430": {
           "first_seen": "2026-11-12T23:48:29+00:00",
@@ -153801,6 +154123,7 @@
         },
         "8180461": {
           "first_seen": "2026-10-08T23:01:51+00:00",
+          "removed_at": "2026-11-13T06:47:32+00:00",
           "title": "Payment Operations Analyst"
         },
         "8189240": {
@@ -154695,6 +155018,10 @@
           "first_seen": "2026-11-12T01:39:52+00:00",
           "title": "Events Coordinator"
         },
+        "8382149": {
+          "first_seen": "2026-11-13T06:47:40+00:00",
+          "title": "Front Desk Coordinator"
+        },
         "96224": {
           "first_seen": "2026-10-08T23:01:59+00:00",
           "title": "Algo Developer"
@@ -154789,6 +155116,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=123833": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Package Consultant-SAP C/4 HANA C4C"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=126993": {
@@ -154877,6 +155205,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128541": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Co-Op Business Transformation Consultant - Enterprise & Industry Strategy 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128547": {
@@ -154890,6 +155219,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128551": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Intern Security Consultant - Cyber Strategy & Risk 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128557": {
@@ -154994,6 +155324,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128765": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Co-Op Security Consultant - CyberDefend 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128767": {
@@ -155032,10 +155363,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128800": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Technical Sales Engineer - Spring Co-op Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128805": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Technology Seller - Spring Co-op Sales Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128807": {
@@ -155062,6 +155395,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128824": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Intern Data Engineer - Data Services - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=128825": {
@@ -155102,6 +155436,7 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=129244": {
           "first_seen": "2026-10-30T21:18:38+00:00",
           "notified_at": "2026-10-30T21:18:38+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Federal Data Engineering Co-Op: 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129252": {
@@ -155206,7 +155541,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129911": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-11-12T18:33:29+00:00",
           "title": "Global Sales Incentives – Sales Plan Design, Segmentation & Analytics Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=129913": {
@@ -155629,6 +155963,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131827": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "AI Foundations - Research Scientist - Research Internship - 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=131846": {
@@ -155719,7 +156054,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132433": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-11-12T18:33:29+00:00",
           "title": "Quantum Algorithms and Quantum Machine Learning Intern 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132434": {
@@ -155793,10 +156127,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132810": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Design Intern 2027 - Advanced Integrated Circuits Research"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132822": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Site Reliability Engineer Intern - OneIT - Rochester, MN"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=132833": {
@@ -155863,6 +156199,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133127": {
           "first_seen": "2026-10-19T19:36:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Quantum Infrastructure Intern 2027 - Platform Automation"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133129": {
@@ -155876,14 +156213,17 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133140": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Quantum Control Systems FPGA Developer Internship 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133141": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Quantum Control Systems Modeling Internship 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133145": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Quantum Control Distributed Runtime Internship 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133146": {
@@ -155977,6 +156317,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133801": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Design Engineer Intern 2027 - Design and Build AI-Native Interfaces"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=133848": {
@@ -156096,6 +156437,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134618": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Hardware Intern 2027: Advanced Solder Processes"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=134671": {
@@ -156146,6 +156488,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135171": {
           "first_seen": "2026-10-09T18:42:21+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Technical Specialist - General Professional (Intern, 2027)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135235": {
@@ -156173,7 +156516,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135502": {
           "first_seen": "2026-10-09T18:42:21+00:00",
-          "removed_at": "2026-11-12T23:56:08+00:00",
           "title": "Internship - Software Developer (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=135536": {
@@ -156270,6 +156612,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=136703": {
           "first_seen": "2026-10-09T23:31:46+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Future Club Chile 2027 | IBM Global Sales"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=136709": {
@@ -156400,6 +156743,7 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=137106": {
           "first_seen": "2026-10-15T20:53:14+00:00",
           "notified_at": "2026-10-15T20:53:14+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Back End Developer Intern - NY POK JS - 2027",
           "tri": {
             "s": null,
@@ -156417,7 +156761,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137237": {
           "first_seen": "2026-10-19T23:52:45+00:00",
-          "removed_at": "2026-11-12T23:56:08+00:00",
           "title": "Programa de Inclusión Laboral IBM | Personas con Discapacidad (PCD) - Ecuador"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137250": {
@@ -156428,6 +156771,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137269": {
           "first_seen": "2026-10-16T19:07:07+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "AI Software Engineer Spring Co-op 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137372": {
@@ -156463,6 +156807,7 @@
         "https://careers.ibm.com/careers/JobDetail?jobId=137428": {
           "first_seen": "2026-10-16T10:19:31+00:00",
           "notified_at": "2026-10-16T10:19:31+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "z/OS Core Technologies Back End Developer Intern 2027 - Poughkeepsie"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137471": {
@@ -156501,6 +156846,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137812": {
           "first_seen": "2026-10-22T22:34:39+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Mainframe System Verification Tester Apprentice - 2nd Shift"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137869": {
@@ -156518,6 +156864,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137919": {
           "first_seen": "2026-10-28T00:02:50+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Software Engineer Apprentice"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=137945": {
@@ -156601,6 +156948,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=138790": {
           "first_seen": "2026-11-02T18:35:16+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Master@IBM - Werkstudent Linux Kernel Developer (f/m/x)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=138793": {
@@ -156623,7 +156971,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=138923": {
           "first_seen": "2026-10-27T14:44:58+00:00",
-          "removed_at": "2026-11-12T23:56:08+00:00",
           "title": "Talent Acquisition Intern (English & Italian)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=138943": {
@@ -156666,26 +157013,23 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=139267": {
           "first_seen": "2026-10-29T22:05:19+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Systems Support Apprentice"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=139277": {
           "first_seen": "2026-10-30T21:01:37+00:00",
-          "removed_at": "2026-11-12T18:33:29+00:00",
           "title": "Technical Content Professional Apprentice"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=139297": {
           "first_seen": "2026-10-30T08:51:42+00:00",
-          "removed_at": "2026-11-12T18:33:29+00:00",
           "title": "Q2C Intern - Korean Bilingual"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=139298": {
           "first_seen": "2026-10-30T08:51:42+00:00",
-          "removed_at": "2026-11-12T18:33:29+00:00",
           "title": "Q2C Intern - Mandarin Bilingual"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=139506": {
           "first_seen": "2026-11-11T18:56:22+00:00",
-          "removed_at": "2026-11-12T23:56:08+00:00",
           "title": "SAP Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=139521": {
@@ -156722,6 +157066,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=139670": {
           "first_seen": "2026-11-06T06:52:39+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Oportunidad de Pasantía: Ingeniero/a de DevOps"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=139671": {
@@ -156730,7 +157075,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=139683": {
           "first_seen": "2026-11-02T07:55:33+00:00",
-          "removed_at": "2026-11-12T18:33:29+00:00",
           "title": "Paid Internship Access Blue Program 2027"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=139722": {
@@ -156814,10 +157158,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=140065": {
           "first_seen": "2026-11-06T15:16:55+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Digital & Technology Solutions Apprenticeship 2027 - Apply Now!"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=140069": {
           "first_seen": "2026-11-11T18:56:22+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Data Scientist-Advanced Analytics Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=140092": {
@@ -156826,6 +157172,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=140093": {
           "first_seen": "2026-11-06T06:52:39+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Oportunidad de Prácticas: Desarrollador(a) de Automatización de Pruebas"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=140102": {
@@ -156848,7 +157195,6 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=140123": {
           "first_seen": "2026-11-04T21:34:12+00:00",
-          "removed_at": "2026-11-12T23:56:08+00:00",
           "title": "Student ( Pipeline Coordinator)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=140154": {
@@ -156932,6 +157278,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=141187": {
           "first_seen": "2026-11-11T18:56:22+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Package Consultant-SAP BTP Intern"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=141405": {
@@ -156939,9 +157286,12 @@
           "removed_at": "2026-11-12T18:33:29+00:00",
           "title": "Apprenti(e) Consultant - Transformation des Systèmes d'Information - Finance - Supply Chain - IBM France - H/F"
         },
+        "https://careers.ibm.com/careers/JobDetail?jobId=141598": {
+          "first_seen": "2026-11-13T06:53:57+00:00",
+          "title": "Technical Content Professional Apprentice"
+        },
         "https://careers.ibm.com/careers/JobDetail?jobId=141644": {
           "first_seen": "2026-11-09T19:01:30+00:00",
-          "removed_at": "2026-11-12T18:33:29+00:00",
           "title": "Oportunidad de Pasantía: Especialista en Operaciones de la Cadena de Suministro"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=141691": {
@@ -156950,10 +157300,12 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=141838": {
           "first_seen": "2026-11-10T18:03:45+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "LLM Adapters for Agentic Workflows- MSC/PHD Student Position- Research Lab"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=141858": {
           "first_seen": "2026-11-11T18:56:22+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Application Developer-IBM Cloud FullStack"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=141863": {
@@ -156962,6 +157314,7 @@
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=141879": {
           "first_seen": "2026-11-09T19:01:30+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Consulting Digital & Technology Solutions Degree Apprenticeship (Public Sector)"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=141929": {
@@ -156989,12 +157342,17 @@
           "first_seen": "2026-11-12T01:46:08+00:00",
           "title": "Oportunidad de Pasantía: Desarrollador(a) de Software"
         },
+        "https://careers.ibm.com/careers/JobDetail?jobId=142060": {
+          "first_seen": "2026-11-13T06:53:57+00:00",
+          "title": "Infrastructure Lab Technician Apprentice"
+        },
         "https://careers.ibm.com/careers/JobDetail?jobId=142063": {
           "first_seen": "2026-11-10T23:31:29+00:00",
           "title": "Infrastructure Lab Technician Apprentice"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=142175": {
           "first_seen": "2026-11-12T18:33:29+00:00",
+          "removed_at": "2026-11-13T06:53:57+00:00",
           "title": "Internship- AI & Finance Transformation"
         },
         "https://careers.ibm.com/careers/JobDetail?jobId=142297": {
@@ -157245,7 +157603,6 @@
         },
         "4795169101": {
           "first_seen": "2026-10-08T23:02:00+00:00",
-          "removed_at": "2026-10-20T04:55:23+00:00",
           "title": "Commodities Trader - China"
         },
         "4796143101": {
@@ -159283,6 +159640,7 @@
         },
         "HRC1833857": {
           "first_seen": "2026-10-12T09:23:44+00:00",
+          "removed_at": "2026-11-13T06:52:47+00:00",
           "title": "Industriepraktikum - Support MLOG/ISP (w/m/div)"
         },
         "HRC1834427": {
@@ -159697,6 +160055,7 @@
         },
         "HRC1864450": {
           "first_seen": "2026-10-28T13:03:44+00:00",
+          "removed_at": "2026-11-13T06:52:47+00:00",
           "title": "Internship - Automation engineer (f/m/div)"
         },
         "HRC1864626": {
@@ -159752,6 +160111,7 @@
         },
         "HRC1867278_1": {
           "first_seen": "2026-11-10T18:02:32+00:00",
+          "removed_at": "2026-11-13T06:52:47+00:00",
           "title": "Working Student - Automation and AI for Chip-Design Workflows (f/m/div)",
           "tri": {
             "s": 1.4725,
@@ -164766,6 +165126,10 @@
           "first_seen": "2026-11-05T18:06:12+00:00",
           "title": "Ireland Foundry Finance Analyst"
         },
+        "JR0288949": {
+          "first_seen": "2026-11-13T06:44:52+00:00",
+          "title": "Silicon Packaging Design Engineer"
+        },
         "JR0288950": {
           "first_seen": "2026-11-11T10:57:50+00:00",
           "title": "Lab Engineering Power Technician (Temporary position)"
@@ -165777,6 +166141,7 @@
         },
         "101090821584": {
           "first_seen": "2026-10-09T18:42:25+00:00",
+          "removed_at": "2026-11-13T06:54:00+00:00",
           "title": "Senior Outbound Sales Associate"
         },
         "101090821616": {
@@ -166223,6 +166588,7 @@
         },
         "101456093792": {
           "first_seen": "2026-10-09T18:42:25+00:00",
+          "removed_at": "2026-11-13T06:54:00+00:00",
           "title": "Executive Assistant Business Partner 2"
         },
         "101464184496": {
@@ -166456,6 +166822,7 @@
         },
         "101663564000": {
           "first_seen": "2026-10-09T18:42:25+00:00",
+          "removed_at": "2026-11-13T06:54:00+00:00",
           "title": "Senior Systems Endpoint Engineer"
         },
         "101663564032": {
@@ -166525,6 +166892,7 @@
         },
         "101706184800": {
           "first_seen": "2026-10-09T18:42:25+00:00",
+          "removed_at": "2026-11-13T06:54:00+00:00",
           "title": "Staff Software Engineer Cg Personal Finance Financial Assistant Team"
         },
         "101706184848": {
@@ -166842,6 +167210,7 @@
         },
         "102042224688": {
           "first_seen": "2026-10-16T22:21:49+00:00",
+          "removed_at": "2026-11-13T06:54:00+00:00",
           "title": "Partner Growth Manager"
         },
         "102042224752": {
@@ -166999,6 +167368,7 @@
         },
         "102216579712": {
           "first_seen": "2026-10-20T22:35:12+00:00",
+          "removed_at": "2026-11-13T06:54:00+00:00",
           "title": "Forward Deployed Engineer"
         },
         "102216583840": {
@@ -167973,6 +168343,26 @@
           "first_seen": "2026-11-12T23:56:11+00:00",
           "title": "Staff Brand Design Art Design Motion Spring In House Agency For Turbotax"
         },
+        "103221003152": {
+          "first_seen": "2026-11-13T06:54:00+00:00",
+          "title": "Senior Community Engagement Leader Consumer Group"
+        },
+        "103221003216": {
+          "first_seen": "2026-11-13T06:54:00+00:00",
+          "title": "Senior Staff Product Manager Enterprise Data Platform"
+        },
+        "103229453408": {
+          "first_seen": "2026-11-13T06:54:00+00:00",
+          "title": "Risk Operations Manager 3"
+        },
+        "103229453456": {
+          "first_seen": "2026-11-13T06:54:00+00:00",
+          "title": "Intuit Consumer Group Head Of Content Strategy And Editorial"
+        },
+        "103237704640": {
+          "first_seen": "2026-11-13T06:54:00+00:00",
+          "title": "Senior Staff Credit Risk Analyst Loss Forecasting"
+        },
         "87369441616": {
           "first_seen": "2026-10-09T18:42:25+00:00",
           "removed_at": "2026-10-22T14:02:58+00:00",
@@ -168290,10 +168680,12 @@
         },
         "97610406512": {
           "first_seen": "2026-10-09T18:42:25+00:00",
+          "removed_at": "2026-11-13T06:54:00+00:00",
           "title": "Director Retail And Field Operations Consumer Group"
         },
         "97610406560": {
           "first_seen": "2026-10-09T18:42:25+00:00",
+          "removed_at": "2026-11-13T06:54:00+00:00",
           "title": "Director Service Delivery Money Services And Workforce Solutions"
         },
         "97617057552": {
@@ -168398,6 +168790,7 @@
         },
         "98186969168": {
           "first_seen": "2026-10-09T18:42:25+00:00",
+          "removed_at": "2026-11-13T06:54:00+00:00",
           "title": "Enterprise Account Executive Agentic Ai"
         },
         "98228023936": {
@@ -176277,6 +176670,7 @@
         },
         "18024": {
           "first_seen": "2026-10-29T22:21:58+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Engineering Intern"
         },
         "18030": {
@@ -176314,6 +176708,7 @@
         },
         "18058": {
           "first_seen": "2026-10-28T06:08:21+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Software Engineer Intern - Summer 2027"
         },
         "18068": {
@@ -176439,6 +176834,7 @@
         },
         "18840": {
           "first_seen": "2026-10-29T22:21:58+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Engineering Intern"
         },
         "18858": {
@@ -176926,6 +177322,7 @@
         },
         "21624": {
           "first_seen": "2026-10-28T19:22:41+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Software Engineer Intern - Summer 2027"
         },
         "21637": {
@@ -176935,18 +177332,22 @@
         },
         "21654": {
           "first_seen": "2026-10-28T19:22:41+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Software Engineer Intern - Summer 2027"
         },
         "21657": {
           "first_seen": "2026-10-28T19:22:41+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Software Engineer Intern - Summer 2027"
         },
         "21660": {
           "first_seen": "2026-10-28T19:22:41+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Software Engineer Intern - Summer 2027"
         },
         "21662": {
           "first_seen": "2026-10-28T19:22:41+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Software Engineer Intern - Summer 2027"
         },
         "21666": {
@@ -176994,6 +177395,7 @@
         },
         "21859": {
           "first_seen": "2026-10-28T23:45:36+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Software Engineer - Early Career"
         },
         "21882": {
@@ -177091,6 +177493,7 @@
         },
         "22291": {
           "first_seen": "2026-10-28T23:45:36+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Software Engineer - Early Career"
         },
         "22293": {
@@ -177218,6 +177621,7 @@
         },
         "22825": {
           "first_seen": "2026-10-29T17:27:55+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Systems Engineer (Simulation and Training) - Intern"
         },
         "22847": {
@@ -177253,6 +177657,7 @@
         },
         "22986": {
           "first_seen": "2026-10-28T13:22:27+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "College Student - Technical - Intern"
         },
         "22999": {
@@ -177290,6 +177695,7 @@
         "23174": {
           "first_seen": "2026-10-28T19:23:32+00:00",
           "notified_at": "2026-10-28T19:23:32+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Software Engineer Intern - Summer 2027"
         },
         "23223": {
@@ -177642,6 +178048,7 @@
         },
         "25648": {
           "first_seen": "2026-11-13T00:12:19+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Contracts Intern"
         },
         "25749": {
@@ -177670,6 +178077,7 @@
         },
         "26196": {
           "first_seen": "2026-11-13T00:12:19+00:00",
+          "removed_at": "2026-11-13T07:09:30+00:00",
           "title": "Software Engineer Intern - Summer 2027"
         },
         "3110": {
@@ -187428,6 +187836,7 @@
         },
         "2602942": {
           "first_seen": "2026-10-09T18:38:55+00:00",
+          "removed_at": "2026-11-13T06:51:05+00:00",
           "title": "M&A Project Manager"
         },
         "2602949": {
@@ -187722,6 +188131,7 @@
         },
         "2603926": {
           "first_seen": "2026-10-09T18:38:55+00:00",
+          "removed_at": "2026-11-13T06:51:05+00:00",
           "title": "Optical Transceiver Validation Engineer Intern - Master's Degree"
         },
         "2603938": {
@@ -188678,6 +189088,7 @@
       "jobs": {
         "R-282264": {
           "first_seen": "2026-10-30T02:03:33+00:00",
+          "removed_at": "2026-11-13T06:45:03+00:00",
           "title": "Internship Program, Account Management, 2027 – Santiago, Chile"
         },
         "R-284477": {
@@ -189008,8 +189419,11 @@
         "JR108915": {
           "first_seen": "2026-10-16T04:59:55+00:00",
           "notified_at": "2026-10-16T04:59:55+00:00",
-          "removed_at": "2026-10-29T17:06:06+00:00",
-          "title": "Intern - Product Development Engineer"
+          "title": "Intern - Product Development Engineer",
+          "tri": {
+            "s": 0.453,
+            "v": "tfidf-texte-v1"
+          }
         },
         "JR108935": {
           "first_seen": "2026-10-09T18:36:21+00:00",
@@ -189332,7 +189746,6 @@
         },
         "JR111178": {
           "first_seen": "2026-10-09T18:36:21+00:00",
-          "removed_at": "2026-10-29T17:06:06+00:00",
           "title": "Intern - Vertical Product Engineer (VPE)"
         },
         "JR111189": {
@@ -190051,6 +190464,10 @@
         "JR116055": {
           "first_seen": "2026-10-30T20:56:22+00:00",
           "title": "Intern - Sales Strategy and Operations"
+        },
+        "JR116075": {
+          "first_seen": "2026-11-13T06:49:02+00:00",
+          "title": "Intern – Engineering Program Management"
         },
         "JR116161": {
           "first_seen": "2026-11-03T09:39:45+00:00",
@@ -190798,6 +191215,7 @@
         },
         "200062094": {
           "first_seen": "2026-11-09T18:58:50+00:00",
+          "removed_at": "2026-11-13T06:51:26+00:00",
           "title": "Cloud Solution Architecture INTERN",
           "tri": {
             "s": -2.546,
@@ -190806,10 +191224,12 @@
         },
         "200062095": {
           "first_seen": "2026-11-12T23:53:36+00:00",
+          "removed_at": "2026-11-13T06:51:26+00:00",
           "title": "Customer Success Account Mgmt INTERN"
         },
         "200062098": {
           "first_seen": "2026-11-09T18:58:52+00:00",
+          "removed_at": "2026-11-13T06:51:26+00:00",
           "title": "Cloud Solution Architecture INTERN",
           "tri": {
             "s": -2.4611,
@@ -190818,10 +191238,12 @@
         },
         "200062099": {
           "first_seen": "2026-11-09T18:58:52+00:00",
+          "removed_at": "2026-11-13T06:51:26+00:00",
           "title": "Business Program Management INTERN"
         },
         "200062103": {
           "first_seen": "2026-11-09T18:58:52+00:00",
+          "removed_at": "2026-11-13T06:51:26+00:00",
           "title": "Commercial Sales INTERN"
         },
         "200062105": {
@@ -191003,7 +191425,6 @@
         },
         "200064977": {
           "first_seen": "2026-10-31T00:59:25+00:00",
-          "removed_at": "2026-11-12T23:53:36+00:00",
           "title": "Research Intern - Office of Applied Research"
         },
         "200065169": {
@@ -191017,7 +191438,6 @@
         },
         "200065196": {
           "first_seen": "2026-11-03T09:42:40+00:00",
-          "removed_at": "2026-11-12T23:53:36+00:00",
           "title": "Research Intern - Speech Processing",
           "tri": {
             "s": -3.2788,
@@ -195070,6 +195490,10 @@
         "8383136": {
           "first_seen": "2026-11-12T18:24:56+00:00",
           "title": "Technical Services Engineer"
+        },
+        "8384766": {
+          "first_seen": "2026-11-13T06:46:55+00:00",
+          "title": "Manager, Client Platform Engineering"
         }
       },
       "last_error": null,
@@ -197129,7 +197553,6 @@
         },
         "JR2015526": {
           "first_seen": "2026-10-08T19:01:59+00:00",
-          "removed_at": "2026-11-11T02:53:27+00:00",
           "title": "Senior Network Infrastructure Engineer"
         },
         "JR2015559": {
@@ -202002,6 +202425,10 @@
           "first_seen": "2026-10-16T22:08:47+00:00",
           "title": "Senior Silicon Product Engineer – Manufacturing"
         },
+        "JR2028165": {
+          "first_seen": "2026-11-13T06:42:50+00:00",
+          "title": "Corporate Development Manager"
+        },
         "JR2028168": {
           "first_seen": "2026-10-31T18:36:00+00:00",
           "title": "Marketing Manager, Open Source Foundations"
@@ -202769,6 +203196,10 @@
             "v": "tfidf-texte-v1"
           }
         },
+        "JR2029673": {
+          "first_seen": "2026-11-13T06:42:50+00:00",
+          "title": "Principal Product Manager - NVIDIA Data Services"
+        },
         "JR2029674": {
           "first_seen": "2026-11-10T02:08:25+00:00",
           "title": "Principal Product Manager, DSX OS Infrastructure Developer Tooling"
@@ -202837,7 +203268,7 @@
       "seeded_at": "2026-10-08T19:01:59+00:00"
     },
     "NXP": {
-      "consecutive_failures": 20,
+      "consecutive_failures": 21,
       "jobs": {
         "R-10005472": {
           "first_seen": "2026-10-09T18:39:35+00:00",
@@ -204861,7 +205292,7 @@
           "title": "Distribution Business Manager"
         }
       },
-      "last_error": "[workday] NXP : POST https://nxp.wd3.myworkdayjobs.com/wday/cxs/nxp/Careers/jobs : HTTP 422 — {\"errorCode\":\"HTTP_422\",\"errorCaseId\":\"7B0E53MWE7EE6H\",\"httpStatus\":422,\"message\":\"\",\"messageParams\":{}} — vérifiez tenant/wd/site dans config.yaml (voir README)",
+      "last_error": "[workday] NXP : POST https://nxp.wd3.myworkdayjobs.com/wday/cxs/nxp/Careers/jobs : HTTP 422 — {\"errorCode\":\"HTTP_422\",\"errorCaseId\":\"64E42DMWEMBNT0\",\"httpStatus\":422,\"message\":\"\",\"messageParams\":{}} — vérifiez tenant/wd/site dans config.yaml (voir README)",
       "seeded_at": "2026-10-09T18:39:35+00:00"
     },
     "NetApp": {
@@ -208209,6 +208640,7 @@
         },
         "R10254774": {
           "first_seen": "2026-11-10T10:16:48+00:00",
+          "removed_at": "2026-11-13T07:09:49+00:00",
           "title": "2027 Associate Program Cost Schedule Ctrl Analyst/Program Cost Schedule Ctrl Analyst"
         },
         "R10254794": {
@@ -209174,6 +209606,7 @@
         },
         "R10259820": {
           "first_seen": "2026-11-10T02:36:39+00:00",
+          "removed_at": "2026-11-13T07:09:49+00:00",
           "title": "2027 Software Testing Engineering Intern - Apopka FL",
           "tri": {
             "s": -3.5707,
@@ -209190,6 +209623,7 @@
         },
         "R10259976": {
           "first_seen": "2026-11-10T18:21:09+00:00",
+          "removed_at": "2026-11-13T07:09:49+00:00",
           "title": "2027 Manufacturing Engineer Intern- Commerce CA"
         },
         "R10259992": {
@@ -209206,6 +209640,7 @@
         },
         "R10260078": {
           "first_seen": "2026-11-10T23:47:40+00:00",
+          "removed_at": "2026-11-13T07:09:49+00:00",
           "title": "2027 Intern Engineer - Product Support",
           "tri": {
             "s": -4.7069,
@@ -209231,6 +209666,7 @@
         },
         "R10260186": {
           "first_seen": "2026-11-12T02:02:00+00:00",
+          "removed_at": "2026-11-13T07:09:49+00:00",
           "title": "2027 Mechanical Engineer Intern- Redondo Beach CA"
         },
         "R10260223": {
@@ -209549,6 +209985,10 @@
           "first_seen": "2026-10-21T22:28:46+00:00",
           "title": "Ecosystem Growth Engineer"
         },
+        "461e0496-306a-400d-9359-d26c62b51b87": {
+          "first_seen": "2026-11-13T06:47:53+00:00",
+          "title": "Outcomes Architect Manager"
+        },
         "477768e1-37af-49bc-a4de-6564e0a4ec54": {
           "first_seen": "2026-10-08T19:03:09+00:00",
           "title": "Security Engineer, Corporate Security"
@@ -209783,6 +210223,10 @@
           "first_seen": "2026-10-08T19:03:09+00:00",
           "title": "Head of Onboarding & Enablement Programs"
         },
+        "9957dff5-6e43-4e6f-a929-1387585d24c6": {
+          "first_seen": "2026-11-13T06:47:53+00:00",
+          "title": "Mid-Market Solutions Consultant"
+        },
         "9963b67f-ccb0-48f9-95f1-50a31d0cf643": {
           "first_seen": "2026-10-20T15:12:04+00:00",
           "title": "Outcomes Architect, France (Customer Success)"
@@ -209845,6 +210289,10 @@
           "first_seen": "2026-10-08T19:03:09+00:00",
           "title": "Commercial Counsel"
         },
+        "a9b33d2b-cfef-435f-8fff-5b79aad19d3b": {
+          "first_seen": "2026-11-13T06:47:53+00:00",
+          "title": "Business Development Representative"
+        },
         "ab383335-1dd5-4d6a-971f-439cebf48a9d": {
           "first_seen": "2026-10-08T19:03:09+00:00",
           "removed_at": "2026-10-30T16:03:33+00:00",
@@ -209886,6 +210334,10 @@
         "b8af287c-c2b2-4213-859d-87fffbc82546": {
           "first_seen": "2026-10-08T19:03:09+00:00",
           "title": "Mid-Market Outcomes Architect"
+        },
+        "b944fa33-8b3c-4078-90c8-b9733d93bfd6": {
+          "first_seen": "2026-11-13T06:47:53+00:00",
+          "title": "Commercial Solutions Consultant"
         },
         "bb0c4e16-ac1b-478c-aa92-ef3c542a9dcd": {
           "first_seen": "2026-10-08T19:03:09+00:00",
@@ -210034,6 +210486,10 @@
         "e3d8dc06-da05-4e9d-a143-2e9c51fa3d51": {
           "first_seen": "2026-10-08T19:03:09+00:00",
           "title": "Software Engineer, Infrastructure Security"
+        },
+        "e3fe659f-6183-4345-9758-ccf4dd0fc9ac": {
+          "first_seen": "2026-11-13T06:47:53+00:00",
+          "title": "Solutions Consultant Manager"
         },
         "e41aff37-7811-42f3-94fc-1aff18500ad0": {
           "first_seen": "2026-10-08T19:03:09+00:00",
@@ -211201,6 +211657,7 @@
         },
         "8015032": {
           "first_seen": "2026-10-08T19:03:00+00:00",
+          "removed_at": "2026-11-13T06:46:59+00:00",
           "title": "Senior Site Reliability Engineer"
         },
         "8018310": {
@@ -211756,7 +212213,6 @@
         },
         "8155879": {
           "first_seen": "2026-10-08T19:03:00+00:00",
-          "removed_at": "2026-11-04T14:36:41+00:00",
           "title": "Director, Site Reliability Engineering"
         },
         "8155883": {
@@ -211934,6 +212390,7 @@
         },
         "8190478": {
           "first_seen": "2026-10-08T19:03:00+00:00",
+          "removed_at": "2026-11-13T06:46:59+00:00",
           "title": "Commercial Renewals Manager"
         },
         "8190734": {
@@ -212513,6 +212970,7 @@
         },
         "8255902": {
           "first_seen": "2026-10-08T19:03:00+00:00",
+          "removed_at": "2026-11-13T06:46:59+00:00",
           "title": "Staff Site Reliability Engineer"
         },
         "8255904": {
@@ -213296,6 +213754,10 @@
         "8374832": {
           "first_seen": "2026-11-10T23:24:35+00:00",
           "title": "Finance Manager, People and Corp Dev."
+        },
+        "8383373": {
+          "first_seen": "2026-11-13T06:46:59+00:00",
+          "title": "Director, Product Security, PSIRT"
         }
       },
       "last_error": null,
@@ -213750,6 +214212,10 @@
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Machine Learning Engineer, Multimodal Perception and Authentication"
         },
+        "1b62655e-87e5-4dfb-ad92-03dabeb8304f": {
+          "first_seen": "2026-11-13T06:47:55+00:00",
+          "title": "Senior Manager, Accounts Payable - Payments"
+        },
         "1ba666a4-0be2-4bd0-ad51-39ed7164c241": {
           "first_seen": "2026-10-08T19:03:11+00:00",
           "removed_at": "2026-10-08T20:33:46+00:00",
@@ -213989,6 +214455,10 @@
         "25c2d971-56b4-43c2-8d17-8e168d45add5": {
           "first_seen": "2026-10-22T01:39:13+00:00",
           "title": "Growth Partnerships Manager, Korea"
+        },
+        "26500fa3-39c0-4e25-b557-b58415caeb6e": {
+          "first_seen": "2026-11-13T06:47:55+00:00",
+          "title": "Integrated Marketing Manager - Consumer & Brand, LATAM"
         },
         "2710d0c7-8f1c-4e1a-bf7a-4000fc5a8d68": {
           "first_seen": "2026-10-08T19:03:11+00:00",
@@ -214233,6 +214703,7 @@
         },
         "3228eed1-9cb3-4330-82c3-19fb3dbb4408": {
           "first_seen": "2026-10-19T19:29:11+00:00",
+          "removed_at": "2026-11-13T06:47:55+00:00",
           "title": "Program Manager, National Security Policy Operations"
         },
         "3229b152-015f-49ad-9921-9c9de95570c8": {
@@ -214924,6 +215395,10 @@
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Software Engineer, Ads Manager"
         },
+        "5a55fa31-64fd-4bf9-8c12-48f0d6fe1d69": {
+          "first_seen": "2026-11-13T06:47:55+00:00",
+          "title": "Partner Director, IBM North America"
+        },
         "5a647e2b-5d6c-4c71-aeea-b16e3fda4b3f": {
           "first_seen": "2026-10-08T19:03:11+00:00",
           "removed_at": "2026-10-26T06:18:35+00:00",
@@ -215380,7 +215855,6 @@
         },
         "6ebd3534-d65b-4d90-ba96-6a54de31409d": {
           "first_seen": "2026-10-29T21:58:46+00:00",
-          "removed_at": "2026-11-03T23:27:45+00:00",
           "title": "Program Manager, Local Community Impact"
         },
         "6ef9babb-e210-496f-a004-fed919a9ed2d": {
@@ -218415,6 +218889,7 @@
         },
         "8450296002": {
           "first_seen": "2026-10-08T23:02:05+00:00",
+          "removed_at": "2026-11-13T06:47:46+00:00",
           "title": "Network Engineer"
         },
         "8451762002": {
@@ -219627,10 +220102,12 @@
         },
         "CTS-2026-53412": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Préventeur Au Sein De La Direction De L Intervention Et Direction De L Infrastructure Nord F H"
         },
         "CTS-2026-53413": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Préventeur À La Direction De L Intervention Et Direction De L Infrastructure Normandie Centre F H"
         },
         "CTS-2026-53509": {
@@ -219678,6 +220155,7 @@
         },
         "CTS-2026-53959": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Media Solutions Architect F H"
         },
         "CTS-2026-53960": {
@@ -219746,6 +220224,7 @@
         },
         "CTS-2026-54243": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Assistant E De Manager F H"
         },
         "CTS-2026-54244": {
@@ -219804,6 +220283,7 @@
         },
         "CTS-2026-54316": {
           "first_seen": "2026-11-09T19:15:21+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Ow Stage Product Owner Telcocloud F H",
           "tri": {
             "s": -3.2852,
@@ -220007,6 +220487,7 @@
         },
         "CTS-2026-54543": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage De Recherche — Compression Du Trafic Réseau Vers Des Réseaux Durables F H"
         },
         "CTS-2026-54546": {
@@ -220430,6 +220911,7 @@
         },
         "CTS-2026-54792": {
           "first_seen": "2026-10-28T19:20:05+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Approches Adaptatives De Perception Collaborative Sous Contraintes Réseau Sans Fil Réalistes F H"
         },
         "CTS-2026-54796": {
@@ -220456,6 +220938,7 @@
         },
         "CTS-2026-54823": {
           "first_seen": "2026-10-13T23:10:23+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Contenus Expérience Digitale F H"
         },
         "CTS-2026-54825": {
@@ -220465,6 +220948,7 @@
         },
         "CTS-2026-54830": {
           "first_seen": "2026-10-13T18:05:16+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Chef De Projet Sales Enablement F H"
         },
         "CTS-2026-54833": {
@@ -220503,10 +220987,12 @@
         },
         "CTS-2026-54858": {
           "first_seen": "2026-10-16T18:25:13+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage « Modèles Et Algorithmes Pour L Optimisation Des Stocks De Mobiles En Boutiques » F H"
         },
         "CTS-2026-54864": {
           "first_seen": "2026-10-20T15:32:56+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Vérification De L Alignement Éthique Des Agents Ia Pour Les Réseaux Et Services Télécoms F H"
         },
         "CTS-2026-54865": {
@@ -220605,6 +221091,7 @@
         },
         "CTS-2026-54939": {
           "first_seen": "2026-11-10T18:17:52+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Chargé D Analyse De Données F H",
           "tri": {
             "s": -3.4466,
@@ -220617,6 +221104,7 @@
         },
         "CTS-2026-54946": {
           "first_seen": "2026-11-02T18:48:45+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Analyste En Social Listening Et Stratégie Marketing Digital F H"
         },
         "CTS-2026-54953": {
@@ -220630,6 +221118,7 @@
         },
         "CTS-2026-54957": {
           "first_seen": "2026-10-16T19:20:01+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Analyste Junior Partenariats Pour La Citoyenneté Numérique F H"
         },
         "CTS-2026-54958": {
@@ -220654,6 +221143,7 @@
         },
         "CTS-2026-54964": {
           "first_seen": "2026-11-03T23:47:34+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Pentester Evaluation Llm F H",
           "tri": {
             "s": -1.4794,
@@ -220666,6 +221156,7 @@
         },
         "CTS-2026-54971": {
           "first_seen": "2026-10-27T14:59:30+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Développeur Euse Devops Pour L Automatisation Des Tests De Réseaux De Transmission Optique F H"
         },
         "CTS-2026-54972": {
@@ -220706,6 +221197,7 @@
         },
         "CTS-2026-54993": {
           "first_seen": "2026-10-16T18:25:13+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Automatisation Des Processus De Détection Et D Action D Optimisation Du Réseau Mobile 4G 5G F H"
         },
         "CTS-2026-55003": {
@@ -220719,6 +221211,7 @@
         },
         "CTS-2026-55008": {
           "first_seen": "2026-11-06T21:22:01+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Partage De Mémoire Entre Agents Opérant Un Réseau F H"
         },
         "CTS-2026-55009": {
@@ -220793,6 +221286,7 @@
         },
         "CTS-2026-55047": {
           "first_seen": "2026-11-04T15:00:02+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Etude Et Conception D Applications Agentiques Generative Ui F H",
           "tri": {
             "s": -0.3714,
@@ -220801,6 +221295,7 @@
         },
         "CTS-2026-55049": {
           "first_seen": "2026-11-02T18:48:45+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Automatisation De La Collecte Et Intégration Des Topologies Des Réseaux Ip Dans L Outil Networks™"
         },
         "CTS-2026-55050": {
@@ -220884,6 +221379,7 @@
         },
         "CTS-2026-55100": {
           "first_seen": "2026-10-29T10:23:31+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Traces De Mobilité Synthétiques Pour L Analyse De La Logistique Du Dernier Kilomètre F H"
         },
         "CTS-2026-55101": {
@@ -220990,6 +221486,7 @@
         },
         "CTS-2026-55158": {
           "first_seen": "2026-10-26T19:45:50+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stagiaire En Communication Interne À La Direction Energie D Orange France F H"
         },
         "CTS-2026-55159": {
@@ -221302,6 +221799,7 @@
         },
         "CTS-2026-55312": {
           "first_seen": "2026-11-03T23:47:31+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Développeur Des Outils De Sondages Clients F H"
         },
         "CTS-2026-55316": {
@@ -221397,6 +221895,7 @@
         },
         "CTS-2026-55370": {
           "first_seen": "2026-11-05T18:31:35+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Responsable Production Intégration Gse F H"
         },
         "CTS-2026-55376": {
@@ -221419,6 +221918,7 @@
         },
         "CTS-2026-55383": {
           "first_seen": "2026-10-29T17:25:12+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Consultant E Expérience Client Sofrecom F H"
         },
         "CTS-2026-55386": {
@@ -221553,6 +222053,7 @@
         },
         "CTS-2026-55424": {
           "first_seen": "2026-11-12T18:47:26+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stagiaire Gestionnaire De Ressources Réseaux Routeur Au Padr Idf F H",
           "tri": {
             "s": -3.0635,
@@ -221672,6 +222173,7 @@
         },
         "CTS-2026-55473": {
           "first_seen": "2026-11-06T21:21:55+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Data Analyst Intelligence Artificielle Au Service De La Direction Du Service Client F H",
           "tri": {
             "s": -2.9123,
@@ -221782,6 +222284,7 @@
         },
         "CTS-2026-55529": {
           "first_seen": "2026-11-05T18:31:36+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Stage Self Distillation On Policy Pour Des Modèles De Langage Spécialisés En Télécommunications F H"
         },
         "CTS-2026-55530": {
@@ -221891,6 +222394,7 @@
         },
         "CTS-2026-55654": {
           "first_seen": "2026-11-10T18:17:54+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Pilote De La Conformité Cybersécurité F H"
         },
         "CTS-2026-55658": {
@@ -221919,7 +222423,12 @@
         },
         "CTS-2026-55693": {
           "first_seen": "2026-11-10T18:17:54+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Animation Pilotage Des Opérations Et Performance F H"
+        },
+        "CTS-2026-55744": {
+          "first_seen": "2026-11-13T07:06:44+00:00",
+          "title": "Stage Chargé De Communication Et Marketing F H"
         },
         "CTS-2026-55751": {
           "first_seen": "2026-11-12T18:47:36+00:00",
@@ -222148,7 +222657,6 @@
         },
         "ERC-584118-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-12T10:15:41+00:00",
           "title": "Business Consultant Ict"
         },
         "ERC-584276-20136094": {
@@ -222208,7 +222716,6 @@
         },
         "ERC-586117-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Reprezentant Vanzari Orange Shop Campulung​"
         },
         "ERC-586222-20136094": {
@@ -222407,7 +222914,6 @@
         },
         "ERC-590625-20136094": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Ux Ui Engineer"
         },
         "ERC-590719-20136094": {
@@ -222459,6 +222965,7 @@
         },
         "ERC-591833-20136094": {
           "first_seen": "2026-10-13T18:05:16+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Information Security Engineer"
         },
         "ERC-591853-20136094": {
@@ -222468,6 +222975,7 @@
         },
         "ERC-591901-20136094": {
           "first_seen": "2026-10-13T18:05:16+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Reporting Controlling Analyst With French"
         },
         "ERC-591933-20136094": {
@@ -222659,7 +223167,6 @@
         },
         "ERC-596126-20136094": {
           "first_seen": "2026-10-27T14:59:30+00:00",
-          "removed_at": "2026-11-12T10:15:41+00:00",
           "title": "Reprezentant Vanzari Orange Shop Buzau"
         },
         "ERC-596174-20136094": {
@@ -222951,7 +223458,6 @@
         },
         "ICM-587294": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Ds Ingénieur Test Automatisation"
         },
         "ICM-587321": {
@@ -223031,12 +223537,10 @@
         },
         "ICM-587685": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Scrum Master One Admin"
         },
         "ICM-587688": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Expert Devops"
         },
         "ICM-587698": {
@@ -223172,7 +223676,6 @@
         },
         "ICM-588189": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Ingénieur D Exploitation N2 Support Connectivité"
         },
         "ICM-588201": {
@@ -223321,7 +223824,6 @@
         },
         "ICM-588642": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Senior Ip Account Manager Orange Wholesale International"
         },
         "ICM-588702": {
@@ -223415,7 +223917,6 @@
         },
         "ICM-588806": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Sr Security Consultant"
         },
         "ICM-588811": {
@@ -223488,7 +223989,6 @@
         },
         "ICM-588889": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Servicenow Senior Software Engineer"
         },
         "ICM-588904": {
@@ -223507,7 +224007,6 @@
         },
         "ICM-588910": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Ds Développeur Fullstack Java Angular Confirmé"
         },
         "ICM-588911": {
@@ -223576,6 +224075,7 @@
         },
         "ICM-588964": {
           "first_seen": "2026-10-09T18:55:14+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Business Developer"
         },
         "ICM-588967": {
@@ -223818,7 +224318,6 @@
         },
         "ICM-589127": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Cloud Infra Solutions Manager"
         },
         "ICM-589128": {
@@ -223827,7 +224326,6 @@
         },
         "ICM-589129": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Cloud Devops Solution Expert"
         },
         "ICM-589131": {
@@ -223949,7 +224447,6 @@
         },
         "ICM-589194": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Epic Owner Sales Enablement Platform"
         },
         "ICM-589202": {
@@ -224016,7 +224513,6 @@
         },
         "ICM-589229": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Lead Consultant Cloud Systems"
         },
         "ICM-589232": {
@@ -224054,7 +224550,6 @@
         },
         "ICM-589251": {
           "first_seen": "2026-10-14T08:03:57+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Account Manager"
         },
         "ICM-589252": {
@@ -224073,7 +224568,6 @@
         },
         "ICM-589260": {
           "first_seen": "2026-10-19T13:38:13+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Ocd L2 Security Engineer"
         },
         "ICM-589261": {
@@ -224092,7 +224586,6 @@
         },
         "ICM-589268": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Acquistion Director"
         },
         "ICM-589269": {
@@ -224106,7 +224599,6 @@
         },
         "ICM-589273": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Engineer Advanced Support"
         },
         "ICM-589274": {
@@ -224138,7 +224630,6 @@
         },
         "ICM-589291": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Ingénieur Devops"
         },
         "ICM-589292": {
@@ -224164,7 +224655,6 @@
         },
         "ICM-589305": {
           "first_seen": "2026-10-14T08:03:57+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Account Manager Senior"
         },
         "ICM-589308": {
@@ -224413,6 +224903,7 @@
         },
         "ICM-589402": {
           "first_seen": "2026-10-15T17:28:08+00:00",
+          "removed_at": "2026-11-13T07:06:44+00:00",
           "title": "Ds Test Lead Qa Expert"
         },
         "ICM-589403": {
@@ -224438,7 +224929,6 @@
         },
         "ICM-589417": {
           "first_seen": "2026-10-23T13:53:46+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Ds Data Engineer Confirmé"
         },
         "ICM-589418": {
@@ -224459,7 +224949,6 @@
         },
         "ICM-589426": {
           "first_seen": "2026-10-23T13:53:46+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Ds Développeur Fullstack Php Symfony Angular Confirmé"
         },
         "ICM-589427": {
@@ -224496,7 +224985,6 @@
         },
         "ICM-589435": {
           "first_seen": "2026-10-29T17:25:12+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Ocd Soc L2 Network Security Engineer"
         },
         "ICM-589436": {
@@ -224611,7 +225099,6 @@
         },
         "ICM-589511": {
           "first_seen": "2026-11-10T18:17:51+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Ds Testeur Se Qa Confirmé E"
         },
         "ICM-589512": {
@@ -224628,7 +225115,6 @@
         },
         "ICM-589547": {
           "first_seen": "2026-11-04T15:00:00+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Contact Center Senior Specialist"
         },
         "ICM-589556": {
@@ -226195,7 +226681,6 @@
         },
         "TOB-5995714": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-12T18:47:23+00:00",
           "title": "Cloud Consultant Azure"
         },
         "TOB-6173819": {
@@ -226263,12 +226748,10 @@
         },
         "TOB-8236364": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-12T10:15:41+00:00",
           "title": "Oracle Database Consultant"
         },
         "TOB-8252379": {
           "first_seen": "2026-10-09T18:55:14+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Data Catalog Consultant"
         },
         "TOB-8266100": {
@@ -226334,7 +226817,6 @@
         },
         "TOB-8585761": {
           "first_seen": "2026-10-21T22:48:39+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Medior Senior Data Engineer Consultant"
         },
         "TOB-8590276": {
@@ -226352,7 +226834,6 @@
         },
         "TOB-8591906": {
           "first_seen": "2026-10-22T19:03:06+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Senior Ai Engineer Consultant"
         },
         "TOB-8591968": {
@@ -226361,7 +226842,6 @@
         },
         "TOB-8592349": {
           "first_seen": "2026-10-22T19:03:06+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Cloud Solution Architect Consultant"
         },
         "TOB-8592367": {
@@ -226375,7 +226855,6 @@
         },
         "TOB-8619821": {
           "first_seen": "2026-10-27T02:32:09+00:00",
-          "removed_at": "2026-11-13T00:09:21+00:00",
           "title": "Ai Engineer"
         },
         "TOB-8622328": {
@@ -232475,6 +232954,10 @@
           "first_seen": "2026-11-04T21:35:31+00:00",
           "title": "Sr. Principal/Architect - Infrastructure/Production Engineering (Chronosphere)"
         },
+        "JR-024505": {
+          "first_seen": "2026-11-13T06:55:14+00:00",
+          "title": "Cortex and Cloud Sales Specialist"
+        },
         "JR-024508": {
           "first_seen": "2026-11-06T06:53:57+00:00",
           "title": "Senior Director, Marketing Operations"
@@ -232521,6 +233004,7 @@
         },
         "JR-024611": {
           "first_seen": "2026-11-12T01:47:24+00:00",
+          "removed_at": "2026-11-13T06:55:14+00:00",
           "title": "Technical Consulting Director"
         },
         "JR-024630": {
@@ -234065,6 +234549,10 @@
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Member of Technical Staff (Software Engineer, Cloud Infrastructure)"
         },
+        "0ddf1b9a-9875-445c-a78f-f033d023a34a": {
+          "first_seen": "2026-11-13T06:47:56+00:00",
+          "title": "Head of Marketing Operations"
+        },
         "1056951e-8a42-4330-b72c-90162b3cd1c9": {
           "first_seen": "2026-11-07T22:51:55+00:00",
           "title": "Member of Technical Staff (Software Engineer, AI Policy and Strategic Initiatives)"
@@ -234089,6 +234577,10 @@
         "18509f15-ab49-450d-8a01-4b280e464ad0": {
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Senior Corporate IT Engineer"
+        },
+        "190962f1-a955-4690-8025-6943dcbf063c": {
+          "first_seen": "2026-11-13T06:47:56+00:00",
+          "title": "Member of Technical Staff (Site Reliability Engineer, Crawler)"
         },
         "19d535e2-e0f5-42b6-a995-662d69772168": {
           "first_seen": "2026-10-08T19:03:11+00:00",
@@ -234427,6 +234919,10 @@
           "removed_at": "2026-11-10T02:14:18+00:00",
           "title": "Member of Technical Staff (Perplexity Frontier Research)"
         },
+        "859604e1-9ada-4833-97b3-51fe185b6ff7": {
+          "first_seen": "2026-11-13T06:47:56+00:00",
+          "title": "Engineering Manager, Security"
+        },
         "883bd78f-c9cd-4ae5-afbf-b21f16f06a6f": {
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Engineering Manager (Enterprise)"
@@ -234674,6 +235170,10 @@
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Member of Technical Staff (Software Engineer, Computer Growth)"
         },
+        "e916f0c8-5a31-4bb6-b4e3-7c4a64b95fda": {
+          "first_seen": "2026-11-13T06:47:56+00:00",
+          "title": "Growth GTM Engineer, Revenue Operations"
+        },
         "ea29039d-3900-43d3-a555-ff790677cbe9": {
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Director, Litigation"
@@ -234701,6 +235201,10 @@
         "f25e190e-0508-4707-b575-fcaed358dc13": {
           "first_seen": "2026-10-08T19:03:11+00:00",
           "title": "Product Manager (Builder)"
+        },
+        "f32bb0d4-fb91-4fa6-8d7d-bd1a70ce2836": {
+          "first_seen": "2026-11-13T06:47:56+00:00",
+          "title": "Member of Technical Staff (Web Access Engineer, Crawler)"
         },
         "f3814af2-55a3-49a5-b0cb-67199a2a45fb": {
           "first_seen": "2026-10-19T06:21:03+00:00",
@@ -234984,6 +235488,7 @@
         },
         "588379": {
           "first_seen": "2026-10-09T18:54:03+00:00",
+          "removed_at": "2026-11-13T07:05:47+00:00",
           "title": "Product Industrialization Intern"
         },
         "588627": {
@@ -235081,6 +235586,7 @@
         },
         "590096": {
           "first_seen": "2026-11-05T18:30:24+00:00",
+          "removed_at": "2026-11-13T07:05:47+00:00",
           "title": "Intern-Regulatory Affairs-Orlando, FL-Summer 2027",
           "tri": {
             "s": -3.6452,
@@ -235486,6 +235992,7 @@
         },
         "592696": {
           "first_seen": "2026-10-29T17:24:21+00:00",
+          "removed_at": "2026-11-13T07:05:47+00:00",
           "title": "Intern - Finance - Plymouth, MN – Summer 2027"
         },
         "592714": {
@@ -235918,6 +236425,10 @@
         "594533": {
           "first_seen": "2026-11-10T10:12:38+00:00",
           "title": "E-commerce Intern"
+        },
+        "594541": {
+          "first_seen": "2026-11-13T07:05:47+00:00",
+          "title": "Global Master Planner Manager"
         },
         "594542": {
           "first_seen": "2026-11-04T14:59:02+00:00",
@@ -236884,6 +237395,7 @@
         },
         "7684577": {
           "first_seen": "2026-10-08T19:03:01+00:00",
+          "removed_at": "2026-11-13T06:47:01+00:00",
           "title": "Staff Qualitative UX Researcher, Monetization"
         },
         "7685466": {
@@ -237732,6 +238244,7 @@
         },
         "8257181": {
           "first_seen": "2026-10-27T20:12:16+00:00",
+          "removed_at": "2026-11-13T06:47:01+00:00",
           "title": "Engineering Manager II, Runtime Services"
         },
         "8257653": {
@@ -237948,6 +238461,14 @@
           "first_seen": "2026-11-04T21:25:35+00:00",
           "title": "Content Enablement Intern 2027 (USA)"
         },
+        "8336035": {
+          "first_seen": "2026-11-13T06:47:01+00:00",
+          "title": "Sr. Strategic Partner Manager, Content"
+        },
+        "8336037": {
+          "first_seen": "2026-11-13T06:47:01+00:00",
+          "title": "Editor"
+        },
         "8346364": {
           "first_seen": "2026-11-03T01:42:03+00:00",
           "title": "Sr. Client Partner, Tech"
@@ -237967,6 +238488,10 @@
         "8351619": {
           "first_seen": "2026-11-05T23:45:26+00:00",
           "title": "Sr. Industry Manager, Travel"
+        },
+        "8381752": {
+          "first_seen": "2026-11-13T06:47:01+00:00",
+          "title": "Sr. Client Partner"
         }
       },
       "last_error": null,
@@ -238133,6 +238658,7 @@
         },
         "43e5792e-272d-4f6f-8f88-7ae1c30c4bcf": {
           "first_seen": "2026-11-03T01:43:08+00:00",
+          "removed_at": "2026-11-13T06:48:05+00:00",
           "title": "Business Recruiter"
         },
         "453966dc-6854-421d-8cac-0eee80cf2048": {
@@ -239838,6 +240364,10 @@
           "first_seen": "2026-10-30T08:45:13+00:00",
           "title": "Fundamental Researcher, Mi-Canvas International"
         },
+        "8929646002": {
+          "first_seen": "2026-11-13T06:47:47+00:00",
+          "title": "2026 Boston Career Forum - 2029 Graduate Opportunities"
+        },
         "8929684002": {
           "first_seen": "2026-11-04T14:37:30+00:00",
           "title": "Quantitative Developer, Risk Technology"
@@ -240891,6 +241421,7 @@
         },
         "3097525": {
           "first_seen": "2026-10-09T18:40:20+00:00",
+          "removed_at": "2026-11-13T06:51:43+00:00",
           "title": "Interim Patent Intern"
         },
         "3098075": {
@@ -242212,7 +242743,7 @@
       "seeded_at": "2026-10-08T23:02:08+00:00"
     },
     "RTX": {
-      "consecutive_failures": 93,
+      "consecutive_failures": 94,
       "jobs": {
         "01462154": {
           "first_seen": "2026-10-09T18:54:58+00:00",
@@ -269549,6 +270080,10 @@
           "first_seen": "2026-10-08T23:02:26+00:00",
           "title": "Tech Lead and Manager (TLM), Production Engineering"
         },
+        "4727e0b5-eafa-41ab-89ce-f6a1d19d3f0e": {
+          "first_seen": "2026-11-13T06:48:07+00:00",
+          "title": "CSM, Enterprise | Lifecycle"
+        },
         "4745807e-82f4-4b1a-857c-dc8dadc73076": {
           "first_seen": "2026-10-08T23:02:26+00:00",
           "removed_at": "2026-11-04T21:27:53+00:00",
@@ -269565,6 +270100,10 @@
         "492823d8-9651-46cf-9d33-a632ef706879": {
           "first_seen": "2026-11-10T23:25:44+00:00",
           "title": "Solutions Consultant, Post Sales, Mid-Market"
+        },
+        "498d0fa0-d6e2-4755-9004-736dcae47d81": {
+          "first_seen": "2026-11-13T06:48:07+00:00",
+          "title": "CSM, Mid-Market | Lifecycle"
         },
         "4b3063cb-bb07-40d5-93d3-b7ce556f96e8": {
           "first_seen": "2026-10-26T19:26:03+00:00",
@@ -274102,6 +274641,10 @@
           "removed_at": "2026-10-29T21:58:24+00:00",
           "title": "Fraud Operations Program Manager"
         },
+        "8318663": {
+          "first_seen": "2026-11-13T06:47:34+00:00",
+          "title": "Asset Movement Operations Senior Specialist"
+        },
         "8319304": {
           "first_seen": "2026-10-23T22:16:16+00:00",
           "removed_at": "2026-11-05T01:38:06+00:00",
@@ -274219,6 +274762,10 @@
         "8379685": {
           "first_seen": "2026-11-12T18:26:50+00:00",
           "title": "Accounts Receivable Operations Analyst"
+        },
+        "8384669": {
+          "first_seen": "2026-11-13T06:47:34+00:00",
+          "title": "Senior Software Engineer, Trump Accounts"
         }
       },
       "last_error": null,
@@ -274449,6 +274996,7 @@
         },
         "7896293": {
           "first_seen": "2026-10-08T19:03:04+00:00",
+          "removed_at": "2026-11-13T06:47:06+00:00",
           "title": "Senior Security Software Engineer, Application Security"
         },
         "7901793": {
@@ -274894,6 +275442,7 @@
         },
         "8107208": {
           "first_seen": "2026-10-08T19:03:04+00:00",
+          "removed_at": "2026-11-13T06:47:06+00:00",
           "title": "Senior Payments Compliance Manager"
         },
         "8111889": {
@@ -276261,6 +276810,7 @@
         },
         "8177762": {
           "first_seen": "2026-10-09T18:42:26+00:00",
+          "removed_at": "2026-11-13T06:54:01+00:00",
           "title": "Software Engineer - Reliability (US Citizen)"
         },
         "8183993": {
@@ -276850,6 +277400,10 @@
         "8358523": {
           "first_seen": "2026-11-12T18:33:35+00:00",
           "title": "RVP Specialty Sales, International (Identity)"
+        },
+        "8359179": {
+          "first_seen": "2026-11-13T06:54:01+00:00",
+          "title": "Senior Technical Program Manager - Infrastructure"
         },
         "8359500": {
           "first_seen": "2026-11-12T18:33:35+00:00",
@@ -278083,6 +278637,7 @@
         },
         "JR298937": {
           "first_seen": "2026-10-08T21:32:11+00:00",
+          "removed_at": "2026-11-13T06:43:50+00:00",
           "title": "Retail Cloud POS Enterprise Account Executive"
         },
         "JR299492": {
@@ -279891,6 +280446,7 @@
         },
         "JR355535": {
           "first_seen": "2026-10-08T19:02:39+00:00",
+          "removed_at": "2026-11-13T06:43:50+00:00",
           "title": "Customer Centric Engineer"
         },
         "JR355543": {
@@ -280099,7 +280655,6 @@
         },
         "JR356515": {
           "first_seen": "2026-10-08T19:02:39+00:00",
-          "removed_at": "2026-11-11T18:45:32+00:00",
           "title": "Associate Technical Support Engineer"
         },
         "JR356541": {
@@ -280549,7 +281104,6 @@
         },
         "JR358525": {
           "first_seen": "2026-10-08T19:02:39+00:00",
-          "removed_at": "2026-11-03T23:23:23+00:00",
           "title": "Customer Success Manager -Marketing Cloud"
         },
         "JR358576": {
@@ -280826,6 +281380,7 @@
         },
         "JR359492": {
           "first_seen": "2026-10-08T19:02:39+00:00",
+          "removed_at": "2026-11-13T06:43:50+00:00",
           "title": "Data & AI Architect"
         },
         "JR359494": {
@@ -282460,6 +283015,7 @@
         },
         "JR363256": {
           "first_seen": "2026-10-13T22:46:53+00:00",
+          "removed_at": "2026-11-13T06:43:50+00:00",
           "title": "Regional Sales Director"
         },
         "JR363267": {
@@ -284078,6 +284634,10 @@
           "first_seen": "2026-11-09T18:49:40+00:00",
           "title": "Account Solution Engineer"
         },
+        "JR367442": {
+          "first_seen": "2026-11-13T06:43:50+00:00",
+          "title": "Customer Success Manager - Slack"
+        },
         "JR367464": {
           "first_seen": "2026-11-11T18:45:32+00:00",
           "title": "Customer Success Manager - Public Sector (MuleSoft)"
@@ -284254,6 +284814,10 @@
           "first_seen": "2026-11-12T18:21:30+00:00",
           "title": "Ops Analyst, Slack Policy Operations"
         },
+        "JR368011": {
+          "first_seen": "2026-11-13T06:43:50+00:00",
+          "title": "Escalation Manager - Critical Incident Center"
+        },
         "JR368047": {
           "first_seen": "2026-11-11T18:45:32+00:00",
           "title": "Software Engineering AMTS (College Grad)"
@@ -284281,6 +284845,10 @@
         "JR368200": {
           "first_seen": "2026-11-12T18:21:30+00:00",
           "title": "Business Development Representative Belgium Market (Dutch Speaking)"
+        },
+        "JR368298": {
+          "first_seen": "2026-11-13T06:43:50+00:00",
+          "title": "Consumption Lead - Agentforce/D360"
         }
       },
       "last_error": null,
@@ -284633,7 +285201,6 @@
         },
         "7951885": {
           "first_seen": "2026-10-08T23:01:39+00:00",
-          "removed_at": "2026-11-12T01:39:33+00:00",
           "title": "Sr. Content Developer"
         },
         "7954575": {
@@ -285461,6 +286028,7 @@
         },
         "8243226": {
           "first_seen": "2026-10-08T23:01:39+00:00",
+          "removed_at": "2026-11-13T06:47:20+00:00",
           "title": "Strategic Events Marketing Manager"
         },
         "8244432": {
@@ -286070,12 +286638,10 @@
         },
         "8332749": {
           "first_seen": "2026-10-29T02:33:51+00:00",
-          "removed_at": "2026-11-12T01:39:33+00:00",
           "title": "Account Development Representative II - Toronto"
         },
         "8332753": {
           "first_seen": "2026-10-29T02:33:51+00:00",
-          "removed_at": "2026-11-12T01:39:33+00:00",
           "title": "Account Development Representative - Canada"
         },
         "8332755": {
@@ -287780,6 +288346,7 @@
         },
         "127802": {
           "first_seen": "2026-10-09T18:58:49+00:00",
+          "removed_at": "2026-11-13T07:10:02+00:00",
           "title": "Quality Intern"
         },
         "127869": {
@@ -287883,6 +288450,7 @@
         },
         "128813": {
           "first_seen": "2026-10-22T08:03:52+00:00",
+          "removed_at": "2026-11-13T07:10:02+00:00",
           "title": "Finance Intern"
         },
         "128843": {
@@ -288179,6 +288747,7 @@
         },
         "132318": {
           "first_seen": "2026-10-12T19:32:20+00:00",
+          "removed_at": "2026-11-13T07:10:02+00:00",
           "title": "HR Intern (Apodaca, N.L)"
         },
         "132361": {
@@ -288197,6 +288766,7 @@
         },
         "132621": {
           "first_seen": "2026-10-16T00:13:18+00:00",
+          "removed_at": "2026-11-13T07:10:02+00:00",
           "title": "Manufacturing Intern (Apodaca, N.L.)"
         },
         "132710": {
@@ -289374,10 +289944,12 @@
         },
         "138895": {
           "first_seen": "2026-10-19T19:52:59+00:00",
+          "removed_at": "2026-11-13T07:10:02+00:00",
           "title": "Procurement Intern (Apodaca, N.L.)"
         },
         "138897": {
           "first_seen": "2026-11-12T18:51:08+00:00",
+          "removed_at": "2026-11-13T07:10:02+00:00",
           "title": "Procurement Intern (Apodaca, N.L.)"
         },
         "138908": {
@@ -289490,6 +290062,7 @@
         },
         "139851": {
           "first_seen": "2026-11-05T02:01:18+00:00",
+          "removed_at": "2026-11-13T07:10:02+00:00",
           "title": "TE Intern"
         },
         "139853": {
@@ -289504,6 +290077,7 @@
         },
         "139895": {
           "first_seen": "2026-10-30T09:08:47+00:00",
+          "removed_at": "2026-11-13T07:10:02+00:00",
           "title": "Customer Satisfaction and Quality Intern"
         },
         "139973": {
@@ -289789,6 +290363,10 @@
           "first_seen": "2026-11-10T02:36:53+00:00",
           "title": "Finance Intern (Polanco, CDMX)"
         },
+        "141238": {
+          "first_seen": "2026-11-13T07:10:02+00:00",
+          "title": "Health, Safety, Environment (HSE) Intern"
+        },
         "141272": {
           "first_seen": "2026-11-09T08:26:39+00:00",
           "title": "Digital Innovation Intern"
@@ -289905,6 +290483,10 @@
           "first_seen": "2026-11-10T10:17:00+00:00",
           "title": "Industrial and Supply Chain Intern"
         },
+        "141640": {
+          "first_seen": "2026-11-13T07:10:02+00:00",
+          "title": "Industrial Engineering Intern"
+        },
         "141667": {
           "first_seen": "2026-11-09T19:19:04+00:00",
           "title": "Distribution & eCommerce Intern",
@@ -289969,6 +290551,10 @@
         "142022": {
           "first_seen": "2026-11-12T10:19:00+00:00",
           "title": "Intern / Apprentice / Trainee, Marketing and Communication"
+        },
+        "142031": {
+          "first_seen": "2026-11-13T07:10:02+00:00",
+          "title": "Intern / Apprentice / Trainee, Human Resources"
         },
         "142168": {
           "first_seen": "2026-11-12T10:19:00+00:00",
@@ -290071,6 +290657,7 @@
         },
         "1380797000": {
           "first_seen": "2026-10-09T18:58:53+00:00",
+          "removed_at": "2026-11-13T07:10:06+00:00",
           "title": "Singapore Supervisor Ii, Drive Operations"
         },
         "1382847300": {
@@ -290240,6 +290827,7 @@
         },
         "1408517500": {
           "first_seen": "2026-10-09T18:58:53+00:00",
+          "removed_at": "2026-11-13T07:10:06+00:00",
           "title": "Shugart Senior Employment Counsel, Apac"
         },
         "1408526600": {
@@ -290530,6 +291118,7 @@
         },
         "1427166200": {
           "first_seen": "2026-10-09T18:58:53+00:00",
+          "removed_at": "2026-11-13T07:10:06+00:00",
           "title": "Senai Mid Level Engineer (hdd Substrate Frontend)"
         },
         "1427173100": {
@@ -290559,6 +291148,7 @@
         },
         "1427367600": {
           "first_seen": "2026-10-09T18:58:53+00:00",
+          "removed_at": "2026-11-13T07:10:06+00:00",
           "title": "Senai Engineer (hdd Substrate Frontend)"
         },
         "1427487300": {
@@ -290600,6 +291190,7 @@
         },
         "1428895500": {
           "first_seen": "2026-10-09T18:58:53+00:00",
+          "removed_at": "2026-11-13T07:10:06+00:00",
           "title": "Shugart Staff Commodity Manager, Materials (chemical & Gases)"
         },
         "1429020900": {
@@ -290636,6 +291227,7 @@
         },
         "1429469500": {
           "first_seen": "2026-10-09T18:58:53+00:00",
+          "removed_at": "2026-11-13T07:10:06+00:00",
           "title": "Senai Sr Engineer Team Lead (plating)"
         },
         "1429470200": {
@@ -292559,6 +293151,7 @@
         },
         "7817810003": {
           "first_seen": "2026-10-09T18:42:31+00:00",
+          "removed_at": "2026-11-13T06:54:07+00:00",
           "title": "Senior Software Engineer"
         },
         "7818963003": {
@@ -293227,6 +293820,7 @@
         },
         "7999087003": {
           "first_seen": "2026-10-09T18:42:31+00:00",
+          "removed_at": "2026-11-13T06:54:07+00:00",
           "title": "Staff Software Engineer"
         },
         "7999250003": {
@@ -295912,6 +296506,18 @@
         "744000161393739": {
           "first_seen": "2026-11-12T23:50:26+00:00",
           "title": "CPQ Senior Solution Sales Executive"
+        },
+        "744000161396919": {
+          "first_seen": "2026-11-13T06:48:11+00:00",
+          "title": "Customer Success Executive"
+        },
+        "744000161428794": {
+          "first_seen": "2026-11-13T06:48:11+00:00",
+          "title": "Sr Customer Success Manager (Cybersecurity)"
+        },
+        "744000161429052": {
+          "first_seen": "2026-11-13T06:48:11+00:00",
+          "title": "Sr Business Strategy Mgr"
         }
       },
       "last_error": null,
@@ -296507,7 +297113,6 @@
         },
         "2a942ccb-7f31-443e-a455-044081454b81": {
           "first_seen": "2026-10-09T18:52:47+00:00",
-          "removed_at": "2026-11-05T09:54:32+00:00",
           "title": "Engineer II, Modelling and Simulation (R5712)"
         },
         "2a9f8845-45f1-4ad9-8e50-38d8cddfddf7": {
@@ -296630,6 +297235,10 @@
         "31536146-093f-4cfc-b850-f205afe08cad": {
           "first_seen": "2026-10-09T18:52:47+00:00",
           "title": "Senior Propulsion Design Engineer (R4641)"
+        },
+        "322d7989-7cd7-4d33-9626-33a51602937d": {
+          "first_seen": "2026-11-13T07:04:22+00:00",
+          "title": "Senior Staff Technical Program Manager (R5886)"
         },
         "325f1f23-de6a-4202-9b33-d90f159bf885": {
           "first_seen": "2026-10-09T18:52:47+00:00",
@@ -297229,6 +297838,7 @@
         },
         "5e726b28-a905-418d-a1e5-35c83371869d": {
           "first_seen": "2026-10-09T18:52:47+00:00",
+          "removed_at": "2026-11-13T07:04:22+00:00",
           "title": "Senior IT Operations Engineer (R6117)"
         },
         "5ea1edba-6225-4dcc-8264-04f9f467d405": {
@@ -297335,6 +297945,10 @@
         "68d93f20-3aff-4010-99ab-0c3a39807dca": {
           "first_seen": "2026-10-09T18:52:47+00:00",
           "title": "Senior Lead, Enterprise Strategy and Operations (R6097)"
+        },
+        "6955f35c-59f3-41f8-ae5b-d25df098ebe2": {
+          "first_seen": "2026-11-13T07:04:22+00:00",
+          "title": "Staff DevOps Engineer (R6668)"
         },
         "695780f5-c62a-40d5-b897-a2aa4477a8e8": {
           "first_seen": "2026-10-09T18:52:47+00:00",
@@ -298442,6 +299056,7 @@
         },
         "ba67e3c1-b862-4703-8654-b3bcce162ee4": {
           "first_seen": "2026-10-09T18:52:47+00:00",
+          "removed_at": "2026-11-13T07:04:22+00:00",
           "title": "Staff Engineer, Software Test (R5836)"
         },
         "ba945088-38ec-4e58-8f66-01c0497a3bd3": {
@@ -301705,6 +302320,7 @@
         "524911": {
           "first_seen": "2026-10-14T08:07:16+00:00",
           "notified_at": "2026-10-14T08:07:16+00:00",
+          "removed_at": "2026-11-13T06:59:12+00:00",
           "title": "Werkstudent (w/m/d) Data Engineering",
           "tri": {
             "s": -2.8549,
@@ -302329,6 +302945,7 @@
         },
         "526645": {
           "first_seen": "2026-11-02T18:41:02+00:00",
+          "removed_at": "2026-11-13T06:59:12+00:00",
           "title": "Werkstudent (w/m/d) operativer Einkauf"
         },
         "526647": {
@@ -302772,6 +303389,7 @@
         },
         "528007": {
           "first_seen": "2026-11-12T18:38:57+00:00",
+          "removed_at": "2026-11-13T06:59:12+00:00",
           "title": "Working Student (f/m/d) in the field of stochastic methods and model validation",
           "tri": {
             "s": -2.2771,
@@ -302808,6 +303426,7 @@
         },
         "528144": {
           "first_seen": "2026-11-11T19:02:01+00:00",
+          "removed_at": "2026-11-13T06:59:12+00:00",
           "title": "Werkstudent (w/m/d) für KI-Assistenten & Generative KI in der elektrotechnischen Entwicklung",
           "tri": {
             "s": -2.7721,
@@ -302982,6 +303601,7 @@
         },
         "528603": {
           "first_seen": "2026-11-12T10:07:55+00:00",
+          "removed_at": "2026-11-13T06:59:12+00:00",
           "title": "Werkstudent (w/m/d) Market & Strategic Intelligence",
           "tri": {
             "s": -3.9401,
@@ -304204,6 +304824,7 @@
         },
         "21521ab5-27e7-47ae-b425-48b5e6cc96da": {
           "first_seen": "2026-10-08T19:03:12+00:00",
+          "removed_at": "2026-11-13T06:47:58+00:00",
           "title": "Enterprise Account Executive"
         },
         "216480fd-4e03-4c05-bb6a-ed015a75aff0": {
@@ -304239,6 +304860,10 @@
           "first_seen": "2026-10-08T19:03:12+00:00",
           "removed_at": "2026-10-19T19:29:14+00:00",
           "title": "General Ledger Accounting Manager"
+        },
+        "237df466-e256-4b3d-b020-2f4ef569e39e": {
+          "first_seen": "2026-11-13T06:47:58+00:00",
+          "title": "Enterprise Account Executive"
         },
         "23c94498-23c8-4d6e-a1d8-4355bf605663": {
           "first_seen": "2026-10-08T19:03:12+00:00",
@@ -304531,6 +305156,7 @@
         },
         "435f1357-2f89-4b5f-bc33-b79b0a8355f2": {
           "first_seen": "2026-10-08T19:03:12+00:00",
+          "removed_at": "2026-11-13T06:47:58+00:00",
           "title": "Senior Solution Engineer"
         },
         "4371e808-51f1-4c7a-a1ca-1819926a5c74": {
@@ -304754,6 +305380,10 @@
         "570cbac3-875a-4ce4-83b4-3c19e4b279db": {
           "first_seen": "2026-10-14T22:27:49+00:00",
           "title": "Principal Program Manager - Migrations"
+        },
+        "57131f28-cdf8-4776-aa87-8f9339e494ab": {
+          "first_seen": "2026-11-13T06:47:58+00:00",
+          "title": "Staff Software Engineer - Compiler & Spark Runtime"
         },
         "577b516f-af2c-40fb-80c2-9371015b6908": {
           "first_seen": "2026-10-08T19:03:12+00:00",
@@ -305687,6 +306317,10 @@
         "b81e83f8-ad8e-420a-b8dd-2c4c919d8777": {
           "first_seen": "2026-10-08T19:03:12+00:00",
           "title": "Principal Software Engineer 2 - OLTP"
+        },
+        "b861ddac-1fc4-4e42-9cde-a81be6f00fe2": {
+          "first_seen": "2026-11-13T06:47:58+00:00",
+          "title": "Staff Software engineer - Storage"
         },
         "b8ee5858-2d29-4313-a10f-a73f397bcc90": {
           "first_seen": "2026-10-08T19:03:12+00:00",
@@ -310919,6 +311553,7 @@
         },
         "744000145425069": {
           "first_seen": "2026-10-09T18:54:41+00:00",
+          "removed_at": "2026-11-13T07:06:23+00:00",
           "title": "Infrastructure Administrator (VTOM/Linux/Windows) with French"
         },
         "744000145431909": {
@@ -321592,6 +322227,7 @@
         },
         "744000161215569": {
           "first_seen": "2026-11-12T10:15:16+00:00",
+          "removed_at": "2026-11-13T07:06:23+00:00",
           "title": "SAP MM Technical Lead"
         },
         "744000161220325": {
@@ -322192,6 +322828,7 @@
         },
         "8459660002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "GNC Engineer, Satellite Power Systems (Starlink)"
         },
         "8460962002": {
@@ -322264,6 +322901,7 @@
         },
         "8465290002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Lead Supply Chain Reliability Engineer (Starlink)"
         },
         "8466837002": {
@@ -322375,6 +323013,7 @@
         },
         "8477099002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Supplier Development Engineer, PCB (Starlink)"
         },
         "8477124002": {
@@ -322389,10 +323028,12 @@
         },
         "8477140002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Supplier Industrialization Engineer, PCB (Starlink)"
         },
         "8477142002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Supply Chain Engineer, PCB (Starlink)"
         },
         "8480140002": {
@@ -322584,6 +323225,7 @@
         },
         "8494978002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Principal Software Engineer (Platform Team)"
         },
         "8495213002": {
@@ -322597,6 +323239,7 @@
         },
         "8495853002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Software Engineer (Platform Team)"
         },
         "8495870002": {
@@ -322606,6 +323249,7 @@
         },
         "8495882002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Software Engineer (Platform Team)"
         },
         "8496306002": {
@@ -322628,6 +323272,7 @@
         },
         "8497592002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Hardware Test Engineer (Starlink)"
         },
         "8498761002": {
@@ -322691,6 +323336,7 @@
         },
         "8501225002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Full Stack Software Engineer (Starlink)"
         },
         "8501694002": {
@@ -322729,6 +323375,7 @@
         },
         "8505483002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Full Stack Software Engineer (Starlink)"
         },
         "8506443002": {
@@ -322845,6 +323492,7 @@
         },
         "8515364002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Product Sales Manager (Starlink)"
         },
         "8515826002": {
@@ -322914,6 +323562,7 @@
         },
         "8517733002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Supervisor, Machining (Starship Components) - 2nd Shift"
         },
         "8519215002": {
@@ -322937,6 +323586,7 @@
         },
         "8521153002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. RF Engineer (Starshield)"
         },
         "8521318002": {
@@ -322959,6 +323609,7 @@
         },
         "8521636002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Supplier Development Engineer, Mechanical (Starlink Aviation)"
         },
         "8521859002": {
@@ -322972,6 +323623,7 @@
         },
         "8522688002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Product Development Engineer (Starlink)"
         },
         "8522992002": {
@@ -323187,6 +323839,7 @@
         },
         "8532395002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Software Engineer, Development Test (Starlink)"
         },
         "8532471002": {
@@ -323237,6 +323890,7 @@
         },
         "8533607002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Receiving Inspector (Starlink)"
         },
         "8533693002": {
@@ -323503,6 +324157,10 @@
           "removed_at": "2026-10-22T18:39:34+00:00",
           "title": "Commercial Sales Manager (Starlink Mobile)"
         },
+        "8544768002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Communications Lead (Hawthorne)"
+        },
         "8545772002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
           "title": "Tube Bender (Starship)"
@@ -323564,6 +324222,7 @@
         },
         "8546317002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Partnerships Manager (Starlink Commercial Aviation)"
         },
         "8546353002": {
@@ -323573,6 +324232,7 @@
         },
         "8546375002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Partnerships Manager (Starlink Commercial Aviation)"
         },
         "8546682002": {
@@ -323611,6 +324271,7 @@
         },
         "8547926002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Business Operations Analyst (Starlink Aviation)"
         },
         "8548093002": {
@@ -323664,10 +324325,12 @@
         },
         "8550162002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Terrestrial Services Sales Manager (Starlink Aviation)"
         },
         "8550231002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Terrestrial Services Sales Manager (Starlink Aviation)"
         },
         "8550390002": {
@@ -323877,22 +324540,27 @@
         },
         "8557060002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. AI Engineer, Special Programs"
         },
         "8557073002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "AI Engineer, Special Programs - Top Secret Clearance"
         },
         "8557093002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. AI Engineer, Special Programs - Top Secret Clearance"
         },
         "8557110002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "AI Engineer, Supercomputing, Special Programs - Top Secret Clearance"
         },
         "8557126002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. AI Engineer, Supercomputing, Special Programs - Top Secret Clearance"
         },
         "8557138002": {
@@ -323906,22 +324574,27 @@
         },
         "8557219002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "AI Engineer, Special Programs - Top Secret Clearance"
         },
         "8557252002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "AI Engineer, Supercomputing, Special Programs - Top Secret Clearance"
         },
         "8557262002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. AI Engineer, Supercomputing, Special Programs - Top Secret Clearance"
         },
         "8557268002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. AI Engineer, Special Programs"
         },
         "8557272002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. AI Engineer, Special Programs - Top Secret Clearance"
         },
         "8557503002": {
@@ -323979,6 +324652,7 @@
         },
         "8558471002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Principal RF Engineer (Starshield)"
         },
         "8558715002": {
@@ -323991,14 +324665,17 @@
         },
         "8558817002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Principal Software Engineer (Platform Team)"
         },
         "8558835002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Principal Software Engineer (Platform Team)"
         },
         "8558839002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Principal Software Engineer (Platform Team)"
         },
         "8558849002": {
@@ -324008,26 +324685,32 @@
         },
         "8558857002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Software Engineer (Platform Team)"
         },
         "8558858002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Software Engineer (Platform Team)"
         },
         "8558859002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Software Engineer (Platform Team)"
         },
         "8558869002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Software Engineer (Platform Team)"
         },
         "8558870002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Software Engineer (Platform Team)"
         },
         "8558871002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Software Engineer (Platform Team)"
         },
         "8558875002": {
@@ -324116,26 +324799,32 @@
         },
         "8560537002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Software Engineer (Platform Team)"
         },
         "8560546002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Software Engineer (Platform Team)"
         },
         "8560569002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Software Engineer (Platform Team)"
         },
         "8560570002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. Software Engineer (Platform Team)"
         },
         "8560572002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Principal Software Engineer (Platform Team)"
         },
         "8560575002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Principal Software Engineer (Platform Team)"
         },
         "8560881002": {
@@ -324579,6 +325268,7 @@
         },
         "8570074002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Development Process Technician, Injection Molding (Starlink) - Level 4/5"
         },
         "8570105002": {
@@ -324663,10 +325353,12 @@
         },
         "8572113002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Principal AI Engineer, Special Programs"
         },
         "8572114002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Principal AI Engineer, Special Programs"
         },
         "8572143002": {
@@ -324770,6 +325462,7 @@
         },
         "8575407002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sheet Metal Technician (Starlink)"
         },
         "8575788002": {
@@ -327902,6 +328595,7 @@
         },
         "8673066002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sourcing Manager, Food & Facilities"
         },
         "8673107002": {
@@ -328473,6 +329167,7 @@
         },
         "8691820002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Lab Architect"
         },
         "8692083002": {
@@ -329189,6 +329884,7 @@
         },
         "8710045002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Production Coordinator, Tool and Die"
         },
         "8710126002": {
@@ -329804,6 +330500,10 @@
         "8731140002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
           "title": "Structural Engineer (Starlink)"
+        },
+        "8731179002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Hardware Reliability Engineer (Starlink Aviation)"
         },
         "8731214002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
@@ -332066,6 +332766,7 @@
         },
         "8822435002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sourcing Manager, Food & Facilities"
         },
         "8822756002": {
@@ -333378,18 +334079,22 @@
         },
         "8865230002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "AI Engineer, Supercomputing, Special Programs - Top Secret Clearance"
         },
         "8865231002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "AI Engineer, Supercomputing, Special Programs - Top Secret Clearance"
         },
         "8865267002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. AI Engineer, Supercomputing, Special Programs - Top Secret Clearance"
         },
         "8865268002": {
           "first_seen": "2026-10-08T19:03:07+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sr. AI Engineer, Supercomputing, Special Programs - Top Secret Clearance"
         },
         "8865328002": {
@@ -334455,6 +335160,10 @@
           "first_seen": "2026-10-17T00:35:30+00:00",
           "title": "Propulsion Engineer (Raptor Final Assembly & Tube Shop)"
         },
+        "8895877002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Sr. Launch Engineer, Propellant Generation (Starship)"
+        },
         "8895969002": {
           "first_seen": "2026-10-17T00:35:30+00:00",
           "title": "Propulsion Engineer, Non-Destructive Evaluation (Raptor)"
@@ -335193,6 +335902,7 @@
         },
         "8918440002": {
           "first_seen": "2026-10-27T02:11:55+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Sourcing Manager, Food & Facilities"
         },
         "8918473002": {
@@ -336237,6 +336947,7 @@
         },
         "8929620002": {
           "first_seen": "2026-11-04T21:26:06+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Principal Software Engineer (Application Software)"
         },
         "8929638002": {
@@ -336435,6 +337146,10 @@
           "first_seen": "2026-11-09T08:03:43+00:00",
           "title": "Electrical Engineer, Hardware Reliability (Starlink)"
         },
+        "8932422002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Process Operator Specialist, Air Separation Unit (Starship)"
+        },
         "8932465002": {
           "first_seen": "2026-11-05T23:45:35+00:00",
           "title": "Construction Project Manager, Critical Transport (Starship)"
@@ -336531,6 +337246,10 @@
           "first_seen": "2026-11-07T01:03:23+00:00",
           "title": "Sr. Equipment Safety Engineer"
         },
+        "8933294002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "LNG Pipeline Engineer (Starship)"
+        },
         "8933372002": {
           "first_seen": "2026-11-06T21:00:41+00:00",
           "title": "Senior Manufacturing Engineer, PCBA (Starlink)"
@@ -336620,6 +337339,10 @@
           "first_seen": "2026-11-07T07:10:37+00:00",
           "title": "Shipping Specialist (Logistics HT) - 1st Shift"
         },
+        "8934074002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Production Control Scheduler (Starship)"
+        },
         "8934076002": {
           "first_seen": "2026-11-09T18:53:15+00:00",
           "title": "Production Scheduler (Starship)"
@@ -336643,6 +337366,10 @@
         "8934146002": {
           "first_seen": "2026-11-07T01:03:23+00:00",
           "title": "Sr. Security Engineer (Vulnerability Management)"
+        },
+        "8934150002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Construction Project Manager, Launch Pad Fabrication (Starship)"
         },
         "8934152002": {
           "first_seen": "2026-11-10T17:56:00+00:00",
@@ -336670,6 +337397,7 @@
         },
         "8934560002": {
           "first_seen": "2026-11-09T00:59:13+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Principal Site Reliability Engineer (Vehicle Engineering)"
         },
         "8934563002": {
@@ -336879,6 +337607,7 @@
         },
         "8936814002": {
           "first_seen": "2026-11-12T23:48:51+00:00",
+          "removed_at": "2026-11-13T06:47:10+00:00",
           "title": "Carpenter"
         },
         "8936899002": {
@@ -336888,6 +337617,10 @@
         "8936913002": {
           "first_seen": "2026-11-10T23:24:47+00:00",
           "title": "Thermal Development Technician, Heat Shield (Starship) - Multiple Shifts"
+        },
+        "8936924002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Sr. Mechanical Design Engineer, Satellites (Starlink)"
         },
         "8937000002": {
           "first_seen": "2026-11-12T01:39:23+00:00",
@@ -336916,6 +337649,14 @@
         "8937245002": {
           "first_seen": "2026-11-12T23:48:51+00:00",
           "title": "GNC Engineer (Falcon)"
+        },
+        "8937263002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Tool Crib Attendant (Starship) - Night Shift"
+        },
+        "8937276002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Controls Technician (Starship) - Level 4/5"
         },
         "8938027002": {
           "first_seen": "2026-11-12T01:39:23+00:00",
@@ -336972,6 +337713,10 @@
         "8939465002": {
           "first_seen": "2026-11-12T23:48:51+00:00",
           "title": "Sr. Manufacturing Engineer, Machining (Starship)"
+        },
+        "8939530002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Supervisor, Machining (Starship Components)"
         },
         "8939697002": {
           "first_seen": "2026-11-12T18:26:26+00:00",
@@ -337048,6 +337793,30 @@
         "8940527002": {
           "first_seen": "2026-11-12T23:48:51+00:00",
           "title": "Test Equipment Technician - 2nd Shift"
+        },
+        "8940627002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Financial Analyst"
+        },
+        "8940632002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Sourcing Manager, Food & Facilities"
+        },
+        "8940638002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Controls Technician (Starship) - Level 4/5 - Night Shift"
+        },
+        "8940695002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Sr. Accountant, SI Operations"
+        },
+        "8940772002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Process Operator Specialist, Air Separation Unit (Starship) - Night Shift"
+        },
+        "8940775002": {
+          "first_seen": "2026-11-13T06:47:10+00:00",
+          "title": "Sr. Launch Engineer, Propellant Systems (Starship)"
         }
       },
       "last_error": null,
@@ -338081,6 +338850,10 @@
         "/job/Port-Melbourne-Australia/Intern---Marketing---Sales-Coordinator---Leapmotor_": {
           "first_seen": "2026-10-09T18:54:09+00:00",
           "title": "Intern – Marketing & Sales Coordinator - Leapmotor"
+        },
+        "/job/Pune-India/VSS-JEEP_": {
+          "first_seen": "2026-11-13T07:05:51+00:00",
+          "title": "VSS JEEP"
         }
       },
       "last_error": null,
@@ -338583,6 +339356,7 @@
         },
         "7844214": {
           "first_seen": "2026-10-08T19:03:08+00:00",
+          "removed_at": "2026-11-13T06:47:11+00:00",
           "title": "AEO and GEO Marketing Manager"
         },
         "7858811": {
@@ -339026,6 +339800,7 @@
         },
         "8040825": {
           "first_seen": "2026-10-08T19:03:08+00:00",
+          "removed_at": "2026-11-13T06:47:11+00:00",
           "title": "Firmware Engineer"
         },
         "8040940": {
@@ -341248,7 +342023,6 @@
         },
         "8230294": {
           "first_seen": "2026-10-08T19:03:08+00:00",
-          "removed_at": "2026-11-02T18:26:40+00:00",
           "title": "Legal Operations Team Lead"
         },
         "8230296": {
@@ -341880,6 +342654,10 @@
           "first_seen": "2026-10-20T10:09:42+00:00",
           "title": "Engineering Manager, Money as a Service (MaaS)"
         },
+        "8282171": {
+          "first_seen": "2026-11-13T06:47:11+00:00",
+          "title": "Integration Reliability Engineer, Technical Operations"
+        },
         "8282390": {
           "first_seen": "2026-10-14T22:25:29+00:00",
           "title": "Product Designer, Terminal"
@@ -342390,6 +343168,10 @@
           "notified_at": "2026-10-30T21:18:38+00:00",
           "title": "Master's Machine Learning Engineer, Intern"
         },
+        "8334550": {
+          "first_seen": "2026-11-13T06:47:11+00:00",
+          "title": "Demand Generation Manager, Startups, APAC"
+        },
         "8334554": {
           "first_seen": "2026-11-09T18:53:16+00:00",
           "title": "Sales Manager, Enterprise Platforms, France"
@@ -342597,6 +343379,10 @@
         "8354754": {
           "first_seen": "2026-11-09T08:03:45+00:00",
           "title": "Solutions Architect (Japan)"
+        },
+        "8354762": {
+          "first_seen": "2026-11-13T06:47:11+00:00",
+          "title": "Solutions Architect (Korea Market)"
         },
         "8354768": {
           "first_seen": "2026-11-05T23:45:37+00:00",
@@ -343438,6 +344224,7 @@
         },
         "25007786": {
           "first_seen": "2026-10-09T18:42:10+00:00",
+          "removed_at": "2026-11-13T06:53:45+00:00",
           "title": "SW Engineering Manager - RTOS Networking"
         },
         "25007958": {
@@ -344311,6 +345098,7 @@
         },
         "25016393": {
           "first_seen": "2026-11-06T21:08:00+00:00",
+          "removed_at": "2026-11-13T06:53:45+00:00",
           "title": "Validation/Char Eng Intern",
           "tri": {
             "s": -4.0087,
@@ -345707,6 +346495,7 @@
         },
         "25018796": {
           "first_seen": "2026-11-06T21:08:00+00:00",
+          "removed_at": "2026-11-13T06:53:45+00:00",
           "title": "Field Applications Program - Digital (Novi, MI)"
         },
         "25018800": {
@@ -350974,7 +351763,6 @@
         },
         "R0331898": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-11-13T00:08:58+00:00",
           "title": "Responsable Du Département Radar Et Espace Du Centre De Compétences Ingénierie Matériel F H"
         },
         "R0331905": {
@@ -352970,7 +353758,6 @@
         },
         "R0335152": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-11-04T21:47:18+00:00",
           "title": "Analyste Veille Vulnérabilité Cybersécurité F H"
         },
         "R0335153": {
@@ -354674,7 +355461,6 @@
         },
         "R0337705": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-11-13T00:08:58+00:00",
           "title": "2027 Systems Engineering Apprentice"
         },
         "R0337707": {
@@ -354739,7 +355525,6 @@
         },
         "R0337758": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-11-13T00:08:58+00:00",
           "title": "2027 Digital Product Owner Apprentice"
         },
         "R0337760": {
@@ -354768,7 +355553,6 @@
         },
         "R0337773": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-11-13T00:08:58+00:00",
           "title": "2027 Project Planning Controls Apprentice"
         },
         "R0337774": {
@@ -354809,7 +355593,6 @@
         },
         "R0337801": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-11-13T00:08:58+00:00",
           "title": "2027 Material Planning Graduate"
         },
         "R0337802": {
@@ -354842,7 +355625,6 @@
         },
         "R0337813": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-11-13T00:08:58+00:00",
           "title": "2027 Engineering Integrated Logistics Support Apprentice Level 6 Mechatronics Higher Level Apprenticeship"
         },
         "R0337814": {
@@ -355819,6 +356601,7 @@
         },
         "R0338960": {
           "first_seen": "2026-10-09T18:55:09+00:00",
+          "removed_at": "2026-11-13T07:06:37+00:00",
           "title": "Responsable Projet F H"
         },
         "R0338961": {
@@ -358270,7 +359053,6 @@
         },
         "R0341149": {
           "first_seen": "2026-10-09T18:55:09+00:00",
-          "removed_at": "2026-11-13T00:08:58+00:00",
           "title": "Ingénieur Ivvq Radars Avancés F H"
         },
         "R0341152": {
@@ -358767,6 +359549,7 @@
         },
         "R0341473": {
           "first_seen": "2026-11-10T18:17:39+00:00",
+          "removed_at": "2026-11-13T07:06:37+00:00",
           "title": "Ingénieur De Stock"
         },
         "R0341487": {
@@ -360468,6 +361251,14 @@
             "v": "tfidf-texte-v1"
           }
         },
+        "R0342588": {
+          "first_seen": "2026-11-13T07:06:38+00:00",
+          "title": "Stage Évaluation Des Grands Modèles De Langage Pour Les Systèmes Critiques Via L’analyse Sémantique Des Graphes F H",
+          "tri": {
+            "s": -2.4303,
+            "v": "tfidf-texte-v1"
+          }
+        },
         "R0342597": {
           "first_seen": "2026-10-14T14:12:26+00:00",
           "removed_at": "2026-11-05T18:31:15+00:00",
@@ -361204,7 +361995,6 @@
         },
         "R0342988": {
           "first_seen": "2026-10-24T11:23:25+00:00",
-          "removed_at": "2026-11-13T00:08:58+00:00",
           "title": "Master Planner"
         },
         "R0342992": {
@@ -362329,6 +363119,14 @@
             "v": "tfidf-texte-v1"
           }
         },
+        "R0343660": {
+          "first_seen": "2026-11-13T07:06:39+00:00",
+          "title": "Stage Etude Sur Les Répéteurs Quantiques Basés Sur La Correction D’erreurs H F",
+          "tri": {
+            "s": -2.7454,
+            "v": "tfidf-texte-v1"
+          }
+        },
         "R0343661": {
           "first_seen": "2026-11-13T00:09:11+00:00",
           "title": "Stage Self Supervised Pre Training And Domain Adaptation For Longitudinal Eeg Biometric Authentication H F",
@@ -363244,7 +364042,6 @@
         },
         "R0344178": {
           "first_seen": "2026-10-21T19:07:08+00:00",
-          "removed_at": "2026-11-13T00:08:58+00:00",
           "title": "Technical Lead Labview"
         },
         "R0344181": {
@@ -366106,6 +366903,7 @@
         },
         "R0345589": {
           "first_seen": "2026-10-30T16:23:50+00:00",
+          "removed_at": "2026-11-13T07:06:37+00:00",
           "title": "Senior Requirements Engineer"
         },
         "R0345590": {
@@ -367394,6 +368192,10 @@
             "v": "tfidf-texte-v1"
           }
         },
+        "R0346739": {
+          "first_seen": "2026-11-13T07:06:38+00:00",
+          "title": "Estágio Em Customer Service"
+        },
         "R0346752": {
           "first_seen": "2026-11-10T18:17:35+00:00",
           "title": "Responsable De La Chaîne Fonctionnelle Tcr Mco Syracuse H F"
@@ -367409,6 +368211,10 @@
         "R0346765": {
           "first_seen": "2026-11-05T01:57:56+00:00",
           "title": "Ingénieur Projets 4 0 F H"
+        },
+        "R0346779": {
+          "first_seen": "2026-11-13T07:06:37+00:00",
+          "title": "Noram Customs Director"
         },
         "R0346806": {
           "first_seen": "2026-11-02T18:48:41+00:00",
@@ -367869,6 +368675,10 @@
           "removed_at": "2026-11-10T23:44:15+00:00",
           "title": "Soc Analyst"
         },
+        "R0347455": {
+          "first_seen": "2026-11-13T07:06:37+00:00",
+          "title": "Regional Sales Manager"
+        },
         "R0347456": {
           "first_seen": "2026-11-06T15:31:15+00:00",
           "title": "Project Manager F H"
@@ -367880,6 +368690,10 @@
         "R0347492": {
           "first_seen": "2026-11-13T00:09:17+00:00",
           "title": "Project Controller"
+        },
+        "R0347496": {
+          "first_seen": "2026-11-13T07:06:39+00:00",
+          "title": "Ingénieur Algorithmes Traitement Du Signal F H"
         },
         "R0347501": {
           "first_seen": "2026-11-11T19:09:29+00:00",
@@ -367949,6 +368763,10 @@
         "R0347614": {
           "first_seen": "2026-11-10T23:44:16+00:00",
           "title": "Ingénieur Sécurité Et Marquage Ce H F"
+        },
+        "R0347631": {
+          "first_seen": "2026-11-13T07:06:38+00:00",
+          "title": "Talent Acquisition Partner Manufacturing"
         },
         "R0347647": {
           "first_seen": "2026-11-09T19:15:08+00:00",
@@ -368139,6 +368957,14 @@
         "R0348094": {
           "first_seen": "2026-11-12T18:47:16+00:00",
           "title": "Hw Test Bench Lead Design Development Maintenance"
+        },
+        "R0348125": {
+          "first_seen": "2026-11-13T07:06:38+00:00",
+          "title": "Cybersecurity Solutions Engineer"
+        },
+        "R0348193": {
+          "first_seen": "2026-11-13T07:06:38+00:00",
+          "title": "Responsable Validation Système Solutions De Simulation F H"
         }
       },
       "last_error": null,
@@ -371447,6 +372273,7 @@
         },
         "160066": {
           "first_seen": "2026-10-09T18:44:44+00:00",
+          "removed_at": "2026-11-13T06:56:20+00:00",
           "title": "Implementation Lead, Uber for Business Mexico"
         },
         "160071": {
@@ -372447,6 +373274,7 @@
         },
         "302755": {
           "first_seen": "2026-10-14T14:00:47+00:00",
+          "removed_at": "2026-11-13T06:56:20+00:00",
           "title": "Sr Data Analytics Engineer, Tech - Data"
         },
         "302756": {
@@ -372949,6 +373777,7 @@
         },
         "303427": {
           "first_seen": "2026-10-14T07:53:11+00:00",
+          "removed_at": "2026-11-13T06:56:20+00:00",
           "title": "Executive Assistant Business Partner II"
         },
         "303429": {
@@ -373077,6 +373906,7 @@
         },
         "303533": {
           "first_seen": "2026-10-13T01:37:57+00:00",
+          "removed_at": "2026-11-13T06:56:20+00:00",
           "title": "Executive Assistant Business Partner III"
         },
         "303535": {
@@ -373679,6 +374509,7 @@
         },
         "304269": {
           "first_seen": "2026-11-11T11:09:40+00:00",
+          "removed_at": "2026-11-13T06:56:20+00:00",
           "title": "Regional Operations Manager II"
         },
         "304291": {
@@ -373786,6 +374617,7 @@
         },
         "304520": {
           "first_seen": "2026-11-06T21:10:44+00:00",
+          "removed_at": "2026-11-13T06:56:20+00:00",
           "title": "Sr Software Engineer - Mobile and Edge Networking"
         },
         "304537": {
@@ -373869,6 +374701,10 @@
             "s": -3.6808,
             "v": "tfidf-texte-v1"
           }
+        },
+        "304790": {
+          "first_seen": "2026-11-13T06:56:20+00:00",
+          "title": "Senior Manager, Compensation - M&A"
         }
       },
       "last_error": null,
@@ -379957,6 +380793,7 @@
         },
         "REQ2026080898": {
           "first_seen": "2026-10-15T20:52:05+00:00",
+          "removed_at": "2026-11-13T07:09:02+00:00",
           "title": "Material Handler"
         },
         "REQ2026080899": {
@@ -380131,6 +380968,7 @@
         },
         "REQ2026081205": {
           "first_seen": "2026-10-09T18:57:53+00:00",
+          "removed_at": "2026-11-13T07:09:02+00:00",
           "title": "APU Quality Technician"
         },
         "REQ2026081207": {
@@ -384415,7 +385253,6 @@
         },
         "8165014": {
           "first_seen": "2026-10-09T18:48:21+00:00",
-          "removed_at": "2026-11-08T10:35:36+00:00",
           "title": "2027 Summer Intern, MBA, Operations Planning"
         },
         "8165872": {
@@ -386132,7 +386969,6 @@
         },
         "744000134029184": {
           "first_seen": "2026-10-09T18:52:53+00:00",
-          "removed_at": "2026-10-20T15:30:50+00:00",
           "title": "Lead Data Analyst - Total Service (Operations)"
         },
         "744000134029584": {
@@ -387055,6 +387891,7 @@
         },
         "744000150973389": {
           "first_seen": "2026-10-09T18:52:53+00:00",
+          "removed_at": "2026-11-13T07:04:44+00:00",
           "title": "Senior Business Development Manager - South East Asia"
         },
         "744000151009919": {
@@ -391427,6 +392264,7 @@
         },
         "JR-0107838": {
           "first_seen": "2026-11-11T03:00:11+00:00",
+          "removed_at": "2026-11-13T06:48:50+00:00",
           "title": "Software Development Engineer - Developer Platform"
         },
         "JR-0107967": {
@@ -391864,6 +392702,7 @@
         },
         "JR-0109811": {
           "first_seen": "2026-10-16T18:06:27+00:00",
+          "removed_at": "2026-11-13T06:48:50+00:00",
           "title": "Large Enterprise Customer Base Regional Sales Director - Healthcare"
         },
         "JR-0109813": {
@@ -392051,6 +392890,7 @@
         },
         "JR-0110243": {
           "first_seen": "2026-10-09T18:35:43+00:00",
+          "removed_at": "2026-11-13T06:48:50+00:00",
           "title": "DevOps Engineer, Evisort AI"
         },
         "JR-0110252": {
@@ -392223,6 +393063,10 @@
           "first_seen": "2026-10-09T18:35:43+00:00",
           "removed_at": "2026-10-21T01:43:00+00:00",
           "title": "Principal Reporting & Prism Consultant, State & Local Government"
+        },
+        "JR-0110571": {
+          "first_seen": "2026-11-13T06:48:50+00:00",
+          "title": "Sr. Associate Purchasing Analyst"
         },
         "JR-0110596": {
           "first_seen": "2026-10-23T22:17:46+00:00",
@@ -392573,6 +393417,7 @@
         },
         "JR-0111012": {
           "first_seen": "2026-10-21T13:56:19+00:00",
+          "removed_at": "2026-11-13T06:48:50+00:00",
           "title": "Regional Sales Director, Platform - Medium Enterprise Diversified Industries"
         },
         "JR-0111019": {
@@ -392786,6 +393631,7 @@
         },
         "JR-0111465": {
           "first_seen": "2026-11-05T23:47:11+00:00",
+          "removed_at": "2026-11-13T06:48:50+00:00",
           "title": "Forward Deployed Engineer"
         },
         "JR-0111466": {
@@ -393239,6 +394085,7 @@
         },
         "R35562": {
           "first_seen": "2026-10-09T18:42:40+00:00",
+          "removed_at": "2026-11-13T06:54:14+00:00",
           "title": "Business Development Representative - SEA Region"
         },
         "R35568": {
@@ -393355,7 +394202,6 @@
         },
         "R35716": {
           "first_seen": "2026-11-05T01:45:05+00:00",
-          "removed_at": "2026-11-12T23:56:28+00:00",
           "title": "Sales Engineer"
         },
         "R35717": {
@@ -393813,6 +394659,7 @@
         },
         "R19848": {
           "first_seen": "2026-11-05T18:05:11+00:00",
+          "removed_at": "2026-11-13T06:43:55+00:00",
           "title": "Senior Tax Analyst"
         },
         "R19852": {
@@ -393966,6 +394813,15 @@
           "first_seen": "2026-10-09T18:48:22+00:00",
           "removed_at": "2026-10-30T21:07:53+00:00",
           "title": "Engineering Manager, Simulation Scenario Generation"
+        },
+        "0f42ac76-3821-4805-8b59-446477d1e1db": {
+          "first_seen": "2026-11-13T07:10:15+00:00",
+          "notified_at": "2026-11-13T07:10:15+00:00",
+          "title": "Data Scientist Intern [Summer 2027]",
+          "tri": {
+            "s": 0.8417,
+            "v": "tfidf-texte-v1"
+          }
         },
         "104eba07-32d9-4007-9ab9-af2f482769aa": {
           "first_seen": "2026-10-09T18:48:22+00:00",
@@ -394231,6 +395087,15 @@
         "42bb084b-e5a0-47d7-bdf7-90a24026e4c5": {
           "first_seen": "2026-10-09T18:48:22+00:00",
           "title": "Technical Program Manager - System Behavior Analysis"
+        },
+        "442845d1-33b0-4801-a553-7fd9b806e46f": {
+          "first_seen": "2026-11-13T07:10:15+00:00",
+          "notified_at": "2026-11-13T07:10:15+00:00",
+          "title": "Systems & Safety Engineering Intern [Summer 2027]",
+          "tri": {
+            "s": -0.5964,
+            "v": "tfidf-texte-v1"
+          }
         },
         "44e0530a-6a48-417e-aa43-1f487ea3001e": {
           "first_seen": "2026-10-09T18:48:22+00:00",
@@ -397785,6 +398650,10 @@
           "first_seen": "2026-10-29T17:03:53+00:00",
           "title": "Senior Technical Enablement Engineer"
         },
+        "5278559007": {
+          "first_seen": "2026-11-13T06:47:25+00:00",
+          "title": "Senior Software Development Engineer"
+        },
         "5278561007": {
           "first_seen": "2026-11-02T18:28:07+00:00",
           "removed_at": "2026-11-11T11:00:30+00:00",
@@ -397910,6 +398779,10 @@
           "first_seen": "2026-11-04T21:27:09+00:00",
           "title": "Senior Sales Engineer - Federal (NSA, CIA, FBI)"
         },
+        "5284098007": {
+          "first_seen": "2026-11-13T06:47:25+00:00",
+          "title": "Renewals Account Manager"
+        },
         "5286302007": {
           "first_seen": "2026-11-09T18:54:44+00:00",
           "removed_at": "2026-11-12T18:26:41+00:00",
@@ -397947,6 +398820,10 @@
         "5290005007": {
           "first_seen": "2026-11-10T17:56:42+00:00",
           "title": "Specialist Account Executive, Sec Ops"
+        },
+        "5290020007": {
+          "first_seen": "2026-11-13T06:47:25+00:00",
+          "title": "Software Engineering Architect, Machine Learning"
         },
         "5290470007": {
           "first_seen": "2026-11-12T18:26:41+00:00",
@@ -398274,6 +399151,7 @@
         },
         "R0076323": {
           "first_seen": "2026-10-26T23:26:42+00:00",
+          "removed_at": "2026-11-13T06:55:23+00:00",
           "title": "Platform Engineer, Java Frameworks"
         },
         "R0076325": {
@@ -399055,6 +399933,7 @@
         },
         "5123837007": {
           "first_seen": "2026-10-08T23:01:45+00:00",
+          "removed_at": "2026-11-13T06:47:26+00:00",
           "title": "Construction Superintendent, Electrical - Memphis"
         },
         "5123845007": {
@@ -399069,6 +399948,7 @@
         },
         "5124647007": {
           "first_seen": "2026-10-08T23:01:45+00:00",
+          "removed_at": "2026-11-13T06:47:26+00:00",
           "title": "Construction Superintendent, Electrical (Night Shift) - Memphis"
         },
         "5124669007": {
@@ -400240,6 +401120,10 @@
           "first_seen": "2026-10-27T20:13:04+00:00",
           "title": "Senior Product Manager, Commerce Platform"
         },
+        "5277827007": {
+          "first_seen": "2026-11-13T06:47:26+00:00",
+          "title": "IT Services Technician"
+        },
         "5278701007": {
           "first_seen": "2026-10-29T21:58:17+00:00",
           "title": "Sr. Analyst, Monetization Operations"
@@ -400442,6 +401326,10 @@
         "5293897007": {
           "first_seen": "2026-11-12T23:49:29+00:00",
           "title": "Client Partner"
+        },
+        "5294116007": {
+          "first_seen": "2026-11-13T06:47:26+00:00",
+          "title": "Government Cloud Security Engineer"
         }
       },
       "last_error": null,
